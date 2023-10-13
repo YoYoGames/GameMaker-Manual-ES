@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Change Object Instance</title>
+  <title>Cambiar la instancia del objeto</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Change Object Instance action" />
   <meta name="rh-index-keywords" content="" />
@@ -14,49 +14,49 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Change Object INstance Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Change.png" /> Change Object Instance</h1>
-  <p>With this action you can change one instance into another instance. You need to specify the object that the instance it change into another instance of, and the action will change the instance, performing the Destroy Event and the Clean Up Event of
-    the initial instance and the Create Event of the new instance. Note that if you do not specify a direction or a speed etc... then the new instance will &quot;inherit&quot; these values. For example, if the initial instance has an <span class="inline">image_angle</span> (rotation)
-    of 180, travels at 2px per game tick and has an <span class="inline">image_speed</span> (animation speed) of 0.5, then the instance it changes into will maintain these values unless explicitly set in the Create event of the new instance.</p>
-  <p>It is worth noting that changing the instance means that you <i>can perform no further actions with that instance until the next game tick</i>, in particular trying to access variables etc... as that will cause an error. Basically, you
-    change the instance but it is not actually available until the end of the current step, so to access any of the variables it contains directly (for example, calling <span class="inline">inst_changed.x</span>) will not work.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Change Object Instance Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/a_Instance_Change.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Cambiar <span class="notranslate">Object</span> Instancia</h1>
+  <p>Con esta acción puedes cambiar una instancia en otra instancia. Es necesario especificar la dirección <span class="notranslate">object</span> para que la instancia se convierta en otra instancia, y la acción cambiará la instancia, realizando el Evento de Destrucción y el Evento de Limpieza de
+    la instancia inicial y el Evento de Creación de la nueva instancia. Tenga en cuenta que si no especifica una dirección o una velocidad, etc... entonces la nueva instancia &quot;heredará&quot; estos valores. Por ejemplo, si la instancia inicial tiene un <span class="inline">image_angle</span> (rotación)
+    de 180, se desplaza a 2px por tick de juego y tiene una <span class="inline">image_speed</span> (velocidad de animación) de 0.5, entonces la instancia en la que se transforma mantendrá estos valores a menos que se establezca explícitamente en el evento Create de la nueva instancia.</p>
+  <p>Hay que tener en cuenta que cambiar la instancia significa que <i>no se pueden realizar más acciones con esa instancia hasta el siguiente tick del juego</i>, en particular intentar acceder a variables, etc., ya que eso provocará un error. Básicamente, usted
+    cambias la instancia pero no está realmente disponible hasta el final del paso actual, por lo que acceder a cualquiera de las variables que contiene directamente (por ejemplo, llamando a <span class="inline">inst_changed.x</span>) no funcionará.</p>
+  <p> </p>
+  <h4>Sintaxis de la acción:</h4>
+  <p><img alt="Change Object INstance Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Change.png" /></p>
+  <h4>Argumentos:</h4>
   <p></p>
   
     <table>
       <tbody>
         <tr>
-          <th>Argument</th>
-          <th>Description</th>
+          <th>Argumento</th>
+          <th>Descripción</th>
         </tr>
         <tr>
-          <td>Object</td>
-          <td>The name of the object to change to an instance of.</td>
+          <td><span class="notranslate">Object</span></td>
+          <td>El nombre del <span class="notranslate">object</span> para cambiar a una instancia de.</td>
         </tr>
       </tbody>
     </table>
   
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Change Object Instance Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/e_Instance_Change.png" />The above action block code checks for a mouse press and if one is detected
-    then it changes the instance into different one.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p><img>El código del bloque de acción anterior comprueba si hay una pulsación del ratón y si se detecta una
+    entonces cambia la instancia a otra diferente.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Instance_Actions_Library.htm">Instance Actions</a></div>
-        <div style="float:right">Next: <a href="Set_Alarm.htm">Set Alarm Countdown</a></div>
+        <div style="float:left">Volver: <a href="Instance_Actions_Library.htm">Instance Actions</a></div>
+        <div style="float:right">Siguiente: <a href="Set_Alarm.htm">Establecer la cuenta atrás de la alarma</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
-Action - Change Object Instance
+Action - Change <span class="notranslate">Object</span> Instance
 -->
   <!-- TAGS
 action_change_instance

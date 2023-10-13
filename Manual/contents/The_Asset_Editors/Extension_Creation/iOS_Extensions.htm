@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>iOS / tvOS Extensions</title>
+  <title>Extensiones iOS / tvOS</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing how iOS extensions work" />
   <meta name="rh-index-keywords" content="Extensions - Creating iOS / tvOS Extensions" />
@@ -14,24 +14,24 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>iOS / tvOS Extensions</h1>
-  <p>To create an extension for iOS or tvOS you have to do it in two parts. The first part would be to add the extension itself, along with the required files, and the second is to create the functions and macros/constants that the extension requires.</p>
-  <p>The functions and constants are added using <strong>placeholder </strong>files to group them together, so you&#39;d add a placeholder and then define the functions and macros as explained in the section <a href="Creating_An_Extension.htm">here</a>. To add the rest of the files though you need to first tick the <em>iOS </em>and/or the <em>tvOS </em>check-box in the <strong>Additional Features</strong> section of the editor to open up the relevant <strong>Extension Properties</strong> window (the image below shows the iOS properties window, but the tvOS window is exactly the same):</p>
+  <h1>iOS / <span class="notranslate">tvOS</span> Extensiones</h1>
+  <p>Para crear un <span class="notranslate">extension</span> para <span class="notranslate">iOS</span> o tvOS hay que hacerlo en dos partes. La primera parte sería añadir el propio <span class="notranslate">extension</span>, junto con los archivos necesarios, y la segunda es crear las funciones y macros/constantes que requiere el <span class="notranslate">extension</span>.</p>
+  <p>Las funciones y las constantes se añaden utilizando archivos de <strong>marcadores de posición </strong>para agruparlos, por lo que añadirías un marcador de posición y luego definirías las funciones y las macros como se explica en <a href="Creating_An_Extension.htm">esta sección</a>. Para añadir el resto de los archivos, sin embargo, tienes que marcar primero la casilla de <em>iOS </em>y/o <em>tvOS </em>en la sección de <strong>características adicionales</strong> del editor para abrir la ventana de <strong>propiedades de la extensión</strong> correspondiente (la imagen de abajo muestra la ventana de propiedades de <span class="notranslate">iOS</span>, pero la ventana de <span class="notranslate">tvOS</span> es exactamente la misma):</p>
   <p class="dropspot"><img alt="iOS Editor" class="center" src="../../assets/Images/Asset_Editors/Editor_Extensions_iOS.png" /></p>
-  <p>Here you can give the following details:</p>
+  <p>Aquí puede dar los siguientes detalles:</p>
   <ul class="colour">
-    <li class="dropspot"><strong>Compiler Flags / Linker Flags</strong>: Some frameworks and third party SDKs require the addition of extra linker flags and compiler flags to work, which can be specified here (see the documentation that accompanies the SDK or framework in question for details).</li>
-    <li class="dropspot"><strong>Class Name</strong>: Your extension can have multiple classes, with each class having its own functions and constants, so you should give it a name that reflects its purpose.</li>
-    <li class="dropspot"><strong>App Delegate Class Name</strong>: The name of your custom app delegate class. Setting this allows the extension to override/extend core app functionality. To use this feature you need to do the following:
+    <li class="dropspot"><strong>Compilador <span class="notranslate">Flags</span> / Banderas del</strong> enlazador: Algunos frameworks y SDKs de terceros requieren la adición de un linker extra <span class="notranslate">flags</span> y un compilador <span class="notranslate">flags</span> para funcionar, que pueden ser especificados aquí (ver la documentación que acompaña al SDK o framework en cuestión para más detalles).</li>
+    <li class="dropspot"><strong>Nombre de la</strong> clase: Tu <span class="notranslate">extension</span> puede tener varias clases, y cada una de ellas tiene sus propias funciones y constantes, por lo que debes darle un nombre que refleje su propósito.</li>
+    <li class="dropspot"><strong>App Delegate Class Name</strong>: El nombre de tu clase delegada de aplicación personalizada. Al establecer esto, <span class="notranslate">extension</span> puede anular/extender la funcionalidad principal de la aplicación. Para utilizar esta función es necesario hacer lo siguiente:
       <ol>
-        <li>Ensure that the delegate source files have the same name as the delegate class (e.g. <span class="inline">@interface MyCustomAppDelegate</span> should be defined in &quot; <span class="inline">MyCustomAppDelegate.h</span>&quot;)</li>
-        <li>Add the <span class="inline">${YYExtAppDelegateIncludes}</span> environment variable at the top of your app delegate header file. This will be replaced at compile-time with the relevant include files for the parent delegate class.</li>
-        <li>Use the <span class="inline">${YYExtAppDelegateBaseClass}</span> environment variable as the base class for your custom app delegate. This will be replaced at compile-time with the correct base delegate class.<br />
-          <br />
-          To ensure your extension works with any other extensions that use custom app delegates, you should call any base class methods from overridden methods in your child class. Before calling the superclass method, you need to make sure it is implemented in the class hierarchy to avoid errors, for e.g.:
+        <li>Asegúrese de que los archivos fuente del delegado tienen el mismo nombre que la clase del delegado (por ejemplo, <span class="inline">@interface MyCustomAppDelegate</span> debe definirse en &quot; <span class="inline">MyCustomAppDelegate.h</span>&quot;)</li>
+        <li>Añade la variable de entorno <span class="inline">${YYExtAppDelegateIncludes}</span> en la parte superior del archivo de cabecera del delegado de tu aplicación. Ésta será sustituida en tiempo de compilación por los archivos de inclusión pertinentes para la clase delegada principal.</li>
+        <li>Utiliza la variable de entorno <span class="inline">${YYExtAppDelegateBaseClass}</span> como clase base para tu delegado de aplicación personalizado. Ésta será sustituida en el momento de la compilación por la clase base correcta del delegado.<br>
+          <br>
+          Para garantizar que su <span class="notranslate">extension</span> funcione con cualquier otro <span class="notranslate">extensions</span> que utilice delegados de aplicación personalizados, debe llamar a cualquier método de la clase base desde los métodos anulados de su clase hija. Antes de llamar al método de la superclase, debes asegurarte de que está implementado en la jerarquía de clases para evitar errores, por ejemplo
         </li>
       </ol>
-      <p class="code">- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions<br />
+     <p class="code">- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions<br />
         {<br />
             // Check if any superclasses implement this method and call it<br />
             if([[self superclass] instancesRespondToSelector:@selector(application:willFinishLaunchingWithOptions:)])<br />
@@ -40,25 +40,25 @@
                 return TRUE;<br />
         }</p>
     </li>
-    <li class="dropspot"><strong>System Frameworks</strong>: Here you can add in any iOS system <a class="glossterm" data-glossterm="framework" href="#">framework</a><span class="glossextra">s</span> to your extension. These are added by clicking the <img alt="Add Argument Icon" class="icon" height="18" src="../../assets/Images/Icons/Icon_AddArgument.png" width="18" /> button which will add a placeholder framework, which you can then edit by double clicking <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> on it. You can find out more about available system frameworks <a href="https://developer.apple.com/documentation/">here</a>. To remove a system framework, simply select it and then click the <img alt="Remove Argument Icon" class="icon" src="../../assets/Images/Icons/Icon_RemoveArgument.png" /> button.<br />
-      <br />
-      <img class="center" src="../../assets/Images/Asset_Editors/Editor_Extensions_iOS_Weak_Reference.png" />You can enable the checkbox for a framework to mark it as a &quot;<strong>Weak Reference</strong>&quot;. This adds it to &quot;<strong>Build Phases -&gt; Link Binary with Libraries</strong>&quot; section of Xcode as an &quot;<strong>Optional</strong>&quot; framework, as opposed to a &quot;<strong>Required</strong>&quot; framework (which is the default behaviour).
+    <li class="dropspot"><strong>Frameworks del</strong> sistema: Aquí puede añadir cualquier <a class="glossterm" data-glossterm="marco" href="#">marco</a>del sistema <span class="notranslate">iOS</span> a su <span class="notranslate">extension</span>. Estos se añaden haciendo clic en el botón <img> que añadirá un marco de trabajo de marcador de posición, que luego puede editar haciendo doble clic en <img>. Puedes encontrar más información sobre las estructuras del sistema disponibles <a href="https://developer.apple.com/documentation/">aquí</a>. Para eliminar un marco del sistema, simplemente selecciónelo y haga clic en el botón <img>.<br>
+      <br>
+      <img>Puede activar la casilla de verificación de un marco para marcarlo como &quot;<strong>Referencia débil</strong>&quot;. Esto lo añade a la sección &quot;<strong>Build Phases -&gt; Link Binary with Libraries</strong>&quot; de <span class="notranslate">Xcode</span> como un framework &quot;<strong>Opcional&quot;</strong>, en lugar de un framework &quot;<strong>Requerido</strong>&quot; (que es el comportamiento por defecto).
     </li>
-    <li class="dropspot"><strong>3rd Party Frameworks + Bundles</strong>: This section is for adding third party and SDK bundles. As with system frameworks you click the <img alt="Add Argument Icon" class="icon" height="18" src="../../assets/Images/Icons/Icon_AddArgument.png" width="18" /> button to add them and then double click <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> to edit, and selecting them then clicking <img alt="Remove Argument Icon" class="icon" src="../../assets/Images/Icons/Icon_RemoveArgument.png" /> will remove them (see the documentation that came with your chosen SDK for info on the framework name).<br />
-      <br />
-      Here you can choose to <strong>Not Embed</strong> the framework, <strong>Embed &amp; Sign</strong> it, or <strong>Embed it without Signing</strong>:<br />
-      <img class="center" src="../../assets/Images/Asset_Editors/Editor_Extensions_iOS_Embed_Framework.png" />This reflects the same option for a framework added under &quot;<strong>Frameworks, Libraries and Embedded Content</strong>&quot; in Xcode.
+    <li class="dropspot"><strong>Frameworks de terceros + Bundles</strong>: Esta sección es para añadir paquetes de terceros y SDK. Al igual que con los frameworks del sistema, haga clic en el botón <img> para añadirlos y, a continuación, haga doble clic en <img> para editarlos; si los selecciona y hace clic en <img>, los eliminará (consulte la documentación que acompaña al SDK elegido para obtener información sobre el nombre del framework).<br>
+      <br>
+      Aquí puedes elegir <strong>no incrustar</strong> el framework, <strong>incrustarlo y firmarlo</strong>, o <strong>incrustarlo sin firmarlo</strong>:<br>
+      <img>Esto refleja la misma opción para un framework añadido en &quot;<strong>Frameworks, Librerías y Contenido Incrustado</strong>&quot; en <span class="notranslate">Xcode</span>.
     </li>
-    <li class="dropspot"><strong>Enter framework path on Mac</strong>: If you want to add a framework to the extension whose files are present on the Mac that is used to build your project, you can enter the path to that framework (on the build machine) into this field and then click the <img alt="Add Argument Icon" class="icon" height="18" src="../../assets/Images/Icons/Icon_AddArgument.png" width="18" /> button to add it.<br />
-      <br />
-      The path needs to point to a <span class="inline">.framework</span> file which will be compressed as a <span class="inline">.zip</span> and placed into the <span class="inline">iOSSourceFromMac</span> folder under your extension directory; you can easily open that at any time by right clicking <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png" /> on the extension and selecting <em>Open in Explorer</em>.
+    <li class="dropspot">Introduzca el framework<strong> <span class="notranslate">path</span> </strong> en el Mac: Si quieres añadir un framework a la <span class="notranslate">extension</span> cuyos archivos están presentes en el Mac que se utiliza para construir tu proyecto, puedes introducir el <span class="notranslate">path</span> a ese framework (en la máquina de construcción) en este campo y luego hacer clic en el botón <img> para añadirlo.<br>
+      <br>
+     <span class="notranslate">path</span> El <span class="notranslate">extension</span> tiene que apuntar a un archivo <span class="inline">.framework</span> que se comprimirá como un <span class="inline">.zip</span> y se colocará en la carpeta <span class="inline">iOSSourceFromMac</span> bajo su directorio <span class="notranslate">extension</span>; puede abrirlo fácilmente en cualquier momento haciendo clic con el botón derecho del ratón en el <img> y seleccionando <em>Abrir en el Explorador</em>.
     </li>
-    <li class="dropspot"><strong>Add Source</strong>: You can use this to add the source files required for your extension to work. Added files will be stored in the <span class="inline">iOSSource</span> folder inside your extension directory.</li>
-    <li class="dropspot"><b>Code Injection</b>: Here you can add any code to be injected (added) into your iOS application when your game is built for testing or final release. Make sure to revise this (and your permissions) carefully before submitting any games to the store, as incorrect settings will cause your game to be failed for submission.</li>
+    <li class="dropspot"><strong>Añadir fuente</strong>: Puede utilizar esta opción para añadir los archivos fuente necesarios para que su <span class="notranslate">extension</span> funcione. Los archivos añadidos se almacenarán en la carpeta <span class="inline">iOSSource</span> dentro de su directorio de extensión.</li>
+    <li class="dropspot"><b>Inyección de código</b>: Aquí puedes añadir cualquier código que se inyecte (añada) en tu aplicación <span class="notranslate">iOS</span> cuando tu juego se construya para su prueba o lanzamiento final. Asegúrate de revisar esto (y tus permisos) cuidadosamente antes de enviar cualquier juego a la tienda, ya que una configuración incorrecta hará que tu juego no sea enviado.</li>
   </ul>
-  <h2>Code Injection</h2>
-  <p>Code Injection can be used for iOS/tvOS extensions in the same way as described on the Android Extensions page: see <a data-xref="{text}" href="Android_Extensions.htm#h">Code Injection</a>.</p>
-  <p>The following tags are available for the iOS and tvOS platforms:</p>
+  <h2>Inyección de código</h2>
+  <p>La inyección de código puede utilizarse para iOS/tvOS <span class="notranslate">extensions</span> de la misma manera que se describe en la página <span class="notranslate">Android</span> <span class="notranslate">Extensions</span>: véase <a data-xref="{text}" href="Android_Extensions.htm#h">Inyección de código</a>.</p>
+  <p>Las siguientes etiquetas están disponibles para las plataformas <span class="notranslate">iOS</span> y <span class="notranslate">tvOS</span>:</p>
   <p class="code">YYIosPlist<br />
     YYIosEntitlements<br />
     YYIosCocoaPods<br />
@@ -79,7 +79,7 @@
     YYTvosCFBundleURLSchemesArray<br />
     YYTvosLSApplicationQueriesSchemesArray
   </p>
-  <p>The runtime location where the code is injected will depend on the type of the tag:</p>
+  <p>La ubicación de <span class="notranslate">runtime</span> donde se inyecta el código dependerá del tipo de etiqueta:</p>
   <table>
     <colgroup>
       <col style="width: 174px;" />
@@ -87,56 +87,56 @@
     </colgroup>
     <tbody>
       <tr>
-        <th style="">Tag Type</th>
-        <th style="">Injection Path</th>
+        <th style="">Tipo de etiqueta</th>
+        <th style="">Ruta de inyección</th>
       </tr>
       <tr>
-        <td style=""><b>Entitlements</b></td>
-        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}\<br />
-          <span>${YYXCodeProjName}.entitlements</span>
+        <td style=""><b>Derechos</b></td>
+        <td style="">{RUNTIME}\N-plantillaProyecto\N-${YXCodeProjName}\N-$<br>
+         <span>${YXCodeProjName}.derechos</span>
         </td>
       </tr>
       <tr>
         <td style=""><b>info.plist</b></td>
-        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}\<br />
-          Supporting Files\<span>${YYXCodeProjName}-Info.plist</span></td>
+        <td style="">{RUNTIME}\N-plantillaProyecto\N-${YXCodeProjName}\N-$<br>
+          Supporting Files${YXCodeProjName}-Info<span>.plist</span></td>
       </tr>
       <tr>
-        <td style=""><strong>infoPlist.strings</strong></td>
-        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}\<br />
-          en.lproj\InfoPlist.strings</td>
+        <td style=""><strong>infoLista.cadenas</strong></td>
+        <td style="">{RUNTIME}\N-plantillaProyecto\N-${YXCodeProjName}\N-$<br>
+          es.lproj\infoPlist.strings</td>
       </tr>
       <tr>
-        <td style=""><strong>project.pbxproj</strong></td>
-        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}.xcodeproj\<br />
-          project.pbxproj</td>
+        <td style=""><strong>proyecto.pbxproj</strong></td>
+        <td style="">{RUNTIME}\N-plantillaProyecto\N-${YXCodeProjName}.xcodeproj<br>
+          proyecto.pbxproj</td>
       </tr>
       <tr>
         <td style=""><strong>xcscheme</strong></td>
-        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}.xcodeproj\<br />
-          xcshareddata\xcschemes\${YYXCodeProjName}.xcscheme</td>
+        <td style="">{RUNTIME}\N-plantillaProyecto\N-${YXCodeProjName}.xcodeproj<br>
+          xcshareddata\\xcschemes\${YXCodeProjName}.xcscheme</td>
       </tr>
     </tbody>
   </table>
-  <p class="note"><strong></strong><span class="note">NOTE</span> These paths are only for VM. For YYC, injected code will go into the <span class="inline">{RUNTIME}\yyc\</span> directory, where the paths may or may not be equivalent to those for VM.</p>
-  <p>Note that there is a Game Option <a href="../../Settings/Game_Options/iOS.htm">for iOS</a> and <a href="../../Settings/Game_Options/tvOS.htm">for tvOS</a> to add a <span class="inline">Podfile.lock</span> file to <span data-keyref="GameMaker Name">GameMaker</span>, which is required if you are adding CocoaPods Dependencies in this section.</p>
-  <h2>Additional Information</h2>
-  <p>If your extension has had any System Frameworks or 3rd Party Frameworks added, these will now be listed in the <strong>Extension Properties </strong>window, with each one having a check-box beside it. If you mark the check-box, you are enabling weak linking, which is useful should you need to &quot;override&quot; any symbol from the included library with your own value, but it should be noted that doing so will slow linking down.</p>
-  <p>For information on your creating native extensions for iOS, see <a href="Extended_Examples.htm">Source Examples</a>; and for information on using CocoaPods in extensions, see the following guide:</p>
+  <p class="note"><strong></strong><span class="note">NOTA</span> Estos <span class="notranslate">paths</span> son sólo para VM. Para YYC, el código inyectado irá al directorio <span class="inline">{RUNTIME}\yyc\</span>, donde los <span class="notranslate">paths</span> pueden o no ser equivalentes a los de VM.</p>
+  <p>Tenga en cuenta que hay una opción de juego <a href="../../Settings/Game_Options/iOS.htm">para iOS</a> y <a href="../../Settings/Game_Options/tvOS.htm">para tvOS</a> para añadir un archivo <span class="inline">Podfile.lock</span> a <span data-keyref="GameMaker Name">GameMaker</span>, que es necesario si está añadiendo <span class="notranslate">CocoaPods</span> Dependencias en esta sección.</p>
+  <h2>Información adicional</h2>
+  <p>Si a su <span class="notranslate">extension</span> se le ha añadido algún System Frameworks o 3rd Party Frameworks, éstos aparecerán ahora en la ventana de <strong>Propiedades de la Extensión </strong>, y cada uno de ellos tendrá una casilla de verificación al lado. Si marcas la casilla, estarás habilitando la vinculación débil, lo que es útil si necesitas &quot;anular&quot; algún símbolo de la biblioteca incluida con tu propio valor, pero hay que tener en cuenta que al hacerlo se ralentizará la vinculación.</p>
+  <p>Para obtener información sobre la creación de su <span class="notranslate">extensions</span> nativo para <span class="notranslate">iOS</span>, consulte <a href="Extended_Examples.htm">Ejemplos de fuentes</a>; y para obtener información sobre el uso de <span class="notranslate">CocoaPods</span> en <span class="notranslate">extensions</span>, consulte la siguiente guía:</p>
   <ul class="colour">
-    <li><a href="https://help.yoyogames.com/hc/en-us/articles/360008958858">iOS and tvOS: Using Cocoa Pods</a></li>
+    <li><a href="https://help.yoyogames.com/hc/en-us/articles/360008958858">iOS y tvOS: Uso de Cocoa Pods</a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Extensions.htm">The Extension Editor</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="HTML5_Extensions.htm">HTML5 Extensions</a></div>
+        <div style="float:left">Atrás: <a href="../Extensions.htm">El editor de <span class="notranslate">Extension</span> </a></div>
+        <div style="float:right">Siguiente: <a href="Extended_Examples.htm">Ejemplos de fuentes</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 iOS Extensions

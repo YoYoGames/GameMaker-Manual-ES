@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Compatibility Scripts</title>
-  <meta name="generator" content="Adobe RoboHelp 2020"/>
-  <link rel="stylesheet" href="../assets/css/default.css" type="text/css"/>
-  <script src="../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page that explains the compatibility scripts"/>
-  <meta name="rh-index-keywords" content="Compatibility Scripts"/>
-  <meta name="search-keywords" content="compatibility scripts"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Guiones de compatibilidad</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
+  <script src="../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page that explains the compatibility scripts" />
+  <meta name="rh-index-keywords" content="Compatibility Scripts" />
+  <meta name="search-keywords" content="compatibility scripts" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Compatibility Scripts</h1>
-  <p>For those users coming from previous versions of GameMaker,  it may be a bit confusing using <span data-keyref="GameMaker Name">GameMaker</span> at first since there have been a number of changes made to the way that project assets, editing and coding are handled. These changes mean
-    that the neither the <a class="glossterm" data-glossterm="IDE" href="#">IDE</a> nor the <a href="../GameMaker_Language/GameMaker_Language_Index.htm">GameMaker Language (GML)</a> supports the items listed below. However, that does not mean that you
-    cannot import games made with previous versions into <span data-keyref="GameMaker Name">GameMaker</span>, as you can. <span data-keyref="GameMaker Name">GameMaker</span> will automatically convert all legacy functions into <strong>compatibility scripts</strong>, which are scripts containing functions that convert
-    the legacy methods into the updated methods.</p>
-  <p>What happens is that <span data-keyref="GameMaker Name">GameMaker</span> will parse your project for all the obsolete functions and variables that you have used, and then create a series of scripts using those function names. These scripts will contain either the new equivalent
-    <a href="../GameMaker_Language/GML_Overview/Runtime_Functions.htm">runtime function</a> or a short <a href="../GameMaker_Language/GML_Overview/Script_Functions.htm">script function</a> that performs the same action as the obsolete function.</p>
-  <p>When you first import a <span data-keyref="GameMaker Name">GameMaker</span> project you will be shown a compatibility report much like this one:</p>
-  <p><img alt="Compatibility Report" class="center" src="../assets/Images/Scripting_Reference/Additional_Information/Compatibility_Overview.png"/>The main body of the report shows which objects and scripts have been affected and where, while at the end
-    you can find a list of the scripts that have been created for your project. You can click the middle mouse button <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png"/> or press <img alt="F1 Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_f1.png" width="55"/> on any of the scripts listed in the report to open it and see what has been done.</p>
-  <p>Note that if you see any scripts created with a double under-bar before their name (for example: <span class="inline">__global_object_depths</span>), then these are scripts that have been created by the IDE to help with compatibility and are not scripts
-    that have been converted from obsolete functions, so these <strong>should not be tampered with</strong> as they are required for the other compatibility scripts to work.</p>
-  <p>When you have finished revising the compatibility report you can close the workspace, but should you need to revise anything within the report you can find it again by going to the <a href="../The_Asset_Editors/Notes.htm">Notes</a> section of the
-    <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a>.</p>
-  <p>Note that you can keep using these compatibility scripts just as you would have used the functions in the legacy version of GameMaker, however, due to the way they work, there will be a performance impact associated with this. We recommend that you
-    update projects to directly use the new methods and remove the compatibility scripts if you can, as it will improve performance and also give you an insight into the way that <span data-keyref="GameMaker Name">GameMaker</span> and the GameMaker Language works compared to legacy products.</p>
-  <p>Also note that there are some functions that have been introduced to the GameMaker Language to ensure compatibility with older projects and that will appear in these compatibility scripts. However these functions should never be used in your own projects.
-    You can find a list of these functions from the following section of the manual:</p>
+  <h1>Guiones de compatibilidad</h1>
+  <p>Para aquellos usuarios que vienen de versiones anteriores de <span class="notranslate">GameMaker</span>, puede ser un poco confuso el uso de <span data-keyref="GameMaker Name">GameMaker</span> al principio, ya que ha habido una serie de cambios en la forma en que se maneja el proyecto <span class="notranslate">assets</span>, la edición y la codificación. Estos cambios significan
+    que ni el <a class="glossterm" data-glossterm="IDE" href="#">IDE</a> ni el <a href="../GameMaker_Language/GameMaker_Language_Index.htm">Lenguaje GameMaker (<span class="notranslate">GML</span>)</a> son compatibles con los elementos enumerados a continuación. Sin embargo, eso no significa que usted
+    no pueda importar a <span data-keyref="GameMaker Name">GameMaker</span> juegos realizados con versiones anteriores, ya que sí puede hacerlo. <span data-keyref="GameMaker Name">GameMaker</span> convertirá automáticamente todas las funciones heredadas en <strong>scripts de compatibilidad</strong>, que son <span class="notranslate">scripts</span> que contienen funciones que convierten
+    los métodos heredados en los métodos actualizados.</p>
+  <p>Lo que ocurre es que <span data-keyref="GameMaker Name">GameMaker</span> analizará tu proyecto en busca de todas las funciones y variables obsoletas que hayas utilizado, y luego creará una serie de <span class="notranslate">scripts</span> utilizando esos nombres de funciones. Estos <span class="notranslate">scripts</span> contendrán la nueva función de tiempo de ejecución equivalente
+   <a href="../GameMaker_Language/GML_Overview/Runtime_Functions.htm">en tiempo de ejecución</a> o una <a href="../GameMaker_Language/GML_Overview/Script_Functions.htm">función de script</a> corta que realiza la misma acción que la función obsoleta.</p>
+  <p>La primera vez que importes un proyecto de <span data-keyref="GameMaker Name">GameMaker</span> se te mostrará un informe de compatibilidad muy parecido a este:</p>
+  <p><img>El cuerpo principal del informe muestra qué <span class="notranslate">objects</span> y <span class="notranslate">scripts</span> han sido afectados y dónde, mientras que al final
+    puede encontrar una lista de los <span class="notranslate">scripts</span> que se han creado para su proyecto. Puede hacer clic con el botón central del ratón <img> o pulsar <img> en cualquiera de los <span class="notranslate">scripts</span> que aparecen en el informe para abrirlo y ver lo que se ha hecho.</p>
+  <p>Tenga en cuenta que si ve algún <span class="notranslate">scripts</span> creado con una doble barra inferior antes de su nombre (por ejemplo: <span class="inline">__global_object_depths</span>), se trata de <span class="notranslate">scripts</span> que ha sido creado por el <span class="notranslate">IDE</span> para ayudar a la compatibilidad y no son scripts
+    que han sido convertidos a partir de funciones obsoletas, por lo que <strong>no deben ser manipulados</strong>, ya que son necesarios para que funcione la otra compatibilidad <span class="notranslate">scripts</span>.</p>
+  <p>Cuando haya terminado de revisar el informe de compatibilidad puede cerrar la página <span class="notranslate">workspace</span>, pero si necesita revisar algo dentro del informe puede encontrarlo de nuevo yendo a la sección <a href="../The_Asset_Editors/Notes.htm">Notas</a> del
+   <a href="../Introduction/The_Asset_Browser.htm">Navegador de activos</a>.</p>
+  <p>Tenga en cuenta que puede seguir utilizando estas funciones de compatibilidad <span class="notranslate">scripts</span> de la misma manera que lo haría en la versión anterior de <span class="notranslate">GameMaker</span>, sin embargo, debido a la forma en que funcionan, habrá un impacto en el rendimiento asociado a esto. Le recomendamos que
+    actualizar los proyectos para utilizar directamente los nuevos métodos y eliminar la compatibilidad <span class="notranslate">scripts</span> si puede, ya que mejorará el rendimiento y también le dará una idea de la forma en que <span data-keyref="GameMaker Name">GameMaker</span> y el <span class="notranslate">GameMaker Language</span> funcionan en comparación con los productos heredados.</p>
+  <p>También tenga en cuenta que hay algunas funciones que se han introducido en el <span class="notranslate">GameMaker Language</span> para asegurar la compatibilidad con proyectos antiguos y que aparecerán en estas compatibilidades <span class="notranslate">scripts</span>. Sin embargo, estas funciones no deben utilizarse nunca en sus propios proyectos.
+    Puede encontrar una lista de estas funciones en la siguiente sección del manual:</p>
   <ul class="colour">
-    <li><a href="Compatibility_Functions.htm">Compatibility Functions</a></li>
+    <li><a href="Compatibility_Functions.htm">Funciones de compatibilidad</a></li>
   </ul>
-  <p>You can also find a complete list of all the obsolete functions that have equivalent compatibility scripts created for them from the following page:</p>
+  <p> <span class="notranslate">scripts</span> También puede encontrar una lista completa de todas las funciones obsoletas que tienen una compatibilidad equivalente creada para ellas en la siguiente página:</p>
   <ul class="colour">
-    <li><a href="Obsolete_Functions.htm">Obsolete Functions</a></li>
+    <li><a href="Obsolete_Functions.htm">Funciones obsoletas</a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Additional_Information.htm">Additional Information</a></div>
-        <div style="float:right">Next: <a href="Obsolete_Functions.htm">Obsolete Functions</a></div>
+        <div style="float:left">Atrás: <a href="Additional_Information.htm">Información adicional</a></div>
+        <div style="float:right">Siguiente: <a href="Obsolete_Functions.htm">Funciones obsoletas</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Compatibility Functions

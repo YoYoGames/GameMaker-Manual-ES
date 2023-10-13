@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
+
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Audio Actions</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>Acciones de audio</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Section detailing all the Audio actions" />
   <meta name="rh-index-keywords" content="GML Visual Overview - Audio Actions Library" />
@@ -14,152 +14,119 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Audio Action Library</h1>
-  <p><img alt="Audio Action Library" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/Lib_Audio.png" /><span data-keyref="GameMaker Name">GameMaker</span> has a complete audio engine that is based on the <span class="inline">*.ogg</span>, <span class="inline">*.mp3</span> and <span class="inline">*.wav</span> sound formats. Sounds of these types added to the IDE can then be used in your game using the basic audio actions shown below. For things more complex than basic sound effects or playing a single piece of music you can refer to the <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio.htm">advanced audio functions</a> dedicated to streaming audio, positioning audio - to give 3D sound - and grouping audio.<strong></strong></p>
-  <div data-conref="../../../assets/snippets/Note_HTML5_Web_Audio.hts"> </div>
-  <p>The Audio library has the following actions:</p>
+  <h1>Biblioteca de acciones de audio</h1>
+  <p><img><span data-keyref="GameMaker Name">GameMaker</span> cuenta con un completo motor de audio que se basa en los formatos de sonido <span class="inline">*.ogg</span>,
+    <span class="inline">*.mp3</span> y <span class="inline">*.wav</span>. Los sonidos de estos tipos añadidos a <span class="notranslate">IDE</span> pueden ser utilizados en su juego utilizando las acciones básicas de audio que se muestran a continuación. Para cosas más complejas que los efectos de sonido básicos o la reproducción de una sola pieza musical, puedes consultar el
+      de música, puedes consultar las <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio.htm">funciones de audio avanzadas</a> dedicadas a la transmisión de audio, al posicionamiento de audio -para dar un sonido 3D- y a la agrupación de audio.<strong></strong></p>
+  <p class="note"><strong>¡IMPORTANTE!</strong> Al utilizar el audio en el objetivo HTML5, debe tener en cuenta que no todos los navegadores soportan Web Audio y, por tanto, es posible que no reproduzca ningún sonido para su proyecto cuando se ejecute. Puedes tener una idea general del soporte de Web Audio en el siguiente
+    enlace: <a href="https://caniuse.com/#search=WebAudio">¿Puedo usar</a> Web Audio?</p>
+  <p>La Fonoteca tiene las siguientes acciones:</p>
   <table class="dnd" style="text-align: left;margin-left:">
     <tbody>
       <tr style="height: 1px;">
-        <td class="icons" style="margin-left: 16px;"><img alt="Play Audio Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Play_Audio.png" /></td>
-        <td class="dnd" style=""><a href="Play_Audio.htm">Play Audio</a></td>
+        <td class="icons" style="margin-left: 16px;"><img alt="Audio Action Library" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/Lib_Audio.png"/></td>
+        <td class="dnd" style=""><a href="Play_Audio.htm">Reproducir audio</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Stop Audio Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Stop_Audio.png" /></td>
-        <td class="dnd" style=""><a href="Stop_Audio.htm">Stop Audio</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Play Audio Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Play_Audio.png"/></td>
+        <td class="dnd" style=""><a href="Stop_Audio.htm">Detener el audio</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Stop All Audio Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Stop_All_Audio.png" /></td>
-        <td class="dnd" style=""><a href="Stop_All_Audio.htm">Stop All Audio</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Stop Audio Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Stop_Audio.png"/></td>
+        <td class="dnd" style=""><a href="Stop_All_Audio.htm">Detener todo el audio</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Pause Audio Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Pause_Audio.png" /></td>
-        <td class="dnd" style=""><a href="Pause_Audio.htm">Pause Audio</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Stop All Audio Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Stop_All_Audio.png"/></td>
+        <td class="dnd" style=""><a href="Pause_Audio.htm">Pausa de audio</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Pause All Audio Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Pause_All_Audio.png" width="32" /></td>
-        <td class="dnd" style=""><a href="Pause_All_Audio.htm">Pause All Audio</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Pause Audio Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Pause_Audio.png"/></td>
+        <td class="dnd" style=""><a href="Pause_All_Audio.htm">Pausar todo el audio</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Resume Audio Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Resume_Audio.png" /></td>
-        <td class="dnd" style=""><a href="Resume_Audio.htm">Resume Audio</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Pause All Audio Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Pause_All_Audio.png" width="32"/></td>
+        <td class="dnd" style=""><a href="Resume_Audio.htm">Audio del curriculum vitae</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Resume All Audio Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Resume_All_Audio.png" width="32" /></td>
-        <td class="dnd" style=""><a href="Resume_All_Audio.htm">Resume All Audio</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Resume Audio Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Resume_Audio.png"/></td>
+        <td class="dnd" style=""><a href="Resume_All_Audio.htm">Reanudar todo el audio</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Audio Position Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Set_Audio_Position.png" /></td>
-        <td class="dnd" style=""><a href="Set_Audio_Position.htm">Set Audio Position</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Resume All Audio Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Resume_All_Audio.png" width="32"/></td>
+        <td class="dnd" style=""><a href="Set_Audio_Position.htm">Establecer la posición de audio</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Audio Length Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Get_Audio_Length.png" width="32" /></td>
-        <td class="dnd" style=""><a href="Get_Audio_Length.htm">Get Audio Length</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Audio Position Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Set_Audio_Position.png"/></td>
+        <td class="dnd" style=""><a href="Get_Audio_Length.htm">Obtener la longitud del audio</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Audio Pitch Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Set_Audio_Pitch.png" /></td>
-        <td class="dnd" style=""><a href="Set_Audio_Pitch.htm">Set Audio Pitch</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Audio Length Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Get_Audio_Length.png" width="32"/></td>
+        <td class="dnd" style=""><a href="Set_Audio_Pitch.htm">Ajustar el tono de audio</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Audio Pitch Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Get_Audio_Pitch.png" /></td>
-        <td class="dnd" style=""><a href="Get_Audio_Pitch.htm">Get Audio Pitch</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Audio Pitch Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Set_Audio_Pitch.png"/></td>
+        <td class="dnd" style=""><a href="Get_Audio_Pitch.htm">Obtener el tono de audio</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Audio Volume Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Set_Audio_Volume.png" width="32" /></td>
-        <td class="dnd" style=""><a href="Set_Audio_Volume.htm">Set Audio Volume</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Audio Pitch Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Get_Audio_Pitch.png"/></td>
+        <td class="dnd" style=""><a href="Set_Audio_Volume.htm">Ajustar el volumen de audio</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Audio Volume Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Get_Audio_Volume.png" /></td>
-        <td class="dnd" style=""><a href="Get_Audio_Volume.htm">Get Audio Volume</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Audio Volume Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Set_Audio_Volume.png" width="32"/></td>
+        <td class="dnd" style=""><a href="Get_Audio_Volume.htm">Obtener volumen de audio</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Master Volume Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Set_Master_Volume.png" /></td>
-        <td class="dnd" style=""><a href="Set_Master_Volume.htm">Set Master Volume</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Audio Volume Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Get_Audio_Volume.png"/></td>
+        <td class="dnd" style=""><a href="Set_Master_Volume.htm">Ajustar el volumen principal</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Master Volume Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Get_Master_Volume.png" /></td>
-        <td class="dnd" style=""><a href="Get_Master_Volume.htm">Get Master Volume</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Master Volume Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Set_Master_Volume.png"/></td>
+        <td class="dnd" style=""><a href="Get_Master_Volume.htm">Obtenga el volumen maestro</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="If Audio Is Playing Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_If_Audio_Is_Playing.png" /></td>
-        <td class="dnd" style=""><a href="If_Audio_Is_Playing.htm">If Audio Is Playing</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Master Volume Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Get_Master_Volume.png"/></td>
+        <td class="dnd" style=""><a href="If_Audio_Is_Playing.htm">Si se reproduce el audio</a></td>
       </tr>
       <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img alt="If Audio Is Paused Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_If_Audio_Is_Paused.png" /></td>
-        <td class="dnd" style=""><a href="If_Audio_Is_Paused.htm">If Audio Is Paused</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Set_Audio_Loop_State.png" /></td>
-        <td class="dnd" style=""><a data-xref="{title}" href="Set_Audio_Loop_State.htm">Set Audio Loop State</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Get_Audio_Loop_State.png" /></td>
-        <td class="dnd" style=""><a data-xref="{title}" href="Get_Audio_Loop_State.htm">Get Audio Loop State</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Set_Audio_Loop_Start.png" /></td>
-        <td class="dnd" style=""><a data-xref="{title}" href="Set_Audio_Loop_Start.htm">Set Audio Loop Start</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Get_Audio_Loop_Start.png" /></td>
-        <td class="dnd" style=""><a data-xref="{title}" href="Get_Audio_Loop_Start.htm">Get Audio Loop Start</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Set_Audio_Loop_End.png" /></td>
-        <td class="dnd" style=""><a data-xref="{title}" href="Set_Audio_Loop_End.htm">Set Audio Loop End</a></td>
-      </tr>
-      <tr>
-        <td class="dnd_icons" style="margin-left: 16px;"><img class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Get_Audio_Loop_End.png" /></td>
-        <td class="dnd" style=""><a data-xref="{title}" href="Get_Audio_Loop_End.htm">Get Audio Loop End</a></td>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="If Audio Is Playing Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_If_Audio_Is_Playing.png"/></td>
+        <td class="dnd" style=""><a href="If_Audio_Is_Paused.htm">Si el audio está en pausa</a></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../DnD_Reference.htm">Index</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="../Loops/Loop_Actions.htm">Loop Actions</a></div>
+        <div style="float:left">Volver: <a href="../DnD_Reference.htm">Index</a></div>
+        <div style="float:right">Siguiente: <a href="../Loops/Loop_Actions.htm">Acciones de bucle</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 GML Visual Audio Actions
@@ -168,5 +135,5 @@ Audio Actions
   <!-- TAGS
 dnd_audio
 -->
-</body>
-</html>
+
+</body></html>

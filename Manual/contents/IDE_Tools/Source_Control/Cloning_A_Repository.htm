@@ -2,43 +2,43 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Cloning A Repository</title>
-    <meta name="generator" content="Adobe RoboHelp 2020"/>
-    <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
-    <script src="../../assets/scripts/main_script.js" type="module"></script>
-    <meta name="rh-authors" content="Mark Alexander"/>
-    <meta name="topic-comment" content="Section that covers Source Control cloning a repository"/>
-    <meta name="rh-index-keywords" content="Source Control - Cloning A Repository"/>
-    <meta name="search-keywords" content="clone repository,repository,clone,cloning"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Clonación de un repositorio</title>
+    <meta name="generator" content="Adobe RoboHelp 2020" />
+    <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
+    <script src="../../assets/scripts/main_script.js"></script>
+    <meta name="rh-authors" content="Mark Alexander" />
+    <meta name="topic-comment" content="Section that covers Source Control cloning a repository" />
+    <meta name="rh-index-keywords" content="Source Control - Cloning A Repository" />
+    <meta name="search-keywords" content="clone repository,repository,clone,cloning" />
   </head>
   <body><!--<div class="body-scroll" style="top: 150px;">-->
-    <h1>Cloning A Repository</h1>
-    <p>When your project is stored in an external repository, you need to remember to both push your changes and pull any new ones. The reason for this is that when you commit, you store your changes locally, which allows you to work away from an internet connection and sync up when you&#39;re ready, and to sync up you push your changes to the remote repository. Pulling changes means that you want to pull any changes that others have made from the remote repository into your local repository. However, this means that there may be times when people can be editing the same files, which in turn creates a <strong>merge conflict</strong>. You need to know how to handle these conflicts so we&#39;re going to deliberately create one now and then show you how to deal with it.</p>
-    <p class="note"><strong>NOTE</strong>: Sharing a local project repository (even through a file synchronization service like Dropbox) isn&#39;t recommended, as commits are generally written directly to it, and thus you have very little conflict protection.</p>
-    <p>To generate our conflict we first need to have two local repositories, one for the Master repository and one for our copy. To create this we need to Clone the repository, which is done with the following steps:</p>
+    <h1>Clonación de un repositorio</h1>
+    <p>Cuando tu proyecto está almacenado en un repositorio externo, necesitas recordar tanto empujar tus cambios como extraer los nuevos. La razón de esto es que cuando confirmas, almacenas tus cambios localmente, lo que te permite trabajar lejos de una conexión a Internet y sincronizar cuando estés listo, y para sincronizar empujas tus cambios al repositorio remoto. Empujar los cambios significa que usted quiere empujar cualquier cambio que otros hayan hecho desde el repositorio remoto a su repositorio local. Sin embargo, esto significa que puede haber momentos en los que la gente puede estar editando los mismos ficheros, lo que a su vez crea un <strong>conflicto de fusión</strong>. Necesita saber cómo manejar estos conflictos, así que vamos a crear uno deliberadamente ahora y luego le mostraremos cómo manejarlo.</p>
+    <p class="note"><strong>NOTA</strong>: No se recomienda compartir un repositorio de proyecto local (incluso a través de un servicio de sincronización de archivos como Dropbox), ya que los commits generalmente se escriben directamente en él, y por lo tanto tienes muy poca protección contra conflictos.</p>
+    <p>Para generar nuestro conflicto primero necesitamos tener dos repositorios locales, uno para el repositorio Maestro y otro para nuestra copia. Para crear esto necesitamos Clonar el repositorio, lo cual se hace con los siguientes pasos:</p>
     <ul class="colour">
-      <li>Go to <strong>Source Control</strong> &gt; <strong>Clone Repository</strong>.</li>
-      <li>In the URL field, type the path to the project that we setup in the Reverting Files guide above (by default this will be <span class="inline">&lt;DRIVE&gt;:\Users\&lt;Username&gt;\Documents\GameMaker\&lt;ProjectName&gt;)</span>.<img alt="Source Control Clone Repository From" class="center" src="../../assets/Images/IDE Tools/SCM_RepositoryToClone.png"/></li>
-      <li>We then need to set a path to clone to:
-        <br/>
-        <img alt="Source Control Clone Repository To" class="center" src="../../assets/Images/IDE Tools/SCM_CloneTo.png"/>When we click the &quot;Ok&quot; button we&#39;ll get the following warning about trying to clone a &quot;non-bare&quot; repository:
-        <br/>
-        <img alt="Source Control Clone Warning " class="center" src="../../assets/Images/IDE Tools/SCM_CloneWarning.png"/>We can click &quot;Ok&quot; here again. </li>
-      <li>We&#39;ll now be presented with a directory explorer to create a &quot;bare&quot; proxy repository (this is a repository which you can safely store on Dropbox, for example). Browse to where we want to create this proxy repository and select (or create) the folder to use.</li>
+      <li>Vaya a <strong>Control de Fuentes</strong> &gt; <strong>Clonar Repositorio</strong>.</li>
+      <li>En el campo de la URL, escriba el <span class="notranslate">path</span> al proyecto que configuramos en la guía de Reversión de Archivos anterior (por defecto será <span class="inline">&lt;DRIVE&gt;:\Users\&lt;Username&gt;\Documents\GameMaker\&lt;ProjectName&gt;)</span>.<img></li>
+      <li>A continuación, tenemos que establecer un <span class="notranslate">path</span> para clonar:
+        <br>
+        <img>Cuando hagamos clic en el botón &quot;Ok&quot; obtendremos la siguiente advertencia sobre el intento de clonar un repositorio &quot;no desnudo&quot;:
+        <br>
+        <img>Aquí podemos volver a pulsar &quot;Ok&quot;. </li>
+      <li>Ahora se nos presentará un explorador de directorios para crear un repositorio proxy &quot;desnudo&quot; (se trata de un repositorio que puedes almacenar con seguridad en Dropbox, por ejemplo). Navega hasta donde queremos crear este repositorio proxy y selecciona (o crea) la carpeta a utilizar.</li>
     </ul>
-    <p>Once we&#39;ve done that, <span data-keyref="GameMaker Name">GameMaker</span> will push the original project to the proxy, and pull a new one to the path we&#39;ve set in the <strong>Clone Repository</strong> window and then automatically open a file browser so we can open the stored project. If we now go to <strong>Source Control</strong> &gt; <strong>View History</strong> we&#39;ll see our original commits plus a new &quot;Push For Clone&quot; commit.</p>
-    <p><img alt="Source Control Push For Clone" class="center" src="../../assets/Images/IDE Tools/SCM_PushForClone.png"/>You have now cloned your repository and can continue working on the local version of the project.</p>
-    <p> </p>
-    <p> </p>
+    <p>Una vez que hayamos hecho eso, <span data-keyref="GameMaker Name">GameMaker</span> empujará el proyecto original al proxy, y sacará uno nuevo a la <span class="notranslate">path</span> que hemos establecido en la ventana del <strong>Repositorio de Clonación</strong> y luego abrirá automáticamente un navegador de archivos para que podamos abrir el proyecto almacenado. Si ahora vamos a <strong>Source Control</strong> &gt; <strong>View History</strong> veremos nuestros commits originales más un nuevo commit &quot;Push For Clone&quot;.</p>
+    <p><img>Ahora ha clonado su repositorio y puede seguir trabajando en la versión local del proyecto.</p>
+    <p> </p>
+    <p> </p>
     <div class="footer">
       <div class="buttons">
         <div class="clear">
-          <div style="float:left">Back: <a href="../Source_Control.htm">Source Control</a></div>
-          <div style="float:right">Next: <a href="Conflicts.htm">Conflicts</a></div>
+          <div style="float:left">Atrás: <a href="../Source_Control.htm">Control de la fuente</a></div>
+          <div style="float:right">Siguiente: <a href="Conflicts.htm">Conflictos</a></div>
         </div>
       </div>
-      <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+      <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
     </div>
     <!-- KEYWORDS
 Source Control Clone Repository

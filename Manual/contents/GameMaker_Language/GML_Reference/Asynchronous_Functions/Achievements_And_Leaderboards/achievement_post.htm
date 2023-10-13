@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>post_de_logros</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for achievement_post" />
+  <meta name="rh-index-keywords" content="achievement_post" />
+  <meta name="search-keywords" content="achievement_post" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>post_de_logros</h1>
+  <p>Puedes utilizar esta función para enviar tus logros a la tabla de clasificación y al servicio de logros elegidos. En <span class="notranslate">Android</span> necesitarás el ID del logro como <span class="notranslate">string</span> (este es el ID de logro único que se asignó cuando configuraste el logro),
+    mientras que en el resto de plataformas deberás proporcionar el nombre del logro como <span class="notranslate">string</span>, y luego dar el porcentaje que has completado para conseguir el logro (0 - Ninguno, 100 - Completado). La función desencadenará un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">evento social asíncrono</a> en el que el <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> DS devuelto tendrá los siguientes pares clave/valor:</p>
+  <ul class="colour">
+    <li>&quot;<b>type</b>&quot; - Es el tipo de evento que se ha disparado, que será el <span class="notranslate">string</span> &quot;<tt>achievement_post_result</tt>&quot; para esta función.</li>
+    <li>&quot;<b>id</b>&quot; - Es el ID del evento y, para esta función, devolverá una constante <span class="notranslate">GML</span> <tt>GooglePlayServices_EVENT_ID_POST_ACHIEVEMENT</tt>.</li>
+    <li>&quot;<b>achievement_id</b>&quot; - Es el ID único del logro que se ha actualizado.</li>
+    <li>&quot;<b>Estado</b>&quot; - Será 1 si el logro se ha actualizado con éxito, o 0 si la solicitud ha fallado</li>
+  </ul>
+  <p> </p>
+  <h4><b>Sintaxis:</b></h4>
+  <p class="code">achievement_post(achievement, percent)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argumento</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">achievement</span></td>
+        <td>El nombre/ID del logro.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">percent</span></td>
+        <td>El porcentaje del logro completado.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p class="code">if achievement_available()<br/>     {<br/>     achievement_post(global.Achievement[0], 100);<br/> }
+  </p>
+  <p>El código anterior comprueba si la tabla de clasificación y el servicio de logros elegidos están disponibles y, si es así, publica un logro.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Atrás: <a href="Achievements_And_Leaderboards.htm">Logros y tablas de clasificación</a></div>
+        <div style="float:right">Siguiente: <a href="achievement_post_score.htm"><span class="notranslate">achievement_post_score</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
+  </div>
+  <!-- KEYWORDS
+achievement_post
+-->
+  <!-- TAGS
+achievement_post
+-->
+</body>
+</html>

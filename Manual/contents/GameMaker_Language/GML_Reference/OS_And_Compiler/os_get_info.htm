@@ -6,7 +6,7 @@
   <title>os_get_info</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for os_get_info" />
   <meta name="rh-index-keywords" content="os_get_info" />
@@ -15,176 +15,181 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">os_get_info</span></h1>
-  <p>This function returns a <a href="../Data_Structures/DS_Maps/DS_Maps.htm"><span class="inline">DS Map</span></a> with detailed information about the OS that the game is running on. The exact information returned will depend on the OS and the device, so it is recommended that you test this function on all platforms that you wish to target and output the returned values using a function like <span class="inline"><a href="../Debugging/show_debug_message.htm">show_debug_message()</a></span>. Note that the DS map is not automatically cleared from memory and you should use the <a href="../Data_Structures/DS_Maps/ds_map_destroy.htm"><span class="inline">ds_map_destroy()</span></a> function when you no longer need it.</p>
-  <p>Below you can find some details on the extra data that will be made available to the DS map specific to the following platforms, and it should be noted that on all platforms <em>except</em> HTML5 the map will have the key &quot;<span><span class="inline">is64bit</span>&quot; which will either be <span class="inline">true</span> or <span class="inline">false</span> depending on whether the runner is running in 64-bit mode or not.</span></p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Windows</a></p>
+  <h1>os_get_info</h1>
+  <p>Esta función devuelve un <a href="../Data_Structures/DS_Maps/DS_Maps.htm"><span class="inline">DS Map</span></a> con información detallada sobre el sistema operativo en el que se está ejecutando el juego. La información exacta devuelta dependerá del sistema operativo y del dispositivo, por lo que se recomienda probar esta función en todas las plataformas a las que quieras dirigirte y dar salida a los valores devueltos utilizando una función como <span class="inline"><a href="../Debugging/show_debug_message.htm">show_debug_message()</a></span>. Tenga en cuenta que el mapa DS no se borra automáticamente de la memoria y debe utilizar la función <a href="../Data_Structures/DS_Maps/ds_map_destroy.htm"><span class="inline">ds_map_destroy()</span></a> cuando ya no lo necesite.</p>
+  <p>A continuación puedes encontrar algunos detalles sobre los datos extra que se pondrán a disposición del mapa de DS específicos para las siguientes plataformas, y hay que tener en cuenta que en todas las plataformas <em>, excepto</em> en HTML5, el mapa tendrá la clave &quot;<span><span class="inline">is64bit</span>&quot;, que será <span class="inline">true</span> o <span class="inline">false</span> dependiendo de si el corredor se ejecuta en modo de 64 bits o no.</span></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Windows / UWP</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">On Windows, you will get some extra data from DX11 with the following keys available in the DS map (useful for extensions):</p>
+    <p class="dropspot">En <span class="notranslate">Windows</span> Desktop y <span class="notranslate">Windows UWP</span>, obtendrá algunos datos extra de DX11 con las siguientes teclas disponibles en el mapa DS (útil para <span class="notranslate">extensions</span>):</p>
     <ul class="dropspotlist">
-      <li><span class="inline">udid</span>: An identifier that is unique to the machine</li>
-      <li><strong><span class="inline">video_d3d11_device</span></strong>: pointer to the DX11 device</li>
-      <li><strong><span class="inline">video_d3d11_context</span></strong>: pointer to the DX11 context</li>
-      <li><span class="inline">video_d3d11_swapchain</span>: pointer to the DX11 swapchain</li>
-      <li><strong><span class="inline">video_adapter_vendorid</span></strong>: string with the adapter&#39;s vendor id</li>
-      <li><strong><span class="inline">video_adapter_deviceid</span></strong>: string with the adapter&#39;s device id</li>
-      <li><strong><span class="inline">video_adapter_subsysid</span></strong>: string with the adapter&#39;s sub system id</li>
-      <li><strong><span class="inline">video_adapter_revision</span></strong>: string with the adapter&#39;s revision number</li>
-      <li><span class="inline">video_adapter_description</span>: string with the video adapter&#39;s description</li>
-      <li><strong><span class="inline">video_adapter_dedicatedvideomemory</span></strong>: string with the size of the video memory</li>
-      <li><strong><span class="inline">video_adapter_dedicatedsystemmemory</span></strong>: string with the size of the system memory (used by DX11 adapter)</li>
-      <li><span class="inline">video_adapter_sharedsystemmemory</span>: string with the size of the shared system memory</li>
+      <li><span class="inline">udid</span>: Un identificador que es único para la máquina</li>
+      <li><strong><span class="inline">video_d3d11_device</span></strong>: puntero al dispositivo DX11</li>
+      <li><strong><span class="inline">video_d3d11_context</span></strong>: puntero al contexto DX11</li>
+      <li><span class="inline">video_d3d11_spawnchain</span>: puntero a la cadena de intercambio DX11</li>
+      <li><strong><span class="inline">video_adapter_vendorid</span></strong> <span class="notranslate">string</span> con el identificador de proveedor del adaptador</li>
+      <li><strong><span class="inline">video_adapter_deviceid</span></strong> <span class="notranslate">string</span> con el identificador de dispositivo del adaptador</li>
+      <li><strong><span class="inline">video_adapter_subsysid</span></strong> <span class="notranslate">string</span> con el identificador del subsistema del adaptador</li>
+      <li><strong><span class="inline">video_adapter_revision</span></strong> <span class="notranslate">string</span> con el número de revisión del adaptador</li>
+      <li><span class="inline">video_adapter_description</span> <span class="notranslate">string</span> con la descripción del adaptador de vídeo</li>
+      <li><strong><span class="inline">video_adapter_dedicatedvideomemory</span></strong> <span class="notranslate">string</span> con el tamaño de la memoria de vídeo</li>
+      <li><strong><span class="inline">video_adapter_dedicatedsystemmemory</span></strong> <span class="notranslate">string</span> con el tamaño de la memoria del sistema (utilizada por el adaptador DX11)</li>
+      <li><span class="inline">video_adapter_sharedsystemmemory</span> <span class="notranslate">string</span> con el tamaño de la memoria compartida del sistema</li>
     </ul>
-    <p> </p>
+    <p> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">macOS</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">The function returns some limited OpenGL information on macOS:</p>
+    <p class="dropspot">La función devuelve alguna información limitada de OpenGL en macOS:</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><span class="inline">udid</span>: An identifier that is unique to the machine</li>
-      <li class="dropspot"><span class="inline">gl_vendor_string</span>: <span class="inline">GL_VENDOR</span> from OpenGL, example - <em>&quot;Intel Inc.&quot;</em></li>
-      <li class="dropspot"><span class="inline">gl_version_string</span>: <span class="inline">GL_VERSION </span>from OpenGL, example - <em>&quot;2.1 INTEL-16.2.16&quot;</em></li>
-      <li class="dropspot"><span class="inline">gl_renderer_string</span>: <span class="inline">GL_RENDERER </span>from OpenGL, example - <em>&quot;Intel(R) Iris(TM) Graphics 6100&quot;</em></li>
+      <li class="dropspot"><span class="inline">udid</span>: Un identificador que es único para la máquina</li>
+      <li class="dropspot"><span class="inline">gl_vendor_string</span> <span class="inline">GL_VENDOR</span> de OpenGL, ejemplo - <em>&quot;Intel Inc.&quot;</em></li>
+      <li class="dropspot"><span class="inline">gl_version_string</span> <span class="inline">GL_VERSION </span>de OpenGL, ejemplo - <em>&quot;2.1 INTEL-16.2.16&quot;</em></li>
+      <li class="dropspot"><span class="inline">gl_renderer_string</span> <span class="inline">GL_RENDERER </span>de OpenGL, ejemplo - <em>&quot;Intel(R) Iris(TM) Graphics 6100&quot;</em></li>
     </ul>
-    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Ubuntu</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">This contains the same information as on macOS.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Contiene la misma información que en <span class="notranslate">macOS</span>.</p>
+    <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Android</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">On the <b>Android</b> platform you will get some extra data from various different APIs with the following keys available in the DS map:</p>
+    <p class="dropspot">En la plataforma <b>Android</b> obtendrá algunos datos extra de varias APIs diferentes con las siguientes claves disponibles en el mapa de DS:</p>
     <ul class="dropspotlist">
-      <li><span class="inline">android_tv</span>: this will return <span class="inline">true</span> if the device is detected as being an Android TV device, or <span class="inline">false</span> otherwise</li>
-      <li><span class="inline">GL_VERSION</span>: the version of OpenGL as reported by the driver</li>
-      <li><span class="inline">GL_VENDOR</span>: the vendor of OpenGL as reported by the driver</li>
-      <li><span class="inline">GL_RENDERER</span>: the renderer of OpenGL as reported by the driver</li>
-      <li><span class="inline">GL_EXTENSIONS</span>: the extensions of OpenGL that are available as reported by the driver</li>
-      <li><span class="inline">GL_SHADING_LANGUAGE_VERSION</span>: the version of the GLSL that is supported by this OpenGL driver</li>
-      <li><span class="inline">GL_MAX_TEXTURE_SIZE</span>: the maximum texture size supported by this OpenGL driver</li>
-      <li><span class="inline">SDK_INT</span>: value of <strong>android.os.Build.VERSION.SDK_INT</strong><em> (see note below)</em></li>
-      <li><span class="inline">RELEASE</span>: value of <strong>android.os.Build.VERSION.RELEASE</strong></li>
-      <li><span class="inline">MODEL</span>: value of <strong>android.os.Build.MODEL</strong></li>
-      <li><span class="inline">DEVICE</span>: value of <strong>android.os.Build.DEVICE</strong></li>
-      <li><span class="inline">MANUFACTURER</span>: value of <strong>android.os.Build.MANUFACTURER</strong></li>
-      <li><span class="inline">CPU_ABI</span>: value of <strong>android.os.Build.CPU_ABI</strong></li>
-      <li><span class="inline">CPU_ABI2</span>: value of <strong>android.os.Build.CPU_ABI2</strong></li>
-      <li><span class="inline">BOOTLOADER</span>: value of <strong>android.os.Build.BOOTLOADER</strong></li>
-      <li><span class="inline">BOARD</span>: value of <strong>android.os.Build.BOARD</strong></li>
-      <li><span class="inline">VERSION</span>: value of <strong>os.version</strong> from the Android <span class="inline">System.getProperty</span> method.</li>
-      <li><span class="inline">REGION</span>: values of <strong>user.region</strong> from the Android <span class="inline">System.getProperty</span> method</li>
-      <li><span class="inline">VERSION_NAME</span>: value of this package&#39;s versionName - see <a href="https://developer.android.com/reference/android/content/pm/PackageInfo.html#versionName" target="_blank">here</a> for more information.</li>
-      <li><span class="inline">PHYSICAL_KEYBOARD</span>: if we think a physical keyboard is available then the string <span class="inline">&quot;TRUE&quot;</span> otherwise <span class="inline">&quot;FALSE&quot;</span></li>
+      <li><span class="inline">android_tv</span>: esto devolverá <span class="inline">true</span> si se detecta que el dispositivo es un dispositivo de TV <span class="notranslate">Android</span>, o <span class="inline">false</span> en caso contrario</li>
+      <li><span class="inline">GL_VERSION</span>: la versión de OpenGL según lo informado por el controlador</li>
+      <li><span class="inline">GL_VENDOR</span>: el proveedor de OpenGL según lo informado por el controlador</li>
+      <li><span class="inline">GL_RENDERER</span>: el renderizador de OpenGL según lo informado por el controlador</li>
+      <li><span class="inline">GL_EXTENSIONS</span>: los <span class="notranslate">extensions</span> de OpenGL que están disponibles según lo informado por el controlador</li>
+      <li><span class="inline">GL_SHADING_LANGUAGE_VERSION</span>: la versión de GLSL que soporta este controlador OpenGL</li>
+      <li><span class="inline">GL_MAX_TEXTURE_SIZE</span>: el tamaño máximo de la textura soportado por este controlador OpenGL</li>
+      <li><span class="inline">SDK_INT</span>: valor de <strong>android.os.Build.VERSION.SDK_INT</strong><em> (véase la nota siguiente)</em></li>
+      <li><span class="inline">RELEASE</span>: valor de <strong>android.os.Build.VERSION.RELEASE</strong></li>
+      <li><span class="inline">MODEL</span>: valor de <strong>android.os.Build.MODEL</strong></li>
+      <li><span class="inline">DEVICE</span>: valor de <strong>android.os.Build.DEVICE</strong></li>
+      <li><span class="inline">MANUFACTURER</span>: valor de <strong>android.os.Build.MANUFACTURER</strong></li>
+      <li><span class="inline">CPU_ABI</span>: valor de <strong>android.os.Build.CPU_ABI</strong></li>
+      <li><span class="inline">CPU_ABI2</span>: valor de <strong>android.os.Build.CPU_ABI2</strong></li>
+      <li><span class="inline">BOOTLOADER</span>: valor de <strong>android.os.Build.BOOTLOADER</strong></li>
+      <li><span class="inline">BOARD</span>: valor de <strong>android.os.Build.BOARD</strong></li>
+      <li><span class="inline">VERSION</span>: valor de <strong>os.version</strong> del método <span class="notranslate">Android</span> <span class="inline">System.getProperty</span>.</li>
+      <li><span class="inline">REGION</span>: valores de <strong>user.region</strong> del método <span class="notranslate">Android</span> <span class="inline">System.getProperty</span> </li>
+      <li><span class="inline">VERSION_NAME</span>: valor de versionName de este paquete - vea <a href="https://developer.android.com/reference/android/content/pm/PackageInfo.html#versionName" target="_blank">aquí</a> para más información.</li>
+      <li><span class="inline">PHYSICAL_KEYBOARD</span>Si pensamos que hay un teclado físico, entonces el <span class="notranslate">string</span> <span class="inline">&quot;TRUE&quot;</span> de lo contrario <span class="inline">&quot;FALSE&quot;</span></li>
     </ul>
-    <p class="note"><span class="dropspotnote"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> For information on any <strong>android.os.Build</strong> variables, see the <a href="https://developer.android.com/reference/android/os/Build" title="Android Developer documentation">Android Developer documentation</a>.</span></p>
-    <p> </p>
+    <p class="note"><span class="dropspotnote"><strong>NOTA</strong>: Para obtener información sobre cualquier variable de <strong>android.os.Build</strong>, consulte la <a href="https://developer.android.com/reference/android/os/Build" title="Android Developer documentation">documentación de Android Developer</a>.</span></p>
+    <p> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">iOS &amp; tvOS</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">iOS y tvOS</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">Here are the keys returned on iOS and tvOS (for detailed information, please refer to the Apple Developer documentation):</p>
+    <p class="dropspot">Estas son las claves devueltas en <span class="notranslate">iOS</span> y <span class="notranslate">tvOS</span> (para información detallada, consulte la documentación para desarrolladores de Apple):</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><span class="inline">name</span>: string as reported by <span class="inline">[[UIDevice currentDevice] name]</span></li>
-      <li class="dropspot"><span class="inline">systemName</span>: string as reported by <span class="inline">[[UIDevice currentDevice] systemName]</span></li>
-      <li class="dropspot"><span class="inline">systemVersion</span>: string as reported by <span class="inline">[[UIDevice currentDevice] systemVersion]</span></li>
-      <li class="dropspot"><span class="inline">model</span>: string as reported by <span class="inline">[[UIDevice currentDevice] model]</span></li>
-      <li class="dropspot"><span class="inline">localisedModel</span>: string as reported by <span class="inline">[[UIDevice currentDevice] localizedModel]</span></li>
-      <li class="dropspot"><span class="inline">uiIdiom</span>: string as reported by <span class="inline">[[UIDevice currentDevice] userInterfaceIdiom]</span></li>
-      <li class="dropspot"><span class="inline">platform</span>: <span class="inline">hw.machine</span> string gathered from <span class="inline">sysctlbyname</span></li>
-      <li class="dropspot"><span class="inline">hwModel</span>: <span class="inline">hw.model</span> string gathered from <span class="inline">sysctlbyname</span></li>
-      <li class="dropspot"><span><span class="inline">freeDiskSpace</span>: The free disk space</span></li>
-      <li class="dropspot"><span><span class="inline">totalDiskSpace</span>: The total disk space</span></li>
-      <li class="dropspot"><span><span class="inline">cpuFrequency</span>: The CPU&#39;s frequency</span></li>
-      <li class="dropspot"><span><span class="inline">busFrequency</span>: The bus frequency</span></li>
-      <li class="dropspot"><span><span class="inline">cpuCount</span>: The CPU count</span></li>
-      <li class="dropspot"><span><span class="inline">totalMemory</span>: The total memory of the device</span></li>
-      <li class="dropspot"><span><span class="inline">userMemory</span>: The user memory</span></li>
-      <li class="dropspot"><span><span class="inline">maxSocketBufferSize</span>: The max socket buffer size</span></li>
-      <li class="dropspot">Additional keys containing OpenGL graphics info
-        <br />
-      </li>
+      <li class="dropspot"><span class="inline">name</span>: <span class="notranslate">string</span>, según informa <span class="inline">[[UIDevice currentDevice] name]</span></li>
+      <li class="dropspot"><span class="inline">systemName</span>: <span class="notranslate">string</span>, según informa <span class="inline">[[UIDevice currentDevice] systemName]</span></li>
+      <li class="dropspot"><span class="inline">systemVersion</span>: cadena según lo informado por <span class="inline">[[UIDevice currentDevice] systemVersion]</span></li>
+      <li class="dropspot"><span class="inline">model</span>: cadena según lo informado por <span class="inline">[[UIDevice currentDevice] model]</span></li>
+      <li class="dropspot"><span class="inline">localisedModel</span>: cadena según lo informado por <span class="inline">[[UIDevice currentDevice] localizedModel]</span></li>
+      <li class="dropspot"><span class="inline">uiIdiom</span>: cadena según lo informado por <span class="inline">[[UIDevice currentDevice] userInterfaceIdiom]</span></li>
+      <li class="dropspot"><span class="inline">platform</span>: <span class="inline">hw.machine</span> <span class="notranslate">string</span> recogido de <span class="inline">sysctlbyname</span></li>
+      <li class="dropspot"><span class="inline">hwModel</span>: <span class="inline">hw.model</span> <span class="notranslate">string</span> recogido de <span class="inline">sysctlbyname</span></li>
+      <li class="dropspot"><span><span class="inline">freeDiskSpace</span>: El espacio libre en el disco</span></li>
+      <li class="dropspot"><span><span class="inline">totalDiskSpace</span>: El espacio total del disco</span></li>
+      <li class="dropspot"><span><span class="inline">cpuFrequency</span>: La frecuencia de la CPU</span></li>
+      <li class="dropspot"><span><span class="inline">busFrequency</span>: La frecuencia del bus</span></li>
+      <li class="dropspot"><span><span class="inline">cpuCount</span>: El recuento de la CPU</span></li>
+      <li class="dropspot"><span><span class="inline">totalMemory</span>: La memoria total del dispositivo</span></li>
+      <li class="dropspot"><span><span class="inline">userMemory</span>: La memoria del usuario</span></li>
+      <li class="dropspot"><span><span class="inline">maxSocketBufferSize</span>: El tamaño máximo de la toma <span class="notranslate">buffer</span> </span></li>
+      <li class="dropspot">Claves adicionales que contienen información gráfica de OpenGL<br>
+         </li>
     </ul>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#">GX.games</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#">Opera GX</a></p>
   <div class="droptext" data-targetname="drop-down11">
-    <p class="dropspot">The following extra keys will be included in the DS Map for GX.games:</p>
+    <p class="dropspot">Las siguientes teclas adicionales se incluirán en el mapa de DS para Opera GX:</p>
     <ul class="colour">
-      <li class="dropspot"><span class="inline">mobile</span>: This will be <strong>1.0</strong> if the game is running on a mobile browser, and <strong>0.0</strong> if it&#39;s not.</li>
+      <li class="dropspot"><span class="inline">mobile</span>: Esto será <strong>1.</strong> 0 si el juego se ejecuta en un navegador móvil, y <strong>0.0</strong> si no lo es.</li>
     </ul>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">HTML5</a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">Returns <span class="inline">-1</span>.</p>
+    <p class="dropspot">Devuelve <span class="inline">-1</span>.</p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">Nintendo Switch</a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot">Returns <span class="inline">-1</span>.</p>
+    <p class="dropspot">Devuelve <span class="inline">-1</span>.</p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">PlayStation 4</a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot"><em>Please refer to the PS4 documentation for information on the functions referenced here.</em></p>
-    <p class="dropspot">The function returns the following keys on a PlayStation 4 console:</p>
+    <p class="dropspot"><em>Consulte la documentación de PS4 para obtener información sobre las funciones a las que se hace referencia aquí.</em></p>
+    <p class="dropspot">La función devuelve las siguientes teclas en una consola PlayStation 4:</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><span class="inline">display_safe_area_ratio</span>: A floating point value as returned by <span class="inline">sceSystemServiceGetDisplaySafeAreaInfo()</span>.</li>
-      <li class="dropspot"><span class="inline">is_neo_mode</span>: This will be <span class="inline">1</span> if the game is running on a Neo (PS4 Pro) and <span class="inline">0</span> if it&#39;s running on a regular PS4.</li>
-      <li class="dropspot"><span class="inline">enter_button_assign</span>: An integer value as returned by <span class="inline">sceSystemServiceParamGetInt(SCE_SYSTEM_SERVICE_PARAM_ID_ENTER_BUTTON_ASSIGN, &amp;enterassign)</span>; a value of <span class="inline">0</span> means the Circle button is used as &quot;assign&quot; and <span class="inline">1</span> means the X button is used instead.</li>
+      <li class="dropspot"><span class="inline">display_safe_area_ratio</span>: Un valor de punto flotante devuelto por <span class="inline">sceSystemServiceGetDisplaySafeAreaInfo()</span>.</li>
+      <li class="dropspot"><span class="inline">is_neo_mode</span>: Será <span class="inline">1</span> si el juego se ejecuta en una Neo (PS4 Pro) y <span class="inline">0</span> si se ejecuta en una PS4 normal.</li>
+      <li class="dropspot"><span class="inline">enter_button_assign</span>: Un valor entero como el devuelto por <span class="inline">sceSystemServiceParamGetInt(SCE_SYSTEM_SERVICE_PARAM_ID_ENTER_BUTTON_ASSIGN, &amp;enterassign)</span>; un valor de <span class="inline">0</span> significa que el botón Círculo se utiliza como &quot;asignación&quot; y <span class="inline">1</span> significa que el botón X se utiliza en su lugar.</li>
     </ul>
-    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">PlayStation 5</a>      </p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">PlayStation 5</a></p>
   <div class="droptext" data-targetname="drop-down8">
-    <p class="dropspot">The function returns the following keys on a PlayStation 5 console:</p>
+    <p class="dropspot">La función devuelve las siguientes teclas en una consola PlayStation 5:</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><span class="inline">display_safe_area_ratio</span>: Same as PS4 (see above).</li>
-      <li class="dropspot"><span class="inline">display_resolution</span>: &quot;HD&quot;, &quot;4K&quot;  or &quot;unknown&quot;</li>
-      <li class="dropspot"><span class="inline">display_dynamic_range</span>: &quot;HDR&quot;, &quot;SDR&quot; or &quot;unknown&quot;</li>
-      <li class="dropspot"><span class="inline">display_refresh_rate</span>: &quot;120Hz&quot;, &quot;60Hz&quot; or &quot;Unknown&quot;</li>
+      <li class="dropspot"><span class="inline">display_safe_area_ratio</span>: Igual que en PS4 (ver arriba).</li>
+      <li class="dropspot"><span class="inline">display_resolution</span>: &quot;HD&quot;, &quot;4K&quot; o &quot;desconocido&quot;</li>
+      <li class="dropspot"><span class="inline">display_dynamic_range</span>: &quot;HDR&quot;, &quot;SDR&quot; o &quot;desconocido&quot;</li>
+      <li class="dropspot"><span class="inline">display_refresh_rate</span>: &quot;120Hz&quot;, &quot;60Hz&quot; o &quot;Desconocido&quot;</li>
     </ul>
-    <p class="dropspot"><br /></p>
-    <ul class="dropspotlist">
-    </ul>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="">Xbox One &amp; Series X/S</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="">Xbox One</a></p>
+  <div class="droptext" data-targetname="drop-down9">
+    <p class="dropspot">La información devuelta en Xbox One es mayormente la misma que <span class="notranslate">Windows</span>, sin embargo las claves <span class="inline">video_adapter_*</span> y <span class="inline">udid</span> son <span class="inline">0</span> (excepto <span class="inline">video_adapter_description</span> que es un <span class="notranslate">string</span> <span class="inline2">&quot;&quot;</span> vacío). Tampoco tiene la clave <span class="inline">video_d3d11_swapchain</span>.</p>
+    <p class="dropspot">Esta plataforma también devuelve la siguiente información:</p>
+    <ul class="dropspotlist">
+      <li class="dropspot"><span class="inline">is_xbox_one_x</span>: Será <span class="inline">1</span> si el juego se ejecuta en una Xbox One X y <span class="inline">0</span> si se ejecuta en una Xbox One básica.</li>
+    </ul>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="">Xbox Serie X/S</a></p>
   <div class="droptext" data-targetname="drop-down10">
-    <p class="dropspot">The info returned on Xbox One and Xbox Series X/S is mostly the same as Windows, however the <span class="inline">video_adapter_*</span> and <span class="inline">udid</span> keys are <span class="inline">0</span> (except for <span class="inline">video_adapter_description</span> which is an empty string <span class="inline2">&quot;&quot;</span>). It also does not have the <span class="inline">video_d3d11_swapchain</span> key and the <span class="inline">video_d3d11_*</span> keys have been replaced by <span class="inline">video_d3d12_*</span>.</p>
-    <p class="dropspot">Here are some keys that this platform returns in addition to the ones listed under Windows: </p>
+    <p class="dropspot">La información devuelta en las consolas Xbox Series X/S es mayoritariamente la misma que la de Xbox One, sin embargo las teclas <span class="inline">video_d3d11_*</span> han sido sustituidas por <span class="inline">video_d3d12_*</span>.</p>
+    <p class="dropspot">Estas son algunas de las claves que devuelve esta plataforma, además de las que aparecen en el apartado de Xbox One:</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><span class="inline">video_d3d12_cmdqueue</span>: Points to the DX12 command queue</li>
-      <li class="dropspot"><span class="inline">video_d3d12_cmdlist</span>: Points to the DX12 command list</li>
-      <li class="dropspot"><span class="inline">video_d3d12_currentrt</span>: Points to the current DX12 render target</li>
-      <li class="dropspot"><span class="inline">device_type</span>: Contains a constant value that represents the device type. These constants map directly to values returned by the <span class="inline2">XSystemGetDeviceType()</span> function.<br />
-        This will be one of the following constants: <span class="inline2">device_gdk_unknown</span>, <span class="inline2">device_gdk_xboxone</span>, <span class="inline2">device_gdk_xboxones</span>, <span class="inline2">device_gdk_xboxonex</span>, <span class="inline2">device_gdk_xboxonexdevkit</span>, <span class="inline2">device_gdk_xboxseriess</span>, <span class="inline2">device_gdk_xboxseriesx</span>, <span class="inline2">device_gdk_xboxseriesdevkit</span>.</li>
+      <li class="dropspot"><span class="inline">video_d3d12_cmdqueue</span>: Apunta a la cola de comandos DX12</li>
+      <li class="dropspot"><span class="inline">video_d3d12_cmdlist</span>: Señala la lista de comandos DX12</li>
+      <li class="dropspot"><span class="inline">video_d3d12_currentrt</span>: Señala el objetivo de renderizado DX12 actual</li>
     </ul>
   </div>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">os_get_info</span>()</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
+  <p class="code">os_get_info()</p>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_ID_DS_Map"><a href="../../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/ds_map_create.htm" target="_blank">DS Map ID</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">if (os_type == os_android)<br />
     {<br />
-        var _info = <span data-field="title" data-format="default">os_get_info</span>();<br />
+        var _info = os_get_info();<br />
         <br />
         if (_info[? &quot;android_tv&quot;])<br />
         {<br />
             global.android_tv = true;<br />
         }<br />
     }</p>
-  <p>The above code checks if the current OS is Android, gets the OS info and reads the returned map to check if the game is running on an Android TV; in that case it sets the custom variable <span class="inline">global.android_tv</span> to <span class="inline">true</span>.</p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior comprueba si el sistema operativo actual es <span class="notranslate">Android</span>, obtiene la información del sistema operativo y lee el mapa devuelto para comprobar si el juego se está ejecutando en un televisor <span class="notranslate">Android</span>; en ese caso establece la variable personalizada <span class="inline">global.android_tv</span> a <span class="inline">true</span>.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="OS_And_Compiler.htm">OS And Compiler</a></div>
-        <div style="float:right">Next: <a href="os_powersave_enable.htm">os_powersave_enable</a></div>
+        <div style="float:left">Atrás: <a href="OS_And_Compiler.htm">Sistema operativo y compilador</a></div>
+        <div style="float:right">Siguiente: <a href="os_powersave_enable.htm"><span class="notranslate">os_powersave_enable</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 os_get_info

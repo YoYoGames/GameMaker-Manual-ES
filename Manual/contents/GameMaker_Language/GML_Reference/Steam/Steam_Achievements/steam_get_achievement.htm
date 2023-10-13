@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_get_achievement</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_get_achievement" />
+  <meta name="rh-index-keywords" content="steam_get_achievement" />
+  <meta name="search-keywords" content="steam_get_achievement" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_get_achievement</h1>
+  <p>Con esta función puedes comprobar en la API <span class="notranslate">Steam</span> si un logro específico ha sido concedido. El logro debe haber sido definido previamente en la página de cuentas del panel de control de Steamworks para tu juego y el <span class="notranslate">string</span> que se pasa a la función debe coincidir con el utilizado como <b>nombre de la</b> API en el panel de control.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
+  <p class="code">steam_get_achievement(ach_name);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argumento</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">ach_name</span></td>
+        <td>El nombre del logro a conseguir (<span class="notranslate">string</span>).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p class="code">if hp &lt;= 0<br />
+    {<br />
+        global.Deaths += 1;<br />
+        if global.Deaths == 10<br />
+        {<br />
+            if !steam_get_achievement(&quot;ach_Player_Dies_Ten_Times&quot;) steam_set_achievement(&quot;ach_Player_Dies_Ten_Times&quot;);<br />
+        }<br />
+    }</p>
+  <p>El código anterior premiará al jugador con un logro si la variable global &quot;Muertes&quot; es igual a 10 y si el logro no ha sido ya concedido.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Atrás: <a href="Steam_Achievements.htm">Logros y estadísticas</a></div>
+        <div style="float:right">Siguiente: <a href="steam_clear_achievement.htm"><span class="notranslate">steam_clear_achievement</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_get_achievement
+-->
+  <!-- TAGS
+steam_get_achievement
+-->
+</body>
+</html>

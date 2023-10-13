@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Decimal To Integer</title>
+  <title>Decimal a entero</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Decimal To Integer action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Decimal To Integer" />
@@ -14,59 +14,59 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Decimal To Integer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/i_Types_Decimal_To_Integer.png" /> Decimal To Integer</h1>
-  <p>This action will take a decimal number and convert it into an integer. You give the value to convert and then select the type of rounding that should be done to turn it into an integer value. The types of rounding available are:<b></b></p>
+  <h1><img> Decimal a entero</h1>
+  <p>Esta acción tomará un número decimal y lo convertirá en un número entero. Usted da el valor a convertir y luego selecciona el tipo de redondeo que debe hacerse para convertirlo en un valor entero. Los tipos de redondeo disponibles son:<b></b></p>
   <ul class="colour">
-    <li><b>Round</b>: This takes a decimal number and rounds it up <i>or</i> down to the nearest integer number. In the special case where the number supplied is exactly half an integer (for example, 1.5, 17.5, -2.5, etc...) the number will be rounded to
-      the nearest <b>even</b> value, for example, 2.5 would be rounded to 2, while 3.5 would be rounded to 4. This type of rounding is called <i>bankers rounding</i> and over large numbers of iterations or when using floating point maths, it gives a statistically
-      better rounding than the more traditional &quot;round up if over .5 and round down otherwise&quot; approach.</li>
-    <li><b>Ceil</b>: This will take a decimal value and round it <i>up</i> to the nearest integer. Unlike round (above) this does not take into consideration the decimal part of the value, so a number like 5.0000001 would still be rounded up to 6. It is worth
-      noting that if you are using the Random action <a href="../Random/Get_Random_Number.htm">Get Random Number</a> to generate a random decimal value and then calling this action to round it up, then you <i>may</i> get unexpected results. The random
-      action could potentially return 0, and using &quot;Ceil&quot; on that will not give 1 but 0, so if you get a random decimal from 0 to 9 and use this function you may expect to get integers from 1 to 10, but in reality you could get integers from
-      0 to 10. This is a remote possibility but should be taken into account when using this action.</li>
-    <li><b>Floor</b>: This will take a decimal value and round it <i>down</i> to the nearest integer value. Unlike round (above) this does not take into consideration the decimal part of the value, so a number like 5.9999999 would still be floored down to
+    <li><b>Redondear</b>: Toma un número decimal y lo redondea hacia arriba <i>o</i> hacia abajo al número entero más cercano. En el caso especial de que el número suministrado sea exactamente la mitad de un entero (por ejemplo, 1,5, 17,5, -2,5, etc...) el número se redondeará al valor par más cercano, por ejemplo, 2,5 se redondeará a 2, mientras que 3,5 se redondeará a 4.
+      el valor <b>par</b> más cercano, por ejemplo, 2,5 se redondeará a 2, mientras que 3,5 se redondeará a 4. Este tipo de redondeo se denomina <i>redondeo bancario</i> y, en un gran número de iteraciones o cuando se utilizan matemáticas en coma flotante, da un redondeo estadísticamente
+      mejor redondeo que el enfoque más tradicional de &quot;redondear hacia arriba si es más de 0,5 y redondear hacia abajo en caso contrario&quot;.</li>
+    <li><b>Ceil</b>: Esto tomará un valor decimal y lo <i>redondeará</i> al entero más cercano. A diferencia del redondeo (arriba), esto no tiene en cuenta la parte decimal del valor, por lo que un número como 5.0000001 se redondeará a 6. Vale la pena
+      Cabe destacar que si se utiliza la acción Aleatoria <a href="../Random/Get_Random_Number.htm">Obtener Número Aleatorio</a> para generar un valor decimal aleatorio y luego se llama a esta acción para redondearlo, se <i>pueden</i> obtener resultados inesperados. La acción aleatoria
+      podría devolver 0, y al usar &quot;Ceil&quot; no dará 1 sino 0, así que si obtiene un decimal aleatorio de 0 a 9 y usa esta función puede esperar obtener enteros de 1 a 10, pero en realidad podría obtener enteros de
+      0 a 10. Esta es una posibilidad remota, pero debe tenerse en cuenta al utilizar esta acción.</li>
+    <li><b>Piso</b>: Esto tomará un valor decimal y lo redondeará <i>hacia abajo</i> al valor entero más cercano. A diferencia del redondeo (arriba), esto no tiene en cuenta la parte decimal del valor, por lo que un número como 5.9999999 se redondeará a
       5.</li>
   </ul>
-  <p>Once you have selected the rounding type, you must supply the number to round (this can be a variable), and then give a target variable to return the new integer value to (which can be flagged as a temporary local variable).</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Decimal To Integer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/a_Types_Decimal_To_integer.png" /></p>
-  <h4>Arguments:</h4>
+  <p>Una vez seleccionado el tipo de redondeo, debe suministrar el número a redondear (puede ser una variable), y luego dar una variable de destino a la que devolver el nuevo valor entero (que puede ser marcada como una variable local temporal).</p>
+  <p> </p>
+  <h4>Sintaxis de la acción:</h4>
+  <p><img alt="Decimal To Integer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/i_Types_Decimal_To_Integer.png" /></p>
+  <h4>Argumentos:</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>Rounding</td>
-        <td>The type of rounding to use to get the integer (see description above)</td>
+        <td><span class="notranslate">Rounding</span></td>
+        <td>El tipo de redondeo a utilizar para obtener el entero (ver descripción anterior)</td>
       </tr>
       <tr>
-        <td>Number</td>
-        <td>The decimal number to round to an integer</td>
+        <td><span class="notranslate">Number</span></td>
+        <td>El número decimal a redondear a un entero</td>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The target variable to store the returned integer</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>La variable de destino para almacenar el entero devuelto</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Decimal To Integer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Types/e_Types_Decimal_To_Integer.png" />The above action block code takes a decimal value and converts it to an integer,
-    storing the returned value in a temporary local variable. This value is then turned into a string and drawn to the screen.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p><img>El código del bloque de acción anterior toma un valor decimal y lo convierte en un entero,
+    almacenando el valor devuelto en una variable local temporal. Este valor se convierte entonces en un <span class="notranslate">string</span> y se dibuja en la pantalla.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Data_Type_Actions.htm">Data Type Actions</a></div>
-        <div style="float:right">Next: <a href="String_To_Number.htm">String To Number</a></div>
+        <div style="float:left">Atrás: <a href="Data_Type_Actions.htm">Acciones del tipo de datos</a></div>
+        <div style="float:right">Siguiente: <a href="String_To_Number.htm">Cadena a número</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Decimal To Integer

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>argument</title>
+  <title>argumento</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the argument variable" />
   <meta name="rh-index-keywords" content="argument[n],argument0 - argument15" />
@@ -14,46 +14,49 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>argument</h1>
-  <p>This variable holds an <a href="../../Arrays.htm">array</a> that is used along with the read-only variable <a href="argument_count.htm">argument_count</a> in <a href="../../Script_Functions.htm">script functions</a> or <a href="../../Method_Variables.htm">methods</a>. Each array position holds an input value for the function and is specifically for use with <em>variable </em>argument functions.</p>
-  <p>Note that there are also a series of independent global scope variables that can also be used in user-defined functions to reference the different input arguments: <span class="inline">argument0</span>, <span class="inline">argument1</span>, <span class="inline">argument2</span>, etc... up to <span><span class="inline">argument15</span>.</span></p>
-  <p>An argument that hasn&#39;t been passed in will be <span class="inline">undefined</span>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>argumento</h1>
+  <p>Esta variable contiene una <a href="../../Arrays.htm">matriz</a> que se utiliza junto con la variable de sólo lectura <a href="argument_count.htm"><span class="notranslate">argument_count</span></a> en <a href="../../Script_Functions.htm">funciones</a> o <a href="../../Method_Variables.htm">métodos de</a> <a href="../../Script_Functions.htm">script</a>. Cada posición de la matriz contiene un valor de entrada para la función y se utiliza específicamente con funciones de argumento <em>variable </em>.</p>
+  <p>Tenga en cuenta que también hay una serie de variables independientes de ámbito global que también se pueden utilizar en las funciones definidas por el usuario para hacer referencia a los diferentes argumentos de entrada: <span class="inline">argument0</span>, <span class="inline">argument1</span>, <span class="inline">argument2</span>, etc... hasta <span><span class="inline">argument15</span></span>.</p>
+  <p class="note"><strong>NOTA</strong>: Esto ya no es estrictamente necesario y se proporciona como soporte de legado más que nada. Todas las funciones definidas por el usuario aceptarán argumentos variables, y cualquier argumento que se pase a una función que no forme parte de las entradas con nombre se inicializará a <span class="inline" style="font-size: 14px">indefinido</span> por defecto, lo que puede comprobarse mediante la función <a href="../../../GML_Reference/Variable_Functions/is_undefined.htm">is_undefined()</a>.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">argument[<em>n</em>]<br />
     argument1<br />
     argument2<br />
     ...<br />
     argument15</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Any"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable" target="_blank">Any</a></span> (can be of any data type supplied to the function)</p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">function print(){<br />
-        var _str = &quot;&quot;;<br />
-        for (var i = 0; i &lt; argument_count; i ++)<br />
-        {<br />
-            _str += string(argument[i]);<br />
-        }<br />
-        show_debug_message(_str);<br />
-    }<br />
-    <br />
-    // In an object<br />
-    print(&quot;Player : &quot;, current_time, &quot; : &quot;, id, &quot; : fired&quot;);
-  </p>
-  <p>The above function joins all the arguments passed into the function as one string, and then prints that string to the output log.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code"><span data-keyref="Type_Any">Variable</span> (can be of any data type supplied to the function)</p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p class="code">function my_array()<br />
+    {<br />
+        var i, arg;<br />
+        for (i = 0; i &lt; 5; i += 1;)<br />
+        {<br />
+            if argument_count &gt; i<br />
+            {<br />
+                arg[i] = argument[i]<br />
+            }<br />
+            else<br />
+            {<br />
+                arg[i] = -1;<br />
+            }<br />
+        }<br />
+    }</p>
+  <p>El código anterior utiliza la variable <span class="inline">argument_count</span> junto con la matriz <span class="inline">argument</span> para inicializar las variables, y es un ejemplo de cómo permitir que una función definida por el usuario acepte un número variable de argumentos.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Global_Variables.htm">Global Variables</a></div>
-        <div style="float:right">Next: <a href="argument_count.htm">argument_count</a></div>
+        <div style="float:left">Atrás: <a href="../Global_Variables.htm">Variables globales</a></div>
+        <div style="float:right">Siguiente: <a href="argument_count.htm"><span class="notranslate">argument_count</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 argument

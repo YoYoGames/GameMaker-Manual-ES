@@ -3,75 +3,84 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>System</title>
+  <title>Sistema</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing the System async event." />
   <meta name="rh-index-keywords" content="Objects - Async System Event" />
-  <meta name="search-keywords" content="System,Gamepad Event,Xbox Live Event,UWP Event,Virtual Keyboard Event,Audio System Event,ev_async_system_event" />
+  <meta name="search-keywords" content="System,ev_system_event,Gamepad Event,Xbox Live Event,UWP Event,Virtual Keyboard Event,Audio System Event" />
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">System</span></h1>
-  <p><img alt="System Event" class="center" src="../../../assets/Images/Asset_Editors/Async_System.png" />This event can only be triggered by a <a class="glossterm" data-glossterm="callback" href="#">callback</a> from a system level event (such as the detection of a gamepad or the automatic signing in to Xbox Live) and it will return a <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS Map</a> stored in the variable <span class="inline2"><a data-xref="{title}" href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a></span>, containing different key/value pairs depending on the system level event that triggered the callback. These events are:</p>
-  <h2>Game Pads</h2>
-  <p>When this event is triggered for a gamepad being connected or disconnected it will return one of the following key/value pairs in the <span class="inline">async_load</span> map:</p>
+  <h1>Sistema</h1>
+  <p><img>Este evento sólo puede ser disparado por una <a class="glossterm" data-glossterm="llamada de retorno" href="#">llamada de retorno</a> desde un evento de nivel de sistema (como la detección de un gamepad o el inicio de sesión automático en XBox Live) y devolverá un <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">Mapa DS</a> almacenado en la variable <a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>que contiene diferentes pares de claves/valores dependiendo del evento de nivel de sistema que haya provocado la llamada de retorno. Estos eventos son:</p>
+  <p> </p>
+  <h2>Tapetes de juego</h2>
+  <p>Cuando este evento se activa para un gamepad que se conecta o se desconecta, devolverá uno de los siguientes pares clave/valor en el mapa <span class="inline">async_load</span>:</p>
   <ul class="dropspotlist">
-    <li class="dropspot">&quot;<span class="inline">event_type</span>&quot; - the type of system event received, which will be one of the following strings:
+    <li class="dropspot">&quot;<span class="inline">event_type</span>&quot; - el tipo de evento del sistema recibido, que será una de las siguientes cadenas:
       <ul>
-        <li><span>&quot;<span class="inline">gamepad discovered</span>&quot; - happens when the system reports a new gamepad has been connected</span></li>
-        <li><span>&quot;<span class="inline">gamepad lost</span>&quot; - happens when the system has lost connection to a gamepad</span></li>
+        <li><span>&quot;<span class="inline">gamepad discovered</span>&quot; - sucede cuando el sistema informa que se ha conectado un nuevo gamepad</span></li>
+        <li><span>&quot;<span class="inline">gamepad lost</span>&quot; - ocurre cuando el sistema ha perdido la conexión con un gamepad</span></li>
       </ul>
     </li>
-    <li class="dropspot">&quot;<span class="inline">pad_index</span>&quot; - the index of the pad that has been added or removed</li>
+    <li class="dropspot">&quot;<span class="inline">pad_index</span>&quot; - el índice de la almohadilla que se ha añadido o eliminado</li>
   </ul>
-  <p>This event now permits you to move all your gamepad checking logic from the Step Event or an Alarm event into the System Event and only run it when it&#39;s actually required.</p>
-  <p class="note"><b><span data-conref="../../../assets/snippets/Tag_important.hts"> </span> </b>This event will NOT be triggered unless you have at least one <a href="../../../GameMaker_Language/GML_Reference/Game_Input/GamePad_Input/Gamepad_Input.htm"><span class="inline">gamepad_*</span></a> function or <a href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Gamepad/Gamepad_Actions.htm">GML Visual action</a> in your game code. The runner will only initialise the gamepad sub-system when the functions are used in the project, so if they aren&#39;t present, adding/removing gamepads will not trigger the System Event.</p>
-  <h2>Virtual Keyboards</h2>
-  <p>When this event is triggered for a virtual keyboard being opened or closed it will return the following key/value pairs in the <span class="inline2"><a data-xref="{title}" href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a></span> map:</p>
+  <p>Este evento te permite ahora mover toda tu lógica de comprobación del gamepad desde el Evento de Paso o un evento de Alarma al Evento de Sistema y sólo ejecutarlo cuando sea realmente necesario.</p>
+  <p class="note"><strong>¡IMPORTANTE!</strong> Este evento NO se activará a menos que tenga al menos una <a href="../../../GameMaker_Language/GML_Reference/Game_Input/GamePad_Input/Gamepad_Input.htm"><span class="inline">gamepad_*</span></a> función o <a href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Gamepad/Gamepad_Actions.htm">acción GML Visual</a> en su código de juego. El runner sólo inicializará el subsistema de gamepads cuando las funciones se usen en el proyecto, así que si no están presentes, añadir/quitar gamepads no activará el evento del sistema.</p>
+  <p> </p>
+  <h2>Teclados virtuales</h2>
+  <p>Cuando este evento se activa para un teclado virtual que se abre o se cierra, devolverá los siguientes pares clave/valor en el mapa <span class="inline">async_load</span>:</p>
   <ul class="dropspotlist">
-    <li class="dropspot">&quot;<span class="inline">event_type</span>&quot; - the type of system event received, which will be &quot;<span class="inline">virtual keyboard status</span>&quot; for virtual keyboards.</li>
-    <li class="dropspot">&quot;<span class="inline">screen_height</span>&quot; - the height of the virtual keyboard (in pixels). This will be 0 if the keyboard is invisible.</li>
-    <li class="dropspot">&quot;<span class="inline">keyboard_status</span>&quot; - the current status of the keyboard, returned as one of the following strings:
+    <li class="dropspot">&quot;<span class="inline">event_type</span>&quot; - el tipo de evento del sistema recibido, que será &quot;<span class="inline">virtual keyboard status</span>&quot; para los teclados virtuales.</li>
+    <li class="dropspot">&quot;<span class="inline">screen_height</span>&quot; - la altura del teclado virtual (en píxeles). Será 0 si el teclado es invisible.</li>
+    <li class="dropspot">&quot;<span class="inline">keyboard_status</span>&quot; - el estado actual del teclado, devuelto como una de las siguientes cadenas:
       <ul>
-        <li>&quot;hiding&quot;</li>
-        <li>&quot;hidden&quot;</li>
-        <li>&quot;showing&quot;</li>
+        <li>&quot;oculto&quot;</li>
+        <li>&quot;oculto&quot;</li>
+        <li>&quot;mostrando&quot;</li>
         <li>&quot;visible&quot;</li>
       </ul>
     </li>
   </ul>
-  <p>See <a data-xref="{title}" href="../../../GameMaker_Language/GML_Reference/Game_Input/Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm">Virtual Keys And Virtual Keyboards</a> for more information on the virtual keyboard.</p>
-  <h2>Audio System Status</h2>
-  <p>This event type is specifically for use when working with the HTML5 target, as it will be triggered every time the Web Audio context status changes. This means that if you have, for example, a piece of looping background music, then you can pause it or stop and restart it, based on this event triggering. This can be checked by looking for the following key/value pair in the <span class="inline2"><a data-xref="{title}" href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a></span> map:</p>
+  <p>Consulte <a href="../../../GameMaker_Language/GML_Reference/Game_Input/Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm">aquí</a> para obtener más información sobre el teclado virtual.</p>
+  <p> </p>
+  <h2>Xbox Live</h2>
+  <p>El evento asíncrono del sistema puede ser disparado cuando se apunta a la Xbox One usando la exportación UWP y marcando la opción Habilitar Xbox Live en las <a href="../../../Settings/Game_Options/Windows_UWP.htm">Opciones de Juego UWP</a>. Cuando se inicia el proyecto UWP de <span data-keyref="GameMaker Name">GameMaker</span> que tiene Xbox Live habilitado, el proyecto intentará automáticamente iniciar sesión en Xbox Live de forma silenciosa. Los resultados de este intento de inicio de sesión serán devueltos como uno de los siguientes pares clave/valor en el mapa <span class="inline">async_load</span>:</p>
   <ul class="dropspotlist">
-    <li class="dropspot">&quot;<span class="inline">event_type</span>&quot; - the type of system event received, which will be the string &quot;<span class="inline">audio_system_status</span>&quot; if the audio system has initialised or the context has changed.</li>
+    <li class="dropspot">&quot;<span class="inline">event_type</span>&quot; - el tipo de evento del sistema recibido, que será una de las siguientes cadenas:</li>
+    <li class="dropspot">&quot;<span class="inline">user signed in</span>&quot; - el inicio de sesión silencioso del usuario se ha completado con éxito</li>
+    <li class="dropspot">&quot;<span class="inline">user sign in failed</span>&quot; - el inicio de sesión silencioso del usuario ha fallado (cuando esto ocurre puedes utilizar la función <a href="../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/Users_And_Accounts/xboxlive_show_account_picker.htm"><span class="inline">xboxlive_show_account_picker()</span></a> para que el usuario elija una cuenta con la que iniciar sesión)</li>
+    <li class="dropspot">&quot;<span class="inline">user signed out</span>&quot; - el usuario ha cerrado la sesión</li>
   </ul>
-  <p>If this event type is triggered, then there will be an additional key in the <span class="inline2"><a data-xref="{title}" href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a></span> map:</p>
+  <p>Otras funciones para Xbox Live también pueden desencadenar este evento, pero las diferentes devoluciones de llamada para esas funciones se detallan en las páginas de funciones relevantes. Para obtener más información sobre las funciones específicas disponibles para Xbox Live, consulte <a href="../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/UWP_And_XBox_Live.htm">aquí</a>.</p>
+  <p> </p>
+  <h2>Estado del sistema de audio</h2>
+  <p>Este tipo de evento se utiliza específicamente cuando se trabaja con el objetivo HTML5, ya que se activará cada vez que el estado del contexto de Web Audio cambie. Esto significa que si tienes, por ejemplo, una pieza de música de fondo en bucle, entonces puedes pausarla o detenerla y reiniciarla, basándote en la activación de este evento. Esto se puede comprobar buscando el siguiente par clave/valor en el mapa <span class="inline">async_load</span>:</p>
   <ul class="dropspotlist">
-    <li class="dropspot">&quot;<span class="inline">status</span>&quot; - The status of the audio system, which will be one of the following two strings</li>
-    <li class="dropspot">&quot;<span class="inline">available</span>&quot; - The audio system is initialised and available to play sounds</li>
-    <li class="dropspot">&quot;<span class="inline">unavailable</span>&quot; - The audio system is not initialised, or the context is not currently running, and so can&#39;t play sounds (all sound playing functions will return <span class="inline2">-1</span>)</li>
+    <li class="dropspot">&quot;<span class="inline">event_type</span>&quot; - el tipo de evento del sistema recibido, que será el <span class="notranslate">string</span> &quot;<span class="inline">audio_system_status</span>&quot; si el sistema de audio se ha inicializado o el contexto ha cambiado.</li>
   </ul>
-  <p>For more information on the specific functions available for audio, please see <a data-xref="{title}" href="../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio.htm">Audio</a>.</p>
-  <p class="note"><b><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> </b>While this event is designed for use with the HTML5 target, it will also be triggered on all other platforms, but on everything (except HTML5) it will only be triggered once on Game Start when the audio engine is first initialised.</p>
-  <h2>Misc. Events</h2>
-  <p>On mobile targets (Android, iOS and tvOS), an event is triggered when the app is brought back into focus. Its <span class="inline2"><a data-xref="{title}" href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a></span> map contains a single key:</p>
-  <ul class="colour">
-    <li><span class="inline">&quot;event_type&quot;</span> : <span class="inline">&quot;onResume&quot;</span></li>
+  <p>Si se activa este tipo de evento, habrá una clave adicional en el mapa <span class="inline">async_load</span>:</p>
+  <ul class="dropspotlist">
+    <li class="dropspot">&quot;<span class="inline">status</span>&quot; - El estado del sistema de audio, que será una de las dos cadenas siguientes</li>
+    <li class="dropspot">&quot;<span class="inline">available</span>&quot; - El sistema de audio está inicializado y disponible para reproducir sonidos</li>
+    <li class="dropspot">&quot;<span class="inline">unavailable</span>&quot; - El sistema de audio no se ha inicializado, o el contexto no se está ejecutando actualmente, por lo que no puede reproducir sonidos (todas las funciones de reproducción de sonido devolverán -1)</li>
   </ul>
-  <p> </p>
-  <p> </p>
+  <p>Para obtener más información sobre las funciones específicas disponibles para Audio, consulte <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio.htm">aquí</a>.</p>
+  <p class="note"><strong>NOTA</strong>: Aunque este evento está diseñado para su uso con el objetivo de HTML5, también se activará en todas las demás plataformas, pero en todo (excepto en HTML5) sólo se activará una vez en el inicio del juego cuando el motor de audio se inicialice por primera vez.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Async_Events.htm">Async Events</a></div>
-        <div style="float:right">Next: <a href="Audio_Playback.htm">Audio Playback</a></div>
+        <div style="float:left">Atrás: <a href="../Async_Events.htm">Eventos asíncronos</a></div>
+        <div style="float:right">Siguiente: <a href="Audio_Playback.htm">Reproducción de audio</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Asynchronous System

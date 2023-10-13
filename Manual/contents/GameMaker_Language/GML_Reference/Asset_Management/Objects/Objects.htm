@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Objects</title>
+  <title>Objetos</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the different functions and variables associated with Objects" />
   <meta name="rh-index-keywords" content="" />
@@ -14,56 +14,56 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Objects</h1>
-  <p>In <span data-keyref="GameMaker Name">GameMaker</span> you have objects and you have instances. Objects are essentially the base template for an instance, and as such are <i>never</i> present in a room directly... only <i>instances</i> of the object are placed in the room. This
-    means that if you want to change something for all instances you are going to create, then you can do it by changing the <i>object</i>.</p>
-  <p class="note"><b>IMPORTANT!</b> Changing anything about an object will <b>not</b> change any instances currently present in the room, only those that are created after the change.</p>
-  <p>You can also access information about a base object and use it to dictate behaviors or changes in the game. For example, you can do a check for a parent object ID, and in the following code if an instance with that parent is found you can then check
-    its <span class="inline">object_index</span> to decide what should be done.</p>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> gives you a number of functions that permit you to get various details about an object. Note, an object is <i>not</i> an instance (an in-game entity), it is purely a resource from which all instances are created. This means
-    that the return values of these functions may be different to the actual values shown by instances in the room, as once an instance is created it can be changed through code and GML Visual actions.</p>
-  <p> </p>
+  <h1>Objetos</h1>
+  <p>En <span data-keyref="GameMaker Name">GameMaker</span> tienes <span class="notranslate">objects</span> y tienes instancias. <span class="notranslate">Objects</span> son esencialmente la plantilla base para una instancia, y como tal <i>nunca</i> están presentes en un <span class="notranslate">room</span> directamente... sólo las <i>instancias</i> del <span class="notranslate">object</span> se colocan en el <span class="notranslate">room</span>. Esto
+    significa que si quieres cambiar algo para todas las instancias que vas a crear, entonces puedes hacerlo cambiando el <i>objeto</i>.</p>
+  <p class="note"><b>¡IMPORTANTE!</b> El cambio de cualquier cosa en un <span class="notranslate">object</span> <b>no</b> cambiará las instancias actualmente presentes en el <span class="notranslate">room</span>, sólo las que se creen después del cambio.</p>
+  <p>También puedes acceder a la información de un <span class="notranslate">object</span> base y utilizarla para dictar comportamientos o cambios en el juego. Por ejemplo, puedes hacer una comprobación de un ID de <span class="notranslate">object</span> padre, y en el siguiente código si se encuentra una instancia con ese padre puedes entonces comprobar
+    su <span class="inline">object_index</span> para decidir qué debe hacerse.</p>
+  <p><span data-keyref="GameMaker Name">GameMaker</span> te da una serie de funciones que te permiten obtener varios detalles sobre un <span class="notranslate">object</span>. Ten en cuenta que un <span class="notranslate">object</span> <i>no</i> es una instancia (una entidad dentro del juego), es puramente un recurso del que se crean todas las instancias. Esto significa que
+    que los valores de retorno de estas funciones pueden ser diferentes a los valores reales mostrados por las instancias en el <span class="notranslate">room</span>, ya que una vez creada una instancia puede ser modificada mediante código y acciones de <span class="notranslate">GML</span> Visual.</p>
+  <p> </p>
   <ul class="colour">
-    <li><a href="object_index.htm">object_index</a></li>
-    <li><a href="object_exists.htm">object_exists</a></li>
-    <li><a href="object_get_name.htm">object_get_name</a></li>
-    <li><a href="object_get_mask.htm">object_get_mask</a></li>
-    <li><a href="object_get_parent.htm">object_get_parent</a></li>
-    <li><a href="object_get_persistent.htm">object_get_persistent</a></li>
-    <li><a href="object_get_solid.htm">object_get_solid</a></li>
-    <li><a href="object_get_sprite.htm">object_get_sprite</a></li>
-    <li><a href="object_get_visible.htm">object_get_visible</a></li>
-    <li><a href="object_get_physics.htm">object_get_physics</a></li>
-    <li><a href="object_is_ancestor.htm">object_is_ancestor</a></li>
+    <li><a href="object_index.htm"><span class="notranslate">object_index</span></a></li>
+    <li><a href="object_exists.htm"><span class="notranslate">object_exists</span></a></li>
+    <li><a href="object_get_name.htm"><span class="notranslate">object_get_name</span></a></li>
+    <li><a href="object_get_mask.htm"><span class="notranslate">object_get_mask</span></a></li>
+    <li><a href="object_get_parent.htm"><span class="notranslate">object_get_parent</span></a></li>
+    <li><a href="object_get_persistent.htm"><span class="notranslate">object_get_persistent</span></a></li>
+    <li><a href="object_get_solid.htm"><span class="notranslate">object_get_solid</span></a></li>
+    <li><a href="object_get_sprite.htm"><span class="notranslate">object_get_sprite</span></a></li>
+    <li><a href="object_get_visible.htm"><span class="notranslate">object_get_visible</span></a></li>
+    <li><a href="object_get_physics.htm"><span class="notranslate">object_get_physics</span></a></li>
+    <li><a href="object_is_ancestor.htm"><span class="notranslate">object_is_ancestor</span></a></li>
   </ul>
-  <p> </p>
-  <p>There are also a number of functions that permit you set the properties for an object. It should be noted that any instances of this object that already exist in the room <i>may not be affected by these functions</i>, but all new instances of this object
-    created in the room will be, so it is recommend that you never change an objects properties when instances of that object are present in the current room.</p>
-  <p> </p>
+  <p> </p>
+  <p>También hay una serie de funciones que permiten establecer las propiedades de un <span class="notranslate">object</span>. Hay que tener en cuenta que las instancias de este <span class="notranslate">object</span> que ya existen en el <span class="notranslate">room</span> <i>pueden no verse afectadas por estas funciones</i>, pero todas las nuevas instancias de este objeto
+    creadas en <span class="notranslate">room</span>, por lo que se recomienda no cambiar nunca las propiedades de un <span class="notranslate">objects</span> cuando haya instancias de ese <span class="notranslate">object</span> en el actual <span class="notranslate">room</span>.</p>
+  <p> </p>
   <ul class="colour">
-    <li><a href="object_set_mask.htm">object_set_mask</a></li>
-    <li><a href="object_set_persistent.htm">object_set_persistent</a></li>
-    <li><a href="object_set_solid.htm">object_set_solid</a></li>
-    <li><a href="object_set_sprite.htm">object_set_sprite</a></li>
-    <li><a href="object_set_visible.htm">object_set_visible</a></li>
+    <li><a href="object_set_mask.htm"><span class="notranslate">object_set_mask</span></a></li>
+    <li><a href="object_set_persistent.htm"><span class="notranslate">object_set_persistent</span></a></li>
+    <li><a href="object_set_solid.htm"><span class="notranslate">object_set_solid</span></a></li>
+    <li><a href="object_set_sprite.htm"><span class="notranslate">object_set_sprite</span></a></li>
+    <li><a href="object_set_visible.htm"><span class="notranslate">object_set_visible</span></a></li>
   </ul>
-  <p> </p>
-  <p>You can also use certain functions to generate events from code from within a specific instance or object. These functions can be very useful, especially when dealing with <a href="../../../../The_Asset_Editors/Object_Properties/Parent_Objects.htm">Parents and Children</a>,
-    and are outlined in the following section:</p>
+  <p> </p>
+  <p>También puede utilizar ciertas funciones para generar eventos de código desde una instancia específica o <span class="notranslate">object</span>. Estas funciones pueden ser muy útiles, especialmente cuando se trata de <a href="../../../../The_Asset_Editors/Object_Properties/Parent_Objects.htm">Padres e Hijos</a>,
+    y se describen en la siguiente sección:</p>
   <ul class="colour">
-    <li><a href="Object_Events/Generating_Object_Events.htm">Generating Object Events</a></li>
+    <li><a href="Object_Events/Generating_Object_Events.htm">Generación de eventos <span class="notranslate">Object</span> </a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Asset_Management.htm">Asset Management</a></div>
-        <div style="float:right">Next: <a href="../Instances/Instances.htm">Instances</a></div>
+        <div style="float:left">Atrás: <a href="../Asset_Management.htm">Gestión de activos</a></div>
+        <div style="float:right">Siguiente: <a href="../Instances/Instances.htm">Instancias</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Objects

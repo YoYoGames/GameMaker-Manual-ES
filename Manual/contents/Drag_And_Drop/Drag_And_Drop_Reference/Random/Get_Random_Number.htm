@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Get Random Number</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>Obtener número aleatorio</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Get Random Number action" />
   <meta name="rh-index-keywords" content="GML Visual Action - get Random Number" />
@@ -14,51 +14,54 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Get Random Number Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Random/i_Mathematics_Get_Random_Number.png" /> Get Random Number</h1>
-  <p>This action will generate a random number within the bounds of a set of minimum and maximum values. You can choose the type of number to generate (either a decimal or an integer) and then set the range for the number to be generated within by supplying a minimum and maximum value. The random value generated will be returned to the target variable (which can be flagged as a temporary local variable).</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> When generating a random integer the action will return an integer value between the minimum and maximum value <b>inclusive</b>, so a range of 5 - 10 could return 5 or 10 as well as any integer in between. However generating a random decimal will not ever return the maximum value so the range 5 to 10 can return 5 but will not return 10 (although it could return 9.999999999999).</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Get Random Number Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Random/a_Mathematics_Get_Random_Number.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Obtener número aleatorio</h1>
+  <p>Esta acción generará un número aleatorio dentro de los límites de un conjunto de valores mínimos y máximos. Puede elegir el tipo de número a generar (ya sea un decimal o un entero) y luego establecer el rango dentro del cual se generará el número suministrando
+    un valor mínimo y máximo. El valor aleatorio generado será devuelto a la variable de destino (que puede ser marcada como una variable local temporal).</p>
+  <p class="note"><b>NOTA</b>: Al generar un entero aleatorio la acción devolverá un valor entero entre el valor mínimo y el máximo <b>, ambos inclusive</b>, por lo que un rango de 5 - 10 podría devolver 5 o 10, así como cualquier entero entre ambos. Sin embargo, al generar un decimal aleatorio
+    no devolverá nunca el valor máximo, por lo que el rango de 5 a 10 puede devolver 5 pero no devolverá 10 (aunque podría devolver 9.999999999999).</p>
+  <p> </p>
+  <h4>Sintaxis de la acción:</h4>
+  <p><img alt="Get Random Number Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Random/i_Mathematics_Get_Random_Number.png" /></p>
+  <h4>Argumentos:</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>Type</td>
-        <td>The type of numbers to use (integer or decimal)</td>
+        <td><span class="notranslate">Type</span></td>
+        <td>El tipo de números a utilizar (enteros o decimales)</td>
       </tr>
       <tr>
-        <td>Minimum</td>
-        <td>The minimum number for the random range</td>
+        <td><span class="notranslate">Minimum</span></td>
+        <td>El número mínimo para el rango aleatorio</td>
       </tr>
       <tr>
-        <td>Maximum</td>
-        <td>The maximum number for the random range</td>
+        <td><span class="notranslate">Maximum</span></td>
+        <td>El número máximo para el rango aleatorio</td>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The target variable to store the returned value</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>La variable de destino para almacenar el valor devuelto</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Get Random Number Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Random/e_Mathematics_Get_Random_Number.png" />The above action block code generates a random value and assigns it to a temporary local variable. This value is then used in a repeat loop where further random calls are made to generate positions within the room. These positions are then used to create a number instances.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p><img>El código del bloque de acción anterior genera un valor aleatorio y lo asigna a una variable local temporal
+    variable local. Este valor se utiliza entonces en una repetición <span class="notranslate">loop</span> donde se realizan más llamadas aleatorias para generar posiciones dentro de la <span class="notranslate">room</span>. Estas posiciones se utilizan entonces para crear un número de instancias.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Random_Actions.htm">Random Actions</a></div>
-        <div style="float:right">Next: <a href="Randomise.htm">Randomise</a></div>
+        <div style="float:left">Atrás: <a href="Random_Actions.htm">Acciones aleatorias</a></div>
+        <div style="float:right">Siguiente: <a href="Randomise.htm">Aleatorizar</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Get Random Number

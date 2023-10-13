@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>http_get</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for http_get" />
   <meta name="rh-index-keywords" content="http_get" />
@@ -15,48 +15,48 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>http_get</h1>
-  <p>With this function, you connect to the specified URL in order to retrieve information. As this is an asynchronous function, <span data-keyref="GameMaker Name">GameMaker</span> will not block while waiting for a reply, but will keep on running unless it gets callback information. This information will be in the form of a string and will trigger an <b>Async Event</b> in any instance that has one defined in their object properties. You should also note that HTTP request parameters (the bits sometimes &quot;tacked on&quot; to the end of a URL when you submit a form on a web page) are perfectly acceptable when using this function, for example:</p>
+  <p>Con esta función, se conecta a la URL especificada para recuperar información. Como se trata de una función asíncrona, <span data-keyref="GameMaker Name">GameMaker</span> no se bloqueará mientras espera una respuesta, sino que seguirá funcionando a menos que obtenga información de devolución de llamada. Esta información será en forma de un <span class="notranslate">string</span> y activará un <b>Evento Asíncrono</b> en cualquier instancia que tenga uno definido en sus propiedades <span class="notranslate">object</span>. También hay que tener en cuenta que los parámetros de petición HTTP (los trozos que a veces se &quot;añaden&quot; al final de una URL cuando se envía un formulario en una página web) son perfectamente aceptables cuando se utiliza esta función, por ejemplo:</p>
   <p class="code">http_get(&quot;http://www.example.com/logon?username=&quot;+name);</p>
-  <p>will pass the string held in the variable &quot;name&quot; to the server as well a retrieve the data from that URL. So, essentially, any time a simple, short piece of data needs to be passed from the client to the server, this would be reasonable choice as the function to use.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> You should be aware that due to XSS protection in browsers, requests to and attempts to load resources from across domains are blocked and may appear to return blank results. Please see the section on <a href="HTTP.htm">Cross Domain Issues</a> for further details.</p>
-  <p>This function will generate multiple &quot;call backs&quot; which are picked up by any <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">HTTP Events</a>. These will generate a <a href="../../Data_Structures/DS_Maps/DS_Maps.htm"><span class="inline">DS Map</span></a> (more commonly known as a &quot;dictionary&quot;) that is exclusive to this event and is stored in the special variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><b>async_load</b></a>. This DS map will contain different values depending on whether there is data being returned or not. For example, if you have requested a file, the event will trigger multiple times as each packet of data is received so that you can show a progress bar, for example. The general structure for the DS map will be as follows:</p>
+  <p>pasará el <span class="notranslate">string</span> mantenido en la variable &quot;nombre&quot; al <span class="notranslate">server</span> así como recuperará los datos de esa URL. Así que, esencialmente, cada vez que se necesite pasar un dato simple y corto desde el cliente a <span class="notranslate">server</span>, esta sería una opción razonable como función a utilizar.</p>
+  <p class="note"><b>NOTA</b>: Debe tener en cuenta que, debido a la protección XSS de los navegadores, las solicitudes e intentos de carga de recursos de dominios cruzados se bloquean y pueden aparecer resultados en blanco. Para más información, consulte la sección sobre <a href="HTTP.htm">problemas</a> entre dominios.</p>
+  <p>Esta función generará múltiples &quot;call backs&quot; que son recogidos por cualquier <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">evento HTTP</a>. Estos generarán un <a href="../../Data_Structures/DS_Maps/DS_Maps.htm"><span class="inline">DS Map</span></a> (más conocido como &quot;diccionario&quot;) que es exclusivo de este evento y se almacena en la variable especial <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><b>async_load</b></a>. Este mapa DS contendrá diferentes valores dependiendo de si se devuelven datos o no. Por ejemplo, si se ha solicitado un archivo, el evento se disparará varias veces a medida que se reciba cada paquete de datos para poder mostrar una barra de progreso, por ejemplo. La estructura general del mapa DS será la siguiente:</p>
   <ul class="colour">
-    <li><b>id: </b>The ID which was returned from the command. If you fire off a series of <span class="inline">http_</span> requests then you need to know which one you are getting the reply to, and so you would use this value to compare to the value you stored when you originally sent the request to find the right one.</li>
-    <li><b>status: </b>Returns a value of less than 0 for an error, 0 for complete and 1 for receiving packets (see below for more details).</li>
-    <li><b>result: </b>The data received (string only).</li>
-    <li><b>url: </b>The complete URL you requested.</li>
-    <li><b>http_status: </b>The raw http status code (if available). This returns the standard web status code for most browsers, eg: 304 for &quot;Not Modified&quot; or 204 for &quot;No Content&quot;, etc...</li>
+    <li><b>id: </b>El ID que fue devuelto por el comando. Si disparas una serie de peticiones a <span class="inline">http_</span> entonces necesitas saber a cuál estás recibiendo la respuesta, por lo que usarías este valor para compararlo con el valor que almacenaste cuando enviaste originalmente la petición para encontrar la correcta.</li>
+    <li><b>estado: </b>Devuelve un valor inferior a 0 si se trata de un error, 0 si está completo y 1 si está recibiendo paquetes (para más detalles, véase más abajo).</li>
+    <li><b>resultado: </b>Los datos recibidos (<span class="notranslate">string</span> solamente).</li>
+    <li><b>url: </b>La URL completa que ha solicitado.</li>
+    <li><b>http_status: </b>El código de estado http en bruto (si está disponible). Esto devuelve el código de estado web estándar para la mayoría de los navegadores, por ejemplo: 304 para &quot;No modificado&quot; o 204 para &quot;Sin contenido&quot;, etc...</li>
   </ul>
-  <p>If there are multiple packets being returned to your game, the callback &quot;status&quot; key will return 1, in which case the DS map will have the following additional keys:</p>
+  <p>Si hay varios paquetes que se devuelven al juego, la tecla &quot;status&quot; de la llamada de retorno devolverá 1, en cuyo caso el mapa DS tendrá las siguientes teclas adicionales:</p>
   <ul class="colour">
-    <li><b>&quot;contentLength&quot;: </b>This is the size of file that the web server has said you should expect to receive (may be -1 if the server does not return this data).</li>
-    <li><b>&quot;sizeDownloaded&quot;: </b>The size of the data that has already been downloaded.</li>
+    <li><b>&quot;contentLength&quot;: </b>Es el tamaño del archivo que la web <span class="notranslate">server</span> ha dicho que debe esperar recibir (puede ser -1 si la <span class="notranslate">server</span> no devuelve este dato).</li>
+    <li><b>&quot;sizeDownloaded&quot;: </b>El tamaño de los datos que ya se han descargado.</li>
   </ul>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">http_get(url);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>url</td>
-        <td><span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The web address of the server that you wish to get information from</td>
+        <td><span class="notranslate">url</span></td>
+        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Cadena</a></span></td>
+        <td><span class="notranslate">The web address of the server that you wish to get information from</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_Async_Event"><a href="GameMaker_Language/GML_Reference/Asynchronous_Functions/Asynchronous_Functions.htm" target="_blank">Async Request ID</a></span></p>
-  <p> </p>
-  <h4>Extended Example:</h4>
-  <p>The <span class="inline">http_get()</span> function can be called from any event, and since it is asynchronous the callback can be almost instantaneous or could take several seconds. Calling the function is simple and would look something like this:</p>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code"><span data-keyref="Type_ID_Async_Event"><a href="../../../../../GameMaker_Language/GML_Reference/Asynchronous_Functions/Asynchronous_Functions.htm" target="_blank">Async Request ID</a></span></p>
+  <p> </p>
+  <h4>Ejemplo ampliado:</h4>
+  <p>La función <span class="inline">http_get()</span> puede ser llamada desde cualquier evento, y como es asíncrona la llamada de retorno puede ser casi instantánea o puede tardar varios segundos. Llamar a la función es sencillo y sería algo así:</p>
   <p class="code">get = http_get(&quot;http://www.MacSweeneyGames.com/logon?username=&quot; + name);</p>
-  <p>The above code will pass the string held in the variable &quot;name&quot; to the given server as well as retrieve the data from that URL, triggering an Async Event which will contain the async_load DS map (the async_load map index will be stored in the variable &quot;get&quot; so you can check for the correct callback). The Async Event triggered would be the <b>HTTP</b> sub-event, and in that event you would have the following:</p>
+  <p>El código anterior pasará la <span class="notranslate">string</span> contenida en la variable &quot;name&quot; a la <span class="notranslate">server</span> dada, así como recuperará los datos de esa URL, desencadenando un Evento Asíncrono que contendrá el mapa async_load DS (el índice del mapa async_load se almacenará en la variable &quot;get&quot; para poder comprobar la devolución de llamada correcta). El Evento Asíncrono disparado sería el sub-evento <b>HTTP</b>, y en ese evento tendrías lo siguiente:</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == get<br />
     {<br />
         if ds_map_find_value(async_load, &quot;status&quot;) == 0<br />
@@ -68,18 +68,18 @@
             r_str = &quot;null&quot;;<br />
         }<br />
     }</p>
-  <p>The above code will first check the id of the DS map that has been created, then check the &quot;status&quot; of the callback. If the value is equal to 0 (signalling success) the result from the callback will then be stored in a variable for future use, otherwise the variable will be set to a default value (in this case &quot;null&quot;).</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior comprobará primero el id del mapa DS que se ha creado, y luego comprobará el &quot;estado&quot; de la llamada de retorno. Si el valor es igual a 0 (señalando el éxito) el resultado de la llamada de retorno se almacenará en una variable para su uso futuro, de lo contrario la variable se establecerá en un valor por defecto (en este caso &quot;null&quot;).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="HTTP.htm">HTTP</a></div>
-        <div style="float:right">Next: <a href="http_get.htm">http_get_file</a></div>
+        <div style="float:left">Volver: <a href="HTTP.htm">HTTP</a></div>
+        <div style="float:right">Siguiente: <a href="http_get.htm"><span class="notranslate">http_get_file</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 http_get

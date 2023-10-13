@@ -6,7 +6,7 @@
   <title>audio_listener_orientation</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function audio_listener_orientation" />
   <meta name="rh-index-keywords" content="audio_listener_orientation" />
@@ -15,74 +15,74 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>audio_listener_orientation</h1>
-  <p>With this function you can change the orientation of the <i>listener</i> within the 3D audio space. The <b>look at</b> direction and <b>up</b> direction are based on the vectors that are resolved from the given relative x, y and z positions, and default to <span data-keyref="Unit_Vector_Z">(0, 0, 1)</span> for the look at direction and <span data-keyref="Unit_Vector_Y">(0, 1, 0)</span> for the up direction, as shown in the illustration below:</p>
+  <p>Con esta función puede cambiar la orientación del <i>oyente</i> dentro del espacio de audio 3D. La dirección de <b>la</b> mirada y la dirección <b>hacia</b> arriba se basan en los vectores que se resuelven a partir de las posiciones relativas x, y y z dadas, y por defecto son <span data-keyref="Unit_Vector_Z">(0, 0, 1)</span> para la dirección de la mirada y <span data-keyref="Unit_Vector_Y">(0, 1, 0)</span> para la dirección hacia arriba, como se muestra en la siguiente ilustración:</p>
   <p><img alt="Listener Orientation Diagram" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Orientation_Base.png" /></p>
-  <p class="note"><b><span class="note">NOTE</span> </b>if you have multiple listeners you should use the function <a href="audio_listener_set_orientation.htm"><span class="inline">audio_listener_set_orientation()</span></a>.</p>
-  <p>Changing the listener orientation with this function will change how sound created by audio emitters around the game room are perceived by the player of your game. In the example below, sounds created by the emitter when the listener is at the default position would appear to be coming from below and to the right of the listener, but with the new position and orientation of the listener they will now be perceived as coming from <i>above</i> and to the right.</p>
+  <p class="note"><b><span class="note">NOTA</span> </b>si tiene varios oyentes debe utilizar la función <a href="audio_listener_set_orientation.htm"><span class="inline">audio_listener_set_orientation()</span></a>.</p>
+  <p>Cambiar la orientación del oyente con esta función cambiará la forma en que el sonido creado por los emisores de audio alrededor del juego <span class="notranslate">room</span> es percibido por el jugador de su juego. En el ejemplo siguiente, los sonidos creados por el emisor cuando el oyente está en la posición predeterminada parecerían venir de abajo y a la derecha del oyente, pero con la nueva posición y orientación del oyente ahora se percibirán como procedentes de <i>arriba</i> y a la derecha.</p>
   <p><img alt="Listener Orientation Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Orientation_Example.png" /></p>
-  <h4>Syntax:</h4>
+  <h4>Sintaxis:</h4>
   <p class="code">audio_listener_orientation(lookat_x, lookat_y, lookat_z, up_x, up_y, up_z);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>lookat_x</td>
+        <td><span class="notranslate">lookat_x</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The x look vector (default 0).</td>
+        <td><span class="notranslate">The x look vector (default 0).</span></td>
       </tr>
       <tr>
-        <td>lookat_y</td>
+        <td><span class="notranslate">lookat_y</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The y look vector (default 0).</td>
+        <td><span class="notranslate">The y look vector (default 0).</span></td>
       </tr>
       <tr>
-        <td>lookat_z</td>
+        <td><span class="notranslate">lookat_z</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The z look vector (default 1).</td>
+        <td><span class="notranslate">The z look vector (default 1).</span></td>
       </tr>
       <tr>
-        <td>up_x</td>
+        <td><span class="notranslate">up_x</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The x up vector (default 0).</td>
+        <td><span class="notranslate">The x up vector (default 0).</span></td>
       </tr>
       <tr>
-        <td>up_y</td>
+        <td><span class="notranslate">up_y</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The y up vector (default 1).</td>
+        <td><span class="notranslate">The y up vector (default 1).</span></td>
       </tr>
       <tr>
-        <td>up_z</td>
+        <td><span class="notranslate">up_z</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The z up vector (default 0).</td>
+        <td><span class="notranslate">The z up vector (default 0).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">dx = dcos(direction);<br />
     dy = - dsin(direction);<br />
     dz = - dsin(zdirection);<br />
     audio_listener_position(x, y, z);<br />
     audio_listener_orientation(dx, dy, dz, 0, 0, 1);</p>
-  <p>The above code sets the 3D audio listener position to an instance&#39;s x and y <a href="../../Instances/Instance_Variables/Instance_Variables.htm">variables</a> and an extra z variable. It then sets the audio listener&#39;s orientation to three variables calculated from the instance&#39;s <a href="../../Instances/Instance_Variables/direction.htm">direction</a> and an extra zdirection variable.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior establece la posición de la escucha de audio 3D a las <a href="../../Instances/Instance_Variables/Instance_Variables.htm">variables</a> x e y de una instancia y a una variable z adicional. A continuación, establece la orientación del oyente de audio a tres variables calculadas a partir de la dirección de la instancia <a href="../../Instances/Instance_Variables/direction.htm"><span class="notranslate">direction</span></a> y una variable extra de dirección z.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Audio_Listeners.htm">Audio Listeners</a></div>
-        <div style="float:right">Next: <a href="audio_listener_get_data.htm">audio_listener_get_data</a></div>
+        <div style="float:left">Atrás: <a href="Audio_Listeners.htm">Auditores de audio</a></div>
+        <div style="float:right">Siguiente: <a href="audio_listener_get_data.htm"><span class="notranslate">audio_listener_get_data</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 audio_listener_orientation

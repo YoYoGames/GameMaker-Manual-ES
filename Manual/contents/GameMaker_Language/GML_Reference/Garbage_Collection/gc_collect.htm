@@ -6,7 +6,7 @@
   <title>gc_collect</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for gc_collect" />
   <meta name="rh-index-keywords" content="gc_collect" />
@@ -15,31 +15,31 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gc_collect</h1>
-  <p>With this function you can trigger the garbage collector, forcing it to run at the end of the current frame (step). It is worth noting that the garbage collector does <em>not </em>need to be active for this to work. Calling this function after disabling the garbage collector (using the function <span class="inline"><a href="gc_enable.htm">gc_enable()</a></span>) will enable the garbage collector for one frame in which all objects that have been flagged for collection will be removed from memory before the garbage collector is disabled again.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Con esta función puedes activar el recolector de basura, forzándolo a ejecutarse al final del marco actual (paso). Cabe destacar que <em>no </em>es necesario que el recolector de basura esté activo para que esto funcione. Llamar a esta función después de desactivar el recolector de basura (usando la función <span class="inline"><a href="gc_enable.htm">gc_enable()</a></span>) activará el recolector de basura durante un fotograma en el que todos los <span class="notranslate">objects</span> que han sido marcados para su recolección serán eliminados de la memoria antes de que el recolector de basura se desactive de nuevo.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">gc_collect();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">if (global.debug == true &amp;&amp; keyboard_check_pressed(vk_f1))<br />
     {<br />
         gc_collect();<br />
     }</p>
-  <p>The above code checks a global variable and a key being pressed and if those are <span class="inline">true</span> then garbage collection is triggered for the end of the frame (step).</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior comprueba una variable global y una tecla que se está pulsando y si son <span class="inline">true</span> entonces se activa la recolección de basura para el final de la trama (paso).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Garbage_Collection.htm">Garbage Collection</a></div>
-        <div style="float:right">Next: <a href="gc_target_frame_time.htm">gc_target_frame_time</a></div>
+        <div style="float:left">Atrás: <a href="Garbage_Collection.htm">Recogida de basura</a></div>
+        <div style="float:right">Siguiente: <a href="gc_target_frame_time.htm">gc_target_frame_time</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 gc_collect

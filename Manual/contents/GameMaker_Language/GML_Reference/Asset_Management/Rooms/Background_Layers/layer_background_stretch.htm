@@ -6,7 +6,7 @@
   <title>layer_background_stretch</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function layer_background_stretch" />
   <meta name="rh-index-keywords" content="layer_background_stretch" />
@@ -16,34 +16,34 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>layer_background_stretch</h1>
-  <p>Using this function you can toggle a background element sprite to stretch to fit the room or remain at 1:1 with the resolution. You supply the background element ID (which you get when you create a background element using <a href="layer_background_create.htm"><span class="inline">layer_background_create()</span></a> or when you use the function <a href="layer_background_get_id.htm"><span class="inline">layer_background_get_id()</span></a>), and then set the stretch argument to <span class="inline">true</span> or <span class="inline">false</span>. When set to <span class="inline">true</span> the element sprite will be stretched to fit the room (either scaled up or scaled down depending on the sizes of the sprite and the room), and when set to <span class="inline">false</span>, the element sprite will be displayed at its native resolution.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Con esta función puede cambiar un elemento de fondo <span class="notranslate">sprite</span> para que se estire y se adapte a <span class="notranslate">room</span> o para que permanezca a 1:1 con la resolución. Se suministra el ID del elemento de fondo (que se obtiene cuando se crea un elemento de fondo con <a href="layer_background_create.htm"><span class="inline">layer_background_create()</span></a> o al utilizar la función <a href="layer_background_get_id.htm"><span class="inline">layer_background_get_id()</span></a>), y luego establece el argumento de estiramiento a <span class="inline">true</span> o <span class="inline">false</span>. Cuando se establece a <span class="inline">true</span> el elemento <span class="notranslate">sprite</span> se estirará para ajustarse a <span class="notranslate">room</span> (ya sea escalado o reducido dependiendo de los tamaños de <span class="notranslate">sprite</span> y <span class="notranslate">room</span>), y cuando se establece a <span class="inline">false</span>, el elemento <span class="notranslate">sprite</span> se mostrará en su resolución nativa.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">layer_background_stretch(background_element_id, stretch)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>background_element_id</td>
-        <td><span data-keyref="Type_ID_Element_Background">Background Element ID</span></td>
-        <td>The unique ID value of the background element to change</td>
+        <td><span class="notranslate">background_element_id</span></td>
+        <td><span data-keyref="Type_ID_Element_Background">ID del elemento de fondo</span></td>
+        <td><span class="notranslate">The unique ID value of the background element to change</span></td>
       </tr>
       <tr>
-        <td>stretch</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>The stretch toggle, which can be <span class="inline">true</span> or <span class="inline">false</span></td>
+        <td><span class="notranslate">stretch</span></td>
+        <td><span data-keyref="Type_Bool">Booleano</span></td>
+        <td><span class="notranslate">The stretch toggle, which can be <span class="inline">true</span> o <span class="inline">false</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">if mouse_check_button_pressed(mb_left)<br />
     {<br />
         var back = layer_background_get_id(layer);<br />
@@ -56,18 +56,18 @@
             layer_background_stretch(back, true);<br />
         }<br />
     }</p>
-  <p>The above code checks for a mouse button press and if one is detected it will toggle the stretching of the background element sprite assigned to the layer the instance running the code is on.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior comprueba si se ha pulsado el botón del ratón y, si se detecta alguno, alternará el estiramiento del elemento de fondo <span class="notranslate">sprite</span> asignado a la capa en la que se encuentra la instancia que ejecuta el código.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Background_Layers.htm">Background Layers</a></div>
-        <div style="float:right">Next: <a href="layer_background_blend.htm">layer_background_blend</a></div>
+        <div style="float:left">Volver: <a href="Background_Layers.htm">Capas de fondo</a></div>
+        <div style="float:right">Siguiente: <a href="layer_background_blend.htm"><span class="notranslate">layer_background_blend</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 layer_background_stretch

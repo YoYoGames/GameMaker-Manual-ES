@@ -6,7 +6,7 @@
   <title>move_contact_all</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="This page outlines the function move_contact_all" />
   <meta name="rh-index-keywords" content="move_contact_all" />
@@ -15,47 +15,47 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>move_contact_all</h1>
-  <p>This function will move the instance running the code a set number of pixels in the specified direction until it meets <i>any</i> other instance with a valid mask. You can use -1 or 0 for the maxdist being a default 1000px, ie: <span data-keyref="GameMaker Name">GameMaker</span> will move the instance continually up 1000 pixels until it is out of collision.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Esta función moverá la instancia que ejecuta el código un número determinado de píxeles en la dirección especificada hasta que se encuentre con <i>cualquier</i> otra instancia con una máscara válida. Puede usar -1 o 0 para la distancia máxima siendo un valor por defecto de 1000px, es decir: <span data-keyref="GameMaker Name">GameMaker</span> moverá la instancia continuamente hacia arriba 1000 píxeles hasta que esté fuera de colisión.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">move_contact_all(dir, maxdist);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th><th>Tipo</th>
+        <th>Descripción</th>
      </tr>
       <tr>
-        <td>dir</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The direction to move in.</td>
+        <td><span class="notranslate">dir</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The direction to move in.</span></td>
      </tr>
       <tr>
-        <td>maxdist</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The maximum distance the object can travel (-1 or 0 a default value of 1000 pixels).</td>
+        <td><span class="notranslate">maxdist</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The maximum distance the object can travel (-1 or 0 a default value of 1000 pixels).</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">if !place_meeting(x, y + 1, all)<br />
     {<br />
         move_contact_all(270, -1);<br />
     }</p>
-  <p>The above code will check beneath the instance for a collision, and if there is none, then it will move it down until there is or until 1000pixels have been covered.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior comprobará debajo de la instancia si hay una colisión, y si no la hay, entonces la moverá hacia abajo hasta que la haya o hasta que se hayan cubierto 1000píxeles.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Movement.htm">Movement</a></div>
-        <div style="float:right">Next: <a href="move_contact_solid.htm">move_contact_solid</a></div>
+        <div style="float:left">Atrás: <a href="Movement.htm">Movimiento</a></div>
+        <div style="float:right">Siguiente: <a href="move_contact_solid.htm"><span class="notranslate">move_contact_solid</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 move_contact_all

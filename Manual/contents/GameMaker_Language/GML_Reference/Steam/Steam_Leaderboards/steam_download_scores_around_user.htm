@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_download_scores_around_user</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_download_scores_around_user" />
+  <meta name="rh-index-keywords" content="steam_download_scores_around_user" />
+  <meta name="search-keywords" content="steam_download_scores_around_user" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_download_scores_around_user</h1>
+  <p>Esta función se utiliza para recuperar las entradas de la tabla de clasificación relativas a la entrada actual del usuario. El parámetro <tt>range_start</tt> es el número de entradas a recuperar <i>antes de</i> la entrada del usuario actual, y el parámetro <tt>range_end</tt> es el número
+    de entradas después de la entrada del usuario actual, y la entrada del usuario actual <i>siempre</i> se incluye en los resultados. Por ejemplo, si el usuario actual es el número 5 en una tabla de clasificación determinada, al establecer el rango inicial en -2 y el rango final en
+    2 se obtendrán 5 entradas: Del 3 al 7. Si no hay suficientes entradas en la tabla de clasificación antes o después de la entrada del usuario, <span class="notranslate">Steam</span> ajustará el rango para intentar devolver el número de entradas solicitadas. Por ejemplo, si el usuario es el número 1 en la tabla de clasificación,
+    el inicio se establece en -2 y el final en 2, <span class="notranslate">Steam</span> devolverá las 5 primeras entradas de la tabla de clasificación.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
+  <p class="code">steam_download_scores_around_user(lb_name, range_start, range_end);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argumento</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">lb_name</span></td>
+        <td>El nombre de la tabla de clasificación de la que se descargan las puntuaciones (un <span class="notranslate">string</span>).</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">range_start</span></td>
+        <td>La posición inicial dentro de la tabla de clasificación.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">range_end</span></td>
+        <td>La posición final dentro de la tabla de clasificación.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p class="code">score_get = steam_download_scores_around_user(&quot;Game Scores&quot;, -4, 5);</p>
+  <p>Esto enviará una petición a <span class="notranslate">Steam</span> <span class="notranslate">Server</span> para un rango de 10 puntuaciones de la tabla de clasificación &quot;Game Scores&quot;, centrada en el jugador y almacenará el <b>id as</b> íncrono de la petición en la variable &quot;score_get&quot;. Esto será entonces
+    manejado en el <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm"><b>Evento asíncrono de Steam</b></a>como se muestra en el Ejemplo Extendido para <a href="steam_download_scores.htm"><tt>steam_download_scores()</tt></a>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Atrás: <a href="Steam_Leaderboards.htm">Tablas de clasificación</a></div>
+        <div style="float:right">Siguiente: <a href="steam_download_friends_scores.htm"><span class="notranslate">steam_download_friends_scores</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_download_scores_around_user
+-->
+  <!-- TAGS
+steam_download_scores_around_user
+-->
+</body>
+</html>

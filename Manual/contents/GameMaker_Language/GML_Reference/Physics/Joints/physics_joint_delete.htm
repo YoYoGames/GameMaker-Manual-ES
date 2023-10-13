@@ -6,7 +6,7 @@
   <title>physics_joint_delete</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_joint_delete" />
   <meta name="rh-index-keywords" content="physics_joint_delete" />
@@ -15,30 +15,30 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>physics_joint_delete</h1>
-  <p>Once two instances with physics representations have been bound by a joint, this can be deleted again at any time. Normally this will happen automatically when one of the two instances is destroyed, or when the room ends, but there are times when you may wish to do this manually. In those cases you would use this function.</p>
-  <p>It should also be noted that whenever an instance that is part of a <a href="physics_joint_gear_create.htm">gear joint</a> is destroyed, the gear joint should be deleted using this function <i>before</i> any of the instances involved in forming the gear (but the remaining joints will be deleted automatically), for example in the destroy event of the instance.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Una vez que dos instancias con representaciones físicas han sido unidas por una junta, ésta puede ser borrada de nuevo en cualquier momento. Normalmente esto ocurrirá automáticamente cuando una de las dos instancias sea destruida, o cuando el <span class="notranslate">room</span> termine, pero hay veces en las que usted puede desear hacer esto manualmente. En esos casos se utilizaría esta función.</p>
+  <p>También hay que tener en cuenta que siempre que se destruya una instancia que forme parte de una unión de <a href="physics_joint_gear_create.htm">engranajes</a>, la unión de engranajes debe ser eliminada utilizando esta función <i>antes que</i> cualquiera de las instancias implicadas en la formación del engranaje (pero el resto de uniones se eliminarán automáticamente), por ejemplo en el evento de destrucción de la instancia.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">physics_joint_delete(joint)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>joint</td>
-        <td><span data-keyref="Type_ID_Physics_Joint">Physics Joint ID</span></td>
-        <td>The index of the joint that you wish to delete</td>
+        <td><span class="notranslate">joint</span></td>
+        <td><span data-keyref="Type_ID_Physics_Joint">Física ID conjunta</span></td>
+        <td><span class="notranslate">The index of the joint that you wish to delete</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">var reactionForceX, reactionForceY, reactionForce;<br />
     if shipJoint<br />
     {<br />
@@ -51,18 +51,18 @@
             shipJoint = -1;<br />
         }<br />
     }</p>
-  <p>The above code checks to see if the variable &quot;shipJoint&quot; holds a joint index and if it does, it then calculates the force being applied to that joint using the two constants. Finally, if the total force is greater than 2, the joint is deleted.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior comprueba si la variable &quot;shipJoint&quot; contiene un índice de articulación y, si es así, calcula la fuerza que se aplica a esa articulación utilizando las dos constantes. Finalmente, si la fuerza total es mayor que 2, se elimina la articulación.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Joints.htm">Joints</a></div>
-        <div style="float:right">Next: <a href="physics_joint_enable_motor.htm">physics_joint_enable_motor</a></div>
+        <div style="float:left">Atrás: <a href="Joints.htm">Articulaciones</a></div>
+        <div style="float:right">Siguiente: <a href="physics_joint_enable_motor.htm"><span class="notranslate">physics_joint_enable_motor</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_delete

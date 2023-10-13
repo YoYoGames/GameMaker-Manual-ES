@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>draw_set_circle_precision</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for the function draw_set_circle_precision" />
   <meta name="rh-index-keywords" content="draw_set_circle_precision" />
@@ -15,44 +15,45 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>draw_set_circle_precision</h1>
-  <p>To optimise performance when drawing circles, <span data-keyref="GameMaker Name">GameMaker</span> basically draws a polygon shape with enough sides to make it <i>appear</i> circular. However, depending on how big or small you need your circles to be, you may find that changing this value can help increase the performance of your game, or make the circles look better. The precision value that you can input into this function is the number of sides the circle polygon has, and this number can be anything between 4 and 64, <i>but must be a number divisible by 4</i>, with a default value of 24.</p>
+  <p>Para optimizar el rendimiento al dibujar círculos, <span data-keyref="GameMaker Name">GameMaker</span> básicamente dibuja una forma poligonal con suficientes lados para que <i>parezca</i> circular. Sin embargo, dependiendo de lo grande o pequeño que necesite que sean sus círculos, puede encontrar que cambiar
+    este valor puede ayudar a aumentar el rendimiento de su juego, o hacer que los círculos se vean mejor. El valor de precisión que puedes introducir en esta función es el número de lados que tiene el polígono del círculo, y este número puede estar entre 4 y 64,
+   <i>pero debe ser un número divisible por 4</i>, con un valor por defecto de 24.</p>
   <p><img alt="Circle precision example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/draw_set_circle_precision.png" /></p>
-  <div data-conref="../../../../assets/snippets/Note_Shape_Shader_Attributes_Are_Different.hts"> </div>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p class="note"><b>NOTA</b>: Si desea dibujar una forma utilizando un <span class="notranslate">shader</span>, debe tener en cuenta que la mayoría de los <span class="notranslate">shaders</span> esperan las siguientes entradas: <span class="notranslate">vertex</span> Textura, Color. Sin embargo, cuando se utiliza esta función, sólo se pasan datos de <span class="notranslate">vertex</span> y de color, por lo que el
+    <span class="notranslate">shader</span> puede no dibujar nada (o dibujar algo pero no correctamente). Si necesitas dibujar formas de esta manera, entonces el <span class="notranslate">shader</span> debe ser personalizado teniendo esto en cuenta.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">draw_set_circle_precision(precision);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
+        <th>Argumento</th><th>Tipo</th>
+        <th>Descripción</th>
+     </tr>
       <tr>
-        <td>precision</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The precision of all circles drawn after this function is called.</td>
-      </tr>
+        <td><span class="notranslate">precision</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The precision of all circles drawn after this function is called.</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code"><span data-keyref="Type_Void"></span></p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">draw_set_circle_precision(12);</p>
-  <p>The above code will draw all circles using a 12 sided polygon.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior dibujará todos los círculos utilizando un polígono de 12 lados.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Basic_Forms.htm">Basic Forms</a></div>
-        <div style="float:right">Next: <a href="draw_button.htm">draw_button</a></div>
+        <div style="float:left">Volver: <a href="Basic_Forms.htm">Formularios básicos</a></div>
+        <div style="float:right">Siguiente: <a href="draw_button.htm"><span class="notranslate">draw_button</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 draw_set_circle_precision

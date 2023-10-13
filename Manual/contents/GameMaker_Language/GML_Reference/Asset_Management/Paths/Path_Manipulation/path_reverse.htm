@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>path_reverse</title>
+  <title>camino_inverso</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function path_reverse" />
   <meta name="rh-index-keywords" content="path_reverse" />
@@ -14,45 +14,45 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>path_reverse</h1>
-  <p>With this function you can reverse the order in which the individual path points are numbered, so, for example, if the path has 5 points, point 0 would become point 4, point 1 would be point 3 and point 2 would not be changed. The actual position of
-    the points remains the same, only the order in which they are processed is changed. <strong>This function changes the actual path asset</strong>, and so will permanently affect how the path is used by all instances in the game from the moment the
-    function is used until the end of the game. If this is not what you require, then you should use a function like <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> to create a copy of the path first, then call this function
-    on the duplicated asset (don&#39;t forget to call <span class="inline"><a href="path_delete.htm">path_delete()</a></span> on the asset when it is no longer required).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>camino_inverso</h1>
+  <p>Con esta función se puede invertir el orden de numeración de cada uno de los puntos de <span class="notranslate">path</span>, de modo que, por ejemplo, si el <span class="notranslate">path</span> tiene 5 puntos, el punto 0 pasaría a ser el punto 4, el punto 1 sería el punto 3 y el punto 2 no se modificaría. La posición real de
+    los puntos sigue siendo la misma, sólo se cambia el orden en que se procesan. <strong>Esta función cambia el activo real <span class="notranslate">path</span> </strong>, y por lo tanto afectará permanentemente la forma en que el <span class="notranslate">path</span> es utilizado por todas las instancias en el juego desde el momento en que la función
+    función se utiliza hasta el final del juego. Si esto no es lo que necesitas, entonces deberías usar una función como <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> para crear una copia del <span class="notranslate">path</span> primero, y luego llamar a esta función
+    en el <span class="notranslate">asset</span> duplicado (no olvides llamar a <span class="inline"><a href="path_delete.htm">path_delete()</a></span> en el <span class="notranslate">asset</span> cuando ya no sea necesario).</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">path_reverse(index);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th><th>Tipo</th>
+        <th>Descripción</th>
      </tr>
       <tr>
-        <td>index</td><td><span data-keyref="Type_Asset_Path"></span></td>
-        <td>The index of the path to change.</td>
+        <td><span class="notranslate">index</span></td><td><span data-keyref="Type_Asset_Path"></span></td>
+        <td><span class="notranslate">The index of the path to change.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">path_reverse(pth_AI);</p>
-  <p>This would reverse the order in which all points on the given path are processed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Esto invertiría el orden en que se procesan todos los puntos de la ruta dada.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Path_Manipulation.htm">Path Manipulation</a></div>
-        <div style="float:right">Next: <a href="path_rotate.htm">path_rotate</a></div>
+        <div style="float:left">Atrás: <a href="Path_Manipulation.htm">Manipulación del camino</a></div>
+        <div style="float:right">Siguiente: <a href="path_rotate.htm"><span class="notranslate">path_rotate</span></a></div>
         
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 path_rotate

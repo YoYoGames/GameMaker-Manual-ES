@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>dot_product_normalised</title>
+  <title>punto_producto_normalizado</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for dot_product_normalised" />
   <meta name="rh-index-keywords" content="dot_product_normalised,dot_product_normalized" />
@@ -15,59 +15,59 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>dot_product_normalised</h1>
-  <p>The dot product is a value expressing the angular relationship between two vectors and is found by taking two vectors, multiplying them together and then adding the results. The name &quot;dot product&quot; is derived from the centered dot &quot;·&quot;
-    that is often used to designate this operation (the alternative name &quot;scalar product&quot; emphasizes the scalar rather than vector nature of the result).</p>
-  <p>The actual mathematical formula can be written like this:</p>
-  <p><img alt="Dot Product formula" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image.png" />So, in 2D the dot product of vectors <span class="inline">a[x1,y1]</span> and <span class="inline">b[x2,2]</span>    is <span class="inline">x1x2 + y1y2</span>, meaning that the dot_product in <span data-keyref="GameMaker Name">GameMaker</span> is calculated as:</p>
+  <h1>punto_producto_normalizado</h1>
+  <p>El producto punto es un valor que expresa la relación angular entre dos vectores y se obtiene tomando dos vectores, multiplicándolos y sumando los resultados. El nombre &quot;producto punto&quot; deriva del punto centrado &quot;-&quot;
+    que se utiliza a menudo para designar esta operación (el nombre alternativo &quot;producto escalar&quot; enfatiza la naturaleza escalar y no vectorial del resultado).</p>
+  <p>La fórmula matemática real se puede escribir así:</p>
+  <p><img>Así, en 2D el producto punto de los vectores <span class="inline">a[x1,y1]</span> y <span class="inline">b[x2,2]</span> es <span class="inline">x1x2 + y1y2</span>, lo que significa que el producto_punto en <span data-keyref="GameMaker Name">GameMaker</span> se calcula como:</p>
   <p class="code">a · b = (x1*x2)+(y1*y2);</p>
-  <p>What about the <i>normalised</i> dot product? The normalised dot product has been corrected in such a way as to bring the return value into the range of -1 and 1 (see the section on <a href="../../../../Additional_Information/Vectors.htm">Vectors</a>    for more detailed information), which is exceptionally useful in many circumstances, particularly when dealing with lighting and other 3D functions.</p>
-  <p> </p>
-  <h4><b>Syntax:</b></h4>
+  <p>¿Qué pasa con el producto punto <i>normalizado</i>? El producto punto normalizado se ha corregido de forma que el valor de retorno se sitúe en el intervalo de -1 y 1 (véase la sección sobre <a href="../../../../Additional_Information/Vectors.htm">Vectores</a> para obtener información más detallada), lo que resulta excepcionalmente útil en muchas circunstancias, sobre todo cuando se trata de la iluminación y otras funciones 3D.</p>
+  <p> </p>
+  <h4><b>Sintaxis:</b></h4>
   <p class="code">dot_product_normalised(x1, y1, x2, y2)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th><th>Tipo</th>
+        <th>Descripción</th>
      </tr>
       <tr>
-        <td>x1</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x coordinate of the first vector.</td>
+        <td><span class="notranslate">x1</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The x coordinate of the first vector.</span></td>
      </tr>
       <tr>
-        <td>y1</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y coordinate of the first vector.</td>
+        <td><span class="notranslate">y1</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The y coordinate of the first vector.</span></td>
      </tr>
       <tr>
-        <td>x2</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x coordinate of the second vector.</td>
+        <td><span class="notranslate">x2</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The x coordinate of the second vector.</span></td>
      </tr>
       <tr>
-        <td>y2</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y coordinate of the second vector.</td>
+        <td><span class="notranslate">y2</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The y coordinate of the second vector.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">var x1, y1, x2, y2;<br/> x1 = lengthdir_x(1, image_angle);<br/> y1 = lengthdir_y(1, image_angle);<br/> x2 = o_Player.x - x;<br/> y2 = o_Player.y - y;<br/> if dot_product_normalised(x1, y1, x2, y2) &gt; 0 seen=true else seen=false;</p>
-  <p>The above code creates a vector using the instances image angle, and then gets the vector of the player object &quot;o_Player&quot; to itself. Finally it calculates the dot product of these two vectors and if it is greater than 0 it sets the variable
-    &quot;seen&quot; to true, and if it is equal to or less than 0 it sets it to &quot;false&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior crea un vector utilizando el ángulo de la imagen de las instancias, y luego obtiene el vector del jugador <span class="notranslate">object</span> &quot;o_Player&quot; a sí mismo. Finalmente calcula el producto punto de estos dos vectores y si es mayor que 0 establece la variable
+    &quot;visto&quot; a verdadero, y si es igual o menor que 0 lo pone a &quot;falso&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Angles_And_Distance.htm">Angles And Distance</a></div>
-        <div style="float:right">Next: <a href="dot_product_3d_normalised.htm">dot_product_3d_normalised</a></div>
+        <div style="float:left">Atrás: <a href="Angles_And_Distance.htm">Ángulos y distancia</a></div>
+        <div style="float:right">Siguiente: <a href="dot_product_3d_normalised.htm"><span class="notranslate">dot_product_3d_normalised</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 dot_product_normalised

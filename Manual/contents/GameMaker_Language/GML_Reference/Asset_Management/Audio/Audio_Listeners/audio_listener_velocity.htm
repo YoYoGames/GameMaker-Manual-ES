@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>audio_listener_velocity</title>
+  <title>audio_listener_velocidad</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function audio_listener_velocity" />
   <meta name="rh-index-keywords" content="audio_listener_velocity" />
@@ -14,59 +14,59 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_listener_velocity</h1>
-  <p>This function can be used to give the listener <em>Doppler </em>effects and simulate audio motion based on the vector that is resolved from the given relative x, y and z positions. If the listener itself is not ever going to move, or the movement is not a constant motion, you would normally not need to set these values, but, for example, if you are making a scrolling game where the player has a constant bottom to top movement and the enemies a constant top to bottom movement, you would set the listener <i>and</i> emitter velocities (for emitters you would use <span class="inline"><a href="../Audio_Emitters/audio_emitter_velocity.htm"><span class="inline">audio_emitter_velocity()</span></a></span>) to the appropriate vectors to simulate the correct Doppler effect as they move past the player instance.</p>
-  <p class="note"><b><span class="note">NOTE</span> </b>if you have multiple listeners you should use the function <span style="font-size:1px;"><a href="audio_listener_set_velocity.htm"><span class="inline">audio_listener_set_velocity()</span></a></span>.</p>
-  <p>The image below shows how this could be setup for the example game given above:</p>
+  <h1>audio_listener_velocidad</h1>
+  <p>Esta función se puede utilizar para dar al oyente efectos <em>Doppler </em>y simular el movimiento del audio basado en el vector que se resuelve a partir de las posiciones relativas x, y y z dadas. Si el oyente en sí no se va a mover nunca, o el movimiento no es un movimiento constante, normalmente no necesitarás establecer estos valores, pero, por ejemplo, si estás haciendo un juego de desplazamiento donde el jugador tiene un movimiento constante de abajo a arriba y los enemigos un movimiento constante de arriba a abajo, establecerás las velocidades del oyente <i>y</i> del emisor (para los emisores usarías <span class="inline"><a href="../Audio_Emitters/audio_emitter_velocity.htm"><span class="inline">audio_emitter_velocity()</span>) a los vectores apropiados para simular el efecto Doppler correcto mientras se mueven más allá de la instancia del jugador.</p>
+  <p class="note"><b><span class="note">NOTA</span> </b>si tiene varios oyentes debe utilizar la función <span style="font-size:1px;"><a href="audio_listener_set_velocity.htm"><span class="inline">audio_listener_set_velocity()</span></a></span>.</p>
+  <p>La imagen siguiente muestra cómo podría configurarse para el juego de ejemplo dado anteriormente:</p>
   <p><img alt="Audio Listener Velocity Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Listener_Velocity.png" /></p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">audio_listener_velocity(vx, vy, vz);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>vx</td>
+        <td><span class="notranslate">vx</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The x velocity component of the listener (default 0).</td>
+        <td><span class="notranslate">The x velocity component of the listener (default 0).</span></td>
       </tr>
       <tr>
-        <td>vy</td>
+        <td><span class="notranslate">vy</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The y velocity component of the listener (default 0).</td>
+        <td><span class="notranslate">The y velocity component of the listener (default 0).</span></td>
       </tr>
       <tr>
-        <td>vz</td>
+        <td><span class="notranslate">vz</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The z velocity component of the listener (default 0).</td>
+        <td><span class="notranslate">The z velocity component of the listener (default 0).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">if speed &gt; 0<br />
     {<br />
         audio_listener_velocity(abs(hspeed), abs(vspeed), 0);<br />
     }</p>
-  <p>The above code checks to see if the player instance speed is over 0 and if it is it then uses the appropriate absolute <span class="inline">hspeed</span> and <span class="inline">vspeed</span> components to set the listener velocity.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior comprueba si la velocidad de la instancia del jugador es superior a 0 y, si lo es, utiliza los componentes absolutos apropiados <span class="inline">hspeed</span> y <span class="inline">vspeed</span> para establecer la velocidad del oyente.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Audio_Listeners.htm">Audio Listeners</a></div>
-        <div style="float:right">Next: <a href="audio_listener_orientation.htm">audio_listener_orientation</a></div>
+        <div style="float:left">Atrás: <a href="Audio_Listeners.htm">Auditores de audio</a></div>
+        <div style="float:right">Siguiente: <a href="audio_listener_orientation.htm"><span class="notranslate">audio_listener_orientation</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 audio_listener_velocity

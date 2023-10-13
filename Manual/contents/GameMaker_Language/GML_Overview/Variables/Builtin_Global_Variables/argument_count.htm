@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>argument_count</title>
+  <title>conteo_de_argumentos</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the argument_count variable" />
   <meta name="rh-index-keywords" content="argument_count" />
@@ -14,40 +14,44 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>argument_count</h1>
-  <p>This <b>read-only</b> variable returns the number of &quot;arguments&quot; that are passed through to a <a href="../../Script_Functions.htm">script function</a> or a <a href="../../Method_Variables.htm">method</a>. Normally used in conjunction with an argument array (<a href="argument.htm"><span class="inline">argument[0...15]</span></a>) to permit varying input arguments for a given function.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>conteo_de_argumentos</h1>
+  <p>Esta variable <b>de sólo</b> lectura devuelve el número de &quot;argumentos&quot; que se pasan a una <a href="../../Script_Functions.htm">función de script</a> o a un <a href="../../Method_Variables.htm"><span class="notranslate">method</span></a>. Normalmente se utiliza junto con una matriz de argumentos (<a href="argument.htm"><span class="inline">argument[0...15]</span></a>) para permitir variar los argumentos de entrada de una función determinada.</p>
+  <p class="note"><strong>NOTA</strong>: Esto ya no es estrictamente necesario y se proporciona como soporte de legado más que nada. Todas las funciones definidas por el usuario aceptarán argumentos variables, y cualquier argumento que se pase a una función que no forme parte de las entradas con nombre se inicializará a <span class="inline" style="font-size: 14px">indefinido</span> por defecto, lo que puede comprobarse mediante la función <a href="../../../GML_Reference/Variable_Functions/is_undefined.htm">is_undefined()</a>.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">argument_count;</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">function print(){<br />
-        var _str = &quot;&quot;;<br />
-        for (var i = 0; i &lt; argument_count; i ++)<br />
-        {<br />
-            _str += string(argument[i]);<br />
-        }<br />
-        show_debug_message(_str);<br />
-    }<br />
-    <br />
-    // In an object<br />
-    print(&quot;Player : &quot;, current_time, &quot; : &quot;, id, &quot; : fired&quot;);
-  </p>
-  <p>The above function joins all the arguments passed into the function as one string, and then prints that string to the output log.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code"><span data-keyref="Type_Real"></span></p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p class="code">function my_array()<br />
+    {<br />
+        var i, arg;<br />
+        for (i = 0; i &lt; 5; i += 1;)<br />
+        {<br />
+            if argument_count &gt; i<br />
+            {<br />
+                arg[i] = argument[i]<br />
+            }<br />
+            else<br />
+            {<br />
+                arg[i] = -1;<br />
+            }<br />
+        }<br />
+    }</p>
+  <p>El código anterior utiliza la variable <span class="inline">argument_count</span> junto con la matriz <span class="inline">argument</span> para inicializar las variables, y es un ejemplo de cómo permitir que una función definida por el usuario acepte un número variable de argumentos.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Global_Variables.htm">Global Variables</a></div>
-        <div style="float:right">Next: <a href="async_load.htm">async_load</a></div>
+        <div style="float:left">Atrás: <a href="../Global_Variables.htm">Variables globales</a></div>
+        <div style="float:right">Siguiente: <a href="async_load.htm"><span class="notranslate">async_load</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 argument_count

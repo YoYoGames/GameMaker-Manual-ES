@@ -1,103 +1,103 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Brush Builder</title>
-  <meta name="generator" content="Adobe RoboHelp 2020"/>
-  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page detailing how the tile set editor brush builder works"/>
-  <meta name="rh-index-keywords" content="Tile Sets - Brush Builder"/>
-  <meta name="search-keywords" content="brush builder,brushes,tile brushes"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Constructor de cepillos</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
+  <script src="../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page detailing how the tile set editor brush builder works" />
+  <meta name="rh-index-keywords" content="Tile Sets - Brush Builder" />
+  <meta name="search-keywords" content="brush builder,brushes,tile brushes" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Tile Set Brush Builder</h1>
-  <p>By default when you &quot;paint&quot; tiles onto a <a class="glossterm" data-glossterm="tile map" href="#">tile map</a> layer in the room editor, you select a single tile and paint with that. However, tile sets are almost always designed to have sections
-    that fit together in different ways to form whole areas or items. For example, an RPG tile set may have landscape feature tiles that can be connected to create larger or smaller features - like trees and buildings - depending on the number of tiles
-    used. Now, placing multiple features like this on a room layer would require you to go back and forth many times to change tile, which is not good for your workflow. To resolve this, <span data-keyref="GameMaker Name">GameMaker</span> enables you to create tile <strong>Brushes </strong>in
-    the Tile Set editor, available when you click <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> on the <strong>Brush Builder</strong> button:</p>
-  <p><img alt="Brushes" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_Brushes.png"/>In the <strong>Brush Builder</strong> you have the original tile set on the left and a blank &quot;canvas&quot; on the right. You can now select
-    any tile from the left and paint it on the right to create custom &quot;brushes&quot; which you can then use in the room editor. Note that you can click and hold the left mouse button <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> then drag on the tile set to select multiple tiles to paint into the brush canvas and you can also hold down <img alt="Control Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> to add specific individual tiles or hold down <img alt="Alt Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Alt.png" width="55"/> + <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> to remove specific tiles.</p>
-  <p>The following image shows our previously mentioned landscape features as an example of three custom brushes made from a single tile set:</p>
-  <p><img alt="Features As Brushes Example" class="center" height="534" src="../../assets/Images/Asset_Editors/Editor_Tilesets_FeaturesBrushes.png" width="940"/>On the right you can see three features that we&#39;ve made (highlighted with an orange box
-    in the image). Notice how we&#39;ve left a gap of one tile between each feature - this is because <em>any touching group of tiles will be treated as a single brush</em> in the room editor, so we leave a gap of one tile to show that each set is a distinct
-    brush we want to create. While creating your brushes, you paint with the left mouse button <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> and delete with the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21"/>. You can also zoom the tile sheet or the brush canvas using <img alt="Control Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> and the mouse wheel <img alt="MMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_MMB.png" width="21"/> when the mouse
-    is over one of the windows, or you can pan around using <img alt="Space Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Space.png" width="55"/> + <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> or
-    the middle mouse button <img alt="MMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_MMB.png" width="21"/> and dragging. Note that you can also use the zoom tools in the <strong>Toolbox</strong> within the editor windows to change
-    the zoom levels of either window as well as toggle the grid visibility and colour.</p>
-  <p>At the top right you can see the currently selected tool, and you can also set the size of the brush that you want to paint with. The default size is 1, which is a single tile, but if you set it to higher values then you can paint (and erase) with a
-    larger brush composed of the selected tile repeated, as shown in the image below:</p>
-  <p><img alt="Tile Size Animation" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_Tile_Size.gif"/>The toolbox is where you can select the tool to use for many different tasks in the Tile Set editor, some of which will depend on whether
-    you have anything defined in your <a href="Auto_Tiles.htm">auto tile</a> library. A brief outline of each tool is given below (note that when you have selected a tile layer in the Room Editor, then this toolbox is displayed at the top of the room
-    workspace, along with additional drawing tools):</p>
+  <h1>El <span class="notranslate">Tile Set</span> Brush Builder</h1>
+  <p>Por defecto, cuando se &quot;pinta&quot; <span class="notranslate">tiles</span> en una capa de <a class="glossterm" data-glossterm="mapa de azulejos" href="#">mapa de azulejos</a> en el editor <span class="notranslate">room</span>, se selecciona un solo <span class="notranslate">tile</span> y se pinta con él. Sin embargo, <span class="notranslate">tile sets</span> está casi siempre diseñado para tener secciones
+    que encajan de diferentes maneras para formar áreas o elementos completos. Por ejemplo, un juego de rol <span class="notranslate">tile set</span> puede tener una característica de paisaje <span class="notranslate">tiles</span> que puede ser conectada para crear características más grandes o más pequeñas - como árboles y edificios - dependiendo del número de azulejos
+    utilizadas. Ahora bien, la colocación de múltiples características como esta en una capa <span class="notranslate">room</span> requeriría que usted fuera adelante y atrás muchas veces para cambiar <span class="notranslate">tile</span>, lo que no es bueno para su flujo de trabajo. Para resolver esto, <span data-keyref="GameMaker Name">GameMaker</span> le permite crear <span class="notranslate">tile</span> <strong>Pinceles </strong>en
+    el editor <span class="notranslate">Tile Set</span>, disponible al hacer clic en <img> en el botón <strong>Brush Builder</strong>:</p>
+  <p><img>En el <strong>Brush Builder</strong> tienes el original <span class="notranslate">tile set</span> a la izquierda y un &quot;lienzo&quot; en blanco a la derecha. Ahora puede seleccionar
+    cualquier <span class="notranslate">tile</span> de la izquierda y pintarlo en la derecha para crear &quot;pinceles&quot; personalizados que luego podrá utilizar en el editor <span class="notranslate">room</span>. Tenga en cuenta que puede hacer clic y mantener pulsado el botón izquierdo del ratón <img> y luego arrastrar en el <span class="notranslate">tile set</span> para seleccionar múltiples <span class="notranslate">tiles</span> para pintar en el lienzo del pincel y también puede mantener pulsado <img> / <img> + <img> para añadir <span class="notranslate">tiles</span> individuales específicos o mantener pulsado <img> + <img> para eliminar <span class="notranslate">tiles</span> específicos.</p>
+  <p>La siguiente imagen muestra nuestras características paisajísticas mencionadas anteriormente como ejemplo de tres pinceles personalizados realizados a partir de un único conjunto de azulejos:</p>
+  <p><img>A la derecha puede ver tres características que hemos realizado (resaltadas con un recuadro naranja
+    en la imagen). Fíjese en que hemos dejado un espacio de un <span class="notranslate">tile</span> entre cada rasgo - esto se debe a que <em>cualquier grupo de <span class="notranslate">tiles</span> que se toque será tratado como un solo pincel</em> en el editor <span class="notranslate">room</span>, así que dejamos un espacio de un <span class="notranslate">tile</span> para mostrar que cada conjunto es un pincel distinto
+    pincel que queremos crear. Mientras creamos los pinceles, pintamos con el botón izquierdo del ratón <img> y borramos con el botón derecho <img>. También puede ampliar la hoja <span class="notranslate">tile</span> o el lienzo de los pinceles utilizando <img> / <img> y la rueda del ratón <img> cuando el ratón
+    cuando el ratón está sobre una de las ventanas, o puede desplazarse utilizando <img> + <img> o
+    el botón central del ratón <img> y arrastrando. Tenga en cuenta que también puede utilizar las herramientas de zoom en la <strong>caja de herramientas</strong> dentro de las ventanas del editor para cambiar
+    los niveles de zoom de cualquiera de las ventanas, así como para cambiar la visibilidad y el color de la cuadrícula.</p>
+  <p>En la parte superior derecha puedes ver la herramienta actualmente seleccionada, y también puedes establecer el tamaño del pincel con el que quieres pintar. El tamaño por defecto es 1, que es un solo <span class="notranslate">tile</span>, pero si lo ajusta a valores más altos entonces puede pintar (y borrar) con un
+    pincel más grande compuesto por el <span class="notranslate">tile</span> seleccionado repetido, como se muestra en la imagen siguiente:</p>
+  <p><img>La caja de herramientas es donde puede seleccionar la herramienta a utilizar para muchas tareas diferentes en el editor <span class="notranslate">Tile Set</span>, algunas de las cuales dependerán de si
+    de si tiene algo definido en su biblioteca de <a href="Auto_Tiles.htm">mosaicos automáticos</a>. A continuación se ofrece un breve resumen de cada herramienta (tenga en cuenta que cuando haya seleccionado una capa de <span class="notranslate">tile</span> en el editor de <span class="notranslate">Room</span>, esta caja de herramientas se mostrará en la parte superior de la sala
+   <span class="notranslate">workspace</span> junto con otras herramientas de dibujo):</p>
   <table class="icons" style="margin-left: 32auto">
     <tbody>
       <tr>
-        <td class="icons"><img alt="Pencil Tool Icon" src="../../assets/Images/Icons/Icon_Tile_Draw.png" style="margin-left: 24px;"/></td>
-        <td class="icons"><strong>Pencil</strong></td>
-        <td class="text">This is the pencil tool. It uses the selected tile to paint in the Brushes window with the left mouse button <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> and you can erase with the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21"/>.</td>
+        <td class="icons"><img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/></td>
+        <td class="icons"><strong>Lápiz</strong></td>
+        <td class="text">Esta es la herramienta lápiz. Utiliza el <span class="notranslate">tile</span> seleccionado para pintar en la ventana de Pinceles con el botón izquierdo del ratón <img> y puede borrar con el botón derecho del ratón <img>.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Eraser Tool Icon" src="../../assets/Images/Icons/Icon_Tile_Erase.png" style="margin-left: 24px;"/></td>
-        <td class="icons"><strong>Eraser</strong></td>
-        <td class="text">With the eraser tool you can use the left mouse button <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> to erase a given tile in the Brushes window. Essentially, all this does is set the tile index to 0, which is
-          the reserved &quot;empty&quot; tile.</td>
+        <td class="icons"><img alt="Brushes" class="center" src="../../assets/Images/Asset_Editors/Editor_Tilesets_Brushes.png"/></td>
+        <td class="icons"><strong>Borrador</strong></td>
+        <td class="text">Con la herramienta de borrado puede utilizar el botón izquierdo del ratón <img> para borrar un determinado <span class="notranslate">tile</span> en la ventana de pinceles. Esencialmente, todo lo que esto hace es poner el índice de <span class="notranslate">tile</span> a 0, que es
+          el reservado &quot;vacío&quot; <span class="notranslate">tile</span>.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Selection Tool Icon" height="24" src="../../assets/Images/Icons/Icon_TileSelect.png" style="margin-left: 24px;" width="24"/></td>
-        <td class="icons"><strong>Selection</strong></td>
-        <td class="text">This is the selection tool, which can be used to define an area of the Brushes window for working on. You can click the left mouse button <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> and then drag the mouse
-          to create a rectangular area, or you can press <img alt="Control Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> to add multiple selections and <img alt="Alt Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Alt.png" width="55"/> + <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> to clear a part of the selection. To clear the whole selection you can press <img alt="Escape Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Escape.png" width="55"/>. When you have an area of a Brushes window selected, the rest of the tools (Pencil, Flip, Rotate, etc...) will only work within the selected area. Note that you can also select tiles in the window then copy ( <img alt="Control Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/>+ &quot;<span class="inline">C</span>&quot;), cut ( <img alt="Control Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + &quot;<span class="inline">X</span>&quot;) and paste
-          ( <img alt="Control Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + &quot;
-          <font face="Lucida Console"><span style="font-size: 16px;"><b>V</b></span></font>&quot;) them, which will then switch the tool to the Pencil and permit you to &quot;paint&quot; with them.</td>
+        <td class="icons"><img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/></td>
+        <td class="icons"><strong>Selección</strong></td>
+        <td class="text">Esta es la herramienta de selección, que se puede utilizar para definir un área de la ventana de Pinceles para trabajar en ella. Puede pulsar el botón izquierdo del ratón <img> y luego arrastrar el ratón
+          para crear un área rectangular, o puede pulsar <img> / <img> + <img> para añadir selecciones múltiples y <img> + <img> para borrar una parte de la selección. Para borrar toda la selección puede pulsar <img>. Cuando tienes un área de la ventana de Pinceles seleccionada, el resto de las herramientas (Lápiz, Voltear, Rotar, etc...) sólo funcionarán dentro del área seleccionada. Tenga en cuenta que también puede seleccionar <span class="notranslate">tiles</span> en la ventana y luego copiar ( <img> / <img>+ &quot;<span class="inline">C</span>&quot;), cortar ( <img> / <img> + &quot;<span class="inline">X</span>&quot;) y pegar
+          ( <img> / <img> + &quot;
+          <font face="Lucida Console"><span style="font-size: 16px;"><b>V</b></span></font>&quot;), lo que hará que la herramienta <span class="notranslate">switch</span> se convierta en el Lápiz y le permita &quot;pintar&quot; con ellos.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Autotile Tool Icon" src="../../assets/Images/Icons/Icon_Tile_Auto.png" style="margin-left: 24px;"/></td>
+        <td class="icons"><img alt="Control Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/></td>
         <td class="icons"><strong>AutoTile</strong></td>
-        <td class="text">Clicking this tool enables the <strong>Auto tiling</strong> paint style. When this is active you can select any tile from the Autotile Libraries tab, and then paint it into the Brushes window and <span data-keyref="GameMaker Name">GameMaker</span> will automatically change it
-          to match the surrounding tiles, as long as you have correctly set up the <a href="Auto_Tiles.htm">Auto Tile Tab</a>. Note that selecting a tile from the tile set that is not part of the autotile libraries will reset the drawing tool to the standard
-          Pencil tool.</td>
+        <td class="text">Al hacer clic en esta herramienta se activa el estilo de pintura Auto <strong>tiling</strong>. Cuando esto está activo, puede seleccionar cualquier <span class="notranslate">tile</span> de la pestaña de Bibliotecas de Auto mosaico, y luego pintarlo en la ventana de Pinceles y <span data-keyref="GameMaker Name">GameMaker</span> lo cambiará automáticamente
+          para que coincida con el <span class="notranslate">tiles</span> circundante, siempre y cuando haya configurado correctamente la pestaña Auto <a href="Auto_Tiles.htm"> <span class="notranslate">Tile</span>. Tenga en cuenta que la selección de un</a> <span class="notranslate">tile</span> de la <span class="notranslate">tile set</span> que no es parte de las bibliotecas de autotiles restablecerá la herramienta de dibujo a la herramienta estándar
+          Lápiz.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Flip Tool Icon" src="../../assets/Images/Icons/Icon_Tile_Flip.png" style="margin-left: 24px;"/></td>
+        <td class="icons"><img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/></td>
         <td class="icons"><strong>Flip</strong></td>
-        <td class="text">Clicking the Flip tool with the left mouse button <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> (or using the keyboard shortcut &quot;<span class="inline">X</span>&quot; ) will flip the tile or tiles currently
-          selected for drawing along the <em>horizontal </em>axis, without changing drawing tool (if you have a custom brush selected for drawing, the whole brush will flip). If you have no tile selected for drawing, but do have a group of tiles selected
-          in the brush window, then the flip tool will Flip the selected tiles.</td>
+        <td class="text">Haciendo clic en la herramienta Voltear con el botón izquierdo del ratón <img> (o utilizando el atajo de teclado &quot;<span class="inline">X</span>&quot; ) se volteará el <span class="notranslate">tile</span> o <span class="notranslate">tiles</span> actualmente seleccionado para dibujar a lo largo del eje horizontal (si tiene un pincel personalizado seleccionado para dibujar, todo el pincel se volteará).
+          seleccionados para dibujar a lo largo del eje <em>horizontal </em>, sin cambiar de herramienta de dibujo (si tiene un pincel personalizado seleccionado para dibujar, todo el pincel se volteará). Si no tiene ningún <span class="notranslate">tile</span> seleccionado para dibujar, pero tiene un grupo de <span class="notranslate">tiles</span> seleccionado
+          en la ventana del pincel, entonces la herramienta de volteo volteará el <span class="notranslate">tiles</span> seleccionado.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Mirror Tool Icon" src="../../assets/Images/Icons/Icon_Tile_Mirror.png" style="margin-left: 24px;"/></td>
-        <td class="icons"><strong>Mirror</strong></td>
-        <td class="text">Clicking the Mirror tool with the left mouse button <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> (or using the keyboard shortcut &quot; <span class="inline">Y</span>&quot; ) will mirror the tile(s) currently
-          selected for drawing along the <em>vertical </em>axis, without changing drawing tool (if you have a custom brush selected for drawing, the whole brush will mirror). If you have no tile selected for drawing, but do have a group of tiles selected
-          in the brush window, then the Mirror tool will mirror the selected tiles.</td>
+        <td class="icons"><img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/></td>
+        <td class="icons"><strong>Espejo</strong></td>
+        <td class="text">Haciendo clic en la herramienta Espejo con el botón izquierdo del ratón <img> (o utilizando el atajo de teclado &quot; <span class="inline">Y</span>&quot; ) se reflejará la(s) baldosa(s) actualmente seleccionada(s) para dibujar a lo largo del eje vertical.
+          seleccionado para dibujar a lo largo del eje <em>vertical </em>, sin cambiar la herramienta de dibujo (si tiene un pincel personalizado seleccionado para dibujar, todo el pincel se reflejará). Si no tiene ningún <span class="notranslate">tile</span> seleccionado para dibujar, pero tiene un grupo de <span class="notranslate">tiles</span> seleccionado
+          en la ventana del pincel, entonces la herramienta Espejo reflejará el <span class="notranslate">tiles</span> seleccionado.</td>
       </tr>
       <tr>
-        <td class="icons"><img alt="Rotate Tool Icon" src="../../assets/Images/Icons/Icon_Tile_Rotate.png" style="margin-left: 24px;"/></td>
-        <td class="icons"><strong>Rotate</strong></td>
-        <td class="text">Clicking the Rotate tool with the left mouse button <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> (or using the keyboard shortcut &quot; <span class="inline">Z</span>&quot; ) will rotate the tile(s) currently
-          selected for drawing 90° <em>clockwise</em>, without changing drawing tool (if you have a custom brush selected for drawing, the whole brush will rotate). If you have no tile selected for drawing, but do have a group of tiles selected in the
-          brush window, then the Rotate tool will rotate the selected tiles.</td>
+        <td class="icons"><img alt="Alt Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Alt.png" width="55"/></td>
+        <td class="icons"><strong>Girar</strong></td>
+        <td class="text">Haciendo clic en la herramienta Girar con el botón izquierdo del ratón <img> (o utilizando el atajo de teclado &quot; <span class="inline">Z</span>&quot; ) girará la(s) baldosa(s) actualmente seleccionada(s) para dibujar
+          seleccionado para dibujar 90° <em>en el sentido de las agujas del reloj</em>, sin cambiar de herramienta de dibujo (si tiene un pincel personalizado seleccionado para dibujar, todo el pincel girará). Si no tiene seleccionado ningún <span class="notranslate">tile</span> para dibujar, pero sí tiene seleccionado un grupo de <span class="notranslate">tiles</span> en la ventana de
+          ventana del pincel, entonces la herramienta Rotar rotará el <span class="notranslate">tiles</span> seleccionado.</td>
       </tr>
     </tbody>
   </table>
-  <p>Below the tools, you can find two different sections for selecting any <a href="Auto_Tiles.htm"><strong>auto tile</strong></a> or <a href="Animated_Tiles.htm"><strong>animated</strong> tiles</a> that have been created using the current tile set image.
-    A single sprite that is used for a tile set can have many, many, single cell images in it, and these can be combined in the Animation or Autotile editor to create custom brushes which will show up in these sections and can be used in conjunction with
-    regular static tiles to create brushes (note that an animated tile will animate regardless of whether you have selected it from the library or from the base tile set).</p>
-  <p>Once you have set up all the brushes you require, you can then use them to paint tiles onto any tile map layer within the <a href="../Rooms.htm">Room Editor</a>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Debajo de las herramientas, puede encontrar dos secciones diferentes para seleccionar cualquier <a href="Auto_Tiles.htm"><strong>auto azulejo</strong></a> o <a href="Animated_Tiles.htm">azulejos<strong>anim</strong></a> <a href="Animated_Tiles.htm"><strong>ados</strong></a> <a href="Animated_Tiles.htm"><strong></strong></a> que han sido creados usando la imagen actual de <span class="notranslate">tile set</span>.
+    Un solo <span class="notranslate">sprite</span> que se utiliza para un <span class="notranslate">tile set</span> puede tener muchas, muchas, imágenes de celdas individuales en él, y estas pueden ser combinadas en el editor de Animación o de Auto mosaico para crear pinceles personalizados que se mostrarán en estas secciones y pueden ser utilizados en conjunto con
+    <span class="notranslate">tiles</span> estático normal para crear pinceles (tenga en cuenta que un <span class="notranslate">tile</span> animado se animará independientemente de si lo ha seleccionado de la biblioteca o de la base <span class="notranslate">tile set</span>).</p>
+  <p>Una vez que haya configurado todos los pinceles que necesite, podrá utilizarlos para pintar <span class="notranslate">tiles</span> en cualquier capa del mapa <span class="notranslate">tile</span> dentro del <a href="../Rooms.htm">Editor de espacios</a>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Tile_Sets.htm">Tile Sets</a></div>
-        <div style="float:right">Next: <a href="Animated_Tiles.htm">Animated Tiles</a></div>
+        <div style="float:left">Atrás: <a href="../Tile_Sets.htm">Juegos de baldosas</a></div>
+        <div style="float:right">Siguiente: <a href="Animated_Tiles.htm">Azulejos animados</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Tile Brushes

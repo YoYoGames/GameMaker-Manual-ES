@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_sprite_part</title>
+  <title>dibujar_parte_de_espalda</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for draw_sprite_part" />
   <meta name="rh-index-keywords" content="draw_sprite_part" />
@@ -15,76 +15,76 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_sprite_part</h1>
-  <p>With this function you can draw part of any sprite at a given position within the room. As with <a href="draw_sprite.htm"><span class="inline">draw_sprite()</span></a> you can specify a sprite and a sub-image for drawing, then you must give the <i>relative coordinates</i>    within the sprite of the area to select for drawing. This means that a left position of 0 and a top position of 0 would be the top left corner of the sprite and all further coordinates should be taken from that position. The image below shows an example
-    of how this works:</p>
-  <p><img alt="draw_sprite_part example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/spr_part.png" />You should note that if the texture page permits automatic cropping then this function may not work as expected,
-    since the extra &quot;empty&quot; space around the sprite will have been removed for creating the texture page. To resolve this issue, you will need to set the texture page settings (in the <a href="../../../../Settings/Texture_Groups.htm">Texture Group Editor</a>)
-    to disable the option <b>Automatic Crop</b>.</p>
-  <p class="note"><b>NOTE</b>: When drawing with this function, the sprite <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">x offset</a> and <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">y offset</a>    are ignored and the sprite part will be drawn with the top left corner at the specified x / y position in the room.</p>
-  <p class="note"><b>NOTE</b>: This function is only useful for <b>bitmap</b> sprites and will not work with SWF or JSON (Spine) sprites.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>dibujar_parte_de_espalda</h1>
+  <p>Con esta función puede dibujar parte de cualquier <span class="notranslate">sprite</span> en una posición determinada dentro de <span class="notranslate">room</span>. Al igual que con <a href="draw_sprite.htm"><span class="inline">draw_sprite()</span></a> puede especificar un <span class="notranslate">sprite</span> y una sub-imagen para dibujar, entonces debe dar las <i>coordenadas relativas</i> dentro del <span class="notranslate">sprite</span> del área a seleccionar para dibujar. Esto significa que una posición izquierda de 0 y una posición superior de 0 sería la esquina superior izquierda del <span class="notranslate">sprite</span> y todas las coordenadas posteriores deberían tomarse desde esa posición. La imagen siguiente muestra un ejemplo
+    de cómo funciona esto:</p>
+  <p><img>Debe tener en cuenta que si la página de textura permite el recorte automático, esta función puede no funcionar como se espera,
+    ya que el espacio extra &quot;vacío&quot; alrededor de <span class="notranslate">sprite</span> se habrá eliminado para crear la página de textura. Para resolver este problema, tendrá que establecer la configuración de la página de textura (en el <a href="../../../../Settings/Texture_Groups.htm">Editor de grupos de texturas</a>)
+    para desactivar la opción <b>Recorte automático</b>.</p>
+  <p class="note"><b>NOTA</b>: Al dibujar con esta función, se ignoran el <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">desplazamiento x</a> y el <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">desplazamiento y de</a> <span class="notranslate">sprite</span> y la parte <span class="notranslate">sprite</span> se dibujará con la esquina superior izquierda en la posición x / y especificada en el <span class="notranslate">room</span>.</p>
+  <p class="note"><b>NOTA</b>: Esta función sólo es útil para el <b>mapa de bits</b> <span class="notranslate">sprites</span> y no funcionará con SWF o JSON (<span class="notranslate">Spine</span>) <span class="notranslate">sprites</span>.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">draw_sprite_part(sprite, subimg, left, top, width, height, x, y);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th><th>Tipo</th>
+        <th>Descripción</th>
      </tr>
       <tr>
-        <td>sprite</td><td><span data-keyref="Type_Asset_Sprite"></span></td>
-        <td>The index of the sprite to draw.</td>
+        <td><span class="notranslate">sprite</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td>
+        <td><span class="notranslate">The index of the sprite to draw.</span></td>
      </tr>
       <tr>
-        <td>subimg</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The subimg (frame) of the sprite to draw (image_index or -1 correlate to the current frame of animation in the object).</td>
+        <td><span class="notranslate">subimg</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The subimg (frame) of the sprite to draw (image_index or -1 correlate to the current frame of animation in the object).</span></td>
      </tr>
       <tr>
-        <td>left</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x position on the sprite of the top left corner of the area to draw.</td>
+        <td><span class="notranslate">left</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The x position on the sprite of the top left corner of the area to draw.</span></td>
      </tr>
       <tr>
-        <td>top</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y position on the sprite of the top left corner of the area to draw.</td>
+        <td><span class="notranslate">top</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The y position on the sprite of the top left corner of the area to draw.</span></td>
      </tr>
       <tr>
-        <td>width</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The width of the area to draw.</td>
+        <td><span class="notranslate">width</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The width of the area to draw.</span></td>
      </tr>
       <tr>
-        <td>height</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The height of the area to draw.</td>
+        <td><span class="notranslate">height</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The height of the area to draw.</span></td>
      </tr>
       <tr>
-        <td>x</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x coordinate of where to draw the sprite.</td>
+        <td><span class="notranslate">x</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The x coordinate of where to draw the sprite.</span></td>
      </tr>
       <tr>
-        <td>y</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y coordinate of where to draw the sprite.</td>
+        <td><span class="notranslate">y</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The y coordinate of where to draw the sprite.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">draw_sprite_part(sprite_index, image_index, 4, 0, sprite_width-16, sprite_height-16, x, y );</p>
-  <p>This will draw the instances assigned sprite (sprite_index) and its current frame of animation (image_index), however it will shave a 4px margin off the width on both sides, and an 8 pixel margin off the height from the bottom of the original 24x24
-    pixel sprite.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Esto dibujará las instancias asignadas <span class="notranslate">sprite</span> (sprite_index) y su cuadro actual de animación (image_index), sin embargo, recortará un margen de 4px de la anchura en ambos lados, y un margen de 8 píxeles de la altura desde la parte inferior del original de 24x24
+    pixel <span class="notranslate">sprite</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprites_And_Tiles.htm">Sprites And Tiles</a></div>
-        <div style="float:right">Next: <a href="draw_sprite_part_ext.htm">draw_sprite_part_ext</a></div>
+        <div style="float:left">Atrás: <a href="Sprites_And_Tiles.htm">Sprites y baldosas</a></div>
+        <div style="float:right">Siguiente: <a href="draw_sprite_part_ext.htm"><span class="notranslate">draw_sprite_part_ext</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 draw_sprite_part

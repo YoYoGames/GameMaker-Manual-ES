@@ -6,7 +6,7 @@
   <title>timeline_max_moment</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function timeline_max_moment" />
   <meta name="rh-index-keywords" content="timeline_max_moment" />
@@ -16,43 +16,43 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>timeline_max_moment</h1>
-  <p>This function will return the value of the moment in which the timeline performs its final action. So, if you have a timeline with 8 different actions placed 20 moments apart, this function would return the moment value of the last action in that timeline, which would be 160. This function is a good way to test whether a timeline has passed the last active moment when running, since the timeline position will continue incrementing every step of the game whether there are further actions or not.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Esta función devolverá el valor del momento en el que el <span class="notranslate">timeline</span> realiza su última acción. Así, si tienes un <span class="notranslate">timeline</span> con 8 acciones diferentes colocadas con 20 momentos de diferencia, esta función devolvería el valor del momento de la última acción en ese <span class="notranslate">timeline</span>, que sería 160. Esta función es una buena manera de comprobar si un <span class="notranslate">timeline</span> ha pasado el último momento activo cuando se está ejecutando, ya que la posición de <span class="notranslate">timeline</span> continuará incrementándose en cada paso del juego, haya o no más acciones.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">timeline_max_moment(ind);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th><th>Tipo</th>
+        <th>Descripción</th>
      </tr>
       <tr>
-        <td>ind</td><td><span data-keyref="Type_Asset_Timeline"></span></td>
-        <td>The index of the timeline to get the last moment of.</td>
+        <td><span class="notranslate">ind</span></td><td><span data-keyref="Type_Asset_Timeline"></span></td>
+        <td><span class="notranslate">The index of the timeline to get the last moment of.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">if timeline_position &gt; timeline_max_moment(timeline_index)<br />
     {<br />
         timeline_running = false;<br />
     }</p>
-  <p>The above code will check the current timeline position against the maximum active moment, and if it is greater the timeline will be stopped.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior comprobará la posición actual de <span class="notranslate">timeline</span> con respecto al momento activo máximo, y si es mayor, el <span class="notranslate">timeline</span> se detendrá.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Timelines.htm">Timelines</a></div>
-        <div style="float:right">Next: <a href="timeline_index.htm">timeline_index</a></div>
+        <div style="float:left">Atrás: <a href="Timelines.htm">Líneas de tiempo</a></div>
+        <div style="float:right">Siguiente: <a href="timeline_index.htm"><span class="notranslate">timeline_index</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 timeline_max_moment

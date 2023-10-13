@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_get_stat_avg_rate</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_get_stat_avg_rate" />
+  <meta name="rh-index-keywords" content="steam_get_stat_avg_rate" />
+  <meta name="search-keywords" content="steam_get_stat_avg_rate" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_get_stat_avg_rate</h1>
+  <p>Con esta función puedes obtener el valor de una estadística <b>media</b> específica. La estadística debe haber sido definida previamente en la página de cuentas del panel de control de Steamworks para tu juego y el <span class="notranslate">string</span> que se pasa a la función debe coincidir con
+    con el utilizado como <b>nombre de la API</b> en el panel de control.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
+  <p class="code">steam_get_stat_avg_rate(stat_name);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argumento</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">stat_name</span></td>
+        <td>El nombre de la estadística a obtener (un <span class="notranslate">string</span>).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p class="code">var avg = steam_get_stat_avg_rate(&quot;PointsPerHour&quot;);<br/> draw_text(8, 8, &quot;PPH = &quot; + string(avg);</p>
+  <p>El código anterior obtiene el valor actual de la estadística media &quot;PointsPerHour&quot; y lo dibuja en la pantalla.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Atrás: <a href="Steam_Achievements.htm">Logros y estadísticas</a></div>
+        <div style="float:right">Siguiente: <a href="steam_reset_all_stats.htm"><span class="notranslate">steam_reset_all_stats</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_get_stat_avg_rate
+-->
+  <!-- TAGS
+steam_get_stat_avg_rate
+-->
+</body>
+</html>

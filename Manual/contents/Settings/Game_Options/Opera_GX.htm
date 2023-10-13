@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Opera GX</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
+  <script src="../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Gurpreet S. Matharoo" />
+  <meta name="topic-comment" content="Page that details the Opera GX Game Options" />
+  <meta name="rh-index-keywords" content="Game Options - Opera GX" />
+  <meta name="search-keywords" content="Opera GX Game Options" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Opciones de juego de Opera GX</h1>
+  <p>Las opciones de juego de Opera GX le permiten modificar las propiedades de su juego. Se proporcionan las siguientes secciones:</p>
+  <h2>General</h2>
+  <p><img>Esta ventana muestra el estado de su inicio de sesión en Opera GX. Puede hacer clic en el icono <img> Refresh para iniciar la sesión con su cuenta de Opera.</p>
+  <p>A continuación, tiene las siguientes opciones:</p>
+  <ul class="colour">
+    <li><b>Seleccionar juego</b>: En esta lista, puedes seleccionar un juego existente para actualizarlo, o elegir cargar un nuevo juego.</li>
+    <li><strong>Nombre</strong> del juego: Este es el nombre (título) de tu juego en GX.games.<br>
+      <br>
+     <span class="important">IMPORTANTE</span> Para que la subida a GX.games tenga éxito, es importante que sólo utilices los caracteres permitidos en el nombre del juego (que, por defecto, es el nombre de tu proyecto <span class="notranslate">GameMaker</span>, así que asegúrate de elegir un nombre de proyecto válido o cambiar el nombre del juego manualmente después).<br>
+      <br>
+      Si subes un juego con un título que tiene caracteres prohibidos, obtendrás este error: <span><span class="inline2">Datos incorrectos. Compruebe la salida</span></span><br>
+      <br>
+      Los caracteres permitidos son: 
+      <ul>
+        <li>a-z, A-Z (con soporte de esquemas locales como å)</li>
+        <li>0-9</li>
+        <li>espacio en blanco</li>
+        <li>¡: - ! ? . , ' &amp; ( )</li>
+      </ul>
+    </li>
+    <li><strong>Versión</strong>: Esta es la versión del juego que se subió por última vez. Sólo puedes cambiar este campo antes de que tu juego haya sido subido a GX.games.</li>
+    <li><strong>Próxima versión:</strong> Este es el número de versión que se utilizará para su próxima subida a GX.games. Sólo puedes cambiarlo después de que tu juego haya sido subido a GX.games. No es necesario que lo modifique manualmente para cada subida, ya que <span class="notranslate">GameMaker</span> incrementará automáticamente el último dígito del número de versión por usted.</li>
+    <li><b>Regístrese en G</b>X.games: Haga clic en este botón para registrar una nueva entrada en GX.games. Solo es válido cuando &quot;<strong>Seleccionar juego</strong>&quot; está configurado como &quot;<strong>Nuevo juego</strong>&quot;.</li>
+    <li><strong>Selecciona el</strong> grupo: Antes de subir un nuevo juego, puedes seleccionar el estudio al que pertenecerá el juego.</li>
+    <li><strong>Editar juego en Opera</strong>: Esto abre GX.games DevCloud y te lleva a la página de &quot;Detalles del juego&quot; de tu juego. Solo se puede hacer clic cuando se ha iniciado la sesión y se ha cargado el juego.</li>
+    <li><strong>URL interna para compartir</strong>: Esto abre la versión privada de tu juego, sólo cuando se ha habilitado en GX.games DevCloud.</li>
+    <li><strong>URL pública para compartir</strong>: Esto abre la versión pública de tu juego, sólo cuando se ha habilitado en GX.games DevCloud.<br>
+      <br>
+      Ambas URLs pueden ser compartidas con otros para que puedan jugar a tu juego.
+    </li>
+  </ul>
+  <h2>Gráficos</h2>
+  <p><img>Aquí puede cambiar los siguientes detalles relacionados con la forma en que se mostrará su juego:</p>
+  <ul class="colour">
+    <li><strong>Mostrar cursor</strong>: Controla si el cursor del ratón es visible cuando se inicia el juego. Es útil para los juegos que no requieren la entrada del ratón o utilizan un <a href="../../GameMaker_Language/GML_Reference/General_Game_Control/cursor_sprite.htm">sprite de ratón personalizado</a>.</li>
+    <li><strong>Interpolar los colores entre píxeles</strong>: Activa la <a class="glossterm" data-glossterm="interpolación lineal">interpolación lineal</a>, que básicamente &quot;suaviza&quot; los píxeles. Para gráficos de píxeles nítidos, debería estar desactivado, pero si tiene buenas mezclas alfa y gráficos con bordes suavizados es mejor dejarlo activado. Está activada por defecto.</li>
+    <li><strong>Escala</strong>: Tu juego puede ser configurado para escalar el lienzo de dibujo automáticamente para <strong>mantener la relación de aspecto </strong>dentro del navegador, o puedes seleccionar que se ejecute a <strong>escala</strong> completa. La opción de escala completa no hará que el juego se ejecute a pantalla completa en el navegador, sino que estirará lo que se dibuje para que se ajuste al tamaño del lienzo, tal y como se define en la primera <span class="notranslate">room</span> del juego. Esta opción está configurada para mantener la relación de aspecto por defecto.</li>
+  </ul>
+  <p>Por último, existe la opción de establecer el tamaño de la <a class="glossterm" data-glossterm="página de texturas" href="macOS.htm#">página de la textura</a>. El tamaño por defecto (y más compatible) es 2048x2048, pero puedes elegir entre 256x256 y 8192x8192. También hay un botón marcado como <strong><strong>Vista previa </strong></strong>que generará las páginas de texturas para esta plataforma y luego abrirá una ventana para que puedas ver cómo quedan. Esto puede ser muy útil si quieres ver cómo están estructuradas las páginas de textura y evitar tener páginas de textura más grandes (o más pequeñas) de lo necesario. Para obtener más información sobre las páginas de textura, consulte <a href="../Texture_Information/Texture_Pages.htm">aquí</a>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Atrás: <a href="../Game_Options.htm">Opciones de juego</a></div>
+        <div style="float:right">Siguiente: <a href="Windows.htm">Windows</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
+  </div>
+  <!-- KEYWORDS
+Opera GX Game Options
+GXC
+-->
+  <!-- TAGS
+operagx_options
+-->
+</body>
+</html>

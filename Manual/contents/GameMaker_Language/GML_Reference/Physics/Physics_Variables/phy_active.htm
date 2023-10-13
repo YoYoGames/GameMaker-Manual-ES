@@ -6,7 +6,7 @@
   <title>phy_active</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for phy_active" />
   <meta name="rh-index-keywords" content="phy_active" />
@@ -15,15 +15,15 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>phy_active</h1>
-  <p>This variable controls whether or not the instance is currently &quot;active&quot;. Setting it to <span class="inline">false</span> will prevent the instance from participating in the physics world, and setting it to <span class="inline">true</span> will have it participating again. Please note that this is not the same as <a href="../../Asset_Management/Instances/Deactivating_Instances/Deactivating_Instances.htm">deactivating the instance</a>, as the instance is still visible on the screen and can still be changed through code, rather this function just prevents it from participating in the physics simulation</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Esta variable controla si la instancia está actualmente &quot;activa&quot; o no. Si se establece en <span class="inline">false</span>, la instancia no participará en el mundo de la física, y si se establece en <span class="inline">true</span>, volverá a participar. Por favor, ten en cuenta que esto no es lo mismo que <a href="../../Asset_Management/Instances/Deactivating_Instances/Deactivating_Instances.htm">desactivar la</a> instancia, ya que la instancia sigue siendo visible en la pantalla y todavía se puede cambiar a través del código, sino que esta función sólo impide que participe en la simulación de la física</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">phy_active;</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Bool"></span> (or <span class="inline">undefined</span> if the instance is not physics enabled)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">if keyboard_check_pressed(ord&quot;P&quot;)<br />
     {<br />
         global.Pause = !global.Pause<br />
@@ -32,18 +32,18 @@
             phy_active = !global.Pause;<br />
         }<br />
     }</p>
-  <p>The above code will detect a keypress of the letter &quot;P&quot; and then toggle the global variable &quot;Pause&quot; from <span class="inline">true</span> to <span class="inline">false</span> and back again. This variable is then used to set whether physics is active or not in the children instances of the object indexed in the variable &quot;obj_Parent&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior detectará una pulsación de la letra &quot;P&quot; y entonces cambiará la variable global &quot;Pause&quot; de <span class="inline">true</span> a <span class="inline">false</span> y viceversa. Esta variable se utiliza entonces para establecer si la física está activa o no en las instancias hijas del <span class="notranslate">object</span> indexadas en la variable &quot;obj_Parent&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Physics_Variables.htm">Physics Variables</a></div>
-        <div style="float:right">Next: <a href="phy_angular_velocity.htm">phy_angular_velocity</a></div>
+        <div style="float:left">Atrás: <a href="Physics_Variables.htm">Variables físicas</a></div>
+        <div style="float:right">Siguiente: <a href="phy_angular_velocity.htm"><span class="notranslate">phy_angular_velocity</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 phy_active

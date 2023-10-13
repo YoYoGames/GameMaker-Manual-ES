@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_get_user_persona_name</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_get_user_persona_name" />
+  <meta name="rh-index-keywords" content="steam_get_user_persona_name" />
+  <meta name="search-keywords" content="steam_get_user_persona_name" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_get_user_persona_name</h1>
+  <p>Esta función se puede utilizar para recuperar el nombre de usuario (nombre de pantalla) para cualquier ID de usuario específico. Usted da el ID de usuario y luego la función devuelve un valor único de ID asíncrono que puede ser utilizado para comprobar los detalles correctamente en el <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">evento Steam Async</a>.
+    Este evento tendrá el <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> mapa DS que se rellenará con los siguientes pares clave/valor:</p>
+  <ul class="colour">
+    <li>&quot;<b>id</b>&quot; - El ID asíncrono devuelto por la función que desencadenó el evento</li>
+    <li>&quot;<b>event_type</b>&quot; - El <span class="notranslate">string</span> &quot;<b>user_persona_name</b>&quot;</li>
+    <li>&quot;<b>steamid&quot;</b>&quot; - El valor de ID de <span class="notranslate">Steam</span> utilizado para obtener el nombre de usuario.</li>
+    <li>&quot;<b>nombre_persona</b>&quot; - El nombre de usuario para el ID de <span class="notranslate">Steam</span> dado</li>
+  </ul>
+  <p> </p>
+  <h4>Sintaxis:</h4>
+  <p class="code">steam_get_user_persona_name(steamID);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argumento</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">steamID</span></td>
+        <td>El ID único de <span class="notranslate">Steam</span> para un usuario.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p class="code">request = steam_get_user_persona_name(global.UGC_UserID);</p>
+  <p>El código anterior solicitará el nombre de usuario del ID de usuario almacenado en la variable global &quot;UGC_UserID&quot;, almacenando el valor devuelto en una variable para su análisis en el evento asíncrono.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Atrás: <a href="Steam_API.htm">General <span class="notranslate">Steam</span> API</a></div>
+        <div style="float:right">Siguiente: <a href="steam_is_user_logged_on.htm"><span class="notranslate">steam_is_user_logged_on</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_get_user_persona_name
+-->
+  <!-- TAGS
+steam_get_user_persona_name
+-->
+</body>
+</html>

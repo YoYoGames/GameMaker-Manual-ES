@@ -16,40 +16,40 @@
 </head>
 <body>
   <h1>video_draw</h1>
-  <p>This function draws the current frame of the <a href="video_open.htm">opened video</a> to a surface (or two surfaces). It returns the surface(s) as part of its return array, which can be <a href="../Surfaces/draw_surface.htm">drawn manually</a>.</p>
-  <p>The function also returns data regarding the status of the video, which is expanded upon below.</p>
-  <p>Ensure that this is only called after a <span class="inline"><a href="video_open.htm">video_open()</a></span> call but before a <span class="inline"><a href="video_close.htm">video_close()</a></span> call, otherwise it will not do anything (as there will not be a video loaded).</p>
-  <h2>Return Data</h2>
-  <p>The function will return an array, the first element (<span class="inline2">[0]</span>) of which will be a real value. This value tells the status of the video, and will be:</p>
+  <p>Esta función dibuja el fotograma actual del <a href="video_open.htm">vídeo</a> abierto en una superficie (o dos superficies). Devuelve la(s) superficie(s) como parte de su matriz de retorno, que puede ser <a href="../Surfaces/draw_surface.htm">dibujada manualmente</a>.</p>
+  <p>La función también devuelve datos sobre el estado del vídeo, que se amplían a continuación.</p>
+  <p>Asegúrese de que esto sólo se llama después de una llamada a <span class="inline"><a href="video_open.htm">video_open()</a></span> pero antes de una llamada a <span class="inline"><a href="video_close.htm">video_close()</a></span>, de lo contrario no hará nada (ya que no habrá un vídeo cargado).</p>
+  <h2>Datos de retorno</h2>
+  <p>La función devolverá un array, cuyo primer elemento (<span class="inline2">[0]</span>) será un valor real. Este valor indica el estado del vídeo, y será:</p>
   <ul class="colour">
-    <li><strong>0</strong>, if the video is playing without any issues</li>
-    <li><strong>-1</strong>, if there was an error</li>
-    <li>On some platforms, <strong>-2</strong>, if the video finished playing (at which point it can be removed from memory with a <span class="inline"><a href="video_close.htm">video_close()</a></span> call)
+    <li><strong>0</strong>, si el vídeo se reproduce sin problemas</li>
+    <li><strong>-1</strong>, si hubo un error</li>
+    <li>En algunas plataformas, <strong>-2</strong>, si el vídeo ha terminado de reproducirse (momento en el que se puede eliminar de la memoria con una llamada a <span class="inline"><a href="video_close.htm">video_close()</a></span> )
       <ul>
-        <li>It&#39;s recommended to use the <a data-xref="{text}" href="Videos.htm#h">Async Callbacks</a> instead to know when a video ends</li>
+        <li>Se recomienda usar los <a data-xref="{text}" href="Videos.htm#h">Callbacks Async</a> en su lugar para saber cuando un video termina</li>
       </ul>
     </li>
   </ul>
-  <p>When this status value is <strong>0</strong>, the array will contain more data, which will depend on the format of the video. You can know the video format by calling <span class="inline"><a href="video_get_format.htm">video_get_format()</a></span>.</p>
-  <h2>RGBA Videos</h2>
-  <p><span>For RGBA videos, the position <span class="inline2">[1]</span> will contain the surface where the video frame was drawn. You can get this surface and <a href="../Surfaces/draw_surface.htm">draw it</a> manually.</span></p>
-  <h2>YUV Videos</h2>
-  <p><span>Some platforms (especially consoles) use the YUV colour format for videos, which makes use of two surfaces. In that case the array will have positions <span class="inline2">[1]</span> and <span class="inline2">[2]</span> with two surfaces:</span></p>
+  <p>Cuando este valor de estado es <strong>0</strong>, el array contendrá más datos, que dependerán del formato del vídeo. Puedes conocer el formato del vídeo llamando a <span class="inline"><a href="video_get_format.htm">video_get_format()</a></span>.</p>
+  <h2>Vídeos RGBA</h2>
+  <p><span>Para los vídeos RGBA, la posición <span class="inline2">[1</span> ] contendrá la superficie en la que se dibujó el fotograma de vídeo. Puedes obtener esta superficie y <a href="../Surfaces/draw_surface.htm">dibujarla</a> manualmente.</span></p>
+  <h2>Vídeos YUV</h2>
+  <p><span>Algunas plataformas (especialmente las consolas) utilizan el formato de color YUV para los vídeos, que hace uso de dos superficies. En ese caso, la matriz tendrá las posiciones <span class="inline2">[1]</span> y <span class="inline2">[2]</span> con dos superficies:</span></p>
   <ul class="colour">
-    <li><span><span class="inline2">[1]</span> is the main video surface in black and white</span></li>
-    <li><span><span class="inline2">[2]</span> is the chroma surface that contains all the colour data</span></li>
+    <li><span>[<span class="inline2">1</span> ] es la principal superficie de vídeo en blanco y negro</span></li>
+    <li><span>[<span class="inline2">2</span> ] es la superficie de croma que contiene todos los datos de color</span></li>
   </ul>
-  <p>Both these surfaces are then combined using a YUV shader before being used to texture a custom quad, which will draw the video to the screen.</p>
-  <p>Read <a data-xref="{title}" href="YUV_Videos.htm">YUV Videos</a> for steps on drawing these two surfaces using a shader.</p>
-  <p>For the specific implementation details for a particular console, please refer to its documentation on the <a href="https://help.yoyogames.com/hc/en-us/">YoYo Games Helpdesk</a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Ambas superficies se combinan entonces utilizando un YUV <span class="notranslate">shader</span> antes de ser utilizadas para texturizar un quad personalizado, que dibujará el vídeo en la pantalla.</p>
+  <p>Lee <a data-xref="{title}" href="YUV_Videos.htm">los vídeos de YUV</a> para ver los pasos para dibujar estas dos superficies utilizando un <span class="notranslate">shader</span>.</p>
+  <p>Para conocer los detalles de implementación específicos de una consola en particular, consulta su documentación en el <a href="https://help.yoyogames.com/hc/en-us/">servicio de ayuda de YoYo Games</a>.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">video_draw();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Array"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">var _data = video_draw();<br />
     var _status = _data[0];<br />
     <br />
@@ -60,18 +60,18 @@
         draw_surface(_surface, x, y);<br />
     }
   </p>
-  <p>The above code calls <span class="inline">video_draw()</span>, and checks if the returned status is 0, meaning the video is playing. In that case it gets the surface ID and draws it at the instance&#39;s position. This will only work for RGBA videos.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior llama a <span class="inline">video_draw()</span>, y comprueba si el estado devuelto es 0, lo que significa que el vídeo se está reproduciendo. En ese caso, obtiene el ID de la superficie y la dibuja en la posición de la instancia. Esto sólo funcionará para los vídeos RGBA.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Videos.htm">Video Playback</a></div>
-        <div>Next: <a data-xref="{title}" href="YUV_Videos.htm">YUV Videos</a></div>
+        <div>Atrás: <a data-xref="{title}" href="Videos.htm">Reproducción de vídeo</a></div>
+        <div>Siguiente: <a data-xref="{title}" href="YUV_Videos.htm">Vídeos YUV</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 video_draw

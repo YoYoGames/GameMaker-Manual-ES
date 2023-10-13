@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>application_surface_enable</title>
+  <title>aplicación_superficie_habilitada</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for application_surface_enable" />
   <meta name="rh-index-keywords" content="application_surface_enable" />
@@ -14,33 +14,30 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>application_surface_enable</h1>
-  <p>With this function you can enable or disable the application surface. By default the application surface is enabled and all drawing for the Draw events will be done to that and the surface drawn to the screen. However on some older devices and specific chipsets this may result in poorer performance. In those cases you can switch off drawing to the application surface and all Draw event drawing will then be done directly to the screen buffer.</p>
-  <p>You can use this function to enable or disable the application surface at any time in your game, but you should note that it requires at least one frame (step) for the changes to take effect. Switching it off <i><b>will switch off all aspect ratio correction</b></i>, as set in the <i>Game Options</i> for the target platform. This means that you should have some method in place that scales the game to the required device, window or screen dimensions. If you switch it back on again, then the <i>Game Options</i> will take effect again the next step.</p>
-  <p>It is recommended that you use this function carefully as it will impact on how everything is drawn to the screen. In general you would want to have it as an option in a menu of your game, or call it only once at the start of your game and write your code around whether you have it enabled or disabled.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> Disabling the application surface will disable all <a data-xref="{title}" href="../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">Filters and Effects</a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>aplicación_superficie_habilitada</h1>
+  <p>Con esta función puedes habilitar o deshabilitar la superficie de la aplicación. Por defecto, la superficie de la aplicación está habilitada y todo el dibujo de los eventos de Dibujo se hará en ella y la superficie se dibujará en la pantalla. Sin embargo, en algunos dispositivos antiguos y conjuntos de chips específicos, esto puede dar lugar a un menor rendimiento. En esos casos puedes <span class="notranslate">switch</span> desactivar el dibujo en la superficie de la aplicación y todo el dibujo de los eventos Draw se hará directamente en la pantalla <span class="notranslate">buffer</span>.</p>
+  <p>Puedes utilizar esta función para activar o desactivar la superficie de aplicación en cualquier momento de tu juego, pero debes tener en cuenta que requiere al menos un fotograma (paso) para que los cambios surtan efecto. Desactivación <i><b> <span class="notranslate">switch</span> desactivará toda la corrección de la relación de aspecto</b></i>La superficie de aplicación es una de las funciones más importantes del juego, tal y como se establece en <i>las opciones de juego</i> de la plataforma de destino. Esto significa que debes tener algún método en marcha que escale el juego a las dimensiones del dispositivo, ventana o pantalla requerida. Si lo vuelves a activar en <span class="notranslate">switch</span>, las Opciones de <i>Juego</i> volverán a tener efecto en el siguiente paso.</p>
+  <p>Se recomienda utilizar esta función con cuidado, ya que tendrá un impacto en cómo se dibuja todo en la pantalla. En general, es recomendable tenerla como una opción en un menú de su juego, o llamarla sólo una vez al inicio de su juego y escribir su código en torno a si lo tiene activado o desactivado.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">application_surface_enable(enable);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
+        <th>Argumento</th><th>Tipo</th>
+        <th>Descripción</th>
+     </tr>
       <tr>
-        <td>enable</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Set to enable (<span class="inline">true</span>) or disable (<span class="inline">false</span>) the application surface.</td>
-      </tr>
+        <td><span class="notranslate">enable</span></td><td><span data-keyref="Type_Bool"></span></td>
+        <td><span class="notranslate">Set to enable (<span class="inline">true</span>) o desactivar (<span class="inline">false</span>) la superficie de aplicación.</td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code"><span data-keyref="Type_Void"></span></p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">if keyboard_check_pressed(vk_space)<br />
     {<br />
         if application_surface_is_enabled()<br />
@@ -52,18 +49,18 @@
             application_surface_enable(true);<br />
         }<br />
     }</p>
-  <p>The above code check for a key press and the toggle the application surface on or off depending on its state (like in an options menu).</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior comprueba la pulsación de una tecla y activa o desactiva la superficie de la aplicación en función de su estado (como en un menú de opciones).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Surfaces.htm">Surfaces</a></div>
-        <div style="float:right">Next: <a href="application_surface_is_enabled.htm">application_surface_is_enabled</a></div>
+        <div style="float:left">Atrás: <a href="Surfaces.htm">Superficies</a></div>
+        <div style="float:right">Siguiente: <a href="application_surface_is_enabled.htm"><span class="notranslate">application_surface_is_enabled</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 application_surface_enable

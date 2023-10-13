@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>sprite_save_strip</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function sprite_save_strip" />
   <meta name="rh-index-keywords" content="sprite_save_strip" />
@@ -15,35 +15,35 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>sprite_save_strip</h1>
-  <p>This function will create a <a href="../../../../../The_Asset_Editors/Sprite_Properties/Sprite_Strips.htm">strip image</a> from all the sub-images in a sprite, saving it to disc with the specified filename. The sprite must have been <a href="sprite_add.htm">added</a> at runtime (you cannot save sprites added through the IDE) and the file must be saved with a <span class="inline">*.png</span> extension.</p>
-  <div data-conref="../../../../../assets/snippets/Note_File_Handling_Limitations.hts"> </div>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Esta función creará una tira de imágenes a partir de todas las subimágenes de un <span class="notranslate">sprite</span>, guardándola en el disco con el nombre de archivo especificado. El <span class="notranslate">sprite</span> debe haber sido <a href="sprite_add.htm">añadido</a> en <span class="notranslate">runtime</span> (no se puede guardar <span class="notranslate">sprites</span> añadido a través del <span class="notranslate">IDE</span>) y el archivo debe ser guardado con un <span class="inline">*.png</span> <span class="notranslate">extension</span>.</p>
+  <p class="note"><b>NOTA</b>: Dependiendo de la plataforma de destino que se elija, usted está limitado en cuanto a dónde puede guardar y cargar archivos. Consulte la sección <a href="../../../../../Additional_Information/The_File_System.htm">Manejo de archivos</a> para obtener más información.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">sprite_save_strip(ind, filename);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>ind</td>
-        <td><span data-keyref="Type_Asset_Sprite"><a href="The_Asset_Editors/Sprites.htm" target="_blank">Sprite Asset</a></span></td>
-        <td>The index of the sprite to save.</td>
+        <td><span class="notranslate">ind</span></td>
+        <td><span data-keyref="Type_Asset_Sprite">Activo Sprite</span></td>
+        <td><span class="notranslate">The index of the sprite to save.</span></td>
       </tr>
       <tr>
-        <td>filename</td>
-        <td><span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The filename for the saved sprite strip.</td>
+        <td><span class="notranslate">filename</span></td>
+        <td><span data-keyref="Type_String">Cadena</span></td>
+        <td><span class="notranslate">The filename for the saved sprite strip.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns</h4>
+  <p> </p>
+  <h4>Devuelve</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">var spr, i;<br />
     spr = sprite_create_from_surface(0, 0, 32, 32, true, true, 16, 16);<br />
     <br />
@@ -55,18 +55,18 @@
     sprite_save_strip(spr, &quot;Custom_Player_Sprite.png&quot;);<br />
     sprite_delete(spr);
   </p>
-  <p>The above code creates a sprite from the surface indexed in the variable &quot;surf&quot;, assigning its index to the local variable &quot;spr_Custom&quot;, and then uses a <span class="inline">for</span> loop to move across the surface and capture various sections which are added into the sprite as sub-images. this new sprite is then saved as a png strip before being removed from memory.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior crea un <span class="notranslate">sprite</span> a partir de la superficie indexada en la variable &quot;surf&quot;, asignando su índice a la variable local &quot;spr_Custom&quot;, y luego utiliza un <span class="inline">for</span> <span class="notranslate">loop</span> para desplazarse por la superficie y capturar varias secciones que se añaden en el <span class="notranslate">sprite</span> como subimágenes. este nuevo <span class="notranslate">sprite</span> se guarda entonces como una tira de png antes de ser eliminado de la memoria.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Manipulation.htm">Sprite Manipulation</a></div>
-        <div style="float:right">Next: <a href="sprite_flush.htm">sprite_flush</a></div>
+        <div style="float:left">Atrás: <a href="Sprite_Manipulation.htm">Manipulación de sprites</a></div>
+        <div style="float:right">Siguiente: <a href="sprite_flush.htm"><span class="notranslate">sprite_flush</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_save_strip

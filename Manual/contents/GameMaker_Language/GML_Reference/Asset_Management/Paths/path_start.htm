@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>path_start</title>
+  <title>inicio_de_la_caminata</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function path_start" />
   <meta name="rh-index-keywords" content="path_start,path_action_stop,path_action_restart,path_action_continue,path_action_reverse" />
@@ -14,60 +14,60 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>path_start</h1>
-  <p>A path is created from a series of defining points that are linked together and then used to plan the movements of an instance. They can be created with code, <i>or</i> in the Path Editor and they are assigned to an instance to use in the game. You would then use this function to tell your instance which path to follow, what speed to follow the path (measured in pixels per step), how to behave when it reaches the end of the path, and whether to follow the <i>absolute</i> or <i>relative</i> path position. This last part means that it either starts and follows the path exactly as you designed and placed it in the <a href="../../../../The_Asset_Editors/Paths.htm">Path Editor</a> (absolute), or it starts and follows the path from the position at which the instance was created (relative).</p>
-  <p><img alt="Relative or Absolute path examples" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Paths/path_relative_image.png" />As you can see in the above image, the two instances are following the same path started with <span class="inline">path_start()</span>, but one of the instances is following the absolute path while the other is following the relative path. It should be noted that when relative is set to false (absolute) the instance will &quot;jump&quot; to the start of the path no matter where in the room it is placed.</p>
-  <p>The constants used to define the behaviour of the instance when it reaches the end of the path are given <a href="Path_Variables/path_endaction.htm">on this page</a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>inicio_de_la_caminata</h1>
+  <p>Un <span class="notranslate">path</span> se crea a partir de una serie de puntos de definición que se enlazan entre sí y que luego se utilizan para planificar los movimientos de una instancia. Se pueden crear con código, <i>o</i> en el Editor <span class="notranslate">Path</span> y se asignan a una instancia para que los utilice en el juego. Esta función sirve para indicar a la instancia qué <span class="notranslate">path</span> debe seguir, a qué velocidad debe seguir el <span class="notranslate">path</span> (medida en píxeles por paso), cómo debe comportarse cuando llegue al final del <span class="notranslate">path</span>, y si debe seguir la posición <i>absoluta</i> o <i>relativa</i> del <span class="notranslate">path</span>. Esta última parte significa que, o bien comienza y sigue el <span class="notranslate">path</span> exactamente como usted lo diseñó y colocó en el <a href="../../../../The_Asset_Editors/Paths.htm">Path Editor</a> (absoluto), o bien comienza y sigue el <span class="notranslate">path</span> desde la posición en la que se creó la instancia (relativo).</p>
+  <p><img>Como puede ver en la imagen anterior, las dos instancias están siguiendo el mismo <span class="notranslate">path</span> iniciado con <span class="inline">path_start()</span>, pero una de las instancias está siguiendo el <span class="notranslate">path</span> absoluto mientras que la otra está siguiendo el <span class="notranslate">path</span> relativo. Hay que tener en cuenta que cuando relative está configurado como falso (absoluto) la instancia &quot;saltará&quot; al inicio de <span class="notranslate">path</span> sin importar en qué parte del <span class="notranslate">room</span> se encuentre.</p>
+  <p>Las constantes utilizadas para definir el comportamiento de la instancia cuando llega al final de la <span class="notranslate">path</span> se dan <a href="Path_Variables/path_endaction.htm">en esta página</a>.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">path_start(path, speed, endaction, absolute);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>path</td>
-        <td><span data-keyref="Type_Asset_Path"><a data-rhwidget="HyperlinkPopover" href="../../../../../The_Asset_Editors/Paths.htm">Path Asset</a></span></td>
-        <td>The path index to start.</td>
+        <td><span class="notranslate">path</span></td>
+        <td><span data-keyref="Type_Asset_Path"><a data-rhwidget="HyperlinkPopover" href="../../../../../The_Asset_Editors/Paths.htm">Activo de la ruta</a></span></td>
+        <td><span class="notranslate">The path index to start.</span></td>
       </tr>
       <tr>
-        <td>speed</td>
+        <td><span class="notranslate">speed</span></td>
         <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">Real</a></span></td>
-        <td>The speed of which to follow the path in pixels per step, negative meaning going backwards.</td>
+        <td><span class="notranslate">The speed of which to follow the path in pixels per step, negative meaning going backwards.</span></td>
       </tr>
       <tr>
-        <td>endaction</td>
-        <td><span data-keyref="Type_Constant_Path_End_Action"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Paths/Path_Variables/path_endaction.htm">Path End Action Constant</a></span></td>
-        <td>What to do when the end of the path is reached (see the constants listed above).</td>
+        <td><span class="notranslate">endaction</span></td>
+        <td><span data-keyref="Type_Constant_Path_End_Action"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Paths/Path_Variables/path_endaction.htm">Constante de acción de fin de trayecto</a></span></td>
+        <td><span class="notranslate">What to do when the end of the path is reached (see the constants listed above).</span></td>
       </tr>
       <tr>
-        <td>absolute</td>
-        <td><span data-keyref="Type_Bool"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></td>
-        <td>Whether the calling instance should follow the absolute path as it is in the editor (true) or a relative path to its current position (false).</td>
+        <td><span class="notranslate">absolute</span></td>
+        <td><span data-keyref="Type_Bool"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Booleano</a></span></td>
+        <td><span class="notranslate">Whether the calling instance should follow the absolute path as it is in the editor (true) or a relative path to its current position (false).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">N/A</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">path_start(path, 4, path_action_reverse, 0);</p>
-  <p>This will make the calling instance follow the path indexed in the variable &quot;path&quot; at a speed of 4 pixels per step. It will follow the path relative to its own position, and when it reaches the end it will reverse direction and go back the way it came.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Esto hará que la instancia que llama siga el <span class="notranslate">path</span> indexado en la variable &quot;path&quot; a una velocidad de 4 píxeles por paso. Seguirá el <span class="notranslate">path</span> en relación con su propia posición, y cuando llegue al final invertirá la dirección y volverá por donde ha venido.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Paths.htm">Paths</a></div>
-        <div style="float:right">Next: <a href="path_end.htm">path_end</a></div>
+        <div style="float:left">Atrás: <a href="Paths.htm">Caminos</a></div>
+        <div style="float:right">Siguiente: <a href="path_end.htm"><span class="notranslate">path_end</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 path_start

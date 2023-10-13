@@ -6,7 +6,7 @@
   <title>physics_joint_distance_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_joint_distance_create" />
   <meta name="rh-index-keywords" content="physics_joint_distance_create" />
@@ -16,60 +16,60 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>physics_joint_distance_create</h1>
-  <p>One of the simplest joint is a distance joint which says that the distance between two points on two instances must be constant. When you specify a distance joint the two instances should already be created and have a fixture assigned, then you define the two anchor points in room coordinates. The first anchor point is connected to instance 1, the second anchor point is connected to instance 2 and the distance between these points imply the length of the distance constrain. The image below shows how this works:</p>
-  <p><img alt="Distance joint illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/direction_joint_image.png" />As you can see, the anchor points are specified as room coordinates so care must be taken when defining them, especially if the instances are being created at the same time as the joints rather than being placed in the room through the room editor. You should also realise that the joints are created independently of the size of the sprite of the instances or the fixtures they have attached. So, if you create a distance joint somewhere other than the origin of the instance, it is still valid and will constrain the two instances relative to the position at which it was created. If you set the &quot;col&quot; value to <span class="inline">true</span> then the two instances can interact and collide with each other but <i>only</i> if they have collision events, however if it is set to <span class="inline">false</span>, they will not collide no matter what.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Una de las uniones más sencillas es la de distancia, que establece que la distancia entre dos puntos de dos instancias debe ser constante. Cuando se especifica una articulación de distancia, las dos instancias deben estar ya creadas y tener una fijación asignada, entonces se definen los dos puntos de anclaje en coordenadas <span class="notranslate">room</span>. El primer punto de anclaje se conecta a la instancia 1, el segundo punto de anclaje se conecta a la instancia 2 y la distancia entre estos puntos implica la longitud de la restricción de distancia. La imagen siguiente muestra cómo funciona esto:</p>
+  <p><img>Como puede ver, los puntos de anclaje se especifican como coordenadas de <span class="notranslate">room</span>, por lo que debe tener cuidado al definirlos, especialmente si las instancias se están creando al mismo tiempo que las articulaciones en lugar de colocarse en el <span class="notranslate">room</span> a través del editor <span class="notranslate">room</span>. También debe tener en cuenta que las articulaciones se crean independientemente del tamaño de <span class="notranslate">sprite</span> de las instancias o de las fijaciones que tienen adjuntas. Por lo tanto, si crea una junta de distancia en algún lugar distinto al origen de la instancia, seguirá siendo válida y limitará las dos instancias en relación con la posición en la que fue creada. Si estableces el valor de &quot;col&quot; en <span class="inline">true</span> entonces las dos instancias pueden interactuar y colisionar entre sí pero <i>sólo</i> si tienen eventos de colisión, sin embargo si se establece en <span class="inline">false</span>, no colisionarán pase lo que pase.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">physics_joint_distance_create(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, col)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>inst1</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The first instance to connect with the joint</td>
+        <td><span class="notranslate">inst1</span></td>
+        <td><span data-keyref="Type_ID_Instance">ID de la instancia</span></td>
+        <td><span class="notranslate">The first instance to connect with the joint</span></td>
       </tr>
       <tr>
-        <td>inst2</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The second instance to connect with the joint</td>
+        <td><span class="notranslate">inst2</span></td>
+        <td><span data-keyref="Type_ID_Instance">ID de la instancia</span></td>
+        <td><span class="notranslate">The second instance to connect with the joint</span></td>
       </tr>
       <tr>
-        <td>w_anchor1_x</td>
+        <td><span class="notranslate">w_anchor1_x</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The first x coordinate for the joint, within the game world</td>
+        <td><span class="notranslate">The first x coordinate for the joint, within the game world</span></td>
       </tr>
       <tr>
-        <td>w_anchor1_y</td>
+        <td><span class="notranslate">w_anchor1_y</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The first y coordinate for the joint, within the game world</td>
+        <td><span class="notranslate">The first y coordinate for the joint, within the game world</span></td>
       </tr>
       <tr>
-        <td>w_anchor2_x</td>
+        <td><span class="notranslate">w_anchor2_x</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The second x coordinate for the joint, within the game world</td>
+        <td><span class="notranslate">The second x coordinate for the joint, within the game world</span></td>
       </tr>
       <tr>
-        <td>w_anchor2_y</td>
+        <td><span class="notranslate">w_anchor2_y</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>the second y coordinate for the joint, within the game world</td>
+        <td><span class="notranslate">the second y coordinate for the joint, within the game world</span></td>
       </tr>
       <tr>
-        <td>col</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether the two instances can collide (true) or not (false)</td>
+        <td><span class="notranslate">col</span></td>
+        <td><span data-keyref="Type_Bool">Booleano</span></td>
+        <td><span class="notranslate">Whether the two instances can collide (true) or not (false)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_ID_Physics_Joint">Physics Joint ID</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">var mainFixture, o_id;<br />
     mainFixture = physics_fixture_create();<br />
     physics_fixture_set_circle_shape(mainFixture, sprite_get_width(sprite_index) / 2);<br />
@@ -78,18 +78,18 @@
     physics_fixture_bind(mainFixture, o_id);<br />
     physics_joint_distance_create(id, o_id, x + 50, y, o_id.x - 50, o_id.y, 0);<br />
     physics_fixture_delete(mainFixture);</p>
-  <p>The above code creates and defines a new fixture and then creates an instance of &quot;obj_Rudder&quot;. The fixture is then assigned to the instance that is running the code as well as the newly created one and a joint is created between them. Finally the fixture is deleted as it is no longer needed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior crea y define un nuevo fixture y luego crea una instancia de &quot;obj_Rudder&quot;. A continuación, se asigna el fixture a la instancia que está ejecutando el código, así como a la recién creada, y se crea una unión entre ellas. Por último, se elimina el fixture porque ya no es necesario.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Joints.htm">Joints</a></div>
-        <div style="float:right">Next: <a href="physics_joint_revolute_create.htm">physics_joint_revolute_create</a></div>
+        <div style="float:left">Atrás: <a href="Joints.htm">Articulaciones</a></div>
+        <div style="float:right">Siguiente: <a href="physics_joint_revolute_create.htm"><span class="notranslate">physics_joint_revolute_create</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_distance_create

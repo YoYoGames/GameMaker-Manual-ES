@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>achievement_get_pic</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for achievement_get_pic" />
+  <meta name="rh-index-keywords" content="achievement_get_pic,achievement_pic_loaded" />
+  <meta name="search-keywords" content="achievement_get_pic,achievement_pic_loaded" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>achievement_get_pic</h1>
+  <p>Esta función enviará una solicitud a la <span class="notranslate">server</span> para la imagen de un jugador o de un amigo y desencadenará una llamada de retorno <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Social Asynchronous Event</a> que contiene el <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a>    map poblado con los pares clave/valor relevantes. La clave <i>id</i> de este mapa <tt>DS</tt> se utiliza para identificar la devolución de llamada correcta (puede haber más de una función de activación para cualquier evento asíncrono dado), y se emparejará con la <b>constante</b> <tt>achievement_pic_loaded</tt> así como con una serie de otros pares clave/valor. El contenido exacto del mapa se muestra a continuación:</p>
+  <p class="note"><b>NOTA</b>: Esta función es sólo para <b>iOS</b>.</p>
+  <ul class="colour">
+    <li>&quot;<b>id</b>&quot; - Para esta función debe ser <tt>achievement_pic_loaded</tt></li>
+    <li>&quot;<b>playerid</b>&quot; - El id del jugador o amigo del que estamos recibiendo la imagen.</li>
+    <li>&quot;<b>spriteid</b>&quot; - El id de <span class="notranslate">sprite</span> para la imagen que puede ser usado para dibujarla en pantalla usando cualquiera de las <a href="../../Drawing/Sprites_And_Tiles/Sprites_And_Tiles.htm">funciones de dibujo <span class="notranslate">sprite</span> </a></li>
+  </ul>
+  <p class="note"><b>ATENCIÓN!</b> Esta función crea <span class="notranslate">sprites</span> y como tal, sus ids deben ser almacenados en variables y luego eliminados de la memoria usando la función <span style="font-size:1px;"><a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_delete.htm"><tt style="font-size: 14px">sprite_delete()</tt></a></span>    de lo contrario, el uso repetido dará lugar a una fuga de memoria que eventualmente ralentizará o bloqueará su juego.</p>
+  <p> </p>
+  <h4><b>Sintaxis:</b></h4>
+  <p class="code">achievement_get_pic(char)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argumento</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">char</span></td>
+        <td>La identificación de la persona de la que se quiere obtener la imagen (ya sea de una lista de amigos o de una tabla de clasificación)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Ejemplo ampliado:</h4>
+  <p>El siguiente código se llamaría después de haber obtenido una lista de amigos o una lista de tablas de clasificación utilizando <a href="achievement_load_friends.htm"><tt>achievement_load_friends()</tt></a> o <a href="achievement_load_leaderboard.htm"><tt>achievement_load_leaderboard()</tt></a>.
+    Esas funciones devolverán valores de &quot;id&quot; únicos para cada persona, que luego se utilizan en la función para recuperar la imagen de perfil para ellos:</p>
+  <p class="code">achievement_get_pic(global.player_id[0]);</p>
+  <p>Esto enviará una solicitud para la imagen asociada con el id del jugador almacenado en el array global y generará un callback asíncrono con el mapa especial <tt>async_load</tt> DS que contiene los siguientes datos:</p>
+  <p class="code">var ident = ds_map_find_value(async_load, &quot;id&quot;);<br/> if ident == achievement_pic_loaded<br/>     {
+    <br/>     var picid = ds_map_find_value(async_load, &quot;playerid&quot;);<br/>     var spriteid = ds_map_find_value(async_load, &quot;spriteid&quot;);<br/>     if global.playerid[0] == picid)<br/>         {
+    <br/>         global.playerpic[0] = spriteid;<br/>         }
+    <br/>     }
+  </p>
+  <p>El código anterior comprueba el <tt>Mapa DS</tt> devuelto en el <b>Evento Social Asíncrono</b> y si su &quot;id&quot; coincide con la constante que se está comprobando, entonces comprueba que el id asociado a la imagen es el mismo que se está solicitando y si
+    lo es, establece otro array global para mantener el id único de la imagen (que puede ser usado para dibujar la imagen como <span class="notranslate">sprite</span>).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Atrás: <a href="Achievements_And_Leaderboards.htm">Logros y tablas de clasificación</a></div>
+        <div style="float:right">Siguiente: <a href="achievement_load_friends.htm"><span class="notranslate">achievement_load_friends</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
+  </div>
+  <!-- KEYWORDS
+achievement_get_pic
+achievement_pic_loaded
+-->
+  <!-- TAGS
+achievement_get_pic
+-->
+</body>
+</html>

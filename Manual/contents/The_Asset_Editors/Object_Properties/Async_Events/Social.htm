@@ -8,46 +8,51 @@
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing the Social async event." />
   <meta name="rh-index-keywords" content="Objects - Async Social Event" />
-  <meta name="search-keywords" content="Social,ev_async_social" />
+  <meta name="search-keywords" content="Social,ev_social" />
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Social</span></h1>
-  <p><img alt="Social Event" class="center" src="../../../assets/Images/Asset_Editors/Async_Social.png" />This event can only be triggered by the <a class="glossterm" data-glossterm="callback" href="#">callback</a><span class="glossextra">s</span> from various specific <strong>Social Functions</strong> and <strong>Xbox Live Functions</strong> and will return a <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS Map</a> stored in the variable <span class="inline2"><a data-xref="{title}" href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a></span>, containing different key/value pairs depending on the callback from the function that has triggered the event.</p>
-  <p>This event may also be triggered by <a href="../../../GameMaker_Language/GML_Reference/Drawing/Videos/Videos.htm">Video Playback</a>.</p>
-  <p>The DS map will contain a number of keys, the most important of which is the <span class="inline2">&quot;id&quot;</span> key. This will return a constant which can then be checked in code to determine which of the many callbacks the event has received. Once you have parsed this key and compared the value returned with the available constants, you can then continue to extract the rest of the information from the map.</p>
-  <p>The function pages on <a>Achievements and Leaderboards</a> in the Reference section detail the functions and callbacks as well as the constants used to trigger this event, but there are also certain circumstances in which it will be triggered without a function call from the game that is running:</p>
+  <h1>Social</h1>
+  <p><img>Este evento sólo puede ser activado por los <a class="glossterm" data-glossterm="llamada de retorno" href="#">callbacks</a>de varias <strong>Funciones Sociales</strong> específicas y <strong>Funciones UWP Xbox Live</strong> y devolverá un <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">Mapa DS</a> almacenado en la variable <a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>que contiene diferentes pares clave/valor dependiendo de la llamada de retorno de la función que ha activado el evento.</p>
+  <p>Este evento también puede ser activado por la <a href="../../../GameMaker_Language/GML_Reference/Drawing/Videos/Videos.htm">reproducción de vídeo</a>.</p>
+  <p>El mapa DS contendrá una serie de claves, la más importante de las cuales es la clave &quot;<span class="inline">id</span>&quot;. Ésta devolverá una constante que puede ser comprobada en el código para determinar cuál de las muchas devoluciones de llamada ha recibido el evento. Una vez que hayas analizado esta clave y comparado el valor devuelto con las constantes disponibles, puedes continuar extrayendo el resto de la información del mapa.</p>
+  <p>Las páginas de funciones sobre <a>Logros y Tablas de Clasificación</a> en la sección de Referencia detallan las funciones y las devoluciones de llamada, así como las constantes utilizadas para desencadenar este evento, pero también hay ciertas circunstancias en las que se desencadenará sin una llamada a la función desde el juego que se está ejecutando:</p>
   <ul class="dropspotlist">
-    <li class="dropspot">when your game is launched from the OS dashboard</li>
-    <li class="dropspot">when you complete a challenge</li>
-    <li class="dropspot">when another player completes a challenge</li>
-    <li class="dropspot">when the game is started from the OS dashboard by selecting a challenge</li>
+    <li class="dropspot">cuando el juego se lanza desde el tablero del sistema operativo</li>
+    <li class="dropspot">al completar un reto</li>
+    <li class="dropspot">cuando otro jugador completa un reto</li>
+    <li class="dropspot">cuando se inicia el juego desde el tablero del sistema operativo seleccionando un reto</li>
   </ul>
-  <p>Any of the above callbacks will trigger the Social Event and an <span class="inline2"><a data-xref="{title}" href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a></span> map will be generated with the following details (note that there is a different &quot;<span class="inline">id</span>&quot; key value to define each of the different reasons that the event was called, but all other contents of the map are the same):</p>
+  <p>Cualquiera de los callbacks anteriores activará el Evento Social y se generará un mapa <span class="inline">async_load</span> con los siguientes detalles (nótese que hay un valor clave diferente &quot;<span class="inline">id</span>&quot; para definir cada una de las diferentes razones por las que se llamó al evento, pero todos los demás contenidos del mapa son los mismos):</p>
   <ul class="dropspotlist">
-    <li class="dropspot">&quot;<span class="inline">id</span>&quot; - The value of this key will depend on the type of callback triggering the event (mostly used by extensions).</li>
-    <li class="dropspot">&quot;<span class="inline">playerid</span>&quot; - The player id for the challenge.</li>
-    <li class="dropspot">&quot;<span class="inline">issuerid</span>&quot; - The id of the person that issued the challenge.</li>
-    <li class="dropspot">&quot;<span class="inline">state</span>&quot; - The state of the challenge, which will have a value of 0 - 3 (as a string) for invalid, pending, completed or declined.</li>
-    <li class="dropspot">&quot;<span class="inline">message</span>&quot; - The text message for challenge.</li>
-    <li class="dropspot">&quot;<span class="inline">issueddate</span>&quot; - The issue date for challenge</li>
-    <li class="dropspot">&quot;<span class="inline">completeddate</span>&quot; - The completion date for challenge.</li>
-    <li class="dropspot">&quot;<span class="inline">type</span>&quot; - The type of challenge given.</li>
-    <li class="dropspot">&quot;<span class="inline">identifier</span>&quot; - The identifying string for the challenge.</li>
-    <li class="dropspot">&quot;<span class="inline">score</span>&quot; - The score tied in with the challenge.</li>
+    <li class="dropspot">&quot;<span class="inline">id</span>&quot; - El valor de esta clave dependerá del tipo de llamada de retorno que desencadene el evento (principalmente utilizado por <span class="notranslate">extensions</span>).</li>
+    <li class="dropspot">&quot;<span class="inline">playerid</span>&quot; - La identificación del jugador para el desafío.</li>
+    <li class="dropspot">&quot;<span class="inline">issuerid</span>&quot; - La identificación de la persona que emitió el desafío.</li>
+    <li class="dropspot">&quot;<span class="inline">state</span>&quot; - El estado del desafío, que tendrá un valor de 0 a 3 (como <span class="notranslate">string</span>) para inválido, pendiente, completado o rechazado.</li>
+    <li class="dropspot">&quot;<span class="inline">message</span>&quot; - El mensaje de texto para el desafío.</li>
+    <li class="dropspot">&quot;<span class="inline">issueddate</span>&quot; - La fecha de emisión de la impugnación</li>
+    <li class="dropspot">&quot;<span class="inline">completeddate</span>&quot; - La fecha de finalización del desafío.</li>
+    <li class="dropspot">&quot;<span class="inline">type</span>&quot; - El tipo de desafío planteado.</li>
+    <li class="dropspot">&quot;<span class="inline">identifier</span>&quot; - El identificador <span class="notranslate">string</span> para el desafío.</li>
+    <li class="dropspot">&quot;<span class="inline">score</span>&quot; - El marcador empatado con el desafío.</li>
   </ul>
-  <p> </p>
-  <p> </p>
+  <p>Para obtener información sobre este evento junto con el objetivo UWP y las funciones de XBox Live, consulte la siguiente página:</p>
+  <ul class="colour">
+    <li><a href="../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/Match_Making/Match_Making.htm">UWP y XBox Live - Creación de partidos</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Async_Events.htm">Async Events</a></div>
-        <div style="float:right">Next: <a href="Steam.htm">Steam</a></div>
+        <div style="float:left">Atrás: <a href="../Async_Events.htm">Eventos asíncronos</a></div>
+        <div style="float:right">Siguiente: <a href="Steam.htm">Vapor</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Asynchronous Social Event

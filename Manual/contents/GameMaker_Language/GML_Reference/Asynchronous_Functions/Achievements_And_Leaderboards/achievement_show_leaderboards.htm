@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>achievement_show_leaderboards</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for achievement_show_leaderboards" />
+  <meta name="rh-index-keywords" content="achievement_show_leaderboards" />
+  <meta name="search-keywords" content="achievement_show_leaderboards" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>achievement_show_leaderboards</h1>
+  <p>Esta función abrirá la página de tablas de clasificación de la plataforma elegida. Por favor, ten en cuenta que esta es una <i>función asíncrona</i>, es decir, tu juego continuará ejecutándose en segundo plano mientras se muestra la página de tablas de clasificación. Por lo tanto, debe tener
+    cuidado con el uso de esta función y asegúrate de poner en pausa el juego o permitir que se muestre sólo en áreas de tu juego donde no interfiera con el juego.</p>
+  <p> </p>
+  <h4><b>Sintaxis:</b></h4>
+  <p class="code">achievement_show_leaderboards()</p>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p class="code">if achievement_available()<br/>     {
+    <br/>     global.Pause = true;<br/>     instance_create_layer(0, 0, &quot;Controllers&quot;, obj_Pause);<br/>     achievement_show_leaderboards();
+    <br/>     }
+  </p>
+  <p>El código anterior comprueba si el servicio de tablas de clasificación y logros elegido está disponible y, en caso afirmativo, establece una variable global y crea una instancia de &quot;pausa&quot; del controlador antes de llamar a la función para mostrar las tablas de clasificación en pantalla.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Atrás: <a href="Achievements_And_Leaderboards.htm">Logros y tablas de clasificación</a></div>
+        <div style="float:right">Siguiente: <a href="achievement_show_challenge_notifications.htm"><span class="notranslate">achievement_show_challenge_notifications</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
+  </div>
+  <!-- KEYWORDS
+achievement_show_leaderboards
+-->
+  <!-- TAGS
+achievement_show_leaderboards
+-->
+</body>
+</html>

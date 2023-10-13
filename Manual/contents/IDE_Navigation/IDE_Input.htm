@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>IDE Input And Navigation</title>
+  <title>Entrada y navegación del IDE</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page on how to move around and use the IDE" />
   <meta name="rh-index-keywords" content="IDE Input,IDE Navigation" />
@@ -14,73 +14,101 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>IDE Input And Navigation</h1>
-  <p>The <span data-keyref="GameMaker Name">GameMaker</span> <a class="glossterm" data-glossterm="IDE" href="#">IDE</a> accepts mouse and keyboard input, and many operations can be carried out using one or the other or both.</p>
-  <p>In general you can click the left mouse button  <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> to select anything, use <img alt="CONTROL Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> to select multiple items, hold <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> to drag items into different docks or onto the workspaces, and also the <img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> to open context specific menus. Note that if you are running <span data-keyref="GameMaker Name">GameMaker</span> on a macOS system and are using a single button mouse, please use <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> to get a right mouse click <img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png" />.</p>
-  <p>When using a laptop trackpad, you can use the panning gesture, i.e. dragging with two fingers, to pan around workspaces, and use the pinch in/out gestures to zoom out and in.</p>
-  <p>There are also a great number of keyboard shortcuts that can be used to navigate around the different workspace elements and resource editors, and we&#39;ll quickly go through some of the most important ones (you can find a complete list <a href="Keyboard_Shortcuts.htm">here</a>):</p>
+  <h1>Entrada y navegación del IDE</h1>
+  <p>El <a class="glossterm" data-glossterm="IDE" href="#">IDE de</a> <span data-keyref="GameMaker Name">GameMaker</span> acepta la entrada del ratón y del teclado, y muchas operaciones pueden llevarse a cabo utilizando uno u otro o ambos. En general, puede pulsar el botón izquierdo del ratón <img> para seleccionar cualquier cosa, utilizar <img> / <img> + <img> para seleccionar múltiples elementos, mantener <img> para arrastrar elementos a diferentes muelles o a la <span class="notranslate">workspaces</span>, y también el <img> para abrir menús específicos del contexto. Tenga en cuenta que si ejecuta <span data-keyref="GameMaker Name">GameMaker</span> en un sistema <span class="notranslate">macOS</span> y utiliza un ratón de un solo botón, utilice <img> + <img> para hacer clic con el botón derecho del ratón <img>.</p>
+  <p>También hay un gran número de atajos de teclado que se pueden utilizar para navegar por los diferentes elementos y editores de recursos de <span class="notranslate">workspace</span>, y vamos a repasar rápidamente algunos de los más importantes (puedes encontrar una lista completa <a href="Keyboard_Shortcuts.htm">aquí</a>):</p>
   <ul class="colour">
-    <li><img alt="CONTROL Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" />/ <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + &quot;Z&quot; : This will undo the previous action and works in most of the editors. You have multiple levels of undo too, so you can press this multiple times to &quot;roll back&quot; changes.</li>
-    <li><img alt="CONTROL Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" />/ <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + &quot;Y&quot; : This will redo a previous action that was undone and works in most of the editors. Like undo, you have multiple levels of redo too.</li>
-    <li><img alt="CONTROL Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" />/ <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + &quot;S&quot; : This will force <span data-keyref="GameMaker Name">GameMaker</span> to save your project.</li>
-    <li><img alt="CONTROL Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" />/ <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + &quot;T&quot; : This will open the <strong>Goto Window</strong> which enables you to quickly search for and go to any asset in your game, as well as search the <a href="../Setting_Up_And_Version_Information/IDE_Preferences.htm">Preferences</a> and <a href="../Settings/Game_Options.htm">Game Options</a>. You are presented with a list of everything and as you type the search term, this list will be culled to suit, so if all your rooms are prefixed with &quot;rm_&quot; for example, typing that will cull the list to show only those assets that begin with that name.</li>
+    <li><img>/ <img> + &quot;Z&quot; : Esto deshará la acción anterior y funciona en la mayoría de los editores. También tiene múltiples niveles de deshacer, por lo que puede pulsar esto varias veces para &quot;retroceder&quot; los cambios.</li>
+    <li><img>/ <img> + &quot;Y&quot; : Esto rehará una acción anterior que fue deshecha y funciona en la mayoría de los editores. Al igual que deshacer, también tiene múltiples niveles de rehacer.</li>
+    <li><img>/ <img> + &quot;S&quot; : Esto forzará a <span data-keyref="GameMaker Name">GameMaker</span> a guardar su proyecto.</li>
+    <li><img>/ <img> + &quot;T&quot; : Esto abrirá la <strong>ventana Goto</strong> que le permite buscar rápidamente e ir a cualquier <span class="notranslate">asset</span> en su juego, así como buscar en las <a href="../Setting_Up_And_Version_Information/IDE_Preferences.htm">Preferencias</a> y <a href="../Settings/Game_Options.htm">Opciones del Juego</a>. Se le presentará una lista de todo y, a medida que escriba el término de búsqueda, esta lista se seleccionará para adaptarse, por lo que si todos sus <span class="notranslate">rooms</span> tienen el prefijo &quot;rm_&quot;, por ejemplo, al escribirlo se seleccionará la lista para mostrar sólo los <span class="notranslate">assets</span> que comienzan con ese nombre.</li>
   </ul>
-  <p><img alt="Resource Search" class="center" src="../assets/Images/Introduction/QS_Goto.png" /></p>
+  <p><img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /></p>
   <ul class="colour">
-    <li><img alt="CONTROL Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> + <img alt="TAB Icon" class="icon" src="../assets/Images/Icons/Icon_Tab.png" />: This will open the <strong>Workspace Overview</strong> window which can be used to navigate quickly between items that are open in the different workspaces. The window will remain open as long as <img class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> is held, and pressing <img class="icon" height="20" src="../assets/Images/Icons/Icon_Tab.png" width="55" />  once will move you to the next item in the window. Releasing the shortcut will then navigate to the item that was selected.<br />
-      <br />
-      <span data-conref="../assets/snippets/Tag_note.hts"> </span> If you remap the binding for this window to either use more than one modifiers (such as <img class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> + <img class="icon" height="20" src="../assets/Images/Icons/Icon_Alt.png" width="55" /> + <span class="inline">B</span>) or a single key (such as <span class="inline">B</span> only), then the window will remain open after pressing the shortcut regardless of whether you still have it held or not, until you manually close it or choose an item from the window.
+    <li><img>/ <img> + <img>: Esto abrirá la ventana <strong>de visión general del espacio de trabajo</strong> que puede utilizarse para navegar rápidamente entre los elementos que están abiertos en los diferentes <span class="notranslate">workspaces</span>. La ventana permanecerá abierta mientras se mantenga <img> o <img>, y si se pulsa una vez<img> se pasará al siguiente elemento de la ventana. Si se suelta el atajo, se navegará hasta el elemento que se haya seleccionado.<br>
+      <br>
+     <span class="note">NOTA</span> Si reasigna la vinculación de esta ventana para utilizar más de un modificador (como <img> + <img> + <span class="inline">B</span>) o una sola tecla (como <span class="inline">B</span> solamente), entonces la ventana permanecerá abierta después de pulsar el acceso directo, independientemente de si lo mantiene pulsado o no, hasta que la cierre manualmente o elija un elemento de la ventana.
     </li>
   </ul>
-  <p><img alt="Workspace Overview Window" class="center" src="../assets/Images/IDE_Input/Getting_Started_Overview.png" /></p>
+  <p><img alt="CONTROL Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /></p>
   <ul class="colour">
-    <li><img alt="CONTROL Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" />/ <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img class="icon" height="20" src="../assets/Images/Icons/Icon_Enter.png" width="55" />: This will reset the zoom level in workspaces and various editors.</li>
-    <li><img alt="F1  Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_f1.png" width="55" />: This will open the manual. Note that when using GML Visual or GML code you can also select an action or a function (or keyword or whatever) and then press <img alt="F1  Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_f1.png" width="55" /> or click the middle mouse button <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" /> to open the manual on the relevant page.</li>
-    <li><img alt="F12 Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_f12.png" width="55" />: This can be used to collapse or expand all the different docked windows in the IDE.</li>
+    <li><img>: Esto abrirá el manual. Tenga en cuenta que al utilizar <span class="notranslate">GML</span> Visual o <span class="notranslate">GML</span> code también puede seleccionar una acción o una función (o palabra clave o lo que sea) y luego pulsar <img> o hacer clic en el botón central del ratón <img> para abrir el manual en la página correspondiente.</li>
+    <li><img>: Se puede utilizar para contraer o expandir todas las diferentes ventanas ancladas en el <span class="notranslate">IDE</span>.</li>
   </ul>
-  <p>Other ways to navigate the workspace include using the keyboard shortcut  <img alt="CTRL Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> /  <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> +  <img alt="Alt Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Alt.png" width="55" /> + <strong> <span class="inline">&lt;Arrow Keys&gt;</span></strong> to move between any open windows in the direction pressed, and by pressing and holding the middle mouse button <img alt="MMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_MMB.png" width="21" /> then dragging the mouse you can pan around the workspace too.</p>
-  <p>When navigating around the various different workspaces and windows, you can use the right-mouse button <img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> on any text field to open a context menu which will have the following fields by default:</p>
-  <p><img alt="Default RMB Menu" class="center" src="../assets/Images/Introduction/QS_RMBContextMenu.png" /></p>
-  <p>In some situations, these options may be expanded on, depending on the editor or window that is in focus.</p>
-  <p>Other than those methods of input, there is also limited support for pen devices, and also a special mode for those people working on projects using a laptop. Both of these are explained below:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Laptop Mode</a></p>
+  <p>Otras formas de navegar por <span class="notranslate">workspace</span> incluyen el uso del atajo de teclado <img> / <img> + <img> + <strong> <span class="inline">&lt;Arrow Keys&gt;</span></strong> para desplazarse entre las ventanas abiertas en la dirección pulsada, y manteniendo pulsado el botón central del ratón <img> y luego arrastrando el ratón también puedes desplazarte por <span class="notranslate">workspace</span>.</p>
+  <p>Al navegar por las diferentes <span class="notranslate">workspaces</span> y ventanas, puede utilizar el botón derecho del ratón <img> en cualquier campo de texto para abrir un menú contextual que tendrá los siguientes campos por defecto:</p>
+  <p><img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /></p>
+  <p>En algunas situaciones, estas opciones pueden ampliarse, dependiendo del editor o de la ventana que esté enfocada.</p>
+  <p>Aparte de estos métodos de entrada, también hay una compatibilidad limitada con dispositivos de lápiz, y también un modo especial para aquellas personas que trabajan en proyectos utilizando un ordenador portátil. Ambos se explican a continuación:</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Modo portátil</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">If you are using <span data-keyref="GameMaker Name">GameMaker</span> on a laptop, then you will have a further option at the top of the IDE for Laptop Mode:</p>
-    <p class="dropspot"><img class="center" src="../assets/Images/IDE_Input/Getting_Started_LaptopMode.png" />This will be on by default but can be switched off if you prefer by toggling this button. Laptop mode combines with some tools in the IDE to make it a much better experience when using a touchpad, simplifying the 3 main mouse interactions: <strong>Pan</strong>, <strong>zoom</strong> and <strong>scroll</strong>. It uses two modifier keys to do this: Left <img alt="CONTROL Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" />/ <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> and Left <img alt="ALT Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Alt.png" width="55" />. When laptop mode is on, <em>Left </em> <img alt="CONTROL Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" />/ <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> and <em>Left </em> <img alt="ALT Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Alt.png" width="55" /> are &quot;reserved&quot; for mouse interactions like panning the room editor, where <em>Left </em> <img alt="CONTROL Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" />/ <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> is zoom, <em>Left </em> <img alt="ALT Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Alt.png" width="55" /> is scroll and pan. Scrolling in laptop mode behaves just like panning, so it should be intuitive and precise enough so that you don&#39;t need to use the scrollbar. Note that when holding these buttons, you simply have to move the mouse - not click nor drag, just move - and that if there is a general shortcut that normally requires the use of the <img alt="CONTROL Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" />/ <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> or <img alt="ALT Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Alt.png" width="55" /> keys, you would use the <em>Right </em>keys of the keyboard instead.<br />
-       </p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Si utilizas <span data-keyref="GameMaker Name">GameMaker</span> en un ordenador portátil, tendrás otra opción en la parte superior de <span class="notranslate">IDE</span> para el modo portátil:</p>
+    <p class="dropspot">
+     <img>Esta opción está activada por defecto, pero puede desactivarse si lo prefiere pulsando este botón
+      botón. El modo portátil se combina con algunas herramientas en el <span class="notranslate">IDE</span> para hacer una experiencia mucho mejor cuando se utiliza un touchpad, simplificando las 3 interacciones principales del ratón:
+     <strong>Pan</strong>,
+     <strong>zoom</strong> y
+     <strong>desplazamiento</strong>. Para ello utiliza dos teclas modificadoras: Izquierda
+     <img>/
+      <img> e Izquierda
+     <img>. Cuando el modo portátil está activado,
+     <em>Izquierda </em>
+     <img>/
+      <img> y
+     <em>Izquierda </em>
+      <img> se &quot;reservan&quot; para interacciones con el ratón como el desplazamiento del editor <span class="notranslate">room</span>, donde
+     <em>Izquierda </em>
+     <img>/
+      <img> es el zoom,
+     <em>Izquierda </em>
+      <img> es desplazamiento y paneo. El desplazamiento en el modo portátil se comporta igual que el paneo, por lo que debe ser
+      intuitivo y lo suficientemente preciso como para no tener que usar la barra de desplazamiento. Tenga en cuenta que al mantener estos botones, simplemente tiene que mover el ratón - no hacer clic ni arrastrar, sólo mover - y que si hay un acceso directo general que normalmente requiere
+      el uso del botón
+     <img>/
+      <img> o
+      <img> se deben utilizar las teclas
+      teclas de <em>la derecha </em>del teclado en su lugar.
+    </p>
+    <p class="dropspot">
+      <br /><br />
+    </p>
+    <p class="dropspot"></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Touch Screen Support</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Soporte de pantalla táctil</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">One final thing we&#39;ll mention here is that the IDE for <span data-keyref="GameMaker Name">GameMaker</span> also has minimal support for touch screens. On all operating systems you can use the touch screen to click and drag items in the main workspace, and we support 2 simultaneous pointers, where a second tap will perform a right-click. Note that on Windows 8 and above, the <span data-keyref="GameMaker Name">GameMaker</span> IDE will support pen devices too.<br /></p>
+    <p class="dropspot">Una última cosa que mencionaremos aquí es que el <span class="notranslate">IDE</span> para <span data-keyref="GameMaker Name">GameMaker</span> también tiene un soporte mínimo para pantallas táctiles. En todos los sistemas operativos se puede utilizar la pantalla táctil para hacer clic y arrastrar elementos en la página principal <span class="notranslate">workspace</span>, y se admiten 2 punteros simultáneos
+      simultáneos, donde un segundo toque realizará un clic con el botón derecho. Ten en cuenta que en <span class="notranslate">Windows 8</span> y superiores, el <span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">IDE</span> también admite dispositivos de lápiz.</p>
+    <p class="dropspot">
+      <br /><br />
+    </p>
   </div>
-  <p><br />
-    <br />
-    The following pages contain more detailed and specific information on navigating the IDE, as well as information on some navigation tools available to you:
+  <p><br>
+    <br>
+    Las siguientes páginas contienen información más detallada y específica sobre la navegación en <span class="notranslate">IDE</span>, así como información sobre algunas herramientas de navegación disponibles:
   </p>
   <ul class="colour">
-    <li><a href="Bookmarks.htm">Bookmarks</a></li>
-    <li><a href="Recent_Windows.htm">Recent Windows</a></li>
-    <li><a data-xref="{title}" href="../IDE_Tools/The_Inspector.htm">The Inspector</a></li>
-    <li><a href="Menus.htm">Menus</a></li>
-    <li><a href="Keyboard_Shortcuts.htm">Keyboard Shortcuts</a></li>
+    <li><a href="Bookmarks.htm">Marcadores</a></li>
+    <li><a href="Recent_Windows.htm">Ventanas recientes</a></li>
+    <li><a data-xref="{title}" href="../IDE_Tools/The_Inspector.htm">El Inspector</a></li>
+    <li><a href="Menus.htm">Menús</a></li>
+    <li><a href="Keyboard_Shortcuts.htm">Atajos de teclado</a></li>
   </ul>
-  <p> </p>
-  <p>You can also find some extra preferences related to the IDE input here:</p>
+  <p> </p>
+  <p>También puede encontrar algunas preferencias adicionales relacionadas con la entrada <span class="notranslate">IDE</span> aquí:</p>
   <ul class="colour">
-    <li><a href="../Setting_Up_And_Version_Information/IDE_Preferences/General/Input.htm">Input Preferences</a></li>
+    <li><a href="../Setting_Up_And_Version_Information/IDE_Preferences/General/Input.htm">Preferencias de entrada</a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="../The_IDE/The_IDE.htm">GameMaker IDE</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="../IDE_Tools/Additional_IDE_Tools.htm">Additional IDE Tools</a></div>
+        <div style="float:left">Atrás: <a data-xref="{title}" href="../The_IDE/The_IDE.htm">El IDE</a></div>
+        <div style="float:right">Siguiente: <a data-xref="{title}" href="../IDE_Tools/Additional_IDE_Tools.htm">Herramientas adicionales <span class="notranslate">IDE</span> </a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 IDE Navigation

@@ -6,7 +6,7 @@
   <title>xboxlive_stats_get_leaderboard</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for xboxlive_stats_get_leaderboard" />
   <meta name="rh-index-keywords" content="xboxlive_stats_get_leaderboard,achievement_stat_event" />
@@ -15,80 +15,80 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_stats_get_leaderboard</h1>
-  <p>This function can be used to retrieve a global leaderboard of ranks for a given statistic. You supply the user ID (as returned, for example, by the function <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>), the stat string (as defined when you registered it as a &quot;Featured Stat&quot;), and then you specify a number of details about what leaderboard information you want to retrieve. Note that you can only retrieve a global leaderboard for int or real stats, but <i>not</i> for string stats.</p>
-  <p class="note"><b>IMPORTANT!</b> Stats used in global leaderboards must be registered as &quot;Featured Stats&quot; in the XDP/Windows Dev Center otherwise an error will be returned. If you want local (social) leaderboards, then please see the function <a href="xboxlive_stats_get_social_leaderboard.htm"><span class="inline"><span style="font-size:14px;">xboxlive_stats_get_social_leaderboard()</span></span></a>.</p>
-  <p>The function will generate a callback which will trigger a <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Social Asynchronous Event</a>. This event will have the built in DS map <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"> <span class="inline">async_load</span> </a> which should then be parsed for the following keys:</p>
+  <p>Esta función se puede utilizar para recuperar una tabla de clasificación global de rangos para una estadística determinada. Se suministra el ID de usuario (tal como lo devuelve, por ejemplo, la función <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>), la estadística <span class="notranslate">string</span> (tal y como se definió al registrarla como &quot;Estadística destacada&quot;) y, a continuación, especifica una serie de detalles sobre la información de la tabla de clasificación que desea recuperar. Ten en cuenta que sólo puedes recuperar una tabla de clasificación global para las estadísticas de <span class="notranslate">int</span> o reales, pero <i>no</i> para las de <span class="notranslate">string</span>.</p>
+  <p class="note"><b>¡IMPORTANTE!</b> Las estadísticas utilizadas en las tablas de clasificación globales deben estar registradas como &quot;Estadísticas destacadas&quot; en el Centro de Desarrollo de XDP/Windows, de lo contrario se producirá un error. Si quiere tablas de clasificación locales (sociales), consulte la función <a href="xboxlive_stats_get_social_leaderboard.htm"><span class="inline"><span style="font-size:14px;">xboxlive_stats_get_social_leaderboard()</span></a>.</p>
+  <p>La función generará una llamada de retorno que desencadenará un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">evento social asíncrono</a>. Este evento tendrá el mapa DS incorporado <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"> <span class="inline">async_load</span> </a> que deberá ser analizado en busca de las siguientes claves:</p>
   <ul class="colour">
-    <li>&quot;<b>id</b>&quot; - Will hold the constant <span class="inline">achievement_stat_event</span></li>
-    <li>&quot;<b>event</b>&quot; - Will hold the string &quot;<i>GetLeaderboardComplete</i>&quot;</li>
-    <li>&quot;<b>userid</b>&quot; - The user ID associated with the request</li>
-    <li>&quot;<b>error</b>&quot; - 0 if successful, some other value if there has been an error. The following two are the most common errors returned:
+    <li>&quot;<b>id</b>&quot; - Mantendrá la constante <span class="inline">achievement_stat_event</span></li>
+    <li>&quot;<b>evento</b>&quot; - Mantendrá el <span class="notranslate">string</span> &quot;<i>GetLeaderboardComplete</i>&quot;</li>
+    <li>&quot;<b>userid</b>&quot; - El ID de usuario asociado a la solicitud</li>
+    <li>&quot;<b>Error</b>&quot; - 0 si tiene éxito, algún otro valor si ha habido un error. Los dos siguientes son los errores más comunes devueltos:
       <ul>
-        <li>2145844844: Cannot find requested leaderboard (the stat is not registered as a featured stat)</li>
-        <li>-2145844848: Bad request (the stat is not a valid leaderboard type, should be a string)</li>
+        <li>2145844844: No se puede encontrar la tabla de clasificación solicitada (la estadística no está registrada como estadística destacada)</li>
+        <li>-2145844848: Solicitud incorrecta (la estadística no es un tipo de tabla de clasificación válida, debería ser una <span class="notranslate">string</span>)</li>
       </ul>
     </li>
-    <li>&quot;<b>errormessage</b>&quot; - A string with an error message, if any is available</li>
-    <li>&quot;<b>display_name</b>&quot; - The unique ID for the leaderboard as defined on the provider dashboard.</li>
-    <li>&quot;<b>numentries</b>&quot; - The number of entries in the leaderboard that you have received.</li>
+    <li>&quot;<b>errormessage</b>&quot; - Un <span class="notranslate">string</span> con un mensaje de error, si hay alguno disponible</li>
+    <li>&quot;<b>display_name</b>&quot; - El ID único de la tabla de clasificación tal y como se define en el panel del proveedor.</li>
+    <li>&quot;<b>numentries</b>&quot; - El número de entradas en la tabla de clasificación que has recibido.</li>
   </ul>
-  <p>The rest of the DS map will also contain the leaderboard data with the following format (where &quot;N&quot; is the position in the leaderboard data, from 0 to &quot;numentries&quot;):</p>
+  <p>El resto del mapa DS también contendrá los datos de la tabla de clasificación con el siguiente formato (donde &quot;N&quot; es la posición en los datos de la tabla de clasificación, de 0 a &quot;numentries&quot;):</p>
   <ul class="colour">
-    <li>&quot;<b>Player<i>N</i></b>&quot; - The name of the player, where &quot;N&quot; is an integer value corresponding to their position within the leaderboard entries list.</li>
-    <li>&quot;<b>Playerid<i>N</i></b>&quot; - The unique user id of the player, &quot;N&quot;.</li>
-    <li>&quot;<b>Rank<i>N</i></b>&quot; - The rank of the player &quot;N&quot; within the leaderboard.</li>
-    <li>&quot;<b>Score<i>N</i></b>&quot; - The score of the player &quot;N&quot;.</li>
+    <li>&quot;<b>JugadorN</b>&quot; - El nombre del jugador, donde &quot;N&quot; es un valor entero correspondiente a su posición dentro de la lista de entradas de la tabla de clasificación.</li>
+    <li>&quot;<b>PlayeridN</b>&quot; - El id de usuario único del jugador, &quot;N&quot;.</li>
+    <li>&quot;<b>RangoN</b>&quot; - El rango del jugador &quot;N&quot; dentro de la tabla de posiciones.</li>
+    <li>&quot;<b>PuntuaciónN</b>&quot; - La puntuación del jugador &quot;N&quot;.</li>
   </ul>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">xboxlive_stats_get_leaderboard(user_id, stat, num_entries, start_rank, start_at_user, ascending);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>user_id</td>
-        <td><span data-keyref="Type_ID_Xbox_User"><a href="../../../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/Users_And_Accounts/xboxlive_get_user.htm" target="_blank">Xbox User ID</a></span></td>
-        <td>The user ID of the user to get the leaderboard for</td>
+        <td><span class="notranslate">user_id</span></td>
+        <td><span data-keyref="Type_ID_Xbox_User"><a href="../../../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/Users_And_Accounts/xboxlive_get_user.htm" target="_blank">ID de usuario de Xbox</a></span></td>
+        <td><span class="notranslate">The user ID of the user to get the leaderboard for</span></td>
       </tr>
       <tr>
-        <td>stat</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The stat (as a string) to create the global leaderboard from</td>
+        <td><span class="notranslate">stat</span></td>
+        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Cadena</a></span></td>
+        <td><span class="notranslate">The stat (as a string) to create the global leaderboard from</span></td>
       </tr>
       <tr>
-        <td>num_entries</td>
+        <td><span class="notranslate">num_entries</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The number of entries from the global leaderboard to retrieve</td>
+        <td><span class="notranslate">The number of entries from the global leaderboard to retrieve</span></td>
       </tr>
       <tr>
-        <td>start_rank</td>
+        <td><span class="notranslate">start_rank</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The rank in the leaderboard to start from (use 0 if the &quot;start_at_user&quot; argument is set to <span class="inline">true</span>)</td>
+        <td><span class="notranslate">The rank in the leaderboard to start from (use 0 if the &quot;start_at_user&quot; argument is set to <span class="inline">true</span>)</td>
       </tr>
       <tr>
-        <td>start_at_user</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Set to <span class="inline">true</span> to start at the user ID rank, <span class="inline">false</span> otherwise (set to <span class="inline">false</span> if the &quot;start_rank&quot; argument is anything other than 0)</td>
+        <td><span class="notranslate">start_at_user</span></td>
+        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Booleano</a></span></td>
+        <td><span class="notranslate">Set to <span class="inline">true</span> para empezar en el rango del ID de usuario, <span class="inline">false</span> en caso contrario (se establece en <span class="inline">false</span> si el argumento &quot;start_rank&quot; es distinto de 0)</td>
       </tr>
       <tr>
-        <td>ascending</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Set to <span class="inline">true</span> for ascending order and <span class="inline">false</span> for descending order</td>
+        <td><span class="notranslate">ascending</span></td>
+        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Booleano</a></span></td>
+        <td><span class="notranslate">Set to <span class="inline">true</span> para el orden ascendente y <span class="inline">false</span> para el orden descendente</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Extended Example:</h4>
-  <p>The following is an extended example of how this function can be used. To start with you&#39;d call it in some event like <b>Room Start</b> or <b>Create</b>:</p>
+  <p> </p>
+  <h4>Ejemplo ampliado:</h4>
+  <p>El siguiente es un ejemplo ampliado de cómo se puede utilizar esta función. Para empezar, la llamarías en algún evento como <b>Inicio de Sala</b> o <b>Creación</b>:</p>
   <p class="code">xboxlive_stats_get_leaderboard(user_id, &quot;GlobalTime&quot;, 20, 1, false, true);</p>
-  <p>The above code would be called to get a list of all social leaderboard positions for the game, and will generate a Social Asynchronous Event call back which we would deal with in the following way:</p>
+  <p>El código anterior se llamaría para obtener una lista de todas las posiciones de la tabla de clasificación social para el juego, y generará una llamada de vuelta al evento social asíncrono que trataríamos de la siguiente manera:</p>
   <p class="code">if (async_load[? &quot;id&quot;] == achievement_stat_event)<br />
     {<br />
         if (async_load[? &quot;event&quot;] == &quot;GetLeaderboardComplete&quot;)<br />
@@ -103,18 +103,18 @@
             }<br />
         }<br />
     }</p>
-  <p>The above code checks the returned DS map in the Social Asynchronous Event and if its &quot;id&quot; matches the constant being checked, it then checks to see if the event has been triggered by returned leaderboard data before looping through the map and storing all the different values in a number of global arrays.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior comprueba el mapa DS devuelto en el Evento Social Asíncrono y si su &quot;id&quot; coincide con la constante que se está comprobando, entonces comprueba si el evento ha sido desencadenado por los datos de la tabla de clasificación devueltos antes de hacer un bucle a través del mapa y almacenar todos los diferentes valores en una serie de matrices globales.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Stats_And_Leaderboards.htm">Stats And Leaderboards</a></div>
-        <div style="float:right">Next: <a href="xboxlive_stats_get_social_leaderboard.htm">xboxlive_stats_get_social_leaderboard</a></div>
+        <div style="float:left">Atrás: <a href="Stats_And_Leaderboards.htm">Estadísticas y tablas de clasificación</a></div>
+        <div style="float:right">Siguiente: <a href="xboxlive_stats_get_social_leaderboard.htm"><span class="notranslate">xboxlive_stats_get_social_leaderboard</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_stats_get_leaderboard

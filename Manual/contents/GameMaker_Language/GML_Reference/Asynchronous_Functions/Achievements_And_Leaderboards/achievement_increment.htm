@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>incremento_de_logros</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for achievement_increment" />
+  <meta name="rh-index-keywords" content="achievement_increment" />
+  <meta name="search-keywords" content="achievement_increment" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>incremento_de_logros</h1>
+  <p>Los juegos pueden tener logros sin valor de finalización, por lo que puedes utilizar esta función para incrementar esos logros en una cantidad determinada. En <span class="notranslate">Android</span>, se envía el ID del logro como <span class="notranslate">string</span> (es el ID de logro único que se asignó cuando
+    cuando se configura el logro), mientras que en todas las demás plataformas se suministra el nombre del logro definido como <span class="notranslate">string</span>, y luego se da el valor real del logro para incrementarlo.</p>
+  <p>La función desencadenará un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">evento social asíncrono</a> en el que el mapa <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a>    devuelto tendrá los siguientes pares clave/valor:</p>
+  <ul class="colour">
+    <li>&quot;<b>tipo</b>&quot; - Es el tipo de evento que se ha disparado, que será el <span class="notranslate">string</span> &quot;<tt>achievement_increment_result</tt>&quot; para esta función.</li>
+    <li>&quot;<b>id</b>&quot; - Es el ID del evento y, para esta función, devolverá una constante <span class="notranslate">GML</span> <tt>GooglePlayServices_EVENT_ID_INCREMENT_ACHIEVEMENT</tt>.</li>
+    <li>&quot;<b>achievement_id</b>&quot; - Es el ID único del logro que se ha incrementado.</li>
+    <li>&quot;<b>estado</b>&quot; - Será 1 si el logro se incrementó con éxito, o 0 si la solicitud falló</li>
+    <li>&quot;<b>completo</b>&quot; - Será 1 si el logro ha sido completado por este incremento, o 0 si la solicitud falló</li>
+  </ul>
+  <p> </p>
+  <h4><b>Sintaxis:</b></h4>
+  <p class="code">achievement_increment(name, value)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argumento</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">name</span></td>
+        <td>El nombre/identificación del logro.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">value</span></td>
+        <td>El valor que se enviará como incremento.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p class="code">achievement_increment(global.Achievement[0], score);</p>
+  <p>El código anterior añade la puntuación actual del jugador al logro con el ID almacenado en la matriz global.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Atrás: <a href="Achievements_And_Leaderboards.htm">Logros y tablas de clasificación</a></div>
+        <div style="float:right">Siguiente: <a href="achievement_show_achievements.htm"><span class="notranslate">achievement_show_achievements</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
+  </div>
+  <!-- KEYWORDS
+achievement_increment
+-->
+  <!-- TAGS
+achievement_increment
+-->
+</body>
+</html>

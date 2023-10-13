@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>point_direction</title>
+  <title>punto_dirección</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for point_direction" />
   <meta name="rh-index-keywords" content="point_direction" />
@@ -15,41 +15,41 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>point_direction</h1>
-  <p>This function returns the direction of a vector formed by the specified components [x1,y1] and [x2,y2] in relation to the fixed x/y coordinates of the room. For example, in the image below if we want to get the direction from the player ship position to the enemy position so that we can fire a missile at the enemy then we would use this function (the exact code is in the example below the image):</p>
+  <h1>punto_dirección</h1>
+  <p>Esta función devuelve la dirección de un vector formado por los componentes especificados [x1,y1] y [x2,y2] en relación con las coordenadas fijas x/y del <span class="notranslate">room</span>. Por ejemplo, en la imagen de abajo si queremos obtener la dirección desde la posición de la nave del jugador hasta la posición del enemigo para poder disparar un misil al enemigo, entonces usaríamos esta función (el código exacto está en el ejemplo de abajo de la imagen):</p>
   <p><img alt="Point direction example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/point_direction.png" /></p>
-  <p> </p>
-  <h4><b>Syntax:</b></h4>
+  <p> </p>
+  <h4><b>Sintaxis:</b></h4>
   <p class="code">point_direction(x1, y1, x2, y2)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th><th>Tipo</th>
+        <th>Descripción</th>
      </tr>
       <tr>
-        <td>x1</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x coordinate of the first component of the vector</td>
+        <td><span class="notranslate">x1</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The x coordinate of the first component of the vector</span></td>
      </tr>
       <tr>
-        <td>y1</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y coordinate of the first component of the vector</td>
+        <td><span class="notranslate">y1</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The y coordinate of the first component of the vector</span></td>
      </tr>
       <tr>
-        <td>x2</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x coordinate of the second component of the vector</td>
+        <td><span class="notranslate">x2</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The x coordinate of the second component of the vector</span></td>
      </tr>
       <tr>
-        <td>y2</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y coordinate of the second component of the vector</td>
+        <td><span class="notranslate">y2</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The y coordinate of the second component of the vector</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">var ex, ey;<br />
     ex = instance_nearest(x, y, enemy).x;<br />
     ey = instance_nearest(x, y, enemy).y;<br />
@@ -57,18 +57,18 @@
     {<br />
         direction = point_direction(x, y, ex, ey);<br />
     }</p>
-  <p>The above code will get the x and y coordinates of the nearest enemy and then pass them to a bullet object to use in the point_direction function to set its direction of travel correctly.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior obtendrá las coordenadas x e y del enemigo más cercano y luego las pasará a una bala <span class="notranslate">object</span> para usarla en la función punto_dirección para establecer su dirección de viaje correctamente.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Angles_And_Distance.htm">Angles And Distance</a></div>
-        <div style="float:right">Next: <a href="point_distance.htm">point_distance</a></div>
+        <div style="float:left">Atrás: <a href="Angles_And_Distance.htm">Ángulos y distancia</a></div>
+        <div style="float:right">Siguiente: <a href="point_distance.htm"><span class="notranslate">point_distance</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 point_direction

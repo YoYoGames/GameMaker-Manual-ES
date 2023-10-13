@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>buffer_create_from_vertex_buffer_ext</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for buffer_create_from_vertex_buffer_ext" />
   <meta name="rh-index-keywords" content="buffer_create_from_vertex_buffer_ext" />
@@ -16,103 +16,103 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>buffer_create_from_vertex_buffer_ext</h1>
-  <p>You use this function to allocate a portion of memory as a buffer in your game filled with the data from a previously created <a href="../Drawing/Primitives/Primitives_And_Vertex_Formats.htm">vertex buffer</a>. The function returns a unique <i>buffer id</i> that should be stored in a variable and used for all further function calls to the buffer. The function takes the id for the vertex buffer to use (as returned by the function <a href="../Drawing/Primitives/vertex_create_buffer.htm"><span class="inline">vertex_create_buffer()</span></a>, for example) with the following constants being used to define the buffer type:</p>
+  <p>Esta función se utiliza para asignar una porción de memoria como un <span class="notranslate">buffer</span> en su juego lleno de los datos de un búfer <a href="../Drawing/Primitives/Primitives_And_Vertex_Formats.htm">de vértices</a> creado previamente. La función devuelve un id <i>de búfer</i> único que debe ser almacenado en una variable y utilizado para todas las llamadas posteriores a la función <span class="notranslate">buffer</span>. La función toma el id para el <span class="notranslate">vertex</span> <span class="notranslate">buffer</span> a utilizar (como devuelto por la función <a href="../Drawing/Primitives/vertex_create_buffer.htm"><span class="inline">vertex_create_buffer()</span></a>por ejemplo) con las siguientes constantes que se utilizan para definir el tipo de <span class="notranslate">buffer</span>:</p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>Constante</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td><span class="inline">buffer_fixed</span></td>
-        <td>A buffer of fixed size.</td>
+        <td><span class="notranslate"><span class="inline">buffer_fixed</span></td>
+        <td>Un <span class="notranslate">buffer</span> de tamaño fijo.</td>
       </tr>
       <tr>
-        <td><span class="inline">buffer_grow</span></td>
-        <td>A buffer that will &quot;grow&quot; dynamically as data is added</td>
+        <td><span class="notranslate"><span class="inline">buffer_grow</span></td>
+        <td>Un <span class="notranslate">buffer</span> que &quot;crecerá&quot; dinámicamente a medida que se añadan datos</td>
       </tr>
       <tr>
-        <td><span class="inline">buffer_wrap</span></td>
-        <td>A buffer where the data will &quot;wrap&quot;. When the data being added reaches the limit of the buffer size, the overwrite will be placed back at the start of the buffer, and further writing will continue from that point.</td>
+        <td><span class="notranslate"><span class="inline">buffer_wrap</span></td>
+        <td>Un <span class="notranslate">buffer</span> donde los datos se &quot;envolverán&quot;. Cuando los datos que se añaden alcanzan el límite del tamaño de <span class="notranslate">buffer</span>, la sobreescritura se colocará de nuevo al principio de <span class="notranslate">buffer</span>, y la escritura posterior continuará desde ese punto.</td>
       </tr>
       <tr>
-        <td><span class="inline">buffer_fast</span></td>
-        <td>Special &quot;stripped&quot; buffer that is extremely fast to read/write to. Can only be used with <span class="inline">buffer_u8</span> <a href="buffer_write.htm">data types</a>, and <i>must</i> be 1 byte aligned.</td>
+        <td><span class="notranslate"><span class="inline">buffer_fast</span></td>
+        <td> <span class="notranslate">buffer</span> especial &quot;despojado&quot; que es extremadamente rápido para leer/escribir. Sólo puede utilizarse con <a href="buffer_write.htm">los tipos de datos</a> <span class="inline">buffer_u8</span> y <i>debe</i> estar alineado a 1 byte.</td>
       </tr>
       <tr>
-        <td><span class="inline">buffer_vbuffer</span></td>
-        <td>This type of buffer is to be used as a vertex buffer only.</td>
+        <td><span class="notranslate"><span class="inline">buffer_vbuffer</span></td>
+        <td>Este tipo de <span class="notranslate">buffer</span> debe utilizarse únicamente como <span class="notranslate">vertex</span> <span class="notranslate">buffer</span>.</td>
       </tr>
     </tbody>
   </table>
-  <p>Apart from the buffer type, you will also have to set the <i>byte alignment</i> for the buffer. This value will vary depending on the data that you wish to store in the buffer, and in most cases a value of 1 is perfectly fine. However, be aware that for some operations a specific alignment is <i>essential</i>, and an incorrect alignment may cause errors (for further details on alignment see <a href="../../../Additional_Information/Guide_To_Using_Buffers.htm">Buffer Alignment</a>). The following is a general guide to show which values are most appropriate for each data type (when in doubt, use an alignment of 1):</p>
+  <p>Aparte del tipo de <span class="notranslate">buffer</span>, también tendrá que establecer la <i>alineación de bytes</i> para el <span class="notranslate">buffer</span>. Este valor variará dependiendo de los datos que desee almacenar en el <span class="notranslate">buffer</span>, y en la mayoría de los casos un valor de 1 está perfectamente bien. Sin embargo, tenga en cuenta que para algunas operaciones es <i>esencial</i> una alineación específica, y una alineación incorrecta puede causar errores (para más detalles sobre la alineación vea <a href="../../../Additional_Information/Guide_To_Using_Buffers.htm">Alineación del Buffer</a>). La siguiente es una guía general para mostrar qué valores son los más apropiados para cada <span class="notranslate">data type</span> (en caso de duda, utilice una alineación de 1):</p>
   <ul class="colour">
-    <li>Strings should be aligned to 1 byte.</li>
-    <li>Signed or unsigned 8bit integers can be aligned to any value, but note that for a fast buffer (see <a href="buffer_write.htm"><span class="inline">buffer_write()</span></a>) it <i>must</i> be aligned to 1.</li>
-    <li>Signed or unsigned 16bit integers should be aligned to 2 bytes.</li>
-    <li>Signed or unsigned 32bit integers should be aligned to 4 bytes</li>
-    <li>Floats of up to 16bits should be aligned to 2 bytes. <i>(Not currently supported!)</i></li>
-    <li>Floats of up to 32bits should be aligned to 4 bytes.</li>
-    <li>Floats of up to 64bits should be aligned to 8 bytes.</li>
+    <li>Las cadenas deben estar alineadas a 1 byte.</li>
+    <li>Los enteros de 8 bits con signo o sin signo pueden alinearse a cualquier valor, pero tenga en cuenta que para un <span class="notranslate">buffer</span> rápido (véase <a href="buffer_write.htm"><span class="inline">buffer_write()</span></a>) <i>debe</i> estar alineado a 1.</li>
+    <li>Los enteros de 16 bits con signo o sin signo deben alinearse a 2 bytes.</li>
+    <li>Los enteros de 32 bits con o sin signo deben alinearse a 4 bytes</li>
+    <li>Los flotadores de hasta 16bits deben alinearse a 2 bytes. <i>(¡No se admite actualmente!)</i></li>
+    <li>Los flotadores de hasta 32bits deben alinearse a 4 bytes.</li>
+    <li>Los flotadores de hasta 64bits deben alinearse a 8 bytes.</li>
   </ul>
-  <p class="note"><b><span data-conref="../../../assets/snippets/Tag_note.hts"> </span></b> Vertex buffers are 1 byte aligned, but you can create the buffer with any alignment depending on how you want to treat the data, as the vertex data is simply a raw memory copy into the buffer.</p>
-  <p>The final two arguments are used to specify the range of vertex data that you wish to copy into the newly created buffer. The start vertex can be anywhere between 0 and the number of vertices -1, and then you give the number of vertices from that point to copy. You can use the function <span class="inline"><a href="../Drawing/Primitives/vertex_get_number.htm">vertex_get_number()</a></span> on the vertex buffer to get the total number of vertices stored.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_important.hts"> </span> It&#39;s important that you remove any dynamically created resources like this from memory when you no longer need them to prevent memory leaks, so when you are finished with the buffer that you have created you should free it up again using <span style="font-size:1px;"><a href="buffer_delete.htm"><span class="inline">buffer_delete()</span></a></span>. Also note that the vertex buffer used to create the new buffer is not removed from memory either and you should use the function <span style="font-size:1px;"><a href="../Drawing/Primitives/vertex_delete_buffer.htm"><span class="inline">vertex_delete_buffer()</span></a></span> when it is no longer required.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p class="note"><b>NOTA</b>: <span class="notranslate">Vertex</span> <span class="notranslate">buffers</span> está alineado a 1 byte, pero puede crear el <span class="notranslate">buffer</span> con cualquier alineación dependiendo de cómo quiera tratar los datos, ya que los datos de <span class="notranslate">vertex</span> son simplemente una copia de memoria sin procesar en el <span class="notranslate">buffer</span>.</p>
+  <p>Los dos últimos argumentos se utilizan para especificar el rango de datos de <span class="notranslate">vertex</span> que se desea copiar en el recién creado <span class="notranslate">buffer</span>. El inicio <span class="notranslate">vertex</span> puede estar en cualquier lugar entre 0 y el número de vértices -1, y luego se da el número de vértices a partir de ese punto a copiar. Puedes utilizar la función <span class="inline"><a href="../Drawing/Primitives/vertex_get_number.htm">vertex_get_number()</a></span> en el <span class="notranslate">vertex</span> <span class="notranslate">buffer</span> para obtener el número total de vértices almacenados.</p>
+  <p class="note"><b>NOTA</b>: Es importante que elimines de la memoria cualquier recurso creado dinámicamente como éste cuando ya no lo necesites para evitar fugas de memoria, así que cuando termines con el <span class="notranslate">buffer</span> que has creado debes liberarlo de nuevo usando <span style="font-size:1px;"><a href="buffer_delete.htm"><span class="inline">buffer_delete()</span></a></span>. Ten en cuenta también que el <span class="notranslate">vertex</span> <span class="notranslate">buffer</span> utilizado para crear el nuevo <span class="notranslate">buffer</span> tampoco se elimina de la memoria y debes utilizar la función <span style="font-size:1px;"><a href="../Drawing/Primitives/vertex_delete_buffer.htm"><span class="inline">vertex_delete_buffer()</span></a></span> cuando ya no sea necesaria.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">buffer_create_from_vertex_buffer_ext(vertex_buffer, type, alignment, start_vertex, num_vertices)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>vertex_buffer</td>
-        <td><span data-keyref="Type_ID_Buffer_Vertex"><a href="GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_create_buffer.htm" target="_blank">Vertex Buffer ID</a></span></td>
-        <td>The vertex buffer index to use.</td>
+        <td><span class="notranslate">vertex_buffer</span></td>
+        <td><span data-keyref="Type_ID_Buffer_Vertex">Vértice <span class="notranslate">Buffer</span> ID</span></td>
+        <td><span class="notranslate">The vertex buffer index to use.</span></td>
       </tr>
       <tr>
-        <td>type</td>
-        <td><span data-keyref="Type_Constant_Buffer_Type"><a href="GameMaker_Language/GML_Reference/Buffers/buffer_create.htm" target="_blank">Buffer Type Constant</a></span></td>
-        <td>The type of buffer to create (see the constants list below).</td>
+        <td><span class="notranslate">type</span></td>
+        <td><span data-keyref="Type_Constant_Buffer_Type">Tipo de búfer Constante</span></td>
+        <td><span class="notranslate">The type of buffer to create (see the constants list below).</span></td>
       </tr>
       <tr>
-        <td>alignment</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The byte alignment for the buffer</td>
+        <td><span class="notranslate">alignment</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The byte alignment for the buffer</span></td>
       </tr>
       <tr>
-        <td>start_vertex</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The starting vertex.</td>
+        <td><span class="notranslate">start_vertex</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The starting vertex.</span></td>
       </tr>
       <tr>
-        <td>num_vertices</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The total number of vertices to copy.</td>
+        <td><span class="notranslate">num_vertices</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The total number of vertices to copy.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_Buffer"><a href="GameMaker_Language/GML_Reference/Buffers/buffer_create.htm" target="_blank">Buffer ID</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code"><span data-keyref="Type_ID_Buffer">Buffer ID</span></p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">var v_num = vertex_get_number(model_buff); player_buffer = buffer_create_from_vertex_buffer(model_buffer, buffer_grow, 1, 0, v_num - 1);</p>
-  <p>The above code allocates memory to a buffer then copies the data of all vertices from the given vertex buffer into it, returning the index of the new buffer which is stored in the variable &quot;player_buffer&quot;, for future use.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior asigna memoria a un <span class="notranslate">buffer</span> y luego copia los datos de todos los vértices del <span class="notranslate">vertex</span> <span class="notranslate">buffer</span> dado en él, devolviendo el índice del nuevo <span class="notranslate">buffer</span> que se almacena en la variable &quot;player_buffer&quot;, para su uso futuro.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next: <a href="buffer_delete.htm">buffer_delete</a></div>
+        <div style="float:left">Volver: <a href="Buffers.htm">Buffers</a></div>
+        <div style="float:right">Siguiente: <a href="buffer_delete.htm"><span class="notranslate">buffer_delete</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_create_from_vertex_buffer_ext

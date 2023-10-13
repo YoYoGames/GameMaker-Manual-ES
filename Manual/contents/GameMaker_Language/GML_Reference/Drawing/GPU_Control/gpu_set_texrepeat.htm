@@ -6,7 +6,7 @@
   <title>gpu_set_texrepeat</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for the function gpu_set_texrepeat" />
   <meta name="rh-index-keywords" content="gpu_set_texrepeat, gpu_set_tex_repeat" />
@@ -15,29 +15,29 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gpu_set_texrepeat</h1>
-  <p>This function can be used to indicate to <span data-keyref="GameMaker Name">GameMaker</span> whether textures should repeat (<span class="inline">true</span>) or not (<span class="inline">false</span>) when used for models and primitives. Normally texture widths and heights lie in the range 0 - 1, but if you specify a value larger than 1 by default the rest is not drawn (the entire texture will be drawn with an &quot;empty&quot; section corresponding to the percentage over 1 that is used. So a value of 2 for a texture width or height would draw the texture in half the space and leave the other half empty). However, by using this function to set repeat to true the texture is repeated automatically over all models and primitives. The likely use case for these functions is for repeating a texture in 3D but in order for it to work and not pull images from the rest of the texture page, the sprite used will need to be marked as being on a &quot;Separate Texture Page&quot; in the Sprite Editor.</p>
-  <p class="note"><b>NOTE</b>: Sprites and backgrounds are always drawn without repeating, so once you draw a sprite or background this value is reset to <span class="inline">false</span>. This default behaviour will not affect texture stage settings (ie: calling the function will, but the internal setting to false will not).</p>
-  <p class="note"><b>NOTE</b>: This setting will over-ride any texture stage repeats set for shaders when using the function <a href="gpu_set_texrepeat_ext.htm"><span class="inline">gpu_set_texrepeat_ext()</span></a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Esta función puede utilizarse para indicar a <span data-keyref="GameMaker Name">GameMaker</span> si las texturas deben repetirse (<span class="inline">true</span>) o no (<span class="inline">false</span>) cuando se utilizan para modelos y primitivas. Normalmente las anchuras y alturas de las texturas están en el rango 0 - 1, pero si se especifica un valor mayor que 1 por defecto el resto no se dibuja (toda la textura se dibujará con una sección &quot;vacía&quot; correspondiente al porcentaje sobre 1 que se utilice. Así, un valor de 2 para el ancho o el alto de una textura dibujaría la textura en la mitad del espacio y dejaría la otra mitad vacía). Sin embargo, al usar esta función para establecer la repetición a true la textura se repite automáticamente sobre todos los modelos y primitivas. El caso probable de uso de estas funciones es para repetir una textura en 3D, pero para que funcione y no saque imágenes del resto de la página de texturas, el <span class="notranslate">sprite</span> utilizado tendrá que ser marcado como en una &quot;Página de Textura Separada&quot; en el Editor <span class="notranslate">Sprite</span>.</p>
+  <p class="note"><b>NOTA</b>: <span class="notranslate">Sprites</span> y los fondos se dibujan siempre sin repetirse, por lo que una vez que se dibuja un <span class="notranslate">sprite</span> o un fondo este valor se restablece a <span class="inline">false</span>. Este comportamiento por defecto no afectará a la configuración del escenario de la textura (es decir, llamar a la función lo hará, pero el ajuste interno a false no lo hará).</p>
+  <p class="note"><b>NOTA</b>: Este ajuste anulará cualquier repetición de etapa de textura establecida para <span class="notranslate">shaders</span> cuando se utilice la función <a href="gpu_set_texrepeat_ext.htm"><span class="inline">gpu_set_texrepeat_ext()</span></a>.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">gpu_set_texrepeat(enable);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th><th>Tipo</th>
+        <th>Descripción</th>
      </tr>
       <tr>
-        <td>enable</td><td><span data-keyref="Type_Bool"></span></td>
-        <td>Enable or disable texture filtering (<span class="inline">true</span> / <span class="inline">false</span>)</td>
+        <td><span class="notranslate">enable</span></td><td><span data-keyref="Type_Bool"></span></td>
+        <td><span class="notranslate">Enable or disable texture filtering (<span class="inline">true</span> / <span class="inline">false</span>)</td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">if gpu_get_texrepeat()<br />
     {<br />
         gpu_set_texrepeat(false);<br />
@@ -46,18 +46,18 @@
     {<br />
         gpu_set_texrepeat(true);<br />
     }</p>
-  <p>The above code checks to see if texture repeating is on or off and switches it accordingly.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior comprueba si la repetición de la textura está activada o desactivada y la cambia en consecuencia.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GPU_Control.htm">GPU Control</a></div>
-        <div style="float:right">Next: <a href="gpu_set_texrepeat_ext.htm">gpu_set_texrepeat_ext</a></div>
+        <div style="float:left">Atrás: <a href="GPU_Control.htm">Control de la GPU</a></div>
+        <div style="float:right">Siguiente: <a href="gpu_set_texrepeat_ext.htm"><span class="notranslate">gpu_set_texrepeat_ext</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_texrepeat

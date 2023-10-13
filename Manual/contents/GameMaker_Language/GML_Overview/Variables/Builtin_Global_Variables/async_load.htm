@@ -6,7 +6,7 @@
   <title>async_load</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the async_load variable" />
   <meta name="rh-index-keywords" content="async_load" />
@@ -15,17 +15,17 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>async_load</h1>
-  <p>This variable is <b>global</b> in scope and is used to hold a <a href="../../../GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS map</a> when used in the <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events.htm">Asynchronous Events</a>, and -1 at all other times. The actual contents of the DS map will depend on the type of asynchronous event <a class="glossterm" data-glossterm="callback" href="#">callback</a>, as well as the function that was used to trigger the event, so refer to the individual pages for those events for full details of all the possible DS map contents.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Esta variable es de alcance <b>global</b> y se utiliza para mantener un mapa <a href="../../../GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS</a> cuando se utiliza en los <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events.htm">Eventos</a> Asíncronos, y -1 en todas las demás ocasiones. El contenido real del mapa DS dependerá del tipo de <a class="glossterm" data-glossterm="llamada de retorno" href="#">llamada de retorno</a> del evento asíncrono, así como de la función que se utilizó para desencadenar el evento, así que consulte las páginas individuales de esos eventos para obtener detalles completos de todos los posibles contenidos del mapa DS.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">async_load;</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_ID_DS_Map">DS Map ID</span></p>
-  <p> </p>
-  <h4>Extended Example:</h4>
+  <p> </p>
+  <h4>Ejemplo ampliado:</h4>
   <p class="code">sprite =  sprite_add(&quot;site.com/path/image.png&quot;, 16, true, true, 0, 0);</p>
-  <p>The above code would be called in an event to load a sprite from an external URL. This would then trigger the <strong>Image Loaded</strong> Asynchronous Event, where you would parse the <span class="inline">async_load</span> map:</p>
+  <p>El código anterior sería llamado en un evento para cargar un <span class="notranslate">sprite</span> desde una URL externa. Esto desencadenaría el evento asíncrono <strong>Image Loaded</strong>, donde se analizaría el mapa <span class="inline">async_load</span>:</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == sprite<br />
     {<br />
         if (ds_map_find_value(async_load, &quot;status&quot;) &gt;= 0)<br />
@@ -33,18 +33,18 @@
             sprite_index = sprite;<br />
         }<br />
     }</p>
-  <p>The above code will first check the ID of the <span class="inline">async_load</span> map, then check the status of the callback. If the value is greater than or equal to 0 (signalling success) the result from the callback will then be used to set the sprite index of the instance to the newly loaded image.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior comprobará primero el ID del mapa <span class="inline">async_load</span>, y luego comprobará el estado de la devolución de llamada. Si el valor es mayor o igual a 0 (señalando el éxito), el resultado de la devolución de llamada se utilizará para establecer el índice <span class="notranslate">sprite</span> de la instancia a la imagen recién cargada.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Global_Variables.htm">Global Variables</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="../../../GML_Reference/Game_Input/Gesture_Input/event_data.htm">event_data</a></div>
+        <div style="float:left">Atrás: <a href="../Global_Variables.htm">Variables globales</a></div>
+        <div style="float:right">Siguiente: <a data-xref="{title}" href="../../../GML_Reference/Game_Input/Gesture_Input/event_data.htm">event_data</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 async_load
