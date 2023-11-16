@@ -6,7 +6,7 @@
   <title>show_question_async</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for show_question_async" />
   <meta name="rh-index-keywords" content="show_question_async" />
@@ -15,34 +15,34 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>show_question_async</h1>
-  <p>This function opens a window and displays the question you define in the function to the user. This is an asynchronous function, and as such <span data-keyref="GameMaker Name">GameMaker</span> does <i>not</i> block the device it is being run on while waiting for an answer, but rather keeps on running events as normal. The function has two buttons that show &quot;Yes&quot; and &quot;No&quot;, and once the user has pressed one, an asynchronous <b>Dialog</b> event is triggered which, for the duration of that event <i>only</i>, will have a DS map stored in the variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>.</p>
-  <p>This map will contain the two keys, &quot;<strong>id</strong>&quot;, and &quot;<strong>status</strong>&quot;. &quot;id&quot; is the value that was returned by the function when called, while the &quot;status&quot; will be either <span class="inline">true</span> or <span class="inline">false</span> for &quot;Yes&quot; and &quot;No&quot; respectively.</p>
-  <p class="note"><strong><em><span class="note">NOTE</span></em></strong><em> This function is <span data-keyref="Dialog for debug only">for <strong>debugging and testing use only</strong> and should not be used in released games. For that purpose you should create a custom user interface to receive input from players so that you have complete control over how the dialogs look and behave.</span></em></p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Esta función abre una ventana y muestra al usuario la pregunta que se define en la función. Esta es una función asíncrona, y como tal <span data-keyref="GameMaker Name">GameMaker</span> <i>no</i> bloquea el dispositivo en el que se está ejecutando mientras espera una respuesta, sino que sigue ejecutando eventos de forma normal. La función tiene dos botones que muestran &quot;Sí&quot; y &quot;No&quot;, y una vez que el usuario ha pulsado uno, se dispara un evento asíncrono <b>de Diálogo</b> que, <i>sólo</i> mientras dure ese evento, tendrá un mapa DS almacenado en la variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>.</p>
+  <p>Este mapa contendrá las dos claves, &quot;<strong>id</strong>&quot;, y &quot;<strong>status</strong>&quot;. &quot;id&quot; es el valor que fue devuelto por la función cuando se llamó, mientras que el &quot;status&quot; será <span class="inline">true</span> o <span class="inline">false</span> para &quot;Sí&quot; y &quot;No&quot; respectivamente.</p>
+  <p class="note"><strong><em><span class="note">NOTA</span></em></strong><em> Esta función es <span data-keyref="Dialog for debug only"> <strong>sólo</strong> para <strong>uso de depuración y pruebas</strong></span>y no debe ser utilizada en juegos lanzados. Para ello, debe crear una interfaz de usuario personalizada para recibir las entradas de los jugadores, de modo que tenga un control completo sobre el aspecto y el comportamiento de los diálogos.</em></p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">show_question_async(string);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>string</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The question to ask to the user.</td>
+        <td><span class="notranslate">string</span></td>
+        <td><span data-keyref="Type_String">Cadena</span></td>
+        <td><span class="notranslate">The question to ask to the user.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_ID_Async_Event">Async Request ID</span></p>
-  <p> </p>
-  <h4>Extended Example:</h4>
-  <p>The <b>left mouse press event</b> (for example) of the object that is showing the message would have the following code:</p>
+  <p> </p>
+  <h4>Ejemplo ampliado:</h4>
+  <p>El <b>evento de pulsación del botón izquierdo del ratón</b> (por ejemplo) del <span class="notranslate">object</span> que está mostrando el mensaje tendría el siguiente código:</p>
   <p class="code">msg = show_question_async(&quot;Do you want to buy some armour for &quot; + string(armour[0, 5]) + &quot;coins?&quot;);</p>
-  <p>The above will show a question with the given string, requesting that the user press either &quot;yes&quot; or &quot;No&quot;. The function id is stored in the variable &quot;msg&quot; and will be used in the <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Dialog.htm">Asynchronous Dialog event</a> as shown below:</p>
+  <p>Lo anterior mostrará una pregunta con el <span class="notranslate">string</span> dado, solicitando que el usuario presione &quot;sí&quot; o &quot;no&quot;. El id de la función se almacena en la variable &quot;msg&quot; y se utilizará en el <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Dialog.htm">evento de diálogo asíncrono</a> como se muestra a continuación:</p>
   <p class="code">var i_d, stat;<br />
     i_d = ds_map_find_value(async_load, &quot;id&quot;);<br />
     if i_d == msg<br />
@@ -53,18 +53,18 @@
             global.protection += armour[0,0];<br />
         }<br />
     }</p>
-  <p>The above code checks the &quot;id&quot; key of the returned <span class="inline">DS Map</span> against the value stored in the variable &quot;msg&quot;. If they are the same, it then checks to see if one of the two buttons were pressed and if it returns <span class="inline">true</span> it will then deduct a value from a variable and add a value to a global variable too.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior comprueba la clave &quot;id&quot; del <span class="inline">DS Map</span> devuelto con el valor almacenado en la variable &quot;msg&quot;. Si son iguales, entonces comprueba si uno de los dos botones fue pulsado y si devuelve <span class="inline">true</span> entonces deducirá un valor de una variable y añadirá un valor a una variable global también.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Dialog.htm">Dialog</a></div>
-        <div style="float:right">Next: <a href="shop_leave_rating.htm">shop_leave_rating</a></div>
+        <div style="float:left">Atrás: <a href="Dialog.htm">Diálogo</a></div>
+        <div style="float:right">Siguiente: <a href="shop_leave_rating.htm"><span class="notranslate">shop_leave_rating</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 show_question_async

@@ -6,7 +6,7 @@
   <title>keyboard_virtual_hide</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for keyboard_virtual_hide" />
   <meta name="rh-index-keywords" content="keyboard_virtual_hide" />
@@ -15,44 +15,44 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>keyboard_virtual_hide</h1>
-  <p>This function can be used to hide the virtual keyboard on the device running the game. Calling this function will generate a <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">System Asynchronous Event</a>, in which the <span class="inline">async_load</span> DS map will be populated with the following key/value pairs:</p>
+  <p>Esta función se puede utilizar para ocultar el teclado virtual en el dispositivo que ejecuta el juego. Al llamar a esta función se generará un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">Evento Asíncrono del Sistema</a>, en el que el mapa <span class="inline">async_load</span> DS se poblará con los siguientes pares de claves/valores:</p>
   <ul class="colour">
-    <li>&quot;<b>event_type</b>&quot; - this will be &quot;<b>virtual keyboard status</b>&quot; when triggered by virtual keyboard functions.</li>
-    <li>&quot;<b>screen_height</b>&quot; - the height of the virtual keyboard (in pixels). This will be 0 if the keyboard is invisible.</li>
-    <li>&quot;<b>keyboard_status</b>&quot; - the current status of the keyboard, returned as one of the following strings:
+    <li>&quot;<b>tipo_de_evento</b>&quot; - será &quot;<b>estado del teclado virtual</b>&quot; cuando sea activado por las funciones del teclado virtual.</li>
+    <li>&quot;<b>screen_height</b>&quot; - la altura del teclado virtual (en píxeles). Será 0 si el teclado es invisible.</li>
+    <li>&quot;<b>keyboard_status</b>&quot; - el estado actual del teclado, devuelto como una de las siguientes cadenas:
       <ul class="colour">
-        <li>&quot;hiding&quot;</li>
-        <li>&quot;hidden&quot;</li>
-        <li>&quot;showing&quot;</li>
+        <li>&quot;oculto&quot;</li>
+        <li>&quot;oculto&quot;</li>
+        <li>&quot;mostrando&quot;</li>
         <li>&quot;visible&quot;</li>
       </ul>
     </li>
   </ul>
-  <p> </p>
-  <h4>Syntax</h4>
+  <p> </p>
+  <h4>Sintaxis</h4>
   <p class="code">keyboard_virtual_hide();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">if input == true<br />
     {<br />
         input = false;<br />
         keyboard_virtual_hide();<br />
     }</p>
-  <p>The above code will hide the OS virtual keyboard if the given variable is not set to <span class="inline">false</span>.</p>
+  <p>El código anterior ocultará el teclado virtual del sistema operativo si la variable dada no está establecida en <span class="inline">false</span>.</p>
   <p><b></b></p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Virtual_Keys_And_Keyboards.htm">Virtual Keys And Keyboards</a></div>
-        <div style="float:right">Next: <a href="keyboard_virtual_status.htm">keyboard_virtual_status</a></div>
+        <div style="float:left">Atrás: <a href="Virtual_Keys_And_Keyboards.htm">Teclas y teclados virtuales</a></div>
+        <div style="float:right">Siguiente: <a href="keyboard_virtual_status.htm"><span class="notranslate">keyboard_virtual_status</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 keyboard_virtual_hide

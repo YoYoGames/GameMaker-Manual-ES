@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>persistent</title>
+  <title>persistente</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the variable persistent" />
   <meta name="rh-index-keywords" content="persistent" />
@@ -14,34 +14,34 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>persistent</h1>
-  <p>This variable can be read to find out if the instance is flagged as <span class="inline">persistent</span> or not, or it can used to set persistence to <span class="inline">true</span> (persistent) or <span class="inline">false</span> (not persistent) for the instance. A persistent instance is one that will be &quot;carried over&quot; from room to room, meaning (for example) that it only has to be created once at the start of the game and it will be present in all further rooms. Care should be taken with persistence as it is easy to lose track of persistent instances which can lead to problems later in the development of the game.</p>
-  <p>When you create an instance with persistence enabled in a room, this variable will be set to <span class="inline">true</span> and it will be assigned a layer or a depth (depending on which function you used to create the instance of the object). When the room is changed, and if the following room does <i>not</i> have a layer with the same name or depth as the one assigned, then a new layer will be created for the instance that is persisting across the rooms. If you gave a named layer when the instance was created, then the new layer will also be named the same as original layer, while if you assigned a depth to the instance then the new layer will be named &quot;<span class="inline">_layer_XXX</span>&quot;, where &quot;XXX&quot; is a hex value used to give the layer a unique name. These layers will be removed from the room on Room End. Another thing to note about layers and persistent instances is that if you have assigned the instance a named layer on creation, and there is another layer in the following rooms with the same name, then the persisted instance will be assigned to the layer with the same name <i>regardless of the depth of the layer</i>. Finally, if a persisted instance moves to a room with a layer at the same depth as the instance was created on, it will <i>not</i> be assigned to this layer, but instead a new layer will be created at the same depth (following the naming convention explained previously).</p>
-  <p>A persistent object will still have its <b>Game Start</b>, <b>Game End</b>, <b>Room Start</b> and <b>Room End</b> events triggered, however if you restart the game (with, for example, the <span class="inline">game_restart()</span> function) all persistent objects will be removed and only exist when created again by the game. Also note that if you deactivate a persistent object, it will no longer pass from one room to another unless re-activated before the Room End event is triggered.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>persistente</h1>
+  <p>Esta variable puede leerse para saber si la instancia está marcada como <span class="inline">persistent</span> o no, o puede usarse para establecer la persistencia a <span class="inline">true</span> (persistente) o <span class="inline">false</span> (no persistente) para la instancia. Una instancia persistente es aquella que será &quot;llevada&quot; de <span class="notranslate">room</span> a <span class="notranslate">room</span>, lo que significa (por ejemplo) que sólo tiene que ser creada una vez al comienzo del juego y estará presente en todos los demás <span class="notranslate">rooms</span>. Hay que tener cuidado con la persistencia, ya que es fácil perder la pista de las instancias persistentes, lo que puede dar lugar a problemas más adelante en el desarrollo del juego.</p>
+  <p>Cuando se crea una instancia con persistencia habilitada en un <span class="notranslate">room</span>, esta variable se establecerá en <span class="inline">true</span> y se le asignará una capa o una profundidad (dependiendo de la función que se haya utilizado para crear la instancia del <span class="notranslate">object</span>). Cuando se cambie el <span class="notranslate">room</span>, y si el siguiente <span class="notranslate">room</span> <i>no</i> tiene una capa con el mismo nombre o profundidad que la asignada, entonces se creará una nueva capa para la instancia que está persistiendo a través del <span class="notranslate">rooms</span>. Si se asignó una capa con nombre cuando se creó la instancia, entonces la nueva capa también se llamará igual que la capa original, mientras que si se asignó una profundidad a la instancia, entonces la nueva capa se llamará &quot;<span class="inline">_layer_XXX</span>&quot;, donde &quot;XXX&quot; es un valor hexadecimal utilizado para dar a la capa un nombre único. Estas capas se eliminarán de la <span class="notranslate">room</span> en <span class="notranslate">Room</span> Fin. Otra cosa a tener en cuenta sobre las capas y las instancias persistentes es que si has asignado a la instancia una capa con nombre en la creación, y hay otra capa en el siguiente <span class="notranslate">rooms</span> con el mismo nombre, entonces la instancia persistente será asignada a la capa con el mismo nombre independientemente de <i>la profundidad de la capa</i>. Por último, si una instancia persistente se mueve a un <span class="notranslate">room</span> con una capa con la misma profundidad en la que se creó la instancia, <i>no</i> se asignará a esta capa, sino que se creará una nueva capa con la misma profundidad (siguiendo la convención de nombres explicada anteriormente).</p>
+  <p>Un <span class="notranslate">object</span> persistente seguirá teniendo sus eventos de <b>Inicio de Juego</b>, Fin de <b>Juego</b>, <b>Inicio de Sala</b> y Fin <b>de Sala</b> disparados, sin embargo si reinicias el juego (con, por ejemplo, la función <span class="inline">game_restart()</span> ) todos los <span class="notranslate">objects</span> persistentes serán eliminados y sólo existirán cuando sean creados de nuevo por el juego. Ten en cuenta también que si desactivas un <span class="notranslate">object</span> persistente, ya no pasará de un <span class="notranslate">room</span> a otro a no ser que se reactive antes de que se dispare el evento <span class="notranslate">Room</span> End.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">persistent;</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">if !persistent<br />
     {<br />
         persistent = true;<br />
     }</p>
-  <p>The above code will check the instance to see if persistence is flagged as <span class="inline">false</span> and if the instance is NOT persistent the persistence flag is set to <span class="inline">true</span>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior comprobará la instancia para ver si la persistencia está marcada como <span class="inline">false</span> y si la instancia NO es persistente la persistencia <span class="notranslate">flag</span> se establece en <span class="inline">true</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Instance_Variables.htm">Instance Variables</a></div>
-        <div style="float:right">Next: <a href="depth.htm">depth</a></div>
+        <div style="float:left">Volver: <a href="Instance_Variables.htm">Instance Variables</a></div>
+        <div style="float:right">Siguiente: <a href="depth.htm"><span class="notranslate">depth</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 persistent

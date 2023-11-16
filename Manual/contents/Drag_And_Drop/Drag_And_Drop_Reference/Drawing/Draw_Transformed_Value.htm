@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Draw Transformed Value</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>Dibujar el valor transformado</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Draw Transformed Value action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Draw Transformed Value" />
@@ -14,63 +14,69 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Draw Transformed Value Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Transformed_Value.png" /> Draw Transformed Value</h1>
-  <p>With this action you can draw a string caption and/or a variable or value to the screen. The caption argument is a string that you wish to add preceding the value, and can be left blank if required, and the value can be a variable, a fixed value, or another string - in which case it should be enclosed in quotes, and can also be left blank if required. You then give the position where the string should be drawn, either as an absolute position or as a position relative to the instance drawing the text. Additionally you can set the scale of the text, stretching it either along the horizontal or vertical axis, as well as the rotation (angles for rotating text are anti-clockwise, so setting it to 90° will rotate it to the left and -90° to the right). Scaling is done by the factor given, so a scale of 0.5 will <i>half</i> the width of the text and a scale of 2 will double the width, with 1 being the default value for no scaling. Note that how the text will look when drawn will depend on the font used, the colour used, and the alignment. All these things can be changed before drawing, as shown in the example below.<b></b><b></b></p>
-  <div data-conref="../../../assets/snippets/Note_Action_Only_For_Draw_Events.hts"> </div>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Draw Transformed Value Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Draw_Transformed_Value.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Dibujar el valor transformado</h1>
+  <p>Con esta acción puede dibujar en la pantalla un título de <span class="notranslate">string</span> y/o una variable o un valor. El argumento "caption" es un <span class="notranslate">string</span> que desea añadir antes del valor, y puede dejarse en blanco si es necesario, y el valor puede ser una variable, un valor fijo o
+    otro <span class="notranslate">string</span> - en cuyo caso debe ir entre comillas, y también puede dejarse en blanco si es necesario. A continuación, indique la posición en la que debe dibujarse el <span class="notranslate">string</span>, ya sea como posición absoluta o como posición relativa a la instancia que dibuja el
+    texto. Además, puede establecer la escala del texto, estirándolo a lo largo del eje horizontal o vertical, así como la rotación (los ángulos para rotar el texto son en sentido contrario a las agujas del reloj, por lo que si se establece a 90° se girará a la izquierda y -90° a la
+    derecha). La escala se realiza por el factor dado, por lo que una escala de 0,5 reducirá el ancho del texto <i>a la mitad</i> y una escala de 2 duplicará el ancho, siendo 1 el valor por defecto para no escalar. Tenga en cuenta que el aspecto del texto dependerá de
+    el <span class="notranslate">font</span> utilizado, el color utilizado y la alineación. Todas estas cosas pueden cambiarse antes de dibujar, como se muestra en el ejemplo siguiente.<b></b></p>
+  <p class="note"><b></b><b>NOTA</b>: Esta acción es sólo para su uso en los diversos <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">eventos de sorteo</a>, y no dibujará nada si se utiliza en otro lugar.</p>
+  <p> </p>
+  <p> </p>
+  <h4>Sintaxis de la acción:</h4>
+  <p><img alt="Draw Transformed Value Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Transformed_Value.png" /></p>
+  <h4>Argumentos:</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>Caption</td>
-        <td>The caption to draw (a string), can be left blank</td>
+        <td><span class="notranslate">Caption</span></td>
+        <td>La leyenda a dibujar (a <span class="notranslate">string</span>), puede dejarse en blanco</td>
       </tr>
       <tr>
-        <td>Value</td>
-        <td>The value to draw (real, variable or string)</td>
+        <td><span class="notranslate">Value</span></td>
+        <td>El valor a dibujar (real, variable o <span class="notranslate">string</span>)</td>
       </tr>
       <tr>
-        <td>x</td>
-        <td>The x position to draw at</td>
+        <td><span class="notranslate">x</span></td>
+        <td>La posición x a dibujar</td>
       </tr>
       <tr>
-        <td>y</td>
-        <td>The y position to draw at</td>
+        <td><span class="notranslate">y</span></td>
+        <td>La posición y para dibujar</td>
       </tr>
       <tr>
-        <td>xscale</td>
-        <td>The x (horizontal) scale factor, default is 1</td>
+        <td><span class="notranslate">xscale</span></td>
+        <td>El factor de escala x (horizontal), por defecto es 1</td>
       </tr>
       <tr>
-        <td>yscale</td>
-        <td>The y (vertical) scale factor, default is 1</td>
+        <td><span class="notranslate">yscale</span></td>
+        <td>El factor de escala y (vertical), por defecto es 1</td>
       </tr>
       <tr>
-        <td>Rotation</td>
-        <td>The rotation angle for drawing the text</td>
+        <td><span class="notranslate">Rotation</span></td>
+        <td>El ángulo de rotación para dibujar el texto</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Draw Transformed Value Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Draw_Transformed_Value.png" />The above action block code sets a colour, a font and then aligns the text to draw from the center before actually drawing the &quot;current_time&quot; value along with the caption &quot;TIME: &quot;, scaled to be double the size and &quot;vibrating&quot; slightly due to the random angle change.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p><img>El código del bloque de acción anterior establece un color, un <span class="notranslate">font</span> y luego alinea el texto
+    para que se dibuje desde el centro antes de dibujar realmente el valor de &quot;current_time&quot; junto con la leyenda &quot;TIME: &quot;, escalada al doble de tamaño y &quot;vibrando&quot; ligeramente debido al cambio de ángulo aleatorio.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Drawing_Actions.htm">Drawing Actions</a></div>
-        <div style="float:right">Next: <a href="Draw_Sprite.htm">Draw Sprite</a></div>
+        <div style="float:left">Atrás: <a href="Drawing_Actions.htm">Acciones de dibujo</a></div>
+        <div style="float:right">Siguiente: <a href="Draw_Sprite.htm">Dibujar Sprite</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Draw Transformed Value

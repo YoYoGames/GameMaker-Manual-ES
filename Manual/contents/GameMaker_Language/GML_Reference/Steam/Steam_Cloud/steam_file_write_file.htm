@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_file_write_file</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_file_write_file" />
+  <meta name="rh-index-keywords" content="steam_file_write_file" />
+  <meta name="search-keywords" content="steam_file_write_file" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_file_write_file</h1>
+  <p>Con esta función puede copiar el contenido de un archivo guardado localmente a un archivo sincronizado con la nube <span class="notranslate">Steam</span>. El archivo local <i>debe existir</i> antes de usar esta función, y devolverá un valor de 0 si falla por cualquier razón y
+    un valor superior a 0 si tiene éxito.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
+  <p class="code">steam_file_write_file(steam_filename, local_filename);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argumento</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">steam_filename</span></td>
+        <td>El archivo de <span class="notranslate">Steam</span> Cloud para copiar.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">local_filename</span></td>
+        <td>El archivo local que se utilizará para copiar.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code">real</p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p class="code">steam_file_write_file(&quot;rm_koala.png&quot;, &quot;Koala2.png&quot;);</p>
+  <p>El código anterior copiará el contenido del archivo &quot;Koala2.png&quot; al archivo &quot;rm_koala.png&quot; de <span class="notranslate">Steam</span> Cloud.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Atrás: <a href="Steam_Cloud.htm">Nube de vapor</a></div>
+        <div style="float:right">Siguiente: <a href="steam_file_read.htm"><span class="notranslate">steam_file_read</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_file_write_file
+-->
+  <!-- TAGS
+steam_file_write_file
+-->
+</body>
+</html>

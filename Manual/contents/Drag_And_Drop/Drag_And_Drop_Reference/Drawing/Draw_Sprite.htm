@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Draw Sprite</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>Dibujar Sprite</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Draw Sprite action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Draw Sprite" />
@@ -14,52 +14,56 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Draw Sprite Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Sprite.png" width="32" /> Draw Sprite</h1>
-  <p>This action will draw a sprite somewhere in the room. You specify the sprite, the position (either an absolute position within the room, or a relative position to the instance doing the drawing) and the animation frame of the sprite, if it has multiple frames (note that image frames are numbered from 0 upwards). If you have an animated sprite and you want it to draw the frames as if it was assigned to the object, then use -1 for the frame index or the built in instance variable <span class="inline">image_index</span>, but note that if the instance has no sprite assigned then it will not animate, and if the sprite assigned has a different number of frames to the one being drawn then the sprite will be drawn with extra frames or missed frames.</p>
-  <p class="note"><b><span data-conref="../../../assets/snippets/Tag_important.hts"> </span> </b>This action will not draw the sprite transformed, even if you have changed the image blend or scale. For that see the action <a href="Draw_Sprite_Transformed.htm">Draw Sprite Transformed</a>.<b></b></p>
-  <div data-conref="../../../assets/snippets/Note_Action_Only_For_Draw_Events.hts"> </div>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Draw Sprite Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Draw_Sprite.png" style="cursor: nwse-resize;" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Dibujar Sprite</h1>
+  <p>Esta acción dibujará un <span class="notranslate">sprite</span> en algún lugar de <span class="notranslate">room</span>. Usted especifica el <span class="notranslate">sprite</span>, la posición (ya sea una posición absoluta dentro de <span class="notranslate">room</span>, o una posición relativa a la instancia que hace el dibujo) y el marco de animación del <span class="notranslate">sprite</span>, si tiene múltiples
+    cuadros (tenga en cuenta que los cuadros de la imagen se numeran de 0 en adelante). Si tiene un <span class="notranslate">sprite</span> animado y quiere que dibuje los fotogramas como si estuviera asignado al <span class="notranslate">object</span>, entonces utilice -1 para el índice de fotogramas o la variable de instancia incorporada <span class="inline">image_index</span>,
+    pero tenga en cuenta que si la instancia no tiene asignado <span class="notranslate">sprite</span> entonces no se animará, y si el <span class="notranslate">sprite</span> asignado tiene un número de fotogramas diferente al que se está dibujando entonces el <span class="notranslate">sprite</span> se dibujará con fotogramas extra o se perderá.</p>
+  <p class="note"><b>IMPORTANTE: </b>Esta acción no dibujará el <span class="notranslate">sprite</span> transformado, aunque haya cambiado la mezcla o la escala de la imagen. Para ello vea la acción <a href="Draw_Sprite_Transformed.htm">Dibujar <span class="notranslate">Sprite</span> </a> transformado.</p>
+  <p class="note"><b></b><b>NOTA</b>: Esta acción es sólo para su uso en los diversos <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">eventos de sorteo</a>, y no dibujará nada si se utiliza en otro lugar.</p>
+  <p> </p>
+  <p> </p>
+  <h4>Sintaxis de la acción:</h4>
+  <p><img alt="Draw Sprite Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Sprite.png" width="32" /></p>
+  <h4>Argumentos:</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>Sprite</td>
-        <td>The sprite to draw</td>
+        <td><span class="notranslate">Sprite</span></td>
+        <td>El <span class="notranslate">sprite</span> para dibujar</td>
       </tr>
       <tr>
-        <td>x</td>
-        <td>The x position to draw at</td>
+        <td><span class="notranslate">x</span></td>
+        <td>La posición x a dibujar</td>
       </tr>
       <tr>
-        <td>y</td>
-        <td>The y position to draw at</td>
+        <td><span class="notranslate">y</span></td>
+        <td>La posición y para dibujar</td>
       </tr>
       <tr>
-        <td>Frame Index</td>
-        <td>The frame index to draw</td>
+        <td><span class="notranslate">Frame Index</span></td>
+        <td>El índice del cuadro a dibujar</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Draw Sprite Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Draw_Self.png" />The above action block code draws a &quot;shadow&quot; sprite at the same relative position as the instance, then draws the instance sprite over the top.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p><img>El código del bloque de acción anterior dibuja una &quot;sombra&quot; <span class="notranslate">sprite</span> en la misma posición relativa que la
+    y luego dibuja la instancia <span class="notranslate">sprite</span> encima.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Drawing_Actions.htm">Drawing Actions</a></div>
-        <div style="float:right">Next: <a href="Draw_Sprite_Transformed.htm">Draw Sprite Transformed</a></div>
+        <div style="float:left">Atrás: <a href="Drawing_Actions.htm">Acciones de dibujo</a></div>
+        <div style="float:right">Siguiente: <a href="Draw_Sprite_Transformed.htm">Dibujar <span class="notranslate">Sprite</span> Transformado</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Draw Sprite

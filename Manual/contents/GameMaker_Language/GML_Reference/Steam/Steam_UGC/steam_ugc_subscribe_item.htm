@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_ugc_subscribe_item</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_ugc_subscribe_item" />
+  <meta name="rh-index-keywords" content="steam_ugc_subscribe_item" />
+  <meta name="search-keywords" content="steam_ugc_subscribe_item" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_ugc_subscribe_item</h1>
+  <p>Esta función puede utilizarse para suscribirse a un elemento UGC. Se suministra el ID del archivo publicado y luego la función devuelve un valor de ID asíncrono único que puede utilizarse para comprobar cuándo se ha descargado el elemento suscrito en el <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">evento Steam Async</a>.
+    Este evento tendrá el mapa <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> mapa DS que se rellenará con los siguientes pares clave/valor:</p>
+  <ul class="colour">
+    <li>&quot;<b>id</b>&quot; - El ID asíncrono devuelto por la función que desencadenó el evento</li>
+    <li>&quot;<b>resultado</b>&quot; - El resultado de la operación (un valor real). Será la constante <span class="notranslate">GML</span> <tt>ugc_result_success</tt> o algún otro número real. Por lo tanto, debe comprobar esta constante para asegurarse de que la llamada ha tenido éxito, y si
+      de lo contrario algo no ha funcionado correctamente. El resto de los posibles valores devueltos se muestran como resultado del valor &quot;EResult&quot; de <span class="notranslate">Steam</span> y deberías ver <tt>steamclientpublic.h</tt> en las cabeceras del SDK para los 89 valores posibles.</li>
+    <li>&quot;<b>event_type</b>&quot; - El <span class="notranslate">string</span> &quot;<b>ugc_subscribe_item</b>&quot;.</li>
+    <li>&quot;<b>published_file_id</b>&quot; - El ID único del elemento publicado.</li>
+  </ul>
+  <p> </p>
+  <h4>Sintaxis:</h4>
+  <p class="code">steam_ugc_subscribe_item(published_file_id);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argumento</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">published_file_id</span></td>
+        <td>El ID de archivo único para el UGC a suscribir.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code">Async ID</p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p class="code">steam_sub = steam_ugc_subscribe_item(global.pubFileID);</p>
+  <p>El código anterior suscribirá (y descargará) el elemento con el ID de archivo almacenado en la variable global &quot;pubFileID&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Atrás: <a href="Steam_UGC.htm">UGC</a></div>
+        <div style="float:right">Siguiente: <a href="steam_ugc_unsubscribe_item.htm"><span class="notranslate">steam_ugc_unsubscribe_item</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_ugc_subscribe_item
+-->
+  <!-- TAGS
+steam_ugc_subscribe_item
+-->
+</body>
+</html>

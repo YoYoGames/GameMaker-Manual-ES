@@ -16,11 +16,11 @@
 </head>
 <body>
   <h1 id="h">video_open</h1>
-  <p>This function opens a video file using the path specified. The path can refer to a file in the <a href="../../../../Settings/Included_Files.htm">Included Files</a> of your project, a file locally present on the user&#39;s device, or a URL for loading a file from the internet (which may not work on all platforms).</p>
-  <p>As you can only load one video at a time, this function loads the specified video into the only available &quot;video slot&quot;, which is then manipulated via the other <a href="Videos.htm">Video functions</a>.</p>
-  <p>There are asynchronous callbacks associated with video playback. See <a data-xref="{text}" href="Videos.htm#h">Async Callbacks</a> for more information.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Esta función abre un archivo de vídeo utilizando el <span class="notranslate">path</span> especificado. El <span class="notranslate">path</span> puede referirse a un archivo en los <a href="../../../../Settings/Included_Files.htm">Archivos Incluidos</a> de su proyecto, a un archivo presente localmente en el dispositivo del usuario o a una URL para cargar un archivo desde Internet (que puede no funcionar en todas las plataformas).</p>
+  <p>Como sólo se puede cargar un vídeo a la vez, esta función carga el vídeo especificado en la única &quot;ranura de vídeo&quot; disponible, que luego se manipula a través de las otras <a href="Videos.htm">funciones de Vídeo</a>.</p>
+  <p>Existen callbacks asíncronos asociados a la reproducción de vídeo. Consulte <a data-xref="{text}" href="Videos.htm#h">Devoluciones</a> de llamada asíncronas para obtener más información.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">video_open(path);</p>
   <table>
     <colgroup>
@@ -30,34 +30,34 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>path</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>Path to the video file</td>
+        <td><span class="notranslate">path</span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Cadena</a></span></td>
+        <td><span class="notranslate">Path to the video file</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">video_open(&quot;splash.mp4&quot;);</p>
-  <p>The code above loads <span class="inline2">splash.mp4</span> from the Included Files of the game.</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p class="code">my_video = video_open(&quot;splash.mp4&quot;);</p>
+  <p>El código anterior carga <span class="inline2">splash.mp4</span> desde los Archivos Incluidos del juego.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Videos.htm">Video Playback</a></div>
-        <div>Next: <a data-xref="{title}" href="video_close.htm">video_close</a></div>
+        <div>Atrás: <a data-xref="{title}" href="Videos.htm">Reproducción de vídeo</a></div>
+        <div>Siguiente: <a data-xref="{title}" href="video_close.htm">video_close</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 video_open

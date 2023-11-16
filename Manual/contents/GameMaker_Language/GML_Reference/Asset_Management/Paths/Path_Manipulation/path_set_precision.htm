@@ -6,7 +6,7 @@
   <title>path_set_precision</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function path_set_precision" />
   <meta name="rh-index-keywords" content="path_set_precision" />
@@ -15,47 +15,47 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>path_set_precision</h1>
-  <p>With this function you can change the &quot;smoothness&quot; of a path. This value must be between 1 and 8, with a low value creating straighter edges with sharper curves between points, while a higher value will round the points and make the path a lot more &quot;curvy&quot;. Note that this function will have no visible effect if the path has not been set to smooth in the path editor or using the function <a href="path_set_kind.htm"><span class="inline">path_set_kind()</span></a>. <strong>This function changes the actual path asset</strong>, and so will permanently affect how the path is used by all instances in the game from the moment the function is used until the end of the game. If this is not what you require, then you should use a function like <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> to create a copy of the path first, then call this function on the duplicated asset (don&#39;t forget to call <span class="inline"><a href="path_delete.htm">path_delete()</a></span> on the asset when it is no longer required).</p>
+  <p>Con esta función puede cambiar la &quot;suavidad&quot; de un <span class="notranslate">path</span>. Este valor debe estar entre 1 y 8, con un valor bajo creando bordes más rectos con curvas más pronunciadas entre los puntos, mientras que un valor más alto redondeará los puntos y hará que el <span class="notranslate">path</span> sea mucho más &quot;curvo&quot;. Tenga en cuenta que esta función no tendrá ningún efecto visible si el <span class="notranslate">path</span> no ha sido configurado como suave en el editor <span class="notranslate">path</span> o utilizando la función <a href="path_set_kind.htm"><span class="inline">path_set_kind()</span></a>. <strong>Esta función cambia el activo real <span class="notranslate">path</span> </strong>, y por lo tanto afectará permanentemente la forma en que el <span class="notranslate">path</span> es utilizado por todas las instancias en el juego desde el momento en que la función se utiliza hasta el final del juego. Si esto no es lo que necesitas, entonces deberías usar una función como <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> para crear una copia del <span class="notranslate">path</span> primero, y luego llamar a esta función en el <span class="notranslate">asset</span> duplicado (no olvides llamar a <span class="inline"><a href="path_delete.htm">path_delete()</a></span> en el <span class="notranslate">asset</span> cuando ya no sea necesario).</p>
   <p><img alt="Path Precision differences example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Paths/setprecision.png" /></p>
-  <h4>Syntax:</h4>
+  <h4>Sintaxis:</h4>
   <p class="code">path_set_precision(index, prec);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>index</td>
-        <td><span data-keyref="Type_Asset_Path">Path Asset</span></td>
-        <td>The index of the path to change.</td>
+        <td><span class="notranslate">index</span></td>
+        <td><span data-keyref="Type_Asset_Path">Activo de la ruta</span></td>
+        <td><span class="notranslate">The index of the path to change.</span></td>
       </tr>
       <tr>
-        <td>prec</td>
+        <td><span class="notranslate">prec</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The precision of the path. Must be an integer between 1 and 8.</td>
+        <td><span class="notranslate">The precision of the path. Must be an integer between 1 and 8.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">path_set_precision(pth_Patrol, 2);</p>
-  <p>This will set the precision of the given path to 2.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Esto establecerá la precisión de la ruta dada a 2.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Path_Manipulation.htm">Path Manipulation</a></div>
-        <div style="float:right">Next: <a href="path_shift.htm">path_shift</a></div>
+        <div style="float:left">Atrás: <a href="Path_Manipulation.htm">Manipulación del camino</a></div>
+        <div style="float:right">Siguiente: <a href="path_shift.htm"><span class="notranslate">path_shift</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 path_set_precision

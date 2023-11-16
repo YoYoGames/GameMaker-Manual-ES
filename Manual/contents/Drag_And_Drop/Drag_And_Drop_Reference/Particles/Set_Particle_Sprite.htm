@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Set Particle Sprite</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>Establecer Sprite de Partículas</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Set Particle Sprite action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Set Particle Sprite" />
@@ -14,43 +14,45 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Set Particle Sprite Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Sprite.png" width="32" /> Set Particle Sprite</h1>
-  <p>This action can be used to set the sprite that a particle can use when drawing. You supply the unique ID value for the type to set the sprite of (as returned when you created the type with the action <a href="Create_Particle_Type.htm">Create Particle Type</a>) and the sprite resource to use. If the sprite has sub-images, then the particle will animate through the frames at the speed set in the Image Editor for the sprite. Also note that if you set a colour value for the particle (using the <a href="Set_Particle_Colour.htm">Set Particle Colour</a> action) then this colour will be blended with the sprite used, much like setting the image blend on an instance will blend a colour with the instance sprite (use white for no blending).</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> If you use this action then you should <b>not</b> use the action <a href="Set_Particle_Shape.htm">Set Particle Shape</a> as you can only have a sprite <b>or</b> a shape, but not both.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Set Particle Sprite Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Set_Particle_Sprite.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Establecer Sprite de Partículas</h1>
+  <p>Esta acción puede utilizarse para establecer el <span class="notranslate">sprite</span> que una partícula puede utilizar al dibujar. Se proporciona el valor de identificación único del tipo que se va a establecer en <span class="notranslate">sprite</span> (tal y como se devolvió cuando se creó el tipo con la acción <a href="Create_Particle_Type.htm">Crear tipo de partícul</a>a)
+    y el recurso <span class="notranslate">sprite</span> a utilizar. Si el <span class="notranslate">sprite</span> tiene sub-imágenes, entonces la partícula se animará a través de los cuadros a la velocidad establecida en el Editor de Imágenes para el <span class="notranslate">sprite</span>. También tenga en cuenta que si usted establece un valor de color para la partícula (utilizando la acción <a href="Set_Particle_Colour.htm">Establecer Color de la Partícula</a> ) entonces este color se mezclará con el <span class="notranslate">sprite</span> utilizado, al igual que el establecimiento de la mezcla de la imagen en una instancia se mezclará un color con la instancia <span class="notranslate">sprite</span> (utilice el blanco para no mezclar).</p>
+  <p class="note"><b>NOTA</b>: Si utiliza esta acción, <b>no</b> debe utilizar la acción <a href="Set_Particle_Shape.htm">Establecer forma de partícula</a>, ya que sólo puede tener una <span class="notranslate">sprite</span> <b>o</b> una forma, pero no ambas.</p>
+  <p> </p>
+  <h4>Sintaxis de la acción:</h4>
+  <p><img alt="Set Particle Sprite Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Sprite.png" width="32" /></p>
+  <h4>Argumentos:</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>Type</td>
-        <td>The ID value for the type to set the sprite of</td>
+        <td><span class="notranslate">Type</span></td>
+        <td>El valor de identificación del tipo para establecer el <span class="notranslate">sprite</span> de</td>
       </tr>
       <tr>
-        <td>Sprite</td>
-        <td>The sprite to assign to the particle type</td>
+        <td><span class="notranslate">Sprite</span></td>
+        <td>El <span class="notranslate">sprite</span> para asignar al tipo de partícula</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Define Particle Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Create_Particle_Type.png" />The above action block code will create a new particle type and assign its unique ID value to a global variable. It then proceeds to set all the properties for the particle type.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p><img>El código del bloque de acción anterior creará un nuevo tipo de partícula y asignará su valor único de
+    ID a una variable global. A continuación, procede a establecer todas las propiedades del tipo de partícula.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Actions.htm">Particle Actions</a></div>
-        <div style="float:right">Next: <a href="Set_Particle_Shape.htm">Set Particle Shape</a></div>
+        <div style="float:left">Atrás: <a href="Particle_Actions.htm">Acciones de las partículas</a></div>
+        <div style="float:right">Siguiente: <a href="Set_Particle_Shape.htm">Establecer la forma de las partículas</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Particle Sprite

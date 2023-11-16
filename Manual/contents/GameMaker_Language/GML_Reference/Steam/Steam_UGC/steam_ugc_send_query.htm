@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_ugc_send_query</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_ugc_send_query" />
+  <meta name="rh-index-keywords" content="steam_ugc_send_query" />
+  <meta name="search-keywords" content="steam_ugc_send_query" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_ugc_send_query</h1>
+  <p>Esta función se puede utilizar para enviar una solicitud de consulta. Primero se define la consulta utilizando las funciones apropiadas <tt>steam_ugc_create_query_*()</tt> que devolverán un &quot;query Handle&quot;. Este "handle" se utiliza entonces para establecer los filtros etc.... antes de ser
+    antes de ser utilizado en esta función para enviar la solicitud de consulta. La función devuelve un valor único de ID asíncrono que puede utilizarse para comprobar los detalles correctamente en el <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">evento Steam Async</a>.
+    Este evento tendrá el <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> DS map que se rellenará con los siguientes pares clave/valor:</p>
+  <ul class="colour">
+    <li>&quot;<b>id</b>&quot; - El ID asíncrono devuelto por la función que desencadenó el evento</li>
+    <li>&quot;<b>resultado</b>&quot; - El resultado de la operación (un valor real). Será la constante <span class="notranslate">GML</span> <tt>ugc_result_success</tt> o algún otro número real. Por lo tanto, debe comprobar esta constante para asegurarse de que la llamada ha tenido éxito, y si
+      de lo contrario algo no ha funcionado correctamente. El resto de los posibles valores devueltos se muestran como resultado del valor &quot;EResult&quot; de <span class="notranslate">Steam</span> y deberías ver <tt>steamclientpublic.h</tt> en las cabeceras del SDK para los 89 valores posibles.</li>
+    <li>&quot;<b>event_type</b>&quot; - El <span class="notranslate">string</span> &quot;<b>ugc_query</b>&quot;</li>
+    <li>&quot;<b>num_results</b>&quot; - El número de resultados devueltos (máximo 50 )</li>
+    <li>&quot;<b>total_matching</b>&quot; - El número total de resultados coincidentes</li>
+    <li>&quot;<b>cached_data</b>&quot; - Indica si estos datos fueron recuperados del disco local <span class="notranslate">cache</span> o no (será <tt>verdadero</tt> o <tt>falso</tt>)</li>
+    <li>&quot;<b>results_list</b>&quot; - Un índice de lista DS, donde cada entrada de la lista es un índice de mapa DS que contiene detalles del artículo en particular</li>
+  </ul>
+  <p>Cuando se obtiene el evento asíncrono de tipo &quot;ugc_query&quot;, se puede analizar la lista de resultados y extraer la siguiente información de cada uno de los mapas DS (un mapa por elemento de la lista):</p>
+  <ul class="colour">
+    <li>&quot;<b>published_file_id&quot;</b>&quot; -Contiene el identificador único de archivo publicado para el elemento</li>
+    <li>&quot;<b>file_type</b>&quot; - El tipo de archivo utilizado</li>
+    <li>&quot;<b>creator_app_id</b>&quot; - El ID de <span class="notranslate">Steam</span> del creador del artículo</li>
+    <li>&quot;<b>consumer_app_id</b>&quot; - El ID de <span class="notranslate">Steam</span> del consumidor del artículo</li>
+    <li>&quot;<b>título</b>&quot; - El título del artículo</li>
+    <li>&quot;<b>descripción</b>&quot; - La descripción del artículo</li>
+    <li>&quot;<b>steam_id_owner</b>&quot; - El ID de <span class="notranslate">Steam</span> del propietario del artículo</li>
+    <li>&quot;<b>time_created</b>&quot; - La hora en que se creó el elemento por primera vez</li>
+    <li>&quot;<b>time_updated</b>&quot; - La última vez que se actualizó el elemento</li>
+    <li>&quot;<b>time_added_to_user_list</b>&quot; - La hora a la que se suscribió el elemento</li>
+    <li>&quot;<b>visibilidad</b>&quot; - La visibilidad del elemento (véase <a href="steam_ugc_set_item_visibility.htm"><tt>steam_ugc_set_item_visibility()</tt></a> para las constantes devueltas)</li>
+    <li>&quot;<b>prohibido</b>&quot; - Si el artículo ha sido prohibido<tt>(verdadero</tt>) o no<tt>(falso</tt>)</li>
+    <li>&quot;<b>accepted_for_use</b>&quot; - Si el elemento ha sido aceptado para su uso<tt>(true</tt>) o no<tt>(false</tt>)</li>
+    <li>&quot;<b>tags_truncated</b>&quot; - Versión abreviada de las etiquetas en forma de matriz</li>
+    <li>&quot;<b>tags</b>&quot; - Un <span class="notranslate">string</span> que contiene las etiquetas del artículo, cada una de ellas separada por una coma</li>
+    <li>&quot;<b>handle_file</b>&quot; - El único manejador de archivo para el elemento</li>
+    <li>&quot;<b>handle_preview_file</b>&quot; - El único handle para la vista previa de la imagen del artículo (puede usarse como argumento con <a href="steam_ugc_download.htm"><tt>steam_ugc_download()</tt></a> para descargar una imagen de vista previa)</li>
+    <li>&quot;<b>filename</b>&quot; - El nombre del archivo del artículo</li>
+    <li>&quot;<b>file_size</b>&quot; - El tamaño del archivo del artículo</li>
+    <li>&quot;<b>preview_file_size</b>&quot; - El tamaño de la imagen de vista previa</li>
+    <li>&quot;<b>url</b>&quot; - La URL completa del artículo</li>
+    <li>&quot;<b>votes_up</b>&quot; - El número de votos positivos recibidos</li>
+    <li>&quot;<b>votes_down</b>&quot; - El número de votos negativos recibidos</li>
+    <li>&quot;<b>puntuación</b>&quot; - La puntuación global del elemento</li>
+    <li>&quot;<b>account_id_owner</b>&quot; - El ID de la cuenta del propietario del ID de <span class="notranslate">Steam</span> (se puede utilizar en la función <a href="steam_ugc_create_query_user_ex.htm"><tt>steam_ugc_create_query_user_ex()</tt></a>)</li>
+  </ul>
+  <p> </p>
+  <h4>Sintaxis:</h4>
+  <p class="code">steam_ugc_send_query(ugc_query_handle);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argumento</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">ugc_query_handle</span></td>
+        <td>El mango de la consulta a enviar.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p class="code">var query_handle = steam_ugc_create_query_all(ugc_query_RankedByTrend, ugc_match_Items, 1);<br/> steam_ugc_query_add_required_tag(query_handle, &quot;RPG&quot;);<br/> steam_ugc_query_set_return_long_description(query_handle, true);<br/> steam_ugc_query_set_allow_cached_response(query_handle,
+    true);<br/> query_ID = steam_ugc_send_query(query_handle);</p>
+  <p>El código anterior crea una solicitud de consulta y almacena su manejador en una variable local para su uso futuro en el resto de las funciones que definen aún más la solicitud de consulta antes de enviarla.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Atrás: <a href="Steam_UGC.htm">UGC</a></div>
+        <div style="float:right">Siguiente: <a href="steam_ugc_download.htm"><span class="notranslate">steam_ugc_download</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_ugc_send_query
+-->
+  <!-- TAGS
+steam_ugc_send_query
+-->
+</body>
+</html>

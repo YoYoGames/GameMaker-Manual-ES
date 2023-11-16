@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>JSDoc Script Comments</title>
+  <title>Comentarios de la secuencia de comandos JSDoc</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains how JSDoc Script Comments work" />
   <meta name="rh-index-keywords" content="Code Editor - JSDoc Comments,JSDoc" />
@@ -14,11 +14,10 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">JSDoc Script Comments</span></h1>
-  <p>If you wish your custom functions to have code completion and to show the required arguments in a specific manner in the code editor, then you need to add some <a href="https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html">JSDoc style</a> comments. These comments are used to tell the auto-complete feature how the function should be used and filled out in the <a href="../Scripts.htm">script editor</a>.</p>
-  <p class="note"><span data-conref="../../assets/snippets/Tag_tip.hts"> </span> You can generate these comments automatically using <a data-xref="{title}" href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Feather</a>&#39;s <a data-xref="{text}" href="Feather_Features.htm#h1">Quick Fixes</a> menu (press <img class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55" /> + Q or click the <img class="icon" src="../../assets/Images/Icons/Icon_Feather.png" /> icon). The option is visible when your text cursor is placed on a function header (i.e. the line where the function&#39;s name is defined).</p>
-  <p>The format for a typical function header would be to have the function name, the description of the function, and then the list of the different arguments (parameters) that the function takes, making sure to start each line with a triple forward slash &quot;<span class="inline">///</span>&quot; as that tells <span data-keyref="GameMaker Name">GameMaker</span> to parse the comment as being JSDoc style. You can alternatively wrap your JSDoc comments in <span class="inline">/**</span> ... <span class="inline">*/</span>, with the <span class="inline">/**</span> being on its own line.</p>
-  <p>The comments themselves need to be given an identifier (preceded by &quot;<span class="inline">@</span>&quot;) and content. The available identifiers are as follows: </p>
+  <h1>JSDoc <span class="notranslate">Script</span> Comentarios</h1>
+  <p>Si desea que sus funciones personalizadas tengan completado el código y muestren los argumentos requeridos de una manera específica en el editor de código, entonces necesita añadir algunos comentarios de <a href="https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html">estilo JSDoc</a>. Estos comentarios se utilizan para indicar a la función de autocompletar cómo debe utilizarse la función y rellenarse en el editor de <a href="../Scripts.htm">scripts</a>.</p>
+  <p>El formato de una típica cabecera de función sería tener el nombre de la función, la descripción de la función, y luego la lista de los diferentes argumentos (parámetros) que la función toma, asegurándose de comenzar cada línea con una triple barra invertida &quot;<span class="inline">///</span>&quot; ya que eso le dice a <span data-keyref="GameMaker Name">GameMaker</span> que analice el comentario como de estilo JSDoc. También puede envolver sus comentarios JSDoc en <span class="inline">/**</span>... <span class="inline">*/</span> con el <span class="inline">/**</span> en su propia línea.</p>
+  <p>A los comentarios se les debe asignar un identificador (precedido de &quot;<span class="inline">@</span>&quot;) y un contenido, y los identificadores disponibles son los siguientes:</p>
   <table>
     <colgroup>
       <col style="width: 306px;" />
@@ -27,59 +26,59 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>Identifier</th>
-        <th>Content</th>
-        <th>Syntax</th>
+        <th>Identificador</th>
+        <th>Contenido</th>
+        <th>Sintaxis</th>
       </tr>
       <tr>
         <td><span class="inline">@function</span> / <span class="inline">@func</span></td>
-        <td>The full function name including arguments</td>
+        <td>El nombre completo de la función, incluidos los argumentos</td>
         <td><span class="inline">@func my_func(args)</span></td>
       </tr>
       <tr>
         <td><span class="inline">@description</span> / <span class="inline">@desc</span></td>
-        <td>A general description of what the function does</td>
+        <td>Una descripción general de lo que hace la función</td>
         <td><span class="inline">@desc &lt;Description goes&gt;</span></td>
       </tr>
       <tr>
-        <td><span class="inline">@param</span> / <span class="inline">@</span><span class="inline">parameter</span> / <span class="inline">@arg</span> / <span class="inline">@argument</span></td>
-        <td>Information on arguments, with an optional <a href="Feather_Data_Types.htm">type</a></td>
+        <td><span class="inline">@param</span> / <span class="inline">@</span><span class="inline">parameter</span> / <span class="inline">@arg</span> / <span class="inline">@argument</span></td>
+        <td>Información sobre los argumentos, con un <a href="Feather_Data_Types.htm"><span class="notranslate">type</span></a></td>
         <td><span class="inline">@param <em>{type}</em> name &lt;Parameter description&gt;</span></td>
       </tr>
       <tr>
         <td><span class="inline">@return / @returns</span></td>
-        <td><a href="Feather_Data_Types.htm">Type</a> of data the function returns</td>
+        <td><a href="Feather_Data_Types.htm">Tipo</a> de datos que devuelve la función</td>
         <td><span class="inline">@return {type} &lt;Return description&gt;</span></td>
       </tr>
       <tr>
-        <th colspan="3"><a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Feather</a> only</th>
+        <th colspan="3">Sólo<a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">pluma</a> </th>
       </tr>
       <tr>
         <td><span class="inline">@pure</span></td>
-        <td>Marks the function as <a class="glossterm" data-glossterm="pure" href="#">pure</a></td>
+        <td>Marca la función como <a class="glossterm" data-glossterm="puro" href="#">pura</a></td>
         <td><span class="inline">@pure</span></td>
       </tr>
       <tr>
         <td style=""><span class="inline">@ignore</span></td>
-        <td style="">Hides the function from Feather&#39;s autocomplete</td>
+        <td style="">Oculta la función de autocompletar de Feather</td>
         <td><span class="inline">@ignore</span></td>
       </tr>
       <tr>
         <td style=""><span class="inline">@deprecated</span></td>
-        <td style="">Marks the function as deprecated</td>
+        <td style="">Marca la función como obsoleta</td>
         <td><span class="inline">@deprecated</span></td>
       </tr>
       <tr>
         <td style=""><span class="inline">@context / @self</span></td>
-        <td style="">Sets the context for the function, which Feather auto-complete uses to provide contextual information. Can be an object or a constructor.</td>
+        <td style="">Establece el contexto de la función, que Feather autocompleta para proporcionar información contextual. Puede ser un <span class="notranslate">object</span> o un constructor.</td>
         <td><span class="inline">@self &lt;object&gt;</span></td>
       </tr>
     </tbody>
   </table>
-  <p>If you haven&#39;t specified a type for your arguments or return value, and you&#39;re using <a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Feather</a>, it will assume a data type for them automatically, based on your function body.</p>
-  <p>See information on data types for <span class="inline">@param</span> and <span class="inline">@return</span> on <a data-xref="{title}" href="Feather_Data_Types.htm">Feather Data Types</a>.</p>
-  <h2>Examples</h2>
-  <p>To get an idea of how this would work when writing your own functions, let&#39;s take this basic example:</p>
+  <p>Si no has especificado un tipo para tus argumentos o valor de retorno, y estás usando <a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Feather</a>, asumirá un <span class="notranslate">data type</span> para ellos automáticamente, basado en el cuerpo de tu función.</p>
+  <p>Véase la información en <span class="notranslate">data types</span> para <span class="inline">@param</span> y <span class="inline">@return</span> sobre los <a href="Feather_Data_Types.htm">tipos de datos de las plumas</a>.</p>
+  <h2>Ejemplos</h2>
+  <p>Para tener una idea de cómo funcionaría esto al escribir tus propias funciones, tomemos este ejemplo básico:</p>
   <p class="code">function is_same_object(_id, _obj)<br />
     {<br />
         if (_id.object_index == _obj)<br />
@@ -88,12 +87,12 @@
         }<br />
         else return false;<br />
     }</p>
-  <p>All this script does is check to see if an instance has the same <span class="inline">object_index</span> as a given object and would be called simply as:</p>
+  <p>Todo lo que hace este <span class="notranslate">script</span> es comprobar si una instancia tiene el mismo <span class="inline">object_index</span> que un <span class="notranslate">object</span> dado y se llamaría simplemente como:</p>
   <p class="code">if is_same_object(id, obj_Player)<br />
     {<br />
         instance_destroy()<br />
     }</p>
-  <p>However, writing that into the code editor will show you the argument variable names directly (<span class="inline">_id</span> and <span class="inline">_obj</span>) which in most cases is not very descriptive. You can use JSDoc to define custom argument names and descriptions, along with information for the function as well:</p>
+  <p>Sin embargo, al escribir esto en el editor de código se mostrarán directamente los nombres de las variables de los argumentos (<span class="inline">_id</span> y <span class="inline">_obj</span>), lo que en la mayoría de los casos no es muy descriptivo. Puedes usar JSDoc para definir nombres de argumentos y descripciones personalizadas, junto con información para la función también:</p>
   <p class="code">/// @function                is_same_object(inst_id, object_id)<br />
     /// @description             Check if the given instance belongs to the given object.<br />
     /// @param {Id.Instance}     inst_id    The unique instance ID value of the instance to check.<br />
@@ -105,11 +104,11 @@
         return _inst_id.object_index == _object_id;<br />
     }
   </p>
-  <p>Now, when calling this function anywhere in your project, you will see the new argument names that were entered in the JSDoc comments:</p>
-  <p><img alt="JSDoc Example" class="center" height="652" src="../../assets/Images/Scripting_Reference/Additional_Information/JavaDoc_Example.png" width="672" />In the image above, the top part shows the function in the auto-complete and the bottom part shows how the argument helper at the bottom works. Note that both the optional &quot;type&quot; and the obligatory &quot;description&quot; parts of <span class="inline">@param</span> are not displayed by default in the IDE code complete, and to see them you must activate the options in the <a href="../../Setting_Up_And_Version_Information/IDE_Preferences/GML_Code_Preferences.htm">GML Preferences</a>.</p>
-  <p>When using <a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Feather</a>, you will see detailed information on the function when you hover your mouse over it:</p>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/JSDoc_Feather_Info.png" />You can wrap an argument name in <span class="inline">[]</span> brackets to indicate that it is optional. The code editor will then expect any number of arguments between the minimum required arguments and the total number of arguments.</p>
-  <p>For example, see the following function:</p>
+  <p>Ahora, cuando llame a esta función en cualquier parte de su proyecto, verá los nuevos nombres de los argumentos que se introdujeron en los comentarios de JSDoc:</p>
+  <p><img>En la imagen de arriba, la parte superior muestra la función en el autocompletado y la parte inferior muestra cómo funciona el ayudante de argumentos en la parte inferior. Tenga en cuenta que tanto la parte opcional &quot;tipo&quot; como la obligatoria &quot;descripción&quot; de <span class="inline">@param</span> no se muestran por defecto en el código completo de <span class="notranslate">IDE</span>, y para verlas debe activar las opciones en las <a href="../../Setting_Up_And_Version_Information/IDE_Preferences/GML_Code_Preferences.htm">Preferencias de GML</a>.</p>
+  <p>Al utilizar <a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Feather</a>, verás información detallada sobre la función cuando pases el ratón por encima de ella:</p>
+  <p><img>Puede encerrar el nombre de un argumento entre corchetes <span class="inline">[]</span> para indicar que es opcional. El editor de código esperará entonces cualquier número de argumentos entre el mínimo requerido y el número total de argumentos.</p>
+  <p>Por ejemplo, véase la siguiente función:</p>
   <p class="code">/// @function    animate_position(end_x, end_y, start_x, start_y)<br />
     /// @desc        Animates the instance to ending point, from optional starting point<br />
     /// @arg end_x<br />
@@ -122,24 +121,24 @@
         // Function code<br />
     }
   </p>
-  <p>The <span class="inline">start_x</span> and <span class="inline">start_y</span> arguments are marked as optional, which means the code editor will now expect 2 to 4 arguments, as can be seen in the warning message:</p>
-  <p><img class="center" height="150" src="../../assets/Images/Scripting_Reference/Additional_Information/JavaDoc_Optional.png" width="537" /></p>
-  <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> You will get the same behaviour if you use optional arguments in the function declaration. See <a href="../../GameMaker_Language/GML_Overview/Script_Functions.htm">script functions</a> for more information.</p>
-  <p>Since scripts can have multiple functions in them, you can add JSDoc comments for each of them before its declaration:</p>
-  <p><img alt="Multiple Functions With JSDoc Comments Example" class="center" src="../../assets/Images/Scripting_Reference/Additional_Information/JavaDoc_MultipleFunctions.png" /></p>
-  <p> </p>
-  <p> </p>
+  <p>Los argumentos <span class="inline">start_x</span> y <span class="inline">start_y</span> están marcados como opcionales, lo que significa que el editor de código espera ahora de 2 a 4 argumentos, como puede verse en el mensaje de advertencia:</p>
+  <p><img alt="JSDoc Example" class="center" height="652" src="../../assets/Images/Scripting_Reference/Additional_Information/JavaDoc_Example.png" width="672" /></p>
+  <p class="note"><span class="note">NOTA</span> Obtendrá el mismo comportamiento si utiliza argumentos opcionales en la declaración de la función. Consulte <a href="../../GameMaker_Language/GML_Overview/Script_Functions.htm">las funciones de script</a> para obtener más información.</p>
+  <p>Dado que <span class="notranslate">scripts</span> puede contener varias funciones, puede añadir comentarios JSDoc para cada una de ellas antes de su declaración:</p>
+  <p><img class="center" src="../../assets/Images/Asset_Editors/JSDoc_Feather_Info.png" /></p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Scripts.htm">The Script Editor</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Feather_Data_Types.htm">Feather Data Types</a></div>
+        <div style="float:left">Atrás: <a href="../Scripts.htm">El editor de <span class="notranslate">Script</span> </a></div>
+        <div style="float:right">Siguiente: <a data-xref="{title}" href="Feather_Data_Types.htm">Tipos de datos de la pluma</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
-JSDoc Script Comments
+JSDoc <span class="notranslate">Script</span> Comments
 -->
   <!-- TAGS
 jsdoc_comments

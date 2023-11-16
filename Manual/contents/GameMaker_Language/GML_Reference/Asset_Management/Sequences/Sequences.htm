@@ -3,60 +3,60 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Sequences</title>
+  <title>Secuencias</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the different functions and variables associated with Sequences" />
-  <meta name="rh-index-keywords" content="Sequences" />
+  <meta name="rh-index-keywords" content="" />
   <meta name="search-keywords" content="Sequences" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Sequences</span></h1>
-  <p>Sequences are usually created in the IDE using <a data-xref="{title}" href="../../../../The_Asset_Editors/Sequences.htm">The Sequence Editor</a>, but they can also be created and edited using code. However, before looking at the functions available, it&#39;s important to understand the way that sequences are defined in <span data-keyref="GameMaker Name">GameMaker</span> and the different terms that will be used.</p>
-  <p>To start with, at the top level, you have a <b>sequence element</b>. This is what you place on a layer in a room, either through <a data-xref="{title}" href="../../../../The_Asset_Editors/Rooms.htm">The Room Editor</a> or in code using the appropriate <a href="../Rooms/Sequence_Layers/Sequence_Layers.htm">layer functions</a>. The layer element has no real properties other than an element ID value, but this ID is required to use the above mentioned layer functions to change the sequence playback or to access the sequence data.</p>
-  <p>Next you have <b>sequence objects</b> and <b>sequence instances</b> much like you have general objects and instances. A sequence <i>object</i> is the base resource as you created it in <a data-xref="{title}" href="../../../../Introduction/The_Asset_Browser.htm">The Asset Browser</a> or using the function <span class="inline3_func"><a data-xref="{title}" href="sequence_create.htm">sequence_create</a></span>, and the sequence <i>instance</i> is the &quot;copy&quot; of that sequence object that has been placed in a room as an element on a layer. Think of sequence objects as blueprints and sequence instances as the creation from those blueprints. Sequence objects and instances are <a href="../../../GML_Overview/Structs.htm">structs</a> and - unlike regular objects - a sequence object struct can be edited at runtime, which will affect all further instances of that sequence when you create them as elements (and any editing done to a sequence object will <b>not</b> be reset by restarting the game or the room using the <span class="inline3_func"><a data-xref="{title}" href="../Rooms/room_restart.htm">room_restart</a></span> or <span class="inline3_func"><a data-xref="{title}" href="../../General_Game_Control/game_restart.htm">game_restart</a></span> functions). The sequence instance struct contains a few parameters to control playback and things (this is explained in more detail below) as well as the <b>sequence data</b> struct.</p>
-  <p>Finally, as mentioned above, you have the <b>sequence data</b>, which is another struct. This struct contains <i>all</i> the data about the sequence. The tracks it contains, the properties those tracks have, the playback speed and much more. The exact details of this structs contents are outlined below, but basically consists of <b>asset track</b> structs and <b>parameter track</b> structs which use <b>keyframe data</b> to actually perform actions while the sequence plays.</p>
-  <p>Sequence elements are dealt with using the room <a href="../Rooms/Sequence_Layers/Sequence_Layers.htm">layer functions</a>, but for sequence objects, instances and data we have the following functions:</p>
-  <p> </p>
+  <h1>Secuencias</h1>
+  <p>Las secuencias suelen crearse en <span class="notranslate">IDE</span> utilizando el <a href="../../../../The_Asset_Editors/Sequences.htm">editor de secuencias</a>, pero también pueden crearse y editarse utilizando código. Sin embargo, antes de ver las funciones disponibles, es importante entender la forma en que se define <span class="notranslate">sequences</span> en <span class="notranslate">GameMaker</span> y los diferentes términos que se utilizarán.</p>
+  <p>Para empezar, en el nivel superior, tienes un <b>elemento de secuencia</b>. Esto es lo que se coloca en una capa en un <span class="notranslate">room</span>, ya sea a través del Editor <span class="notranslate">Room</span> o en el código utilizando las funciones de <a href="../Rooms/Sequence_Layers/Sequence_Layers.htm">capa</a> apropiadas. El elemento de la capa no tiene propiedades reales más que un valor de ID del elemento, pero este ID es necesario para utilizar las funciones de la capa mencionadas anteriormente para cambiar la reproducción de <span class="notranslate">sequence</span> o para acceder a los datos de <span class="notranslate">sequence</span>.</p>
+  <p>A continuación, tiene <b>objetos de secuencia</b> e <b>instancias de secuencia</b>, al igual que tiene <span class="notranslate">objects</span> general e instancias. Un <i>objeto</i> <span class="notranslate">sequence</span> es el recurso base tal y como se creó en el <b>Navegador de Activos</b> o utilizando la función <a href="sequence_create.htm"><span class="inline">sequence_create()</span></a>y la <i>instancia</i> <span class="notranslate">sequence</span> es la &quot;copia&quot; de ese <span class="notranslate">sequence</span> <span class="notranslate">object</span> que se ha colocado en un <span class="notranslate">room</span> como elemento de una capa. Piensa en <span class="notranslate">sequence</span> <span class="notranslate">objects</span> como planos y en las instancias de <span class="notranslate">sequence</span> como la creación a partir de esos planos. <span class="notranslate">Sequence</span> <span class="notranslate">objects</span> y las instancias son <a href="../../../GML_Overview/Structs.htm">structs</a> y -a diferencia de los normales <span class="notranslate">objects</span> - un <span class="notranslate">sequence</span> <span class="notranslate">object</span> <span class="notranslate">struct</span> puede editarse en <span class="notranslate">runtime</span>, lo que afectará a todas las instancias posteriores de ese <span class="notranslate">sequence</span> cuando las crees como elementos (y cualquier edición realizada en un <span class="notranslate">sequence</span> <span class="notranslate">object</span> <b>no</b> se restablecerá al reiniciar el juego o el <span class="notranslate">room</span> usando las funciones <span class="inline">room_restart()</span> o <span class="inline">game_restart()</span> ). La instancia <span class="notranslate">sequence</span> <span class="notranslate">struct</span> contiene algunos parámetros para controlar la reproducción y otras cosas (esto se explica con más detalle a continuación), así como los <b>datos de la secuencia</b> <span class="notranslate">struct</span>.</p>
+  <p>Por último, como ya se ha mencionado, tiene los <b>datos de la secuencia</b>, que es otro <span class="notranslate">struct</span>. Este <span class="notranslate">struct</span> contiene <i>todos los</i> datos sobre el <span class="notranslate">sequence</span>. Las pistas que contiene, las propiedades que tienen esas pistas, la velocidad de reproducción y mucho más. Los detalles exactos del contenido de este <span class="notranslate">structs</span> se describen a continuación, pero básicamente consiste en la pista de <b>activos</b> <span class="notranslate">structs</span> y <b>la pista de parámetros</b> <span class="notranslate">structs</span> que utilizan <b>datos de fotogramas clave</b> para realizar acciones mientras se reproduce el <span class="notranslate">sequence</span>.</p>
+  <p>Los elementos de la secuencia se tratan con las <a href="../Rooms/Sequence_Layers/Sequence_Layers.htm">funciones de la capa</a> <span class="notranslate">room</span>, pero para <span class="notranslate">sequence</span> <span class="notranslate">objects</span>, instancias y datos tenemos las siguientes funciones:</p>
+  <p> </p>
   <ul class="colour">
-    <li><a href="sequence_exists.htm">sequence_exists</a></li>
-    <li><a href="sequence_create.htm">sequence_create</a></li>
-    <li><a href="sequence_destroy.htm">sequence_destroy</a></li>
-    <li><a href="sequence_get.htm">sequence_get</a></li>
-    <li><a href="sequence_track_new.htm">sequence_track_new</a></li>
-    <li><a href="sequence_keyframe_new.htm">sequence_keyframe_new</a></li>
-    <li><a href="sequence_keyframedata_new.htm">sequence_keyframedata_new</a></li>
-    <li><a href="sequence_get_objects.htm">sequence_get_objects</a></li>
-    <li><a href="sequence_instance_override_object.htm">sequence_instance_override_object</a></li>
+    <li><a href="sequence_exists.htm"><span class="notranslate">sequence_exists</span></a></li>
+    <li><a href="sequence_create.htm"><span class="notranslate">sequence_create</span></a></li>
+    <li><a href="sequence_destroy.htm"><span class="notranslate">sequence_destroy</span></a></li>
+    <li><a href="sequence_get.htm"><span class="notranslate">sequence_get</span></a></li>
+    <li><a href="sequence_track_new.htm"><span class="notranslate">sequence_track_new</span></a></li>
+    <li><a href="sequence_keyframe_new.htm"><span class="notranslate">sequence_keyframe_new</span></a></li>
+    <li><a href="sequence_keyframedata_new.htm"><span class="notranslate">sequence_keyframedata_new</span></a></li>
+    <li><a href="sequence_get_objects.htm"><span class="notranslate">sequence_get_objects</span></a></li>
+    <li><a href="sequence_instance_override_object.htm"><span class="notranslate">sequence_instance_override_object</span></a></li>
   </ul>
-  <p> </p>
-  <p>There is also a <strong>built-in variable</strong> associated with instances that can be used to determine of the instance has been used in a sequence or not:</p>
-  <p> </p>
+  <p> </p>
+  <p>También hay una <strong>variable integrada</strong> asociada a las instancias que puede utilizarse para determinar si la instancia se ha utilizado en un <span class="notranslate">sequence</span> o no:</p>
+  <p> </p>
   <ul class="colour">
-    <li><a href="in_sequence.htm">in_sequence</a></li>
+    <li><a href="in_sequence.htm"><span class="notranslate">in_sequence</span></a></li>
   </ul>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_important.hts"> </span> If your sequence has any instances in it, these instances shouldn&#39;t change their <span class="inline2"><a data-xref="{title}" href="../Sprites/Sprite_Instance_Variables/image_xscale.htm">image_xscale</a></span> / <span class="inline2"><a data-xref="{title}" href="../Sprites/Sprite_Instance_Variables/image_yscale.htm">image_yscale</a></span> / <span class="inline2"><a data-xref="{title}" href="../Sprites/Sprite_Instance_Variables/image_angle.htm">image_angle</a></span> / <span class="inline2">x</span> / <span class="inline2">y</span> variables as they will be overwritten when the sequence updates each step after starting to be played.</p>
-  <p> </p>
-  <p>Before using these functions to create or edit sequences, we recommend that you read the detailed descriptions given below for the struct properties. A general overview of how to create a new sequence would be:</p>
+  <p class="note"><strong>¡IMPORTANTE!</strong> Si su <span class="notranslate">sequence</span> tiene algunas instancias en él, estas instancias no deberían cambiar sus variables <span class="inline"><span style="font-size:14px;">image_xscale</span> / <span class="inline"><span style="font-size:14px;">image_yscale</span> / <span class="inline"><span style="font-size:14px;">image_angle</span> / <span class="inline"><span style="font-size:14px;">x</span> / <span class="inline"><span style="font-size:14px;">y</span> ya que se sobrescribirán cuando el <span class="notranslate">sequence</span> actualice cada paso después de empezar a ser reproducido.</p>
+  <p> </p>
+  <p>Antes de utilizar estas funciones para crear o editar <span class="notranslate">sequences</span>, le recomendamos que lea las descripciones detalladas que se ofrecen a continuación para las propiedades de <span class="notranslate">struct</span>. Una visión general de cómo crear un nuevo <span class="notranslate">sequence</span> sería:</p>
   <ul class="colour">
-    <li>Create the new sequence object using the function <span class="inline3_func"><a data-xref="{title}" href="sequence_create.htm">sequence_create</a></span> and store the sequence object index in a variable. This index gives you access to the sequence object struct.</li>
+    <li>Cree el nuevo <span class="notranslate">sequence</span> <span class="notranslate">object</span> utilizando la función <span class="inline"><a href="sequence_create.htm">sequence_create()</a></span> y almacene el índice <span class="notranslate">sequence</span> <span class="notranslate">object</span> en una variable. Este índice le da acceso al <span class="notranslate">sequence</span> <span class="notranslate">object</span> <span class="notranslate">struct</span> .</li>
   </ul>
   <p class="code">myseq = sequence_create();</p>
   <ul class="colour">
-    <li>Set the sequence object top level values like length, play mode, play speed, etc. For example:</li>
+    <li>Establezca los valores de nivel superior de <span class="notranslate">sequence</span> <span class="notranslate">object</span> como la duración, el modo de reproducción, la velocidad de reproducción, etc. Por ejemplo:</li>
   </ul>
   <p class="code">myseq.length = 120;<br />
     myseq.loopmode = seqplay_pingpong</p>
   <ul class="colour">
-    <li>Before you can add tracks to the sequence object, you need to create them, so you&#39;d now create an array of <i>asset</i> tracks that have been defined with the function <span class="inline3_func"><a data-xref="{title}" href="sequence_track_new.htm">sequence_track_new</a></span>. Note that in code, there is really no difference between asset tracks and parameter tracks - they are all simply tracks and how they behave will depend on the type of track you create and whether they are assigned as sub-tracks to a top level track or not. So, you would create a track for an asset, and then assign sub-tracks for the different parameters to it and these sub-tracks would act as the <i>parameter</i> tracks for the asset. The example below creates a single graphics asset track that will be added to the sequence later:</li>
+    <li>Antes de poder añadir pistas a <span class="notranslate">sequence</span> <span class="notranslate">object</span>, es necesario crearlas, por lo que ahora se crearía una matriz de pistas de <i>activos</i> que se han definido con la función <a href="sequence_track_new.htm"><span class="inline">sequence_track_new()</span></a>. Tenga en cuenta que en el código, no hay realmente ninguna diferencia entre las pistas de <span class="notranslate">asset</span> y las pistas de parámetros - todas son simplemente pistas y la forma en que se comportan dependerá del tipo de pista que se crea y si se asignan como sub-pistas a una pista de nivel superior o no. Así, crearía una pista para un <span class="notranslate">asset</span>, y luego le asignaría sub-pistas para los diferentes parámetros y estas sub-pistas actuarían como las pistas de <i>parámetros</i> para el <span class="notranslate">asset</span>. El ejemplo siguiente crea una única pista de gráficos <span class="notranslate">asset</span> que se añadirá al <span class="notranslate">sequence</span> posteriormente:</li>
   </ul>
   <p class="code">var mytracks = array_create(1);<br />
     mytracks[0] = sequence_track_new(seqtracktype_graphic);</p>
   <ul class="colour">
-    <li>Each asset track needs to have some data to tell the sequence how it will look, or its position , etc... and this is added in the form of <i>keyframes</i>. At the top level for an asset track, you can set keyframes for various things (listed in the section on the Track Struct, below), but note that as these are asset track keyframes, they won&#39;t be interpolated and will simply change the value they refer to when the given frame is reached. Each keyframe is a struct that is added to an array, and then this array is assigned to the asset track. To create the keyframe struct we would call the function <span class="inline3_func"><a data-xref="{title}" href="sequence_keyframe_new.htm">sequence_keyframe_new</a></span> and to populate the keyframe with the required data, we would use the function <span class="inline3_func"><a data-xref="{title}" href="sequence_keyframedata_new.htm">sequence_keyframedata_new</a></span>:</li>
+    <li>Cada pista <span class="notranslate">asset</span> necesita tener algunos datos para decirle a <span class="notranslate">sequence</span> cómo se verá, o su posición, etc... y esto se añade en forma de <i>fotogramas clave</i>. En el nivel superior de una pista <span class="notranslate">asset</span>, puede establecer <span class="notranslate">keyframes</span> para varias cosas (enumeradas en la sección de la pista <span class="notranslate">Struct</span>, más abajo), pero tenga en cuenta que como estos son <span class="notranslate">asset</span> pista <span class="notranslate">keyframes</span>, no serán interpolados y simplemente cambiarán el valor al que se refieren cuando se alcance el fotograma dado. Cada <span class="notranslate">keyframe</span> es un <span class="notranslate">struct</span> que se añade a un array, y luego este array se asigna a la pista <span class="notranslate">asset</span>. Para crear el <span class="notranslate">keyframe</span> <span class="notranslate">struct</span> llamaríamos a la función <a href="sequence_keyframe_new.htm"><span class="inline">sequence_keyframe_new()</span></a> y para rellenar el <span class="notranslate">keyframe</span> con los datos necesarios, utilizaríamos la función <a href="sequence_keyframedata_new.htm"><span class="inline">sequence_keyframedata_new()</span></a>:</li>
   </ul>
   <p class="code">// Create a new keyframe struct for a graphics asset track and add it to an array (as you can have multiple keys in a frame)<br />
     var graphickeys = array_create(1);<br />
@@ -77,13 +77,13 @@
     mytracks[0].name = &quot;TestGraphicTrack&quot;;<br />
     mytracks[0].keyframes = graphickeys;</p>
   <ul class="colour">
-    <li>We now need to create a parameter track which we&#39;ll assign as a sub-track to the graphics track we just created. This will be done in a similar way as shown above, only now we need to give the track a name that shows its purpose, in this case &quot;position&quot; as we&#39;ll be using this track to move the graphics track track over the course of the sequence animation frames:</li>
+    <li>Ahora tenemos que crear una pista de parámetros que asignaremos como una subpista a la pista de gráficos que acabamos de crear. Esto se hará de una manera similar a la mostrada anteriormente, sólo que ahora tenemos que dar a la pista un nombre que muestre su propósito, en este caso &quot;posición&quot;, ya que vamos a utilizar esta pista para mover la pista de gráficos en el curso de los cuadros de animación <span class="notranslate">sequence</span>:</li>
   </ul>
   <p class="code">// Create a new parameter track struct for the position of the graphic<br />
     var paramtracks = array_create(1);<br />
     paramtracks[0] = sequence_track_new(seqtracktype_real);<br />
     paramtracks[0].name = &quot;position&quot;;<br />
-    paramtracks[0].interpolation = seqinterpolation_lerp;<br />
+    paramtracks[0].interpolation = true;<br />
     // Create the keyframe struct to hold the parameter channel data and set the frame position for the keyframe<br />
     var paramkeys = array_create(2);<br />
     paramkeys[0] = sequence_keyframe_new(seqtracktype_real);<br />
@@ -111,35 +111,35 @@
     // Assign the keys to the parameter track<br />
     paramtracks[0].keyframes = paramkeys;</p>
   <ul class="colour">
-    <li>With that done, the final thing to do is assign the parameter track as a sub-track to our main graphics asset track that we created at the beginning and then assign these tracks to the sequence which we can then create an instance of in the room:</li>
+    <li>Una vez hecho esto, lo último que hay que hacer es asignar la pista de parámetros como una sub-pista a nuestra pista principal de gráficos <span class="notranslate">asset</span> que hemos creado al principio y luego asignar estas pistas a la <span class="notranslate">sequence</span> de la que podemos crear una instancia en la sala:</li>
   </ul>
   <p class="code">mytracks[0].tracks = paramtracks;<br />
     myseq.tracks = mytracks;<br />
     layer_sequence_create(&quot;Assets_1&quot;, 0, 0, myseq);</p>
-  <p>The above instructions create a very simple sequence object that draws a sprite at the (0, 0) position <i>of the sequence</i> and then moves it to the bottom-right corner and back in a loop. As mentioned, there are a number of places where you need to access different structs to give or get data about the sequence, and the sections below list all the different properties that these structs contain:</p>
+  <p>Las instrucciones anteriores crean un <span class="notranslate">sequence</span> <span class="notranslate">object</span> muy simple que dibuja un <span class="notranslate">sprite</span> en la posición (0, 0) <i>de la secuencia</i> y luego lo mueve a la esquina inferior derecha y de vuelta en un <span class="notranslate">loop</span>. Como se ha mencionado, hay una serie de lugares en los que es necesario acceder a diferentes <span class="notranslate">structs</span> para dar u obtener datos sobre el <span class="notranslate">sequence</span>, y las secciones siguientes enumeran todas las diferentes propiedades que contienen estos <span class="notranslate">structs</span>:</p>
   <ul class="colour">
-    <li><a name="object"></a><a href="Sequence_Structs/The_Sequence_Object_Struct.htm"><label for="1">The Sequence Object Struct</label></a></li>
-    <li><a name="instance"></a><a href="Sequence_Structs/The_Sequence_Instance_Struct.htm"><label for="2">The Sequence Instance Struct</label></a></li>
-    <li><a name="track"></a><a href="Sequence_Structs/The_Track_Struct.htm"><label for="3">The Track Struct</label></a></li>
-    <li><a name="keyframe"></a><a href="Sequence_Structs/The_Keyframe_Struct.htm"><label for="4">The Keyframe Struct</label></a></li>
-    <li><a name="keyframe_data"></a><a href="Sequence_Structs/The_Keyframe_Data_Struct.htm"><label for="5">The Keyframe Data Struct</label></a></li>
+    <li><a name="object"></a><a href="Sequence_Structs/The_Sequence_Object_Struct.htm"><label for="1">La estructura <span class="notranslate">Sequence</span> <span class="notranslate">Object</span> </label></a></li>
+    <li><a name="instance"></a><a href="Sequence_Structs/The_Sequence_Instance_Struct.htm"><label for="2">La estructura de la instancia <span class="notranslate">Sequence</span> </label></a></li>
+    <li><a name="track"></a><a href="Sequence_Structs/The_Track_Struct.htm"><label for="3">La estructura de la pista</label></a></li>
+    <li><a name="keyframe"></a><a href="Sequence_Structs/The_Keyframe_Struct.htm"><label for="4">La estructura <span class="notranslate">Keyframe</span> </label></a></li>
+    <li><a name="keyframe_data"></a><a href="Sequence_Structs/The_Keyframe_Data_Struct.htm"><label for="5">La estructura de datos <span class="notranslate">Keyframe</span> </label></a></li>
   </ul>
-  <p> </p>
-  <p>Finally, it is possible to add code to sequences that can be triggered as either an <strong>event</strong> a <strong>moment</strong> or as a <strong>broadcast message</strong>. This is explained fully on the following page:</p>
+  <p> </p>
+  <p>Por último, es posible añadir código a <span class="notranslate">sequences</span> que puede activarse como un <strong>evento</strong> un <strong>momento</strong> o como un <strong>mensaje de difusión</strong>. Esto se explica completamente en la siguiente página:</p>
   <ul class="colour">
-    <li><a href="Sequence_Events_Moments_Broadcast.htm">Events, Moments and Broadcast Messages</a></li>
+    <li><a href="Sequence_Events_Moments_Broadcast.htm">Eventos, momentos y mensajes de difusión</a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Asset_Management.htm">Asset Management</a></div>
-        <div style="float:right">Next: <a href="../Fonts/Fonts.htm">Fonts</a></div>
+        <div style="float:left">Atrás: <a href="../Asset_Management.htm">Gestión de activos</a></div>
+        <div style="float:right">Siguiente: <a href="../Fonts/Fonts.htm">Fuentes</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Sequences

@@ -6,7 +6,7 @@
   <title>json_parse</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for json_parse" />
   <meta name="rh-index-keywords" content="json_parse" />
@@ -16,48 +16,48 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>json_parse</h1>
-  <p>This function can be used to parse a JSON string (either previously created using <a href="json_stringify.htm">json_stringify</a> or from any valid source), and convert it into a collection of arrays or structs, where an array is the equivalent of a JSON array and a struct is the equivalent of a JSON object. You supply the string to parse, and the function will return the top level array or struct which can then be used in your code. If you are not sure of the contents of the JSON, you can use the different <a href="../../Variable_Functions/Variable_Functions.htm">Variable Functions</a> (like <a href="../../Variable_Functions/typeof.htm"><span class="inline">typeof()</span></a> and <a href="../../Variable_Functions/variable_struct_get_names.htm"><span class="inline">variable_struct_get_names()</span></a> in case of a struct) to check the returned contents. Note that trying to parse an invalid value (i.e.: not a string) will throw an exception error.</p>
-  <p>When using this function there are some important things to note:</p>
+  <p>Esta función puede utilizarse para analizar un JSON <span class="notranslate">string</span> (creado previamente con <a href="json_stringify.htm"><span class="notranslate">json_stringify</span></a> o desde cualquier fuente válida), y convertirlo en una colección de arrays o <span class="notranslate">structs</span>, donde un array es el equivalente a un array JSON y un <span class="notranslate">struct</span> es el equivalente a un JSON <span class="notranslate">object</span>. Usted suministra el <span class="notranslate">string</span> para analizarlo, y la función devolverá el array de nivel superior o <span class="notranslate">struct</span> que puede ser utilizado en su código. Si no está seguro del contenido del JSON, puede utilizar las diferentes <a href="../../Variable_Functions/Variable_Functions.htm">funciones variables</a> (como <a href="../../Variable_Functions/typeof.htm"><span class="inline">typeof()</span></a> y <a href="../../Variable_Functions/variable_struct_get_names.htm"><span class="inline">variable_struct_get_names()</span></a> en el caso de <span class="notranslate">struct</span>) para comprobar el contenido devuelto. Tenga en cuenta que si intenta analizar un valor no válido (es decir, que no sea un <span class="notranslate">string</span>), se producirá un error de excepción.</p>
+  <p>Al utilizar esta función hay que tener en cuenta algunas cosas importantes:</p>
   <ul class="colour">
-    <li>If the supplied JSON string includes <span class="inline">undefined</span> as a value for any property, it will be converted to <span class="inline">pointer_null</span> upon being parsed.</li>
-    <li>This function only allows you to load JSON files with a maximum nesting limit of 128.</li>
+    <li>Si el JSON suministrado <span class="notranslate">string</span> incluye <span class="inline">undefined</span> como valor para cualquier propiedad, se convertirá en <span class="inline">pointer_null</span> al ser analizado.</li>
+    <li>Esta función sólo permite cargar archivos JSON con un límite máximo de anidación de 128.</li>
   </ul>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">json_parse(json)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th><th>Tipo</th>
+        <th>Descripción</th>
      </tr>
       <tr>
-        <td>json</td><td><span data-keyref="Type_String"></span></td>
-        <td>The JSON string to parse</td>
+        <td><span class="notranslate">json</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The JSON string to parse</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Struct">Struct</span> or <span data-keyref="Type_Array">Array</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">json = &quot;{\&quot;myObj\&quot;: { \&quot;apples\&quot;:10, \&quot;oranges\&quot;:12, \&quot;potatoes\&quot;:100000, \&quot;avocados\&quot;:0 }, \&quot;myArray\&quot;:[0, 1, 2, 2, 4, 0, 1, 5, 1]}&quot;;<br />
     <br />
     data = json_parse(json);<br />
     show_debug_message(data);
   </p>
-  <p>The above code creates a new string containing a valid JSON object, and then calls <span class="inline">json_parse()</span> to convert that string into a GML struct. It then prints the result to the debug log.</p>
-  <p class="note"><span class="note">NOTE</span> You will notice that the JSON string contains a backslash (<span class="inline2">\</span>) before every double quote (<span class="inline2">&quot;</span>) inside it:<br />
-    <br />
-    <span class="inline2">json = &quot;{ <strong>\&quot; </strong>myObj</span><br />
-    <br />
-    This is to ensure that the double quote is read as an actual character within the string, instead of being read as part of the code and closing the string prematurely. This way we are using a backslash to &quot;escape&quot; the double quote.<br />
-    <br />
-    If you are loading JSON from an external file however, there is no need to escape characters in that file and doing so may result in errors during parsing.
+  <p>El código anterior crea un nuevo <span class="notranslate">string</span> que contiene un JSON válido <span class="notranslate">object</span>, y luego llama a <span class="inline">json_parse()</span> para convertir ese <span class="notranslate">string</span> en un <span class="notranslate">GML</span> <span class="notranslate">struct</span>. Luego imprime el resultado en el registro de depuración.</p>
+  <p class="note"><span class="note">NOTA</span> Se dará cuenta de que el JSON <span class="notranslate">string</span> contiene una barra invertida<span class="inline2">(\</span>) antes de cada comilla doble (<span class="inline2">&quot;</span>) en su interior:<br>
+    <br>
+   <span class="inline2">json = &quot;{ \ <strong>&quot; </strong></span>miObj<br>
+    <br>
+    Esto es para asegurar que la doble comilla sea leída como un carácter real dentro del <span class="notranslate">string</span>, en lugar de ser leída como parte del código y cerrar el <span class="notranslate">string</span> prematuramente. De esta manera estamos usando una barra invertida para &quot;escapar&quot; de la doble comilla.<br>
+    <br>
+    Sin embargo, si está cargando JSON desde un archivo externo, no hay necesidad de escapar caracteres en ese archivo y hacerlo puede dar lugar a errores durante el análisis.
   </p>
   <hr />
-  <p>After parsing the JSON string above, if you know its structure, you can use various <a href="../../Variable_Functions/Variable_Functions.htm">Variable Functions</a> to check and read its contents:</p>
+  <p>Después de analizar el JSON <span class="notranslate">string</span>, si conoce su estructura, puede utilizar varias <a href="../../Variable_Functions/Variable_Functions.htm">funciones variables</a> para comprobar y leer su contenido:</p>
   <p class="code">data = json_parse(json);<br />
     <br />
     // Check if the struct has myObj variable<br />
@@ -87,23 +87,23 @@
         }<br />
     }
   </p>
-  <p>The above code will parse the given JSON string, generating the following console output:</p>
+  <p>El código anterior analizará el JSON dado <span class="notranslate">string</span>, generando la siguiente salida de consola:</p>
   <p class="code">oranges: 12<br />
     potatoes: 100000<br />
     avocados: 0<br />
     apples: 10<br />
     [ 0,1,2,2,4,0,1,5,1 ]</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Encoding_And_Hashing.htm">File Encoding</a></div>
-        <div style="float:right">Next: <a href="base64_encode.htm">base64_encode</a></div>
+        <div style="float:left">Atrás: <a href="Encoding_And_Hashing.htm">Codificación de archivos</a></div>
+        <div style="float:right">Siguiente: <a href="base64_encode.htm"><span class="notranslate">base64_encode</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 json_parse

@@ -6,7 +6,7 @@
   <title>tile_set_index</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function tile_set_index" />
   <meta name="rh-index-keywords" content="tile_set_index" />
@@ -15,34 +15,34 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>tile_set_index</h1>
-  <p>This function can be used to set the tile index (the position of the tile within the tile set image) for a set of tile-data. You give the tile-data, which can be retrieved using the function <a href="tilemap_get.htm"><span class="inline">tilemap_get()</span></a>, and then the integer value that represents the position of the tile (its index) within the tile set. The function will return a modified tile-data set which can then be applied using the <a href="tilemap_set.htm"><span class="inline">tilemap_set()</span></a> function.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Esta función permite establecer el índice <span class="notranslate">tile</span> (la posición de <span class="notranslate">tile</span> dentro de la imagen <span class="notranslate">tile set</span> ) para un conjunto de datos de mosaico. Se dan los datos de los mosaicos, que pueden recuperarse con la función <a href="tilemap_get.htm"><span class="inline">tilemap_get()</span></a>y, a continuación, el valor entero que representa la posición de <span class="notranslate">tile</span> (su índice) dentro de <span class="notranslate">tile set</span>. La función devolverá un conjunto de datos de mosaico modificado que puede aplicarse mediante la función <a href="tilemap_set.htm"><span class="inline">tilemap_set()</span></a> función.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">tile_set_index(tiledata, index)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>tiledata</td>
-        <td><span data-keyref="Type_Real_Tile_Data">Tile Data</span></td>
-        <td>the tile-data to set</td>
+        <td><span class="notranslate">tiledata</span></td>
+        <td><span data-keyref="Type_Real_Tile_Data">Datos de las baldosas</span></td>
+        <td><span class="notranslate">the tile-data to set</span></td>
       </tr>
       <tr>
-        <td>index</td>
+        <td><span class="notranslate">index</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The integer index value of the tile to use</td>
+        <td><span class="notranslate">The integer index value of the tile to use</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Real_Tile_Data">Tile Data</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;);<br />
     var map_id = layer_tilemap_get_id(lay_id);<br />
     var mx = tilemap_get_cell_x_at_pixel(map_id, mouse_x, mouse_y);<br />
@@ -51,18 +51,18 @@
     var ind = tile_get_index(data);<br />
     data = tile_set_index(data, irandom(23));<br />
     tilemap_set(map_id, data, mx, my);</p>
-  <p>The above code gets the tile map ID from the given layer and then uses that to get the tile-data for the cell under the mouse position. This data is then used to set the tile index to a random number.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior obtiene el ID del mapa <span class="notranslate">tile</span> de la capa dada y luego lo utiliza para obtener los datos de la celda bajo la posición del ratón. Estos datos se utilizan para establecer el índice de <span class="notranslate">tile</span> en un número aleatorio.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Tile_Map_Layers.htm">Tile Map Layers</a></div>
-        <div style="float:right">Next: <a href="tile_set_flip.htm">tile_set_flip</a></div>
+        <div style="float:left">Atrás: <a href="Tile_Map_Layers.htm">Capas del mapa de azulejos</a></div>
+        <div style="float:right">Siguiente: <a href="tile_set_flip.htm"><span class="notranslate">tile_set_flip</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 tile_set_index

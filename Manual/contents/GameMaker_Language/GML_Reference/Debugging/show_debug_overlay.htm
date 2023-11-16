@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>show_debug_overlay</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for show_debug_overlay" />
   <meta name="rh-index-keywords" content="show_debug_overlay" />
@@ -14,70 +14,62 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">show_debug_overlay</span></h1>
-  <p>This function opens <a data-xref="{title}" href="The_Debug_Overlay.htm">The Debug Overlay</a> with the <a href="The_Debug_Overlay.htm#fps"><strong>FPS</strong></a> window open. This overlay is disabled by default.</p>
-  <p>The debug overlay enables a menu with three options: <strong>FPS</strong> (open by default), <strong>Log</strong>, and <strong>Audio</strong>. It displays the <span data-keyref="GameMaker Name">GameMaker</span> version in the top-right corner, along with the version and name of the project: </p>
-  <p><img class="center" src="../../../assets/Images/Scripting_Reference/GML/Reference/Debug/debug_overlay_1.png" style="cursor: nesw-resize;" />If the optional <span class="inline2">minimised</span> parameter is set to <span class="inline2">false</span>, the overlay is opened with the <strong>FPS</strong> window minimised, only showing basic info in the header.</p>
-  <p>To create custom debug views that will appear under the <strong>Views</strong> menu, see <a href="The_Debug_Overlay.htm#creating_debug_views">Creating Debug Views</a>.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> This function will not work on the HTML5 target due to the different way it works compared to all the other targets.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> To bring up <a data-xref="{title}" href="The_Debug_Overlay.htm">The Debug Overlay</a> with the <strong>Log</strong> window open, use <span class="inline3_func"><a data-xref="{title}" href="show_debug_log.htm">show_debug_log</a></span> instead.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">show_debug_overlay</span>(enable[, minimised, scale, alpha]);</p>
+  <h1>show_debug_overlay</h1>
+  <p>Esta función se puede utilizar para <span class="notranslate">switch</span> activar y desactivar la superposición de depuración estándar cuando se prueba el juego y está desactivada por defecto. La superposición de depuración muestra una barra gráfica de uso de la CPU/GPU en la propia ventana del juego junto con el valor real actual de fps, el número de intercambios de texturas y el número de lotes de vértices (tenga en cuenta que los intercambios de texturas y los lotes de vértices nunca serán cero y normalmente mostrarán valores de 2 o 3, ya que incluso con un <span class="notranslate">room</span> vacío y sin <span class="notranslate">objects</span> <span data-keyref="GameMaker Name">GameMaker</span> todavía tiene que dibujar y hacer lotes de cosas).</p>
+  <p><img>Esta barra está dividida en secciones, cada una de las cuales tiene una duración de 1/60 de segundo. Como puedes ver en la imagen de arriba, la barra se compone de varios colores:</p>
+  <ul class="colour">
+    <li><b>Verde</b> - Procesamiento de entrada/salida (es decir, teclado, ratón, gamepad, red, etc.)</li>
+    <li><b>Rojo</b> - La velocidad de actualización del evento de paso</li>
+    <li><b>Amarillo</b> - El tiempo requerido para el evento de sorteo</li>
+    <li><b>Naranja</b> -Tiempo de actualización de la depuración, que normalmente sólo es visible cuando se utiliza el módulo de depuración</li>
+    <li><b>Blanco</b> - Tiempo de sobra de la GPU, que es el tiempo que se pasa esperando a que la GPU termine de renderizar el fotograma antes de que pueda empezar el siguiente</li>
+    <li><b>Cyan</b> - El tiempo de representación del texto</li>
+    <li><b>Gris</b> - El tiempo necesario para limpiar la pantalla en cada paso del sorteo</li>
+    <li><strong>Azul</strong> - El tiempo necesario para que el <a href="../Garbage_Collection/Garbage_Collection.htm">recolector de</a> basura se ejecute</li>
+    <li><b>Rojo oscuro</b> - El flush de la GPU, que es el tiempo que tarda la GPU en borrar las imágenes de la memoria</li>
+  </ul>
+  <p>Utilizando esta función puedes añadir la superposición tanto en modo de depuración como en otro, y de esta manera, puedes ver la eficiencia de tu juego y obtener una señal visual de cómo está utilizando los recursos disponibles, sin la sobrecarga de tener el <span class="notranslate">debugger</span> corriendo al lado.</p>
+  <p class="note"><b>NOTA</b>: Esta función no funcionará en el objetivo HTML5 debido a la forma diferente en que funciona en comparación con todos los demás objetivos.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
+  <p class="code">show_debug_overlay(enable);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
+        <th>Argumento</th><th>Tipo</th>
+        <th>Descripción</th>
+     </tr>
       <tr>
-        <td>enable</td>
-        <td><span data-keyref="Type_Bool"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Enable (<span class="inline2">true</span>) or disable (<span class="inline2">false</span>) the debug overlay</td>
-      </tr>
-      <tr>
-        <td>minimised</td>
-        <td><span data-keyref="Type_Bool"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td><span data-conref="../../../assets/snippets/Tag_optional.hts"> </span> Whether to open the <strong>FPS</strong> window minimised (doesn&#39;t apply to any other windows or debug views)</td>
-      </tr>
-      <tr>
-        <td>scale</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td><span data-conref="../../../assets/snippets/Tag_optional.hts"> </span> The scale factor to draw the overlay with (default is <span data-keyref="DebugOverlay_Scale_Default">1</span>)</td>
-      </tr>
-      <tr>
-        <td>alpha</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td><span data-conref="../../../assets/snippets/Tag_optional.hts"> </span> The alpha value to draw the overlay with (default is <span data-keyref="DebugOverlay_Alpha_Default">0.8</span>)</td>
-      </tr>
+        <td><span class="notranslate">enable</span></td><td><span data-keyref="Type_Bool"></span></td>
+        <td><span class="notranslate">switch on (<span class="inline">true</span>) o apagado (<span class="inline">false<span class="inline">) the debug overlay.</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4><b>Example 1: Basic Use</b></h4>
-  <p class="code">if keyboard_check_pressed(ord(&quot;O&quot;))<br />
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code"><span data-keyref="Type_Void"></span></p>
+  <p> </p>
+  <h4><b>Ejemplo:</b></h4>
+  <p class="code">if global.debug<br />
     {<br />
-        global.debug = !global.debug;<br />
-        <span data-field="title" data-format="default">show_debug_overlay</span>(global.debug);<br />
+        show_debug_overlay(true);<br />
+    }<br />
+    else<br />
+    {<br />
+        show_debug_overlay(false);<br />
     }</p>
-  <p>The above code toggles the debug on or off whenever the &quot;O&quot; key is pressed.</p>
-  <p> </p>
-  <h4>Example 2: Additional Parameters</h4>
-  <p class="code"><span data-field="title" data-format="default">show_debug_overlay</span>(true, true, 2, 0.5);</p>
-  <p>The above code opens the debug overlay minimised and draws it with a scale factor of 2 and an alpha of 0.5.</p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior activará o desactivará la depuración dependiendo del valor de una variable global.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="The_Debug_Overlay.htm">The Debug Overlay</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="show_debug_log.htm">show_debug_log</a></div>
+        <div style="float:left">Atrás: <a href="Debugging.htm">Depuración</a></div>
+        <div style="float:right">Siguiente: <a href="code_is_compiled.htm"><span class="notranslate">code_is_compiled</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 show_debug_overlay

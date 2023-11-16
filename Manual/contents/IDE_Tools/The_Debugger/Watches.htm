@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Watches</title>
+  <title>Relojes</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Section that covers the different Watches in the debugger" />
   <meta name="rh-index-keywords" content="Debugger - Watches" />
@@ -14,79 +13,106 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Watches</h1>
-  <p>The whole idea of the Debugger is to permit you to &quot;watch&quot; every detail of your game. This is done using &quot;watch windows&quot; which, by default, are opened in the <a href="../../Introduction/The_Output_Window.htm">Output window</a> docked at the bottom of the IDE. You can click on each of the different tabs to see the watches that they contain, some of which can be made to update in real time (when real time debugging <img alt="Real Time Debug Icon" class="icon" src="../../assets/Images/Icons/Debug_RealTime.png" /> is enabled from the Debugger toolbar) while others will require the debugger to have paused the game.</p>
-  <p>When you are watching <strong>variables</strong> in any of the windows, it can be one of multiple <strong>data-types</strong>. However, due to the way that <span data-keyref="GameMaker Name">GameMaker</span> stores certain things, the Debugger does not always know exactly what the variable holds. This is because the internal ID values for data structures or instances are <em>integers </em>and so the Debugger doesn&#39;t always know if the integer value being stored in a variable is for a data structure or an instance or is simply an integer value. For that reason, you can right click <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> on any variable value and get a pop-up window that lists the available data-types that this variable could be:</p>
-  <p><img alt="Debug Data Types" class="center" src="../../assets/Images/IDE Tools/Debug_DataTypes.png" />Strings and arrays do not permit this option, and it is worth noting that even if a data structure is stored in an instance variable, its ID number is global, so if you have four instances and each one creates a ds_list (for example), each list will have an ID from 0 to 3, and they won&#39;t all be 0.</p>
-  <p>Once you have selected your data-type, the variable will then show the entries in the structure simply by clicking the small <img alt="Expand Debug Icon" src="../../assets/Images/Icons/Debug_Expand.png" /> next to its name. This will expand the structures contents, and you can also change some of the values for the variables shown by simply double clicking <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> on the value and giving it a new one.</p>
-  <p class="note"><strong>NOTE</strong>: you cannot re-assign arrays or data structures in this way, but you can change some of their contents (you cannot change the &quot;key&quot; values in maps, nor the priority value for priority queues).</p>
-  <p>Below you can find a list of each of the different watch windows along with an explanation of what they are for and how to use them:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Locals</a></p>
+  <h1>Relojes</h1>
+  <p>La idea de <span class="notranslate">Debugger</span> es permitirle &quot;observar&quot; cada detalle de su juego. Esto se hace mediante &quot;ventanas de observación&quot; que, por defecto, se abren en la <a href="../../Introduction/The_Output_Window.htm">ventana de salida</a> anclada
+    en la parte inferior de <span class="notranslate">IDE</span>. Puede hacer clic en cada una de las diferentes pestañas para ver los relojes que contienen, algunos de los cuales pueden actualizarse en tiempo real (cuando se activa el tiempo real <span class="notranslate">debugging</span> <img> desde la barra de herramientas <span class="notranslate">Debugger</span> ) mientras que otros requerirán que el <span class="notranslate">debugger</span> haya pausado el juego.</p>
+  <p>Cuando usted está viendo <strong>las variables</strong> en cualquiera de las ventanas, puede ser uno de los múltiples <strong>tipos de datos</strong>. Sin embargo, debido a la forma en que <span data-keyref="GameMaker Name">GameMaker</span> almacena ciertas cosas, el <span class="notranslate">Debugger</span> no siempre sabe exactamente lo que la
+    variable. Esto se debe a que los valores de ID internos para <span class="notranslate">data structures</span> o instancias son <em>enteros </em>y por lo tanto el <span class="notranslate">Debugger</span> no siempre sabe si el valor entero que se almacena en una variable es para una estructura de datos o una instancia o es
+    simplemente un valor entero. Por esta razón, puede hacer clic con el botón derecho del ratón <img> en cualquier valor de la variable y obtener una ventana emergente que enumera los tipos de datos disponibles
+    que esta variable podría ser:</p>
+  <p><img>Las cadenas y los arrays no permiten esta opción, y cabe destacar que aunque una estructura de datos se almacene en una variable de instancia, su número de ID
+    es global, por lo que si tienes cuatro instancias y cada una crea una ds_list (por ejemplo), cada lista tendrá un ID de 0 a 3, y no todos serán 0.</p>
+  <p>Una vez que haya seleccionado su tipo de datos, la variable mostrará las entradas de la estructura simplemente haciendo clic en el pequeño <img> junto a su nombre. Esto ampliará el contenido de las estructuras
+    contenido, y también puedes cambiar algunos de los valores de las variables mostradas simplemente haciendo doble clic en <img> sobre el valor y dándole uno nuevo.</p>
+  <p class="note"><strong>NOTA</strong>: no se pueden reasignar matrices o <span class="notranslate">data structures</span> de esta manera, pero sí se pueden cambiar algunos de sus contenidos (no se pueden cambiar los valores de &quot;clave&quot; en los mapas, ni el valor de prioridad para la prioridad <span class="notranslate">queues</span>).</p>
+  <p>A continuación puede encontrar una lista de cada una de las diferentes ventanas del reloj junto con una explicación de para qué sirven y cómo utilizarlas:</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Locales</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot"><img alt="Debug Local Variables Window" class="center" src="../../assets/Images/IDE Tools/Debug_Local_Window.png" />The <strong>Locals </strong>window shows the current step properties, which includes the name of the current event (or script) being run, the offset in the <a class="glossterm" data-glossterm="Virtual Machine (VM)" href="#">Virtual Machine (VM)</a> code for the current script (the acronym &quot;PC&quot; is for &quot;program counter&quot;), the &quot;self&quot; instance running the code block, and the &quot;other&quot; instance in the event. This last part is only ever valid when the event is a <em>collision </em>event or there is a &quot;<span class="inline">with</span>&quot; used in the code. If the instance is in collision, &quot;other&quot; will show the other instance (and its variables) in the collision, but if it is a <span class="inline">with</span> then the &quot;Self&quot; instance becomes that which is running the code, while &quot;Other&quot; is then the instance that actually contains the <span class="inline">with</span>. At all other times, &quot;other&quot; will simply show the same data as &quot;Self&quot;.</p>
-    <p class="dropspot">Note that the &quot;Self&quot; and &quot;Other&quot; instances can be expanded by clicking on <img alt="Expand Debug Icon" src="../../assets/Images/Icons/Debug_Expand.png" /> to see a list of all local and instance variables that are currently declared for the code block being stepped through. If you right click <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> on a value you can set its <strong>type </strong>to see details of data structures.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><img>La ventana <strong>Locals </strong>muestra las propiedades del paso actual, que incluye el nombre del evento actual (o <span class="notranslate">script</span>) que se está
+      el desplazamiento en el código de la <a class="glossterm" data-glossterm="Máquina virtual (VM)" href="#">Máquina Virtual (VM</a> ) para el <span class="notranslate">script</span> actual (el acrónimo &quot;PC&quot; es para &quot;contador de programa&quot;), la instancia &quot;propia&quot; que ejecuta
+      el bloque de código, y la &quot;otra&quot; instancia en el evento. Esta última parte sólo es válida cuando el evento es un evento de <em>colisión </em>o hay un &quot;<span class="inline">with</span>&quot; utilizado en el código. Si la instancia está en colisión,
+      &quot;other&quot; mostrará la otra instancia (y sus variables) en la colisión, pero si es un <span class="inline">with</span> entonces la instancia &quot;Self&quot; se convierte en la que está ejecutando el código, mientras que &quot;Other&quot; es entonces la instancia
+      que realmente contiene el <span class="inline">with</span>. En todas las demás ocasiones, &quot;other&quot; simplemente mostrará los mismos datos que &quot;Self&quot;.<br></p>
+    <p class="dropspot">Observe que las instancias &quot;Self&quot; y &quot;Other&quot; pueden expandirse haciendo clic en <img> para ver una
+      lista de todas las variables locales y de instancia que están declaradas actualmente para el bloque de código que se está recorriendo. Si hace clic con el botón derecho del ratón en <img> sobre un valor, puede establecer su <strong>tipo </strong>para ver los detalles de <span class="notranslate">data structures</span>.</p>
+    <p class="dropspot"><br /></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Globals</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Globales</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot"><img alt="Debug Global Variables Window" class="center" src="../../assets/Images/IDE Tools/Debug_Global_Window.png" />The <strong>Globals </strong>window will show a list of all the currently declared <strong>global </strong>variables and their values. If you right click <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> on a value you can set its <strong>type </strong>to see details of data structures.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><img>La ventana de <strong>Globales </strong>mostrará una lista de
+      todas las variables <strong>globales </strong>actualmente declaradas y sus valores. Si hace clic con el botón derecho del ratón en <img> sobre un valor, puede establecer su <strong>tipo </strong>para ver los detalles de <span class="notranslate">data structures</span>.</p>
+    <p class="dropspot"><br /></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Watches</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Relojes</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot"><img alt="Debug Watches Variables Window" class="center" src="../../assets/Images/IDE Tools/Debug_Watch_Window.png" />This window is for you to add a specific variable that you want to keep track of. This can be a <strong>global </strong>or <strong>instance </strong>scope variable, a <strong>built in</strong> variable or even an <strong>array </strong>or <strong>data structure</strong>. If the instance code being stepped through has the watched variable it will be shown here, meaning you can easily keep track of a value without having to search for it in the <strong>Locals </strong>or <strong>Globals </strong>windows. If you right click <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> on a value you can set its <strong>type</strong>, delete it, or clear all watches from the window.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><img>Esta ventana es para añadir una variable específica que
+      desea controlar. Puede ser una variable <strong>global </strong>o de ámbito de <strong>instancia </strong>, una variable <strong>incorporada</strong> o incluso un <strong>array </strong>o una <strong>estructura de datos</strong>. Si el código de instancia que se está
+      Si el código de instancia que se está recorriendo tiene la variable observada, se mostrará aquí, lo que significa que puede seguir fácilmente un valor sin tener que buscarlo en las ventanas <strong>Locales </strong>o <strong>Globales </strong>. Si haces clic con el botón derecho del ratón en <img> sobre un valor, puedes establecer su <strong>tipo</strong>, borrarlo o eliminar todas las observaciones de la ventana. <br></p>
+    <p class="dropspot"><br /></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Instance</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Instancia</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot"><img alt="Debug Instance Watches Window" class="center" src="../../assets/Images/IDE Tools/Debug_Instance_Watches.png" />As the name implies, this window will show all <strong>instance </strong>variables, <strong>local </strong>variables for the instance event, <strong>built in </strong>variables, and <strong>structs</strong> associated with the instance currently being stepped through in the Source window (if an instance is being referenced using the keyword &quot;other&quot; or the <span class="inline">with </span>statement, then this window will show that instances properties instead). If you right click <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> on a value you can set its <strong>type</strong>, delete it, or clear all watches from the window.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><img>Como su nombre indica, esta ventana mostrará todas las variables de <strong>la </strong>instancia,
+      las variables <strong>locales </strong>para el evento de instancia, las variables <strong>incorporadas </strong>y <strong>los structs</strong> asociados con la instancia que se está recorriendo en la ventana Fuente (si se está haciendo referencia a una instancia utilizando
+      la palabra clave &quot;other&quot; o la sentencia <span class="inline">with </span>, entonces esta ventana mostrará las propiedades de esa instancia). Si hace clic con el botón derecho del ratón en <img> sobre un valor, puede establecer su <strong>tipo</strong>, eliminarlo o borrar todos los relojes de la ventana. </p>
+    <p class="dropspot"><br /></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">All Instances</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Todas las instancias</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot"><img alt="Debug All Instance Watches Window" class="center" src="../../assets/Images/IDE Tools/Debug_AllInstance_Watches.png" />Should you need to see all instances that are currently in the room, you can select this window and they will be listed. You can also see the state of any <strong>built in</strong> variables, <strong>instance</strong> variables or <strong>structs </strong>that they have, and you can right click <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> on a value to set its <strong>type</strong>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><img>Si necesita ver todas las instancias que
+      están actualmente en <span class="notranslate">room</span>, puede seleccionar esta ventana y se listarán. También puedes ver el estado de cualquier variable <strong>incorporada</strong>, variables de <strong>instancia</strong> o <strong>structs </strong>que tengan, y puedes hacer clic con el botón derecho
+      hacer clic en <img> en un valor para establecer su <strong>tipo</strong>.</p>
+    <p class="dropspot"><br /></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Selected Instance</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Instancia seleccionada</a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot"><img alt="Debug Selected Instance Watches Window" class="center" src="../../assets/Images/IDE Tools/Debug_SelectedInstance_Watches.png" />This window is for when you select an instance from your game. This is done by simply pausing the game and then clicking on any visible instance within the game window. The instance found beneath the mouse cursor will then have its information displayed in the Selected Instance window, where you can see it&#39;s built in variables, instance variables, and structs the same as for the Instances window.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><img>Esta ventana es para cuando
+      seleccionar una instancia de su juego. Esto se hace simplemente pausando el juego y haciendo clic en cualquier instancia visible dentro de la ventana del juego. La instancia encontrada bajo el cursor del ratón tendrá entonces su información mostrada en la ventana de la Instancia Seleccionada.
+      Instancia seleccionada, donde puedes ver sus variables incorporadas, variables de instancia, y <span class="notranslate">structs</span> igual que en la ventana de Instancias.</p>
+    <p class="dropspot"><br /></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">Render States</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">Estados de Renderización</a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot"><img alt="Debug Render State Window" class="center" src="../../assets/Images/IDE Tools/Debug_RenderState_Window.png" />This watch shows you all the information available for the state of the current frame being <a class="glossterm" data-glossterm="rendered" href="#">rendered</a>, like the draw alpha or fill colour. This cannot be updated in real time so you will need to pause the game to update and get the frame details.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><img>Este reloj muestra toda la información disponible
+      para el estado del fotograma actual que se está <a data-glossterm="renderizado" class="glossterm" href="#">renderizando</a>, como el alfa de dibujo o el color de relleno. Esto no puede ser actualizado en tiempo real, por lo que tendrá que pausar el juego para actualizar y obtener los detalles del cuadro.
+      detalles.
+    </p>
+    <p class="dropspot"><br /></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#">Surfaces / Textures</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#">Superficies / Texturas</a></p>
   <div class="droptext" data-targetname="drop-down9">
-    <p class="dropspot"><img alt="Debug Surfaces / Textures Watches Window" class="center" src="../../assets/Images/IDE Tools/Debug_SurfaceTexture_Window.png" />This watch enables you to see exactly what is being drawn to any <strong>surfaces </strong>you have in your game (including the application surface) as well as see the <a class="glossterm" data-glossterm="texture page" href="#">texture page</a><span class="glossextra">s</span> that are in memory. You can select from textures or surfaces from the menu at the bottom of the watch, and then mouse over the texture or surface ID to have it displayed in a pop-up window:</p>
-    <p class="dropspot"><img class="center" src="../../assets/Images/IDE Tools/Debug_Textures.png" />Note that the debugger must be <strong>paused </strong>before these will update.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><img>Este reloj te permite ver
+      exactamente lo que se está dibujando en cualquier <strong>superficie </strong>que tengas en tu juego (incluyendo la superficie de la aplicación), así como ver las<span class="glossextra">páginas de</span> <a data-glossterm="página de texturas" class="glossterm" href="#">texturas</a>que están en la memoria. Puedes seleccionar texturas o superficies en el menú de la parte inferior del reloj, y luego pasar el ratón por encima del ID de la textura o superficie para que se muestre en una ventana emergente:<br></p>
+    <p class="dropspot"><img>Tenga en cuenta que el <span class="notranslate">debugger</span> debe estar <strong>en pausa </strong>antes de que se actualicen.</p>
+    <p class="dropspot"><br /></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">Profile</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">Perfil</a></p>
   <div class="droptext" data-targetname="drop-down10">
-    <p class="dropspot">This window is where you can see the current system <strong>profile </strong>for the game being tested and it&#39;s where you can check everything in your game from whole events to individual function calls to see how they are performing and spot any trouble areas or bottlenecks. For further information on profiling see the following page: </p>
+    <p class="dropspot">Esta ventana es donde puedes ver el <strong>perfil </strong>del sistema actual para el juego que se está probando y es donde puedes comprobar todo en tu juego, desde los eventos completos hasta las llamadas a funciones individuales para ver cómo están funcionando y detectar
+      y detectar áreas problemáticas o cuellos de botella. Para más información sobre la creación de perfiles, consulta la siguiente página: </p>
     <ul class="dropspotlist">
-      <li class="dropspot"><a href="The_Profiler.htm">The Profiler</a></li>
+      <li class="dropspot"><a href="The_Profiler.htm">El perfilador</a></li>
     </ul>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><br /></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#">Buffer</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#">Tampón</a></p>
   <div class="droptext" data-targetname="drop-down11">
-    <p class="dropspot">If you have initialised any buffers in your game, then this window will show you the <strong>buffer data</strong>. You can select any buffer created by setting the <strong>Buffer ID</strong> value, which will start at 0 for the first buffer created in your game, and increment by 1 for each consecutive buffer:</p>
-    <p class="dropspot"><img alt="Debug Buffer Window" class="center" src="../../assets/Images/IDE Tools/Debug_Buffer.png" />If you right click <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> on the data window or click the <strong>Data Display</strong> button, you can select how the data is displayed, setting the <em>alignment </em>and <em>type</em>, and you can also set how the data is laid out from the <strong>Column Select</strong> box. There is a drop-down window here where you can select from a default list of layouts.</p>
+    <p class="dropspot">Si has inicializado cualquier <span class="notranslate">buffers</span> en tu juego, esta ventana te mostrará los <strong>datos</strong> del buffer. Puede seleccionar cualquier <span class="notranslate">buffer</span> creado estableciendo el valor <strong>de ID del</strong> búfer, que comenzará en 0 para el primer <span class="notranslate">buffer</span> creado
+      en su juego, y se incrementará en 1 para cada búfer consecutivo:<br></p>
+    <p class="dropspot"><img>Si hace clic con el botón derecho del ratón en <img> en la ventana de datos o hace clic en el botón de <strong>visualización de datos</strong>, puede seleccionar cómo se muestran los datos, estableciendo la <em>alineación </em>y el <em>tipo</em>, y también puede establecer cómo
+      los datos desde el cuadro de <strong>selección de columnas</strong>. Aquí hay una ventana desplegable en la que puede seleccionar de una lista predeterminada de diseños.</p>
   </div>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../The_Debugger.htm">The Debugger</a></div>
-        <div style="float:right">Next: <a href="The_Profiler.htm">The Profiler</a></div>
+        <div style="float:left">Atrás: <a href="../The_Debugger.htm">El depurador</a></div>
+        <div style="float:right">Siguiente: <a href="The_Profiler.htm">El perfilador</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Variable Watches
@@ -96,5 +122,5 @@ Debug Watches
   <!-- TAGS
 debug_watches
 -->
-</body>
-</html>
+
+</body></html>

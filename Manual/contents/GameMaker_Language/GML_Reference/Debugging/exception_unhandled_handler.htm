@@ -6,7 +6,7 @@
   <title>exception_unhandled_handler</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for exception_unhandled_handler" />
   <meta name="rh-index-keywords" content="exception_unhandled_handler" />
@@ -15,7 +15,7 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>exception_unhandled_handler</h1>
-  <p>This runtime function can be used to &quot;take over&quot; the default <span data-keyref="GameMaker Name">GameMaker</span> error message when a runtime exception occurs. You supply a method or function which is called when the exception occurs, and its first argument will be a struct (known as the <strong><span data-keyref="Type_Struct_Exception"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Reference/Debugging/exception_unhandled_handler.htm">Exception Struct</a></span></strong>) containing information about the exception. This struct has the following format:</p>
+  <p>Esta función <span class="notranslate">runtime</span> se puede utilizar para &quot;asumir&quot; el mensaje de error por defecto de <span data-keyref="GameMaker Name">GameMaker</span> cuando se produce una excepción <span class="notranslate">runtime</span>. Usted suministra un método o función que es llamado cuando la excepción ocurre, y su primer argumento será un <span class="notranslate">struct</span> (conocido como el <strong><span data-keyref="Type_Struct_Exception"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Reference/Debugging/exception_unhandled_handler.htm">Estructura de excepción</a></span></strong>) que contiene información sobre la excepción. Este <span class="notranslate">struct</span> tiene el siguiente formato:</p>
   <table>
     <colgroup>
       <col />
@@ -24,67 +24,67 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="3"><span data-keyref="Type_Struct_Exception"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Reference/Debugging/exception_unhandled_handler.htm">Exception Struct</a></span></th>
+        <th colspan="3"><span data-keyref="Type_Struct_Exception"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Reference/Debugging/exception_unhandled_handler.htm">Estructura de excepción</a></span></th>
       </tr>
       <tr>
         <th>Variable</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
         <td><span class="inline">message</span></td>
-        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
-        <td>A short message for the exception</td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Cadena</a></span></td>
+        <td>Un breve mensaje para la excepción</td>
       </tr>
       <tr>
         <td><span class="inline">longMessage</span></td>
-        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
-        <td>A longer message for the exception</td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Cadena</a></span></td>
+        <td>Un mensaje más largo para la excepción</td>
       </tr>
       <tr>
         <td><span class="inline">script</span></td>
-        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
-        <td>A string that describes where the exception came from</td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Cadena</a></span></td>
+        <td>Un <span class="notranslate">string</span> que describe el origen de la excepción</td>
       </tr>
       <tr>
         <td><span class="inline">line</span></td>
         <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td>The line number where the exception came from</td>
+        <td>El número de línea de la que procede la excepción</td>
       </tr>
       <tr>
         <td><span class="inline">stacktrace</span></td>
-        <td><span data-keyref="Type_Array"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span> of <span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span>s</td>
-        <td>An array of strings that is the <a href="debug_get_callstack.htm">callstack</a> for the frame when the exception was generated</td>
+        <td><span data-keyref="Type_Array"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span> de <span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Cadena</a></span>s</td>
+        <td>Un array de <span class="notranslate">strings</span> que es la <a href="debug_get_callstack.htm">pila de llamadas</a> para la trama cuando se generó la excepción</td>
       </tr>
     </tbody>
   </table>
-  <p>You can also supply <span class="inline">undefined</span> as the argument, which will remove the custom exception handler (if set) and revert to <span data-keyref="GameMaker Name">GameMaker</span>&#39;s default error message.</p>
-  <p>This function will return the previously set exception handler method, however if it was never changed or it was previously reset using <span class="inline">undefined</span>, then it will simply return <span class="inline">undefined</span>.</p>
-  <p>Passing a method to this function means that no error message will be shown to the user, and you will be allowed to handle the exception yourself. However you cannot use this to &quot;break out&quot; of the exception to continue your game, as the game will still close after the exception handler is called. You also cannot call functions that keep the game running for longer than the final frame (e.g. <span class="inline"><a href="../General_Game_Control/game_restart.htm">game_restart()</a></span>) as the game needs to close after the crash.</p>
-  <p>Note that the context for running the method is <i>not</i> in an event, so nothing can be rendered to the screen at this time. In general, the safest thing that could be done at this point is to save a file with the exception context information so it could be - for example - parsed and processed on the next run of the game and then dealt with.</p>
-  <p>Note that if you use the <span class="inline">return</span> statement in the supplied method, then the given value will be converted to an integer and used as the exit code from the runner.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>También puede proporcionar <span class="inline">undefined</span> como argumento, lo que eliminará el manejador de excepciones personalizado (si está establecido) y volverá al mensaje de error por defecto de <span data-keyref="GameMaker Name">GameMaker</span>.</p>
+  <p>Esta función devolverá el método manejador de excepciones previamente establecido, sin embargo si nunca fue cambiado o fue previamente restablecido usando <span class="inline">undefined</span>, entonces simplemente devolverá <span class="inline">undefined</span>.</p>
+  <p>Pasar un método a esta función significa que no se mostrará ningún mensaje de error al usuario, y se te permitirá manejar la excepción tú mismo. Sin embargo, no puedes usar esto para &quot;salir&quot; de la excepción y continuar tu juego, ya que el juego seguirá cerrándose después de llamar al manejador de la excepción. Tampoco puedes llamar a funciones que mantengan el juego en marcha durante más tiempo que el último fotograma (por ejemplo, <span class="inline"><a href="../General_Game_Control/game_restart.htm">game_restart()</a></span>), ya que el juego debe cerrarse después de la caída.</p>
+  <p>Tenga en cuenta que el contexto para ejecutar el método <i>no</i> está en un evento, por lo que nada puede ser renderizado en la pantalla en este momento. En general, lo más seguro que se puede hacer en este momento es guardar un archivo con la información del contexto de la excepción para que pueda ser -por ejemplo- analizado y procesado en la siguiente ejecución del juego y luego tratado.</p>
+  <p>Tenga en cuenta que si utiliza la sentencia <span class="inline">return</span> en el método suministrado, el valor dado se convertirá en un entero y se utilizará como código de salida del corredor.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">exception_unhandled_handler(user_handler);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>user_handler</td>
-        <td><span data-keyref="Type_Method"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></span></td>
-        <td>The method (user-defined function) to use as the exception handler, or <span class="inline">undefined</span> to reset it to default.</td>
+        <td><span class="notranslate">user_handler</span></td>
+        <td><span data-keyref="Type_Method"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Method_Variables.htm">Método</a></span></td>
+        <td><span class="notranslate">The method (user-defined function) to use as the exception handler, or <span class="inline">undefined</span> para restablecer el valor por defecto.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Method"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Method_Variables.htm">Method</a></span> (or <span data-keyref="Type_Undefined"><a data-rhwidget="HyperlinkPopover" href="../../../../LINKGOESHERE">undefined</a></span>)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">exception_unhandled_handler(function(ex)<br />
     {<br />
         // Print some messages to the output log<br />
@@ -104,17 +104,17 @@
         return 0;<br />
     });
   </p>
-  <p>The above code will create an exception handler method and use it to save a file with the exception data; it will also show the long error message in a new pop-up window for debug purposes.</p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior creará un método manejador de excepciones y lo utilizará para guardar un archivo con los datos de la excepción; también mostrará el mensaje de error largo en una nueva ventana emergente para fines de depuración.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Debugging.htm">Debugging</a></div>
-        <div style="float:right">Next: <a href="get_integer.htm">get_integer</a></div>
+        <div style="float:left">Atrás: <a href="Debugging.htm">Depurando</a></div>
+        <div style="float:right">Siguiente: <a href="get_integer.htm"><span class="notranslate">get_integer</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 exception_unhandled_handler

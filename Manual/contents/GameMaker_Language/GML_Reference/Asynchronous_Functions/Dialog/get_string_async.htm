@@ -6,7 +6,7 @@
   <title>get_string_async</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for get_string_async" />
   <meta name="rh-index-keywords" content="get_string_async" />
@@ -16,40 +16,40 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>get_string_async</h1>
-  <p>This function opens a window and displays message as well as a space for the user to input a string (which will contain the supplied default string to start with). This is an asynchronous function, and as such <span data-keyref="GameMaker Name">GameMaker</span> does <i>not</i> block the device it is being run on while waiting for an answer, but rather keeps on running events as normal. Once the user has typed out their string and pressed the &quot;Okay&quot; button, an <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Dialog.htm">asynchronous Dialog event </a>is triggered which, for the duration of that event <i>only</i>, will have a DS map stored in the variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>.</p>
-  <p>This map will contain the three keys, &quot;<strong>id</strong>&quot;, &quot;<strong>status</strong>&quot;, and &quot;<strong>result</strong>&quot;. &quot;id&quot; is the value that was returned by the function when called, the &quot;status&quot; will be either <span class="inline">true</span> for the &quot;Okay&quot; button being pressed, or <span class="inline">false</span> if the message was cancelled (where applicable as not all target platforms permit the message to be cancelled). Finally &quot;result&quot; will return the string that the user input (or an empty string &quot;&quot; if none was supplied).</p>
-  <p class="note"><strong><em><span class="note">NOTE</span></em></strong><em> This function is <span data-keyref="Dialog for debug only">for <strong>debugging and testing use only</strong> and should not be used in released games. For that purpose you should create a custom user interface to receive input from players so that you have complete control over how the dialogs look and behave.</span></em></p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Esta función abre una ventana y muestra un mensaje, así como un espacio para que el usuario introduzca un <span class="notranslate">string</span> (que contendrá el <span class="notranslate">string</span> suministrado por defecto para empezar). Esta es una función asíncrona, y como tal <span data-keyref="GameMaker Name">GameMaker</span> <i>no</i> bloquea el dispositivo en el que se está ejecutando mientras espera una respuesta, sino que sigue ejecutando los eventos de forma normal. Una vez que el usuario ha escrito su <span class="notranslate">string</span> y ha pulsado el botón &quot;Okay&quot;, se dispara un evento <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Dialog.htm">asíncrono de Diálogo </a>que, <i>sólo</i> durante la duración de ese evento, tendrá un mapa DS almacenado en la variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>.</p>
+  <p>Este mapa contendrá las tres claves, &quot;<strong>id</strong>&quot;, &quot;<strong>status&quot;</strong> y &quot;<strong>result</strong>&quot;. &quot;id&quot; es el valor que devolvió la función cuando fue llamada, el &quot;status&quot; será <span class="inline">true</span> para el botón &quot;Okay&quot; que fue presionado, o <span class="inline">false</span> si el mensaje fue cancelado (cuando sea aplicable ya que no todas las plataformas de destino permiten cancelar el mensaje). Por último, &quot;resultado&quot; devolverá el <span class="notranslate">string</span> que el usuario introdujo (o un <span class="notranslate">string</span> &quot;&quot; vacío si no se suministró ninguno).</p>
+  <p class="note"><strong><em><span class="note">NOTA</span></em></strong><em> Esta función es <span data-keyref="Dialog for debug only"> <strong>sólo</strong> para <strong>uso de depuración y pruebas</strong></span>y no debe ser utilizada en juegos lanzados. Para ello, debe crear una interfaz de usuario personalizada para recibir las entradas de los jugadores, de modo que tenga un control completo sobre el aspecto y el comportamiento de los diálogos.</em></p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">get_string_async(string, default);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>string</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The message to show in the dialog.</td>
+        <td><span class="notranslate">string</span></td>
+        <td><span data-keyref="Type_String">Cadena</span></td>
+        <td><span class="notranslate">The message to show in the dialog.</span></td>
       </tr>
       <tr>
-        <td>default</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The default string.</td>
+        <td><span class="notranslate">default</span></td>
+        <td><span data-keyref="Type_String">Cadena</span></td>
+        <td><span class="notranslate">The default string.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_ID_Async_Event">Async Request ID</span></p>
-  <p> </p>
-  <h4>Extended Example:</h4>
-  <p> </p>
-  <p>The <b>left mouse press event</b> (for example) of the object that is showing the message would have the following code:</p>
+  <p> </p>
+  <h4>Ejemplo ampliado:</h4>
+  <p> </p>
+  <p>El <b>evento de pulsación del botón izquierdo del ratón</b> (por ejemplo) del <span class="notranslate">object</span> que está mostrando el mensaje tendría el siguiente código:</p>
   <p class="code">msg = get_string_async(&quot;What&#39;s your name?&quot;,&quot;Anon&quot;);</p>
-  <p>The above will show a message requesting that the user input a string and press &quot;Okay&quot;. The function id is stored in the variable &quot;msg&quot; and will be used in the asynchronous Dialogs event as shown below:</p>
+  <p>Lo anterior mostrará un mensaje solicitando que el usuario ingrese un <span class="notranslate">string</span> y presione &quot;Okay&quot;. El id de la función se almacena en la variable &quot;msg&quot; y se utilizará en el evento asíncrono Dialogs como se muestra a continuación:</p>
   <p class="code">var i_d = ds_map_find_value(async_load, &quot;id&quot;);<br />
     if i_d == msg<br />
     {<br />
@@ -61,18 +61,18 @@
             }<br />
         }<br />
     }</p>
-  <p>The above code checks the &quot;id&quot; key of the returned <span class="inline">DS Map</span> against the value stored in the variable &quot;msg&quot;. If they are the same, it then checks to see if &quot;Okay&quot; was pressed (rather than the window being closed/cancelled) and if it returns <span class="inline">true</span> it then checks the &quot;result&quot; of a string to make sure that no empty strings were returned before setting a global variable.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior comprueba la clave &quot;id&quot; del <span class="inline">DS Map</span> devuelto con el valor almacenado en la variable &quot;msg&quot;. Si son iguales, entonces comprueba si se ha pulsado &quot;Okay&quot; (en lugar de cerrar/cancelar la ventana) y si devuelve <span class="inline">true</span> entonces comprueba el &quot;resultado&quot; de un <span class="notranslate">string</span> para asegurarse de que no se ha devuelto ningún <span class="notranslate">strings</span> vacío antes de establecer una variable global.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Dialog.htm">Dialog</a></div>
-        <div style="float:right">Next: <a href="get_integer_async.htm">get_integer_async</a></div>
+        <div style="float:left">Atrás: <a href="Dialog.htm">Diálogo</a></div>
+        <div style="float:right">Siguiente: <a href="get_integer_async.htm"><span class="notranslate">get_integer_async</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 get_string_async

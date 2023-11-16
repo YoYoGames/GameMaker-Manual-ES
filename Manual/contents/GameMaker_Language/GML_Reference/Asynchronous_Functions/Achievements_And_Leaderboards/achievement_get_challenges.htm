@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>achievement_get_challenges</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for achievement_get_challenges" />
+  <meta name="rh-index-keywords" content="achievement_get_challenges,achievement_challenge_list_received,achievement_filter_friends_only,achievement_filter_all_players" />
+  <meta name="search-keywords" content="achievement_get_challenges,achievement_challenge_list_received,achievement_filter_friends_only,achievement_filter_all_players" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>achievement_get_challenges</h1>
+  <p>Esta función enviará una solicitud a la <span class="notranslate">server</span> para obtener información sobre todos los desafíos actuales y activará una devolución de llamada <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Evento social asíncrono</a> que contiene el
+    <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> map rellenado con los pares clave/valor relevantes. La clave de <i>identificación</i> de este mapa <tt>DS</tt> se utiliza para identificar la devolución de llamada correcta (puede haber
+    (puede haber más de una función de activación para cualquier evento asíncrono), y se emparejará con la <b>constante</b> <tt>achievement_challenge_list_received</tt>, así como con una serie de otros pares clave/valor para cada desafío. El contenido exacto del mapa
+    se muestra a continuación:</p>
+  <p class="note"><b>NOTA</b>: Esta función es sólo para <b>iOS</b>.</p>
+  <ul class="colour">
+    <li>&quot;<b>id</b>&quot; - Para esta función debe ser <tt>achievement_challenge_list_received</tt></li>
+    <li>&quot;<b>numchallenges</b>&quot; - El número de desafíos (locales y remotos) disponibles actualmente.</li>
+    <li>&quot;<b>ChallengeNplayerid</b>&quot; - El id de jugador para el desafío, donde &quot;N&quot; es un número entero, EG: &quot;Challenge5playerid&quot; es el id de jugador para el quinto desafío de la lista.</li>
+    <li>&quot;<b>ChallengeNissuerid</b>&quot; - El id de la persona que emitió el reto, donde &quot;N&quot; es un número entero, EG: &quot;Challenge2issuerid&quot; es el id del emisor del segundo reto de la lista.</li>
+    <li>&quot;<b>ChallengeNstate</b>&quot; - El estado del desafío &quot;N&quot;, que tendrá un valor de 0 - 3 (como <span class="notranslate">string</span>) para <i>inválido</i>, <i>pendiente</i>, <i>completado</i> o <i>rechazado</i>.</li>
+    <li>&quot;<b>ChallengeNmessage</b>&quot; - El mensaje de texto para el desafío &quot;N&quot;.</li>
+    <li>&quot;<b>ChallengeNissueddate</b>&quot; - La fecha de emisión de la impugnación &quot;N&quot;.</li>
+    <li>&quot;<b>ChallengeNcompleteddate</b>&quot; - La fecha de finalización del desafío &quot;N&quot;.</li>
+    <li>&quot;<b>ChallengeNtype</b>&quot; - El tipo de desafío dado. Puede ser una de las dos constantes:</li>
+  </ul>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constante</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">achievement_filter_friends_only </span></td>
+        <td>Obtén sólo las puntuaciones de los jugadores amigos.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">achievement_filter_all_players </span></td>
+        <td>Obtén todas las puntuaciones de todos los jugadores.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <ul class="colour">
+    <li>&quot;<b>ChallengeNidentifier</b>&quot; - El identificador <span class="notranslate">string</span> para el desafío.</li>
+    <li>&quot;<b>ChallengeNscore</b>&quot; - La puntuación vinculada al desafío.</li>
+  </ul>
+  <p> </p>
+  <h4><b>Sintaxis:</b></h4>
+  <p class="code">achievement_get_challenges()</p>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Ejemplo ampliado:</h4>
+  <p>El siguiente código se llamaría probablemente después de que el jugador haya entrado en su cuenta de juego utilizando <a href="achievement_login.htm"><tt>achievement_login()</tt></a>:</p>
+  <p class="code">achievement_get_challenges();</p>
+  <p>Esto enviará una solicitud para la información del desafío actual y generará una devolución de llamada asíncrona con el ds_map especial <tt>async_load</tt> que contiene los siguientes datos:</p>
+  <p class="code">var ident = ds_map_find_value(async_load, &quot;id&quot;);<br/> if ident == achievement_challenge_list_received<br/>    {
+    <br/>    var numentries = ds_map_find_value(async_load,&quot;numchallenges&quot;);<br/>    for(var i = 0; i &lt; numentries; i++;)<br/>       {
+    <br/>       player_id[i] = ds_map_find_value(async_load, &quot;Challenge&quot; + string(i)+&quot;playerid&quot;);<br/>       issuer_id[i] = ds_map_find_value(async_load, &quot;Challenge&quot; + string(i) +&quot;issuerid&quot;);<br/>       state[i]
+    = ds_map_find_value(async_load, &quot;Challenge&quot; + string(i)+&quot;state&quot;);<br/>       message[i] = ds_map_find_value(async_load, &quot;Challenge&quot; + string(i)+&quot;message&quot;);<br/>       date_completed[i] = ds_map_find_value(async_load,
+    &quot;Challenge&quot; + string(i)+&quot;completeddate&quot;);<br/>       date_issued[i] = ds_map_find_value(async_load, &quot;Challenge&quot; + string(i)+&quot;issueddate&quot;);<br/>       ach_type[i] = ds_map_find_value(async_load, &quot;Challenge&quot;
+    + string(i)+&quot;type&quot;);<br/>       ach_ident[i] = ds_map_find_value(async_load, &quot;Challenge&quot; + string(i)+&quot;identifier&quot;);<br/>       ach_score[i] = ds_map_find_value(async_load, &quot;Challenge&quot; + string(i)+&quot;score&quot;);<br/>       }
+  </p>
+  <p>El código anterior comprueba el <tt>Mapa DS</tt> devuelto en el <b>Evento Social Asíncrono</b> y si su &quot;id&quot; coincide con la constante que se está comprobando, entonces <span class="notranslate">loops</span> a través del mapa almacenando todos los diferentes valores en una serie de arrays. Esta información
+    puede ser utilizada, por ejemplo, para crear tus propias páginas de retos personalizados en el juego.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Atrás: <a href="Achievements_And_Leaderboards.htm">Logros y tablas de clasificación</a></div>
+        <div style="float:right">Siguiente: <a href="achievement_get_pic.htm"><span class="notranslate">achievement_get_pic</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
+  </div>
+  <!-- KEYWORDS
+achievement_get_challenges
+achievement_challenge_list_received
+achievement_filter_friends_only
+achievement_filter_all_players
+-->
+  <!-- TAGS
+achievement_get_challenges
+-->
+</body>
+</html>

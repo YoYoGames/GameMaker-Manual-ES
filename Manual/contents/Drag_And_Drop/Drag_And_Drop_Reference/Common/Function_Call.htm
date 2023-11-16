@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Function Call</title>
+  <title>Llamada de función</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Section detailing Function Call" />
   <meta name="rh-index-keywords" content="GML Visual Action - Function Call" />
@@ -14,54 +14,54 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Function Call Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_Execute_Function.png" /> Function Call</h1>
-  <p>This action can be used to call any <a href="../../../GameMaker_Language/GML_Reference/GML_Reference.htm">GML function</a> or any <a href="Declare_A_New_Function.htm">user-defined function</a>. You give the function to call and then supply any additional
-    <i>arguments</i> that it requires, ie: any values (strings, integers, resource indices, etc...) that you wish to input into the function so that it can use them. You can add additional argument inputs by clicking the plus icon <span><img src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Icon_Expand_Arguments.png"/> </span>beside
-    the action, and you should ensure that your argument count matches that of the function being used (ie: if the function requires 3 arguments, you should supply 3 arguments). Some functions can also return a value for later use in the action block
-    list, and so you can also specify the <b>target variable</b> that should store this return value, which can have been created previously or can be a new temporary local one (if you check the &quot;<strong>Temp</strong>&quot; check-box). Both the target
-    and the argument fields can be left blank if they are not required.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Function Call Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/a_Common_Execute_Function.png" /></p>
-  <h4>Arguments:</h4>
-  <p> </p>
+  <h1><img> Llamada de función</h1>
+  <p>Esta acción puede utilizarse para llamar a cualquier <a href="../../../GameMaker_Language/GML_Reference/GML_Reference.htm">función GML</a> o a cualquier <a href="Declare_A_New_Function.htm">función definida por el usuario</a>. Se indica la función que se va a llamar y, a continuación, se proporcionan los argumentos adicionales
+    adicionales que requiera, es decir, cualquier valor (<span class="notranslate">strings</span>, números enteros, índices de recursos, etc...) que desee introducir en la función para que pueda utilizarlos. Puede añadir argumentos adicionales haciendo clic en el icono del signo más <span><img> </span>junto a
+    de la acción, y debe asegurarse de que su número de argumentos coincide con el de la función que se está utilizando (es decir, si la función requiere 3 argumentos, debe suministrar 3 argumentos). Algunas funciones también pueden devolver un valor para su uso posterior en el bloque de acciones
+    por lo que también puede especificar la <b>variable de destino</b> que debe almacenar este valor de retorno, que puede haber sido creada previamente o puede ser una nueva local temporal (si marca la casilla &quot;<strong>Temp</strong>&quot;). Tanto el campo de destino
+    y el argumento pueden dejarse en blanco si no son necesarios.</p>
+  <p> </p>
+  <h4>Sintaxis de la acción:</h4>
+  <p><img alt="Function Call Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_Execute_Function.png" /></p>
+  <h4>Argumentos:</h4>
+  <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>Function</td>
-        <td>The GML function to call.</td>
+        <td><span class="notranslate">Function</span></td>
+        <td>La función <span class="notranslate">GML</span> a la que hay que llamar.</td>
       </tr>
       <tr>
-        <td>Argument<em>0</em> ... Argument<em>X</em></td>
-        <td>The different arguments (values) that are to be passed to the function.</td>
+        <td><span class="notranslate">Argument<em>0</em> ... Argument<em>X</em></span></td>
+        <td>Los diferentes argumentos (valores) que se van a pasar a la función.</td>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The name of the variable that is to be targeted for any returned values (can be left blank).</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>El nombre de la variable a la que se dirigen los valores devueltos (puede dejarse en blanco).</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Function Call Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_Common_Execute_Function.png" />The above action block code checks to see if an instance of &quot;<span class="inline">obj_Player</span>&quot;
-    exists and if it does it calls the <a href="../../../GameMaker_Language/GML_Reference/Maths_And_Numbers/Angles_And_Distance/point_distance.htm"><span class="inline">point_distance()</span></a><span> </span>function, passing in the current instances x and y position,
-    as well as the &quot;<span class="inline">obj_player</span>&quot; x and y position. It will return the distance between the two points to the (previously created) <span class="inline">dist</span> instance variable, or set the variable to 0 if there is no instance of
-    &quot;<span class="inline">obj_Player</span>&quot; in the room.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p><img>El código del bloque de acción anterior comprueba si existe una instancia de &quot;<span class="inline">obj_Player</span>&quot;
+    y si existe, llama a la función <a href="../../../GameMaker_Language/GML_Reference/Maths_And_Numbers/Angles_And_Distance/point_distance.htm"><span class="inline">point_distance()</span></a><span> </span>pasando la posición x e y de la instancia actual,
+    así como la posición x e y de &quot;<span class="inline">obj_player</span>&quot;. Devolverá la distancia entre los dos puntos a la variable de instancia (creada previamente) <span class="inline">dist</span>, o pondrá la variable a 0 si no hay ninguna instancia de
+    &quot;<span class="inline">obj_Player</span>&quot; en el <span class="notranslate">room</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Common_Actions_Library.htm">Common Actions</a></div>
-        <div style="float:right">Next: <a href="Apply_To...htm">Apply To...</a></div>
+        <div style="float:left">Atrás: <a href="Common_Actions_Library.htm">Acciones comunes</a></div>
+        <div style="float:right">Siguiente: <a href="Apply_To...htm">Aplicar a...</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Function Call

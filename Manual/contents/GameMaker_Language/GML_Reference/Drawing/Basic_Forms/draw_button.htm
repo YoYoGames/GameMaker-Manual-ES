@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_button</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>botón_de_dibujo</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for the function draw_button" />
   <meta name="rh-index-keywords" content="draw_button" />
@@ -15,65 +15,64 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_button</h1>
-  <p>This function will draw a very simple, rectangular &quot;button&quot; using the currently selected draw colour and alpha where the <i>up</i> argument defines how the beveled edge effect looks, as shown in the image below:</p>
-  <p><img alt="Draw button exmple" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/draw_button.png" /></p>
-  <div data-conref="../../../../assets/snippets/Note_Shape_Shader_Attributes_Are_Different.hts"> </div>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>botón_de_dibujo</h1>
+  <p>Esta función dibujará un &quot;botón&quot; rectangular muy simple utilizando el color de dibujo y el alfa actualmente seleccionados, donde el argumento <i>arriba</i> define cómo se ve el efecto de borde biselado, como se muestra en la imagen de abajo:</p>
+  <p><img><b>NOTA</b>: Si desea dibujar una forma utilizando un <span class="notranslate">shader</span>, debe tener en cuenta que la mayoría de los <span class="notranslate">shaders</span> esperan las siguientes entradas: <span class="notranslate">vertex</span> textura, color. Sin embargo, cuando se utiliza esta función, sólo se pasan datos de <span class="notranslate">vertex</span> y de color, por lo que el <span class="notranslate">shader</span> puede no dibujar nada (o dibujar algo pero no correctamente). Si necesitas dibujar formas de esta manera, entonces el <span class="notranslate">shader</span> debe ser personalizado teniendo esto en cuenta.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">draw_button(x1, y1, x2, y2, up);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>x1</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The x coordinate of the left of the button</td>
+        <td><span class="notranslate">x1</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The x coordinate of the left of the button</span></td>
       </tr>
       <tr>
-        <td>y1</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The y coordinate of the top of the button</td>
+        <td><span class="notranslate">y1</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The y coordinate of the top of the button</span></td>
       </tr>
       <tr>
-        <td>x2</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The x coordinate of the right of the button</td>
+        <td><span class="notranslate">x2</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The x coordinate of the right of the button</span></td>
       </tr>
       <tr>
-        <td>y2</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The y coordinate of the bottom of the button</td>
+        <td><span class="notranslate">y2</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The y coordinate of the bottom of the button</span></td>
       </tr>
       <tr>
-        <td>up</td>
-        <td><span data-keyref="Type_Bool"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Whether the button is up (<span class="inline">true</span>) or down (<span class="inline">false</span>)</td>
+        <td><span class="notranslate">up</span></td>
+        <td><span data-keyref="Type_Bool">Booleano</span></td>
+        <td><span class="notranslate">Whether the button is up (<span class="inline">true</span>) o hacia abajo (<span class="inline">false</span>)</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">draw_button(100, 100, 200, 150, !mouse_check_button(mb_left));</p>
-  <p>This will draw a button which will appear pressed if the left mouse button is held down.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Esto dibujará un botón que aparecerá pulsado si se mantiene pulsado el botón izquierdo del ratón.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Basic_Forms.htm">Basic Forms</a></div>
-        <div style="float:right">Next: <a href="draw_healthbar.htm">draw_healthbar</a></div>
+        <div style="float:left">Volver: <a href="Basic_Forms.htm">Formularios básicos</a></div>
+        <div style="float:right">Siguiente: <a href="draw_healthbar.htm"><span class="notranslate">draw_healthbar</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 draw_button

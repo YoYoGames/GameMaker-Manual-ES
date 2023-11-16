@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Debugging</title>
+  <title>Depuración</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Debugging Projects In GameMaker" />
   <meta name="rh-index-keywords" content="Debugging" />
@@ -14,55 +14,55 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Debugging</h1>
-  <p>When programming your game, whether using <span data-keyref="GML_Code">GML Code</span> or <span data-keyref="GML_Visual">GML Visual</span>, it can be very easy to make mistakes - using the wrong variables, passing the wrong arguments, or using the wrong functions are just some of the most common errors we all make - and these mistakes are not always detected by the <a class="glossterm" data-glossterm="syntax" href="#">syntax</a> checker that is included with the script/action editor. That means that these mistakes will only become apparent when you actually run or compile your game, and even then it can sometimes be difficult to know exactly what is going wrong. It can therefore be of vital importance to know how your game is performing on the chosen device, as well as see what instances are in the room, what global variables have been created and a whole host of other details. Checking these things is called &quot;<strong>debugging your code</strong>&quot;, and any errors or issues you may find are called &quot;<strong>bugs</strong>&quot;.</p>
-  <p>Now, you can check a lot of these things yourself by adding in so-called &quot;debug code&quot; to your games to display on the screen the information you require, or you can have it that it shows messages when there is an error, but this is often a lot of work and if you aren&#39;t sure where the problem is in the first place then it can be a time consuming case of trial and error to track down your bug. For that, <span data-keyref="GameMaker Name">GameMaker</span> has a special test mode called <strong>Debug Mode</strong> which will start the <strong>Debug Module</strong>, and there is also a comprehensive <strong>error reporting system</strong> which displays messages on <a class="glossterm" data-glossterm="Compiling" href="#">Compiling</a> to help you track down any problems with your game.</p>
-  <p>The sections below cover the different ways that you can debug your game:</p>
-  <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down6" href="#">Error Reporting</a></p>
+  <h1>Depuración</h1>
+  <p>Al programar su juego, ya sea usando <span data-keyref="GML_Code">GML Code</span> o <span data-keyref="GML_Visual">GML Visual</span>, puede ser muy fácil cometer errores - usar las variables equivocadas, pasar los argumentos equivocados, o usar las funciones equivocadas son sólo algunos de los errores más comunes que todos cometemos - y estos errores no siempre son detectados por el verificador de <a class="glossterm" data-glossterm="sintaxis" href="#">sintaxis</a> que se incluye con el editor de scripts/acciones. Esto significa que estos errores sólo se harán evidentes cuando se ejecute o compile el juego, e incluso entonces puede ser difícil saber exactamente lo que está fallando. Por lo tanto, puede ser de vital importancia saber cómo está funcionando tu juego en el dispositivo elegido, así como ver qué instancias hay en el <span class="notranslate">room</span>, qué variables globales se han creado y toda una serie de otros detalles. Comprobar estas cosas se llama &quot;<strong>depurar tu código</strong>&quot;, y cualquier error o problema que puedas encontrar se llama &quot;<strong>bugs</strong>&quot;.</p>
+  <p>Ahora, puedes comprobar muchas de estas cosas por ti mismo añadiendo el llamado &quot;código de depuración&quot; a tus juegos para mostrar en la pantalla la información que necesitas, o puedes hacer que muestre mensajes cuando hay un error, pero esto es a menudo mucho trabajo y si no estás seguro de dónde está el problema en primer lugar, entonces puede ser un caso de prueba y error que consume tiempo para rastrear tu error. Para ello, <span data-keyref="GameMaker Name">GameMaker</span> tiene un modo de prueba especial llamado <strong>Modo de Depuración</strong> que iniciará el <strong>Módulo de Depuración</strong>, y también hay un <strong>sistema de reporte de errores</strong> completo que muestra mensajes en la <a class="glossterm" data-glossterm="Compilación de" href="#">Compilación</a> para ayudarle a rastrear cualquier problema con su juego.</p>
+  <p>Las secciones siguientes cubren las diferentes maneras en que puedes depurar tu juego:</p>
+  <p> </p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down6" href="#">Informe de errores</a></p>
   <div class="droptext" data-targetname="drop_down6">
-    <p class="dropspot">When an error occurs during the compiling and execution of a project this is reported with a message in the <a href="The_Output_Window.htm">Compile Errors Output Window</a>, much like the one shown below:</p>
-    <p class="dropspot"><img alt="Compile Errors" class="center" src="../assets/Images/Introduction/QS_Debug_CompileError.png" />Most compiler error messages follow the same outline, with a message stating the object that the error has occurred in, then the Event along with the line number, and then finally a short description of the error itself. This type of information being provided by the error reporting is very important as it detects and reports the syntax and language related bugs that are going to cause your finished game to crash, but it won&#39;t report more subtle bugs, nor does it give feedback on performance. For those types of things you should use Debug Mode (explained below).</p>
-    <p class="dropspot">Apart from these compile errors, you can also get syntax errors. These will be detected as you add your GML Visual actions or code and are shown in the <a href="The_Output_Window.htm">Syntax Errors Output Window</a>, similar to the image shown below:</p>
-    <p class="dropspot"><img alt="Syntax Errors" class="center" src="../assets/Images/Introduction/QS_Debug_SyntaxError.png" />As with the compiler errors, the syntax errors window will direct you to the object, the event and the specific lines that are giving the issue, and will often be shown with a brief explanation of what the error is.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Cuando se produce un error durante la compilación y ejecución de un proyecto, se informa de ello con un mensaje en la <a href="The_Output_Window.htm">ventana de salida de errores de compilación</a>, muy parecido al que se muestra a continuación:</p>
+    <p class="dropspot"><img>La mayoría de los mensajes de error del compilador siguen el mismo esquema, con un mensaje que indica el <span class="notranslate">object</span> en el que se ha producido el error, luego el Evento junto con el número de línea, y finalmente una breve descripción del error en sí. Este tipo de información proporcionada por el informe de errores es muy importante, ya que detecta e informa de los errores relacionados con la sintaxis y el lenguaje que van a hacer que tu juego terminado se cuelgue, pero no informará de errores más sutiles, ni da información sobre el rendimiento. Para ese tipo de cosas deberías usar el modo de depuración (explicado más abajo).</p>
+    <p class="dropspot">Aparte de estos errores de compilación, también puede obtener errores de sintaxis. Estos se detectarán a medida que añada sus acciones o código de <span class="notranslate">GML</span> Visual y se mostrarán en la <a href="The_Output_Window.htm">ventana de salida de errores</a> de sintaxis, similar a la imagen que se muestra a continuación:</p>
+    <p class="dropspot"><img>Al igual que con los errores del compilador, la ventana de errores de sintaxis le dirigirá a la <span class="notranslate">object</span>, el evento y las líneas específicas que están dando el problema, y a menudo se mostrará con una breve explicación de lo que es el error.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down7" href="#">Debug Mode</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down7" href="#">Modo de depuración</a></p>
   <div class="droptext" data-targetname="drop_down7">
-    <p class="dropspot">If you need to check things more carefully, you can run the game in <strong>Debug Mode</strong> by clicking the debug run button <img alt="Debug Icon" class="icon" src="../assets/Images/Icons/Icon_Debug.png" />. When you do, the <strong>Debug Module</strong> will open along with your game. This module permits you to monitor how everything is working in your game, from the global performance, right down to the values of individual variables in individual instances. You can find out further information about the Debug Module and its possibilities and how to use it from the following page:</p>
+    <p class="dropspot">Si necesitas comprobar las cosas con más detenimiento, puedes ejecutar el juego en <strong>modo de depuración</strong> haciendo clic en el botón de ejecución de depuración <img>. Cuando lo hagas, se abrirá el <strong>módulo</strong> de depuración junto con tu juego. Este módulo te permite monitorizar cómo funciona todo en tu juego, desde el rendimiento global, hasta los valores de las variables individuales en instancias individuales. Puedes encontrar más información sobre el Módulo de Depuración y sus posibilidades y cómo utilizarlo en la siguiente página:</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><a href="../IDE_Tools/The_Debugger.htm">The Debugger</a></li>
+      <li class="dropspot"><a href="../IDE_Tools/The_Debugger.htm">El depurador</a></li>
     </ul>
-    <p class="dropspot">Note that when you use the Debug Module, you can also add <strong>Breakpoints </strong>to your code or GML Visual. A breakpoint is a point in the game loop where you want the debug module to pause and let you step through the actual game code a line at a time. You can add breakpoints using the key &quot;F9&quot;, and they will be shown in the <a href="The_Output_Window.htm">Output Window</a> where you can enable/disable them as required.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Ten en cuenta que cuando utilizas el módulo de depuración, también puedes añadir <strong>puntos de interrup </strong>ción a tu código o <span class="notranslate">GML</span> Visual. Un <span class="notranslate">breakpoint</span> es un punto en el juego <span class="notranslate">loop</span> en el que quieres que el módulo de depuración haga una pausa y te permita recorrer el código del juego línea a línea. Puedes añadir <span class="notranslate">breakpoints</span> usando la tecla &quot;F9&quot;, y se mostrarán en la <a href="The_Output_Window.htm">Ventana de Salida</a> donde puedes habilitarlos/deshabilitarlos según sea necesario.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down8" href="#">Additional Tools</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down8" href="#">Herramientas adicionales</a></p>
   <div class="droptext" data-targetname="drop_down8">
-    <p class="dropspot">As an additional tool for debugging compiled games, there are certain <strong>command line parameters</strong> that can be used when you run the final game package on Windows. For information on how this works please see <a href="../Settings/Command_Line_Parameters.htm">here</a>.</p>
-    <p class="dropspot">You can also generate a <strong>debug overlay</strong> when you are test running your game which will show additional debug information about the performance of your game as it is being run, and you can also output <strong>debug messages</strong> to the compile console where you can supply your own text to help debug the behaviour of your games. For more information see the following pages: <span class="inline"></span></p>
+    <p class="dropspot">Como herramienta adicional para <span class="notranslate">debugging</span> juegos compilados, hay ciertos <strong>parámetros de línea de comandos</strong> que se pueden utilizar cuando se ejecuta el paquete final del juego en <span class="notranslate">Windows</span>. Para obtener información sobre cómo funciona esto, consulte <a href="../Settings/Command_Line_Parameters.htm">aquí</a>.</p>
+    <p class="dropspot">También puedes generar una <strong>superposición de depuración</strong> cuando estés probando tu juego que mostrará información adicional de depuración sobre el rendimiento de tu juego mientras se está ejecutando, y también puedes enviar <strong>mensajes de depuración</strong> a la consola de compilación donde puedes proporcionar tu propio texto para ayudar a depurar el comportamiento de tus juegos. Para más información, consulta las siguientes páginas: <span class="inline"></span></p>
     <ul class="dropspotlist">
       <li class="dropspot"><a href="../GameMaker_Language/GML_Reference/Debugging/show_debug_overlay.htm"><span class="inline">show_debug_overlay</span></a></li>
       <li class="dropspot"><a href="../GameMaker_Language/GML_Reference/Debugging/show_debug_message.htm"><span class="inline">show_debug_message</span></a></li>
       <li class="dropspot"><span class="inline"><a href="../GameMaker_Language/GML_Reference/Debugging/debug_event.htm">debug_event</a></span></li>
     </ul>
-    <p> </p>
+    <p> </p>
   </div>
-  <p> </p>
-  <p>There are also a set of preferences related to debugging and using the debug tools. You can find more information from the following page:</p>
+  <p> </p>
+  <p>También hay un conjunto de preferencias relacionadas con <span class="notranslate">debugging</span> y el uso de las herramientas de depuración. Puedes encontrar más información en la siguiente página:</p>
   <ul class="colour">
-    <li><a href="Debugging.htm">Debugging Preferences</a></li>
+    <li><a href="Debugging.htm">Preferencias de depuración</a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Introduction_To_GameMaker_Studio_2.htm">Introduction To <span data-keyref="GameMaker Name">GameMaker</span></a></div>
-        <div style="float:right">Next: <a href="The_Output_Window.htm">The Output Window</a></div>
+        <div style="float:left">Volver: <a href="Introduction_To_GameMaker_Studio_2.htm">Introduction To <span data-keyref="GameMaker Name">GameMaker</span></a></div>
+        <div style="float:right">Siguiente: <a href="The_Output_Window.htm">La ventana de salida</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Debugging

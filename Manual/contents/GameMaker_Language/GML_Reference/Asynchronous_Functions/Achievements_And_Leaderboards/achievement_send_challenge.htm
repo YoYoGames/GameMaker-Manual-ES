@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>achievement_send_challenge</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for achievement_send_challenge" />
+  <meta name="rh-index-keywords" content="achievement_send_challenge,achievement_type_score_challenge ,achievement_type_achievement_challenge ,achievement_leaderboard_info" />
+  <meta name="search-keywords" content="achievement_send_challenge,achievement_type_score_challenge ,achievement_type_achievement_challenge ,achievement_leaderboard_info" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>achievement_send_challenge</h1>
+  <p>Esta función enviará un desafío a través de la red al jugador elegido. Puedes obtener el <i>playerid</i> usando el botón <a href="achievement_load_friends.htm"><tt>achievement_load_friends()</tt></a> o la función <a href="achievement_load_leaderboard.htm"><tt>achievement_load_leaderboard()</tt></a>    y también debes proporcionar el <i>challengeid</i>, que es el valor único que se le dio al reto cuando lo creaste en tu panel de iTunes Connect o Google Play. También debe suministrar una puntuación y un breve mensaje de texto, así como establecer el
+   <i>tipo de</i> reto. Esto puede ser una de las siguientes <b>constantes</b>:</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constante</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">achievement_type_score_challenge </span></td>
+        <td>Un desafío basado en el valor de la puntuación.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">achievement_type_achievement_challenge </span></td>
+        <td>Un reto basado en un logro.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>Esta función disparará un callback <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Social Asynchronous Event</a> para el jugador que va a recibir el reto, y en este evento tendrá un mapa DS referenciado
+    en la variable <tt>async_load</tt>. La clave <i>id</i> de este Mapa <tt>DS</tt> se utiliza para identificar la devolución de llamada correcta (puede haber más de una función de activación para cualquier evento asíncrono dado), y se emparejará con la <b>constante</b> <tt>achievement_challenge_received</tt> así como una serie de otros pares clave/valor para cada jugador. El contenido exacto del mapa se muestra a continuación:</p>
+  <p class="note"><b>NOTA</b>: que el usuario también puede recibir notificaciones de tostadas por los retos recibidos, pero esto dependerá de los valores que haya elegido con la función <span style="font-size:1px;"><a href="achievement_show_challenge_notifications.htm"><tt style="font-size: 14px">achievement_show_challenge_notifications()</tt></a></span>.</p>
+  <ul class="colour">
+    <li>&quot;<b>id</b>&quot; - Para esta función debe ser <tt>achievement_leaderboard_info</tt></li>
+    <li>&quot;<b>playerid</b>&quot; - El ID del jugador para el desafío.</li>
+    <li>&quot;<b>issuerid</b>&quot; - El ID del emisor del reto.</li>
+    <li>&quot;<b>state</b>&quot; - El estado del reto, que tendrá un valor de 0 - 3 (como <span class="notranslate">string</span>) para <i>inválido</i>, <i>pendiente</i>, <i>completado</i> o <i>rechazado</i>.</li>
+    <li>&quot;<b>mensaje</b>&quot; - El mensaje de texto para el desafío.</li>
+    <li>&quot;<b>completeddate</b>&quot; - La fecha de finalización del reto.</li>
+    <li>&quot;<b>issueddate</b>&quot; - La fecha de emisión de la impugnación.</li>
+    <li>&quot;<b>Tipo</b>&quot; - El tipo de desafío dado. Puede ser una de las dos constantes indicadas anteriormente</li>
+    <li>&quot;<b>identificador</b>&quot; - El identificador <span class="notranslate">string</span> para el desafío, tal y como se ha establecido en el panel de control del proveedor</li>
+    <li>&quot;<b>Puntuación</b>&quot; - La puntuación ligada al reto (si procede).</li>
+  </ul>
+  <p> </p>
+  <h4><b>Sintaxis:</b></h4>
+  <p class="code">achievement_send_challenge(playerid, challengeid, score, type, message)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argumento</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">playerid</span></td>
+        <td>El ID único del jugador a desafiar.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">challengeid</span></td>
+        <td>El identificador único de la impugnación (que se encuentra en el tablero del proveedor).</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">score</span></td>
+        <td>La puntuación a batir.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">type</span></td>
+        <td>el tipo de impugnación que se emitirá: una de las dos <b>constantes</b> que se indican a continuación.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">message</span></td>
+        <td>El mensaje a adjuntar al reto.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Ejemplo ampliado:</h4>
+  <p>Para enviar un desafío a través de la red tendría este código:</p>
+  <p class="code">achievement_send_challenge(global.playerid[0], global.challengeid[0], score, achievement_type_score_challenge, &quot;Beat that sucker!&quot;);</p>
+  <p>Esta petición desencadenará el <b>Evento Social</b> en su juego para el jugador al que iba dirigido el reto, y esto puede ser tratado de la siguiente manera:</p>
+  <p class="code">var ident = ds_map_find_value(async_load, &quot;id&quot;);<br/> if ident == achievement_challenge_received<br/>     {
+    <br/>     player_id = ds_map_find_value(async_load, &quot;playerid&quot;);<br/>     issuer_id = ds_map_find_value(async_load, &quot;issuerid&quot;);<br/>     state = ds_map_find_value(async_load, &quot;state&quot;);<br/>     message = ds_map_find_value(async_load,
+    &quot;message&quot;);<br/>     date_completed = ds_map_find_value(async_load, &quot;completeddate&quot;);<br/>     date_issued = ds_map_find_value(async_load, &quot;issueddate&quot;);<br/>     ach_type = ds_map_find_value(async_load, &quot;type&quot;);<br/>        ach_ident = ds_map_find_value(async_load, &quot;identifier&quot;);<br/>     ach_score = ds_map_find_value(async_load, &quot;score&quot;);<br/>     }
+  </p>
+  <p>El código anterior comprueba el <tt>Mapa DS</tt> devuelto en el <b>Evento Social Asíncrono</b> y si su &quot;id&quot; coincide con la constante que se está comprobando, entonces extrae los valores relevantes para cada una de las claves del mapa y los almacena en variables
+    para su uso futuro.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Atrás: <a href="Achievements_And_Leaderboards.htm">Logros y tablas de clasificación</a></div>
+        <div style="float:right">Siguiente: <a href="achievement_reset.htm"><span class="notranslate">achievement_reset</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
+  </div>
+  <!-- KEYWORDS
+achievement_send_challenge
+achievement_type_score_challenge 
+achievement_type_achievement_challenge 
+achievement_leaderboard_info
+-->
+  <!-- TAGS
+achievement_send_challenge
+-->
+</body>
+</html>

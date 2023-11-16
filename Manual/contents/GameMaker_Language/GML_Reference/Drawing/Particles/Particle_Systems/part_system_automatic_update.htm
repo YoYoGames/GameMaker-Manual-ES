@@ -6,7 +6,7 @@
   <title>part_system_automatic_update</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for part_system_automatic_update" />
   <meta name="rh-index-keywords" content="part_system_automatic_update" />
@@ -15,51 +15,51 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>part_system_automatic_update</h1>
-  <p>This function controls whether <span data-keyref="GameMaker Name">GameMaker</span> should update the particle system automatically or not, and normally you would not need to use this function as the default value of <span class="inline">true</span> (automatic update is on) is what you wish to happen. However, for special effects or for pausing the game, you can set this to <span class="inline">false</span> and it will prevent any updates being carried out on the given particle system unless <i>explicitly</i> commanded by the use of the function <a href="part_system_update.htm"><span class="inline">part_system_update()</span></a> or you use this function again to turn automatic updates on. No updating means that particles created in this system will no longer change position, colour or any other parameter and that emitters will cease to work too, &quot;freezing&quot; the system at the exact point in which the automatic update was set to <span class="inline">false</span>.</p>
-  <p>One thing to note is that if you are using the simple effects created by the functions <a href="../effect_create_above.htm"><span class="inline">effect_create_above()</span></a> or <a href="../effect_create_below.htm"><span class="inline">effect_create_below()</span></a> then you can use the values of 0 (for below effects) or 1 (for above effects) as the particle system index and so toggle the automatic update for these too (this will also work to toggle updating for the GML Visual particle effects).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Esta función controla si <span data-keyref="GameMaker Name">GameMaker</span> debe actualizar el sistema de partículas automáticamente o no, y normalmente usted no necesitaría usar esta función ya que el valor por defecto de <span class="inline">true</span> (la actualización automática está activada) es lo que usted desea que suceda. Sin embargo, para efectos especiales o para pausar el juego, puede establecer esto en <span class="inline">false</span> y evitará que se realice cualquier actualización en el sistema de partículas dado a menos que se ordene <i>explícitamente</i> mediante el uso de la función <a href="part_system_update.htm"><span class="inline">part_system_update()</span></a> o que utilices esta función de nuevo para activar las actualizaciones automáticas. No actualizar significa que las partículas creadas en este sistema ya no cambiarán de posición, color o cualquier otro parámetro y que los emisores dejarán de funcionar también, &quot;congelando&quot; el sistema en el punto exacto en el que se estableció la actualización automática en <span class="inline">false</span>.</p>
+  <p>Hay que tener en cuenta que si se utilizan los efectos simples creados por las funciones <a href="../effect_create_above.htm"><span class="inline">effect_create_above()</span></a> o <a href="../effect_create_below.htm"><span class="inline">effect_create_below()</span></a> puedes utilizar los valores 0 (para los efectos inferiores) o 1 (para los efectos superiores) como índice del sistema de partículas y así activar la actualización automática para estos también (esto también funcionará para activar la actualización de los efectos de partículas de <span class="notranslate">GML</span> Visual).</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">part_system_automatic_update(ind, automatic);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>ind</td>
-        <td><span data-keyref="Type_ID_PartSys">Particle System ID</span></td>
-        <td>The index of the particle system to change.</td>
+        <td><span class="notranslate">ind</span></td>
+        <td><span data-keyref="Type_ID_PartSys">ID del sistema de partículas</span></td>
+        <td><span class="notranslate">The index of the particle system to change.</span></td>
       </tr>
       <tr>
-        <td>automatic</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether automatic updating is on (<span class="inline">true</span>) or not (false).</td>
+        <td><span class="notranslate">automatic</span></td>
+        <td><span data-keyref="Type_Bool">Booleano</span></td>
+        <td><span class="notranslate">Whether automatic updating is on (<span class="inline">true</span>) o no (falso).</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">if global.Pause<br />
     {<br />
         part_system_automatic_update(global.Sname, false);<br />
     }</p>
-  <p>The above code will switch off the particle updates if the global variable &quot;Paused&quot; is true.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior <span class="notranslate">switch</span> desactivará las actualizaciones de las partículas si la variable global &quot;Paused&quot; es verdadera.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Systems.htm">Particle Systems</a></div>
-        <div style="float:right">Next: <a href="part_system_automatic_draw.htm">part_system_automatic_draw</a></div>
+        <div style="float:left">Atrás: <a href="Particle_Systems.htm">Sistemas de partículas</a></div>
+        <div style="float:right">Siguiente: <a href="part_system_automatic_draw.htm"><span class="notranslate">part_system_automatic_draw</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 part_system_automatic_update

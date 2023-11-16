@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_rectangle_colour</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>dibujar_rectángulo_color</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for the function draw_rectangle_colour" />
   <meta name="rh-index-keywords" content="draw_rectangle_colour,draw_rectangle_color" />
@@ -15,84 +15,84 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_rectangle_colour</h1>
-  <p>With this function you can draw either an outline of a rectangle or a filled rectangle by defining an area where the (x1,y1) position is the top left corner and the (x2,y2) position is the bottom right corner. If it is filled you can define the individual colours for each corner point and if these colours are not the same, you will get a gradient effect from one to the other (the colour settings will over-ride the base colour set with the function <a href="../Colour_And_Alpha/draw_set_colour.htm"><span class="inline">draw_set_colour()</span></a>). Please note that the rectangle being drawn may need different values (+/-1 on the x, y, or width or height) to be drawn with the desired dimensions due to differences across the various supported platforms.</p>
-  <div data-conref="../../../../assets/snippets/Note_Shape_Shader_Attributes_Are_Different.hts"> </div>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>dibujar_rectángulo_color</h1>
+  <p>Con esta función puedes dibujar un contorno de rectángulo o un rectángulo relleno definiendo un área donde la posición (x1,y1) es la esquina superior izquierda y la posición (x2,y2) es la esquina inferior derecha. Si se rellena, puede definir los colores individuales para cada punto de la esquina y si estos colores no son los mismos, obtendrá un efecto de gradiente de uno a otro (los ajustes de color anulan el color base establecido con la función <a href="../Colour_And_Alpha/draw_set_colour.htm"><span class="inline">draw_set_colour()</span></a>). Tenga en cuenta que el rectángulo que se dibuja puede necesitar diferentes valores (+/-1 en la x, la y, o la anchura o la altura) para que se dibuje con las dimensiones deseadas debido a las diferencias entre las distintas plataformas soportadas.</p>
+  <p class="note"><b>NOTA</b>: Si desea dibujar una forma utilizando un <span class="notranslate">shader</span>, debe tener en cuenta que la mayoría de los <span class="notranslate">shaders</span> esperan las siguientes entradas: <span class="notranslate">vertex</span> textura, color. Sin embargo, cuando se utiliza esta función, sólo se pasan datos de <span class="notranslate">vertex</span> y de color, por lo que el <span class="notranslate">shader</span> puede no dibujar nada (o dibujar algo pero no correctamente). Si necesitas dibujar formas de esta manera, entonces el <span class="notranslate">shader</span> debe ser personalizado teniendo esto en cuenta.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">draw_rectangle_colour(x1, y1, x2, y2, col1, col2, col3, col4, outline);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>x1</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The x coordinate of the left of the rectangle.</td>
+        <td><span class="notranslate">x1</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The x coordinate of the left of the rectangle.</span></td>
       </tr>
       <tr>
-        <td>y1</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The y coordinate of the top of the rectangle.</td>
+        <td><span class="notranslate">y1</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The y coordinate of the top of the rectangle.</span></td>
       </tr>
       <tr>
-        <td>x2</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The x coordinate of the right of the rectangle.</td>
+        <td><span class="notranslate">x2</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The x coordinate of the right of the rectangle.</span></td>
       </tr>
       <tr>
-        <td>y2</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The y coordinate of the bottom of the rectangle.</td>
+        <td><span class="notranslate">y2</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The y coordinate of the bottom of the rectangle.</span></td>
       </tr>
       <tr>
-        <td>col1</td>
-        <td><span data-keyref="Type_Constant_Colour"><a href="GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm" target="_blank">Colour</a></span></td>
-        <td>The colour of the top left corner.</td>
+        <td><span class="notranslate">col1</span></td>
+        <td><span data-keyref="Type_Constant_Colour">Color</span></td>
+        <td><span class="notranslate">The colour of the top left corner.</span></td>
       </tr>
       <tr>
-        <td>col2</td>
-        <td><span data-keyref="Type_Constant_Colour"><a href="GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm" target="_blank">Colour</a></span></td>
-        <td>The colour of the top right corner.</td>
+        <td><span class="notranslate">col2</span></td>
+        <td><span data-keyref="Type_Constant_Colour">Color</span></td>
+        <td><span class="notranslate">The colour of the top right corner.</span></td>
       </tr>
       <tr>
-        <td>col3</td>
-        <td><span data-keyref="Type_Constant_Colour"><a href="GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm" target="_blank">Colour</a></span></td>
-        <td>The colour of the bottom right corner.</td>
+        <td><span class="notranslate">col3</span></td>
+        <td><span data-keyref="Type_Constant_Colour">Color</span></td>
+        <td><span class="notranslate">The colour of the bottom right corner.</span></td>
       </tr>
       <tr>
-        <td>col4</td>
-        <td><span data-keyref="Type_Constant_Colour"><a href="GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm" target="_blank">Colour</a></span></td>
-        <td>The colour of the bottom left corner.</td>
+        <td><span class="notranslate">col4</span></td>
+        <td><span data-keyref="Type_Constant_Colour">Color</span></td>
+        <td><span class="notranslate">The colour of the bottom left corner.</span></td>
       </tr>
       <tr>
-        <td>outline</td>
-        <td><span data-keyref="Type_Bool"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Whether the rectangle is an outline (true) or filled in (false).</td>
+        <td><span class="notranslate">outline</span></td>
+        <td><span data-keyref="Type_Bool">Booleano</span></td>
+        <td><span class="notranslate">Whether the rectangle is an outline (true) or filled in (false).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">draw_rectangle_colour(50, 50, 200, 200, c_black, c_white, c_black, c_white, false);</p>
-  <p>This would draw a filled-in square with a smooth black/white gradient between the corners.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Esto dibujaría un cuadrado relleno con un suave gradiente blanco/negro entre las esquinas.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Basic_Forms.htm">Basic Forms</a></div>
-        <div style="float:right">Next: <a href="draw_roundrect.htm">draw_roundrect</a></div>
+        <div style="float:left">Volver: <a href="Basic_Forms.htm">Formularios básicos</a></div>
+        <div style="float:right">Siguiente: <a href="draw_roundrect.htm"><span class="notranslate">draw_roundrect</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 draw_rectangle_colour

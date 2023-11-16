@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>sprite_prefetch</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function sprite_prefetch" />
   <meta name="rh-index-keywords" content="sprite_prefetch" />
@@ -15,44 +15,43 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>sprite_prefetch</h1>
-  <p>This function can be used to prefetch (place into texture memory) a texture page with the given sprite. You supply the sprite index as defined when you created the sprite asset, and the texture page it is on will be loaded into memory. Note that the function will return <span class="inline">-1</span> if prefetch is not supported for the chosen resource or the target platform is HTML5, or it will return <span class="inline">0</span> if all worked correctly.</p>
-  <div data-conref="../../../../../assets/snippets/Note_Sprite_Prefetch_To_Avoid_Performance_Hit.hts"> </div>
-  <p> </p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Esta función se puede utilizar para precargar (colocar en la memoria de la textura) una página de textura con el <span class="notranslate">sprite</span> dado. Usted proporciona el índice <span class="notranslate">sprite</span> tal y como se definió cuando creó el <span class="notranslate">sprite</span> <span class="notranslate">asset</span>, y la página de textura en la que se encuentra se cargará en la memoria. Tenga en cuenta que la función
+    devolverá <span class="inline">-1</span> si no se admite la búsqueda previa para el recurso elegido o si la plataforma de destino es HTML5, o devolverá <span class="inline">0</span> si todo ha funcionado correctamente.</p>
+  <p class="note"><b>NOTA</b>: En la mayoría de los dispositivos, el rendimiento se ve afectado porque la textura se carga en la memoria de textura, por lo que se recomienda llamar a <span style="font-size:1px;"><span class="inline">sprite_prefetch</span></span> en
+    cualquier gráfico necesario al comienzo de un nivel para evitar cualquier bloqueo.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">sprite_prefetch(ind)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
+        <th>Argumento</th><th>Tipo</th>
+        <th>Descripción</th>
+     </tr>
       <tr>
-        <td>ind</td>
-        <td><span data-keyref="Type_Asset_Sprite"><a href="The_Asset_Editors/Sprites.htm" target="_blank">Sprite Asset</a></span></td>
-        <td>The sprite index to fetch</td>
-      </tr>
+        <td><span class="notranslate">ind</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td>
+        <td><span class="notranslate">The sprite index to fetch</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span> (-1 or 0)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code"><span data-keyref="Type_Real"></span> (-1 or 0)</p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">sprite_prefetch(spr_Player_Aura);</p>
-  <p>The above code will place the referenced sprite into texture memory ready for use.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior colocará el <span class="notranslate">sprite</span> referenciado en la memoria de la textura, listo para su uso.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Manipulation.htm">Sprite Manipulation</a></div>
-        <div style="float:right">Next: <a href="sprite_prefetch_multi.htm">sprite_prefetch_multi</a></div>
+        <div style="float:left">Atrás: <a href="Sprite_Manipulation.htm">Manipulación de sprites</a></div>
+        <div style="float:right">Siguiente: <a href="sprite_prefetch_multi.htm"><span class="notranslate">sprite_prefetch_multi</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_prefetch

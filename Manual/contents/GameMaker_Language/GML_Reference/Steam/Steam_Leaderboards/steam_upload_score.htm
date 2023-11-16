@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_upload_score</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_upload_score" />
+  <meta name="rh-index-keywords" content="steam_upload_score" />
+  <meta name="search-keywords" content="steam_upload_score" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_upload_score</h1>
+  <p>Esta función enviará una puntuación a la tabla de clasificación dada. La puntuación a cargar es un número real, y el nombre de la tabla de clasificación es un <span class="notranslate">string</span> que se definió cuando se creó la tabla de clasificación utilizando la función <a href="steam_create_leaderboard.htm"><tt>steam_create_leaderboard()</tt></a>. Si la función falla, devolverá un valor de -1, mientras que un envío exitoso devolverá un ID único para la subida y activará un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">Evento de Steam</a> asíncrono. Este evento creará un <tt>Mapa DS</tt> en la variable incorporada <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> con los siguientes pares clave/valor:</p>
+  <ul class="colour">
+    <li>&quot;<b>event_type</b>&quot; - Esta clave tendrá el valor &quot;<b>leaderboard_upload</b>&quot; cuando sea activada por esta función</li>
+    <li>&quot;<b>lb_name</b>&quot; - Esta clave contiene el nombre de la tabla de clasificación que se publicó en</li>
+    <li>&quot;<b>éxito</b>&quot; - Será 1 si el envío tuvo éxito, 0 falló</li>
+    <li>&quot;<b>actualizado</b>&quot; - Será 1 si la puntuación de la tabla de clasificación fue realmente actualizada (es decir, la nueva puntuación fue mejor) o 0 en caso contrario</li>
+    <li>&quot;<b>post_id</b>&quot; - Esta clave debe coincidir con el valor del ID devuelto por la llamada de carga</li>
+    <li>&quot;<b>puntuación</b>&quot; - Esta tecla contiene la puntuación que se ha contabilizado</li>
+  </ul>
+  <p> </p>
+  <h4>Sintaxis:</h4>
+  <p class="code">steam_upload_score(lb_name, score);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argumento</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">lb_name</span></td>
+        <td>El nombre de la tabla de clasificación a la que se suben las puntuaciones (un <span class="notranslate">string</span>).</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">score</span></td>
+        <td>La puntuación a subir (un número real).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Ejemplo ampliado:</h4>
+  <p>En este ejemplo, primero subimos una puntuación y luego analizamos el mapa <tt>async_load</tt> devuelto si tiene éxito. El código siguiente muestra un ejemplo típico de carga:</p>
+  <p class="code">if (hp &lt;= 0)<br />
+        {<br />
+        upload_ID = steam_upload_score(&quot;Game Scores&quot;, score);<br />
+        if (!upload_ID)<br />
+            {<br />
+            alarm[0] = room_speed;<br />
+            }<br />
+        }</p>
+  <p>Tenga en cuenta que hemos establecido una alarma si la llamada falla. Esto se utilizaría para intentar la subida de nuevo en un momento posterior y se puede añadir código extra allí para reintentar la subida o para guardar la puntuación en un archivo de texto si sigue fallando, etc... Ahora añadimos lo siguiente en el <b>evento async de Steam</b> para la instancia que controla las puntuaciones:</p>
+  <p class="code">var type = ds_map_find_value(async_load, &quot;event_type&quot;);<br />
+    if (type == &quot;leaderboard_upload&quot;)<br />
+    {<br />
+        var lb_ID = ds_map_find_value(async_load, &quot;post_id&quot;);<br />
+        if lb_ID == upload_ID<br />
+        {<br />
+            var lb_name = ds_map_find_value(async_load, &quot;lb_name&quot;);<br />
+            var lb_done = ds_map_find_value(async_load, &quot;success&quot;);<br />
+            var lb_score = ds_map_find_value(async_load, &quot;score&quot;);<br />
+            var lb_updated = ds_map_find_value(async_load, &quot;updated&quot;);<br />
+            show_debug_message(&quot;leaderboard post id:&quot; + string(lb_ID) + &quot; to lb:&quot; + string(lb_name) + &quot; with score:&quot; + string(lb_score) + &quot; updated=&quot; + string(lb_updated));<br />
+            if (lb_done)<br />
+            {<br />
+                show_debug_message(&quot;- Succeeded&quot;);<br />
+            }<br />
+            else<br />
+            {<br />
+                show_debug_message(&quot;- Failed&quot;);<br />
+            }<br />
+        }<br />
+    }</p>
+  <p>en el ejemplo estamos simplemente emitiendo los valores de retorno a la ventana del compilador como mensajes de depuración, pero puedes usar este evento para tratar la información de la manera que quieras.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Atrás: <a href="Steam_Leaderboards.htm">Tablas de clasificación</a></div>
+        <div style="float:right">Siguiente: <a href="steam_upload_score_buffer.htm"><span class="notranslate">steam_upload_score_buffer</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_upload_score
+-->
+  <!-- TAGS
+steam_upload_score
+-->
+</body>
+</html>

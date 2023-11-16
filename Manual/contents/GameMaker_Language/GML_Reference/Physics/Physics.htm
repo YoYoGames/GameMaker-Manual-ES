@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Physics</title>
+  <title>Física</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for physics functions" />
   <meta name="rh-index-keywords" content="" />
@@ -14,46 +14,46 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Physics</h1>
-  <p>The integration of a dedicated physics library to <span data-keyref="GameMaker Name">GameMaker</span> means that you can now take control over all aspects of the physical behaviour of objects within your game world, particularly collisions and object interaction. The &quot;traditional&quot; collision system (which <span data-keyref="GameMaker Name">GameMaker</span> defaults to) is a &quot;reactive&quot; system, where you check for a collision and <i>then</i> react to that collision with code that you place in individual objects. This is fine for simple games, but when you have a large number of objects and have to code how they all react to different situations in the game world, it quickly becomes obvious that this system is just not enough. That&#39;s when you have to turn to the <span data-keyref="GameMaker Name">GameMaker</span> physics system.</p>
-  <p>The physics system works in a very different way to normal collisions. It is more of a &quot;passive&quot; system where you define a series of properties for your objects in the game world, as well as the properties of the game world itself, before any collisions or interactions occur. These coded &quot;rules&quot; will then govern the way everything in your game world interacts. In this way, with a few simple code and the correct room setup, you can create very complex interactions between objects and the world which will occur and resolve <i>without</i> you having to code for every single possible outcome.</p>
-  <p>There are a few things that you should note when working with the <span data-keyref="GameMaker Name">GameMaker</span> physics world:</p>
+  <h1>Física</h1>
+  <p>La integración de una biblioteca de física dedicada a <span data-keyref="GameMaker Name">GameMaker</span> significa que ahora puedes controlar todos los aspectos del comportamiento físico de <span class="notranslate">objects</span> dentro de tu mundo de juego, especialmente las colisiones y la interacción con <span class="notranslate">object</span>. El sistema de colisión &quot;tradicional&quot; (con el que <span data-keyref="GameMaker Name">GameMaker</span> viene por defecto) es un sistema &quot;reactivo&quot;, en el que se comprueba la existencia de una colisión y <i>se</i> reacciona a ella con un código que se coloca en cada <span class="notranslate">objects</span>. Esto está bien para los juegos sencillos, pero cuando tienes un gran número de <span class="notranslate">objects</span> y tienes que codificar cómo reaccionan todos a las diferentes situaciones en el mundo del juego, rápidamente se hace evidente que este sistema no es suficiente. Es entonces cuando hay que recurrir al sistema de física <span data-keyref="GameMaker Name">de GameMaker</span>.</p>
+  <p>El sistema de física funciona de forma muy diferente a las colisiones normales. Es más bien un sistema &quot;pasivo&quot; en el que defines una serie de propiedades para tu <span class="notranslate">objects</span> en el mundo del juego, así como las propiedades del propio mundo del juego, antes de que se produzcan colisiones o interacciones. Estas &quot;reglas&quot; codificadas regirán entonces la forma en que interactúa todo en tu mundo de juego. De este modo, con unos pocos códigos sencillos y la configuración correcta de <span class="notranslate">room</span>, puedes crear interacciones muy complejas entre <span class="notranslate">objects</span> y el mundo que ocurrirán y se resolverán <i>sin</i> que tengas que codificar cada uno de los resultados posibles.</p>
+  <p>Hay algunas cosas que debes tener en cuenta cuando trabajes con el mundo de la física de <span data-keyref="GameMaker Name">GameMaker</span>:</p>
   <ul class="colour">
-    <li>The physics system exists &quot;apart&quot; from the basic room and instance structure of <span data-keyref="GameMaker Name">GameMaker</span> meaning that its timings and functions are not necessarily tied into the room speed and step order like everything else.</li>
-    <li>The physics system replaces many of the normal instance functions... for example, rather than set a speed and a direction for an instance, if it has been declared as being a fully simulated physical body, you would use a <i>force</i> or <i>impulse</i> to get it to move around in the game world, or if it is not physics enabled you will need to set the x an y positions yourself. This takes a bit of getting used to, so experiment with the physics functions and get to know how everything works before trying to integrate them into your project.</li>
-    <li>You should limit the number of instances that are created, as well as the number of collisions and collision groups that the physics world has to deal with. You <i>cannot</i> have thousands of instances, all with physical properties and collisions and expect everything to work fine due to the fact that physics requires some pretty intensive calculations, so limit yourself and optimise where possible.</li>
-    <li>When setting up collisions, use parents as much as possible since the collision system has a limited number of <i>collision bits</i> available to assign to instances for Box2D to detect collisions. For example, if you have five different wall objects, don&#39;t check for five collisions, rather, create a parent object and assign it to the five walls then have ONE collision check with the parent. The physical properties of the objects are <i>not inherited</i> only the collisions. In this way you can keep your game optimised and error free.</li>
-    <li>Try not to move instances from one point of the room to another in any way other than using the physics functions (ie: do not set the x/y coordinates manual). Although this can be done and in some circumstances it may be necessary, this is generally to be avoided due to the unpredictable results that it may have on the physics engine, especially when trying to resolve collisions.</li>
-    <li>Care should be taken when binding fixtures, as they can be bound to objects and instances independently. This means that if you bind a fixture to (for example) &quot;o_Wall&quot;, <b>all</b> instances of that object will get the fixture. If you only want to bind a fixture to one instance, then use that instance&#39;s id in the appropriate function.</li>
-    <li>Please be aware that due to differences in floating point precision you may find that versions of your game for different target platforms may exhibit subtly different behaviour to the standard Windows version, though each version will be self-consistent across subsequent executions.</li>
-    <li>To prevent instabilities in the physical simulation Box2D constrains to upper limits the amount a body may rotate and translate within a single update. The apparent limitations will vary according to the accuracy of the physical simulation in accordance with the number of updates and update speed of the physics world, and also in accordance with the physics world scaling. This means that (for example) if you have a world update speed of 60, the maximum movement speed would be 20.</li>
+    <li>El sistema de física existe &quot;aparte&quot; de la estructura básica de <span class="notranslate">room</span> y de las instancias de <span data-keyref="GameMaker Name">GameMaker</span>, lo que significa que sus tiempos y funciones no están necesariamente ligados a la velocidad de <span class="notranslate">room</span> y al orden de los pasos como todo lo demás.</li>
+    <li>El sistema de física reemplaza muchas de las funciones normales de las instancias... por ejemplo, en lugar de establecer una velocidad y una dirección para una instancia, si ha sido declarada como un cuerpo físico completamente simulado, usarás una <i>fuerza</i> o un <i>impulso</i> para hacer que se mueva en el mundo del juego, o si no está habilitada para la física tendrás que establecer las posiciones x e y tú mismo. Esto toma un poco de tiempo para acostumbrarse, así que experimenta con las funciones de física y llega a saber cómo funciona todo antes de tratar de integrarlas en tu proyecto.</li>
+    <li>Deberías limitar el número de instancias que se crean, así como el número de colisiones y grupos de colisiones con los que tiene que lidiar el mundo de la física. <i>No puedes</i> tener miles de instancias, todas con propiedades físicas y colisiones y esperar que todo funcione bien debido a que la física requiere algunos cálculos bastante intensivos, así que limítate y optimiza donde sea posible.</li>
+    <li>Cuando configure las colisiones, utilice los padres tanto como sea posible ya que el sistema de colisiones tiene un número limitado de <i>bits de colisión</i> disponibles para asignar a las instancias para que Box2D detecte las colisiones. Por ejemplo, si tienes cinco paredes diferentes <span class="notranslate">objects</span>, no compruebes cinco colisiones, más bien, crea un padre <span class="notranslate">object</span> y asígnalo a las cinco paredes y luego haz UNA comprobación de colisión con el padre. Las propiedades físicas del <span class="notranslate">objects</span> <i>no se heredan</i>, sólo las colisiones. De esta manera puedes mantener tu juego optimizado y sin errores.</li>
+    <li>Intenta no mover las instancias de un punto de la <span class="notranslate">room</span> a otro de otra manera que no sea usando las funciones de física (es decir: no establezcas las coordenadas x/y manualmente). Aunque esto se puede hacer y en algunas circunstancias puede ser necesario, generalmente se debe evitar debido a los resultados impredecibles que puede tener en el motor de física, especialmente cuando se trata de resolver las colisiones.</li>
+    <li>Hay que tener cuidado al vincular los fixture, ya que se pueden vincular a <span class="notranslate">objects</span> y a las instancias de forma independiente. Esto significa que si vinculas un fixture a (por ejemplo) &quot;o_Wall&quot;, <b>todas las</b> instancias de ese <span class="notranslate">object</span> recibirán el fixture. Si sólo quieres vincular un fixture a una instancia, entonces utiliza el id de esa instancia en la función apropiada.</li>
+    <li>Tenga en cuenta que, debido a las diferencias en la precisión del punto flotante, es posible que las versiones de su juego para diferentes plataformas de destino muestren un comportamiento sutilmente diferente al de la versión estándar de <span class="notranslate">Windows</span>, aunque cada versión será autoconsistente en las siguientes ejecuciones.</li>
+    <li>Para evitar inestabilidades en la simulación física Box2D restringe a límites superiores la cantidad que un cuerpo puede rotar y trasladar dentro de una sola actualización. Las limitaciones aparentes variarán según la precisión de la simulación física de acuerdo con el número de actualizaciones y la velocidad de actualización del mundo de la física, y también de acuerdo con el escalado del mundo de la física. Esto significa que (por ejemplo) si tienes una velocidad de actualización del mundo de 60, la velocidad máxima de movimiento sería de 20.</li>
   </ul>
-  <p>Information on the physics functions can be found on the following pages:</p>
+  <p>En las siguientes páginas encontrará información sobre las funciones físicas:</p>
   <ul class="colour">
-    <li><a href="The_Physics_World/The_Physics_World.htm">The Physics World</a></li>
-    <li><a href="Forces/Forces.htm">Forces</a></li>
-    <li><a href="Fixtures/Fixtures.htm">Fixtures</a></li>
-    <li><a href="Joints/Joints.htm">Joints</a></li>
-    <li><a href="Soft_Body_Particles/Soft_Body_Particles.htm">Soft Body Particles</a></li>
-    <li><a href="Physics_Variables/Physics_Variables.htm">Physics Variables</a></li>
+    <li><a href="The_Physics_World/The_Physics_World.htm">El mundo de la física</a></li>
+    <li><a href="Forces/Forces.htm">Fuerzas</a></li>
+    <li><a href="Fixtures/Fixtures.htm">Accesorios</a></li>
+    <li><a href="Joints/Joints.htm">Articulaciones</a></li>
+    <li><a href="Soft_Body_Particles/Soft_Body_Particles.htm">Partículas corporales blandas</a></li>
+    <li><a href="Physics_Variables/Physics_Variables.htm">Variables físicas</a></li>
   </ul>
-  <p> </p>
-  <p>Finally, there are a couple of special physics functions which may be useful for more advanced physics simulations. The first is for testing for possible collisions at a specific point in the room, and the second is for generating custom mass and inertia properties within an instance:</p>
+  <p> </p>
+  <p>Por último, hay un par de funciones físicas especiales que pueden ser útiles para simulaciones físicas más avanzadas. La primera es para comprobar posibles colisiones en un punto específico de la <span class="notranslate">room</span>, y la segunda es para generar propiedades de masa e inercia personalizadas dentro de una instancia:</p>
   <ul class="colour">
-    <li><a href="physics_test_overlap.htm">physics_test_overlap</a></li>
-    <li><a href="physics_mass_properties.htm">physics_mass_properties</a></li>
+    <li><a href="physics_test_overlap.htm"><span class="notranslate">physics_test_overlap</span></a></li>
+    <li><a href="physics_mass_properties.htm"><span class="notranslate">physics_mass_properties</span></a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../GML_Reference.htm">GML Reference</a></div>
-        <div style="float:right">Next: <a href="../In_App_Purchases/In_App_Purchases.htm">In App Purchases</a></div>
+        <div style="float:left">Atrás: <a href="../GML_Reference.htm">Referencia GML</a></div>
+        <div style="float:right">Siguiente: <a href="../In_App_Purchases/In_App_Purchases.htm">Compras en la aplicación</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Physics

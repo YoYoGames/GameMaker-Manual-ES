@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>path_change_point</title>
+  <title>punto_de_cambio_de_la_senda</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function path_change_point" />
   <meta name="rh-index-keywords" content="path_change_point" />
@@ -14,68 +14,68 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>path_change_point</h1>
-  <p>With this function you can change the position and/or the speed factor of any point previously defined for a path (the path can have been created in the path editor or through code using <a href="path_add.htm"><span class="inline">path_add()</span></a>). If used on a path from the Asset Browser, note that <strong>the function will change the actual asset</strong>, and so will permanently affect how the path is used by all instances in the game from the moment the function is used until the end of the game. If this is not what you require, then you should use a function like <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> to create a copy of the path first, then call this function on the duplicated asset (don&#39;t forget to call <span class="inline"><a href="path_delete.htm">path_delete()</a></span> on the asset when it is no longer required).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>punto_de_cambio_de_la_senda</h1>
+  <p>Con esta función puede cambiar la posición y/o el factor de velocidad de cualquier punto previamente definido para un <span class="notranslate">path</span> (el <span class="notranslate">path</span> puede haber sido creado en el editor <span class="notranslate">path</span> o a través de código usando <a href="path_add.htm"><span class="inline">path_add()</span></a>). Si se utiliza en un <span class="notranslate">path</span> desde el Navegador <span class="notranslate">Asset</span>, tenga en cuenta que <strong>la función cambiará el activo</strong> real, y por lo tanto afectará permanentemente a la forma en que el <span class="notranslate">path</span> es utilizado por todas las instancias en el juego desde el momento en que se utiliza la función hasta el final del juego. Si esto no es lo que necesitas, entonces deberías usar una función como <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> para crear una copia del <span class="notranslate">path</span> primero, y luego llamar a esta función en el <span class="notranslate">asset</span> duplicado (no olvides llamar a <span class="inline"><a href="path_delete.htm">path_delete()</a></span> en el <span class="notranslate">asset</span> cuando ya no sea necesario).</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">path_change_point(index, n, x, y, speed);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>index</td>
-        <td><span data-keyref="Type_Asset_Path">Path Asset</span></td>
-        <td>The index of the path to change a point of.</td>
+        <td><span class="notranslate">index</span></td>
+        <td><span data-keyref="Type_Asset_Path">Activo de la ruta</span></td>
+        <td><span class="notranslate">The index of the path to change a point of.</span></td>
       </tr>
       <tr>
-        <td>n</td>
+        <td><span class="notranslate">n</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The defining point to change the attributes of.</td>
+        <td><span class="notranslate">The defining point to change the attributes of.</span></td>
       </tr>
       <tr>
-        <td>x</td>
+        <td><span class="notranslate">x</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The new x coordinate (relative to the path) of the point.</td>
+        <td><span class="notranslate">The new x coordinate (relative to the path) of the point.</span></td>
       </tr>
       <tr>
-        <td>y</td>
+        <td><span class="notranslate">y</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The new y coordinate (relative to the path) of the point.</td>
+        <td><span class="notranslate">The new y coordinate (relative to the path) of the point.</span></td>
       </tr>
       <tr>
-        <td>speed</td>
+        <td><span class="notranslate">speed</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The new speed factor of the point.</td>
+        <td><span class="notranslate">The new speed factor of the point.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">for (var i = 0; i &lt; path_get_number(path0); ++i;)<br />
     {<br />
         var px = path_get_point_x(pth_Patrol, i) + 64 - random(128);<br />
         var py = path_get_point_y(pth_Patrol, i) + 64 - random(128);<br />
         path_change_point(pth_Patrol, i, px, py, 100);<br />
     }</p>
-  <p>The above code loops through all the points in the path indexed as &quot;path0&quot; and re-positions all the points to a random position within an area of 128x128 pixels.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior <span class="notranslate">loops</span> a través de todos los puntos en el <span class="notranslate">path</span> indexado como &quot;path0&quot; y reubica todos los puntos a una posición aleatoria dentro de un área de 128x128 píxeles.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Path_Manipulation.htm">Path Manipulation</a></div>
-        <div style="float:right">Next: <a href="path_insert_point.htm">path_insert_point</a></div>
+        <div style="float:left">Atrás: <a href="Path_Manipulation.htm">Manipulación del camino</a></div>
+        <div style="float:right">Siguiente: <a href="path_insert_point.htm"><span class="notranslate">path_insert_point</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 path_change_point

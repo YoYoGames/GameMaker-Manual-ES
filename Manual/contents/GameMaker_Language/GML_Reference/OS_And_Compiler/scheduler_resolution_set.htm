@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>scheduler_resolution_set</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for scheduler_resolution_set" />
   <meta name="rh-index-keywords" content="scheduler_resolution_set" />
@@ -15,44 +15,43 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>scheduler_resolution_set</h1>
-  <p>This function is used to change the resolution of the Windows thread scheduler. The resolution value supplied in the argument needs to be in <strong>milliseconds</strong>.</p>
-  <p>By default, <span data-keyref="GameMaker Name">GameMaker</span> uses a resolution of 1 millisecond, which is the smallest resolution allowed and gives the best performance. Changing the resolution to a higher value may affect performance negatively, but it may also reduce power consumption.</p>
-  <p>You can supply -1 as the argument to revert the resolution to its default value (as set by Windows). Note that changing the scheduler&#39;s resolution will impact all processes running at the same time as your game.</p>
-  <p class="note"><strong>NOTE</strong>: This function is for <strong>Windows </strong>only.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Esta función se utiliza para cambiar la resolución del programador de hilos de <span class="notranslate">Windows</span>. El valor de la resolución suministrado en el argumento tiene que estar en <strong>milisegundos</strong>.</p>
+  <p>Por defecto, <span data-keyref="GameMaker Name"><span data-keyref="GameMaker Name">GameMaker</span></span> utiliza una resolución de 1 milisegundo, que es la resolución más pequeña permitida y da el mejor rendimiento. Cambiar la resolución a un valor superior puede afectar negativamente al rendimiento,
+    pero también puede reducir el consumo de energía.</p>
+  <p>Puede suministrar -1 como argumento para revertir la resolución a su valor por defecto (como se establece en <span class="notranslate">Windows</span>). Ten en cuenta que cambiar la resolución del programador afectará a todos los procesos que se ejecuten al mismo tiempo que tu juego.</p>
+  <p class="note"><strong>NOTA</strong>: Esta función es sólo para <strong>Windows </strong>.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">scheduler_resolution_set(milliseconds);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
+        <th>Argumento</th><th>Tipo</th>
+        <th>Descripción</th>
+     </tr>
       <tr>
-        <td>milliseconds</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The new resolution value (in milliseconds) or -1 for default</td>
-      </tr>
+        <td><span class="notranslate">milliseconds</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The new resolution value (in milliseconds) or -1 for default</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code"><span data-keyref="Type_Void"></span></p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">scheduler_resolution_set(2);</p>
-  <p>This example sets the resolution of the Windows thread scheduler to 2 milliseconds.</p>
-  <p> </p>
-  <p> </p>
+  <p>Este ejemplo establece la resolución del programador de hilos <span class="notranslate">Windows</span> a 2 milisegundos.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="OS_And_Compiler.htm">OS And Compiler</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="../Strings/clipboard_has_text.htm">clipboard_has_text</a></div>
+        <div style="float:left">Atrás: <a href="OS_And_Compiler.htm">Sistema operativo y compilador</a></div>
+        <div style="float:right">Siguiente: <a href="os_browser.htm"><span class="notranslate">os_browser</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 scheduler_resolution_set

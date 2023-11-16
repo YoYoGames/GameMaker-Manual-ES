@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Logros y tablas de clasificación</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference section for all the Achievements And Leaderboard functions" />
+  <meta name="rh-index-keywords" content="" />
+  <meta name="search-keywords" content="Achievements And Leaderboards" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Logros y tablas de clasificación</h1>
+  <p>Los juegos creados para dispositivos que ejecutan <span class="notranslate">iOS</span> o <span class="notranslate">Android</span> también pueden conectarse a una de las dos API de tablas de clasificación y logros. En el caso de <span class="notranslate">iOS</span> tienes el <b>iTunes Connect</b>, y en el caso de <span class="notranslate">Android</span> puedes usar <b>Google Play</b>, con ambos
+    ambos utilizan las funciones que se encuentran en esta página. Estas funciones permiten que tu juego envíe información sobre las puntuaciones y los logros a las tablas de clasificación que has configurado en la cuenta de desarrollador para el juego que estás haciendo y es una excelente manera de
+    de involucrar a los jugadores en el lado social del juego, ya que pueden ver lo que otras personas que han jugado su juego han logrado y tratar de superarlos.</p>
+  <p>Cuando utilices estas funciones, debes tener en cuenta que <i>no</i> registran los logros y las puntuaciones automáticamente por ti. Sólo muestran los datos que les envías desde tu juego, así que debes codificar tu propio sistema de logros y
+    hi-score para hacer un seguimiento del estado de los individuos en el juego, y luego utilizar estas funciones para añadir los datos a la red elegida (sin embargo, <i>puede</i> solicitar información sobre el progreso de los logros utilizando la función     <a href="achievement_load_progress.htm"><tt>achievement_load_progress()</tt></a> ).</p>
+  <p>Algunas de estas funciones desencadenarán una llamada de retorno <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Evento Social Asíncrono</a>, que contendrá un <tt>Mapa DS</tt> de datos relacionados con
+    a la función que lo ha desencadenado. Esas funciones que desencadenan el evento también detallan los pares clave/valor del mapa que son devueltos por la devolución de llamada, sin embargo un <b>Evento</b> Social de devolución de llamada también puede ser desencadenado por su juego recibiendo
+    notificaciones externas sobre retos, etc... </p>
+  <p class="note"><b>NOTA</b>: Para que estas funciones funcionen con <span class="notranslate">iOS</span> debes tener una cuenta válida de Game Center y un <b>identificador de la aplicación</b> <span class="notranslate">iOS</span> para tu juego.</p>
+  <p class="note"><b>NOTA</b>: Para que estas funciones funcionen con <span class="notranslate">Android</span> debes enviar tu juego a Google Play, y haber configurado las secciones necesarias así como tener la API activada en las <a href="../../../../Settings/Game_Options/Android.htm">Opciones de Juego de Android</a> para
+    su juego.</p>
+  <p>Las funciones que se enumeran a continuación son las básicas para integrar su juego con la plataforma de juegos sociales elegida:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="achievement_login_status.htm"><span class="notranslate">achievement_login_status</span></a></li>
+    <li><a href="achievement_login.htm"><span class="notranslate">achievement_login</span></a></li>
+    <li><a href="achievement_logout.htm"><span class="notranslate">achievement_logout</span></a></li>
+    <li><a href="achievement_available.htm"><span class="notranslate">achievement_available</span></a></li>
+    <li><a href="achievement_post.htm"><span class="notranslate">achievement_post</span></a></li>
+    <li><a href="achievement_post_score.htm"><span class="notranslate">achievement_post_score</span></a></li>
+    <li><a href="achievement_increment.htm"><span class="notranslate">achievement_increment</span></a></li>
+    <li><a href="achievement_show_achievements.htm"><span class="notranslate">achievement_show_achievements</span></a></li>
+    <li><a href="achievement_show_leaderboards.htm"><span class="notranslate">achievement_show_leaderboards</span></a></li>
+    <li><a href="achievement_show_challenge_notifications.htm"><span class="notranslate">achievement_show_challenge_notifications</span></a></li>
+    <li><a href="achievement_get_challenges.htm"><span class="notranslate">achievement_get_challenges</span></a></li>
+    <li><a href="achievement_get_pic.htm"><span class="notranslate">achievement_get_pic</span></a></li>
+    <li><a href="achievement_load_friends.htm"><span class="notranslate">achievement_load_friends</span></a></li>
+    <li><a href="achievement_load_leaderboard.htm"><span class="notranslate">achievement_load_leaderboard</span></a></li>
+    <li><a href="achievement_load_progress.htm"><span class="notranslate">achievement_load_progress</span></a></li>
+    <li><a href="achievement_send_challenge.htm"><span class="notranslate">achievement_send_challenge</span></a></li>
+    <li><a href="achievement_reset.htm"><span class="notranslate">achievement_reset</span></a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Atrás: <a href="../Asynchronous_Functions.htm">Funciones asíncronas</a></div>
+        <div style="float:right">Siguiente: <a href="../HTTP/HTTP.htm">HTTP</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
+  </div>
+  <!-- KEYWORDS
+Achievements And Leaderboards
+-->
+  <!-- TAGS
+achievement_leaderboard_functions
+-->
+</body>
+</html>

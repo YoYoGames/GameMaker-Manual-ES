@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>game_restart</title>
+  <title>reinicio_del_juego</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="This page outlines the function game_restart" />
   <meta name="rh-index-keywords" content="game_restart" />
@@ -14,39 +14,39 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">game_restart</span></h1>
-  <p>With this function you can restart the game. This is essentially the same as running the game for the first time and so the <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Game Start Event</a> will be triggered, <i>as well as</i> the <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Game End Event</a>.</p>
+  <h1>reinicio_del_juego</h1>
+  <p>Con esta función puedes reiniciar el juego. Esto es esencialmente lo mismo que ejecutar el juego por primera vez, por lo que el evento de <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">inicio de juego</a> se activará, <i>así</i> como el <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">evento de fin de juego</a>.</p>
   <div data-conref="../../../assets/snippets/changing_room_stops_instance_creation.hts"> </div>
-  <p>It should be noted that certain things will <b>not</b> be reset when this function is called:</p>
+  <p>Hay que tener en cuenta que algunas cosas <b>no</b> se restablecerán cuando se llame a esta función:</p>
   <ul class="colour">
-    <li>Global variables will not be re-initialised unless explicitly coded as such - for example, the built-in global variable <span class="inline">score</span> will not start at zero after a game restart if it has been modified in the game already.</li>
-    <li>The GPU state will not be changed (so if you have set the draw colour or alpha, for example, it will remain at the changed value).</li>
-    <li>The game speed will remain at whatever you set it in your game code (if you changed it this change will be perpetuated).</li>
-    <li>Any asset from the Asset Browser that has been changed at run time within the game - for example if you change the origin for a sprite resource or shift the position of a path resource - will <i>not</i> be reset.</li>
-    <li>Dynamic resources like buffers, surfaces, data-structures or imported sprites will also not be cleaned up or removed (although you may lose references to them, so take care when using this function to either use global references for the dynamic resource, or to clean them up before the function is called).</li>
+    <li>Las variables globales no se reiniciarán a menos que se codifiquen explícitamente como tales - por ejemplo, la variable global incorporada <span class="inline">score</span> no comenzará a cero después de un reinicio del juego si ya ha sido modificada en el juego.</li>
+    <li>El estado de la GPU no se modificará (por lo que si has establecido el color de dibujo o el alfa, por ejemplo, se mantendrá en el valor modificado).</li>
+    <li>La velocidad del juego se mantendrá en lo que hayas establecido en tu código de juego (si lo has cambiado, este cambio se perpetuará).</li>
+    <li>Cualquier <span class="notranslate">asset</span> del navegador <span class="notranslate">Asset</span> que se haya modificado en tiempo de ejecución dentro del juego -por ejemplo, si se cambia el origen de un recurso <span class="notranslate">sprite</span> o se desplaza la posición de un recurso <span class="notranslate">path</span> - <i>no</i> se restablecerá.</li>
+    <li>Los recursos dinámicos como <span class="notranslate">buffers</span>, superficies, estructuras de datos o <span class="notranslate">sprites</span> importados tampoco serán limpiados o eliminados (aunque puede perder las referencias a ellos, así que tenga cuidado cuando use esta función de usar referencias globales para el recurso dinámico, o de limpiarlas antes de llamar a la función).</li>
     <br />
-    <br />
-     
+     
   </ul>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">game_restart</span>();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <h4>Sintaxis:</h4>
+  <p class="code">game_restart();</p>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if keyboard_check_pressed(ord(&quot;R&quot;)) <span data-field="title" data-format="default">game_restart</span>();</p>
-  <p>This would restart the game when the player presses the &quot;R&quot; key.</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p class="code">if keyboard_check_pressed(ord(&quot;R&quot;)) game_restart();</p>
+  <p>Esto reiniciaría el juego cuando el jugador pulsara la tecla &quot;R&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="General_Game_Control.htm">General Game Control</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="game_change.htm">game_change</a></div>
+        <div style="float:left">Atrás: <a href="General_Game_Control.htm">Control general del juego</a></div>
+        <div style="float:right">Siguiente: <a href="game_load.htm"><span class="notranslate">game_load</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 game_restart

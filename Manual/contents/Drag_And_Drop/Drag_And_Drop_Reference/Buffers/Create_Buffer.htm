@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Create Buffer</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>Crear un búfer</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Create Buffer action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Create Buffer" />
@@ -14,43 +14,48 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Create Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Create_Buffer.png" /> Create Buffer</h1>
-  <p>This action can be used to allocate a portion of memory as a buffer in your game, with the function returning the unique <i>buffer id</i> value that should be stored in a variable and used for all further function calls to the buffer. You can supply a global variable, an instance variable or have the action create a temporary local variable for storing the buffer ID. Note that you can create additional buffers by clicking the plus icon <span><img alt="Expand Icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Icon_Expand_Arguments.png" /> </span>beside the action, and selecting another variable to hold the buffer ID.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> It&#39;s important that you remove any dynamically created resources like this from memory when you no longer need them to prevent memory leaks, so when you are finished with the buffer that you have created you should free it up again using <a href="Delete_Buffer.htm">Delete Buffer</a> action (in the <a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Other - Clean Up</a> event, for example). This is especially important to remember when using a temporary local variable, as if you do not remove the buffer again before the end of the event or action script then you will no longer be able access it and can have issues later.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Create Buffer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/a_Buffers_Create_Buffer.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Crear un búfer</h1>
+  <p>Esta acción se puede utilizar para asignar una parte de la memoria como <span class="notranslate">buffer</span> en su juego, con la función que devuelve el valor único de identificación <i>del búfer</i> que debe ser almacenado en una variable y utilizado para todas las llamadas de función posteriores a la <span class="notranslate">buffer</span>. Usted puede proporcionar
+    una variable global, una variable de instancia o hacer que la acción cree una variable local temporal para almacenar el ID de <span class="notranslate">buffer</span>. Tenga en cuenta que puede crear <span class="notranslate">buffers</span> adicionales haciendo clic en el icono más <span><img> </span>junto a
+    la acción, y seleccionando otra variable para guardar el ID de <span class="notranslate">buffer</span>.</p>
+  <p class="note"><b>NOTA</b>: Es importante que elimines de la memoria cualquier recurso creado dinámicamente como éste cuando ya no lo necesites para evitar fugas de memoria, así que cuando termines con el <span class="notranslate">buffer</span> que has creado debes liberarlo de nuevo
+    utilizando la acción <a href="Delete_Buffer.htm">Borrar Buffer</a> (en el evento <a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Otros - Limpiar</a>, por ejemplo). Esto es especialmente importante de recordar cuando se utiliza una variable local temporal
+    ya que si no eliminas la <span class="notranslate">buffer</span> de nuevo antes de que termine el evento o la acción <span class="notranslate">script</span> entonces ya no podrás acceder a ella y puedes tener problemas más adelante.</p>
+  <p> </p>
+  <h4>Sintaxis de la acción:</h4>
+  <p><img alt="Create Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Create_Buffer.png" /></p>
+  <h4>Argumentos:</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>Buffer</td>
-        <td>The buffer index (stored in a variable)</td>
+        <td><span class="notranslate">Buffer</span></td>
+        <td>El índice <span class="notranslate">buffer</span> (almacenado en una variable)</td>
       </tr>
       <tr>
-        <td>Value</td>
-        <td>The value to add into the list</td>
+        <td><span class="notranslate">Value</span></td>
+        <td>El valor a añadir en la lista</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Create Buffer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/e_Buffers_Create_Buffer.png" />The above action block code creates a global variable and then a buffer, assigning the unique buffer ID to the variable. This buffer than has two pieces of data written to it.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p><img>El código del bloque de acción anterior crea una variable global y luego un <span class="notranslate">buffer</span>, asignando el
+    <span class="notranslate">buffer</span> ID a la variable. En este <span class="notranslate">buffer</span> se escriben dos datos.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffer_Actions.htm">Buffer Actions</a></div>
-        <div style="float:right">Next: <a href="Copy_Buffer.htm">Copy Buffer</a></div>
+        <div style="float:left">Volver: <a href="Buffer_Actions.htm">Acciones de amortiguación</a></div>
+        <div style="float:right">Siguiente: <a href="Copy_Buffer.htm">Buffer de copia</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Create Buffer

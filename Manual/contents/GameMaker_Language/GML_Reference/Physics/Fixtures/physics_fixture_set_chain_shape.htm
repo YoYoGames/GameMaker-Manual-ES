@@ -6,7 +6,7 @@
   <title>physics_fixture_set_chain_shape</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_fixture_set_chain_shape" />
   <meta name="rh-index-keywords" content="physics_fixture_set_chain_shape" />
@@ -15,35 +15,32 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>physics_fixture_set_chain_shape</h1>
-  <p>This function defines a &quot;chain&quot; fixture shape. A chain fixture is comprised of a number of points, which are then connected together using edge shapes to join them. The function itself takes the index (ID) of the fixture and can tell the fixture to loop or not. Setting this to <span class="inline2">true</span> will connect the last point to the first point with an edge, while setting it to <span class="inline2">false</span> will not. Note that this function on prepares the fixture to accept the points required to make the chain, and these should be added after calling this function using <span class="inline3_func"><a data-xref="{title}" href="physics_fixture_add_point.htm">physics_fixture_add_point</a></span>, much as you would when building a polygon fixture.</p>
-  <p>When creating a chain fixture, you must give it at least two points but you are not limited in the number of subsequent points that you can add to make up the finished fixture.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Esta función define una forma de fijación &quot;en cadena&quot;. Una fijación en cadena se compone de un número de puntos, que se conectan entre sí utilizando formas de borde para unirlos. La función en sí toma el índice (ID) de la fijación y puede decirle a la fijación que <span class="notranslate">loop</span> o no. Si se establece en <span class="inline">true</span> se conectará el último punto con el primer punto con una arista, mientras que si se establece en <span class="inline">false</span> no lo hará. Tenga en cuenta que esta función prepara el dispositivo para aceptar los puntos necesarios para hacer la cadena, y estos deben ser añadidos después de llamar a esta función utilizando <a href="physics_fixture_add_point.htm"><span class="inline">physics_fixture_add_point()</span></a>de la misma manera que cuando se construye un polígono.</p>
+  <p>Al crear una fijación de cadena, debes darle al menos dos puntos, pero no estás limitado en el número de puntos subsiguientes que puedes añadir para conformar la fijación terminada.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">physics_fixture_set_chain_shape(fixture, loop)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
+        <th>Argumento</th><th>Tipo</th>
+        <th>Descripción</th>
+     </tr>
       <tr>
-        <td>fixture</td>
-        <td><span data-keyref="Type_ID_PhyFixture"><a href="../../../../../GameMaker_Language/GML_Reference/Physics/Fixtures/physics_fixture_create.htm" target="_blank">Physics Fixture ID</a></span></td>
-        <td>The index of the fixture</td>
-      </tr>
+        <td><span class="notranslate">fixture</span></td><td><span data-keyref="Type_ID_PhyFixture"></span></td>
+        <td><span class="notranslate">The index of the fixture</span></td>
+     </tr>
       <tr>
-        <td>loop</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Whether to close the chain (<span class="inline">true</span>) or not (<span class="inline">false</span>).</td>
-      </tr>
+        <td><span class="notranslate">loop</span></td><td><span data-keyref="Type_Bool"></span></td>
+        <td><span class="notranslate">Whether to close the chain (<span class="inline">true</span>) o no (<span class="inline">false</span>).</td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code"><span data-keyref="Type_Void"></span></p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">var xx = -100;<br />
     var yy = room_height / 2;<br />
     var fix = physics_fixture_create(); physics_fixture_set_chain_shape(fix, false);<br />
@@ -54,18 +51,18 @@
         yy = (room_height / 2) - 250 + irandom(500);<br />
     }<br />
     physics_fixture_bind(fix, id);</p>
-  <p>The above code will create a line of &quot;edge&quot; fixtures with a variety of heights over the length of the room.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior creará una línea de accesorios de &quot;borde&quot; con una variedad de alturas a lo largo de la <span class="notranslate">room</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Fixtures.htm">Fixtures</a></div>
-        <div style="float:right">Next: <a href="physics_fixture_set_polygon_shape.htm">physics_fixture_set_polygon_shape</a></div>
+        <div style="float:left">Atrás: <a href="Fixtures.htm">Instalaciones</a></div>
+        <div style="float:right">Siguiente: <a href="physics_fixture_set_polygon_shape.htm"><span class="notranslate">physics_fixture_set_polygon_shape</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 physics_fixture_set_chain_shape

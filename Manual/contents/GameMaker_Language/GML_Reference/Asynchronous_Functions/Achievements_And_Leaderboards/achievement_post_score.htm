@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>puntuación_posterior_de_logros</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for achievement_post_score" />
+  <meta name="rh-index-keywords" content="achievement_post_score" />
+  <meta name="search-keywords" content="achievement_post_score" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>puntuación_posterior_de_logros</h1>
+  <p>Puedes utilizar esta función para enviar tu puntuación al servicio de tablas de clasificación y logros elegido. En <span class="notranslate">Android</span>, se envía el ID de la tabla de puntuaciones como <span class="notranslate">string</span> (es el ID único de la tabla de clasificación que se asignó cuando se configuró la tabla de clasificación), mientras que en
+    todas las demás plataformas se proporciona el nombre de la tabla de clasificación definida como <span class="notranslate">string</span>, y luego se da el valor real de la puntuación. La función desencadenará un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Evento Social Asíncrono</a> en el que el mapa <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> DS devuelto tendrá los siguientes pares clave/valor:</p>
+  <ul class="colour">
+    <li>&quot;<b>type</b>&quot; - Es el tipo de evento que se ha disparado, que será el <span class="notranslate">string</span> &quot;<tt>achievement_post_score_result</tt>&quot; para esta función.</li>
+    <li>&quot;<b>id</b>&quot; - Es el ID del evento y, para esta función, devolverá una constante <span class="notranslate">GML</span> <tt>GooglePlayServices_EVENT_ID_POST_SCORE</tt>.</li>
+    <li>&quot;<b>leaderboard_id</b>&quot; - Es el ID único de la tabla de clasificación que se ha actualizado.</li>
+    <li>&quot;<b>Estado</b>&quot; - Será 1 si las puntuaciones se han actualizado correctamente, o 0 si la solicitud ha fallado</li>
+    <li>&quot;<b>daily_new_best</b>&quot; - Será 1 si la puntuación enviada fue la mejor del usuario en el último día, o 0 en caso contrario.</li>
+    <li>&quot;<b>daily_best</b>&quot; - Mantendrá la mejor puntuación del usuario del último día de juego.</li>
+    <li>&quot;<b>weekly_new_best</b>&quot; - Será 1 si la puntuación enviada fue la mejor del usuario en la última semana, o 0 en caso contrario.</li>
+    <li>&quot;<b>weekly_best</b>&quot; - Contiene la mejor puntuación del usuario de la última semana.</li>
+    <li>&quot;<b>all_time_new_best</b>&quot; - Será 1 si la puntuación enviada es la mejor de todos los tiempos del usuario, o 0 en caso contrario.</li>
+    <li>&quot;<b>all_time_best</b>&quot; - Contiene la mejor puntuación del usuario de todos los tiempos.</li>
+  </ul>
+  <p> </p>
+  <h4><b>Sintaxis:</b></h4>
+  <p class="code">achievement_post_score(leaderboard, score)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argumento</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">leaderboard</span></td>
+        <td>El nombre/ID de la tabla de clasificación.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">score</span></td>
+        <td>La puntuación a enviar.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Ejemplo ampliado:</h4>
+  <p class="code">if achievement_available()<br/>     {<br/>     achievement_post_score(global.LeaderboardID, 1000);<br/>     }</p>
+  <p>El código anterior comprueba si el servicio de tabla de clasificación y logros elegido está disponible y, si es así, publica una puntuación en la tabla de puntuación llamada &quot;Tabla de clasificación&quot;. Esto desencadenará un evento social asíncrono que puede ser analizado así:</p>
+  <p class="code">if async_load[? &quot;id&quot;] == GooglePlayServices_EVENT_ID_POST_SCORE<br/>     {
+    <br/>     if async_load[? &quot;type&quot;] == &quot;achievement_post_score_result&quot;<br/>         {
+    <br/>         if async_load[? &quot;status&quot;] == 1<br/>             {
+    <br/>             global.Best_Day = async_load[? &quot;daily_best&quot;];<br/>             global.Best_Week = async_load[? &quot;weekly_best&quot;];<br/>             global.Best = async_load[? &quot;all_time_best&quot;];<br/>             }
+    <br/>         }
+    <br/>     }
+  </p>
+  <p>El código anterior comprueba el mapa DS <tt>async_load</tt> para las claves &quot;id&quot; y &quot;type&quot; que corresponden a esta función, y luego comprueba el estado del evento. Si el estado es 1, entonces algunos valores del mapa DS se almacenan en variables globales
+    globales.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Atrás: <a href="Achievements_And_Leaderboards.htm">Logros y tablas de clasificación</a></div>
+        <div style="float:right">Siguiente: <a href="achievement_increment.htm"><span class="notranslate">achievement_increment</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
+  </div>
+  <!-- KEYWORDS
+achievement_post_score
+-->
+  <!-- TAGS
+achievement_post_score
+-->
+</body>
+</html>

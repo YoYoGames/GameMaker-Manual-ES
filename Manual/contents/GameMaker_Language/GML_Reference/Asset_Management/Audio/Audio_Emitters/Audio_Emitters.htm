@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Audio Emitters</title>
+  <title>Emisores de audio</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the different functions and variables associated with Audio Emitters" />
   <meta name="rh-index-keywords" content="" />
@@ -14,103 +14,101 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Audio Emitters</span></h1>
-  <p>Audio emitters are provided to increase the flexibility of the <span data-keyref="GameMaker Name">GameMaker</span> audio engine, and they permit you to add real time effects to your audio assets, like pitch and Doppler variations, as well as the ability to position your sounds within the 3D audio space and give them realistic motion effects. All these functions are affected by the position of the <i>listener</i> within the audio environment and so will require that you use the provided functions for changing the listener position, velocity and orientation too (see - <a href="../Audio_Listeners/Audio_Listeners.htm">Audio Listeners</a>).</p>
-  <h2>Using audio emitters and listeners</h2>
-  <p>By combining audio emitters and listeners you can create a rich, lively environment. Setting this up can be a bit involved so in this part we will look at the things that you need to do to set up a full system with emitters and the default listener.</p>
-  <h3>Setting a falloff model</h3>
-  <p>The first thing to do when working with audio emitters (and with sounds played using <a href="../audio_play_sound_at.htm">audio_play_sound_at</a> at a different position than <span data-keyref="Position_Origin">(0, 0, 0)</span>) is to set a falloff model using <span class="inline"><a href="../audio_falloff_set_model.htm">audio_falloff_set_model()</a></span>. The falloff model determines how the volume of the sound being played changes with the distance from the listener to the emitter.</p>
-  <p>It is not strictly required that you set this but if you don&#39;t call this function the model used will be the default <span class="inline">audio_fa<span class="inline"></span>lloff_none</span>. This means that the gain is set to 1 and so the volume of a sound does not change with the distance from the listener to the emitter.</p>
-  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"> </span> If you want to make sure sounds can no longer be heard past the maximum distance you should set one of the falloff models that end in <span class="inline">_scaled</span>.</p>
-  <h3>Updating the listener</h3>
-  <p>The default audio listener is located at position <span data-keyref="Position_Origin">(0, 0, 0)</span>. <a href="../audio_play_sound.htm">audio_play_sound</a> plays a sound at the listener&#39;s position. So by default sounds that are played this way will be audible through both speakers, right and left.</p>
-  <p>From the moment the relative position of the listener to the sound or emitter changes (by either changing the listener or the emitter position) this will no longer be the case.</p>
-  <p>It does not only have a <strong>position</strong>, it also has an <strong>orientation</strong>, which can be changed using <a href="../Audio_Listeners/audio_listener_orientation.htm">audio_listener_orientation</a>. By default, however, that orientation is upside down! The default orientation has the up vector set to <span data-keyref="Unit_Vector_Y">(0, 1, 0)</span>, but since <span data-keyref="GameMaker Name">GameMaker</span>&#39;s y axis points downward, that means the listener is standing upside down in the room.</p>
-  <p>Everything that you expect to hear in the left speaker will actually be heard in the right speaker and vice versa (see the page on <a href="../Audio_Listeners/audio_listener_orientation.htm">audio_listener_orientation</a> for an image of how this looks). So once you start moving emitters and the listener around, make sure to set the listener&#39;s orientation to the following: </p>
+  <h1><span data-field="title" data-format="default">Emisores de audio</span></h1>
+  <p>Los emisores de audio se proporcionan para aumentar la flexibilidad del motor de audio <span data-keyref="GameMaker Name">de GameMaker</span>, y le permiten añadir efectos en tiempo real a su audio <span class="notranslate">assets</span>, como variaciones de tono y Doppler, así como la capacidad de posicionar sus sonidos dentro del espacio de audio 3D y darles efectos de movimiento realistas. Todas estas funciones se ven afectadas por la posición del <i>oyente</i> dentro del entorno de audio, por lo que será necesario que utilices también las funciones proporcionadas para cambiar la posición, la velocidad y la orientación del oyente (ver - <a href="../Audio_Listeners/Audio_Listeners.htm">Oyentes de audio</a>).</p>
+  <h2>Uso de emisores y oyentes de audio</h2>
+  <p>Combinando emisores y oyentes de audio puedes crear un entorno rico y animado. Configurar esto puede ser un poco complicado, así que en esta parte veremos las cosas que hay que hacer para configurar un sistema completo con emisores y el oyente por defecto.</p>
+  <h3>Establecer un modelo de decaimiento</h3>
+  <p>Lo primero que hay que hacer cuando se trabaja con emisores de audio (y con sonidos reproducidos con <a href="../audio_play_sound_at.htm"><span class="notranslate">audio_play_sound_at</span></a> en una posición diferente a <span data-keyref="Position_Origin">(0, 0, 0)</span>) es establecer un modelo de decaimiento utilizando <span class="inline"><a href="../audio_falloff_set_model.htm">audio_falloff_set_model()</a></span>. El modelo de decaimiento determina cómo cambia el volumen del sonido que se reproduce con la distancia del oyente al emisor.</p>
+  <p>No es estrictamente necesario que lo establezca, pero si no llama a esta función el modelo utilizado será el predeterminado <span class="inline">audio_fa<span class="inline"></span>lloff_none. Esto significa que la ganancia se establece en 1 y así el volumen de un sonido no cambia con la distancia del oyente al emisor.</p>
+  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"> </span> Si quieres asegurarte de que los sonidos ya no se oyen más allá de la distancia máxima, debes configurar uno de los modelos de decaimiento que terminan en <span class="inline">_scaled</span>.</p>
+  <h3>Actualizar el oyente</h3>
+  <p>El oyente de audio por defecto se encuentra en la posición <span data-keyref="Position_Origin">(0, 0, 0)</span>. <a href="../audio_play_sound.htm"><span class="notranslate">audio_play_sound</span></a> reproduce un sonido en la posición del oyente. Así que por defecto los sonidos que se reproduzcan de esta manera serán audibles a través de ambos altavoces, derecho e izquierdo.</p>
+  <p>A partir del momento en que cambia la posición relativa del oyente con respecto al sonido o al emisor (ya sea cambiando la posición del oyente o del emisor), esto ya no será así.</p>
+  <p>No sólo tiene una <strong>posición</strong>, sino también una <strong>orientación</strong>, que puede cambiarse mediante <a href="../Audio_Listeners/audio_listener_orientation.htm"><span class="notranslate">audio_listener_orientation</span></a>. Por defecto, sin embargo, ¡esa orientación está al revés! La orientación por defecto tiene el vector hacia arriba establecido en <span data-keyref="Unit_Vector_Y">(0, 1, 0)</span>, pero como el eje y de <span data-keyref="GameMaker Name">GameMaker</span> apunta hacia abajo, eso significa que el oyente está de pie al revés en el <span class="notranslate">room</span>.</p>
+  <p>Todo lo que esperes escuchar en el altavoz izquierdo se escuchará en realidad en el altavoz derecho y viceversa (consulta la página de <a href="../Audio_Listeners/audio_listener_orientation.htm"><span class="notranslate">audio_listener_orientation</span></a> para ver una imagen de cómo se ve esto). Así que una vez que empiece a mover los emisores y el oyente, asegúrese de establecer la orientación del oyente de la siguiente manera: </p>
   <p class="code">audio_listener_orientation(0, 0, 1, 0, -1, 0);</p>
-  <p>The above line of code will set the default listener&#39;s orientation so that it looks <strong>into the screen</strong> and <strong>faces up</strong>. So this corresponds to a listener standing or sitting at the computer looking at the screen.</p>
-  <p>When you are creating a top-down game it can be more interesting to make the listener&#39;s orientation follow the direction that the player (or any other &quot;listener&quot;) is facing. That can be done by the following line of code: </p>
+  <p>La línea de código anterior establecerá la orientación del oyente por defecto para que mire a <strong>la</strong> pantalla y <strong>esté orientado hacia arriba</strong>. Así que esto corresponde a un oyente de pie o sentado en el ordenador mirando a la pantalla.</p>
+  <p>Cuando se crea un juego de arriba abajo puede ser más interesante hacer que la orientación del oyente siga la dirección hacia la que se dirige el jugador (o cualquier otro &quot;oyente&quot;). Eso se puede hacer con la siguiente línea de código: </p>
   <p class="code">audio_listener_orientation(0, 0, 1, lengthdir_x(1, direction), lengthdir_y(1, direction), 0);</p>
-  <p>In this line of code, instead of having an up vector that doesn&#39;t change at all (y = -1 all the time), you change it based on the direction of the player. The simplest way to do this is to use the <a href="../../../Maths_And_Numbers/Angles_And_Distance/lengthdir_x.htm">lengthdir_x</a> and <a href="../../../Maths_And_Numbers/Angles_And_Distance/lengthdir_y.htm">lengthdir_y</a> functions. The look at vector can stay the same since the listener is still looking into the screen.</p>
-  <h3>Playing sounds</h3>
-  <p>After setting a falloff model and making sure the listener&#39;s position and orientation are updated correctly, you can start playing sounds in the 3D audio space using <a href="../audio_play_sound_at.htm">audio_play_sound_at</a>: </p>
+  <p>En esta línea de código, en lugar de tener un vector ascendente que no cambia en absoluto (y = -1 todo el tiempo), lo cambias en función de la dirección del jugador. La forma más sencilla de hacer esto es utilizar los botones <a href="../../../Maths_And_Numbers/Angles_And_Distance/lengthdir_x.htm"><span class="notranslate">lengthdir_x</span></a> y <a href="../../../Maths_And_Numbers/Angles_And_Distance/lengthdir_y.htm"><span class="notranslate">lengthdir_y</span></a> y. El vector mirada puede permanecer igual ya que el oyente sigue mirando a la pantalla.</p>
+  <h3>Reproducción de sonidos</h3>
+  <p>Después de establecer un modelo de decaimiento y asegurarse de que la posición y la orientación del oyente se actualizan correctamente, puede empezar a reproducir sonidos en el espacio de audio 3D utilizando <a href="../audio_play_sound_at.htm"><span class="notranslate">audio_play_sound_at</span></a>: </p>
   <p class="code">sound_instance = audio_play_sound_at(snd_Explosion, x, y, 0, 100, 300, 1, true, 1);</p>
-  <p>The above line of code plays the sound &quot;snd_Explosion&quot; <strong>at</strong> the position (x, y, 0) with a falloff reference distance of 100, a falloff max distance of 300 and a falloff factor of 1.</p>
-  <p>Note that you can change certain properties of the sound since it can be accessed through the <span class="inline2">sound_instance</span> variable above. These are only properties of the sound itself, however, such as gain, offset and pitch. There is no way to change the position or velocity of sounds that are played using <a href="../audio_play_sound_at.htm">audio_play_sound_at</a>.</p>
-  <p>All in all, <a href="../audio_play_sound_at.htm">audio_play_sound_at</a> is a good way to play simple sounds in 3D audio space but it is limited. It doesn&#39;t allow you to change the position, the velocity or the falloff parameters once the sound is playing. Position and falloff parameters <i>are</i> passed to the function but cannot be changed afterwards.</p>
-  <p>If you want more control over how sounds are played, use an audio emitter.</p>
-  <h3>Adding an emitter</h3>
-  <p>Audio emitters are added using <a href="audio_emitter_create.htm">audio_emitter_create</a>. They are placed at <span data-keyref="Position_Origin">(0, 0, 0)</span>, have a velocity of 0 and default falloff settings.</p>
+  <p>La línea de código anterior reproduce el sonido &quot;snd_Explosion&quot; <strong>en</strong> la posición (x, y, 0) con una distancia de referencia de fallo de 100, una distancia máxima de fallo de 300 y un factor de fallo de 1.</p>
+  <p>Tenga en cuenta que puede cambiar ciertas propiedades del sonido, ya que se puede acceder a él a través de la variable <span class="inline2">sound_instance</span> anterior. Sin embargo, sólo son propiedades del propio sonido, como la ganancia, el desplazamiento y el tono. No hay manera de cambiar la posición o la velocidad de los sonidos que se reproducen utilizando <a href="../audio_play_sound_at.htm"><span class="notranslate">audio_play_sound_at</span></a>.</p>
+  <p>En definitiva, <a href="../audio_play_sound_at.htm"><span class="notranslate">audio_play_sound_at</span></a> es una buena manera de reproducir sonidos simples en el espacio de audio 3D, pero es limitada. No permite cambiar la posición, la velocidad o los parámetros de decaimiento una vez que el sonido se está reproduciendo. Los parámetros de posición y de desvanecimiento <i>se</i> pasan a la función pero no se pueden cambiar después.</p>
+  <p>Si quieres tener más control sobre la reproducción de los sonidos, utiliza un emisor de audio.</p>
+  <h3>Añadir un emisor</h3>
+  <p>Los emisores de audio se añaden con <a href="audio_emitter_create.htm"><span class="notranslate">audio_emitter_create</span></a>. Se colocan en <span data-keyref="Position_Origin">(0, 0, 0)</span>, tienen una velocidad de 0 y una configuración de decaimiento por defecto.</p>
   <p class="code">emitter = audio_emitter_create();</p>
-  <h3>Updating an emitter</h3>
-  <p>An audio emitter &quot;emits&quot; a sound. It can be compared to a speaker in the real world.</p>
-  <p>Compared to <a href="../audio_play_sound_at.htm">audio_play_sound_at</a>, an emitter can have its position, velocity, listener mask and falloff parameters changed after you start playing a sound on it using <a href="audio_play_sound_on.htm">audio_play_sound_on</a>.</p>
-  <p>The position of an emitter can be updated using <a href="audio_emitter_position.htm">audio_emitter_position</a>. This can be set to an instance&#39;s position: </p>
+  <h3>Actualización de un emisor</h3>
+  <p>Un emisor de audio &quot;emite&quot; un sonido. Se puede comparar con un altavoz en el mundo real.</p>
+  <p>En comparación con <a href="../audio_play_sound_at.htm"><span class="notranslate">audio_play_sound_at</span></a>un emisor puede tener su posición, velocidad, máscara de escucha y parámetros de desvanecimiento después de empezar a reproducir un sonido en él usando <a href="audio_play_sound_on.htm"><span class="notranslate">audio_play_sound_on</span></a>.</p>
+  <p>La posición de un emisor puede actualizarse mediante <a href="audio_emitter_position.htm"><span class="notranslate">audio_emitter_position</span></a>. Esto se puede ajustar a la posición de una instancia: </p>
   <p class="code">audio_emitter_position(emitter, x, y, 0);</p>
-  <p>The velocity of an emitter is updated using <a href="audio_emitter_velocity.htm">audio_emitter_velocity</a>. The easiest way to set the velocity is by setting it to the <a href="../../Instances/Instance_Variables/hspeed.htm">hspeed</a> and <a href="../../Instances/Instance_Variables/vspeed.htm">vspeed</a> of an instance, like this: </p>
+  <p>La velocidad de un emisor se actualiza mediante <a href="audio_emitter_velocity.htm"><span class="notranslate">audio_emitter_velocity</span></a>. La forma más sencilla de establecer la velocidad es mediante la configuración de <a href="../../Instances/Instance_Variables/hspeed.htm"><span class="notranslate">hspeed</span></a> y <a href="../../Instances/Instance_Variables/vspeed.htm"><span class="notranslate">vspeed</span></a> de una instancia, así: </p>
   <p class="code">audio_emitter_velocity(emitter, hspeed, vspeed, 0);</p>
-  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"> </span> The <i>velocity</i> of an audio emitter is expressed in <i>pixels per step</i>.<span><span></span></span></p>
-  <h3>Audio emitters created by <span data-keyref="GameMaker Name">GameMaker</span></h3>
-  <p>When working with <a href="../../Sequences/Sequences.htm">Sequences</a>, <span data-keyref="GameMaker Name">GameMaker</span> adds creates audio emitter for every audio track (<span><span class="inline2">seqtracktype_audio</span>) in the sequence. </span>The ID of these emitters can be found in the <a href="../../Sequences/Sequence_Structs/The_Sequence_Instance_Struct.htm">Sequence Instance&#39;s</a> <span class="inline2">activeTracks[i].emitterIndex</span> property.</p>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> automatically updates the position of such an emitter. It does not update the velocity of an audio track emitter but this is something you can do yourself by calling <a href="audio_emitter_velocity.htm">audio_emitter_velocity</a> in one of the <a href="../../Sequences/Sequence_Events_Moments_Broadcast.htm">Sequence Step Events</a>.</p>
-  <h3>Playing sounds on an emitter</h3>
-  <p>Sounds can be played <strong>on</strong> an emitter using <a href="audio_play_sound_on.htm">audio_play_sound_on</a>: </p>
-  <p class="code">sound_instance = audio_play_sound_on(emitter, snd_Explosion, false, 10);<br />
+  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"> </span> La <i>velocidad</i> de un emisor de audio se expresa en <i>píxeles por paso</i>.<span><span></span></span></p>
+  <h3>Emisores de audio creados por <span data-keyref="GameMaker Name">GameMaker</span></h3>
+  <p>Cuando se trabaja con <a href="../../Sequences/Sequences.htm">secuencias</a>, <span data-keyref="GameMaker Name">GameMaker</span> añade crea emisores de audio para cada pista de audio<span><span class="inline2">(seqtracktype_audio</span>) en el <span class="notranslate">sequence</span></span>. El ID de estos emisores se puede encontrar en la propiedad <span class="inline2">activeTracks[i].emitterIndex</span> <a href="../../Sequences/Sequence_Structs/The_Sequence_Instance_Struct.htm">de la instancia de la</a> secuencia.</p>
+  <p><span data-keyref="GameMaker Name">GameMaker</span> actualiza automáticamente la posición de dicho emisor. No actualiza la velocidad de un emisor de pista de audio, pero esto es algo que puede hacer usted mismo llamando a <a href="audio_emitter_velocity.htm"><span class="notranslate">audio_emitter_velocity</span></a> en uno de los <a href="../../Sequences/Sequence_Events_Moments_Broadcast.htm">Eventos de Paso de Secuencia</a>.</p>
+  <h3>Reproducción de sonidos en un emisor</h3>
+  <p>Los sonidos se pueden reproducir <strong>en</strong> un emisor utilizando <a href="audio_play_sound_on.htm"><span class="notranslate">audio_play_sound_on</span></a>: </p>
+  <p class="code">sound_instance = audio_play_sound_on(snd_Explosion, x, y, 0, 100, 300, 1, true, 1);<br />
     <span></span>
   </p>
-  <h3>Keeping track of playing sound instances</h3>
-  <p>Every time you call one of <a href="../audio_play_sound.htm">audio_play_sound</a>, <a href="../audio_play_sound_at.htm">audio_play_sound_at</a> or <a href="audio_play_sound_on.htm">audio_play_sound_on</a> you create a new sound <strong>instance</strong>.</p>
-  <p>The sound instance being played may not be audible for various reasons, such as its position being too far away from the listener. But it always exists.</p>
-  <p>If you want to change the properties of the sound instance you should assign the return value to a variable, like this: </p>
+  <h3>Seguimiento de las instancias de sonido en reproducción</h3>
+  <p>Cada vez que se llama a uno de <a href="../audio_play_sound.htm"><span class="notranslate">audio_play_sound</span></a>, <a href="../audio_play_sound_at.htm"><span class="notranslate">audio_play_sound_at</span></a> o <a href="audio_play_sound_on.htm"><span class="notranslate">audio_play_sound_on</span></a> se crea una nueva <strong>instancia de</strong> sonido.</p>
+  <p>La instancia sonora que se está reproduciendo puede no ser audible por diversas razones, como que su posición esté demasiado lejos del oyente. Pero siempre existe.</p>
+  <p>Si quieres cambiar las propiedades de la instancia de sonido debes asignar el valor de retorno a una variable, así: </p>
   <p class="code">sound_instance = audio_play_sound_at(snd_Explosion, x, y, 0, 100, 300, 1, true, 1);</p>
-  <p>At one point you may have quite a few sound instances playing. In that case you could store them in an array as follows: </p>
+  <p>En un momento dado puedes tener bastantes instancias de sonido reproduciéndose. En ese caso, podrías almacenarlas en un array como el siguiente: </p>
   <p class="code">var _x = random(room_width);<br />
     var _y = random(room_height);<br />
     var _new_sound_instance = audio_play_sound_at(snd_Bird, _x, _y, 0, 200, 400, true, 10);<br />
     array_push(bird_sounds, _new_sound_instance);</p>
-  <p>Every time the above piece of code is executed the newly created sound instance&#39;s ID is added to the <span class="inline2">bird_sounds</span> array.</p>
-  <p>This way you can keep track of all sound instances (of <span class="inline">snd_Bird</span> in the above example) that are playing.</p>
-  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_important.hts"> </span> That a sound is being &quot;played&quot; does not necessarily mean that it will be heard by the listener. Sounds that have stopped playing, that are too far away from the listener or that have a gain set that is too low (or that are played on an emitter that has a gain set that is too low) will not be audible.</p>
-  <h3>Additional listeners</h3>
-  <p>If you want to use additional listeners you should first check if the system supports multiple listeners using <a href="../Audio_Listeners/audio_get_listener_count.htm">audio_get_listener_count</a>.</p>
-  <p>If there is more than one listener, <a href="../Audio_Listeners/audio_get_listener_info.htm">audio_get_listener_info</a> can be used to get the name, listener mask and index of every listener.</p>
-  <p>If you know the listener index you can change its settings (position, velocity and orientation) using the functions starting with <span class="inline">audio_listener_set_</span> instead of <span class="inline">audio_listener_</span>.</p>
-  <h2>Functions</h2>
-  <p>The following functions exist to deal with audio emitters:</p>
+  <p>Cada vez que se ejecuta el código anterior, el ID de la instancia de sonido recién creada se añade a la matriz <span class="inline2">bird_sounds</span>.</p>
+  <p>De este modo, puede hacer un seguimiento de todas las instancias de sonido (de <span class="inline">snd_Bird</span> en el ejemplo anterior) que se están reproduciendo.</p>
+  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_important.hts"> </span> Que un sonido se esté &quot;reproduciendo&quot; no significa necesariamente que vaya a ser escuchado por el oyente. Los sonidos que han dejado de sonar, que están demasiado lejos del oyente o que tienen una ganancia demasiado baja (o que se reproducen en un emisor que tiene una ganancia demasiado baja) no serán audibles.</p>
+  <h3>Oyentes adicionales</h3>
+  <p>Si desea utilizar escuchas adicionales, primero debe comprobar si el sistema admite múltiples escuchas utilizando <a href="../Audio_Listeners/audio_get_listener_count.htm"><span class="notranslate">audio_get_listener_count</span></a>.</p>
+  <p>Si hay más de un oyente, <a href="../Audio_Listeners/audio_get_listener_info.htm"><span class="notranslate">audio_get_listener_info</span></a> se puede utilizar para obtener el nombre, la máscara del oyente y el índice de cada oyente.</p>
+  <p>Si conoce el índice del oyente, puede cambiar su configuración (posición, velocidad y orientación) utilizando las funciones que empiezan por <span class="inline">audio_listener_set_</span> en lugar de <span class="inline">audio_listener_</span>.</p>
+  <h2>Funciones</h2>
+  <p>Existen las siguientes funciones para tratar con los emisores de audio:</p>
   <ul class="colour">
-    <li><a href="audio_emitter_create.htm">audio_emitter_create</a></li>
-    <li><a href="audio_emitter_exists.htm">audio_emitter_exists</a></li>
-    <li><a href="audio_emitter_position.htm">audio_emitter_position</a></li>
-    <li><a href="audio_emitter_velocity.htm">audio_emitter_velocity</a></li>
-    <li><a href="audio_emitter_falloff.htm">audio_emitter_falloff</a></li>
-    <li><a href="audio_emitter_gain.htm">audio_emitter_gain</a></li>
-    <li><a href="audio_emitter_pitch.htm">audio_emitter_pitch</a></li>
-    <li><a href="audio_emitter_set_listener_mask.htm">audio_emitter_set_listener_mask</a></li>
-    <li><a href="audio_emitter_free.htm">audio_emitter_free</a></li>
-    <li><a href="audio_play_sound_on.htm">audio_play_sound_on</a></li>
-    <li><a href="audio_emitter_get_gain.htm">audio_emitter_get_gain</a></li>
-    <li><a href="audio_emitter_get_pitch.htm">audio_emitter_get_pitch</a></li>
-    <li><a href="audio_emitter_get_x.htm">audio_emitter_get_x</a></li>
-    <li><a href="audio_emitter_get_y.htm">audio_emitter_get_y</a></li>
-    <li><a href="audio_emitter_get_z.htm">audio_emitter_get_z</a></li>
-    <li><a href="audio_emitter_get_vx.htm">audio_emitter_get_vx</a></li>
-    <li><a href="audio_emitter_get_vy.htm">audio_emitter_get_vy</a></li>
-    <li><a href="audio_emitter_get_vz.htm">audio_emitter_get_vz</a></li>
-    <li><a href="audio_emitter_get_listener_mask.htm">audio_emitter_get_listener_mask</a></li>
-    <li><a data-xref="{title}" href="audio_emitter_bus.htm">audio_emitter_bus</a></li>
-    <li><a data-xref="{title}" href="audio_emitter_get_bus.htm">audio_emitter_get_bus</a></li>
+    <li><a href="audio_emitter_create.htm"><span class="notranslate">audio_emitter_create</span></a></li>
+    <li><a href="audio_emitter_exists.htm"><span class="notranslate">audio_emitter_exists</span></a></li>
+    <li><a href="audio_emitter_position.htm"><span class="notranslate">audio_emitter_position</span></a></li>
+    <li><a href="audio_emitter_velocity.htm"><span class="notranslate">audio_emitter_velocity</span></a></li>
+    <li><a href="audio_emitter_falloff.htm"><span class="notranslate">audio_emitter_falloff</span></a></li>
+    <li><a href="audio_emitter_gain.htm"><span class="notranslate">audio_emitter_gain</span></a></li>
+    <li><a href="audio_emitter_pitch.htm"><span class="notranslate">audio_emitter_pitch</span></a></li>
+    <li><a href="audio_emitter_set_listener_mask.htm"><span class="notranslate">audio_emitter_set_listener_mask</span></a></li>
+    <li><a href="audio_emitter_free.htm"><span class="notranslate">audio_emitter_free</span></a></li>
+    <li><a href="audio_play_sound_on.htm"><span class="notranslate">audio_play_sound_on</span></a></li>
+    <li><a href="audio_emitter_get_gain.htm"><span class="notranslate">audio_emitter_get_gain</span></a></li>
+    <li><a href="audio_emitter_get_pitch.htm"><span class="notranslate">audio_emitter_get_pitch</span></a></li>
+    <li><a href="audio_emitter_get_x.htm"><span class="notranslate">audio_emitter_get_x</span></a></li>
+    <li><a href="audio_emitter_get_y.htm"><span class="notranslate">audio_emitter_get_y</span></a></li>
+    <li><a href="audio_emitter_get_z.htm"><span class="notranslate">audio_emitter_get_z</span></a></li>
+    <li><a href="audio_emitter_get_vx.htm"><span class="notranslate">audio_emitter_get_vx</span></a></li>
+    <li><a href="audio_emitter_get_vy.htm"><span class="notranslate">audio_emitter_get_vy</span></a></li>
+    <li><a href="audio_emitter_get_vz.htm"><span class="notranslate">audio_emitter_get_vz</span></a></li>
+    <li><a href="audio_emitter_get_listener_mask.htm"><span class="notranslate">audio_emitter_get_listener_mask</span></a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="../Audio.htm">Audio</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="../Audio_Listeners/Audio_Listeners.htm">Audio Listeners</a></div>
+        <div style="float:left">Atrás: <a href="../Audio.htm">Audio</a></div>
+        <div style="float:right">Siguiente: <a href="../Audio_Listeners/Audio_Listeners.htm">Escuchas de audio</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Audio Emitters

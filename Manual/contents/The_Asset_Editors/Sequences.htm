@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Sequence Editor</title>
+  <title>Secuencias</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing how the sequences editor works" />
   <meta name="rh-index-keywords" content="Sequences Editor" />
@@ -14,217 +14,243 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">The Sequence Editor</span></h1>
+  <h1>El editor de <span class="notranslate">Sequence</span> </h1>
   <p><img alt="The Sequence Editor" class="center" height="972" src="../assets/Images/Asset_Editors/Editor_Sequences.png" width="1689" /></p>
-  <p>A <strong>Sequence </strong>is essentially a collection of assets that perform a dynamic animation over time. They can contain sprites, instances, sounds and other things, and each of these can be set to move or change colour, or start/stop animating over time within the sequence itself. The assets you add are assigned to specific <strong>tracks </strong>within the sequence and these tracks can then have different attributes applied to them - called <strong>keyframes</strong> - which can be static or change over time. All editing of a sequence takes place in the <strong>Sequence Editor</strong> which is essentially comprised of three areas:</p>
+  <p>Una <strong>Secuencia </strong>es esencialmente una colección de <span class="notranslate">assets</span> que realiza una animación dinámica en el tiempo. Pueden contener <span class="notranslate">sprites</span>, instancias, sonidos y otras cosas, y cada una de ellas puede configurarse para que se mueva o cambie de color, o para que empiece/pare la animación a lo largo del tiempo dentro de la propia <span class="notranslate">sequence</span>. Los <span class="notranslate">assets</span> que se añaden se asignan a <strong>pistas </strong>específicas dentro del <span class="notranslate">sequence</span> y a estas pistas se les pueden aplicar diferentes atributos -llamados <strong>fotogramas clave-</strong> que pueden ser estáticos o cambiar con el tiempo. Toda la edición de un <span class="notranslate">sequence</span> se lleva a cabo en el <strong>Editor de Secuencias</strong>, que se compone esencialmente de tres áreas:</p>
   <ul class="colour">
-    <li><strong>Canvas </strong>- where you place the assets that make up the sequence</li>
-    <li><strong>Track Panel </strong>- where you add/remove <strong>asset tracks</strong> and <strong>parameter tracks</strong> to your sequence</li>
-    <li><strong>Dope Sheet</strong> - where you add/remove/edit the <strong>keyframes</strong> of the tracks and control how they behave over time.</li>
+    <li><strong>Lienzo - </strong> donde se colocan los <span class="notranslate">assets</span> que componen la secuencia</li>
+    <li><strong>Panel de pistas: </strong> donde se añaden/eliminan las pistas de <strong>activos</strong> y <strong>las pistas de parámetros</strong> de la secuencia.</li>
+    <li><strong>Hoja de</strong> <strong>Claves</strong> - donde se añaden/quitan/editan los <strong>fotogramas clave</strong> de las pistas y se controla cómo se comportan en el tiempo.</li>
   </ul>
-  <p>Note too that you can have sequences within sequences to create complex animations and effects, and sequences can also be accessed and changed through code to give you as much control as possible over how they will be displayed and used in your game. For more information on the coded aspect of sequences, please see the section on the <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequences.htm">Sequences Functions</a>.</p>
-  <p>Before continuing to explain the details of the editor, we&#39;ll take a moment to explain how a sequence is created as well as some keywords that are used in the descriptions so you&#39;ll have a more thorough understanding of how the Sequences Editor works. The general workflow for creating a sequence is as follows:</p>
+  <p>Ten en cuenta también que puedes tener <span class="notranslate">sequences</span> dentro de <span class="notranslate">sequences</span> para crear animaciones y efectos complejos, y <span class="notranslate">sequences</span> también puede ser accedido y cambiado a través de código para darte el mayor control posible sobre cómo se mostrarán y usarán en tu juego. Para más información sobre el aspecto codificado de <span class="notranslate">sequences</span>, consulta la sección sobre las <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequences.htm">funciones de las secuencias</a>.</p>
+  <p>Antes de continuar explicando los detalles del editor, nos tomaremos un momento para explicar cómo se crea un <span class="notranslate">sequence</span>, así como algunas palabras clave que se utilizan en las descripciones para que tenga una comprensión más completa de cómo funciona el editor <span class="notranslate">Sequences</span>. El flujo de trabajo general para crear un <span class="notranslate">sequence</span> es el siguiente:</p>
   <ul class="colour">
-    <li>First you&#39;d create your sequence from <a data-xref="{title}" href="../Introduction/The_Asset_Browser.htm">The Asset Browser</a>, which will open it the Sequences Editor.</li>
-    <li>Next you&#39;d drag an asset (sprite, object, sound or sequence) into the editor canvas.</li>
-    <li>This will create an <a class="glossterm" data-glossterm="asset track" href="#">asset track</a> in the <strong>Track Panel</strong>, and add an <a class="glossterm" data-glossterm="asset key" href="#">asset key</a> to the <a class="glossterm" data-glossterm="Dope Sheet" href="#">Dope Sheet</a>. The asset track is simply the name of the track that contains the asset, while the asset key is a bar that is drawn to symbolise the number of frames that the asset will be animated over in the sequence.</li>
-    <li>At this point, you&#39;ll usually want to position the asset in the canvas at its initial position for the start of the sequence, and add in any initial transforms, like scale or rotation.</li>
-    <li>When you are happy with the initial settings, you will want to record the <strong>parameter keys</strong> (or <a class="glossterm" data-glossterm="keyframe" href="#">keyframe</a><span class="glossextra">s</span>) - which is simply the name given to the values for scale, rotation and position that a specific asset key has at any point in the dope sheet timeline.</li>
-    <li>Next you&#39;d change the position of the <a class="glossterm" data-glossterm="playhead" href="#">playhead</a> (the current play position in the dope sheet timeline) and then move or change the asset transforms and record another parameter key.</li>
-    <li>All parameter keys are stored in additional <a class="glossterm" data-glossterm="parameter tracks" href="#">parameter tracks</a> which are a subset of tracks under the main asset track in the Track Panel, and you can edit the parameter key data for each parameter in the track editor.</li>
-    <li>Now you would repeat the above process for the length of the sequence, moving, rotating and scaling the asset as required, and then adding more assets as you need them.</li>
+    <li>En primer lugar, debe crear su <span class="notranslate">sequence</span> desde el <a href="../Introduction/The_Asset_Browser.htm">navegador de activos</a>, que abrirá el editor <span class="notranslate">Sequences</span>.</li>
+    <li>A continuación, arrastre un <span class="notranslate">asset</span> (<span class="notranslate">sprite</span>, <span class="notranslate">object</span>, sound o <span class="notranslate">sequence</span>) al lienzo del editor.</li>
+    <li>Esto creará una pista de <a class="glossterm" data-glossterm="seguimiento de activos" href="#">activos</a> en el <strong>Panel de Pistas</strong>, y añadirá una clave de <a class="glossterm" data-glossterm="clave de activos" href="#">activos</a> a la <a class="glossterm" data-glossterm="Ficha técnica" href="#">Hoja de Claves</a>. La pista <span class="notranslate">asset</span> es simplemente el nombre de la pista que contiene el <span class="notranslate">asset</span>, mientras que la clave <span class="notranslate">asset</span> es una barra que se dibuja para simbolizar el número de fotogramas sobre los que se animará el <span class="notranslate">asset</span> en el <span class="notranslate">sequence</span>.</li>
+    <li>En este punto, normalmente querrá colocar el <span class="notranslate">asset</span> en el lienzo en su posición inicial para el comienzo del <span class="notranslate">sequence</span>, y añadir cualquier transformación inicial, como la escala o la rotación.</li>
+    <li>Cuando esté satisfecho con los ajustes iniciales, querrá registrar las <strong>claves de los parámetros</strong> (o <a class="glossterm" data-glossterm="fotograma clave" href="#">fotogramas clave</a>), que es simplemente el nombre que reciben los valores de escala, rotación y posición que tiene una clave específica de <span class="notranslate">asset</span> en un punto cualquiera de <span class="notranslate">dope sheet</span> <span class="notranslate">timeline</span>.</li>
+    <li>A continuación, cambiaría la posición del <a class="glossterm" data-glossterm="cabezal de reproducción" href="#">cabezal de reproducción</a> (la posición de reproducción actual en el <span class="notranslate">dope sheet</span> <span class="notranslate">timeline</span>) y luego movería o cambiaría las transformaciones de <span class="notranslate">asset</span> y grabaría otra clave de parámetros.</li>
+    <li>Todas las claves de parámetros se almacenan en <a class="glossterm" data-glossterm="pistas de parámetros" href="#">pistas de parámetros</a> adicionales que son un subconjunto de pistas bajo la pista principal <span class="notranslate">asset</span> en el panel de pistas, y puedes editar los datos de las claves de parámetros para cada parámetro en el editor de pistas.</li>
+    <li>Ahora repetiría el proceso anterior para la longitud de la <span class="notranslate">sequence</span>, moviendo, rotando y escalando la <span class="notranslate">asset</span> según sea necesario, y luego añadiendo más <span class="notranslate">assets</span> a medida que los necesite.</li>
   </ul>
-  <p>Below you can find an overview of each of the features of the sequence editor, and at the bottom of this page are links to pages that explain the three main features mentioned above in more depth:</p>
-  <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Rulers / Guides</a></p>
+  <p>A continuación puede encontrar una descripción general de cada una de las características del editor <span class="notranslate">sequence</span>, y al final de esta página hay enlaces a páginas que explican las tres características principales mencionadas anteriormente en mayor profundidad:</p>
+  <p> </p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Reglas / Guías</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">The rulers along the edge of the canvas show you the position of the things that are placed within it, and are marked from (0, 0) which is the center of the canvas and the default origin for the sequence. You can click and drag on the rulers to pull a horizontal or vertical <strong>guide </strong>into the sequence, and this guide can then be used to accurately position the different assets that are being used, as moving an asset close to one will &quot;snap&quot; it to the guide. While positioning assets within the sequence, <strong>smart guides</strong> will also be temporarily shown indicating the distance between assets, as well as the distance from the sequence boundary or center point.</p>
-    <p class="dropspot"><img alt="Guides and Smart Guides in the Sequences Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Guides.png" />Note that the boundary of the sequence and the center point marker lines for the sequence are also considered guides and will behave the same way as guides added from the rulers, with the exception that they cannot be edited.</p>
-    <p class="dropspot">The distance that assets &quot;snap&quot; to guides, as well as other properties, can be set in the <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Sequences_Preferences.htm">Sequences Preferences</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Las reglas a lo largo del borde del lienzo le muestran la posición de las cosas que se colocan dentro de él, y están marcadas desde (0, 0) que es el centro del lienzo y el origen por defecto para el <span class="notranslate">sequence</span>. Puede hacer clic y arrastrar en las reglas para tirar de
+      una <strong>guía </strong>horizontal o vertical en el <span class="notranslate">sequence</span>, y esta guía se puede utilizar para posicionar con precisión los diferentes <span class="notranslate">assets</span> que se están utilizando, ya que al mover un <span class="notranslate">asset</span> cerca de uno se &quot;ajustará&quot; a la guía. Durante el posicionamiento
+      <span class="notranslate">assets</span> dentro de <span class="notranslate">sequence</span>, también se mostrarán temporalmente <strong>guías inteligentes</strong> que indican la distancia entre <span class="notranslate">assets</span>, así como la distancia desde el límite o punto central de <span class="notranslate">sequence</span>.</p>
+    <p class="dropspot"><img>Tenga en cuenta que el límite de la <span class="notranslate">sequence</span> y las líneas de marcador de punto central para la <span class="notranslate">sequence</span> también se consideran
+      guías y se comportarán de la misma manera que las guías añadidas desde las reglas, con la excepción de que no pueden ser editadas.</p>
+    <p class="dropspot">La distancia a la que <span class="notranslate">assets</span> se &quot;ajusta&quot; a las guías, así como otras propiedades, pueden establecerse en las <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Sequences_Preferences.htm">Preferencias de las Secuencias</a>.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Canvas View</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Vista del lienzo</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">The canvas view is where you can see a preview of the sequence canvas, and is where you can edit and position the different assets that make up your sequence. You can add an asset to the sequence by simply dragging it from the asset browser and then dropping it into the canvas, and this will create a new track in the Track Panel, and also add an asset key for the asset at the current timeline playhead position. The following assets can be dropped onto the canvas in this way:</p>
+    <p class="dropspot">La vista del lienzo es donde puedes ver una vista previa del lienzo <span class="notranslate">sequence</span>, y es donde puedes editar y posicionar los diferentes <span class="notranslate">assets</span> que componen tu <span class="notranslate">sequence</span>. Puede añadir un <span class="notranslate">asset</span> al <span class="notranslate">sequence</span> simplemente arrastrándolo desde el navegador <span class="notranslate">asset</span> y soltándolo en el lienzo, y esto creará una nueva pista en el Panel de Pistas, y también añadirá una clave <span class="notranslate">asset</span> para el <span class="notranslate">asset</span> en la posición actual del cabezal de reproducción <span class="notranslate">timeline</span>. Los siguientes <span class="notranslate">assets</span> se pueden soltar en el lienzo de esta manera:</p>
     <ul class="dropspotlist">
-      <li><a href="Sprites.htm">Sprites</a></li>
-      <li><a href="Objects.htm">Objects</a></li>
-      <li><a href="Sounds.htm">Sounds</a></li>
-      <li><a href="Sequences.htm">Sequences</a></li>
-      <li><a href="Particle_Systems.htm">Particle Systems</a></li>
+      <li><a data-xref="{title}" href="Sprites.htm">Sprites</a></li>
+      <li><a data-xref="{title}" href="Objects.htm">Objetos</a></li>
+      <li><a data-xref="{title}" href="Sounds.htm">Suena</a></li>
+      <li><a data-xref="{title}" href="Sequences.htm">Secuencias</a></li>
     </ul>
-    <p> </p>
-    <p class="dropspot">You can also use the <img class="icon" height="24" src="../assets/Images/Icons/Icon_TextButton.png" width="24" /> <strong>Text</strong> tool in the Toolbox to create a text track. Read <a data-xref="{title}" href="Sequence_Properties/Text_in_Sequences.htm">Text in Sequences</a> for more information.</p>
-    <p class="dropspot">Each asset added to the canvas can be manipulated in multiple ways - rotated, transformed, or translated - based on how you interact with it, as each asset will have a <strong>bounding box</strong> and <strong>transform <a class="glossterm" data-glossterm="gizmos" href="#">gizmos</a></strong> as well as <strong>bounding box controls</strong>. All this is explained in more detail on the page about the <a href="Sequence_Properties/The_Sequence_Canvas.htm">Sequence Editor Canvas</a>.</p>
-    <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> Sound assets, when added to a sequence, are essentially <a href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Emitters/Audio_Emitters.htm">sound emitters</a><strong> </strong>that play only the given sound asset.</p>
-    <p class="dropspot">To navigate around the canvas view, you can use the same basic controls as for general Workspaces, ie: Use the middle mouse button <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" /> and drag to pan the canvas (or alternatively use the <img alt="Space Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Space.png" width="55" /> + <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> combination), and you can scroll horizontally with the mouse wheel <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" /> or zoom in and out using the <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> key and the mouse wheel <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" />. You can also cut, copy and paste assets using the <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + &quot;<span class="inline">X</span>&quot;, <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + &quot;<span class="inline">C</span>&quot; and <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + &quot;<span class="inline">V</span>&quot; key combinations.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">También puede utilizar la herramienta <img> <strong>Text</strong> de la caja de herramientas para crear una pista de texto. Lea Texto <a data-xref="{title}" href="Sequence_Properties/Text_in_Sequences.htm">en secuencias</a> para obtener más información.</p>
+    <p class="dropspot">Cada <span class="notranslate">asset</span> añadido al lienzo puede ser manipulado de múltiples maneras - rotado, transformado, o traducido - basado en cómo usted interactúa con él, ya que cada <span class="notranslate">asset</span> tendrá un <strong>cuadro delimitador</strong> y <strong> <a class="glossterm" data-glossterm="artilugios" href="#">gizmos</a></strong> de <strong>transformación</strong> así como <strong>controles de cuadro delimitador</strong>. Todo esto se explica con más detalle en la página sobre el <a href="Sequence_Properties/The_Sequence_Canvas.htm">Lienzo del Editor de Secuencias</a>.</p>
+    <p class="note"><span class="note">NOTA</span> El sonido <span class="notranslate">assets</span>, cuando se añade a un <span class="notranslate">sequence</span>, es esencialmente <a href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Emitters/Audio_Emitters.htm">un emisor de sonido</a><strong> </strong>que reproduce sólo el sonido dado <span class="notranslate">asset</span>.</p>
+    <p class="dropspot">Para navegar por la vista del lienzo, puede utilizar los mismos controles básicos que para el general <span class="notranslate">Workspaces</span>, es decir: utilice el botón central del ratón <img> y arrástrelo para desplazarse por el lienzo (o alternativamente utilice la combinación <img> + <img> ), y puede desplazarse horizontalmente con la rueda del ratón <img> o acercarse y alejarse utilizando la tecla <img> / <img> y la rueda del ratón <img>. También puede cortar, copiar y pegar <span class="notranslate">assets</span> utilizando las combinaciones de teclas <img> / <img> + &quot;<span class="inline">X</span>&quot;, <img> / <img> + &quot;<span class="inline">C</span>&quot; y <img> / <img> + &quot;<span class="inline">V</span>&quot;.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Keyframe Controls</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Controles de fotogramas</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">The keyframe control buttons are one of the ways that you can add, remove or edit specific keys in the dope sheet. The buttons are as follows:</p>
+    <p class="dropspot">Los botones de control de <span class="notranslate">keyframe</span> son una de las formas de añadir, eliminar o editar teclas específicas en el <span class="notranslate">dope sheet</span>. Los botones son los siguientes:</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><img alt="Split Keys Icon" src="../assets/Images/Icons/Icon_Seq_Split.png" /> - This is the &quot;Split selected keys&quot; button. When you have selected one or more parameter keys in the dope sheet, you can then click this button and they will be split into two separate keys at the timeline playhead position (note that the keys must have been stretched to occupy multiple frames first):<br />
-        <img alt="Split Asset and Parameter Keys" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Split.gif" style="margin-top: 10px; margin-bottom: 25px;" />
+      <li class="dropspot"><img> - Este es el botón &quot;Dividir teclas seleccionadas&quot;. Cuando haya seleccionado una o más teclas de parámetro en <span class="notranslate">dope sheet</span>, puede hacer clic en este botón y se dividirán en dos teclas separadas en la posición del cabezal de reproducción de .
+        se dividirán en dos teclas separadas en la posición del cabezal de reproducción de <span class="notranslate">timeline</span> (tenga en cuenta que las teclas deben haber sido estiradas para ocupar varios fotogramas primero):<br>
+        <img>
       </li>
-      <li class="dropspot"><img alt="Delete Keys Icon" src="../assets/Images/Icons/Icon_Seq_Delete.png" /> - This is the &quot;Delete selected keys&quot; button. When you have selected one or more parameter keys in the dope sheet, you can then click this button and they will be deleted:<br />
-        <img alt="Delete Parameter Keys" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Delete.gif" style="margin-top: 10px; margin-bottom: 25px;" />
+      <li class="dropspot"><img> - Este es el botón &quot;Borrar las teclas seleccionadas&quot;. Cuando haya seleccionado una o más teclas de parámetro en <span class="notranslate">dope sheet</span>, puede hacer clic en este botón y se
+        serán eliminadas:<br>
+        <img>
       </li>
-      <li class="dropspot"><img alt="Add Keys Icon" src="../assets/Images/Icons/Icon_Seq_Add.png" /> - This is the &quot;Record a new key&quot; button. When you have selected an asset key in the dope sheet and press this button, new parameter keys will be added to the asset track as parameter tracks, and the parameter keys will be added as points in the dope sheet timeline at the playhead position:<br />
-        <img alt="Add Parameter Keys At Playhead Position" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Record.gif" style="margin-top: 10px; margin-bottom: 25px;" />
+      <li class="dropspot"><img> - Este es el botón &quot;Grabar una nueva clave&quot;. Cuando haya seleccionado una tecla de <span class="notranslate">asset</span> en el <span class="notranslate">dope sheet</span> y pulse este botón, se añadirán nuevas teclas de parámetros a la pista de activos
+        como pistas de parámetros, y las teclas de parámetros se añadirán como puntos en el <span class="notranslate">dope sheet</span> <span class="notranslate">timeline</span> en la posición del cabezal de reproducción:<br>
+        <img>
       </li>
-      <li class="dropspot"><img alt="Record Keys Icon" src="../assets/Images/Icons/Icon_Seq_Record.png" /> - This is the &quot;Automatically Record Changes&quot; button. When this is enabled, any changes made to the asset within the canvas will be automatically recorded and the appropriate parameter tracks and parameter keys added at the playhead position in the dope sheet. For example, if you move the playhead from frame 0 to frame 10 and then in the canvas move the asset 100 pixels to the right, a parameter track will be added for position, and the parameter keys will be added at frame 0 (the initial position) and at frame 10 (the playhead position) and when you press &quot;Play&quot; on the sequence, the asset will move 100px to the right over ten frames.<br />
-        <img alt="Automatically Record Parameter Keys" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Auto.gif" style="margin-top: 10px; margin-bottom: 25px;" />
+      <li class="dropspot"><img> - Este es el botón &quot;Registrar automáticamente los cambios&quot;. Cuando está activado, cualquier cambio realizado en <span class="notranslate">asset</span> dentro del lienzo se grabará automáticamente y
+        las pistas de parámetros apropiadas y las teclas de parámetros añadidas en la posición del cabezal de reproducción en el <span class="notranslate">dope sheet</span>. Por ejemplo, si mueve el cabezal de reproducción del fotograma 0 al 10 y luego en el lienzo mueve el <span class="notranslate">asset</span> 100 píxeles a la derecha, una pista de parámetros
+        para la posición, y las teclas de parámetro se añadirán en el fotograma 0 (la posición inicial) y en el fotograma 10 (la posición del cabezal de reproducción) y cuando pulse &quot;Play&quot; en el <span class="notranslate">sequence</span>, el <span class="notranslate">asset</span> se moverá 100px a la derecha en diez fotogramas.<br>
+        <img>
       </li>
     </ul>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Sequence Events</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Secuencia de eventos</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">In a similar way to regular objects, sequences can have events that can run some code assigned to them. The code is assigned in the form of a <a href="../GameMaker_Language/GML_Overview/Script_Functions.htm">scripted function</a> which can take no arguments and will be called when the event is triggered.</p>
-    <p class="dropspot">Events are added by clicking the <strong>Add Event</strong> button <img alt="Add Event Icon" src="../assets/Images/Icons/Icon_AddEvent.png" /> which will open the following window:</p>
-    <p class="dropspot"><img alt="Sequence Editor Add Event Window" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Events.png" /></p>
-    <p class="dropspot">The events listed here are as follows:</p>
+    <p class="dropspot">De una manera similar a la de <span class="notranslate">objects</span>, <span class="notranslate">sequences</span> puede tener eventos que pueden ejecutar algún código asignado a ellos. El código se asigna en forma de una <a href="../GameMaker_Language/GML_Overview/Script_Functions.htm">función de script</a> que no puede tomar
+      argumentos y será llamada cuando el evento se active.</p>
+    <p class="dropspot">Los eventos se añaden haciendo clic en el botón <strong>Añadir evento</strong> <img> que abrirá la siguiente ventana:</p>
+    <p class="dropspot"><img alt="Guides and Smart Guides in the Sequences Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Guides.png" /></p>
+    <p class="dropspot">Los eventos que se enumeran aquí son los siguientes:</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Create </strong>- This event happens when an instance of the sequence is first created, and is the very first thing that happens within a sequence placed in the room through the room editor when a room is entered.</li>
-      <li class="dropspot"><strong>Destroy </strong>- This event is executed when an instance of the sequence is destroyed, and will be run before the Clean Up event (see below).</li>
-      <li class="dropspot"><strong>Clean Up</strong> - This event will be called after any event that removes an instance of the sequence from the room. So, it will be triggered if the sequence is destroyed, if the room ends, or if the game ends, and is designed to perform any task that you need performed once when the sequence instance is removed from the game for any reason. If you have destroyed the sequence instance using, for example, layer_sequence_destroy(), then this event will be called after the Destroy Event (see above).</li>
-      <li class="dropspot"><strong>Begin Step</strong> / <strong>Step </strong>/ <strong>End Step</strong> - The Step Event is an event that is checked every single step (frame) of the game while the sequence instance exists, and is split into three parts: begin, step and end. For most things the standard step event will be fine to use, but sometimes you want a bit more control over what code runs and at what time, so for that you are provided with the Begin and End step events, and these events will always be triggered in the same order every step (frame) of the game. <strong>Important!</strong> If the sequence is paused then these events will <em>not </em>be triggered, and when play resumes they will be triggered the <em>next frame after the sequence starts playing again</em>. Also note that the order of events is not influenced by the playhead direction, and even if the sequence is playing backwards, the events will still be run as Begin, Step and End.</li>
-      <li class="dropspot"><strong>Async Event</strong>: This is the equivalent of the object <a href="Object_Properties/Async_Events.htm">Asynchronous System Event</a>. <strong>Important!</strong> If the sequence is paused then this event will <em>not </em>be triggered.</li>
+      <li class="dropspot"><strong>Crear - </strong> Este evento ocurre cuando se crea por primera vez una instancia de <span class="notranslate">sequence</span>, y es lo primero que ocurre dentro de un <span class="notranslate">sequence</span> colocado en el <span class="notranslate">room</span> a través del editor <span class="notranslate">room</span> cuando se introduce un <span class="notranslate">room</span>.</li>
+      <li class="dropspot"><strong>Destroy - </strong> Este evento se ejecuta cuando se destruye una instancia de <span class="notranslate">sequence</span>, y se ejecutará antes del evento Clean Up (ver más abajo).</li>
+      <li class="dropspot"><strong>Limpieza</strong> - Este evento será llamado después de cualquier evento que elimine una instancia del <span class="notranslate">sequence</span> del <span class="notranslate">room</span>. Así, se disparará si el <span class="notranslate">sequence</span> es destruido, si el <span class="notranslate">room</span> termina, o si el juego termina, y está diseñado para realizar
+        cualquier tarea que necesites realizar una vez que la instancia de <span class="notranslate">sequence</span> sea eliminada del juego por cualquier motivo. Si has destruido la instancia <span class="notranslate">sequence</span> usando, por ejemplo, layer_sequence_destroy(), entonces este evento será llamado después del evento Destroy
+        (ver arriba).</li>
+      <li class="dropspot"><strong>Inicio de Paso</strong> / <strong>Paso / </strong> Fin <strong>de Paso</strong> - El Evento de Paso es un evento que se comprueba cada paso (fotograma) del juego mientras exista la instancia <span class="notranslate">sequence</span>, y se divide en tres partes: inicio, paso y
+        final. Para la mayoría de las cosas el evento de paso estándar estará bien para usar, pero a veces quieres un poco más de control sobre qué código se ejecuta y en qué momento, así que para eso se proporcionan los eventos de paso Begin y End, y estos eventos siempre serán
+        siempre en el mismo orden en cada paso (frame) del juego. <strong>¡Importante!</strong> Si el <span class="notranslate">sequence</span> está en pausa, estos eventos <em>no </em>se activarán, y cuando el juego se reanude, se activarán en el <em>siguiente fotograma después de que el <span class="notranslate">sequence</span> comience a jugar de nuevo</em>.
+        También tenga en cuenta que el orden de los eventos no está influenciado por la dirección del cabezal de juego, e incluso si el <span class="notranslate">sequence</span> está jugando al revés, los eventos se seguirán ejecutando como Begin, Step y End.</li>
+      <li class="dropspot"><strong>Evento as</strong>íncrono: Es el equivalente al evento <a href="Object_Properties/Async_Events.htm">asíncrono del sistema</a> <span class="notranslate">object</span>. <strong>¡Importante!</strong> Si el <span class="notranslate">sequence</span> está en pausa, este evento <em>no </em>se activará.</li>
     </ul>
-    <p class="dropspot">Each event can be assigned a single function which will be called when the event is triggered. You can assign the function using the input box for the event, and clicking the arrow button  will open the script editor for the function to be edited. You can also click the Create New button at the bottom to create a new script resource with &quot;boilerplate&quot; functions already defined and ready to be filled in. Note that you can change the function names to anything you require and do not have to use the predefined names, and you can also remove any function definitions that you don&#39;t need. It is important note that functions used for sequence events cannot take any arguments.</p>
-    <p class="dropspot">Sequence events can also be added and edited using code. For more information please see <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Events_Moments_Broadcast.htm">here</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">A cada evento se le puede asignar una única función que será llamada cuando el evento se active. Puede asignar la función utilizando el cuadro de entrada para el evento, y haciendo clic en el botón de la flecha se abrirá el editor <span class="notranslate">script</span> para editar la función.
+      También puede hacer clic en el botón Crear Nuevo en la parte inferior para crear un nuevo recurso <span class="notranslate">script</span> con funciones &quot;boilerplate&quot; ya definidas y listas para ser rellenadas. Tenga en cuenta que puede cambiar los nombres de las funciones por cualquier cosa que necesite y no
+      tiene que utilizar los nombres predefinidos, y también puede eliminar cualquier definición de función que no necesite. Es importante tener en cuenta que las funciones utilizadas para los eventos de <span class="notranslate">sequence</span> no pueden tomar ningún argumento.</p>
+    <p class="dropspot">Los eventos de secuencia también pueden ser añadidos y editados usando código. Para más información, consulte <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Events_Moments_Broadcast.htm">aquí</a>.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">Track Panel</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">Panel de la pista</a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot">The <strong>Track Panel</strong> is where each of the assets in your sequence is listed as a track, with each track having sub-tracks for any parameters that are being changed for the asset. You can click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> and drag on any asset track to change its position above or below the other tracks (any assigned parameter tracks will move along with it), and you can use <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> to select multiple tracks.</p>
-    <p class="dropspot">You can create a track by dragging an asset from the Asset Browser (either a sprite, an object, a sound, a sequence or a particle system) into the sequence canvas, or you can click the <img alt="Add Track Icon" class="icon" src="../assets/Images/Icons/Icon_AddAsset.png" /> icon at the bottom to add a new track and select the asset to use from the Asset Explorer window that opens. The new track will be created and the asset added at the current playhead position within the dope sheet timeline:</p>
-    <p class="dropspot"><img alt="Add A New Asset Track" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_AddTrack.gif" />The track editor has many other features that are discussed in full detail on the following page:</p>
+    <p class="dropspot">El <strong>Panel de Pistas</strong> es donde cada una de las <span class="notranslate">assets</span> en su <span class="notranslate">sequence</span> está listada como una pista, con cada pista teniendo sub-pistas para cualquier parámetro que esté siendo cambiado para el <span class="notranslate">asset</span>. Puede hacer clic en <img> y arrastrar en cualquier pista <span class="notranslate">asset</span> para cambiar su posición por encima o por debajo de las otras pistas (cualquier pista de parámetros asignada se moverá junto con ella), y puede usar <img> / <img> + <img> para seleccionar múltiples pistas.</p>
+    <p class="dropspot">Puede crear una pista arrastrando un <span class="notranslate">asset</span> desde el Navegador <span class="notranslate">Asset</span> (ya sea un <span class="notranslate">sprite</span>, un <span class="notranslate">object</span>, un sonido o un <span class="notranslate">sequence</span>) al lienzo <span class="notranslate">sequence</span>, o puede hacer clic en el icono <img> de la parte inferior para añadir una nueva pista y seleccionar el <span class="notranslate">asset</span> a utilizar desde la ventana del Explorador <span class="notranslate">Asset</span> que se abre. La nueva pista se creará y el <span class="notranslate">asset</span> se añadirá en la posición actual del cabezal de reproducción dentro de la línea de tiempo de <span class="notranslate">dope sheet</span>:</p>
+    <p class="dropspot"><img>El editor de pistas tiene muchas otras características que se discuten en detalle en la página siguiente:</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><a href="Sequence_Properties/The_Track_Panel.htm">The Track Panel</a></li>
+      <li class="dropspot"><a href="Sequence_Properties/The_Track_Panel.htm">El panel de la pista</a></li>
     </ul>
-    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">Canvas Toolbox</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">Caja de herramientas del lienzo</a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot">The Sequence Editor toolbox contains the different visualisation and setup options for the sequence being edited.</p>
-    <p class="dropspot"><img class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Toolbox.png" /></p>
+    <p class="dropspot">La caja de herramientas del editor <span class="notranslate">Sequence</span> contiene las diferentes opciones de visualización y configuración de la <span class="notranslate">sequence</span> que se está editando.</p>
+    <p class="dropspot"><img class="icon" height="24" src="../assets/Images/Icons/Icon_TextButton.png" width="24" /></p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Add a Text Track</strong> <img class="icon" height="24" src="../assets/Images/Icons/Icon_TextButton.png" width="24" />: This allows you to add a text track into the Sequence Canvas. After selecting this option, you can <img class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> click (and optionally, drag) anywhere in the Canvas to create a new Text Track.<br />
-        <br />
-        For detailed information on text tracks, read: <a data-xref="{title}" href="Sequence_Properties/Text_in_Sequences.htm">Text in Sequences</a>.
+      <li class="dropspot"><strong>Añadir una</strong> Pista de Texto <img>: Esto le permite añadir una pista de texto en el Lienzo <span class="notranslate">Sequence</span>. Después de seleccionar esta opción, puede <img> hacer clic (y opcionalmente, arrastrar) en cualquier lugar del Lienzo para crear una nueva Pista de Texto.<br>
+        <br>
+        Para obtener información detallada sobre las pistas de texto, lea <a data-xref="{title}" href="Sequence_Properties/Text_in_Sequences.htm">Texto en Secuencias</a>.
       </li>
-      <li class="dropspot"><strong>Toggle Canvas Grid</strong> <img alt="Toggle Canvas Grid Icon" class="icon" src="../assets/Images/Icons/Icon_CanvasGrid.png" />: This will toggle on/off the Sequence Editor canvas grid. This is a grid that <span data-keyref="GameMaker Name">GameMaker</span> draws over the preview canvas to divide it into sections, and by default is set to 32x32px in size. If you click the Grid Menu icon <img alt="Icon Grid Menu" class="icon" height="24" src="../assets/Images/Icons/Icon_CanvasOptions.png" width="10" /> you will see the grid options:<br />
-        <img class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_GridControls.png" />These options permit you to set the grid colour and alpha, as well as the cell values for the grid along the X and Y axis. You also have an option to enable or disable grid snapping here (disabled by default). You can use the keyboard shortcuts &quot;G&quot; and <img alt="Shift Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Shift.png" width="55" /> + &quot;G&quot; to toggle the grid visibility and grid snapping respectively.
+      <li class="dropspot"><strong>Toggle Canvas Grid</strong> <img>: Esto activará/desactivará la cuadrícula del lienzo del Editor <span class="notranslate">Sequence</span>. Esta es una rejilla que <span data-keyref="GameMaker Name">GameMaker</span> dibuja sobre el lienzo de vista previa para dividirlo en secciones, y por defecto se establece en 32x32px de tamaño. Si haces clic en el icono del menú de rejilla <img> verás las opciones de rejilla:<br>
+        <img>Estas opciones le permiten establecer el color y el alfa de la cuadrícula, así como los valores de las celdas para la cuadrícula a lo largo de los ejes X e Y. También tiene la opción de activar o desactivar el ajuste de la rejilla aquí (desactivado por defecto). Puedes utilizar los atajos de teclado &quot;G&quot; y <img> + &quot;G&quot; para activar la visibilidad de la cuadrícula y el ajuste de la misma, respectivamente.
       </li>
-      <li class="dropspot"><strong>Canvas Zoom Controls</strong> <img alt="Canvas Zoom Controls Icons" class="icon" height="24" src="../assets/Images/Icons/Icon_CanvasZoom.png" width="120" />: These buttons control the current canvas zoom level. You can zoom in or out and clicking the <img alt="Zoom Reset Icon" class="icon" src="../assets/Images/Icons/Icon_ZoomReset.png" /> button will reset the canvas to be 1:1 with the sequence being edited. You can also click the Window Fit button <img alt="Canvas Fit Icon" class="icon" src="../assets/Images/Icons/Icon_CanvasFit.png" /> to make the entire sequence canvas fit within the current editor workspace (this will zoom in/out as appropriate to make it fit). Note that you can also zoom in and out using the <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> and the Mouse Wheel <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" />, and pressing <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="Enter Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Enter.png" width="55" /> will set the canvas to be 1:1 with the display.</li>
-      <li class="dropspot"><strong>Toggle Gizmos</strong> <img alt="Toggle Gizmos Icon" class="icon" src="../assets/Images/Icons/Icon_ToggleGizmos.png" />: Clicking this will enable or disable the different <a class="glossterm" data-glossterm="gizmos" href="#">gizmos</a> visible in the canvas. When enabled you will see all the gizmos associated with the different assets and the canvas itself, and when disabled these will not be shown, giving a clearer view of how the sequence looks. Note that this is enabled by default, and there is a menu available from the options button <img alt="Icon Grid Menu" class="icon" height="24" src="../assets/Images/Icons/Icon_CanvasOptions.png" width="10" /> where you can filter what is visible without having to disable all the different widgets together. A complete list of these filter options and an explanation of what they do can be found <a href="Sequence_Properties/The_Sequence_Canvas.htm">here</a>.</li>
-      <li class="dropspot">T<strong>oggle Transform Gizmo Mode</strong> <img alt="Transform Gizmo Icon" class="icon" src="../assets/Images/Icons/Icon_TransformWidget.png" />: Each asset added to a sequence has a transform gizmo at its origin:<br />
-        <img alt="The transform widget for an asset" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_TransformWidget.gif" />This gizmo can control how the asset is scaled or rotated, as well as control its position and the position of the origin of the asset, however it only shows one of these options at a time. Clicking this button will switch between the different widget types or you can click on the options menu <img alt="Icon Grid Menu" class="icon" height="24" src="../assets/Images/Icons/Icon_CanvasOptions.png" width="10" /> to directly select the type of control action you want the transform gizmo to perform.
+      <li class="dropspot"><strong>Controles de zoom del l</strong> ienzo <img>: Estos botones controlan el nivel de zoom del lienzo actual. Puedes acercar o alejar el zoom y al hacer clic en el botón <img> se restablecerá el lienzo para que sea 1:1 con el <span class="notranslate">sequence</span> que se está editando. También puede hacer clic en el botón de ajuste de la ventana <img> para hacer que todo el lienzo <span class="notranslate">sequence</span> encaje dentro del editor actual <span class="notranslate">workspace</span> (esto ampliará o reducirá el zoom según corresponda para que encaje). Tenga en cuenta que también puede acercar y alejar el lienzo utilizando los botones <img> / <img> y la rueda del ratón <img>, y pulsando <img> / <img> + <img> el lienzo se ajustará a 1:1 con la pantalla.</li>
+      <li class="dropspot"><strong>Alternar Gizmos</strong> <img>: Al hacer clic en esta opción se activan o desactivan los diferentes <a class="glossterm" data-glossterm="artilugios" href="#">gizmos</a> visibles en el lienzo. Cuando está habilitado verás todos los gizmos asociados a los diferentes <span class="notranslate">assets</span> y al propio lienzo, y cuando está deshabilitado no se mostrarán, dando una visión más clara de cómo se ve el <span class="notranslate">sequence</span>. Tenga en cuenta que esto está habilitado por defecto, y que hay un menú disponible desde el botón de opciones <img> donde puede filtrar lo que es visible sin tener que desactivar todos los diferentes widgets juntos. Una lista completa de estas opciones de filtro y una explicación de lo que hacen se puede encontrar <a href="Sequence_Properties/The_Sequence_Canvas.htm">aquí</a>.</li>
+      <li class="dropspot"><strong>Alternar el modo de transformación Gizmo</strong> <img>: Cada <span class="notranslate">asset</span> añadido a un <span class="notranslate">sequence</span> tiene un gizmo de transformación en su origen:<br>
+        <img>Este gizmo puede controlar cómo se escala o rota el <span class="notranslate">asset</span>, así como controlar su posición y la posición del origen del <span class="notranslate">asset</span>, sin embargo sólo muestra una de estas opciones a la vez. Al hacer clic en este botón, <span class="notranslate">switch</span> se desplazará entre los diferentes tipos de widgets o puede hacer clic en el menú de opciones <img> para seleccionar directamente el tipo de acción de control que desea que realice el gizmo de transformación.
       </li>
-      <li class="dropspot"><strong>Toggle Canvas Frame</strong> <img alt="Toggle Canvas Frame Icon" class="icon" src="../assets/Images/Icons/Icon_ToggleCanvas.png" />: This button can be used to toggle the canvas frame on or off (it is on by default). The canvas frame is simply a guide that is used to judge where elements are placed in sequence canvas and any elements outside of the frame will not be rendered. This button also has the following options menu <img alt="Icon Grid Menu" class="icon" height="24" src="../assets/Images/Icons/Icon_CanvasOptions.png" width="10" />:<br />
-        <img alt="Sequence Editor Canvas Options" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_CanvasControls.png" />Here you can set the canvas frame toggle as well as the size of the canvas. You also have the possibility of setting a <strong>reference image</strong>, which is an image that you select from your computer (it is not imported into the project) to be used as a background reference for the sequence. This image is only visible in the Sequence Editor itself and will not be rendered when the sequence is used in a project. If you add a reference image you can also set the opacity that it&#39;s drawn at and offset its position within the canvas frame.
+      <li class="dropspot"><strong>Toggle Canvas Frame</strong> <img>: Este botón se puede utilizar para activar o desactivar el marco del lienzo (está activado por defecto). El marco del lienzo es simplemente una guía que se utiliza para juzgar dónde se colocan los elementos en el lienzo <span class="notranslate">sequence</span> y cualquier elemento fuera del marco no se renderizará. Este botón también tiene el siguiente menú de opciones <img>:<br>
+        <img>Aquí se puede establecer la alternancia del marco del lienzo, así como el tamaño del lienzo. También tiene la posibilidad de establecer una <strong>imagen de referencia</strong>, que es una imagen que selecciona desde su ordenador (no se importa al proyecto) para ser utilizada como referencia de fondo para el <span class="notranslate">sequence</span>. Esta imagen sólo es visible en el propio Editor de <span class="notranslate">Sequence</span> y no se renderizará cuando el <span class="notranslate">sequence</span> se utilice en un proyecto. Si añades una imagen de referencia también puedes establecer la opacidad con la que se dibuja y desplazar su posición dentro del marco del lienzo.
       </li>
     </ul>
-    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">Sequence Tools</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#">Herramientas de secuencia</a></p>
   <div class="droptext" data-targetname="drop-down8">
-    <p class="dropspot">This bar has the various sequence playback controls:</p>
-    <p class="dropspot"><img alt="Sequence Editor Playback Controls" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_PlaybackControls.png" /></p>
+    <p class="dropspot">Esta barra contiene los distintos controles de reproducción de <span class="notranslate">sequence</span>:</p>
+    <p class="dropspot"><img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" /></p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Playback Speed</strong>: this is the playback speed of the sequence in frames (steps) per second.</li>
-      <li class="dropspot"><strong>Playhead Position</strong>: this is the current playhead position, and can be shown in time (h:m:s) or frames (f).</li>
-      <li class="dropspot"><strong>Time Display Options</strong>: here you can set whether to display the sequence times in hours, minutes and seconds (h:m:s) or frames (f).</li>
-      <li class="dropspot"><strong>Broadcast Message</strong>: Clicking this permits you to add a <strong>broadcast message</strong> at the current playhead position (this is explained in more detail <a href="Sequence_Properties/Broadcast_Messages.htm">here</a>).</li>
-      <li class="dropspot"><strong>Add Moment</strong>: Clicking this permits you to add a sequence <strong>moment</strong> at the current playhead position (this is explained in more detail below).</li>
-      <li class="dropspot"><strong>Open Curve Editor</strong>: This button toggles the currently selected track between the <strong>curve view</strong> and the <strong>keyframe view</strong>. This option is only really applicable to <em>parameter</em> tracks and when enabled you will then have further options available to you depending on whether the parameter track uses keyframes or an <a href="Animation_Curves.htm">animation curve</a>. For more information, please see the section on the <a href="Sequence_Properties/Using_Animation_Curves.htm">Using Animation Curves</a>.</li>
-      <li class="dropspot"><strong>Playback Controls</strong>: with these buttons you can start and stop the sequence preview, as well as move the playhead to the start or the end. There is also a button to set whether the sequence should loop or not, and whether the sequence should &quot;ping-pong&quot; or repeat when looping. Note that this setting <em>will</em> affect how the sequence is played when the project is compiled and run.</li>
-      <li class="dropspot"><strong>Sequence Length</strong>: this displays the total possible length of the sequence in frames (f) or in time (m:h:s). Note that the sequence may not run to this length if you have set the clip region to be smaller.</li>
+      <li class="dropspot"><strong>Velocidad de reproducción</strong>: es la velocidad de reproducción de <span class="notranslate">sequence</span> en fotogramas (pasos) por segundo.</li>
+      <li class="dropspot"><strong>Posición del cabez</strong>al de<strong>reproducción</strong>: es la posición actual del cabezal de reproducción, y puede mostrarse en tiempo (h:m:s) o en fotogramas (f).</li>
+      <li class="dropspot"><strong>Opciones de visualización de la hora</strong>: aquí puede establecer si desea visualizar las horas de <span class="notranslate">sequence</span> en horas, minutos y segundos (h:m:s) o en cuadros (f).</li>
+      <li class="dropspot"><strong>Mensaje</strong> de difusión: Al hacer clic en esta opción se puede añadir un <strong>mensaje</strong> de difusión en la posición actual del cabezal de reproducción (esto se explica con más detalle <a href="Sequence_Properties/Broadcast_Messages.htm">aquí</a>).</li>
+      <li class="dropspot"><strong>Añadir</strong> momento: Haciendo clic en esta opción se puede añadir un <strong>momento</strong> <span class="notranslate">sequence</span> en la posición actual del cabezal de reproducción (esto se explica con más detalle a continuación).</li>
+      <li class="dropspot"><strong>Abrir el editor de</strong> curvas: Este botón alterna la pista actualmente seleccionada entre la <strong>vista de curva</strong> y la <strong>vista de fotogramas clave</strong>. Esta opción sólo es realmente aplicable a las pistas de <em>parámetros</em> y cuando se activa
+        tendrá otras opciones disponibles dependiendo de si la pista de parámetros utiliza <span class="notranslate">keyframes</span> o una <a href="Animation_Curves.htm">curva de</a> animación. Para más información, consulte la sección sobre el <a href="Sequence_Properties/Using_Animation_Curves.htm">uso de</a> las curvas de animación.</li>
+      <li class="dropspot"><strong>Controles de reproducción</strong>: con estos botones puedes iniciar y detener la vista previa de <span class="notranslate">sequence</span>, así como mover el cabezal de reproducción al principio o al final. También hay un botón para establecer si el <span class="notranslate">sequence</span> debe <span class="notranslate">loop</span> o no, y si la secuencia
+        debe hacer &quot;ping-pong&quot; o repetirse cuando se hace un bucle. Tenga en cuenta que esta configuración <em>afectará</em> a la forma en que se reproduce <span class="notranslate">sequence</span> cuando el proyecto se compila y se ejecuta.</li>
+      <li class="dropspot"><strong>Longitud de la secuencia</strong>: muestra la longitud total posible de <span class="notranslate">sequence</span> en fotogramas (f) o en tiempo (m:h:s). Tenga en cuenta que <span class="notranslate">sequence</span> puede no llegar a esta longitud si ha configurado la región del clip para que sea más pequeña.</li>
     </ul>
-    <p class="dropspot">As mentioned above, you can add <strong>Moments</strong> to a sequence. A sequence <strong>moment </strong>is a position on the timeline where the sequence can call a <strong>function</strong>. This is a <a href="../GameMaker_Language/GML_Overview/Script_Functions.htm">scripted function</a> that must have no parameters and when the moment (frame) on the timeline is reached, this function will be called. To set a moment, you simply move the playhead to the required position and then click the <strong>Add Moment</strong> button, and in the dialog that opens you give the name of the function to call.</p>
-    <p class="dropspot"><img alt="Add A Moment To The Sequence" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_AddMoment.gif" />When adding a moment function, you can click the <img alt="Go To Function Icon" class="icon" src="../assets/Images/Icons/Icon_GoTo_Function.png" /> button to go to the script with the specified function, or you can click the <img alt="New Moment Function Icon" class="icon" src="../assets/Images/Icons/Icon_NewMomentFunction.png" /> button to create a new script resource with an empty function ready for editing. You can also remove the moment and the function call it contains by clicking the <img alt="Remove Moment Icon" class="icon" src="../assets/Images/Icons/Icon_RemoveMoment.png" /> button.</p>
-    <p class="dropspot">Sequence moments can also be added and edited using code. For more information please see <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Events_Moments_Broadcast.htm">here</a>.</p>
+    <p class="dropspot">Como se ha mencionado anteriormente, se pueden añadir <strong>momentos</strong> a un <span class="notranslate">sequence</span>. Un <strong>momento </strong> <span class="notranslate">sequence</span> es una posición en el <span class="notranslate">timeline</span> donde el <span class="notranslate">sequence</span> puede llamar a una <strong>función</strong>. Se trata de una <a href="../GameMaker_Language/GML_Overview/Script_Functions.htm">función guionizada</a> que
+      no debe tener parámetros y cuando el momento (marco) en el <span class="notranslate">timeline</span> es alcanzado, esta función será llamada. Para establecer un momento, basta con mover el cabezal de reproducción a la posición deseada y luego hacer clic en el botón <strong>Añadir momento</strong>, y en el diálogo
+      que se abre se da el nombre de la función a llamar.</p>
+    <p class="dropspot"><img>Al añadir una función de momento, puede hacer clic en el botón <img> para ir a <span class="notranslate">script</span> con la función especificada, o puede hacer clic en el botón <img> para crear un nuevo recurso <span class="notranslate">script</span> con una función vacía
+      lista para ser editada. También puede eliminar el momento y la llamada a la función que contiene haciendo clic en el botón <img>.</p>
+    <p class="dropspot">Los momentos de la secuencia también pueden ser añadidos y editados mediante código. Para más información, consulte <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Events_Moments_Broadcast.htm">aquí</a>.</p>
     <ul class="dropspotlist">
     </ul>
-    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#">Dopesheet</a></p>
   <div class="droptext" data-targetname="drop-down9">
-    <p class="dropspot">The <strong>Dope Sheet</strong> is where all the <a class="glossterm" data-glossterm="asset key" href="#">asset key</a> and <a class="glossterm" data-glossterm="parameter key" href="#">parameter key</a><span class="glossextra">s</span> for each track are shown. You can click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> and drag keys left or right to position them within the dope sheet timeline, and you can also click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on the right edge of an asset key to change its length. Note that for sprites and objects, setting the length to be longer than the animation will cause the animation to loop over the extra frames. The dope sheet also has controls for setting the start and end of the clip region for the sequence, and you can click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> anywhere to set the playhead to that position. For more information on how to use the dope sheet, please see the following page:</p>
+    <p class="dropspot">En la <strong>hoja de datos</strong> se muestran todas las claves<span class="glossextra">de</span> <a class="glossterm" data-glossterm="clave de activos" href="#">los activos</a> y los <a class="glossterm" data-glossterm="clave del parámetro" href="#">parámetros</a> de cada pista
+      se muestran. Puede hacer clic en <img> y arrastrar las claves a la izquierda o a la derecha para posicionarlas dentro de <span class="notranslate">dope sheet</span> <span class="notranslate">timeline</span>, y también puede hacer clic en <img> en el borde derecho de una clave <span class="notranslate">asset</span> para cambiar su longitud. Tenga en cuenta que para <span class="notranslate">sprites</span> y <span class="notranslate">objects</span>, si establece una longitud mayor que la de la animación, ésta se
+      <span class="notranslate">loop</span> sobre los fotogramas adicionales. El <span class="notranslate">dope sheet</span> también tiene controles para establecer el inicio y el final de la región del clip para el <span class="notranslate">sequence</span>, y puedes hacer clic en <img> en cualquier lugar para establecer el cabezal de reproducción en esa posición. Para más información sobre cómo utilizar el <span class="notranslate">dope sheet</span>, consulte la siguiente página:</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><a href="Sequence_Properties/Using_The_Dope_Sheet.htm">Using The Dope Sheet</a></li>
+      <li class="dropspot"><a href="Sequence_Properties/Using_The_Dope_Sheet.htm">Utilización de la hoja informativa</a></li>
     </ul>
-    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">Change Orientation</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">Cambiar la orientación</a></p>
   <div class="droptext" data-targetname="drop-down10">
-    <p class="dropspot">The change orientation button <img alt="Change Orientation Icon" class="icon" src="../assets/Images/Icons/Icon_ChangeOrientation.png" /> can be used to change the way the Sequence Editor displays the different sections. By default you will have the Canvas View at the top and the Track Editor and Dopesheet at the bottom, but this can be changed by clicking the button to cycle through the different layouts, or by clicking the Options button <img alt="Icon Grid Menu" class="icon" height="24" src="../assets/Images/Icons/Icon_CanvasOptions.png" width="10" /> to open a menu and select the layout that you want. The following layouts are available:</p>
+    <p class="dropspot">El botón de cambio de orientación <img> puede utilizarse para cambiar la forma en que el Editor de secuencias
+      Editor de secuencias muestra las diferentes secciones. Por defecto tendrá la vista de Cnavas en la parte superior y el Editor de Pistas y <span class="notranslate">Dopesheet</span> en la parte inferior, pero esto puede cambiarse haciendo clic en el botón para recorrer los diferentes diseños, o haciendo clic en el botón
+      Opciones <img> para abrir un menú y seleccionar el diseño que desee.
+      que desee. Están disponibles las siguientes disposiciones:</p>
     <table class="icons" style="margin-left: 32auto">
       <tbody>
         <tr>
-          <td class="icons"><img alt="Split Window Sequence Editor Button" src="../assets/Images/Icons/Icon_Seq_SplitWindow.png" /></td>
-          <td class="icons"><strong>Split Window</strong></td>
+          <td class="icons"><img alt="Space Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Space.png" width="55" /></td>
+          <td class="icons"><strong>Ventana dividida</strong></td>
           <td class="text">
-            <p>With this option the Sequence Editor will be split into two separate windows, where the main IDE window will show the Canvas view in the full desktop and the new window will show the Dope Sheet and Track Editor. Clicking the button again will change the layout again and remove the extra window.</p>
+            <p>Con esta opción el Editor de <span class="notranslate">Sequence</span> se dividirá en dos ventanas separadas, donde la ventana principal de <span class="notranslate">IDE</span> mostrará la vista del Lienzo en el escritorio completo y la nueva ventana mostrará el Editor de <span class="notranslate">Dope Sheet</span> y de Pistas. Al hacer clic de nuevo en el botón
+              cambiar el diseño de nuevo y eliminar la ventana extra.<br></p>
           </td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Snap Top Sequence Editor Button" src="../assets/Images/Icons/Icon_Seq_Top.png" /></td>
+          <td class="icons"><img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /></td>
           <td class="icons"><b>Snap Top</b></td>
           <td class="text">
-            <p>This option snaps the Track Editor and Dopesheet to the top of the IDE.</p>
+            <p>Esta opción encaja el Editor de Pistas y <span class="notranslate">Dopesheet</span> en la parte superior de <span class="notranslate">IDE</span>.<br></p>
           </td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Snap Right Sequence Editor Button" src="../assets/Images/Icons/Icon_Seq_Right.png" /></td>
+          <td class="icons"><img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" /></td>
           <td class="icons"><strong>Snap Right</strong></td>
           <td class="text">
-            <p>This option snaps the Track Editor and Dopesheet to the right of the IDE.</p>
+            <p>Esta opción encaja el Editor de Pistas y <span class="notranslate">Dopesheet</span> a la derecha del <span class="notranslate">IDE</span>.<br></p>
           </td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Snap Bottom Sequence Editor Button" src="../assets/Images/Icons/Icon_Seq_Bottom.png" /></td>
-          <td class="icons"><strong>Snap Bottom</strong></td>
+          <td class="icons"><img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /></td>
+          <td class="icons"><strong>Fondo de presión</strong></td>
           <td class="text">
-            <p>This option snaps the Track Editor and Dopesheet to the bottom of the IDE (this is the default view).</p>
+            <p>Esta opción encaja el Editor de Pistas y <span class="notranslate">Dopesheet</span> en la parte inferior de <span class="notranslate">IDE</span> (esta es la vista por defecto.<br></p>
           </td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Snap Left Sequence Editor Button" src="../assets/Images/Icons/Icon_Seq_Left.png" /></td>
-          <td class="icons"><strong>Snap Left</strong></td>
+          <td class="icons"><img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /></td>
+          <td class="icons"><strong>Snap Left (Izquierda)</strong></td>
           <td class="text">
-            <p>This option snaps the Track Editor and Dopesheet to the left of the IDE.</p>
+            <p>Esta opción encaja el Editor de Pistas y <span class="notranslate">Dopesheet</span> a la izquierda del <span class="notranslate">IDE</span>.<br></p>
           </td>
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">You can also reset the Sequence Editor layout at any time by clicking the Reset option <img alt="Reset Editor Layout Button" class="icon" src="../assets/Images/Icons/Icon_Seq_Reset.png" />. This will restore the editor to its default state and re-open any sections that had been closed.</p>
+    <p class="dropspot">También puede restablecer el diseño del editor <span class="notranslate">Sequence</span> en cualquier momento haciendo clic en la opción de restablecimiento <img>. Esto restaurará el editor a su estado por defecto y reabrirá cualquier sección que haya sido cerrada.</p>
   </div>
-  <p> </p>
-  <p>Due to the initial complexity of the Sequence Editor, we have only given a brief overview of the features available here, but we have additional pages listed below that go into more depth about its features and how they can be used:</p>
+  <p> </p>
+  <p>Debido a la complejidad inicial del editor de <span class="notranslate">Sequence</span>, sólo hemos dado una breve visión general de las características disponibles aquí, pero tenemos páginas adicionales que se enumeran a continuación que profundizan en sus características y cómo se pueden utilizar:</p>
   <ul class="colour">
-    <li><a href="Sequence_Properties/The_Sequence_Canvas.htm">The Sequence Canvas</a></li>
-    <li><a href="Sequence_Properties/The_Track_Panel.htm">The Track Panel</a></li>
-    <li><a data-xref="{title}" href="Sequence_Properties/Text_in_Sequences.htm">Text in Sequences</a></li>
-    <li><a href="Sequence_Properties/Clipping_Masks.htm">Clipping Masks</a></li>
-    <li><a href="Sequence_Properties/Using_The_Dope_Sheet.htm">Using The Dope Sheet</a></li>
-    <li><a href="Sequence_Properties/Using_Animation_Curves.htm">Using Animation Curves</a></li>
-    <li><a href="Sequence_Properties/Broadcast_Messages.htm">Broadcast Messages</a></li>
+    <li><a href="Sequence_Properties/The_Sequence_Canvas.htm">El lienzo <span class="notranslate">Sequence</span> </a></li>
+    <li><a href="Sequence_Properties/The_Track_Panel.htm">El panel de la pista</a></li>
+    <li><a data-xref="{title}" href="Sequence_Properties/Text_in_Sequences.htm">Texto en secuencias</a></li>
+    <li><a href="Sequence_Properties/Clipping_Masks.htm">Máscaras de recorte</a></li>
+    <li><a href="Sequence_Properties/Using_The_Dope_Sheet.htm">Utilización de la hoja informativa</a></li>
+    <li><a href="Sequence_Properties/Using_Animation_Curves.htm">Uso de las curvas de animación</a></li>
+    <li><a href="Sequence_Properties/Broadcast_Messages.htm">Mensajes de difusión</a></li>
   </ul>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="The_Asset_Editors.htm">The Asset Editors</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Shaders.htm">The Shader Editor</a></div>
+        <div style="float:left">Atrás: <a href="The_Asset_Editors.htm">Los editores de activos</a></div>
+        <div style="float:right">Siguiente: <a href="Shaders.htm">Sombreadores</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
-The Sequences Editor
+The <span class="notranslate">Sequences</span> Editor
 Sequences
 Sequence Canvas
 Track Panel

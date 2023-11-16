@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Collision Compatibility Mode</title>
+  <title>Modo de compatibilidad de colisiones</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Page describing the Collision Compatibility Mode" />
   <meta name="rh-index-keywords" content="Collision Compatibility" />
@@ -14,25 +14,25 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Collision Compatibility Mode</h1>
-  <p>In the <a href="../../../../Settings/Game_Options.htm">General Game Options</a> for your project, you can enable &quot;<strong>Collision Compatibility Mode</strong>&quot; to switch to the legacy collision system. You would only need to do this if you noticed odd behaviour with collisions in your existing project(s) after upgrading to <span data-keyref="GameMaker Name">GameMaker</span> 2022.1 or a newer version, which changed how collisions work.</p>
+  <h1>Modo de compatibilidad de colisiones</h1>
+  <p>En las <a href="../../../../Settings/Game_Options.htm">Opciones Generales de Juego</a> de su proyecto, puede habilitar el &quot;<strong>Modo de Compatibilidad de Colisiones</strong>&quot; para <span class="notranslate">switch</span> al sistema de colisiones heredado. Sólo necesitaría hacer esto si notara un comportamiento extraño con las colisiones en su(s) proyecto(s) existente(s) después de actualizar a <span data-keyref="GameMaker Name"><span data-keyref="GameMaker Name">GameMaker</span></span> 2022.1, que cambió el funcionamiento de las colisiones.</p>
   <p><img alt="Collision Compatibility Mode option in Game Options" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Movement_Collisions/collision_compatibility_mode.png" /></p>
-  <h2>Changes in Collisions</h2>
-  <p>In the legacy collision system, all bounding box coordinates were rounded to integers and were &quot;exclusive&quot;, i.e. they would exclude the bottom-most and right-most edges of a collision mask. For example, the bounding box for a 16x16 collision mask would be generated from <span class="inline2">(0, 0)</span> to <span class="inline2">(15, 15)</span> (relative). This would work fine for instances that used only integer values for positioning and scaling, however using <a class="glossterm" data-glossterm="floating point" href="#">floating point</a> values would cause unexpected behaviour and a slight disconnect between rendering and collision checking, as GameMaker would then always round the bounding box values for performing collision checks.</p>
-  <p>In the current collision system, bounding box values are not rounded and are used as-is, meaning collisions are more accurate and behave as one would expect. Bounding boxes are also &quot;inclusive&quot; now, i.e. they include the bottom-most and right-most edges. For example, the bounding box for a 16x16 collision mask is now generated from <span class="inline2">(0.0, 0.0)</span> to <span class="inline2">(16.0, 16.0)</span> (relative).</p>
-  <h2>Compatibility Mode</h2>
-  <p>The collision changes explained above may cause some existing projects to break, which you can easily fix by enabling the <strong>Collision Compatibility Mode</strong> for such projects so the legacy collision system is used; however it is recommended to test and upgrade your collision code to work with the new system as it should allow your game to have more accurate and logical collisions.</p>
-  <p>For projects that are new or do not use existing collision code, there is no need to enable this option.</p>
-  <p> </p>
-  <p> </p>
+  <h2>Cambios en las colisiones</h2>
+  <p>En el sistema de colisión heredado, todas las coordenadas de los cuadros delimitadores se redondeaban a números enteros y eran &quot;exclusivas&quot;, es decir, excluían los bordes inferiores y derechos de una máscara de colisión. Por ejemplo, el cuadro delimitador de una máscara de colisión de 16x16 se generaría desde <span class="inline2">(0, 0)</span> hasta <span class="inline2">(15, 15)</span> (relativo). Esto funcionaría bien para las instancias que utilizan sólo valores enteros para el posicionamiento y la escala, sin embargo, el uso de valores de <a class="glossterm" data-glossterm="punto flotante" href="#">punto flotante</a> causaría un comportamiento inesperado y una ligera desconexión entre el renderizado y la comprobación de colisiones, ya que <span class="notranslate">GameMaker</span> siempre redondearía los valores del cuadro delimitador para realizar las comprobaciones de colisiones.</p>
+  <p>En el actual sistema de colisiones, los valores de los cuadros delimitadores no se redondean y se utilizan tal cual, lo que significa que las colisiones son más precisas y se comportan como cabría esperar. Los cuadros delimitadores también son ahora &quot;inclusivos&quot;, es decir, incluyen los bordes inferiores y derechos. Por ejemplo, el cuadro delimitador para una máscara de colisión de 16x16 se genera ahora desde <span class="inline2">(0,0, 0,0)</span> hasta <span class="inline2">(16,0, 16,0)</span> (relativo).</p>
+  <h2>Modo de compatibilidad</h2>
+  <p>Los cambios en la colisión explicados anteriormente pueden hacer que algunos proyectos existentes se rompan, lo que puede solucionarse fácilmente activando el <strong>Modo de Compatibilidad de Colisiones</strong> para dichos proyectos, de modo que se utilice el sistema de colisión heredado; sin embargo, se recomienda probar y actualizar su código de colisión para que funcione con el nuevo sistema, ya que debería permitir que su juego tenga colisiones más precisas y lógicas.</p>
+  <p>Para los proyectos nuevos o que no utilizan el código de colisión existente, no es necesario activar esta opción.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Collisions.htm">Collisions</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="place_empty.htm">place_empty</a></div>
+        <div style="float:left">Atrás: <a href="Collisions.htm">Colisiones</a></div>
+        <div style="float:right">Siguiente: <a data-xref="{title}" href="place_empty.htm">place_empty</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Collision Compatibility Mode

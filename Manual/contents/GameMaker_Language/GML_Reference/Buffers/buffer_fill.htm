@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>buffer_fill</title>
+  <title>relleno_del_buffer</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for buffer_fill" />
   <meta name="rh-index-keywords" content="buffer_fill,buffer_u8,buffer_s8,buffer_u16,buffer_s16,buffer_u32,buffer_s32,buffer_u64,buffer_f16,buffer_f32,buffer_f64,buffer_bool,buffer_string,buffer_text" />
@@ -14,59 +14,59 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_fill</h1>
-  <p>This function can be used to fill a previously created buffer with a given data type and value. The data you fill the buffer with must be in agreement with the &quot;type&quot; argument of this function, meaning that you can&#39;t try to fill with a
-    string and use the unsigned 16bit integer type, for example. The type constants are the same as those used by the <a href="buffer_read.htm"><span class="inline">buffer_read()</span></a> and <a href="buffer_write.htm"><span class="inline">buffer_write()</span></a> functions. The &quot;size&quot;
-    is the size of the buffer (in bytes) that you wish to fill, while the offset is the offset value (also in bytes) from the start of the buffer to start the fill from.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>relleno_del_buffer</h1>
+  <p>Esta función puede utilizarse para rellenar un <span class="notranslate">buffer</span> previamente creado con un <span class="notranslate">data type</span> y un valor dados. Los datos con los que se rellena el <span class="notranslate">buffer</span> deben estar de acuerdo con el argumento &quot;tipo&quot; de esta función, lo que significa que no se puede intentar rellenar con un
+    <span class="notranslate">string</span> y utilizar el tipo entero de 16 bits sin signo, por ejemplo. Las constantes de tipo son las mismas que las utilizadas por las funciones <a href="buffer_read.htm"><span class="inline">buffer_read()</span></a> y <a href="buffer_write.htm"><span class="inline">buffer_write()</span></a> . El &quot;tamaño&quot;
+    es el tamaño del <span class="notranslate">buffer</span> (en bytes) que se desea rellenar, mientras que el "offset" es el valor de desplazamiento (también en bytes) desde el inicio del <span class="notranslate">buffer</span> para comenzar el relleno.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">buffer_fill(buffer, offset, type, value, size);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th><th>Tipo</th>
+        <th>Descripción</th>
      </tr>
       <tr>
-        <td>buffer</td><td><span data-keyref="Type_ID_Buffer"></span></td>
-        <td>The index of the buffer to fill.</td>
+        <td><span class="notranslate">buffer</span></td><td><span data-keyref="Type_ID_Buffer"></span></td>
+        <td><span class="notranslate">The index of the buffer to fill.</span></td>
      </tr>
       <tr>
-        <td>offset</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The data offset value (in bytes).</td>
+        <td><span class="notranslate">offset</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The data offset value (in bytes).</span></td>
      </tr>
       <tr>
-        <td>type</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The type of data that is to be written to the buffer (see the list of constants <a href="buffer_write.htm">here</a>).</td>
+        <td><span class="notranslate">type</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The type of data that is to be written to the buffer (see the list of constants <a href="buffer_write.htm">here</a>).</span></td>
      </tr>
       <tr>
-        <td>value</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The data to write.</td>
+        <td><span class="notranslate">value</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The data to write.</span></td>
      </tr>
       <tr>
-        <td>size</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The size of the buffer (in bytes) that you wish to fill.</td>
+        <td><span class="notranslate">size</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The size of the buffer (in bytes) that you wish to fill.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">map_buffer = buffer_create(16384, buffer_fixed, 0);<br/> buffer_fill(map_buffer, 0, buffer_u16, 0, 16384);</p>
-  <p>The above code finds the start of the buffer with the id stored in the variable &quot;buff&quot; them writes a series of signed 16bit integer values to it.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior encuentra el inicio de la <span class="notranslate">buffer</span> con el id almacenado en la variable &quot;buff&quot; y escribe en ella una serie de valores enteros de 16 bits con signo.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next: <a href="buffer_seek.htm">buffer_seek</a></div>
+        <div style="float:left">Volver: <a href="Buffers.htm">Buffers</a></div>
+        <div style="float:right">Siguiente: <a href="buffer_seek.htm"><span class="notranslate">buffer_seek</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_fill

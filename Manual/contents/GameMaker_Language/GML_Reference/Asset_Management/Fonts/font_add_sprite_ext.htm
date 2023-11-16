@@ -6,7 +6,7 @@
   <title>font_add_sprite_ext</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function font_add_sprite_ext" />
   <meta name="rh-index-keywords" content="font_add_sprite_ext" />
@@ -15,61 +15,61 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>font_add_sprite_ext</h1>
-  <p>With this function you can use a &quot;sprite strip&quot; (the sprite itself <b>must</b> be a sprite asset from the Asset Browser, or a sprite you have added to the game resources using <span class="inline">sprite_add</span>) to create a new font asset, where each sub-image would be an individual symbol or letter. Unlike the normal <a href="font_add_sprite.htm"><span class="inline">font_add_sprite()</span></a> which has a specific order for the sub-images of the sprite, this function will map the sprite sub-images based on the argument &quot;string_map&quot; of the function. This argument is a string that you can use to tell <span data-keyref="GameMaker Name">GameMaker</span> what order the sub-images of the sprite font are and it will map these automatically when writing text. So, for example, if you have a string-map of &quot;AaBbCcDdEeFfGgHh&quot;, your sprite font <i>must</i> have the sub-images ordered in this way. You can define &quot;space&quot; as being any character you want, for example a single line the size that you want the space to be, and all spaces in text will be rendered at that width (but the image chosen will <i>never</i> be rendered), or if you don&#39;t supply a sprite for space then the width of the widest character in the sprite font will be used instead.</p>
-  <p>You can also set the spacing for the font to be proportional (<span class="inline">true</span>) or not (<span class="inline">false</span>), where a proportional font is spaced based on the actual width of the letters (so the letter &quot;i&quot; takes less room than the letter &quot;w&quot;, for example) while a non-proportional font will be spaced based on the sub-image width, like a monospaced font. Finally, you can define the space to leave between each letter when writing, and this can be any integer value, with 0 being no space (the letters will &quot;touch&quot; if proportional).</p>
-  <p>The function returns an <i>index</i> value that should be stored in a variable as this will be needed in all further codes that refer to this font, or it will return -1 if the function fails for any reason.</p>
-  <p>It is worth noting that for the font alignment functions to work (like <a href="../../Drawing/Text/draw_set_halign.htm"><span class="inline">draw_set_halign()</span></a>) then the font sprite should have its origin set to the <i>top left corner</i>. If you use other values then you will need to take the origin offset into consideration when drawing text using the font.</p>
-  <p class="note"><b><span class="note">NOTE</span> </b>When you load a font into <span data-keyref="GameMaker Name">GameMaker</span> you must remember to remove it again (with <span style="font-size:1px;"><a href="font_delete.htm"><span class="inline">font_delete()</span></a></span>) when no longer needed, otherwise there is risk of a memory leak which will slow down and eventually crash your game.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Con esta función puedes utilizar una &quot;tira de sprites&quot; (el propio <span class="notranslate">sprite</span> <b>debe</b> ser un <span class="notranslate">sprite</span> <span class="notranslate">asset</span> del Navegador <span class="notranslate">Asset</span>, o un <span class="notranslate">sprite</span> que hayas añadido a los recursos del juego utilizando <span class="inline">sprite_add</span>) para crear un nuevo <span class="notranslate">font</span> <span class="notranslate">asset</span>, donde cada sub-imagen sería un símbolo o letra individual. A diferencia del sistema normal <a href="font_add_sprite.htm"><span class="inline">font_add_sprite()</span></a> que tiene un orden específico para las sub-imágenes del <span class="notranslate">sprite</span>, esta función mapeará las sub-imágenes de <span class="notranslate">sprite</span> basándose en el argumento &quot;string_map&quot; de la función. Este argumento es un <span class="notranslate">string</span> que puedes usar para decirle a <span data-keyref="GameMaker Name">GameMaker</span> qué orden tienen las sub-imágenes del <span class="notranslate">sprite</span> <span class="notranslate">font</span> y las mapeará automáticamente al escribir el texto. Así, por ejemplo, si tienes un mapa de cadenas de &quot;AaBbCcDdEeFfGgHh&quot;, tu <span class="notranslate">sprite</span> <span class="notranslate">font</span> <i>debe</i> tener las sub-imágenes ordenadas de esta manera. Puede definir &quot;espacio&quot; como cualquier carácter que desee, por ejemplo una sola línea del tamaño que desee que tenga el espacio, y todos los espacios en el texto se renderizarán con esa anchura (pero la imagen elegida <i>nunca</i> se renderizará), o si no suministra un <span class="notranslate">sprite</span> para el espacio, entonces se utilizará en su lugar la anchura del carácter más ancho en el <span class="notranslate">sprite</span> <span class="notranslate">font</span>.</p>
+  <p>También puede establecer que el espaciado de <span class="notranslate">font</span> sea proporcional (<span class="inline">true</span>) o no (<span class="inline">false</span>), donde un <span class="notranslate">font</span> proporcional se espacia en base a la anchura real de las letras (por lo que la letra &quot;i&quot; ocupa menos <span class="notranslate">room</span> que la letra &quot;w&quot;, por ejemplo) mientras que un <span class="notranslate">font</span> no proporcional se espaciará en base a la anchura de la subimagen, como un <span class="notranslate">font</span> monoespaciado. Por último, se puede definir el espacio que se dejará entre cada letra al escribir, y éste puede ser cualquier valor entero, siendo 0 sin espacio (las letras se &quot;tocarán&quot; si son proporcionales).</p>
+  <p>La función devuelve un valor de <i>índice</i> que debe almacenarse en una variable, ya que se necesitará en todos los códigos posteriores que hagan referencia a este <span class="notranslate">font</span>, o devolverá -1 si la función falla por cualquier motivo.</p>
+  <p>Cabe señalar que para que las funciones de alineación de <span class="notranslate">font</span> funcionen (como <a href="../../Drawing/Text/draw_set_halign.htm"><span class="inline">draw_set_halign()</span></a>), <span class="notranslate">font</span> <span class="notranslate">sprite</span> debe tener su origen en la <i>esquina superior izquierda</i>. Si utiliza otros valores, tendrá que tener en cuenta el desplazamiento del origen al dibujar el texto con <span class="notranslate">font</span>.</p>
+  <p class="note"><b><span class="note">NOTA</span> </b>Cuando cargue un <span class="notranslate">font</span> en <span data-keyref="GameMaker Name">GameMaker</span> debe recordar eliminarlo de nuevo (con <span style="font-size:1px;"><a href="font_delete.htm"><span class="inline">font_delete()</span></a></span>) cuando ya no lo necesites, de lo contrario existe el riesgo de que se produzca una fuga de memoria que ralentizará y acabará por colapsar tu juego.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">font_add_sprite_ext(spr, string_map, prop, sep);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>spr</td>
-        <td><span data-keyref="Type_Asset_Sprite"><a href="../../../../../The_Asset_Editors/Sprites.htm" target="_blank">Sprite Asset</a></span></td>
-        <td>The sprite to add a font based on.</td>
+        <td><span class="notranslate">spr</span></td>
+        <td><span data-keyref="Type_Asset_Sprite">Activo Sprite</span></td>
+        <td><span class="notranslate">The sprite to add a font based on.</span></td>
       </tr>
       <tr>
-        <td>string_map</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>String from which sprite sub-image order is taken.</td>
+        <td><span class="notranslate">string_map</span></td>
+        <td><span data-keyref="Type_String">Cadena</span></td>
+        <td><span class="notranslate">String from which sprite sub-image order is taken.</span></td>
       </tr>
       <tr>
-        <td>prop</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Set as proportional font or not.</td>
+        <td><span class="notranslate">prop</span></td>
+        <td><span data-keyref="Type_Bool">Booleano</span></td>
+        <td><span class="notranslate">Set as proportional font or not.</span></td>
       </tr>
       <tr>
-        <td>sep</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The space to leave between each letter.</td>
+        <td><span class="notranslate">sep</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The space to leave between each letter.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Asset_Font"><a href="../../../../../The_Asset_Editors/Fonts.htm" target="_blank">Font Asset</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code"><span data-keyref="Type_Asset_Font">Font Asset</span></p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">global.Font = font_add_sprite_ext(spr_CalcFont, &quot;0123456789+-*/=&quot;, true, 2);</p>
-  <p>The above code will create a new font asset from the sprite indexed in the variable &quot;spr_CalcFont&quot; and store the index of the new font in the variable &quot;global.Font&quot;. The sub-images of the sprite font will be mapped to the string specified.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior creará un nuevo <span class="notranslate">font</span> <span class="notranslate">asset</span> a partir del <span class="notranslate">sprite</span> indexado en la variable &quot;spr_CalcFont&quot; y almacenará el índice del nuevo <span class="notranslate">font</span> en la variable &quot;global.Font&quot;. Las sub-imágenes del <span class="notranslate">sprite</span> <span class="notranslate">font</span> serán mapeadas al <span class="notranslate">string</span> especificado.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Fonts.htm">Fonts</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="font_replace_sprite.htm">font_replace_sprite</a></div>
+        <div style="float:left">Atrás: <a href="Fonts.htm">Fuentes</a></div>
+        <div style="float:right">Siguiente: <a href="font_replace.htm"><span class="notranslate">font_replace</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 font_add_sprite_ext

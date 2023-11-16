@@ -6,7 +6,7 @@
   <title>gpu_set_blendmode</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for the function gpu_set_blendmode" />
   <meta name="rh-index-keywords" content="gpu_set_blendmode,bm_normal,bm_add,bm_subtract,bm_max" />
@@ -15,79 +15,79 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gpu_set_blendmode</h1>
-  <p>When <span data-keyref="GameMaker Name">GameMaker</span> goes to draw a pixel there is a source colour (the colour of the pixel we&#39;re going to draw) and a destination colour(the colour that&#39;s already in the pixel we&#39;re drawing to), so when determining the new colour of the pixel, the source and destination colours are calculated according to the chosen blend mode. Each component of the colours is stored as a floating point value between 0 and 1, and the new colour is calculated by multiply each component of the source colour by some factor and by multiplying each component of destination colour by some other factor and then adding the results together component by component.</p>
-  <p>This function permits you to set the blend mode in four basic ways using the following constants:</p>
+  <p>Cuando <span data-keyref="GameMaker Name">GameMaker</span> va a dibujar un píxel hay un color de origen (el color del píxel que vamos a dibujar) y un color de destino (el color que ya está en el píxel que estamos dibujando), por lo que al determinar el nuevo color del píxel, los colores de origen y destino se calculan de acuerdo con el modo de mezcla elegido. Cada componente de los colores se almacena como un valor de punto flotante entre 0 y 1, y el nuevo color se calcula multiplicando cada componente del color de origen por algún factor y multiplicando cada componente del color de destino por algún otro factor y luego sumando los resultados componente por componente.</p>
+  <p>Esta función permite establecer el modo de mezcla de cuatro maneras básicas utilizando las siguientes constantes:</p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
-        <th>Extended Blend Mode</th>
+        <th>Constante</th>
+        <th>Descripción</th>
+        <th>Modo de fusión ampliado</th>
       </tr>
       <tr>
-        <td><span class="inline">bm_normal</span></td>
-        <td>Normal blending (the default blend mode).</td>
-        <td>(<span class="inline">bm_src_alpha</span>, <span class="inline">bm_inv_src_alpha</span>)</td>
+        <td><span class="notranslate"><span class="inline">bm_normal</span></td>
+        <td>Mezcla normal (el modo de mezcla por defecto).</td>
+        <td><span class="notranslate">(<span class="inline">bm_src_alpha</span>, <span class="inline">bm_inv_src_alpha</span>)</td>
       </tr>
       <tr>
-        <td><span class="inline">bm_add</span></td>
-        <td>Additive blending. Luminosity values of light areas are added.</td>
-        <td>(<span class="inline">bm_src_alpha</span>, <span class="inline">bm_one</span>)</td>
+        <td><span class="notranslate"><span class="inline">bm_add</span></td>
+        <td>Mezcla aditiva. Se añaden los valores de luminosidad de las áreas luminosas.</td>
+        <td><span class="notranslate">(<span class="inline">bm_src_alpha</span>, <span class="inline">bm_one</span>)</td>
       </tr>
       <tr>
-        <td><span class="inline">bm_subtract</span></td>
-        <td>Subtractive blending. Luminosity values of light areas are subtracted.</td>
-        <td>(<span class="inline">bm_zero</span>, <span class="inline">bm_inv_src_colour</span>)</td>
+        <td><span class="notranslate"><span class="inline">bm_subtract</span></td>
+        <td>Mezcla sustractiva. Se restan los valores de luminosidad de las zonas claras.</td>
+        <td><span class="notranslate">(<span class="inline">bm_zero</span>, <span class="inline">bm_inv_src_colour</span>)</td>
       </tr>
       <tr>
-        <td><span class="inline">bm_max</span></td>
-        <td>Max blending. Similar to additive blending.</td>
-        <td>(<span class="inline">bm_src_alpha</span>, <span class="inline">bm_inv_src_colour</span>)</td>
+        <td><span class="notranslate"><span class="inline">bm_max</span></td>
+        <td>Mezcla máxima. Similar a la mezcla aditiva.</td>
+        <td><span class="notranslate">(<span class="inline">bm_src_alpha</span>, <span class="inline">bm_inv_src_colour</span>)</td>
       </tr>
     </tbody>
   </table>
-  <p>As you can see from the above table, these four blend modes are really composites of <i>extended</i> blend modes which can be found on the page describing <a href="gpu_set_blendmode_ext.htm"><span class="inline">gpu_set_blendmode_ext()</span></a>.</p>
-  <p>To help you get the most from blend modes and to help understand how they work and how they affect the final image being drawn to the screen, we recommend that you read the following guide:</p>
+  <p>Como puede ver en la tabla anterior, estos cuatro modos de fusión son en realidad compuestos de modos de fusión <i>extendidos</i> que se pueden encontrar en la página que describe <a href="gpu_set_blendmode_ext.htm"><span class="inline">gpu_set_blendmode_ext()</span></a>.</p>
+  <p>Para ayudarte a sacar el máximo provecho de los modos de fusión y entender cómo funcionan y cómo afectan a la imagen final que se dibuja en la pantalla, te recomendamos que leas la siguiente guía:</p>
   <ul class="colour">
-    <li><a href="../../../../Additional_Information/Guide_To_Using_Blendmodes.htm">Guide To Using Blendmodes</a></li>
+    <li><a href="../../../../Additional_Information/Guide_To_Using_Blendmodes.htm">Guía de uso de Blendmodes</a></li>
   </ul>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">gpu_set_blendmode(mode);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>mode</td>
-        <td><span data-keyref="Type_Constant_Draw_Blend_Mode">Blend Mode Constant</span></td>
-        <td>The blend mode to use (see the table above)</td>
+        <td><span class="notranslate">mode</span></td>
+        <td><span data-keyref="Type_Constant_Draw_Blend_Mode">Modo de mezcla constante</span></td>
+        <td><span class="notranslate">The blend mode to use (see the table above)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">gpu_set_blendmode(bm_add);<br />
     draw_circle_colour(100, 100, 50, c_white, c_black, 0);<br />
     gpu_set_blendmode(bm_normal);</p>
-  <p>This will turn the black into transparency, creating a &#39;glow&#39; effect from the white being strong on the outside and gradually weakening further from the circle centre. The blend mode is reset after the circle is drawn to ensure additive blending is not also applied to everything else after it.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Esto convertirá el negro en transparencia, creando un efecto de "resplandor" al ser el blanco fuerte en el exterior y debilitarse gradualmente a partir del centro del círculo. El modo de fusión se restablece después de dibujar el círculo para asegurar que la fusión aditiva no se aplique también a todo lo que viene después.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GPU_Control.htm">GPU Control</a></div>
-        <div style="float:right">Next: <a href="gpu_set_blendmode_ext.htm">gpu_set_blendmode_ext</a></div>
+        <div style="float:left">Atrás: <a href="GPU_Control.htm">Control de la GPU</a></div>
+        <div style="float:right">Siguiente: <a href="gpu_set_blendmode_ext.htm"><span class="notranslate">gpu_set_blendmode_ext</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_blendmode

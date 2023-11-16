@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ds_set_precision</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for ds_set_precision" />
   <meta name="rh-index-keywords" content="ds_set_precision" />
@@ -15,10 +15,10 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ds_set_precision</h1>
-  <p>When comparing values, for example when searching in a map or sorting a list, <span data-keyref="GameMaker Name">GameMaker</span> must decide when two values are equal. For strings and integer values this is clear but for real numbers, due to floating point round-off errors, seemingly equal numbers can easily become unequal. For example, it&#39;s possible that <b>(5 / 3) * 3</b> will <i>not</i> be equal to 5! To help avoid this, a precision value is used on all real number functions, and when the <i>difference between two numbers is smaller</i> than this precision they are considered equal. The default a precision of 0.0000001 is used for all data structure functions unless changed by this function.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> This precision is used in all data structures but not in other comparisons in GML!</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Al comparar valores, por ejemplo al buscar en un mapa u ordenar una lista, <span data-keyref="GameMaker Name">GameMaker</span> debe decidir cuándo dos valores son iguales. Para <span class="notranslate">strings</span> y los valores enteros esto es claro, pero para los números reales, debido a los errores de redondeo en coma flotante, los números aparentemente iguales pueden convertirse fácilmente en desiguales. ¡Por ejemplo, es posible que <b>(5 / 3) * 3</b> <i>no</i> sea igual a 5! Para evitar esto, se utiliza un valor de precisión en todas las funciones de números reales, y cuando la <i>diferencia entre dos números es menor</i> que esta precisión se consideran iguales. Por defecto se utiliza una precisión de 0.0000001 para todas las funciones de estructura de datos a menos que se cambie por esta función.</p>
+  <p class="note">¡<b>NOTA</b>: Esta precisión se utiliza en todos los <span class="notranslate">data structures</span> pero no en otras comparaciones en <span class="notranslate">GML</span>!</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">ds_set_precision(prec);</p>
   <table>
     <colgroup>
@@ -28,35 +28,35 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>prec</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The precision value (default 0.0000001)</td>
+        <td><span class="notranslate">prec</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The precision value (default 0.0000001)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">ds_set_precision(0.0001);</p>
-  <p>The above code will change the default precision setting for all data structure functions.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior cambiará la configuración de precisión por defecto para todas las funciones de estructura de datos.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Data_Structures.htm">Data Structures</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="ds_exists.htm">ds_exists</a></div>
+        <div style="float:left">Atrás: <a href="Data_Structures.htm">Estructuras de datos</a></div>
+        <div style="float:right">Siguiente: ds_exists</div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 ds_set_precision

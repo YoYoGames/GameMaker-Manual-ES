@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Basic Code Structure</title>
+  <title>Estructura básica del código</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the basic code structure when using GML" />
   <meta name="rh-index-keywords" content="Code Structure" />
@@ -14,39 +14,39 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Basic Code Structure</h1>
-  <p>Code is written in <em>blocks</em> and a typical code block consists of a set of instructions, called <a class="glossterm" data-glossterm="statement" href="#">statement</a><span class="glossextra">s</span>, that are then interpreted by <span data-keyref="GameMaker Name">GameMaker</span> and used to make something happen within your game. That &quot;something&quot; can be as simple as adding 2 and 2 to get 4, or as complex as making an enemy run away when their health gets below a certain value. The actual structure of the program can vary greatly, depending on the functions it uses, but broken down to basics it just looks like this:</p>
+  <h1>Estructura básica del código</h1>
+  <p>El código se escribe en <em>bloques</em> y un bloque de código típico consiste en un conjunto de instrucciones, llamadas<span class="glossextra">declaraciones</span>, que luego son interpretadas por <span data-keyref="GameMaker Name">GameMaker</span> y utilizadas para hacer que algo suceda dentro de su juego. Ese &quot;algo&quot; puede ser tan simple como sumar 2 y 2 para obtener 4, o tan complejo como hacer que un enemigo huya cuando su salud esté por debajo de un determinado valor. La estructura real del programa puede variar en gran medida, dependiendo de las funciones que utiliza, pero desglosado a lo básico sólo se parece a esto:</p>
   <p class="code">&lt;statement&gt;;<br />
     &lt;statement&gt;;<br />
     ...</p>
-  <p>Statements should be separated with a &#39;;&#39; symbol to prevent errors with <a class="glossterm" data-glossterm="variable" href="#">variable</a> declarations and to keep your code clean and tidy, and they can consist of variable declarations, <a class="glossterm" data-glossterm="expression" href="#">expression</a><span class="glossextra">s</span> and calls to specific <strong>functions</strong>. You can also &quot;group&quot; statements together as a block using the curly brackets <span class="inline">{}</span> so that they run together, like in the following <a class="glossterm" data-glossterm="conditional" href="#">conditional</a> example:</p>
+  <p>Las sentencias deben ir separadas con un símbolo ';' para evitar errores con las declaraciones de <a class="glossterm" data-glossterm="variable" href="#">variables</a> y mantener el código limpio y ordenado, y pueden consistir en declaraciones de variables,<span class="glossextra">expresiones</span> y llamadas a <strong>funciones</strong> específicas. También puede &quot;agrupar&quot; las sentencias como un bloque utilizando las llaves <span class="inline">{}</span> para que se ejecuten juntas, como en el siguiente ejemplo <a class="glossterm" data-glossterm="condicional" href="#">condicional</a>:</p>
   <p class="code">if (&lt;conditional&gt;)<br />
     {<br />
         &lt;statement&gt;;<br />
         &lt;statement&gt;;<br />
         ...<br />
     }</p>
-  <p class="note"><span class="note">NOTE</span> The GameMaker Language will also accept <span class="inline">begin</span><span> </span>and <span class="inline">end</span><span>  </span>instead of the curly brackets <span class="inline">{}</span>, although this is not typically the most common way to do it:</p>
+  <p class="note"><span class="note">NOTA</span> El <span class="notranslate">GameMaker Language</span> también aceptará <span class="inline">begin</span><span> </span> y <span class="inline">end</span><span>  </span> en lugar de las llaves <span class="inline">{}</span>, aunque esta no es la forma más común de hacerlo:</p>
   <p class="code">if (&lt;conditional&gt;)<br />
     begin<br />
         &lt;statement&gt;;<br />
         &lt;statement&gt;;<br />
         ...<br />
     end</p>
-  <p>Here is a more visual representation of how a code block can look, this time created as a <b>script</b> in the <span data-keyref="GameMaker Name">GameMaker</span> <a href="../../The_Asset_Editors/Scripts.htm">Script Editor</a>:</p>
+  <p>Aquí hay una representación más visual de cómo puede ser un bloque de código, esta vez creado como un <b>script</b> en el <a href="../../The_Asset_Editors/Scripts.htm">Editor de Script</a> <span data-keyref="GameMaker Name">de GameMaker</span>:</p>
   <p><img alt="Program Example" class="center" src="../../assets/Images/Scripting_Reference/GML/Overview/ProgramExample.png" style="cursor: nwse-resize;" /></p>
-  <p>There are a number of different types of statements, expressions, conditionals and functions, all of which are discussed at length in subsequent sections of the manual.</p>
-  <p class="note"><span class="note">NOTE</span> If you are new to programming then you may want to check out the <a href="../../Quick_Start_Guide/Quick_Start_Guide.htm">Quick Start Guide</a> before continuing.</p>
-  <p> </p>
-  <p> </p>
+  <p>Existen diferentes tipos de sentencias, expresiones, condicionales y funciones, todas ellas tratadas en profundidad en secciones posteriores del manual.</p>
+  <p class="note"><span class="note">NOTA</span> Si usted es nuevo en la programación, es posible que desee consultar la <a href="../../Quick_Start_Guide/Quick_Start_Guide.htm">Guía de Inicio Rápido</a> antes de continuar.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GML_Overview.htm">GML Overview</a></div>
-        <div style="float:right">Next: <a href="Runtime_Functions.htm">Runtime Functions</a></div>
+        <div style="float:left">Atrás: <a href="GML_Overview.htm">Visión general de GML</a></div>
+        <div style="float:right">Siguiente: <a href="Runtime_Functions.htm">Funciones de tiempo de ejecución</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Basic Code Structure

@@ -6,7 +6,7 @@
   <title>xboxlive_agegroup_for_user</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for xboxlive_agegroup_for_user" />
   <meta name="rh-index-keywords" content="xboxlive_agegroup_for_user,xboxlive_agegroup_unknown,xboxlive_agegroup_child,xboxlive_agegroup_teen,xboxlive_agegroup_adult" />
@@ -15,27 +15,27 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_agegroup_for_user</h1>
-  <p>This function will return one of four constants (shown below) to indicate the age-range assigned to the specified user ID pointer.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Esta función devolverá una de las cuatro constantes (mostradas a continuación) para indicar el rango de edad asignado al puntero de ID de usuario especificado.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">xboxlive_agegroup_for_user(user_id);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>user_id</td>
-        <td><span data-keyref="Type_ID_Xbox_User"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">Xbox User ID</a></span></td>
-        <td>The user ID (a pointer) to check</td>
+        <td><span class="notranslate">user_id</span></td>
+        <td><span data-keyref="Type_ID_Xbox_User"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">ID de usuario de Xbox</a></span></td>
+        <td><span class="notranslate">The user ID (a pointer) to check</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Constant_Xbox_AgeGroup"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/Users_And_Accounts/xboxlive_agegroup_for_user.htm">Xbox Age Group Constant</a></span></p>
   <table>
     <colgroup>
@@ -44,51 +44,51 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Xbox_AgeGroup"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/Users_And_Accounts/xboxlive_agegroup_for_user.htm">Xbox Age Group Constant</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_Xbox_AgeGroup"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/UWP_And_XBox_Live/Users_And_Accounts/xboxlive_agegroup_for_user.htm">Grupo de edad de Xbox Constante</a></span></th>
       </tr>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>Constante</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td><span class="inline">xboxlive_agegroup_unknown</span></td>
-        <td>The age group for the user is unknown</td>
+        <td><span class="notranslate"><span class="inline">xboxlive_agegroup_unknown</span></td>
+        <td>El grupo de edad del usuario es desconocido</td>
       </tr>
       <tr>
-        <td><span class="inline">xboxlive_agegroup_child</span></td>
-        <td>The user age group is between 8 and 12 (inclusive)</td>
+        <td><span class="notranslate"><span class="inline">xboxlive_agegroup_child</span></td>
+        <td>El grupo de edad de los usuarios está entre 8 y 12 años (inclusive)</td>
       </tr>
       <tr>
-        <td><span class="inline">xboxlive_agegroup_teen</span></td>
-        <td>The user age group is between 13 and 17 (inclusive, and between 13 and 19 in South Korea)</td>
+        <td><span class="notranslate"><span class="inline">xboxlive_agegroup_teen</span></td>
+        <td>El grupo de edad de los usuarios está entre los 13 y los 17 años (inclusive, y entre los 13 y los 19 en Corea del Sur)</td>
       </tr>
       <tr>
-        <td><span class="inline">xboxlive_agegroup_adult</span></td>
-        <td>The user age group is 18 or over (or 20 and over in South Korea</td>
+        <td><span class="notranslate"><span class="inline">xboxlive_agegroup_adult</span></td>
+        <td>El grupo de edad de los usuarios es de 18 años o más (o 20 y más en Corea del Sur</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">var _age = xboxlive_agegroup_for_user(xboxlive_get_activating_user());<br />
     if _age != xboxlive_agegroup_adult<br />
     {<br />
         global.ContentControl = true;<br />
     }<br />
     else global.ContentControl = false;</p>
-  <p>The above code checks the age group of the activating user and sets a global variable to <span class="inline">true</span> or <span class="inline">false</span> depending on the returned constant.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior comprueba el grupo de edad del usuario activador y establece una variable global a <span class="inline">true</span> o <span class="inline">false</span> dependiendo de la constante devuelta.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Users_And_Accounts.htm">Users And Accounts</a></div>
-        <div style="float:right">Next: <a href="xboxlive_gamerscore_for_user.htm">xboxlive_gamerscore_for_user</a></div>
+        <div style="float:left">Atrás: <a href="Users_And_Accounts.htm">Usuarios y cuentas</a></div>
+        <div style="float:right">Siguiente: <a href="xboxlive_gamerscore_for_user.htm"><span class="notranslate">xboxlive_gamerscore_for_user</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_agegroup_for_user

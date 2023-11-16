@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Method Variables</title>
+  <title>Variables del método</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Page outlining the use of Method Variables" />
   <meta name="rh-index-keywords" content="Method Variables" />
@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Method Variables</h1>
-  <p>A method variable is essentially a variable that has had a function assigned to it, &quot;binding&quot; the function to an instance and enabling you to use the variable to refer to the function - much like you use a <a href="Runtime_Functions.htm">runtime function name</a> to refer to a built-in GML function. The variable used can be <em>local</em>, <em>instance</em> or <em>global</em> in scope (see <a href="Variables_And_Variable_Scope.htm">here</a> for more information on variable scope).</p>
-  <p>Also see: <a data-xref="{title}" href="Script_Functions_vs_Methods.htm">Script Functions vs. Methods</a></p>
-  <h2>Creating Methods</h2>
-  <p>The syntax for creating a method variable is as follows:</p>
+  <h1>Variables del método</h1>
+  <p>Una variable de método es esencialmente una variable a la que se le ha asignado una función, &quot;vinculando&quot; la función a una instancia y permitiéndote usar la variable para referirte a la función - de la misma manera que usas un <a href="Runtime_Functions.htm">nombre de función en tiempo de ejecución</a> para referirte a una función incorporada en <span class="notranslate">GML</span>. La variable utilizada puede ser de ámbito <em>local</em>, de <em>instancia</em> o <em>global</em> (ver <a href="Variables_And_Variable_Scope.htm">aquí</a> para más información sobre el ámbito de las variables).</p>
+  <p>Vea también: <a data-xref="{title}" href="Script_Functions_vs_Methods.htm">Funciones de Script vs. Métodos</a></p>
+  <h2>Creación de métodos</h2>
+  <p>La sintaxis para crear una variable de método es la siguiente:</p>
   <p class="code"><span><span>name = </span>function( parameter1, parameter2, ... )</span><br />
     <span>{</span><br />
     <span>    statement1;</span><br />
@@ -26,7 +26,7 @@
     <span>    ...</span><br />
     <span>}</span>
   </p>
-  <p>or</p>
+  <p>o</p>
   <p class="code"><span>function name( parameter1, parameter2, ... )<br />
       {</span><br />
     <span>    statement1;</span><br />
@@ -34,11 +34,11 @@
     <span>    ...</span><br />
     <span>}</span>
   </p>
-  <p class="note">To create a function in GML Visual, use <a data-xref="{title}" href="../../Drag_And_Drop/Drag_And_Drop_Reference/Common/Declare_A_New_Function.htm">Declare A New Function</a>. Enable its &quot;Temp&quot; option to create a method variable (first syntax shown above).</p>
-  <p>In general, however, you would use the <em>first </em>form for methods, and the second form for defining <a href="Script_Functions.htm">script functions</a>, since the second form will also assign a script index to the function name while the first form will be a &quot;true&quot; method (and require the use of the <a href="Variables/Global_Variables.htm">global</a> prefix if used to define a scripted function).</p>
-  <p class="note"><span class="note">NOTE</span> You can check this by using both forms in project and then calling the runtime function <a href="../GML_Reference/Variable_Functions/typeof.htm">typeof()</a> on each of them. One will be classed as a &quot;number&quot; - since it returns a script index ID - and the other will be classed as a &quot;method&quot;.</p>
-  <p>So, keep in mind that - in general - we will always be referring to functions that have <em>not </em>been defined with a script index when we are talking about methods and method variables. </p>
-  <p>Below you can see three simple examples of creating a method variable using different scopes:</p>
+  <p class="note">Para crear una función en <span class="notranslate">GML</span> Visual, utilice <a data-xref="{title}" href="../../Drag_And_Drop/Drag_And_Drop_Reference/Common/Declare_A_New_Function.htm">Declarar una nueva función</a>. Activa su opción &quot;Temp&quot; para crear una variable de método (primera sintaxis mostrada arriba).</p>
+  <p>En general, sin embargo, se utilizaría la <em>primera </em>forma para los métodos, y la segunda para definir funciones de <a href="Script_Functions.htm">script</a>, ya que la segunda forma también asignará un índice <span class="notranslate">script</span> al nombre de la función, mientras que la primera forma será un método &quot;verdadero&quot; (y requerirá el uso del prefijo <a href="Variables/Global_Variables.htm"><span class="notranslate">global</span></a> si se utiliza para definir una función de script).</p>
+  <p class="note"><span class="note">NOTA</span> Puede comprobarlo utilizando ambos formularios en el proyecto y llamando a la función <span class="notranslate">runtime</span> <a href="../GML_Reference/Variable_Functions/typeof.htm">typeof()</a> en cada uno de ellos. Uno será clasificado como &quot;número&quot; -ya que devuelve un ID de índice <span class="notranslate">script</span> - y el otro será clasificado como &quot;método&quot;.</p>
+  <p>Por lo tanto, ten en cuenta que -en general- siempre nos referiremos a funciones que <em>no </em>han sido definidas con un índice <span class="notranslate">script</span> cuando hablemos de métodos y variables de métodos. </p>
+  <p>A continuación puedes ver tres ejemplos sencillos de creación de una variable de método utilizando diferentes ámbitos:</p>
   <p class="code">// Local<br />
     var _debug = function(message)<br />
     {<br />
@@ -57,9 +57,9 @@
         return point_distance(_x1, _y1, _x2, _y2);<br />
     }
   </p>
-  <p>Notice that in the above code, the various parameters that are given as inputs for the function are all named and these names are what should be used within the function to refer to the different inputs. Also note that you can use the <span class="inline"><a href="Language_Features/return.htm">return</a></span> statement to return a value from a function for use elsewhere in your code, and that a function with <em>no</em> return value defined, will return <span class="inline">undefined</span>.by default.</p>
-  <p class="note"><span class="note">NOTE</span> While the variable will be in the chosen scope, the actual function will be bound to the scope that it was initially defined in. For example, <a href="Script_Functions.htm">script functions</a> are all global scope and &quot;unbound&quot; (ie: they are not associated with any instances), but if you have a script function that creates another function as a method variable within it and then you call this script function from an instance, the function used within the script will <strong>be bound to the instance variable as a method</strong>. In general this is not something you ever need to think about but for more complex operations with method variables it&#39;s worth taking into consideration. This also applies when using other constructs like <a href="Language_Features/with.htm"><span class="inline">with</span></a> - when you create a method variable inside a with, the function will be bound to the instance that is currently in scope.</p>
-  <p>Once created, the method variable can be used just as you would a runtime function or a script function, for example:</p>
+  <p>Observe que en el código anterior, los diversos parámetros que se dan como entradas para la función tienen todos nombres y estos nombres son los que deben usarse dentro de la función para referirse a las diferentes entradas. Observe también que puede utilizar la sentencia <span class="inline"><a href="Language_Features/return.htm">return</a></span> para devolver un valor de una función para utilizarlo en otra parte de su código, y que una función <em>sin</em> valor de retorno definido, devolverá <span class="inline">undefined</span>.por defecto.</p>
+  <p class="note"><span class="note">NOTA</span> Mientras que la variable estará en el ámbito elegido, la función real estará vinculada al ámbito en el que se definió inicialmente. Por ejemplo, <a href="Script_Functions.htm">las funciones de script</a> son todas de ámbito global y &quot;no vinculadas&quot; (es decir, no están asociadas a ninguna instancia), pero si tienes una función <span class="notranslate">script</span> que crea otra función como una variable de método dentro de ella y luego llamas a esta función <span class="notranslate">script</span> desde una instancia, la función utilizada dentro de <span class="notranslate">script</span> <strong>estará vinculada a la variable de instancia como un método</strong>. En general, no es necesario pensar en esto, pero para operaciones más complejas con variables de método vale la pena tenerlo en cuenta. Esto también se aplica cuando se utilizan otras construcciones como <a href="Language_Features/with.htm"><span class="inline">with</span></a> - cuando se crea una variable de método dentro de un with, la función se vinculará a la instancia que esté actualmente en el ámbito.</p>
+  <p>Una vez creada, la variable del método se puede utilizar igual que una función <span class="notranslate">runtime</span> o una función <span class="notranslate">script</span>, por ejemplo:</p>
   <p class="code">create_vec = function(_x1, _y1, _x2, _y2);<br />
     {<br />
         var _array;<br />
@@ -70,34 +70,33 @@
     <br />
     vec = create_vec(x, y, mouse_x, mouse_y);
   </p>
-  <p>Variables created within a function will follow the same rules as normal and will be scoped according to the keyword used or the scope of the function call. In the above example, we use <span class="inline">var</span> so the array variable is in the <em>local </em>scope of the function. If we didn&#39;t use the keyword, then the variable would have been created on the scope of the instance that called the function.</p>
-  <p>Methods, just like script functions, can also take optional arguments that have default values for when they&#39;re not passed in:</p>
+  <p>Las variables creadas dentro de una función seguirán las mismas reglas que las normales y estarán en el ámbito de la palabra clave utilizada o del ámbito de la llamada a la función. En el ejemplo anterior, utilizamos <span class="inline">var</span> para que la variable del array esté en el ámbito <em>local </em>de la función. Si no hubiéramos utilizado la palabra clave, la variable se habría creado en el ámbito de la instancia que llamó a la función.</p>
+  <p>Los métodos, al igual que las funciones de <span class="notranslate">script</span>, también pueden tomar argumentos opcionales que tienen valores por defecto para cuando no se pasan:</p>
   <p class="code">create_attachment = function(_attachment, <strong>_x = x</strong>, <strong>_y = y</strong>)<br />
     {<br />
         return instance_create_layer(_x, _y, layer, _attachment);<br />
     }</p>
-  <p>The above function takes three arguments, where the last two are optional. If they are not passed in when the function is called, then they&#39;ll use the instance&#39;s <span class="inline">x</span> and <span class="inline">y</span> coordinates by default.</p>
-  <p>Note that if an argument is not passed in, and it does not have a default value, then it will be equal to <span class="inline">undefined</span>.</p>
-  <p>Methods can also make use of static variables, which maintain their values throughout every function call. Please <a href="Functions/Static_Variables.htm">read this page</a> for more information.</p>
-  <p>Below we list a few helper functions associated with method variables:</p>
+  <p>La función anterior toma tres argumentos, siendo los dos últimos opcionales. Si no se pasan cuando se llama a la función, entonces se utilizarán las coordenadas de la instancia <span class="inline">x</span> y <span class="inline">y</span> por defecto.</p>
+  <p>Tenga en cuenta que si un argumento no se pasa y no tiene un valor por defecto, entonces será igual a <span class="inline">undefined</span>.</p>
+  <p>Los métodos también pueden hacer uso de variables estáticas, que mantienen sus valores a lo largo de cada llamada a la función. Por favor, <a href="Functions/Static_Variables.htm">lee esta página</a> para más información.</p>
+  <p>A continuación enumeramos algunas funciones de ayuda asociadas a las variables del método:</p>
   <ul class="colour">
-    <li><a href="../GML_Reference/Variable_Functions/is_method.htm">is_method</a></li>
-    <li><a href="../GML_Reference/Variable_Functions/method.htm">method</a></li>
-    <li><a href="../GML_Reference/Variable_Functions/method_get_self.htm">method_get_self</a></li>
-    <li><a href="../GML_Reference/Variable_Functions/method_get_index.htm">method_get_index</a></li>
-    <li><a href="../GML_Reference/Variable_Functions/method_call.htm">method_call</a></li>
+    <li><a href="../GML_Reference/Variable_Functions/is_method.htm"><span class="notranslate">is_method</span></a></li>
+    <li><a href="../GML_Reference/Variable_Functions/method.htm"><span class="notranslate">method</span></a></li>
+    <li><a href="../GML_Reference/Variable_Functions/method_get_self.htm"><span class="notranslate">method_get_self</span></a></li>
+    <li><a href="../GML_Reference/Variable_Functions/method_get_index.htm"><span class="notranslate">method_get_index</span></a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GML_Overview.htm">GML Overview</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Script_Functions_vs_Methods.htm">Script Functions vs. Methods</a></div>
+        <div style="float:left">Atrás: <a href="GML_Overview.htm">Visión general de GML</a></div>
+        <div style="float:right">Siguiente: <a data-xref="{title}" href="Script_Functions_vs_Methods.htm">Funciones de Script vs. Métodos</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Script Functions

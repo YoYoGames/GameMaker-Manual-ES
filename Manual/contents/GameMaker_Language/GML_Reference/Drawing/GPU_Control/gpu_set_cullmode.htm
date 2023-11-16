@@ -6,7 +6,7 @@
   <title>gpu_set_cullmode</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for the function gpu_set_cullmode" />
   <meta name="rh-index-keywords" content="gpu_set_cullmode,cull_noculling,cull_clockwise,cull_counterclockwise" />
@@ -15,66 +15,66 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gpu_set_cullmode</h1>
-  <p>This function can be used to set the backface culling mode. A polygon (primitive) has a <i>front</i> and a <i>back</i> side. The front side is said to be the side where the vertices are defined in <b>counter-clockwise</b> order. Normally both sides are drawn, but if you make a closed shape (like a pyramid) then this is a waste of processing power because the back side of the triangle can never be seen. It&#39;s in these cases that you can switch on backface culling, as this saves about half the amount of drawing time, although it means you have the task of defining your polygons in the correct way to prevent issues.</p>
-  <p>The cull mode value used must be one of the following constants (the default value is <span class="inline">cull_noculling</span>):</p>
+  <p>Esta función se puede utilizar para establecer el modo de eliminación de la cara posterior. Un polígono (primitivo) tiene una cara <i>frontal</i> y otra <i>trasera</i>. Se dice que el lado frontal es el lado donde los vértices están definidos en orden <b>contrario a las agujas del reloj</b>. Normalmente se dibujan ambos lados, pero si haces una forma cerrada (como una pirámide) entonces esto es un desperdicio de poder de procesamiento porque el lado posterior del triángulo nunca puede ser visto. Es en estos casos en los que puedes <span class="notranslate">switch</span> en la selección de la cara posterior, ya que esto ahorra aproximadamente la mitad del tiempo de dibujo, aunque significa que tienes la tarea de definir tus polígonos de la manera correcta para evitar problemas.</p>
+  <p>El valor del modo de sacrificio utilizado debe ser una de las siguientes constantes (el valor por defecto es <span class="inline">cull_noculling</span>):</p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>Constante</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td><span class="inline">cull_noculling</span></td>
-        <td>No culling will be done</td>
+        <td><span class="notranslate"><span class="inline">cull_noculling</span></td>
+        <td>No se hará ningún sacrificio</td>
       </tr>
       <tr>
-        <td><span class="inline">cull_clockwise</span></td>
-        <td>All clockwise triangles will be culled</td>
+        <td><span class="notranslate"><span class="inline">cull_clockwise</span></td>
+        <td>Todos los triángulos en el sentido de las agujas del reloj serán eliminados</td>
       </tr>
       <tr>
-        <td><span class="inline">cull_counterclockwise</span></td>
-        <td>All counter-clockwise triangles will be culled</td>
+        <td><span class="notranslate"><span class="inline">cull_counterclockwise</span></td>
+        <td>Todos los triángulos en sentido contrario a las agujas del reloj serán eliminados</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">gpu_set_cullmode(cullmode);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>cullmode</td>
-        <td><span data-keyref="Type_Constant_CullMode">Culling Mode Constant</span></td>
-        <td>The cull mode to use (see list above)</td>
+        <td><span class="notranslate">cullmode</span></td>
+        <td><span data-keyref="Type_Constant_CullMode">Modo de sacrificio constante</span></td>
+        <td><span class="notranslate">The cull mode to use (see list above)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">if gpu_get_cullmode() != cull_clockwise<br />
     {<br />
         gpu_set_cullmode(cull_clockwise);<br />
     }</p>
-  <p>The above code gets the current cull mode and if it is not <span class="inline">cull_clockwise</span> it is set to that constant.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior obtiene el modo de sacrificio actual y si no es <span class="inline">cull_clockwise</span> se establece en esa constante.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GPU_Control.htm">GPU Control</a></div>
-        <div style="float:right">Next: <a href="gpu_set_blendmode.htm">gpu_set_blendmode</a></div>
+        <div style="float:left">Atrás: <a href="GPU_Control.htm">Control de la GPU</a></div>
+        <div style="float:right">Siguiente: <a href="gpu_set_blendmode.htm"><span class="notranslate">gpu_set_blendmode</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_cullmode

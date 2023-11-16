@@ -3,51 +3,51 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Steam</title>
+  <title>Vapor</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing the Steam async event." />
   <meta name="rh-index-keywords" content="Objects - Async Steam Event" />
-  <meta name="search-keywords" content="Steam,ugc_item_installed,ugc_item_subscribed,ugc_item_unsubscribed,ev_async_web_steam" />
+  <meta name="search-keywords" content="Steam,ev_web_steam,ugc_item_installed,ugc_item_subscribed,ugc_item_unsubscribed" />
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Steam</h1>
-  <p><img alt="Steam Event" class="center" src="../../../assets/Images/Asset_Editors/Async_Steam.png" />This event can only be triggered by <a class="glossterm" data-glossterm="callback" href="#">callback</a><span class="glossextra">s</span> from some of the <a href="../../../GameMaker_Language/GML_Reference/Steam/Steam.htm">Steam extension</a> functions and will return a <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS Map</a> stored in the variable <a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>, containing different key/value pairs depending on the call-back from the function that has triggered the event. The map will always contain the key &quot;<span class="inline">event_type</span>&quot; which can then be parsed to find the type of function that triggered the event and change the code required to suit.</p>
-  <p>When calling any function that triggers this event, it will generate a unique async ID value which should be stored in a variable and checked, as the async_load map will always contain an ID key which you can then parse and ensure that you are responding to the correct event. In fact, the map will always hold the following keys, regardless of the Steam function used to generate the async response:</p>
+  <h1>Vapor</h1>
+  <p><img>Este evento sólo puede ser activado por <a class="glossterm" data-glossterm="llamada de retorno" href="#">devoluciones de llamada</a>de algunas de las funciones de la <a href="../../../GameMaker_Language/GML_Reference/Steam/Steam.htm">extensión de Steam</a> y devolverá un <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">Mapa DS</a> almacenado en la variable <a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>que contiene diferentes pares clave/valor dependiendo de la llamada de retorno de la función que ha disparado el evento. El mapa siempre contendrá la clave &quot;<span class="inline">event_type</span>&quot; que puede ser analizada para encontrar el tipo de función que ha activado el evento y cambiar el código requerido para adaptarse.</p>
+  <p>Cuando se llama a cualquier función que desencadena este evento, generará un valor único de ID asíncrono que debe ser almacenado en una variable y comprobado, ya que el mapa async_load siempre contendrá una clave de ID que luego puedes analizar y asegurarte de que estás respondiendo al evento correcto. De hecho, el mapa siempre contendrá las siguientes claves, independientemente de la función <span class="notranslate">Steam</span> utilizada para generar la respuesta asíncrona:</p>
   <ul class="colour">
-    <li>&quot;<span class="inline">id</span>&quot; - The async ID returned by the function that triggered the event</li>
-    <li>&quot;<span class="inline">result</span>&quot; - The result of the operation (a real value). This will either be the GML constant <span class="inline">ugc_result_success</span> or some other real number. You should check for this constant to ensure that the call was successful, and if another value is returned something has not worked correctly. The rest of the possible values returned are shown as the result of the Steam &quot;<span class="inline">EResult</span>&quot; value and you should see <span class="inline">steamclientpublic.h</span> in the SDK headers for all possible values.</li>
-    <li>&quot;<span class="inline">event_type</span>&quot; - A string denoting the type of event (see below for the details)</li>
+    <li>&quot;<span class="inline">id</span>&quot; - El ID asíncrono devuelto por la función que desencadenó el evento</li>
+    <li>&quot;<span class="inline">result</span>&quot; - El resultado de la operación (un valor real). Será la constante <span class="notranslate">GML</span> <span class="inline">ugc_result_success</span> o algún otro número real. Deberá comprobar esta constante para asegurarse de que la llamada ha tenido éxito, y si se devuelve otro valor algo no ha funcionado correctamente. El resto de los posibles valores devueltos se muestran como el resultado del valor <span class="notranslate">Steam</span> &quot;<span class="inline">EResult</span>&quot; y debería ver <span class="inline">steamclientpublic.h</span> en las cabeceras del SDK para todos los valores posibles.</li>
+    <li>&quot;<span class="inline">event_type</span>&quot; - Un <span class="notranslate">string</span> que denota el tipo de evento (ver más abajo para los detalles)</li>
   </ul>
-  <p> </p>
-  <h2>Uploading Data</h2>
-  <p>When using the Steam functions for uploading a leaderboard (either <span class="inline">steam_upload_score()</span> or <span class="inline">steam_upload_score_buffer()</span>) the returned DS map will have the following key/value pairs:</p>
+  <p> </p>
+  <h2>Carga de datos</h2>
+  <p>Cuando se utilizan las funciones de <span class="notranslate">Steam</span> para cargar una tabla de clasificación (ya sea <span class="inline">steam_upload_score()</span> o <span class="inline">steam_upload_score_buffer()</span>) el mapa DS devuelto tendrá los siguientes pares clave/valor:</p>
   <ul class="colour">
-    <li>&quot;<span class="inline">event_type</span>&quot; - This key will hold the value &quot;<span class="inline">leaderboard_upload</span>&quot;</li>
-    <li>&quot;<span class="inline">post_id</span>&quot; - This key should match the ID value returned by the upload calling function</li>
-    <li>&quot;<span class="inline">lb_name</span>&quot; - This key holds the name of the leaderboard which was posted to</li>
-    <li>&quot;<span class="inline">success</span>&quot; - Will be 1 if the post succeeded, 0 failed</li>
-    <li>&quot;<span class="inline">updated</span>&quot; - Will be 1 if the leaderboard score was actually updated (ie: the new score was better) or 0 otherwise</li>
-    <li>&quot;<span class="inline">score</span>&quot; - This key holds the score which was posted</li>
+    <li>&quot;<span class="inline">event_type</span>&quot; - Esta clave mantendrá el valor &quot;<span class="inline">leaderboard_upload</span>&quot;</li>
+    <li>&quot;<span class="inline">post_id</span>&quot; - Esta clave debe coincidir con el valor de identificación devuelto por la función que llama a la carga</li>
+    <li>&quot;<span class="inline">lb_name</span>&quot; - Esta clave contiene el nombre de la tabla de clasificación que se publicó en</li>
+    <li>&quot;<span class="inline">success</span>&quot; - Será 1 si el envío tuvo éxito, 0 falló</li>
+    <li>&quot;<span class="inline">updated</span>&quot; - Será 1 si la puntuación de la tabla de clasificación fue realmente actualizada (es decir, la nueva puntuación fue mejor) o 0 en caso contrario</li>
+    <li>&quot;<span class="inline">score</span>&quot; - Esta tecla contiene la puntuación que se ha contabilizado</li>
   </ul>
-  <p>You can see examples of this on the pages for the score upload functions.</p>
-  <p> </p>
-  <h2>Downloading Leaderboards</h2>
-  <p>When using the Steam functions for downloading a leaderboard (<span class="inline">steam_download_scores()</span>, <span class="inline">steam_download_scores_around_user()</span> or <span class="inline">steam_download_friends_scores()</span>) the returned DS map will have the following key/value pairs:</p>
+  <p>Puede ver ejemplos de esto en las páginas de las funciones de carga de partituras.</p>
+  <p> </p>
+  <h2>Descarga de tablas de clasificación</h2>
+  <p>Cuando se utilizan las funciones de <span class="notranslate">Steam</span> para descargar una tabla de clasificación (<span class="inline">steam_download_scores()</span>, <span class="inline">steam_download_scores_around_user()</span> o <span class="inline">steam_download_friends_scores()</span>) el mapa DS devuelto tendrá los siguientes pares clave/valor:</p>
   <ul class="colour">
-    <li>&quot;<span class="inline">event_type</span>&quot; - This key will hold the value &quot;<span class="inline">leaderboard_download</span>&quot;</li>
-    <li>&quot;<span class="inline">id</span>&quot; - This key should match the ID value returned by the download calling function</li>
-    <li>&quot;<span class="inline">status</span>&quot; - The status of the callback, where -1 equals a failure or that no results were returned, and 0 equals a success.</li>
-    <li>&quot;<span class="inline">lb_name</span>&quot; - This key holds the name of the leaderboard which was posted to</li>
-    <li>&quot;<span class="inline">numEntries</span>&quot; - The number of &quot;rows&quot; of leaderboard data that is being returned.</li>
-    <li>&quot;<span class="inline">entries</span>&quot; - A JSON object string that contains another DS map, which will either contain the key &quot;<span class="inline">default</span>&quot; (signifying that no results are contained within) or the key &quot; <span class="inline">entries</span>&quot;, which you can then get the value of. This returned value for &quot;<span class="inline">entries</span>&quot; will be a <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Lists/DS_Lists.htm">DS list</a> containing each of the ranks from the leaderboard, where each entry in the list will itself reference another DS Map which will contain the keys &quot;<span class="inline">name</span>&quot;, &quot;<span class="inline">score</span>&quot; and &quot; <span class="inline">rank</span>&quot;, and it may also contain a &quot;<span class="inline">data</span>&quot; key depending on the function used to upload.</li>
+    <li>&quot;<span class="inline">event_type</span>&quot; - Esta clave mantendrá el valor &quot;<span class="inline">leaderboard_download</span>&quot;</li>
+    <li>&quot;<span class="inline">id</span>&quot; - Esta clave debe coincidir con el valor de identificación devuelto por la función que llama a la descarga</li>
+    <li>&quot;<span class="inline">status</span>&quot; - El estado de la llamada de retorno, donde -1 equivale a un fallo o a que no se han devuelto resultados, y 0 equivale a un éxito.</li>
+    <li>&quot;<span class="inline">lb_name</span>&quot; - Esta clave contiene el nombre de la tabla de clasificación que se publicó en</li>
+    <li>&quot;<span class="inline">numEntries</span>&quot; - El número de &quot;filas&quot; de datos de la tabla de clasificación que se devuelve.</li>
+    <li>&quot;<span class="inline">entries</span>&quot; - Un JSON <span class="notranslate">object</span> <span class="notranslate">string</span> que contiene otro mapa DS, el cual contendrá la clave &quot;<span class="inline">default</span>&quot; (lo que significa que no hay resultados dentro) o la clave &quot; <span class="inline">entries</span>&quot;, de la cual se puede obtener el valor. Este valor devuelto para &quot;<span class="inline">entries</span>&quot; será una <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Lists/DS_Lists.htm">lista DS</a> que contendrá cada uno de los rangos de la tabla de clasificación, donde cada entrada de la lista hará referencia a su vez a otro mapa DS que contendrá las claves &quot;<span class="inline">name</span>&quot;, &quot;<span class="inline">score</span>&quot; y &quot; <span class="inline">rank</span>&quot;, y también puede contener una clave &quot;<span class="inline">data</span>&quot; dependiendo de la función utilizada para la carga.</li>
   </ul>
-  <p>We will show an example of how downloading score data works by requesting the top ten ranking for the given leaderboard and parsing its results in the Steam Async Event (for uploading examples, please see the appropriate function pages). To start with we need to request the scores with the following code:</p>
+  <p>Mostraremos un ejemplo de cómo funciona la descarga de datos de puntuaciones solicitando la clasificación de los diez primeros de la tabla de clasificación dada y analizando sus resultados en el evento asíncrono <span class="notranslate">Steam</span> (para los ejemplos de carga, consulte las páginas de funciones correspondientes). Para empezar necesitamos solicitar las puntuaciones con el siguiente código:</p>
   <p class="code">score_get = steam_download_scores(&quot;Game Scores&quot;, 1, 10);</p>
-  <p>This will send off a request to the Steam Server for the scores from the leaderboard &quot;Game Scores&quot;, storing the async ID of the request in the variable &quot;<span class="inline">score_get</span>&quot;. This will then be handled in the <strong>Steam Async Event</strong> in the following way:</p>
+  <p>Esto enviará una petición a <span class="notranslate">Steam</span> <span class="notranslate">Server</span> para las puntuaciones de la tabla de clasificación &quot;Game Scores&quot;, almacenando el ID asíncrono de la petición en la variable &quot;<span class="inline">score_get</span>&quot;. Esto será entonces manejado en el <strong>Evento Asíncrono de Steam</strong> de la siguiente manera:</p>
   <p class="code">var async_id = ds_map_find_value(async_load, &quot;id&quot;);<br />
     if async_id == score_get<br />
        {<br />
@@ -83,42 +83,44 @@
           }<br />
        ds_map_destroy(map)<br />
        }</p>
-  <p>What we do here is first check the &quot;<span class="inline">id</span>&quot; key of the special async_load map. If this value is the same as the value of the original callback function (stored in the &quot;<span class="inline">score_get</span>&quot; variable) we then continue to process the data. The first thing we do is parse the <span class="inline">async_load</span> DS Map for the key &quot;<span class="inline">entries</span>&quot; which will contain a JSON object containing the leaderboard data. This JSON object is then decoded (see <a href="../../../GameMaker_Language/GML_Reference/File_Handling/Encoding_And_Hashing/json_decode.htm"><span class="inline">json_decode()</span></a>) as another DS Map, and this new map ID is stored in the variable &quot;<span class="inline">map</span>&quot;.</p>
-  <p>This map is checked for the key &quot;<span class="inline">default</span>&quot; and if that is found then the map is destroyed and the event is exited. If no &quot;<span class="inline">default</span>&quot; key is found, the code will then parse the map to extract the necessary information about the leaderboard, by first extracting a DS List from the &quot;<span class="inline">entries</span>&quot; key of the DS Map, and then looping through each entry of the list to get another DS Map with the <span class="inline">name</span>, <span class="inline">score</span> and <span class="inline">rank</span> of each entry. These values are then stored in arrays and then we check to see if there is an additional &quot;<span class="inline">data</span>&quot; key. If there is (ie: the score was uploaded with an additional data package) then we also parse that and send it to the compiler console for debugging, before destroying the buffer and then continuing on to destroy the map. Note that if the &quot; <span class="inline">data</span>&quot; key is included, it needs to be decoded using the <a href="../../../GameMaker_Language/GML_Reference/Buffers/buffer_base64_decode.htm"><span class="inline">buffer_base64_decode()</span></a> function before it can be correctly read.</p>
-  <p>Once the loop has finished, the entries list is destroyed as is the map that it was taken from. There is no need to destroy the <span class="inline">async_load</span> DS Map as this is handled for you by <span data-keyref="GameMaker Name">GameMaker</span>.</p>
-  <p> </p>
-  <h2>Downloading UGC (user Generated Content)</h2>
-  <p>When using the Steam functions for downloading User Generated Content (UGC), a number of them will trigger this event. However, each function will generate an <span class="inline">async_load</span> DS Map with differing key/value pairs (although they will always contain the general &quot;<span class="inline">id</span>&quot;, &quot;<span class="inline">result</span>&quot; and &quot;<span class="inline">event_type</span>&quot; keys), so please see the page specific to the function being used for details and examples.</p>
-  <p> </p>
-  <h2>Unique UGC Events</h2>
-  <p>The Steam Async Event can also be triggered when a user subscribes to an item outside of the game - for example, they tab away to a browser and subscribe to a new item then tab back to the game. In these cases the <span class="inline">async_load</span> map will only contain the following details (and none of the default values listed at the top of this page):</p>
+  <p>Lo que hacemos aquí es comprobar primero la clave &quot;<span class="inline">id</span>&quot; del mapa especial async_load. Si este valor es el mismo que el de la función callback original (almacenado en la variable &quot;<span class="inline">score_get</span>&quot;) entonces continuamos procesando los datos. Lo primero que hacemos es analizar el mapa DS de <span class="inline">async_load</span> en busca de la clave &quot;<span class="inline">entries</span>&quot; que contendrá un JSON <span class="notranslate">object</span> que contiene los datos de la tabla de clasificación. Este JSON <span class="notranslate">object</span> se decodifica (ver <a href="../../../GameMaker_Language/GML_Reference/File_Handling/Encoding_And_Hashing/json_decode.htm"><span class="inline">json_decode()</span></a>) como otro Mapa DS, y este nuevo ID de mapa se almacena en la variable &quot;<span class="inline">map</span>&quot;.</p>
+  <p>Este mapa se comprueba en busca de la clave &quot;<span class="inline">default</span>&quot; y si se encuentra entonces el mapa se destruye y se sale del evento. Si no se encuentra la clave &quot;<span class="inline">default</span>&quot;, el código analizará el mapa para extraer la información necesaria sobre la tabla de posiciones, extrayendo primero una Lista DS de la clave &quot;<span class="inline">entries</span>&quot; del Mapa DS, y luego recorriendo cada entrada de la lista para obtener otro Mapa DS con los valores <span class="inline">name</span>, <span class="inline">score</span> y <span class="inline">rank</span> de cada entrada. Estos valores se almacenan en arrays y luego se comprueba si hay una clave adicional &quot;<span class="inline">data</span>&quot;. Si la hay (es decir, la partitura fue cargada con un paquete de datos adicional) entonces también la analizamos y la enviamos a la consola del compilador para <span class="notranslate">debugging</span>, antes de destruir el <span class="notranslate">buffer</span> y continuar con la destrucción del mapa. Tenga en cuenta que si se incluye la clave &quot; <span class="inline">data</span>&quot;, es necesario decodificarla mediante la función <a href="../../../GameMaker_Language/GML_Reference/Buffers/buffer_base64_decode.htm"><span class="inline">buffer_base64_decode()</span></a> antes de que pueda ser leída correctamente.</p>
+  <p>Una vez que el <span class="notranslate">loop</span> ha terminado, la lista de entradas se destruye al igual que el mapa del que se tomó. No es necesario destruir el mapa <span class="inline">async_load</span> DS, ya que <span data-keyref="GameMaker Name">GameMaker</span> se encarga de ello.</p>
+  <p> </p>
+  <h2>Descarga de CGU (contenido generado por el usuario)</h2>
+  <p>Al utilizar las funciones de <span class="notranslate">Steam</span> para descargar Contenido Generado por el Usuario (CGU), varias de ellas activarán este evento. Sin embargo, cada función generará un mapa DS de <span class="inline">async_load</span> con diferentes pares de claves/valores (aunque siempre contendrán las claves generales &quot;<span class="inline">id</span>&quot;, &quot;<span class="inline">result</span>&quot; y &quot;<span class="inline">event_type</span>&quot;), por lo que le rogamos que consulte la página específica de la función que esté utilizando para obtener detalles y ejemplos.</p>
+  <p> </p>
+  <h2>Eventos únicos de UGC</h2>
+  <p>El evento <span class="notranslate">Steam</span> Async también puede ser disparado cuando un usuario se suscribe a un ítem fuera del juego - por ejemplo, se alejan de un navegador y se suscriben a un nuevo ítem y luego regresan al juego. En estos casos, el mapa <span class="inline">async_load</span> sólo contendrá los siguientes detalles (y ninguno de los valores por defecto listados en la parte superior de esta página):</p>
   <ul class="colour">
-    <li>&quot;<span class="inline">event_type</span>&quot; - This key will hold the constant <span class="inline">ugc_item_installed</span>.</li>
-    <li>&quot;<span class="inline">published_file_id</span>&quot; - the ID of the newly installed UGC item (you can use the function <span class="inline">steam_ugc_get_item_install_info()</span> to get the path to the installed item)</li>
+    <li>&quot;<span class="inline">event_type</span>&quot; - Esta tecla mantendrá la constante <span class="inline">ugc_item_installed</span>.</li>
+    <li>&quot;<span class="inline">published_file_id</span>&quot; - el ID del elemento UGC recién instalado (puede utilizar la función <span class="inline">steam_ugc_get_item_install_info()</span> para obtener el <span class="notranslate">path</span> al elemento instalado)</li>
   </ul>
-  <p>The Steam Async event can also be triggered when a workshop item is subscribed to - either from within the app, or externally from a workshop browser - and in these cases the <span class="inline">async_load</span> map will contain the following key/value pairs:</p>
+  <p>El evento <span class="notranslate">Steam</span> Async también puede activarse cuando se suscribe un elemento del taller - ya sea desde la aplicación o externamente desde un navegador de talleres - y en estos casos el mapa <span class="inline">async_load</span> contendrá los siguientes pares clave/valor:</p>
   <ul class="colour">
-    <li>&quot;<span class="inline">event_type</span>&quot; - This key will hold the constant <span class="inline">ugc_item_subscribed</span>.</li>
-    <li>&quot;<span class="inline">published_file_id</span>&quot; : This key has the published file ID of the newly subscribed item</li>
+    <li>&quot;<span class="inline">event_type</span>&quot; - Esta tecla mantendrá la constante <span class="inline">ugc_item_subscribed</span>.</li>
+    <li>&quot;<span class="inline">published_file_id</span>&quot; : Esta clave tiene el ID de archivo publicado del elemento recién suscrito</li>
   </ul>
-  <p>The event will be triggered should any item be un-subscribed too, with the DS map holding the following:</p>
+  <p>El evento se activará en caso de que cualquier elemento se desabone también, con el mapa DS que contiene lo siguiente:</p>
   <ul class="colour">
-    <li>&quot;<span class="inline">event_type</span>&quot; - This key will hold the constant <span class="inline">ugc_item_unsubscribed</span>.</li>
-    <li>&quot;<span class="inline">published_file_id</span>&quot; : This key has the published file ID of the un-subscribed item</li>
+    <li>&quot;<span class="inline">event_type</span>&quot; - Esta tecla mantendrá la constante <span class="inline">ugc_item_unsubscribed</span>.</li>
+    <li>&quot;<span class="inline">published_file_id</span>&quot; : Esta clave tiene el ID de archivo publicado del elemento no suscrito</li>
   </ul>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Async_Events.htm">Async Events</a></div>
-        <div style="float:right">Next: <a href="System.htm">System</a></div>
+        <div style="float:left">Atrás: <a href="../Async_Events.htm">Eventos asíncronos</a></div>
+        <div style="float:right">Siguiente: <a href="System.htm">Sistema</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
-Asynchronous Steam Event
+Asynchronous <span class="notranslate">Steam</span> Event
+async_load
 ugc_result_success
 ugc_item_installed
 ev_web_steam

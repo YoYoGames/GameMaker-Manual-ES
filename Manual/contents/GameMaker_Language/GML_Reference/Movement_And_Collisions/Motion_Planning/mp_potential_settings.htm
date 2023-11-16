@@ -6,7 +6,7 @@
   <title>mp_potential_settings</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="This page outlines the function mp_potential_settings" />
   <meta name="rh-index-keywords" content="mp_potential_settings" />
@@ -16,58 +16,58 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>mp_potential_settings</h1>
-  <p>The <span class="inline">mp_potential_</span> functions do their work using a number of parameters that can be changed using this function. Globally the method works as follows: it first tries to move straight towards the goal, looking a number of steps ahead which can be set with the parameter &quot;ahead&quot; (default value is 3). Reducing this value means that the instance will start changing direction later as it doesn&#39;t &quot;see&quot; as far ahead, and increasing it means it will start changing direction earlier. If this check leads to a collision then it starts looking at directions more to the left and to the right of the ideal, straight-line direction. It does this in steps of size &quot;rotstep&quot; (default value is 10), and reducing this gives the instance more movement possibilities but will be slower as it needs more processing power.</p>
-  <p>The parameter &quot;maxrot&quot; is a bit more difficult to explain! The instance has a current direction of movement, and maxrot (default value is 30) indicates how much it is allowed to vary its direction either side of that current direction in one step. So even if it can move e.g. straight to the goal it will only do so if it does not violate this maximal change of direction. If you make maxrot a large value then the instance can change direction a lot in each step, and this will make it easier to find a short path but the path will be uglier and less natural. If you make the value smaller then the path will be smoother but it might take longer detours (and sometimes even fail to find the goal). Finally, When no step can be made the behavior depends on the value of the parameter &quot;onspot&quot;. If onspot is true (the default value), then the instance will rotate on its spot by the amount indicated with &quot;maxrot&quot; and if it is false it will not move at all. Setting it to false is useful for e.g. cars but reduces the chance of the instance finding a path.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Las funciones de <span class="inline">mp_potential_</span> hacen su trabajo usando un número de parámetros que pueden ser cambiados usando esta función. Globalmente, el método funciona de la siguiente manera: primero intenta moverse en línea recta hacia la meta, mirando un número de pasos por delante que se puede establecer con el parámetro &quot;ahead&quot; (el valor por defecto es 3). Reducir este valor significa que la instancia empezará a cambiar de dirección más tarde, ya que no &quot;ve&quot; tan lejos, y aumentarlo significa que empezará a cambiar de dirección antes. Si esta comprobación conduce a una colisión, entonces empieza a mirar las direcciones más a la izquierda y a la derecha de la dirección ideal, en línea recta. Lo hace en pasos de tamaño &quot;rotstep&quot; (el valor por defecto es 10), y reducirlo da a la instancia más posibilidades de movimiento, pero será más lento ya que necesita más potencia de procesamiento.</p>
+  <p>El parámetro &quot;maxrot&quot; es un poco más difícil de explicar. La instancia tiene una dirección de movimiento actual, y maxrot (el valor por defecto es 30) indica cuánto se le permite variar su dirección a cualquier lado de esa dirección actual en un paso. Así que incluso si puede moverse, por ejemplo, directamente a la meta, sólo lo hará si no viola este cambio máximo de dirección. Si haces que el valor de maxrot sea grande, entonces la instancia puede cambiar mucho de dirección en cada paso, y esto hará más fácil encontrar un corto <span class="notranslate">path</span> pero el <span class="notranslate">path</span> será más feo y menos natural. Si haces el valor más pequeño entonces el <span class="notranslate">path</span> será más suave pero podría tomar desvíos más largos (y a veces incluso fallar en encontrar la meta). Por último, cuando no se puede hacer ningún paso el comportamiento depende del valor del parámetro &quot;onspot&quot;. Si onspot es verdadero (el valor por defecto), entonces la instancia rotará sobre su punto en la cantidad indicada con &quot;maxrot&quot; y si es falso no se moverá en absoluto. Ponerlo en falso es útil para, por ejemplo, los coches, pero reduce la posibilidad de que la instancia encuentre un <span class="notranslate">path</span>.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">mp_potential_settings(maxrot, rotstep, ahead, onspot)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>maxrot</td>
+        <td><span class="notranslate">maxrot</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The number of degrees either side of the current direction that the instance can rotate in a step</td>
+        <td><span class="notranslate">The number of degrees either side of the current direction that the instance can rotate in a step</span></td>
       </tr>
       <tr>
-        <td>rotstep</td>
+        <td><span class="notranslate">rotstep</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The number of degrees either side of the current direction that the instance can check for a collision</td>
+        <td><span class="notranslate">The number of degrees either side of the current direction that the instance can check for a collision</span></td>
       </tr>
       <tr>
-        <td>ahead</td>
+        <td><span class="notranslate">ahead</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The number of steps ahead that the instance can check for a collision. Larger values are slower than lower ones.</td>
+        <td><span class="notranslate">The number of steps ahead that the instance can check for a collision. Larger values are slower than lower ones.</span></td>
       </tr>
       <tr>
-        <td>onspot</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Use this to allow the instance to rotate on the spot when no path is found (true) or not (false)</td>
+        <td><span class="notranslate">onspot</span></td>
+        <td><span data-keyref="Type_Bool">Booleano</span></td>
+        <td><span class="notranslate">Use this to allow the instance to rotate on the spot when no path is found (true) or not (false)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">mp_potential_settings(45, 5, 5, 0);</p>
-  <p>The above code will set the <span class="inline">mp_potential_</span> functions to use the following settings: the instance can look ahead five steps, change direction 45 degrees each step, look 5 degrees either side of the current direction if there is an obstacle and not rotate on the spot of there is a collision.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior configurará las funciones de <span class="inline">mp_potential_</span> para que utilicen los siguientes ajustes: la instancia puede mirar hacia delante cinco pasos, cambiar de dirección 45 grados en cada paso, mirar 5 grados a cada lado de la dirección actual si hay un obstáculo y no girar en el lugar si hay una colisión.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Motion_Planning.htm">Motion Planning</a></div>
-        <div style="float:right">Next: <a href="mp_potential_step.htm">mp_potential_step</a></div>
+        <div style="float:left">Atrás: <a href="Motion_Planning.htm">Planificación del movimiento</a></div>
+        <div style="float:right">Siguiente: <a href="mp_potential_step.htm"><span class="notranslate">mp_potential_step</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 mp_potential_settings

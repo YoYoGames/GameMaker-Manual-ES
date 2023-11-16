@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>collision_ellipse_list</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>lista_de_colisión_de_elipso</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that gives an overview of the funtion collision_ellipse_list" />
   <meta name="rh-index-keywords" content="collision_ellipse_list" />
@@ -15,72 +15,72 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>collision_ellipse_list</h1>
-  <p>This function is the same as the <a href="collision_ellipse.htm"><span class="inline">collision_ellipse()</span></a> function, only instead of just detecting one instance / tile map in collision at a time, it will detect multiple instances or tile maps. You supply the x/y positions of the top left and bottom right of the elliptical area to check along with the object / tile map to check for, and you can set the check to be precise (in which case all instances being checked will need to have <i>precise</i> collision masks) and whether the check should include the calling instance or not.</p>
-  <p>You supply a <a href="../../Data_Structures/DS_Lists/DS_Lists.htm">DS list</a> too, so the <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><span class="inline">id</span></a> values of any instances (or tile maps) that are colliding with the calling instance will be added to the end of the given list. You can <a href="../../Data_Structures/DS_Lists/ds_list_clear.htm">clear</a> the list before calling this function so that it only contains results from this function call. You also have the option to order the instances based on their distances from the origin of the elliptic area to their origins. The function returns the number of instances / tile maps found, or 0 if none are found.</p>
-  <div data-conref="../../../../assets/snippets/Collisions_function_accepted_arguments.hts"> </div>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>lista_de_colisión_de_elipso</h1>
+  <p>Esta función es la misma que la función <a href="collision_ellipse.htm"><span class="inline">collision_ellipse()</span></a> sólo que en lugar de detectar una instancia en colisión a la vez, detectará múltiples instancias. Usted suministra las posiciones x/y de la parte superior izquierda e inferior derecha del área elíptica a comprobar junto con la <span class="notranslate">object</span> a comprobar, y puede establecer que la comprobación sea precisa (en cuyo caso todas las instancias que se comprueben deberán tener máscaras de colisión <i>precisas</i> ) y si la comprobación debe incluir la instancia que llama o no.</p>
+  <p>También se suministra una lista <a href="../../Data_Structures/DS_Lists/DS_Lists.htm">DS</a>, por lo que los <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><span class="inline">id</span></a> de cualquier instancia que colisione con la instancia que llama se añadirá al final de la lista dada. Puedes <a href="../../Data_Structures/DS_Lists/ds_list_clear.htm">borrar</a> la lista antes de llamar a esta función para que sólo contenga los resultados de esta llamada a la función. También tiene la opción de ordenar las instancias en base a sus distancias desde el origen del área elíptica a sus orígenes. La función devuelve el número de instancias encontradas, o 0 si no se encuentra ninguna.</p>
+  <p>Tenga en cuenta que en lugar de un índice <span class="notranslate">object</span> puede suministrar la <a href="../../../GML_Overview/Instance_Keywords.htm">palabra clave de instancia</a> <span class="inline">all</span>, para buscar todas las instancias en el <span class="notranslate">room</span> actual, que puede incluir la instancia que ejecuta el código (dependiendo del argumento <span class="inline">notme</span> ).</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">collision_ellipse_list(x1, y1, x2, y2, obj, prec, notme, list, ordered);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>x1</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The x coordinate of the left side of the ellipse to check.</td>
+        <td><span class="notranslate">x1</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The x coordinate of the left side of the ellipse to check.</span></td>
       </tr>
       <tr>
-        <td>y1</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The y coordinate of the top side of the ellipse to check.</td>
+        <td><span class="notranslate">y1</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The y coordinate of the top side of the ellipse to check.</span></td>
       </tr>
       <tr>
-        <td>x2</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The x coordinate of the right side of the ellipse to check.</td>
+        <td><span class="notranslate">x2</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The x coordinate of the right side of the ellipse to check.</span></td>
       </tr>
       <tr>
-        <td>y2</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The y coordinate of the bottom side of the ellipse to check.</td>
+        <td><span class="notranslate">y2</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The y coordinate of the bottom side of the ellipse to check.</span></td>
       </tr>
       <tr>
-        <td>obj</td>
-        <td><span data-keyref="Collision_obj_type"><span data-keyref="Type_Asset_Object"><a href="The_Asset_Editors/Objects.htm" target="_blank">Object Asset</a></span> or <span data-keyref="Type_ID_Instance"><a href="GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/id.htm" target="_blank">Object Instance</a></span> or <span data-keyref="Type_ID_Element_Tilemap"><a href="GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/layer_tilemap_get_id.htm" target="_blank">Tile Map Element ID</a></span> or <span data-keyref="Type_Array"><a href="GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span></span></td>
-        <td><span data-keyref="Collision_obj_description">An object, instance, tile map ID, keywords all/other, or array containing these items</span></td>
+        <td><span class="notranslate">obj</span></td>
+        <td><span data-keyref="Type_Asset_Object">Activo del objeto</span> o <span data-keyref="Type_ID_Instance">ID de la instancia</span></td>
+        <td><span class="notranslate">The object to check for instance collisions.</span></td>
       </tr>
       <tr>
-        <td>prec</td>
-        <td><span data-keyref="Type_Bool"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Whether the check is based on precise collisions (<span class="inline">true</span>, which is slower) or its bounding box in general (<span class="inline">false</span>, faster).</td>
+        <td><span class="notranslate">prec</span></td>
+        <td><span data-keyref="Type_Bool">Booleano</span></td>
+        <td><span class="notranslate">Whether the check is based on precise collisions (<span class="inline">true</span>, que es más lento) o su caja delimitadora en general (<span class="inline">false</span>, más rápido).</td>
       </tr>
       <tr>
-        <td>notme</td>
-        <td><span data-keyref="Type_Bool"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Whether the calling instance, if relevant, should be excluded (<span class="inline">true</span>) or not (<span class="inline">false</span>).</td>
+        <td><span class="notranslate">notme</span></td>
+        <td><span data-keyref="Type_Bool">Booleano</span></td>
+        <td><span class="notranslate">Whether the calling instance, if relevant, should be excluded (<span class="inline">true</span>) o no (<span class="inline">false</span>).</td>
       </tr>
       <tr>
-        <td>list</td>
-        <td><span data-keyref="Type_ID_DS_List"><a href="GameMaker_Language/GML_Reference/Data_Structures/DS_Lists/ds_list_create.htm" target="_blank">DS List</a></span></td>
-        <td>The DS list to use to store the IDs of colliding instances.</td>
+        <td><span class="notranslate">list</span></td>
+        <td><span data-keyref="Type_ID_DS_List">ID de la lista DS</span></td>
+        <td><span class="notranslate">The DS list to use to store the IDs of colliding instances.</span></td>
       </tr>
       <tr>
-        <td>ordered</td>
-        <td><span data-keyref="Type_Bool"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Whether the list should be ordered by distance (<span class="inline">true</span>) or not (<span class="inline">false</span>).</td>
+        <td><span class="notranslate">ordered</span></td>
+        <td><span data-keyref="Type_Bool">Booleano</span></td>
+        <td><span class="notranslate">Whether the list should be ordered by distance (<span class="inline">true</span>) o no (<span class="inline">false</span>).</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span> (The number of instances / tile maps found to be in collision)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code"><span data-keyref="Type_Real">Real</span> (The number of instances found to be in collision)</p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">var _list = ds_list_create();<br />
     var _num = collision_ellipse_list(x - 100, y - 100, x + 100, y + 100, obj_Enemy, false, true, _list, false);<br />
     if _num &gt; 0<br />
@@ -91,18 +91,18 @@
         }<br />
     }<br />
     ds_list_destroy(_list);</p>
-  <p>The code above will check an elliptical area 100 pixels around the calling instance position for collisions with instances of &quot;obj_Enemy&quot;. If there are any collisions, then the pre-created list is looped through and each instance that was in the collision is destroyed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior comprobará un área elíptica de 100 píxeles alrededor de la posición de la instancia de llamada en busca de colisiones con instancias de &quot;obj_Enemy&quot;. Si hay alguna colisión, se recorre la lista precreada y se destruye cada instancia que estuvo en la colisión.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Collisions.htm">Collisions</a></div>
-        <div style="float:right">Next: <a href="collision_line.htm">collision_line</a></div>
+        <div style="float:left">Atrás: <a href="Collisions.htm">Colisiones</a></div>
+        <div style="float:right">Siguiente: <a href="collision_line.htm"><span class="notranslate">collision_line</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 collision_ellipse_list

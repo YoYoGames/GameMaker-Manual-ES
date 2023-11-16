@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Create Map</title>
+  <title>Crear mapa</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Create Map action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Create Map" />
@@ -14,46 +14,46 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Create Map Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Create_Map.png" /> Create Map</h1>
-  <p>This action will create a new <b>map</b> data-structure and return the index value so you can later access the map through the other Data Structure actions. The map index will be returned to the Target Variable that you supply, which can have been created
-    earlier using either <a href="../Common/Assign_Variable.htm">Assign Variable</a> or <a href="../Common/Declare_Temporary_Variable.htm">Declare Temp</a>, or you can flag the &quot;Temp&quot; checkbox to name and create a temporary local variable to
-    store the value until the end of the script or event. A newly created map data structure is considered &quot;empty&quot;, ie: it contains no map key/value entries. Note that you can create additional DS maps by clicking the plus icon<span> <span><img alt="Expand Icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Icon_Expand_Arguments.png"/> </span></span>beside
-    the action, and selecting another variable to hold the map ID.</p>
-  <p class="note"><b>IMPORTANT!</b> Creating any data structure uses up memory on the target platform, and as such all data structures should be free when no longer needed using the action <a href="Free_Data_Structure.htm">Free Data Structure</a> otherwise you get a
-    memory leak which can impair your games performance or even cause it to crash. This is particularly relevant when using temporary local variables to store data structure indices, as these variables are removed at the end of the code or event, but
-    that does not mean the data structure is removed too! The data structure will still exist, only you will have no way to reference it, so either use an instance variable and free the structure at a later time, or free the structure before the end of
-    the event or function if its index is stored in a temporary variable.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Create Map Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/a_DS_Create_Map.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Crear mapa</h1>
+  <p>Esta acción creará una nueva estructura de datos <b>de</b> mapa y devolverá el valor del índice para que pueda acceder posteriormente al mapa a través de las otras acciones de estructura de datos. El índice del mapa será devuelto a la Variable de Destino que usted suministre, la cual puede haber sido creada
+    anteriormente utilizando <a href="../Common/Assign_Variable.htm">Assign Variable</a> o <a href="../Common/Declare_Temporary_Variable.htm">Declare Temp</a>, o puede <span class="notranslate">flag</span> la casilla &quot;Temp&quot; para nombrar y crear una variable local temporal para
+    almacenar el valor hasta el final del <span class="notranslate">script</span> o del evento. Una estructura de datos de mapa recién creada se considera &quot;vacía&quot;, es decir, no contiene entradas de clave/valor de mapa. Tenga en cuenta que puede crear mapas DS adicionales haciendo clic en el icono más<span> <span><img> </span></span>junto a
+    la acción, y seleccionando otra variable para contener el ID del mapa.</p>
+  <p class="note"><b>¡IMPORTANTE!</b> La creación de cualquier estructura de datos consume memoria en la plataforma de destino, y como tal todos los <span class="notranslate">data structures</span> deben ser liberados cuando ya no se necesitan utilizando la acción <a href="Free_Data_Structure.htm">Liberar Estructura de Datos</a> de lo contrario se obtiene una
+    de lo contrario, se obtiene una fuga de memoria que puede perjudicar el rendimiento de su juego o incluso hacer que se bloquee. Esto es particularmente relevante cuando se utilizan variables locales temporales para almacenar índices de estructuras de datos, ya que estas variables se eliminan al final del código o del evento, pero
+    pero eso no significa que la estructura de datos se elimine también. La estructura de datos seguirá existiendo, sólo que no tendrás forma de referenciarla, así que o bien utilizas una variable de instancia y liberas la estructura más adelante, o liberas la estructura antes de que finalice
+    el evento o la función si su índice está almacenado en una variable temporal.</p>
+  <p> </p>
+  <h4>Sintaxis de la acción:</h4>
+  <p><img alt="Create Map Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Create_Map.png" /></p>
+  <h4>Argumentos:</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The target variable to store the map index in</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>La variable de destino para almacenar el índice del mapa en</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Create Map Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/e_DS_Create_Map.png" />The above action block code creates a new instance variable and a new map data structure. The
-    index value of the map is stored in the variable and then used to add two items to the map.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p><img>El código del bloque de acción anterior crea una nueva variable de instancia y una nueva estructura de datos de mapa. El valor del índice de
+    valor del índice del mapa se almacena en la variable y luego se utiliza para añadir dos elementos al mapa.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Data_Structure_Actions.htm">Data Structure Actions</a></div>
-        <div style="float:right">Next: <a href="Create_Grid.htm">Create Grid</a></div>
+        <div style="float:left">Atrás: <a href="Data_Structure_Actions.htm">Acciones de la estructura de datos</a></div>
+        <div style="float:right">Siguiente: <a href="Create_Grid.htm">Crear rejilla</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Create Map

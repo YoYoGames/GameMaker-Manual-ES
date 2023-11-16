@@ -7,7 +7,7 @@
   <title>rollback_use_player_prefs</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Reference page for rollback_use_player_prefs" />
@@ -17,13 +17,13 @@
 </head>
 <body>
   <h1>rollback_use_player_prefs</h1>
-  <p>This function enables player preferences, and allows you to set the default preferences for all players.</p>
-  <p>The default preferences can be of any type. If you don&#39;t specify default preferences, then all players need to have <a href="rollback_set_player_prefs.htm">preferences set</a> before the game can start.</p>
-  <p>Calling this function will disable auto-start, so you have to <a href="rollback_start_game.htm">start the game</a> manually. See: <a data-xref="{text}" href="../Rollback_System.htm#h4">Manual vs. Auto Start</a></p>
-  <p>If used, this function must run before the <a href="rollback_join_game.htm">join</a>/<a href="rollback_create_game.htm">create</a> function.</p>
-  <p>Please read: <a data-xref="{title}" href="../Rollback_Preferences.htm">Player Preferences</a></p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Esta función activa las preferencias de los jugadores y permite establecer las preferencias por defecto para todos los jugadores.</p>
+  <p>Las preferencias por defecto pueden ser de cualquier tipo. Si no se especifican las preferencias por defecto, entonces todos los jugadores deben tener las <a href="rollback_set_player_prefs.htm">preferencias establecidas</a> antes de que el juego pueda comenzar.</p>
+  <p>Al llamar a esta función se desactiva el inicio automático, por lo que hay que <a href="rollback_start_game.htm">iniciar el juego</a> manualmente. Ver: <a data-xref="{text}" href="../Rollback_System.htm#h4">Arranque manual vs. automático</a></p>
+  <p>Si se utiliza, esta función debe ejecutarse antes de la función <a href="rollback_join_game.htm">join/create</a>.</p>
+  <p>Por favor, lea: <a data-xref="{title}" href="../Rollback_Preferences.htm">Preferencias del jugador</a></p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">rollback_use_player_prefs([default]);</p>
   <table>
     <colgroup>
@@ -33,37 +33,37 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>default</td>
-        <td><span data-keyref="Type_Any"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable" target="_blank">Any</a></span></td>
-        <td><span class="optional">OPTIONAL</span> The default preferences to set for all players.</td>
+        <td><span class="notranslate">default</span></td>
+        <td><span data-keyref="Type_Any"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable" target="_blank">Cualquier</a></span></td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> Las preferencias por defecto a establecer para todos los jugadores.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code" id="p">rollback_use_player_prefs({<br />
-        character: 0,<br />
-        color: c_white<br />
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p class="code" id="p">rollback_use_player_prefs({<br>
+        carácter: 0,<br>
+        color: c_white<br>
     });</p>
-  <p>The above code enables player preferences, and sets the default preferences in a struct.</p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior habilita las preferencias del jugador, y establece las preferencias por defecto en un <span class="notranslate">struct</span>.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Rollback_Functions.htm">Rollback Functions</a></div>
-        <div>Next: <a data-xref="{title}" href="rollback_set_player_prefs.htm">rollback_set_player_prefs</a></div>
+        <div>Atrás: <a data-xref="{title}" href="Rollback_Functions.htm">Funciones de retroceso</a></div>
+        <div>Siguiente: <a data-xref="{title}" href="rollback_set_player_prefs.htm">rollback_set_player_prefs</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 rollback_use_player_prefs

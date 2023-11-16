@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Creating Sound Effects</title>
-  <meta name="generator" content="Adobe RoboHelp 2020"/>
-  <link rel="stylesheet" href="../assets/css/default.css" type="text/css"/>
-  <script src="../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Overview what sounds and music can be added to a game and how."/>
-  <meta name="rh-index-keywords" content="Quick Start - Sounds"/>
-  <meta name="search-keywords" content="sound,sounds,sound effects,effects,game music,music"/>
-  <meta name="robots" content="NOODP"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Creación de efectos de sonido</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
+  <script src="../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Overview what sounds and music can be added to a game and how." />
+  <meta name="rh-index-keywords" content="Quick Start - Sounds" />
+  <meta name="search-keywords" content="sound,sounds,sound effects,effects,game music,music" />
+  <meta name="robots" content="NOODP" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Creating Sound Effects</h1>
-  <p>All games have to have sound effects - and most also have music - which means that you need to be able to add them to your game in <span data-keyref="GameMaker Name">GameMaker</span>. This is done through the <a href="../The_Asset_Editors/Sounds.htm"><strong>Sound Editor</strong></a>,
-    which is opened whenever you create a new Sound asset in the Asset Browser:</p>
+  <h1>Creación de efectos de sonido</h1>
+  <p>Todos los juegos tienen que tener efectos de sonido -y la mayoría también música-, lo que significa que tienes que ser capaz de añadirlos a tu juego en <span data-keyref="GameMaker Name">GameMaker</span>. Esto se hace a través de los botones <a href="../The_Asset_Editors/Sounds.htm"><strong>Editor de sonido</strong></a>,
+    que se abre cada vez que se crea un nuevo sonido <span class="notranslate">asset</span> en el navegador <span class="notranslate">Asset</span>:</p>
   <p><img alt="The Sound Editor" class="center" src="../assets/Images/QS_Guide/QS_SoundEditor.png"/></p>
-  <p>Sounds in <span data-keyref="GameMaker Name">GameMaker</span> can be <strong>uncompressed </strong>or <strong>compressed</strong>, with compressed sounds having additional options on how to deal with them at run time. Uncompressed sounds are those that have been saved as <span class="inline">WAV</span>    format files, while compressed sounds can be either <span class="inline">MP3</span> or <span class="inline">OGG</span> format. In general you&#39;ll want small sound effects to be <span class="inline">WAV</span> - like shooting sounds, or button sounds,
-    etc... - and larger effects or music to be <span class="inline">MP3</span> or <span class="inline">OGG</span>. As with the other different resources, it is recommended that you name your sounds using an appropriate prefix like &quot; <span class="inline">snd_</span>&quot;
-    so you can easily identify it later.</p>
-  <p class="note"><strong>NOTE</strong>: An uncompressed sound simply means that it has not had any type of compression <strong> <a class="glossterm" data-glossterm="algorithm" href="#">algorithm</a></strong> applied to it. Applying <a class="glossterm" data-glossterm="compression" href="#">compression</a> to a sound means that it will require less storage space, but will also mean that it needs to be decompressed before playing, and since small sound effects are generally used a lot and very quickly - and don&#39;t take up
-    much storage space - you don&#39;t want the extra CPU cost of decompressing it when it&#39;s being played. However, since things like music files can generally be very large files, you do want them to be compressed, as they will take up less storage
-    space that way, and the extra CPU cost of decompressing is negligible, since they are only generally being played one at a time.</p>
-  <p>Adding a sound is as simple as clicking the add sound button <img alt="Add Sound Icon" class="icon" src="../assets/Images/Icons/Icon_AddSound.png"/> and then browsing in the file explorer that opens to the file you want to use (you can also drag and
-    release sound files onto the <span data-keyref="GameMaker Name">GameMaker</span> IDE and they will be added as a new sound asset). Once you have selected one and loaded it in, you can then preview it using the playback controls shown as well as change certain attributes for how the
-    file should be exported. If you aren&#39;t sure about this, then simply leave everything &quot;as-is&quot;, although if you are adding music or <span class="inline">MP3</span> / <span class="inline">OGG</span> format sounds you should probably change
-    to the <em>Compressed - Not Streamed</em> format.</p>
-  <p>You can find further information on the sound editor on the page linked below:</p>
+  <p>Los sonidos en <span data-keyref="GameMaker Name">GameMaker</span> pueden estar <strong>sin comprimir </strong>o <strong>comprimidos</strong>, y los sonidos comprimidos tienen opciones adicionales sobre cómo tratarlos en tiempo de ejecución. Los sonidos sin comprimir son los que se han guardado como archivos de formato <span class="inline">WAV</span>, mientras que los sonidos comprimidos pueden ser de formato <span class="inline">MP3</span> o <span class="inline">OGG</span>. En general, querrás que los efectos de sonido pequeños sean <span class="inline">WAV</span> - como sonidos de disparos, o sonidos de botones,
+    etc... - y que los efectos más grandes o la música sean <span class="inline">MP3</span> o <span class="inline">OGG</span>. Al igual que con los otros recursos diferentes, se recomienda que nombres tus sonidos usando un prefijo apropiado como &quot; <span class="inline">snd_</span>&quot;
+    para que puedas identificarlos fácilmente más adelante.</p>
+  <p class="note"><strong>NOTA</strong>: Un sonido sin comprimir significa simplemente que no se le ha aplicado ningún tipo de compresión <strong> <a class="glossterm" data-glossterm="algoritmo" href="#">algoritmo</a></strong> de compresión. Aplicar <a class="glossterm" data-glossterm="compresión" href="#">compresión</a> a un sonido significa que requerirá menos espacio de almacenamiento, pero también significará que necesita ser descomprimido antes de ser reproducido, y dado que los efectos de sonido pequeños se usan generalmente mucho y muy rápido - y no ocupan
+    mucho espacio de almacenamiento, no se quiere el coste adicional de la CPU para descomprimirlo cuando se reproduce. Sin embargo, dado que los archivos de música pueden ser generalmente muy grandes, es conveniente comprimirlos, ya que ocuparán menos espacio de almacenamiento de esa manera, y el coste adicional de la CPU para descomprimirlos.
+    espacio de almacenamiento de esa manera, y el costo extra de la CPU de la descompresión es insignificante, ya que por lo general sólo se están reproduciendo uno a la vez.</p>
+  <p>Añadir un sonido es tan sencillo como hacer clic en el botón de añadir sonido <img> y, a continuación, navegar en el explorador de archivos que se abre hasta el archivo que desea utilizar (también puede arrastrar y
+    soltar los archivos de sonido en el <span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">IDE</span> y se añadirán como un nuevo sonido <span class="notranslate">asset</span>). Una vez que haya seleccionado uno y lo haya cargado, puede previsualizarlo utilizando los controles de reproducción que se muestran, así como cambiar ciertos atributos para la forma en que el
+    archivo debe ser exportado. Si no estás seguro de esto, entonces simplemente deja todo &quot;como está&quot;, aunque si estás añadiendo música o sonidos en formato <span class="inline">MP3</span> / <span class="inline">OGG</span> probablemente deberías cambiar
+    al formato <em>Comprimido - No transmitido</em>.</p>
+  <p>Puedes encontrar más información sobre el editor de sonido en la página enlazada más abajo:</p>
   <ul class="colour">
-    <li><a href="../The_Asset_Editors/Sounds.htm">Editors: The Sound Editor</a></li>
+    <li><a href="../The_Asset_Editors/Sounds.htm">Editores: El editor de sonido</a></li>
   </ul>
-  <p>Note that sounds take up a lot of space on disk, so you should be careful when creating them for your game projects. Do you really need a 48KHz sound effect that only plays for a fraction of a second? Probably not! So, think about reducing the <a class="glossterm" data-glossterm="sample rate" href="#">sample rate</a> here to 11025 or 22050 for effects, and for longer things like music or for looping effects think also about using a compressed format. Note too that if you plan on using 3D positional audio effects,
-    then the initial sound file must be <em>mono</em>.</p>
-  <p>You can close the sound editor now and we can move on to looking at <strong>Objects And Instances</strong>...</p>
-  <p> </p>
-  <p> </p>
+  <p>Ten en cuenta que los sonidos ocupan mucho espacio en el disco, así que debes tener cuidado al crearlos para tus proyectos de juego. ¿Realmente necesitas un efecto de sonido de 48KHz que sólo se reproduce durante una fracción de segundo? Probablemente no. Así que piensa en reducir la <a class="glossterm" data-glossterm="frecuencia de muestreo" href="#">frecuencia de muestreo</a> a 11025 o 22050 para los efectos, y para cosas más largas como la música o para efectos en bucle piensa también en utilizar un formato comprimido. Ten en cuenta también que si planeas usar efectos de audio posicionales en 3D,
+    entonces el archivo de sonido inicial debe ser <em>mono</em>.</p>
+  <p>Ahora puedes cerrar el editor de sonido y podemos pasar a ver los <strong>Objetos e Instancias</strong>...</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Content.htm">Index</a></div>
-        <div style="float:right">Next: <a href="Objects_And_Instances.htm">Objects And Instances</a></div>
+        <div style="float:left">Volver: <a href="../Content.htm">Index</a></div>
+        <div style="float:right">Siguiente: <a href="Objects_And_Instances.htm">Objetos e instancias</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Sound Effects

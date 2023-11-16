@@ -2,77 +2,77 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Read Ini File</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page that explains the Read Ini File action"/>
-  <meta name="rh-index-keywords" content="GML Visual Action - Read Ini File"/>
-  <meta name="search-keywords" content="Read Ini File"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Leer archivo Ini</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <script src="../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page that explains the Read Ini File action" />
+  <meta name="rh-index-keywords" content="GML Visual Action - Read Ini File" />
+  <meta name="search-keywords" content="Read Ini File" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Read Ini File Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Read_Ini_File.png" width="32"/> Read Ini File</h1>
-  <p>With this action you can read a piece of data from an Ini file. You must previously have opened the Ini file for reading/writing using the action <a href="Open_Ini_File.htm">Open Ini File</a>, and then with this action you give the type of data to read
-    (either a real number or a string enclosed in &quot;&quot;), as well as the section header and the key within that section to get the data from. You can also supply a default value which can be either a real number of a string, and the type should
-    coincide with the &quot;Type&quot; set in the action. This default action will be returned by the action should any of the following occur:</p>
+  <h1><img> Leer archivo Ini</h1>
+  <p>Con esta acción puedes leer un dato de un archivo Ini. Previamente debe haber abierto el archivo Ini para su lectura/escritura mediante la acción <a href="Open_Ini_File.htm">Abrir archivo Ini</a>, y luego con esta acción se da el tipo de dato a leer
+    (ya sea un número real o un <span class="notranslate">string</span> encerrado en &quot;&quot;), así como la cabecera de la sección y la clave dentro de esa sección de la que obtener los datos. También puede proporcionar un valor por defecto que puede ser un número real o un <span class="notranslate">string</span>, y el tipo debe
+    coincidir con el &quot;Tipo&quot; establecido en la acción. Esta acción por defecto será devuelta por la acción en caso de que ocurra alguna de las siguientes situaciones:</p>
   <ul class="colour">
-    <li>The Ini file you have opened does not exist</li>
-    <li>The section header you reference does not exist</li>
-    <li>The key you are trying to get data from does not exist</li>
+    <li>El archivo Ini que ha abierto no existe</li>
+    <li>La cabecera de la sección a la que hace referencia no existe</li>
+    <li>La clave de la que intenta obtener datos no existe</li>
   </ul>
-  <p>Under any of the above circumstances, you will get the default value returned rather than a value from the Ini file. Whatever value is returned will be stored in the target variable that you specify, which can also be created at that moment if flagged
-    as a temporary local variable.</p>
-  <p class="note"><b>IMPORTANT!</b> trying to read data from an Ini file that has not been opened previously using the <a href="Open_Ini_File.htm">Open Ini File</a> action will cause a serious error and crash your game.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Read Ini File Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/a_Files_Read_Ini_File.png"/></p>
-  <h4>Arguments:</h4>
+  <p>En cualquiera de las circunstancias anteriores, se devolverá el valor por defecto en lugar de un valor del archivo Ini. Cualquiera que sea el valor devuelto se almacenará en la variable de destino que usted especifique, que también puede ser creada en ese momento si se marca
+    como variable local temporal.</p>
+  <p class="note"><b>IMPORTANTE:</b> intentar leer los datos de un archivo Ini que no ha sido abierto previamente usando la acción de <a href="Open_Ini_File.htm">Abrir Archivo Ini</a> causará un grave error y hará que el juego se bloquee.</p>
+  <p> </p>
+  <h4>Sintaxis de la acción:</h4>
+  <p><img alt="Read Ini File Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Read_Ini_File.png" width="32"/></p>
+  <h4>Argumentos:</h4>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>Type</td>
-        <td>The type of data to read, either a <span class="inline">string</span> (enclosed in quotes &quot;&quot;), or a <span class="inline">real number</span></td>
+        <td><span class="notranslate">Type</span></td>
+        <td>El tipo de datos a leer, ya sea un <span class="inline">string</span> (entre comillas &quot;&quot;), o un <span class="inline">real number</span></td>
       </tr>
       <tr>
-        <td>Section</td>
-        <td>The section of the Ini file to read from (as a string)</td>
+        <td><span class="notranslate">Section</span></td>
+        <td>La sección del archivo Ini para leer (como <span class="notranslate">string</span>)</td>
       </tr>
       <tr>
-        <td>Key</td>
-        <td>The key within the section to read from (as a string)</td>
+        <td><span class="notranslate">Key</span></td>
+        <td>La clave dentro de la sección para leer desde (como <span class="notranslate">string</span>)</td>
       </tr>
       <tr>
-        <td>Default</td>
-        <td>The default value to return should either the file, section or key not exist</td>
+        <td><span class="notranslate">Default</span></td>
+        <td>El valor por defecto que se devuelve si el archivo, la sección o la clave no existen</td>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The target variable for holding the return value from the action</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>La variable de destino para mantener el valor de retorno de la acción</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Read Ini File Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/e_Files_Read_Ini_File.png"/>The above action block code will open an Ini file for reading then use data read from it to set
-    3 different global variables before closing the file again.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p><img>El código del bloque de acción anterior abrirá un archivo Ini para su lectura y luego utilizará los datos leídos para establecer
+    3 variables globales diferentes antes de cerrar el archivo de nuevo.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="File_Actions.htm">File Actions</a></div>
-        <div style="float:right">Next: <a href="If_File_Exists.htm">If File Exists</a></div>
+        <div style="float:left">Atrás: <a href="File_Actions.htm">Acciones de archivo</a></div>
+        <div style="float:right">Siguiente: <a href="If_File_Exists.htm">Si el archivo existe</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Read Ini File

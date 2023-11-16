@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Windows UWP</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
+  <script src="../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page that details the Windows UWP Game Options" />
+  <meta name="rh-index-keywords" content="Game Options - UWP" />
+  <meta name="search-keywords" content="UWP Game Options,Windows UWP Game Options" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Opciones de juego para Windows UWP</h1>
+  <p>Esta sección describe las diferentes opciones disponibles que controlan cómo se compilarán los proyectos de juegos UWP (Plataforma Universal <span class="notranslate">Windows</span> ). Las diferentes secciones son:</p>
+  <p> </p>
+  <h2>General</h2>
+  <p><img>La sección general de las opciones de UWP es donde se puede establecer la <strong>información del producto</strong>:</p>
+  <ul class="colour">
+    <li><strong>Nombre para mostrar</strong>: Especifica el nombre amigable de la aplicación que se muestra a los usuarios (este <span class="notranslate">string</span> es localizable).</li>
+    <li><strong>Nombre</strong> del paquete: Este es el nombre del paquete que has creado y debe coincidir con el utilizado para la clave de desarrollador que has creado para el juego (ver la sección de Empaquetado, más abajo).</li>
+    <li><strong>Nombre de</strong> visualización del paquete: Es el &quot;nombre corto&quot; del paquete y lo ideal es que sea el mismo que el nombre de visualización</li>
+    <li><strong>Nombre del editor</strong>: Es el nombre de su empresa o de la persona que desea asociar como editor de juegos.</li>
+    <li><strong>Versión</strong>: El número de versión de tu juego.</li>
+  </ul>
+  <p>Después de configurarlo, puedes seleccionar las diferentes <strong>orientaciones </strong>en las que se puede ejecutar tu juego para obtener la mejor experiencia de usuario. Las opciones disponibles son:</p>
+  <ul class="colour">
+    <li>Paisaje</li>
+    <li>Retrato</li>
+    <li>Paisajismo</li>
+    <li>Retrato-inclinado</li>
+  </ul>
+  <p>Por defecto se seleccionarán todas ellas y deberá deseleccionar las que no necesite.</p>
+  <p>Después de establecer las opciones de orientación, puede señalar los diferentes <strong>permisos </strong>que necesitará su aplicación UWP desde las siguientes opciones:</p>
+  <ul class="Disc">
+    <li style="margin-top: 10px"><strong>Activar el permiso de Internet</strong>: <span class="notranslate">Flags</span> el juego tiene acceso a Internet. Esta opción está desactivada por defecto.</li>
+    <li><strong style="margin-top: 10px">Habilitar permiso de micrófono</strong>: <span class="notranslate">Flags</span> el juego tiene acceso al micrófono del dispositivo. Está desactivado por defecto.</li>
+    <li><strong>Habilitar Sandbox IAP</strong>: <span class="notranslate">Flags</span> el juego como usando sandboxed In App Purchases. Esta opción está desactivada por defecto.</li>
+  </ul>
+  <p> </p>
+  <h2>Familias de dispositivos</h2>
+  <p><img>Aquí puede seleccionar las <strong>familias</strong> de dispositivos a las que desea que se dirija la exportación de <span class="notranslate">Windows UWP</span> al crear su ejecutable. Por defecto, la opción &quot;Support Universal device family&quot; está marcada, lo que significa que la aplicación se dirigirá a todos los dispositivos y familias. Para restringir la aplicación para que sólo sea compatible con determinadas familias de dispositivos, se debe <em>desmarcar </em>la opción Universal y marcar las familias de dispositivos correspondientes. También es posible dar soporte a la familia de dispositivos Universal pero restringir otras familias de dispositivos sólo a ciertas versiones de la plataforma - en este caso mantendría la familia de dispositivos Universal marcada, pero también marcaría la otra familia de dispositivos para la que desea dar soporte a una versión de plataforma diferente, e introduciría los detalles de la versión para esa familia en los cuadros de texto apropiados. Consulte esta página la siguiente página de soporte de Microsoft para saber cómo funciona esta lógica:</p>
+  <ul class="colour">
+    <li><a href="https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily#examples ">Familia de dispositivos de destino: Ejemplos</a></li>
+  </ul>
+  <p>En general, no querrás tocar las versiones de destino y de plataforma mínima y deberías dejarlas en sus valores por defecto, pero si estás teniendo problemas de compilación -específicamente, si no puedes instalar el SDK de <span class="notranslate">Windows</span> establecido por defecto- entonces necesitarás cambiarlos a lo que tienes instalado. Si no estás seguro de los valores que debes establecer, crea un nuevo proyecto UWP en <span class="notranslate">Visual Studio</span> y comprueba qué valores establece.</p>
+  <p>Para más información sobre las familias de dispositivos, consulte el siguiente documento de Microsoft:</p>
+  <ul class="colour">
+    <li><a href="https://docs.microsoft.com/en-us/uwp/extension-sdks/device-families-overview">Descripción de las familias de dispositivos</a></li>
+  </ul>
+  <p> </p>
+  <h2>Gráficos</h2>
+  <p><img>Las opciones gráficas son las que debes configurar para determinar cómo tu juego utilizará la tarjeta gráfica de tu dispositivo UWP de destino. Se incluyen las siguientes opciones para que las modifiques:</p>
+  <ul class="colour">
+    <li><strong>Interpolar los colores entre píxeles</strong>: Activa la <a class="glossterm" data-glossterm="interpolación lineal">interpolación lineal</a>, que básicamente &quot;suaviza&quot; los píxeles. Para gráficos de píxeles nítidos, debería estar desactivado, pero si tiene buenas mezclas alfa y gráficos con bordes suavizados es mejor dejarlo activado.Está desactivado por defecto.</li>
+    <li><strong>Mostrar Cursor</strong>: Cuando esta opción está activada, el cursor del sistema operativo por defecto se mostrará en su juego. Si está desactivada, mientras el ratón esté sobre la ventana del juego, no habrá cursor visible a menos que hayas creado uno como parte del proyecto del juego (está activado por defecto).</li>
+    <li><strong>Iniciar</strong> en pantalla completa: Si esta opción está marcada, el juego se iniciará en modo de pantalla completa, de lo contrario, se iniciará en modo de ventana. Esta opción está desactivada por defecto.</li>
+    <li><strong>Permitir el cambio de pantalla completa</strong>: Con esta opción marcada, el usuario puede <span class="notranslate">switch</span> pasar de pantalla completa a ventana y viceversa utilizando los atajos estándar del sistema operativo <span class="notranslate">Ubuntu</span>. Esta opción está desactivada por defecto.</li>
+    <li><strong>Escala</strong>: Aquí puede elegir mantener la relación de aspecto (de modo que un <span class="notranslate">room</span> de 4:3 será &quot;letter boxed&quot; en un 16:9) o escalar completamente (estirando la imagen para que se ajuste a la pantalla completa).<br>
+      <br>
+      <span style="font-size:16px;"><strong>¡ATENCIÓN!</strong> <em>Al apagar la superficie de la aplicación se deshabilitarán todas las opciones de escala establecidas en las opciones de juego de <span class="notranslate">Windows</span> hasta que se vuelva a encender. Ver La superficie de aplicación para más detalles.</em></span>
+    </li>
+  </ul>
+  <p>Por último, existe la opción de establecer el tamaño de la <a class="glossterm" data-glossterm="página de texturas" href="macOS.htm#">página de la textura</a>. El tamaño por defecto (y más compatible) es 2048x2048, pero puedes elegir entre 256x256 y 8192x8192. También hay un botón marcado como <strong><strong>Vista previa </strong></strong>que generará las páginas de texturas para esta plataforma y luego abrirá una ventana para que puedas ver cómo quedan. Esto puede ser muy útil si quieres ver cómo están estructuradas las páginas de textura y evitar tener páginas de textura más grandes (o más pequeñas) de lo necesario. Para obtener más información sobre las páginas de textura, consulte <a href="../Texture_Information/Texture_Pages.htm">aquí</a>.</p>
+  <p class="note"><strong>NOTA</strong>: Ten en cuenta que cuanto mayor sea el tamaño de la página de texturas, menos compatible será tu juego en los PC con especificaciones inferiores.</p>
+  <p> </p>
+  <h2>Imágenes</h2>
+  <p><img>En la primera parte de la sección de Imágenes tienes la opción de establecer los diferentes <strong>Tiles </strong>que tu juego utilizará en los diferentes dispositivos en los que se puede ejecutar la UWP. Puedes establecer lo siguiente (y todos deben ser archivos con formato <span class="inline">*.png</span> ):</p>
+  <ul class="colour">
+    <li>La imagen del <strong>mosaico pequeño</strong> es la imagen del logotipo que aparece junto al nombre de la aplicación en la barra de búsqueda y otras áreas de la interfaz de usuario. Debe ser de 44 x 44 píxeles.</li>
+    <li>La imagen <strong>del azulejo medio</strong> debe ser una imagen de 71x71 píxeles.</li>
+    <li>La siguiente imagen <span class="notranslate">tile</span> es el <strong>logotipo de la tienda <span class="notranslate">tile</span> </strong>y debe tener 50 x 50 píxeles.</li>
+    <li>El<strong>mosaico de imagen</strong> <strong>ancha</strong> es el que aparece cuando el <span class="notranslate">tile</span> está en su formato ancho y debe ser de 310 x 150 píxeles. Si no se proporciona esta imagen, el <span class="notranslate">tile</span> sólo puede mostrarse en el formato cuadrado y no puede aceptar notificaciones basadas en tipos de plantillas anchas. Dado que el usuario puede decidir qué formato utiliza <span class="notranslate">tile</span> se recomienda incluir una imagen ancha <span class="notranslate">tile</span>. También tenga en cuenta que si se proporciona una imagen ancha <span class="notranslate">tile</span>, el <span class="notranslate">tile</span> puede aparecer inicialmente en su formato ancho.</li>
+    <li>El <strong>mosaico de imagen grande</strong> es el formato grande de live <span class="notranslate">tile</span> y debe ser de 310 x 310 píxeles. Tenga en cuenta que esto sólo se utilizará en el sistema operativo de escritorio.</li>
+  </ul>
+  <p>La siguiente sección es para definir el <strong>Logo</strong> del juego. Este es esencialmente el icono que su juego utilizará dentro del ecosistema UWP, y vale la pena señalar que estas imágenes pueden ser archivos transparentes <span class="inline">.png</span>, en cuyo caso se dibujarán sobre el color de <strong>fondo</strong> especificado en esta sección. Este color de fondo también se aplica al color de los botones en cualquier cuadro de diálogo de la aplicación y a la página de descripción de la aplicación en la tienda de los dispositivos.</p>
+  <p><img>Después de configurar el logotipo, puedes configurar la <strong>pantalla de inicio</strong> del juego. Esta es la pantalla que se mostrará cuando se inicie el juego, y no puede ser mayor de 620 x 300 píxeles y al igual que el logotipo puede ser un archivo transparente <span class="inline">.png</span>, en cuyo caso se utilizará el <strong>color de fondo</strong> que elijas para ella.<img></p>
+  <p>Vale la pena señalar que <span data-keyref="GameMaker Name">GameMaker</span> tiene una herramienta <a href="../../IDE_Tools/Project_Image_Generator.htm">generadora de imágenes del proyecto</a> que se puede utilizar para crear automáticamente todas las imágenes necesarias para todas las diferentes plataformas de destino para las que se está compilando el juego. Si utilizas esta herramienta, debes revisar las imágenes creadas para asegurarte de que son las que necesitas.</p>
+  <p> </p>
+  <h2>Embalaje</h2>
+  <p><img><span data-keyref="GameMaker Name">GameMaker</span> suministra una clave de <strong>desarrollador</strong> por defecto para el desarrollo de <span class="notranslate">Windows UWP</span>, pero se recomienda que usted genere la suya propia y la apunte aquí. Para ello, cree un proyecto vacío en <span class="notranslate">Visual Studio</span> y guarde en algún lugar seguro una copia del archivo <span class="inline">*.pfx</span> generado automáticamente que habrá incluido en el proyecto vacío (esta es la clave de desarrollador). A continuación, debes enlazar ese archivo <span class="inline">*.pfx</span> aquí.</p>
+  <p>Después de enlazar con el archivo, debes hacer clic en el botón de <strong>instalación </strong>asociado y luego seguir las instrucciones en el símbolo del sistema que se abrirá. Si no lo haces, el uso de los botones Run/Debug (o pulsar F5) fallará y tu juego no podrá ser probado en la plataforma UWP (sin embargo, si utilizas <strong>Create Executable</strong> el proceso de instalación de la certificación se iniciará automáticamente si el <span class="inline">*.pfx</span> aún no ha sido registrado).</p>
+  <p class="note"><strong>NOTA</strong>: A la hora de subir tu aplicación a la tienda tendrás que conseguir el <span class="inline" style="font-size: 14px">* </span>.pfx correcto para tu título. Esto se hace mediante la asociación de su aplicación con la tienda <span class="notranslate">Windows</span> en <span class="notranslate">Visual Studio</span>, lo que hace que <span class="notranslate">Visual Studio</span> genere un nuevo *. <span class="inline" style="font-size: 14px">pfx </span>específicamente para la aplicación. También vale la pena señalar que puedes asociar <strong>cualquier </strong>aplicación con la tienda <span class="notranslate">Windows</span> en <span class="notranslate">Visual Studio</span>, lo que significa que puedes asociar un proyecto en blanco con la aplicación de la tienda <span class="notranslate">Windows</span> y simplemente copiar el *. <span class="inline" style="font-size: 14px">pfx </span>generado a una ubicación segura que luego se puede utilizar dentro de las opciones de juego UWP. Puedes encontrar instrucciones sobre cómo se hace esto en la <a href="https://help.yoyogames.com/hc/en-us/articles/115001349488">Base de Conocimientos de YoYo Games</a>.</p>
+  <p>En esta sección también debe especificar el<strong> nombre del editor</strong> que se utilizó para generar el certificado de firma. La entrada debe ir siempre precedida de &quot;<span class="inline">CN=</span>&quot;, por ejemplo: <span class="inline">CN=YoYoGames</span>.</p>
+  <p> </p>
+  <h2>Xbox Live</h2>
+  <p><img>La sección Xbox Live de las Opciones de Juego UWP es donde puedes activar tu proyecto UWP para su uso en la consola Xbox One. Activar el proyecto para la Xbox aquí le permite hacer lo siguiente cuando el proyecto se ejecuta en una Xbox One:</p>
+  <ul class="colour">
+    <li>Iniciar sesión en Xbox Live desde la aplicación</li>
+    <li>Utilizar la identidad del usuario de Xbox Live de alguna manera en el proyecto (por ejemplo, mostrando el gamertag o la foto del jugador)</li>
+  </ul>
+  <p>Sin embargo, antes de que puedas hacer estas cosas, tendrás que asegurarte de que has hecho clic en la casilla de verificación <strong>Habilitar Xbox Live</strong>, y si eres parte del Programa de Creadores de <a href="https://www.xbox.com/en-US/developers/creators-program/">Microsoft</a> también deberías marcar la opción de la <strong>Aplicación del Programa de Creadores</strong>. Si formas parte del Programa de Creadores, tendrás que añadir el <strong>ID del título</strong> y el <strong>ID de la configuración del servicio</strong> (puedes encontrar más información al respecto en <a href="https://docs.microsoft.com/en-us/gaming/xbox-live/test-release/portal-config/live-service-config-ids-mp">Microsoft</a>).</p>
+  <p>Tenga en cuenta que actualmente para probar la funcionalidad de Xbox Live en su proyecto, tendrá que utilizar <strong>Crear ejecutable</strong> en lugar de Ejecutar, ya que la salida de UWP Xbox necesita utilizar el certificado de firma de la tienda <span class="notranslate">Windows</span> que usted da como parte de la información de empaquetado (véase más arriba) en lugar de la temporal suministrada con <span data-keyref="GameMaker Name">GameMaker</span>, que es lo que se utilizará cuando pulse Ejecutar.</p>
+  <p>Una vez que hayas habilitado XBox Live, puedes seguir adelante y utilizar las funciones de XBox Live en tu proyecto, pero ten en cuenta que para la funcionalidad más básica necesitarás ser parte del <a href="https://docs.microsoft.com/en-us/gaming/xbox-live/get-started/setup-partner-center/legacy/live-get-started-creators">Programa de Creadores</a> y para la funcionalidad avanzada necesitarás una <a href="https://www.xbox.com/es-ES/developers/id">cuenta ID@XBox</a>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Atrás: <a href="../Game_Options.htm">Opciones de juego</a></div>
+        <div style="float:right">Siguiente: <a href="HTML5.htm">HTML5</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
+  </div>
+  <!-- KEYWORDS
+Windows UWP Options
+UWP Options
+-->
+  <!-- TAGS
+uwp_options
+-->
+</body>
+</html>

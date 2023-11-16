@@ -6,69 +6,122 @@
   <title>asset_add_tags</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function asset_add_tags" />
-  <meta name="rh-index-keywords" content="asset_add_tags,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence,asset_particlesystem,asset_unknown" />
-  <meta name="search-keywords" content="asset_add_tags,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence,asset_particlesystem,asset_unknown" />
+  <meta name="rh-index-keywords" content="asset_add_tags,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence" />
+  <meta name="search-keywords" content="asset_add_tags,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">asset_add_tags</span></h1>
-  <p>This function adds one or more tag strings to any asset from <a data-xref="{title}" href="../../../../Introduction/The_Asset_Browser.htm">The Asset Browser</a>.</p>
-  <p>You supply either the asset name (as a string) or its asset index, as well as either a single tag string or an array where each item is a single tag string. If you supply an asset index value, then you will need to supply the optional asset type argument (a constant), as assets of different types can have the same index, even though they cannot have the same name. The available asset types are listed in the table below:</p>
-  <div data-conref="../../../../assets/snippets/Asset_Type_Constants.hts"> </div>
-  <p>If the function succeeds in adding the tag(s) it will return <span class="inline">true</span> otherwise it will return <span class="inline">false</span>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">asset_add_tags</span>(name_or_index, tags, [asset_type]);</p>
+  <h1>asset_add_tags</h1>
+  <p>Con esta función puede añadir una o más etiquetas <span class="notranslate">strings</span> a cualquier <span class="notranslate">asset</span> del navegador <span class="notranslate">asset</span>. Se suministra el nombre <span class="notranslate">asset</span> (como <span class="notranslate">string</span>) o su índice <span class="notranslate">asset</span>, así como una sola etiqueta <span class="notranslate">string</span> o una matriz donde cada elemento es una sola etiqueta <span class="notranslate">string</span>. Si suministra un valor de índice <span class="notranslate">asset</span>, tendrá que suministrar el argumento opcional de tipo <span class="notranslate">asset</span> (una constante), ya que <span class="notranslate">assets</span> de diferentes tipos puede tener el mismo índice, aunque no puedan tener el mismo nombre. Los tipos disponibles de <span class="notranslate">asset</span> se enumeran en la siguiente tabla:</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Constante</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>name_or_index</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span> or <span data-keyref="Type_Asset"><a href="../../../../../The_Asset_Editors/The_Asset_Editors.htm" target="_blank">Asset</a></span></td>
-        <td>The name of the asset (a string) or its index value (an integer).</td>
+        <td><span class="notranslate">asset_object</span></td>
+        <td>El nombre dado se refiere a un <a href="../../../../The_Asset_Editors/Objects.htm">objeto</a>.</td>
       </tr>
       <tr>
-        <td>tags</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span> or <span data-keyref="Type_Array"><a href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span> of Strings</td>
-        <td>A single asset tag string or an array with various asset tags.</td>
+        <td><span class="notranslate">asset_sprite</span></td>
+        <td>El nombre dado se refiere a un <a href="../../../../The_Asset_Editors/Sprites.htm">sprite</a>.</td>
       </tr>
       <tr>
-        <td>[asset_type]</td>
-        <td><span data-keyref="Type_Constant_Asset_Type"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Assets_And_Tags/asset_get_type.htm" target="_blank">Asset Type Constant</a></span></td>
-        <td><span data-conref="../../../../assets/snippets/Tag_optional.hts"> </span> The type of asset to set the tags on, only used when supplying an index for the first argument.</td>
+        <td><span class="notranslate">asset_sound</span></td>
+        <td>El nombre de pila hace referencia a un <a href="../../../../The_Asset_Editors/Sounds.htm">sonido</a>.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">asset_room</span></td>
+        <td>El nombre se refiere a un <a href="../../../../The_Asset_Editors/Rooms.htm"><span class="notranslate">room</span></a>.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">asset_tiles</span></td>
+        <td>El nombre dado se refiere a un <a href="../../../../The_Asset_Editors/Tile_Sets.htm">conjunto de baldosas</a>.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">asset_path</span></td>
+        <td>El nombre dado se refiere a una <a href="../../../../The_Asset_Editors/Paths.htm">ruta</a>.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">asset_script</span></td>
+        <td>El nombre se refiere a un <a href="../../../../The_Asset_Editors/Scripts.htm"><span class="notranslate">script</span></a>.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">asset_font</span></td>
+        <td>El nombre dado se refiere a una <a href="../../../../The_Asset_Editors/Fonts.htm">fuente</a>.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">asset_timeline</span></td>
+        <td>El nombre de pila se refiere a una <a href="../../../../The_Asset_Editors/Timelines.htm">línea de tiempo</a>.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">asset_shader</span></td>
+        <td>El nombre dado se refiere a un <a href="../../../../The_Asset_Editors/Shaders.htm">sombreador</a>.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">asset_animationcurve</span></td>
+        <td>El nombre dado se refiere a una <a href="../../../../The_Asset_Editors/Animation_Curves.htm">Curva de Animación</a>.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">asset_sequence</span></td>
+        <td>El nombre dado se refiere a una <a href="../../../../The_Asset_Editors/Sequences.htm">Secuencia</a>.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p>Si la función consigue añadir la(s) etiqueta(s) devolverá <span class="inline">true</span> de lo contrario devolverá <span class="inline">false</span>.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
+  <p class="code">asset_add_tags(name_or_index, tags, [asset_type]);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">name_or_index</span></td>
+        <td><span data-keyref="Type_String">Cadena</span> o <span data-keyref="Type_Asset">Activo</span></td>
+        <td><span class="notranslate">The name of the asset (a string) or its index value (an integer).</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">tags</span></td>
+        <td><span data-keyref="Type_String">Cadena</span> o <span data-keyref="Type_Array">matriz</span> de cadenas</td>
+        <td><span class="notranslate">A single asset tag string or an array with various asset tags.</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">[asset_type]</span></td>
+        <td><span data-keyref="Type_Constant_Asset_Type">Tipo de activo Constante</span></td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> El tipo de activo en el que se van a establecer las etiquetas, sólo se utiliza cuando se suministra un índice para el primer argumento.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code"><span data-keyref="Type_Bool">Boolean</span></p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">var _a = array_create(3);<br />
     _a[0] = &quot;enemy&quot;;<br />
     _a[1] = &quot;all_levels&quot;;<br />
     _a[2] = &quot;boss&quot;;<br />
-    <span data-field="title" data-format="default">asset_add_tags</span>(obj_Enemy_Boss_Parent, _a, asset_object);
-  </p>
-  <p>The above code will create an array of tags and then add them to the given object.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+    asset_add_tags(obj_Enemy_Boss_Parent, _a, asset_object);</p>
+  <p>El código anterior creará una matriz de etiquetas y luego las añadirá a la dirección <span class="notranslate">object</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Assets_And_Tags.htm">Assets And Tags</a></div>
-        <div style="float:right">Next: <a href="asset_remove_tags.htm">asset_remove_tags</a></div>
+        <div style="float:left">Atrás: <a href="Assets_And_Tags.htm">Activos y etiquetas</a></div>
+        <div style="float:right">Siguiente: <a href="asset_remove_tags.htm"><span class="notranslate">asset_remove_tags</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 asset_add_tags

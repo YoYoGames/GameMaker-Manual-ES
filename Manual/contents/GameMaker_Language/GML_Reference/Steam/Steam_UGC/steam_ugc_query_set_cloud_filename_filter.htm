@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_ugc_query_set_cloud_filename_filter</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_ugc_query_set_cloud_filename_filter" />
+  <meta name="rh-index-keywords" content="steam_ugc_query_set_cloud_filename_filter" />
+  <meta name="search-keywords" content="steam_ugc_query_set_cloud_filename_filter" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_ugc_query_set_cloud_filename_filter</h1>
+  <p>Esta función se puede utilizar para filtrar aún más cualquier consulta UGC dada, específicamente para comprobar y ver si un nombre de archivo de elemento de taller debe coincidir o no. El manejador de la consulta es el valor devuelto al crear la consulta (usando, por ejemplo, <a href="steam_ugc_create_query_user.htm"><tt>steam_ugc_create_query_user()</tt></a>)
+    y el segundo argumento es <tt>true</tt> o <tt>false</tt>, dependiendo de si requiere que los nombres de los archivos coincidan. La función devolverá <tt>true</tt> si el filtro de la consulta se ha establecido correctamente, o <tt>false</tt> en caso contrario.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
+  <p class="code">steam_ugc_query_set_cloud_filename_filter(ugc_query_handle , match_cloud_filename);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argumento</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">ugc_query_handle</span></td>
+        <td>El mango de la consulta que se va a utilizar.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">match_cloud_filename</span></td>
+        <td>Establece si el nombre del archivo del elemento UGC debe coincidir o no.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Devuelve:</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p class="code">var query_handle = steam_ugc_create_query_all(ugc_query_RankedByVote, ugc_match_Items, 1);<br/> steam_ugc_query_set_cloud_filename_filter(query_handle, true);<br/> steam_ugc_query_add_excluded_tag(query_handle, &quot;nasty chips&quot;);<br/> steam_ugc_query_set_return_long_description(query_handle,
+    true);<br/> steam_ugc_query_set_allow_cached_response(query_handle, true);<br/> query_ID = steam_ugc_send_query(query_handle);</p>
+  <p>El código anterior crea una solicitud de consulta y almacena su manejador en una variable local para su uso futuro en el resto de las funciones que definen aún más la solicitud de consulta antes de enviarla.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Atrás: <a href="Steam_UGC.htm">UGC</a></div>
+        <div style="float:right">Siguiente: <a href="steam_ugc_query_set_match_any_tag.htm"><span class="notranslate">steam_ugc_query_set_match_any_tag</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_ugc_query_set_cloud_filename_filter
+-->
+  <!-- TAGS
+steam_ugc_query_set_cloud_filename_filter
+-->
+</body>
+</html>

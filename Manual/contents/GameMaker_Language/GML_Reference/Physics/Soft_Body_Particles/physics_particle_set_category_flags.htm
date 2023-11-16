@@ -6,7 +6,7 @@
   <title>physics_particle_set_category_flags</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_particle_set_category_flags" />
   <meta name="rh-index-keywords" content="physics_particle_set_category_flags,phy_particle_flag_water,phy_particle_flag_zombie,phy_particle_flag_wall,phy_particle_flag_spring,phy_particle_flag_elastic,phy_particle_flag_viscous,phy_particle_flag_powder,phy_particle_flag_tensile,phy_particle_flag_colourmixing,phy_particle_flag_colormixing" />
@@ -15,93 +15,93 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>physics_particle_set_category_flags</h1>
-  <p>With this function you can change the particle flags for a category of particles. The <span class="inline">category</span> value is that which you defined in the function <a href="physics_particle_create.htm"><span class="inline">physics_particle_create()</span></a> or (if you created a group) <a href="physics_particle_group_begin.htm"><span class="inline">physics_particle_group_begin()</span></a>, while the flags are the return value of a combination of the following <b>constants</b>:</p>
+  <p>Con esta función puede cambiar la partícula <span class="notranslate">flags</span> para una categoría de partículas. El valor de <span class="inline">category</span> es el que ha definido en la función <a href="physics_particle_create.htm"><span class="inline">physics_particle_create()</span></a> o (si ha creado un grupo) <a href="physics_particle_group_begin.htm"><span class="inline">physics_particle_group_begin()</span></a>, mientras que el <span class="notranslate">flags</span> es el valor de retorno de una combinación de las siguientes <b>constantes</b>:</p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>Constante</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_water</span></td>
-        <td>The default properties for a soft body particle.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_water</span></td>
+        <td>Las propiedades por defecto de una partícula de cuerpo blando.</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_zombie</span></td>
-        <td>A zombie particle is one that will be destroyed in a single step with all others flagged in this way.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_zombie</span></td>
+        <td>Una partícula zombi es aquella que será destruida en un solo paso con todas las demás marcadas de esta manera.</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_wall</span></td>
-        <td>This defines the particle as <i>static</i>, essentially creating it as an immovable object in the physics simulation, as they will remain in a fixed position no matter what collides with them. You should use this flag rather than set the density to 0.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_wall</span></td>
+        <td>Esto define la partícula como <i>estática</i>, esencialmente creándola como un inamovible <span class="notranslate">object</span> en la simulación física, ya que permanecerán en una posición fija sin importar lo que colisione con ellas. Deberías usar este <span class="notranslate">flag</span> en lugar de establecer la densidad a 0.</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_spring</span></td>
-        <td>Spring particles produce the effect of being attached to one another, as if by a spring. Particles created with this flag are &quot;connected&quot; in pairs, with each particle being connected to the one that was closest to it at the time of creation. Once paired, particles do not change &quot;partners&quot; , and the farther an external force pulls them from one another, the greater the power with which they will collide when that external force is removed. Note that no matter how far paired particles get from each another, the connection between them will not snap.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_spring</span></td>
+        <td>Las partículas del muelle producen el efecto de estar unidas entre sí, como si se tratara de un muelle. Las partículas creadas con este <span class="notranslate">flag</span> están &quot;conectadas&quot; por parejas, y cada partícula está conectada a la que estaba más cerca de ella en el momento de la creación. Una vez emparejadas, las partículas no cambian de &quot;pareja&quot; , y cuanto más lejos las separe una fuerza externa, mayor será la potencia con la que colisionarán cuando se retire esa fuerza externa. Obsérvese que, por mucho que las partículas emparejadas se alejen una de otra, la conexión entre ellas no se romperá.</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_elastic</span></td>
-        <td>Elastic particles deform and may also bounce when they collide with other rigid bodies in the physics simulation.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_elastic</span></td>
+        <td>Las partículas elásticas se deforman y también pueden rebotar cuando chocan con otros cuerpos rígidos en la simulación física.</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_viscous</span></td>
-        <td>A viscous particle is one that exhibits &quot;clinginess&quot; or &quot;stickiness&quot;, like oil. Viscous particles will clump and stick together more.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_viscous</span></td>
+        <td>Una partícula viscosa es aquella que se muestra &quot;pegajosa&quot;, como el aceite. Las partículas viscosas se agrupan y se pegan más.</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_powder</span></td>
-        <td>Powder particles produce a scattering effect such as you might see with sand or dust.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_powder</span></td>
+        <td>Las partículas de polvo producen un efecto de dispersión como el que se puede ver con la arena o el polvo.</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_tensile</span></td>
-        <td>Tensile particles are used to produce the effect of surface tension, or the taut curvature on the surface of a body of liquid. They might be used, for example, to create the surface tension you would see on a drop of water. Once the tension is broken, the particles bounce as if they were elastic, but also continue to attract each other. As a result, particles tend to form clusters as they bounce.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_tensile</span></td>
+        <td>Las partículas de tracción se utilizan para producir el efecto de la tensión superficial, o la curvatura tensa en la superficie de un cuerpo de líquido. Pueden utilizarse, por ejemplo, para crear la tensión superficial que se observa en una gota de agua. Una vez que se rompe la tensión, las partículas rebotan como si fueran elásticas, pero también siguen atrayéndose entre sí. Como resultado, las partículas tienden a formar grupos al rebotar.</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_colourmixing</span></td>
-        <td>Colour-mixing particles take on some of the colour of other particles with which they collide. Note that if only one of the two colliding particles is a colour-mixing one, the other particle retains its pre-collision colour.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_colourmixing</span></td>
+        <td>Las partículas que mezclan colores adoptan parte del color de otras partículas con las que colisionan. Ten en cuenta que si sólo una de las dos partículas que colisionan es de mezcla de colores, la otra partícula conserva su color anterior a la colisión.</td>
       </tr>
     </tbody>
   </table>
-  <p>These flags use bit-masking to create a final output value that is then checked to set the different basic properties of the particle category (with the base property always being that of <span class="inline">phy_particle_flag_water</span>). For example, if you want to simulate a viscous liquid with surface tension you would use the <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitwise <i>or</i></a> &quot;|&quot; to mask off the appropriate bits as shown in the example below. In this way you can set different properties (other than the global properties) for each category of particle created.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Estos <span class="notranslate">flags</span> utilizan el enmascaramiento de bits para crear un valor de salida final que luego se comprueba para establecer las diferentes propiedades básicas de la categoría de partículas (siendo la propiedad base siempre la de <span class="inline">phy_particle_flag_water</span>). Por ejemplo, si se quiere simular un líquido viscoso con tensión superficial se utilizaría el enmascaramiento de bits <a href="../../../../Additional_Information/Bitwise_Operators.htm"> <i>o</i></a> &quot;|&quot; para enmascarar los bits apropiados como se muestra en el ejemplo siguiente. De esta manera, puede establecer diferentes propiedades (aparte de las propiedades globales) para cada categoría de partícula creada.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">physics_particle_set_category_flags(category, flags)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>category</td>
+        <td><span class="notranslate">category</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The particle category to set.</td>
+        <td><span class="notranslate">The particle category to set.</span></td>
       </tr>
       <tr>
-        <td>flags</td>
-        <td><span data-keyref="Type_Constant_Phy_Particle_Flag">Physics Particle Flag Constant</span>(s)</td>
-        <td>The flags to set on the particle category.</td>
+        <td><span class="notranslate">flags</span></td>
+        <td><span data-keyref="Type_Constant_Phy_Particle_Flag">Física Partícula <span class="notranslate">Flag</span> Constante</span>(s)</td>
+        <td><span class="notranslate">The flags to set on the particle category.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">var flags = phy_particle_flag_water | phy_particle_flag_viscous | phy_particle_flag_tensile;<br />
     physics_particle_set_category_flags(1, flags);</p>
-  <p>The above code will create a variable to store the flags value and then use it to set the flags of all particles created with the category value of 1.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior creará una variable para almacenar el valor de <span class="notranslate">flags</span> y luego lo utilizará para establecer el <span class="notranslate">flags</span> de todas las partículas creadas con el valor de categoría de 1.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Soft_Body_Particles.htm">Soft Body Particles</a></div>
-        <div style="float:right">Next: <a href="physics_particle_set_group_flags.htm">physics_particle_set_group_flags</a></div>
+        <div style="float:left">Atrás: <a href="Soft_Body_Particles.htm">Partículas de cuerpo blando</a></div>
+        <div style="float:right">Siguiente: <a href="physics_particle_set_group_flags.htm"><span class="notranslate">physics_particle_set_group_flags</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 physics_particle_set_category_flags

@@ -6,7 +6,7 @@
   <title>physics_joint_get_value</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_joint_get_value" />
   <meta name="rh-index-keywords" content="physics_joint_get_value" />
@@ -16,35 +16,35 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>physics_joint_get_value</h1>
-  <p>By using a series of predefined constants, you can ask <span data-keyref="GameMaker Name">GameMaker</span> to tell you a number of things about the state of any given joint. This is very useful as it gives you the ability to delete joints or change an instances behaviour depending on whatever your needs are at the time. There are a number of constants that can be used in this function and they can be found here: <a href="Physics_Joint_Constants.htm">Physics Joint Constants</a>, but be aware that complex calculations are done when you call these, so they should be used with care and only when necessary and note that <i>many are unique to a specific type of joint</i>.</p>
-  <p>If the property does not exist (if, for example, you check a pulley joint for prismatic translation) then 0 will be the return value.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Utilizando una serie de constantes predefinidas, puedes pedirle a <span data-keyref="GameMaker Name">GameMaker</span> que te diga una serie de cosas sobre el estado de cualquier articulación. Esto es muy útil, ya que le da la capacidad de eliminar las articulaciones o cambiar el comportamiento de una instancia en función de lo que sus necesidades son en el momento. Hay una serie de constantes que se pueden utilizar en esta función y se pueden encontrar aquí: <a href="Physics_Joint_Constants.htm">Physics Joint Constants</a>, pero tenga en cuenta que se realizan cálculos complejos cuando los llama, por lo que deben ser utilizados con cuidado y sólo cuando sea necesario y tenga en cuenta que <i>muchos son únicos para un tipo específico de articulación</i>.</p>
+  <p>Si la propiedad no existe (si, por ejemplo, se comprueba la traslación prismática de una articulación de polea), el valor de retorno será 0.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
   <p class="code">physics_joint_get_value(joint, value)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>joint</td>
-        <td><span data-keyref="Type_ID_Physics_Joint">Physics Joint ID</span></td>
-        <td>The index of the joint that you wish to test</td>
+        <td><span class="notranslate">joint</span></td>
+        <td><span data-keyref="Type_ID_Physics_Joint">Física ID conjunta</span></td>
+        <td><span class="notranslate">The index of the joint that you wish to test</span></td>
       </tr>
       <tr>
-        <td>value</td>
-        <td><span data-keyref="Type_Constant_Phy_Joint">Physics Joint Constant</span></td>
-        <td>The constant for the joint property that you wish to test</td>
+        <td><span class="notranslate">value</span></td>
+        <td><span data-keyref="Type_Constant_Phy_Joint">Constante de unión física</span></td>
+        <td><span class="notranslate">The constant for the joint property that you wish to test</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Ejemplo:</h4>
   <p class="code">if shipJoint<br />
     {<br />
         var reactionForceX = physics_joint_get_value(shipJoint, phy_joint_reaction_force_x);<br />
@@ -56,18 +56,18 @@
             shipJoint = -1;<br />
         }<br />
     }</p>
-  <p>The above code checks to see if the variable &quot;shipJoint&quot; holds a joint index and if it does, it then calculates the force being applied to that joint using the two constants. Finally, if the total force is greater than 2, the joint is deleted.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior comprueba si la variable &quot;shipJoint&quot; contiene un índice de articulación y, si es así, calcula la fuerza que se aplica a esa articulación utilizando las dos constantes. Finalmente, si la fuerza total es mayor que 2, se elimina la articulación.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Joints.htm">Joints</a></div>
-        <div style="float:right">Next: <a href="physics_joint_set_value.htm">physics_joint_set_value</a></div>
+        <div style="float:left">Atrás: <a href="Joints.htm">Articulaciones</a></div>
+        <div style="float:right">Siguiente: <a href="physics_joint_set_value.htm"><span class="notranslate">physics_joint_set_value</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_get_value

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Gamepad Input</title>
+  <title>Entrada del Gamepad</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for Gamepad Input" />
   <meta name="rh-index-keywords" content="gp_face1,gp_face2,gp_face3,gp_face4,gp_shoulderl,gp_shoulderlb,gp_shoulderr,gp_shoulderrb,gp_select,gp_start,gp_stickl,gp_stickr,gp_padu,gp_padd,gp_padl,gp_padr,gp_axislh,gp_axislv,gp_axisrh,gp_axisrv,gp_axis_acceleration_x,gp_axis_acceleration_y,gp_axis_acceleration_z,gp_axis_angular_velocity_x,gp_axis_angular_velocity_y,gp_axis_angular_velocity_z,gp_axis_orientation_x,gp_axis_orientation_y,gp_axis_orientation_z,gp_axis_orientation_w" />
@@ -14,84 +14,84 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Gamepad Input</h1>
-  <p><b></b><span data-keyref="GameMaker Name">GameMaker</span> has a number of dedicated functions that can be used to detect both analog and digital controls from multiple connected gamepads. These functions work similar to the <a href="../Device_Input/Device_Input.htm">Device Inputs</a>, in that you can detect up to four different XInput game pads that are connected (and up to 8 DirectInput gamepads) and deal with the input from each one using the same functions. Note that when a gamepad is plugged in to your device (or it is removed) then an asynchronous <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events.htm">System Event</a> is triggered where you can deal with the situation using the appropriate functions.</p>
-  <p>The gamepad &quot;slots&quot; are indexed from 0 upwards, and the actual slot that a gamepad assigned will depend on a variety of factors, not least of which is the OS that the project is running on. On the <strong>Windows</strong> target, slots 0 - 3 inclusive are <i>only for Xinput gamepads</i>, ie: Xbox360 controllers and compatibles. However you can also check slots 4 - 11 inclusive for <i>DirectInput</i> gamepads, which means you can detect many other models of controller when connected through these slots. On other platforms, pads may be detected on <em>any</em> slot that the OS has assigned it, which could slot 3 or slot 20 or more. For example, <strong>Android</strong> devices will store bluetooth gamepads in a slot and then reserve that slot for that gamepad in the future, whether it is connected or not, so you <em>cannot</em> assume that a single connected gamepad is connected to slot 0, as this will probably not be the case.</p>
-  <p>It is worth noting that when using DirectInput gamepads on Windows, or generic gamepads on other platforms, the constants given below <strong>may not match exactly the buttons that you expect when they are pressed</strong>, due to the fragmented and non-standardised way that the API is implemented by controller manufacturers. Because of this, it is recommend that you have some kind of gamepad setup screen in your games where people can redefine the gamepad buttons based on input from any connected device to mitigate any issues (there are gamepad &quot;mapping&quot; functions that can help with this on Windows Desktop, Ubuntu, macOS, and Android targets, while on all others you would need to do this yourself using code).</p>
-  <h2>Input Constants</h2>
-  <p>When working with the gamepad functions, input can come from <strong>axes</strong>, <strong>buttons</strong> or <strong>hats</strong>, which <span data-keyref="GameMaker Name">GameMaker</span> will assign to the following built-in constants (note that &quot;hats&quot; are generally only detected on non-standard controllers):</p>
+  <h1>Entrada del Gamepad</h1>
+  <p><b></b><span data-keyref="GameMaker Name">GameMaker</span> tiene un número de funciones dedicadas que pueden ser usadas para detectar controles analógicos y digitales de múltiples gamepads conectados. Estas funciones trabajan de forma similar a las <a href="../Device_Input/Device_Input.htm">Entradas de Dispositivo</a>, en el sentido de que puedes detectar hasta cuatro gamepads XInput diferentes que estén conectados (y hasta 8 gamepads DirectInput) y tratar la entrada de cada uno utilizando las mismas funciones. Ten en cuenta que cuando un gamepad se conecta a tu dispositivo (o se retira) entonces se dispara un <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events.htm">Evento de Sistema</a> asíncrono donde puedes tratar la situación usando las funciones apropiadas.</p>
+  <p>Las &quot;ranuras&quot; de los gamepads están indexadas de 0 en adelante, y la ranura real que se le asigna a un gamepad dependerá de una variedad de factores, no siendo el menor de ellos el sistema operativo en el que se está ejecutando el proyecto. En el objetivo de <strong>Windows</strong>, las ranuras 0 - 3 inclusive son <i>sólo para gamepads Xinput</i>, es decir, mandos de Xbox360 y compatibles. Sin embargo, también puedes comprobar las ranuras 4 - 11 inclusive para gamepads <i>DirectInput</i>, lo que significa que puedes detectar muchos otros modelos de controladores cuando se conectan a través de estas ranuras. En otras plataformas, los pads pueden ser detectados en <em>cualquier</em> ranura que el sistema operativo le haya asignado, que podría ser la ranura 3 o la ranura 20 o más. Por ejemplo, los dispositivos <strong>Android</strong> almacenarán los gamepads bluetooth en una ranura y luego reservarán esa ranura para ese gamepad en el futuro, esté conectado o no, por lo que <em>no se puede</em> asumir que un solo gamepad conectado está conectado a la ranura 0, ya que probablemente no será el caso.</p>
+  <p>Hay que tener en cuenta que cuando se utilizan gamepads DirectInput en <span class="notranslate">Windows</span>, o gamepads genéricos en otras plataformas, las constantes que se indican a continuación <strong>pueden no coincidir exactamente con los botones que se esperan al pulsarlos</strong>, debido a la forma fragmentada y no estandarizada en que los fabricantes de mandos implementan la API. Por ello, es recomendable que tengas algún tipo de pantalla de configuración del gamepad en tus juegos en la que la gente pueda redefinir los botones del gamepad basándose en la entrada de cualquier dispositivo conectado para mitigar cualquier problema (hay funciones de &quot;mapeo&quot; del gamepad que pueden ayudar con esto en <span class="notranslate">Windows</span> Desktop, <span class="notranslate">Ubuntu</span>, <span class="notranslate">macOS</span>, y <span class="notranslate">Android</span> targets, mientras que en todos los demás tendrías que hacerlo tú mismo usando código).</p>
+  <h2>Constantes de entrada</h2>
+  <p>Cuando se trabaja con las funciones del gamepad, la entrada puede provenir de <strong>ejes</strong>, <strong>botones</strong> o <strong>sombreros</strong>, que <span data-keyref="GameMaker Name">GameMaker</span> asignará a las siguientes constantes incorporadas (tenga en cuenta que los &quot;sombreros&quot; generalmente sólo se detectan en los controladores no estándar):</p>
   <table>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Gamepad_Button"><a href="../../../../../GameMaker_Language/GML_Reference/Game_Input/GamePad_Input/gamepad_axis_value.htm" target="_blank">Gamepad Button Constant</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_Gamepad_Button"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Game_Input/GamePad_Input/gamepad_axis_value.htm">Botón constante del Gamepad</a></span></th>
       </tr>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>Constante</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td><span class="inline">gp_face1</span></td>
-        <td>Top button 1 (this maps to the <i>&quot;A&quot;</i> on an Xbox 360 controller and the <i>cross</i> on a PS controller)</td>
+        <td><span class="notranslate"><span class="inline">gp_face1</span></td>
+        <td>Botón superior 1 (corresponde a la <i>&quot;A&quot;</i> de un mando de Xbox 360 y a la <i>cruz</i> de un mando de PS)</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_face2</span></td>
-        <td>Top button 2 (this maps to the <i>&quot;B&quot;</i> on an Xbox 360 controller and the <i>circle</i> on a PS controller)</td>
+        <td><span class="notranslate"><span class="inline">gp_face2</span></td>
+        <td>Botón superior 2 (corresponde a la <i>&quot;B&quot;</i> de un mando de Xbox 360 y al <i>círculo</i> de un mando de PS)</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_face3</span></td>
-        <td>Top button 3 (this maps to the <i>&quot;X&quot;</i> on an Xbox 360 controller and the <i>square</i> on a PS controller)</td>
+        <td><span class="notranslate"><span class="inline">gp_face3</span></td>
+        <td>Botón superior 3 (corresponde a la <i>&quot;X&quot;</i> de un mando de Xbox 360 y al <i>cuadrado</i> de un mando de PS)</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_face4</span></td>
-        <td>Top button 4 (this maps to the <i>&quot;Y&quot;</i> on an Xbox 360 controller and the <i>triangle</i> on a PS controller)</td>
+        <td><span class="notranslate"><span class="inline">gp_face4</span></td>
+        <td>Botón superior 4 (corresponde a la <i>&quot;Y&quot;</i> de un mando de Xbox 360 y al <i>triángulo</i> de un mando de PS)</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_shoulderl</span></td>
-        <td>Left shoulder button</td>
+        <td><span class="notranslate"><span class="inline">gp_shoulderl</span></td>
+        <td>Botón del hombro izquierdo</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_shoulderlb</span></td>
-        <td>Left shoulder trigger</td>
+        <td><span class="notranslate"><span class="inline">gp_shoulderlb</span></td>
+        <td>Gatillo del hombro izquierdo</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_shoulderr</span></td>
-        <td>Right shoulder button</td>
+        <td><span class="notranslate"><span class="inline">gp_shoulderr</span></td>
+        <td>Botón del hombro derecho</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_shoulderrb</span></td>
-        <td>Right shoulder trigger</td>
+        <td><span class="notranslate"><span class="inline">gp_shoulderrb</span></td>
+        <td>Gatillo del hombro derecho</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_select</span></td>
-        <td>The select button (on a DS4 controller, this triggers when you press the touchpad down)</td>
+        <td><span class="notranslate"><span class="inline">gp_select</span></td>
+        <td>El botón de selección (en un mando DS4, se activa al pulsar el panel táctil)</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_start</span></td>
-        <td>The start button (this is the &quot;options&quot; button on a PS4 controller)</td>
+        <td><span class="notranslate"><span class="inline">gp_start</span></td>
+        <td>El botón de inicio (es el botón de &quot;opciones&quot; en un mando de PS4)</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_stickl</span></td>
-        <td>The left stick pressed (as a button)</td>
+        <td><span class="notranslate"><span class="inline">gp_stickl</span></td>
+        <td>El stick izquierdo pulsado (como un botón)</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_stickr</span></td>
-        <td>The right stick pressed (as a button)</td>
+        <td><span class="notranslate"><span class="inline">gp_stickr</span></td>
+        <td>El stick derecho pulsado (como un botón)</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_padu</span></td>
-        <td>D-pad up</td>
+        <td><span class="notranslate"><span class="inline">gp_padu</span></td>
+        <td>D-pad arriba</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_padd</span></td>
-        <td>D-pad down</td>
+        <td><span class="notranslate"><span class="inline">gp_padd</span></td>
+        <td>Control D hacia abajo</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_padl</span></td>
-        <td>D-pad left</td>
+        <td><span class="notranslate"><span class="inline">gp_padl</span></td>
+        <td>Control izquierdo del D-pad</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_padr</span></td>
-        <td>D-pad right</td>
+        <td><span class="notranslate"><span class="inline">gp_padr</span></td>
+        <td>D-pad derecho</td>
       </tr>
     </tbody>
   </table>
@@ -102,151 +102,151 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Gamepad_Axis"><a href="../../../../../GameMaker_Language/GML_Reference/Game_Input/GamePad_Input/gamepad_axis_value.htm" target="_blank">Gamepad Axis Constant</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_Gamepad_Axis"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Game_Input/GamePad_Input/gamepad_axis_value.htm">Constante del eje del Gamepad</a></span></th>
       </tr>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>Constante</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td><span class="inline">gp_axislh</span></td>
-        <td>Left stick horizontal axis (analog)</td>
+        <td><span class="notranslate"><span class="inline">gp_axislh</span></td>
+        <td>Eje horizontal del stick izquierdo (analógico)</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_axislv</span></td>
-        <td>Left stick vertical axis (analog)</td>
+        <td><span class="notranslate"><span class="inline">gp_axislv</span></td>
+        <td>Eje vertical del stick izquierdo (analógico)</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_axisrh</span></td>
-        <td>Right stick horizontal axis (analog)</td>
+        <td><span class="notranslate"><span class="inline">gp_axisrh</span></td>
+        <td>Eje horizontal del stick derecho (analógico)</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_axisrv</span></td>
-        <td>Right stick vertical axis (analog)</td>
+        <td><span class="notranslate"><span class="inline">gp_axisrv</span></td>
+        <td>Eje vertical del stick derecho (analógico)</td>
       </tr>
       <tr>
-        <th colspan="2">The constants below can only be used with the DualSense gamepad on a PS4 or PS5</th>
+        <th colspan="2">Las constantes que se indican a continuación sólo pueden utilizarse con el gamepad DualSense en una PS4 o PS5</th>
       </tr>
       <tr>
-        <td><span class="inline">gp_axis_acceleration_x</span>*</td>
-        <td>The gamepad&#39;s acceleration on the X axis</td>
+        <td><span class="notranslate"><span class="inline">gp_axis_acceleration_x</span>*</td>
+        <td>La aceleración del gamepad en el eje X</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_axis_acceleration_y</span>*</td>
-        <td>The gamepad&#39;s acceleration on the Y axis</td>
+        <td><span class="notranslate"><span class="inline">gp_axis_acceleration_y</span>*</td>
+        <td>La aceleración del gamepad en el eje Y</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_axis_acceleration_z</span>*</td>
-        <td>The gamepad&#39;s acceleration on the Z axis</td>
+        <td><span class="notranslate"><span class="inline">gp_axis_acceleration_z</span>*</td>
+        <td>La aceleración del gamepad en el eje Z</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_axis_angular_velocity_x</span>*</td>
-        <td>The gamepad&#39;s angular velocity on the X axis</td>
+        <td><span class="notranslate"><span class="inline">gp_axis_angular_velocity_x</span>*</td>
+        <td>La velocidad angular del gamepad en el eje X</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_axis_angular_velocity_y</span>*</td>
-        <td>The gamepad&#39;s angular velocity on the Y axis</td>
+        <td><span class="notranslate"><span class="inline">gp_axis_angular_velocity_y</span>*</td>
+        <td>La velocidad angular del gamepad en el eje Y</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_axis_angular_velocity_z</span>*</td>
-        <td>The gamepad&#39;s angular velocity on the Z axis</td>
+        <td><span class="notranslate"><span class="inline">gp_axis_angular_velocity_z</span>*</td>
+        <td>La velocidad angular del gamepad en el eje Z</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_axis_orientation_x</span>*</td>
-        <td>The gamepad&#39;s X orientation</td>
+        <td><span class="notranslate"><span class="inline">gp_axis_orientation_x</span>*</td>
+        <td>La orientación X del gamepad</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_axis_orientation_y</span>*</td>
-        <td>The gamepad&#39;s Y orientation</td>
+        <td><span class="notranslate"><span class="inline">gp_axis_orientation_y</span>*</td>
+        <td>La orientación Y del gamepad</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_axis_orientation_z</span>*</td>
-        <td>The gamepad&#39;s Z orientation</td>
+        <td><span class="notranslate"><span class="inline">gp_axis_orientation_z</span>*</td>
+        <td>La orientación Z del gamepad</td>
       </tr>
       <tr>
-        <td><span class="inline">gp_axis_orientation_w</span>*</td>
-        <td>The gamepad&#39;s W orientation</td>
+        <td><span class="notranslate"><span class="inline">gp_axis_orientation_w</span>*</td>
+        <td>La orientación W del gamepad</td>
       </tr>
     </tbody>
   </table>
-  <p class="note"><span class="note">NOTE</span> The gamepad&#39;s <strong>orientation</strong> is a <a href="https://en.wikipedia.org/wiki/Quaternion" title="Quaternion">Quaternion</a>, which is why it has four values (X, Y, Z and W).<br />
-    <br />
-    * These constants are only supported on PS4 and PS5, and when used on other platforms the input functions will return <span class="inline">0</span>, even when using a DualSense gamepad.
+  <p class="note"><span class="note">NOTA</span> La <strong>orientación</strong> del gamepad es un <a href="https://en.wikipedia.org/wiki/Quaternion" title="Quaternion">Quaternion</a>, por lo que tiene cuatro valores (X, Y, Z y W).<br>
+    <br>
+    * Estas constantes sólo son compatibles con PS4 y PS5, y cuando se utilizan en otras plataformas las funciones de entrada devolverán <span class="inline">0</span>, incluso cuando se utiliza un gamepad DualSense.
   </p>
-  <p>To better understand exactly what part of the controller each constant represents, you can refer to the following image of a standard XInput gamepad:</p>
+  <p>Para entender mejor qué parte del controlador representa cada constante, puedes consultar la siguiente imagen de un gamepad XInput estándar:</p>
   <p><img alt="Xinput gamepad illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Game_Input/GamePad.png" /></p>
-  <h2>Functions</h2>
-  <p>Below you can find a list of all the gamepad functions:</p>
+  <h2>Funciones</h2>
+  <p>A continuación puedes encontrar una lista de todas las funciones del gamepad:</p>
   <ul class="colour">
-    <li><a href="gamepad_is_supported.htm">gamepad_is_supported</a></li>
-    <li><a href="gamepad_is_connected.htm">gamepad_is_connected</a></li>
-    <li><a href="gamepad_get_guid.htm">gamepad_get_guid</a></li>
-    <li><a href="gamepad_get_device_count.htm">gamepad_get_device_count</a></li>
-    <li><a href="gamepad_get_description.htm">gamepad_get_description</a></li>
-    <li><a href="gamepad_get_button_threshold.htm">gamepad_get_button_threshold</a></li>
-    <li><a href="gamepad_get_axis_deadzone.htm">gamepad_get_axis_deadzone</a></li>
-    <li><a href="gamepad_get_option.htm">gamepad_get_option</a></li>
-    <li><a href="gamepad_set_button_threshold.htm">gamepad_set_button_threshold</a></li>
-    <li><a href="gamepad_set_axis_deadzone.htm">gamepad_set_axis_deadzone</a></li>
-    <li><a href="gamepad_set_vibration.htm">gamepad_set_vibration</a></li>
-    <li><a href="gamepad_set_colour.htm">gamepad_set_colour</a></li>
-    <li><a href="gamepad_set_option.htm">gamepad_set_option</a></li>
-    <li><a href="gamepad_axis_count.htm">gamepad_axis_count</a></li>
-    <li><a href="gamepad_axis_value.htm">gamepad_axis_value</a></li>
-    <li><a href="gamepad_button_check.htm">gamepad_button_check</a></li>
-    <li><a href="gamepad_button_check_pressed.htm">gamepad_button_check_pressed</a></li>
-    <li><a href="gamepad_button_check_released.htm">gamepad_button_check_released</a></li>
-    <li><a href="gamepad_button_count.htm">gamepad_button_count</a></li>
-    <li><a href="gamepad_button_value.htm">gamepad_button_value</a></li>
-    <li><a href="gamepad_hat_count.htm">gamepad_hat_count</a></li>
-    <li><a href="gamepad_hat_value.htm">gamepad_hat_value</a></li>
+    <li><a href="gamepad_is_supported.htm"><span class="notranslate">gamepad_is_supported</span></a></li>
+    <li><a href="gamepad_is_connected.htm"><span class="notranslate">gamepad_is_connected</span></a></li>
+    <li><a href="gamepad_get_guid.htm"><span class="notranslate">gamepad_get_guid</span></a></li>
+    <li><a href="gamepad_get_device_count.htm"><span class="notranslate">gamepad_get_device_count</span></a></li>
+    <li><a href="gamepad_get_description.htm"><span class="notranslate">gamepad_get_description</span></a></li>
+    <li><a href="gamepad_get_button_threshold.htm"><span class="notranslate">gamepad_get_button_threshold</span></a></li>
+    <li><a href="gamepad_get_axis_deadzone.htm"><span class="notranslate">gamepad_get_axis_deadzone</span></a></li>
+    <li><a href="gamepad_get_option.htm"><span class="notranslate">gamepad_get_option</span></a></li>
+    <li><a href="gamepad_set_button_threshold.htm"><span class="notranslate">gamepad_set_button_threshold</span></a></li>
+    <li><a href="gamepad_set_axis_deadzone.htm"><span class="notranslate">gamepad_set_axis_deadzone</span></a></li>
+    <li><a href="gamepad_set_vibration.htm"><span class="notranslate">gamepad_set_vibration</span></a></li>
+    <li><a href="gamepad_set_colour.htm"><span class="notranslate">gamepad_set_colour</span></a></li>
+    <li><a href="gamepad_set_option.htm"><span class="notranslate">gamepad_set_option</span></a></li>
+    <li><a href="gamepad_axis_count.htm"><span class="notranslate">gamepad_axis_count</span></a></li>
+    <li><a href="gamepad_axis_value.htm"><span class="notranslate">gamepad_axis_value</span></a></li>
+    <li><a href="gamepad_button_check.htm"><span class="notranslate">gamepad_button_check</span></a></li>
+    <li><a href="gamepad_button_check_pressed.htm"><span class="notranslate">gamepad_button_check_pressed</span></a></li>
+    <li><a href="gamepad_button_check_released.htm"><span class="notranslate">gamepad_button_check_released</span></a></li>
+    <li><a href="gamepad_button_count.htm"><span class="notranslate">gamepad_button_count</span></a></li>
+    <li><a href="gamepad_button_value.htm"><span class="notranslate">gamepad_button_value</span></a></li>
+    <li><a href="gamepad_hat_count.htm"><span class="notranslate">gamepad_hat_count</span></a></li>
+    <li><a href="gamepad_hat_value.htm"><span class="notranslate">gamepad_hat_value</span></a></li>
   </ul>
-  <p> </p>
-  <p>The following gamepad functions also exist and are used for remapping the built in constants to the direct physical inputs of a given gamepad. These functions are only for the Windows Desktop, Ubuntu, macOS, and Android target platforms and on Windows, they will only be valid for Direct input devices. While <span data-keyref="GameMaker Name">GameMaker</span> comes with mappings for a number of different gamepads based on <a href="https://github.com/gabomdq/SDL_GameControllerDB" target="_blank">SDL Gamepad Controller DB</a>, however due to the huge number of controller types and brands out there, it is impossible to map the GML constants to the correct inputs for every make and model, so with these functions you have the possibility to create your own custom mappings.</p>
+  <p> </p>
+  <p>Las siguientes funciones de gamepad también existen y se utilizan para reasignar las constantes incorporadas a las entradas físicas directas de un determinado gamepad. Estas funciones son sólo para las plataformas de destino <span class="notranslate">Windows</span> Desktop, <span class="notranslate">Ubuntu</span>, <span class="notranslate">macOS</span>, y <span class="notranslate">Android</span> y en <span class="notranslate">Windows</span>, sólo serán válidas para dispositivos de entrada directa. Mientras que <span data-keyref="GameMaker Name">GameMaker</span> viene con mapeos para un número de diferentes gamepads basados en <a href="https://github.com/gabomdq/SDL_GameControllerDB" target="_blank">SDL Gamepad Controller DB</a>, sin embargo, debido al gran número de tipos de controladores y marcas que existen, es imposible asignar las constantes de <span class="notranslate">GML</span> a las entradas correctas para cada marca y modelo, por lo que con estas funciones tienes la posibilidad de crear tus propios mapeos personalizados.</p>
   <ul class="colour">
-    <li><a href="gamepad_get_mapping.htm">gamepad_get_mapping</a></li>
-    <li><a href="gamepad_test_mapping.htm">gamepad_test_mapping</a></li>
-    <li><a href="gamepad_remove_mapping.htm">gamepad_remove_mapping</a></li>
+    <li><a href="gamepad_get_mapping.htm"><span class="notranslate">gamepad_get_mapping</span></a></li>
+    <li><a href="gamepad_test_mapping.htm"><span class="notranslate">gamepad_test_mapping</span></a></li>
+    <li><a href="gamepad_remove_mapping.htm"><span class="notranslate">gamepad_remove_mapping</span></a></li>
   </ul>
-  <p> </p>
-  <p>It is worth noting that Direct Input gamepads are run in <i>cooperative mode</i> which means that your game only has access to them when it is the foreground application, which in turn will cause Direct Input controllers to be &quot;lost&quot; if the game loses focus and then &quot;found&quot; again when it comes back into focus (this can be detected in the System Event and dealt with). Similarly, no input from gamepads will be detected while the game is not in focus, and we recommend that you use the function <a href="../../OS_And_Compiler/os_is_paused.htm"><span class="inline">os_is_paused()</span></a> or <a href="../../Cameras_And_Display/The_Game_Window/window_has_focus.htm"><span class="inline">window_has_focus()</span></a> to detect this and pause the game or something similar as any button being held down at the time the game loses focus will maintain the held down state until the game regains focus.</p>
-  <h2>Compatibility</h2>
-  <p>The following list shows current compatibility across the platforms (note that this will change with future updates):</p>
+  <p> </p>
+  <p>Vale la pena señalar que los gamepads de Direct Input se ejecutan en <i>modo cooperativo</i>, lo que significa que su juego sólo tiene acceso a ellos cuando es la aplicación en primer plano, lo que a su vez hará que los controladores de Direct Input se &quot;pierdan&quot; si el juego pierde el foco y luego se &quot;encuentren&quot; de nuevo cuando vuelva a estar enfocado (esto puede ser detectado en el Evento del Sistema y tratado). Del mismo modo, no se detectará ninguna entrada de los gamepads mientras el juego no esté enfocado, y se recomienda utilizar la función <a href="../../OS_And_Compiler/os_is_paused.htm"><span class="inline">os_is_paused()</span></a> o <a href="../../Cameras_And_Display/The_Game_Window/window_has_focus.htm"><span class="inline">window_has_focus()</span></a> para detectar esto y pausar el juego o algo similar, ya que cualquier botón que se mantenga pulsado en el momento en que el juego pierda el foco, mantendrá el estado de pulsación hasta que el juego recupere el foco.</p>
+  <h2>Compatibilidad</h2>
+  <p>La siguiente lista muestra la compatibilidad actual entre las plataformas (tenga en cuenta que esto cambiará con futuras actualizaciones):</p>
   <ul class="colour">
-    <li><strong>Windows </strong>is fully supported with up to a maximum of 12 connected devices permitted at once (numbered from 0 to 11, with 0 - 3 being XInput devices and 4 - 11 being DirectInput). Remapping of controller constants is also permitted.</li>
-    <li><strong>macOS </strong>is supported with up to a maximum of 4 connected devices permitted at once, and these devices can ONLY be of the type Playstation3 or Xbox 360. Please note that the &quot;Build for Mac AppStore&quot; option in Mac Game Options needs to be OFF for pad support to work. Remapping of controller constants is also permitted.</li>
-    <li><strong>Ubuntu </strong>does also support Gamepad input, but you may need to install additional libraries from the Ubuntu repository. You can do this easily by opening a command line terminal and typing the following (this will install GUI support for the joystick/gamepad as well as the joystick/gamepad API itself - remapping of controller constants is <i>not</i> permitted):
-      <p class="code">sudo apt-get install jstest-gtk<br />
+    <li><strong>Windows </strong>es totalmente compatible con un máximo de 12 dispositivos conectados a la vez (numerados del 0 al 11, siendo el 0 - 3 dispositivos XInput y el 4 - 11 DirectInput). También se permite reasignar las constantes del controlador.</li>
+    <li><strong>macOS </strong>es compatible con un máximo de 4 dispositivos conectados a la vez, y estos dispositivos SOLO pueden ser del tipo Playstation3 o Xbox 360. Ten en cuenta que la opción &quot;Build for Mac AppStore&quot; en las opciones de juego de Mac debe estar desactivada para que funcione el soporte de pads. También se permite reasignar las constantes del mando.</li>
+    <li><strong>Ubuntu </strong>también soporta la entrada del Gamepad, pero es posible que tenga que instalar bibliotecas adicionales desde el repositorio <span class="notranslate">Ubuntu</span>. Puedes hacerlo fácilmente abriendo un terminal de línea de comandos y escribiendo lo siguiente (esto instalará el soporte GUI para el joystick/gamepad así como la propia API del joystick/gamepad - <i>no</i> se permite la reasignación de constantes del controlador):
+     <p class="code">sudo apt-get install jstest-gtk<br />
         sudo apt-get install joystick.</p>
     </li>
-    <li><strong>HTML5 </strong>games using gamepads are supported by most major browsers, except <i>Safari</i>. Remapping of controller constants is <i>not</i> permitted.</li>
-    <li>Web browsers will only detect gamepads when a button is pressed or an axis is moved, so they may not be available at the immediate start of the game. This applies to the <strong>GX.games</strong> and <strong>HTML </strong>target platforms.</li>
-    <li>Gamepad support also extends to <strong>iOS </strong>with the iCade cabinet. The left axis maps to the stick controller (although the input is digital, not analogue), the four &quot;face&quot; buttons map to the cabinet front buttons, and the four shoulder buttons map to those at the back of the cabinet.</li>
-    <li><strong>Android </strong>(and <strong>Amazon Fire</strong>) export supports NYKO controllers and generic Bluetooth controllers, but only when they are enabled, meaning that you will have to tick the iCade/Bluetooth option in the <a href="../../../../Settings/Game_Options/Android.htm">General</a> section of the Android Game Options. They require API level 12 for them to work fully and it should be noted that <span data-keyref="GameMaker Name">GameMaker</span> will register as connected any Bluetooth devices that your device is paired with, whether or not it&#39;s actually connected. Therefore this should be taken into account when assigning and checking &quot;slots&quot;. Note that the remapping of controller constants is also permitted.</li>
-    <li>On <strong>PS4</strong>, if you want to use the touch pad tracking you need to use the <a href="../Device_Input/Device_Input.htm"><span class="inline">device_mouse_*</span></a> buttons. Remapping of controller constants is <i>not</i> permitted.</li>
-    <li>On, <strong>Xbox One </strong>and <strong>Nintendo Switch</strong> targets, gamepads are fully supported, but remapping of controller constants is <i>not</i> permitted.</li>
+    <li>Los juegos<strong>HTML5 </strong>que utilizan gamepads son compatibles con la mayoría de los navegadores, excepto <i>Safari</i>. <i>No</i> se permite reasignar las constantes del controlador.</li>
+    <li>Los navegadores web sólo detectan los gamepads cuando se pulsa un botón o se mueve un eje, por lo que es posible que no estén disponibles al inicio inmediato del juego. Esto se aplica a las plataformas de destino <strong>Opera GX</strong> y <strong>HTML </strong>.</li>
+    <li>La compatibilidad con el gamepad también se extiende a <strong>iOS </strong>con el gabinete iCade. El eje izquierdo se corresponde con el stick del mando (aunque la entrada es digital, no analógica), los cuatro botones de la cara se corresponden con los botones frontales de la caja y los cuatro botones del hombro se corresponden con los de la parte trasera de la caja.</li>
+    <li>La exportación<strong>a Android </strong>(y <strong>Amazon Fire</strong>) es compatible con los mandos NYKO y los mandos Bluetooth genéricos, pero solo cuando están activados, lo que significa que tendrás que marcar la opción iCade/Bluetooth en la sección <a href="../../../../Settings/Game_Options/Android.htm">General</a> de las opciones de juego de <span class="notranslate">Android</span>. Requieren el nivel 12 de la API para que funcionen plenamente y hay que tener en cuenta que <span data-keyref="GameMaker Name">GameMaker</span> registrará como conectado cualquier dispositivo Bluetooth con el que esté emparejado tu dispositivo, esté o no realmente conectado. Por lo tanto, esto debe tenerse en cuenta a la hora de asignar y comprobar los &quot;slots&quot;. Tenga en cuenta que la reasignación de las constantes del controlador también está permitida.</li>
+    <li>En <strong>PS4</strong>, si quieres usar el seguimiento del touch pad tienes que usar los <a href="../Device_Input/Device_Input.htm"><span class="inline">device_mouse_*</span></a> botones. <i>No</i> se permite reasignar las constantes del mando.</li>
+    <li>En los objetivos de <strong>Windows </strong><strong>UWP</strong>, <strong>XBoxOne </strong>y <strong>Nintendo Switch</strong>, los gamepads son totalmente compatibles, pero <i>no</i> se permite la reasignación de las constantes del mando.</li>
   </ul>
-  <p>Ideally, on <i>all</i> target platforms, you want to enumerate a list of available gamepad &quot;slots&quot; and then check them to see if any devices are detected, something like this:</p>
+  <p>Idealmente, en <i>todas las</i> plataformas de destino, usted quiere enumerar una lista de &quot;ranuras&quot; de gamepad disponibles y luego comprobarlas para ver si se detecta algún dispositivo, algo así:</p>
   <p class="code">var _maxpads = gamepad_get_device_count();<br />
     <br />
     for (var i = 0; i &lt; _maxpads; i++)<br />
     {<br />
-        if (gamepad_is_connected(i))<br />
-        {<br />
-            // do stuff with pad &quot;i&quot;<br />
-        }<br />
+        if (gamepad_is_connected(i))<br />
+        {<br />
+            // do stuff with pad &quot;i&quot;<br />
+        }<br />
     }
   </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Game_Input.htm">Game Input</a></div>
-        <div style="float:right">Next: <a href="../Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm">Virtual Keys and Virtual Keyboards</a></div>
+        <div style="float:left">Atrás: <a href="../Game_Input.htm">Entrada del juego</a></div>
+        <div style="float:right">Siguiente: <a href="../Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm">Teclas y teclados virtuales</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Gamepad Input Functions

@@ -3,19 +3,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Sequence Instance Struct</title>
+  <title>La estructura de la instancia de la secuencia</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining The Sequence Instance Struct" />
-  <meta name="rh-index-keywords" content="Sequence Instance Struct,seqdir_right,seqdir_left" />
+  <meta name="rh-index-keywords" content="Sequence Instance Struct" />
   <meta name="search-keywords" content="The Sequence Instance Struct,seqdir_right,seqdir_left,sequence,headPosition,headDirection,speedScale,paused,finished,elementID,activeTracks,matrix,posx,posy,scalex,scaley,xorigin,yorigin,width,height,imageindex,imagespeed,colourMultiply,gain,pitch,track,parent" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Sequence Instance Struct</h1>
-  <p>A sequence, when placed in a room, is placed as an <strong>element</strong> on the layer, and this element contains a <strong>sequence instance</strong>. This sequence instance will have the following properties in its <a href="../../../../GML_Overview/Structs.htm">struct</a>:</p>
+  <h1>La estructura de la instancia <span class="notranslate">Sequence</span> </h1>
+  <p>Un <span class="notranslate">sequence</span>, cuando se coloca en un <span class="notranslate">room</span>, se coloca como un <strong>elemento</strong> en la capa, y este elemento contiene una instancia de <strong>secuencia</strong>. Esta instancia de <span class="notranslate">sequence</span> tendrá las siguientes propiedades en su <a href="../../../../GML_Overview/Structs.htm">estructura</a>:</p>
   <table>
     <colgroup>
       <col />
@@ -24,56 +24,56 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="3"><span data-keyref="Type_Struct_Sequence_Instance"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Sequence_Instance_Struct.htm" target="_blank">Sequence Instance Struct</a></span></th>
+        <th colspan="3"><span data-keyref="Type_Struct_Sequence_Instance"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Sequence_Instance_Struct.htm" target="_blank">Estructura de la instancia de la secuencia</a></span></th>
       </tr>
       <tr>
         <th>Variable</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
         <td><span class="inline">sequence</span></td>
-        <td><span data-keyref="Type_Struct_Sequence_Object"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Sequence_Object_Struct.htm" target="_blank">Sequence Object Struct</a></span></td>
-        <td>This is the ID of the <b>sequence object</b> struct that the sequence instance has been created from (see <a href="The_Sequence_Object_Struct.htm">here</a>for more details). You can get or set this struct, and so change the base sequence that the instance is referencing.</td>
+        <td><span data-keyref="Type_Struct_Sequence_Object"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Sequence_Object_Struct.htm" target="_blank">Secuencia <span class="notranslate">Object</span> Struct</a></span></td>
+        <td>Este es el ID del <b>objeto de secuencia</b> <span class="notranslate">struct</span> del que se ha creado la instancia <span class="notranslate">sequence</span> (ver <a href="The_Sequence_Object_Struct.htm">aquí para</a>más detalles). Puedes obtener o establecer este <span class="notranslate">struct</span>, y así cambiar la base <span class="notranslate">sequence</span> a la que la instancia hace referencia.</td>
       </tr>
       <tr>
         <td><span class="inline">headPosition</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>This is the current <a class="glossterm" data-glossterm="playhead" href="#">playhead</a> position (in frames) for the sequence instance. You can get or set this value, but note that setting it to a value greater or less than the currently defined play region will have different effects depending on the type of playback set for the sequence. See <a href="../../Rooms/Sequence_Layers/layer_sequence_headpos.htm"><span class="inline">layer_sequence_headpos()</span></a> for more information.</td>
+        <td>Es la posición actual <a class="glossterm" data-glossterm="cabezal de reproducción" href="#">del cabezal de reproducción</a> (en fotogramas) para la instancia <span class="notranslate">sequence</span>. Puede obtener o establecer este valor, pero tenga en cuenta que establecerlo a un valor mayor o menor que la región de reproducción definida actualmente tendrá diferentes efectos dependiendo del tipo de reproducción establecido para el <span class="notranslate">sequence</span>. Consulte <a href="../../Rooms/Sequence_Layers/layer_sequence_headpos.htm"><span class="inline">layer_sequence_headpos()</span></a> para más información.</td>
       </tr>
       <tr>
         <td><span class="inline">headDirection</span></td>
-        <td><span data-keyref="Type_Constant_Sequence_Direction"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Sequence_Instance_Struct.htm" target="_blank">Sequence Direction Constant</a></span></td>
-        <td>This is the current playback direction for the sequence instance. You can get or set this value using the constants given in the next table (Note that you can use the layer functions <a href="../../Rooms/Sequence_Layers/layer_sequence_get_headdir.htm"><span class="inline">layer_sequence_get_headdir()</span></a> and <a href="../../Rooms/Sequence_Layers/layer_sequence_headdir.htm"><span class="inline">layer_sequence_headdir()</span></a> to get or set this value without having to access the struct directly).</td>
+        <td><span data-keyref="Type_Constant_Sequence_Direction"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Sequence_Instance_Struct.htm" target="_blank">Dirección de la secuencia Constante</a></span></td>
+        <td>Esta es la dirección de reproducción actual para la instancia <span class="notranslate">sequence</span>. Puedes obtener o establecer este valor usando las constantes dadas en la siguiente tabla (Ten en cuenta que puedes usar las funciones de capa <a href="../../Rooms/Sequence_Layers/layer_sequence_get_headdir.htm"><span class="inline">layer_sequence_get_headdir()</span></a> y <a href="../../Rooms/Sequence_Layers/layer_sequence_headdir.htm"><span class="inline">layer_sequence_headdir()</span></a> para obtener o establecer este valor sin tener que acceder directamente a <span class="notranslate">struct</span> ).</td>
       </tr>
       <tr>
         <td><span class="inline">speedScale</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>This property can be used to get or set the playback speed scale. The speed scale is a <i>multiplier</i>, where 1 is the default playback speed and values less than 1 will slow the playback and values larger than 1 will speed it up, eg: a value of 0.5 would be half playback speed, while a value of 2 would be double playback speed. Note that you can use the layer functions <a href="../../Rooms/Sequence_Layers/layer_sequence_get_speedscale.htm"><span class="inline">layer_sequence_get_speedscale()</span></a> and <a href="../../Rooms/Sequence_Layers/layer_sequence_speedscale.htm"><span class="inline">layer_sequence_speedscale()</span></a> to get or set this value without having to access the struct directly.</td>
+        <td>Esta propiedad se puede utilizar para obtener o establecer la escala de velocidad de reproducción. La escala de velocidad es un <i>multiplicador</i>, donde 1 es la velocidad de reproducción por defecto y valores menores que 1 ralentizarán la reproducción y valores mayores que 1 la acelerarán, por ejemplo: un valor de 0.5 sería la mitad de la velocidad de reproducción, mientras que un valor de 2 sería el doble de la velocidad de reproducción. Tenga en cuenta que puede utilizar las funciones de capa <a href="../../Rooms/Sequence_Layers/layer_sequence_get_speedscale.htm"><span class="inline">layer_sequence_get_speedscale()</span></a> y <a href="../../Rooms/Sequence_Layers/layer_sequence_speedscale.htm"><span class="inline">layer_sequence_speedscale()</span></a> para obtener o establecer este valor sin tener que acceder directamente a <span class="notranslate">struct</span>.</td>
       </tr>
       <tr>
         <td><span class="inline">paused</span></td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>You can check this property to see if a sequence has been paused or not, and it will be <span class="inline">true</span> if it has, or <span class="inline">false</span> otherwise. This is a <b>read-only</b> property, but you can use the layer function <a href="../../Rooms/Sequence_Layers/layer_sequence_pause.htm"><span class="inline">layer_sequence_pause()</span></a> to pause playback, and <a href="../../Rooms/Sequence_Layers/layer_sequence_play.htm"><span class="inline">layer_sequence_play()</span></a> to resume it again if required. You can also check this property using the layer function <a href="../../Rooms/Sequence_Layers/layer_sequence_is_paused.htm"><span class="inline">layer_sequence_is_paused()</span></a> rather than check the property in the struct directly.</td>
+        <td><span data-keyref="Type_Bool"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Booleano</a></span></td>
+        <td>Puede comprobar esta propiedad para ver si un <span class="notranslate">sequence</span> ha sido pausado o no, y será <span class="inline">true</span> si lo ha sido, o <span class="inline">false</span> en caso contrario. Esta es una propiedad <b>de sólo lectura</b>, pero puedes utilizar la función de capa <a href="../../Rooms/Sequence_Layers/layer_sequence_pause.htm"><span class="inline">layer_sequence_pause()</span></a> para pausar la reproducción, y <a href="../../Rooms/Sequence_Layers/layer_sequence_play.htm"><span class="inline">layer_sequence_play()</span></a> reanudarla de nuevo si es necesario. También puede comprobar esta propiedad utilizando la función de capa <a href="../../Rooms/Sequence_Layers/layer_sequence_is_paused.htm"><span class="inline">layer_sequence_is_paused()</span></a> en lugar de comprobar la propiedad en el <span class="notranslate">struct</span> directamente.</td>
       </tr>
       <tr>
         <td><span class="inline">finished</span></td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>You can check this property to see if a sequence has finished playing or not, returning <span class="inline">true</span> if it is finished playing, and <span class="inline">false</span> otherwise. This is a <b>read-only</b> property, and will only ever return <span class="inline">true</span> for tracks that are not set to loop or ping-pong. You can also check this property using the layer function <a href="../../Rooms/Sequence_Layers/layer_sequence_is_finished.htm"><span class="inline">layer_sequence_is_finished()</span></a> rather than check the property in the struct directly.</td>
+        <td><span data-keyref="Type_Bool"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Booleano</a></span></td>
+        <td>Puedes comprobar esta propiedad para ver si un <span class="notranslate">sequence</span> ha terminado de reproducirse o no, devolviendo <span class="inline">true</span> si ha terminado de reproducirse, y <span class="inline">false</span> en caso contrario. Esta es una propiedad <b>de sólo lectura</b>, y sólo devolverá <span class="inline">true</span> para las pistas que no estén configuradas como <span class="notranslate">loop</span> o ping-pong. También puedes comprobar esta propiedad utilizando la función de capa <a href="../../Rooms/Sequence_Layers/layer_sequence_is_finished.htm"><span class="inline">layer_sequence_is_finished()</span></a> en lugar de comprobar la propiedad en el <span class="notranslate">struct</span> directamente.</td>
       </tr>
       <tr>
         <td><span class="inline">elementID</span></td>
-        <td><span data-keyref="Type_ID_Element_Sequence"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Sequence_Layers/layer_sequence_create.htm" target="_blank">Sequence Element ID</a></span></td>
-        <td>This property holds the ID of the sequence <i>element</i>. This ID is a simple identifying value that is associated with a layer in the room editor, and it can then be used with the appropriate <a href="../../Rooms/General_Layer_Functions/General_Layer_Functions.htm">layer functions</a> to find the layer the sequence has been assigned to or to change certain sequence properties without having to deal with the struct.</td>
+        <td><span data-keyref="Type_ID_Element_Sequence"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Sequence_Layers/layer_sequence_create.htm" target="_blank">ID del elemento de secuencia</a></span></td>
+        <td>Esta propiedad contiene el ID del <i>elemento</i> <span class="notranslate">sequence</span>. Este ID es un simple valor de identificación que se asocia a una capa en el editor <span class="notranslate">room</span>, y puede utilizarse con las <a href="../../Rooms/General_Layer_Functions/General_Layer_Functions.htm">funciones de capa</a> apropiadas para encontrar la capa a la que se ha asignado el <span class="notranslate">sequence</span> o para cambiar ciertas propiedades de <span class="notranslate">sequence</span> sin tener que tratar con el <span class="notranslate">struct</span>.</td>
       </tr>
       <tr>
         <td><span class="inline">activeTracks</span></td>
-        <td><span data-keyref="Type_Array"><a href="../../../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span> of <span data-keyref="Type_Struct_Sequence_Active_Track"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Sequence_Instance_Struct.htm#activeTracks" target="_blank">Sequence Active Track Struct</a></span>s</td>
-        <td>This property will hold an array of &quot;evaluation&quot; structs containing information on the current state of each <b>asset track</b> in the sequence (graphics, sequence, audio etc...). These are the top-level tracks, and the array returned is <b>read-only</b>. For the contents of the asset track struct returned in each array entry, please see the section below.</td>
+        <td><span data-keyref="Type_Array"><a href="../../../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Matriz</a></span> de <span data-keyref="Type_Struct_Sequence_Active_Track"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Sequence_Instance_Struct.htm#activeTracks" target="_blank">Secuencia Pista Activa Estruct.</a></span>s</td>
+        <td>Esta propiedad contendrá una matriz de &quot;evaluación&quot; <span class="notranslate">structs</span> que contiene información sobre el estado actual de cada pista de <b>activos</b> en el <span class="notranslate">sequence</span> (gráficos, <span class="notranslate">sequence</span>, audio, etc...). Estas son las pistas de nivel superior, y el array devuelto es <b>de sólo lectura</b>. <span class="notranslate">asset</span> Para conocer el contenido de la pista <span class="notranslate">struct</span> que se devuelve en cada entrada del array, consulte la sección siguiente.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
+  <p> </p>
   <table>
     <colgroup>
       <col />
@@ -82,29 +82,29 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="3"><span data-keyref="Type_Constant_Sequence_Direction"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Sequence_Instance_Struct.htm" target="_blank">Sequence Direction Constant</a></span></th>
+        <th colspan="3"><span data-keyref="Type_Constant_Sequence_Direction"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Sequence_Instance_Struct.htm" target="_blank">Dirección de la secuencia Constante</a></span></th>
       </tr>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
-        <th>Value</th>
+        <th>Constante</th>
+        <th>Descripción</th>
+        <th>Valor</th>
       </tr>
       <tr>
-        <td><span class="inline">seqdir_right</span></td>
-        <td>The sequence will play frames in an incremental order from left to right</td>
-        <td>1</td>
+        <td><span class="notranslate"><span class="inline">seqdir_right</span></td>
+        <td>El <span class="notranslate">sequence</span> reproducirá los fotogramas en un orden incremental de izquierda a derecha</td>
+        <td><span class="notranslate">1</span></td>
       </tr>
       <tr>
-        <td><span class="inline">seqdir_left</span></td>
-        <td>The sequence will play frames in a decremental order from right to left</td>
-        <td>-1</td>
+        <td><span class="notranslate"><span class="inline">seqdir_left</span></td>
+        <td>El <span class="notranslate">sequence</span> reproducirá los fotogramas en orden decreciente de derecha a izquierda</td>
+        <td><span class="notranslate">-1</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h2 id="activeTracks">activeTracks Struct</h2>
-  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_important.hts"> </span> Although this property already exists in the sequence instance struct in the Sequence Create event, it is only filled with tracks after the first Sequence Begin Step event. So the first time you will find values in this struct is during the first iteration of the Sequence Step Event.</p>
-  <p>The following list contains the properties that may be available to you when accessing an active track struct (as included in the <span class="inline">activeTracks</span> array of a Sequence Instance struct, explained above). Each asset track struct can have any of the following properties, depending on the type of asset the track uses (note that you can modify all these properties, except where specified as <strong>read-only</strong>), and all values returned are for the current playhead position:</p>
+  <p> </p>
+  <h2 id="activeTracks">Estructura activeTracks</h2>
+  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_important.hts"> </span> Aunque esta propiedad ya existe en la instancia <span class="notranslate">sequence</span> <span class="notranslate">struct</span> en el evento <span class="notranslate">Sequence</span> Create, sólo se llena de pistas después del primer evento <span class="notranslate">Sequence</span> Begin Step. Así que la primera vez que encontrará valores en este <span class="notranslate">struct</span> es durante la primera iteración del evento <span class="notranslate">Sequence</span> Step.</p>
+  <p>La siguiente lista contiene las propiedades que pueden estar disponibles cuando se accede a una pista activa <span class="notranslate">struct</span> (tal y como se incluye en la matriz <span class="inline">activeTracks</span> de una Instancia <span class="notranslate">Sequence</span> <span class="notranslate">struct</span> , explicada anteriormente). Cada pista <span class="notranslate">asset</span> <span class="notranslate">struct</span> puede tener cualquiera de las siguientes propiedades, dependiendo del tipo de <span class="notranslate">asset</span> que utilice la pista (tenga en cuenta que puede modificar todas estas propiedades, excepto cuando se especifique como <strong>de sólo lectura</strong>), y todos los valores devueltos son para la posición actual del cabezal de reproducción:</p>
   <table>
     <colgroup>
       <col />
@@ -113,147 +113,142 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="3"><span data-keyref="Type_Struct_Sequence_Active_Track"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Sequence_Instance_Struct.htm#activeTracks" target="_blank">Sequence Active Track Struct</a></span></th>
+        <th colspan="3"><span data-keyref="Type_Struct_Sequence_Active_Track"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Sequence_Instance_Struct.htm#activeTracks" target="_blank">Secuencia de la pista activa Struct</a></span></th>
       </tr>
       <tr>
         <th>Variable</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
         <td><span class="inline">matrix</span></td>
-        <td><span data-keyref="Type_Array_Matrix"><a href="../../../../../../GameMaker_Language/GML_Reference/Maths_And_Numbers/Matrix_Functions/Matrix_Functions.htm" target="_blank">Matrix Array</a></span></td>
-        <td>This is the transformation matrix used to draw the track (sprite, instance and sequence tracks).</td>
+        <td><span data-keyref="Type_Array_Matrix"><a href="../../../../../../GameMaker_Language/GML_Reference/Maths_And_Numbers/Matrix_Functions/Matrix_Functions.htm" target="_blank">Matriz</a></span></td>
+        <td>Es la matriz de transformación utilizada para dibujar la pista (<span class="notranslate">sprite</span>, instancia y <span class="notranslate">sequence</span> pistas).</td>
       </tr>
       <tr>
         <td><span class="inline">posx</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The position of the asset in the sequence along the X axis for the track at the current playhead position (all assets).</td>
+        <td>La posición del <span class="notranslate">asset</span> en el <span class="notranslate">sequence</span> a lo largo del eje X para la pista en la posición actual del cabezal de reproducción (todos <span class="notranslate">assets</span>).</td>
       </tr>
       <tr>
         <td><span class="inline">posy</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The position of the asset in the sequence along the Y axis for the track at the current playhead position (all assets).</td>
+        <td>La posición del <span class="notranslate">asset</span> en el <span class="notranslate">sequence</span> a lo largo del eje Y para la pista en la posición actual del cabezal de reproducción (todos <span class="notranslate">assets</span>).</td>
       </tr>
       <tr>
         <td><span class="inline">scalex</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The scale of the asset in the sequence along the X axis for the track at the current playhead position (sprite, instance and sequence tracks).</td>
+        <td>La escala del <span class="notranslate">asset</span> en el <span class="notranslate">sequence</span> a lo largo del eje X para la pista en la posición actual del cabezal de reproducción (<span class="notranslate">sprite</span>, instancia y <span class="notranslate">sequence</span> pistas).</td>
       </tr>
       <tr>
         <td><span class="inline">scaley</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The scale of the asset in the sequence along the Y axis for the track at the current playhead position (sprite, instance and sequence tracks).</td>
+        <td>La escala del <span class="notranslate">asset</span> en el <span class="notranslate">sequence</span> a lo largo del eje Y para la pista en la posición actual del cabezal de reproducción (<span class="notranslate">sprite</span>, instancia y <span class="notranslate">sequence</span> pistas).</td>
       </tr>
       <tr>
         <td><span class="inline">xorigin</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The X origin of the asset for the track (all assets).</td>
+        <td>El origen X de la <span class="notranslate">asset</span> para la pista (todo <span class="notranslate">assets</span>).</td>
       </tr>
       <tr>
         <td><span class="inline">yorigin</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The Y origin of the asset for the track (all assets).</td>
+        <td>El origen Y de la <span class="notranslate">asset</span> para la pista (todo <span class="notranslate">assets</span>).</td>
       </tr>
       <tr>
         <td><span class="inline">width</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The width (in pixels) of the asset for the track (sprite, instance and sequence tracks).</td>
+        <td>La anchura (en píxeles) del <span class="notranslate">asset</span> para la pista (<span class="notranslate">sprite</span>, instancia y <span class="notranslate">sequence</span> pistas).</td>
       </tr>
       <tr>
         <td><span class="inline">height</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The height (in pixels) of the asset for the track (sprite, instance and sequence tracks).</td>
+        <td>La altura (en píxeles) de la <span class="notranslate">asset</span> para la pista (<span class="notranslate">sprite</span>, instancia y <span class="notranslate">sequence</span> pistas).</td>
       </tr>
       <tr>
         <td><span class="inline">imageindex</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The image index for the asset on the track in the sequence at the current playhead position (sprite and instance tracks).</td>
+        <td>El índice de imagen para el <span class="notranslate">asset</span> en la pista en el <span class="notranslate">sequence</span> en la posición actual del cabezal de reproducción (<span class="notranslate">sprite</span> y pistas de instancia).</td>
       </tr>
       <tr>
         <td><span class="inline">imagespeed</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The image speed for the asset on the track in the sequence at the current playhead position (sprite and instance tracks).</td>
+        <td>La velocidad de la imagen para el <span class="notranslate">asset</span> en la pista en el <span class="notranslate">sequence</span> en la posición actual del cabezal de reproducción (<span class="notranslate">sprite</span> y pistas de instancia).</td>
       </tr>
       <tr>
         <td><span class="inline">colourMultiply</span></td>
-        <td><span data-keyref="Type_Constant_Colour"><a href="../../../../../../GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm" target="_blank">Colour</a></span></td>
-        <td>The colour multiply value for the asset on the track in the sequence at the current playhead position (sprite, instance and sequence tracks). This value will be an <a href="../../../../GML_Overview/Arrays.htm">array</a> of four <a class="glossterm" data-glossterm="ARGB" href="#">ARGB</a> values with the format [A, R, G, B]. Note that the values for each component are expressed as between 0 and 1, where 0 corresponds to the HEX value #00 and 1 corresponds to the HEX value #FF (0 - 255 as shown in the colour picker for colour multiply tracks in the Sequences Editor).</td>
+        <td><span data-keyref="Type_Constant_Colour"><a href="../../../../../../GameMaker_Language/GML_Reference/Drawing/Colour_And_Alpha/Colour_And_Alpha.htm" target="_blank">Color</a></span></td>
+        <td>El valor de multiplicación del color para el <span class="notranslate">asset</span> en la pista en el <span class="notranslate">sequence</span> en la posición actual del cabezal de reproducción (<span class="notranslate">sprite</span>, instancia y <span class="notranslate">sequence</span> pistas). Este valor será una <a href="../../../../GML_Overview/Arrays.htm">matriz</a> de cuatro valores <a class="glossterm" data-glossterm="ARGB" href="#">ARGB</a> con el formato [A, R, G, B]. Tenga en cuenta que los valores de cada componente se expresan entre 0 y 1, donde 0 corresponde al valor HEX #00 y 1 corresponde al valor HEX #FF (0 - 255 como se muestra en el selector de color para las pistas de multiples colores en el Editor <span class="notranslate">Sequences</span> ).</td>
       </tr>
       <tr>
         <td><span class="inline">emitterIndex</span></td>
-        <td><span data-keyref="Type_ID_Audio_Emitter"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Emitters/audio_emitter_create.htm" target="_blank">Audio Emitter ID</a></span></td>
-        <td>The index of the audio emitter belonging to this track (audio tracks).</td>
+        <td><span data-keyref="Type_ID_Audio_Emitter"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Emitters/audio_emitter_create.htm" target="_blank">Identificación del emisor de audio</a></span></td>
+        <td>El índice del emisor de audio perteneciente a esta pista (pistas de audio).</td>
       </tr>
       <tr>
         <td><span class="inline">gain</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The gain (volume) of the track at the current playhead position (audio tracks).</td>
+        <td>La ganancia (volumen) de la pista en la posición actual del cabezal de reproducción (pistas de audio).</td>
       </tr>
       <tr>
         <td><span class="inline">pitch</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The pitch of the track at the current playhead position (audio tracks).</td>
-      </tr>
-      <tr>
-        <td><span class="inline">particleSystemIndex</span></td>
-        <td><span data-keyref="Type_ID_PartSys"><a href="../../../../../../GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Systems/part_system_create.htm" target="_blank">Particle System ID</a></span></td>
-        <td>The ID of the particle system of this track (particle system tracks).</td>
+        <td>El tono de la pista en la posición actual del cabezal de reproducción (pistas de audio).</td>
       </tr>
       <tr>
         <td><span class="inline">frameSizeX</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The horizontal size of the text frame (text tracks).</td>
+        <td>El tamaño horizontal del marco de texto (pistas de texto).</td>
       </tr>
       <tr>
         <td><span class="inline">frameSizeY</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The vertical size of the text frame (text tracks).</td>
+        <td>El tamaño vertical del marco de texto (pistas de texto).</td>
       </tr>
       <tr>
         <td><span class="inline">characterSpacing</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The character spacing value (text tracks).</td>
+        <td>El valor del espaciado entre caracteres (pistas de texto).</td>
       </tr>
       <tr>
         <td><span class="inline">lineSpacing</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The line spacing value (text tracks).</td>
+        <td>El valor del interlineado (pistas de texto).</td>
       </tr>
       <tr>
         <td><span class="inline">paragraphSpacing</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The paragraph spacing value (text tracks).</td>
+        <td>El valor del espaciado entre párrafos (pistas de texto).</td>
       </tr>
       <tr>
         <td><span class="inline">track</span></td>
-        <td><span data-keyref="Type_Struct_Sequence_Track"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Track_Struct.htm" target="_blank">Sequence Track Struct</a></span></td>
-        <td>The <a href="The_Track_Struct.htm">Track Struct</a> that this track is based on (all assets, a <b>read-only</b> value).</td>
+        <td><span data-keyref="Type_Struct_Sequence_Track"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Track_Struct.htm" target="_blank">Estructura de la pista de secuencia</a></span></td>
+        <td>El <a href="The_Track_Struct.htm">Track Struct</a> en el que se basa esta pista (todo <span class="notranslate">assets</span>, un valor <b>de sólo lectura</b> ).</td>
       </tr>
       <tr>
         <td><span class="inline">parent</span></td>
-        <td><span data-keyref="Type_Struct_Sequence_Instance"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Sequence_Instance_Struct.htm" target="_blank">Sequence Instance Struct</a></span></td>
-        <td>The parent sequence instance ID for the track (all assets, a <b>read-only</b> value).</td>
+        <td><span data-keyref="Type_Struct_Sequence_Instance"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Sequence_Instance_Struct.htm" target="_blank">Estructura de la instancia de la secuencia</a></span></td>
+        <td>El ID de instancia de <span class="notranslate">sequence</span> para la pista (todos los <span class="notranslate">assets</span>, un valor de <b>sólo lectura</b> ).</td>
       </tr>
       <tr>
         <td><span class="inline">activeTracks</span></td>
-        <td><span data-keyref="Type_Array"><a href="../../../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span> of <span data-keyref="Type_Struct_Sequence_Track"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Track_Struct.htm" target="_blank">Sequence Track Struct</a></span>s</td>
-        <td>This is an array of evaluation structs for each parameter track that the asset track contains (all assets, a <b>read-only</b> value). The contents of each struct in the array are listed in the parameter <a href="The_Track_Struct.htm">Track Struct</a> section.</td>
+        <td><span data-keyref="Type_Array"><a href="../../../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Matriz</a></span> de <span data-keyref="Type_Struct_Sequence_Track"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Track_Struct.htm" target="_blank">Estructura de la pista de la secuencia</a></span>s</td>
+        <td>Se trata de una matriz de evaluación <span class="notranslate">structs</span> para cada pista de parámetros que contiene la pista <span class="notranslate">asset</span> (todas <span class="notranslate">assets</span>, un valor de <b>sólo lectura</b> ). El contenido de cada <span class="notranslate">struct</span> en el array se encuentra en la sección <a href="The_Track_Struct.htm">Track Struct</a> de parámetros.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="The_Track_Struct.htm">The Track Struct</a></div>
+        <div style="float:left">Atrás: <a href="../Sequences.htm">Secuencias</a></div>
+        <div style="float:right">Siguiente: <a href="The_Track_Struct.htm">La estructura de la pista</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 The Sequence Instance Struct

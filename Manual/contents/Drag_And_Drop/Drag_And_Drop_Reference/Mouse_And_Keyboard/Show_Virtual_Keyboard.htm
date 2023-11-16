@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Show Virtual Keyboard</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>Mostrar el teclado virtual</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Show Virtual Keyboard action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Show Virtual Keyboard" />
@@ -14,153 +14,157 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Show Virtual Keyboard Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Mouse_And_Keyboard/i_VirtualKeyboard_Show.png" /> Show Virtual Keyboard</h1>
-  <p>This action can be used to show the virtual keyboard on the device running the game. When you call this action you will be asked to provide one of the following constants for each of the first three arguments:</p>
+  <h1><img> Mostrar el teclado virtual</h1>
+  <p>Esta acción puede utilizarse para mostrar el teclado virtual en el dispositivo que ejecuta el juego. Cuando llame a esta acción se le pedirá que proporcione una de las siguientes constantes para cada uno de los tres primeros argumentos:</p>
   <ul class="colour">
-    <li><b>Keyboard type</b>: This constant is used to set which key-set will be available on the virtual keyboard. The available keyboard types are:
+    <li><b>Tipo de</b> teclado: Esta constante se utiliza para establecer qué conjunto de teclas estará disponible en el teclado virtual. Los tipos de teclado disponibles son:
       <table>
         <tbody>
           <tr>
-            <th>Keyboard Type</th>
-            <th>Description</th>
+            <th>Tipo de teclado</th>
+            <th>Descripción</th>
           </tr>
           <tr>
             <td><span class="inline">kbv_type_default</span></td>
-            <td>The default keyboard type for the current system.</td>
+            <td>El tipo de teclado por defecto para el sistema actual.</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_type_ascii</span></td>
-            <td>An ASCII-only keyboard.</td>
+            <td>Un teclado sólo ASCII.</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_type_url</span></td>
-            <td>A normal keyboard optimized for URL entry. Usually features a &quot;.com&quot; or other domain keys, as well as &quot;/&quot; and &quot;.&quot; keys.</td>
+            <td>Un teclado normal optimizado para la introducción de URL. Por lo general, cuenta con un &quot;.com&quot; u otras teclas de dominio, así como con las teclas &quot;/&quot; y &quot;.&quot;.</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_type_email</span></td>
-            <td>A normal keyboard optimized for e-mail entry. Usually features &quot;@&quot; and &quot;.&quot; characters.</td>
+            <td>Un teclado normal optimizado para la introducción de correo electrónico. Suele incluir los caracteres &quot;@&quot; y &quot;.&quot;.</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_type_numbers</span></td>
-            <td>A numbers-only keyboard, usually displayed as a number pad.</td>
+            <td>Un teclado sólo de números, que suele aparecer como un teclado numérico.</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_type_phone</span></td>
-            <td>A phone pad keyboard. Usually numbers-only with the &quot;*&quot; and &quot;#&quot; keys.</td>
+            <td>Un teclado de teclado telefónico. Suele ser un teclado numérico con las teclas &quot;*&quot; y &quot;#&quot;.</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_type_phone_name</span></td>
-            <td>A keyboard optimized for entering both a phone number and a name. Usually similar to an ASCII keyboard, but with a limited special characters selection.</td>
+            <td>Un teclado optimizado para introducir tanto un número de teléfono como un nombre. Suele ser similar a un teclado ASCII, pero con una selección limitada de caracteres especiales.</td>
           </tr>
         </tbody>
       </table>
     </li>
-    <li><b>Return type</b>: This constant is used to set what is shown on the return/action key of the virtual keyboard. The available return types are:
+    <li><b>Tipo de</b> retorno: Esta constante se utiliza para establecer lo que se muestra en la tecla de retorno/acción del teclado virtual. Los tipos de retorno disponibles son:
       <table>
         <tbody>
           <tr>
-            <th>Return Type</th>
-            <th>Description</th>
+            <th>Tipo de devolución</th>
+            <th>Descripción</th>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_default</span></td>
-            <td>The default return key title for the current system.</td>
+            <td>El título de la tecla de retorno por defecto para el sistema actual.</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_go</span></td>
-            <td>Sets the return key title to &quot;Go&quot;.</td>
+            <td>Establece el título de la tecla de retorno como &quot;Go&quot;.</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_google</span></td>
-            <td>Sets the return key title to &quot;Google&quot;, or to a generic search icon in some cases.</td>
+            <td>Establece el título de la tecla de retorno como &quot;Google&quot;, o como un icono de búsqueda genérico en algunos casos.</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_join</span></td>
-            <td>Sets the return key title to &quot;Go&quot;.</td>
+            <td>Establece el título de la tecla de retorno como &quot;Ir&quot;.</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_next</span></td>
-            <td>Sets the return key title to &quot;Next&quot;.</td>
+            <td>Establece el título de la tecla de retorno como &quot;Siguiente&quot;.</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_route</span></td>
-            <td>Sets the return key title to &quot;Route&quot;.</td>
+            <td>Establece el título de la tecla de retorno como &quot;Ruta&quot;.</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_search</span></td>
-            <td>Sets the return key title to &quot;Search&quot;, or to a generic search icon in some cases.</td>
+            <td>Establece el título de la tecla de retorno en &quot;Buscar&quot;, o en un icono de búsqueda genérico en algunos casos.</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_send</span></td>
-            <td>Sets the return key title to &quot;Send&quot;.</td>
+            <td>Establece el título de la tecla de retorno como &quot;Enviar&quot;.</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_yahoo</span></td>
-            <td>Sets the return key title to &quot;Yahoo&quot;, or to a generic search icon in some cases.</td>
+            <td>Establece el título de la tecla de retorno en &quot;Yahoo&quot;, o en un icono de búsqueda genérico en algunos casos.</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_done</span></td>
-            <td>Sets the return key title to &quot;Done&quot;.</td>
+            <td>Establece el título de la tecla de retorno como &quot;Hecho&quot;.</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_continue</span></td>
-            <td>Sets the return key title to &quot;Continue&quot;.</td>
+            <td>Establece el título de la tecla de retorno como &quot;Continuar&quot;.</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_returnkey_emergency</span></td>
-            <td>Sets the return key title to &quot;Emergency Call&quot;.</td>
+            <td>Establece el título de la tecla de retorno como &quot;Llamada de emergencia&quot;.</td>
           </tr>
         </tbody>
       </table>
     </li>
-    <li><b>Autocapitalization type</b>: This constant is used to determine how the words typed via the virtual keyboard should be autocapitalized. The available autocapitalization types are:
+    <li><b>Tipo de</b> autocapitalización: Esta constante se utiliza para determinar el tipo de autocapitalización de las palabras escritas a través del teclado virtual. Los tipos de autocapitalización disponibles son:
       <table>
         <tbody>
           <tr>
-            <th>Autocapitalization Type</th>
-            <th>Description</th>
+            <th>Tipo de autocapitalización</th>
+            <th>Descripción</th>
           </tr>
           <tr>
             <td><span class="inline">kbv_autocapitalize_none</span></td>
-            <td>Autocapitalization is disabled.</td>
+            <td>La autocapitalización está desactivada.</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_autocapitalize_words</span></td>
-            <td>Words will be auto-capitalized.</td>
+            <td>Las palabras se escriben en mayúsculas.</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_autocapitalize_sentences</span></td>
-            <td>Sentences will be auto-capitalized.</td>
+            <td>Las frases se escriben en mayúsculas.</td>
           </tr>
           <tr>
             <td><span class="inline">kbv_autocapitalize_characters</span></td>
-            <td>All characters will be capitalized.</td>
+            <td>Todos los caracteres se escriben en mayúsculas.</td>
           </tr>
         </tbody>
       </table>
     </li>
   </ul>
-  <p>The last argument is to enable/disable predictive text, and this would be set to <span class="inline">true</span> to permit it, and <span class="inline">false</span> otherwise, but note that just because it is permitted doesn&#39;t mean that it will be used as that will depend on the preferences of the user on the device. When in predictive text mode, the virtual keyboard will not generate normal <span data-keyref="GameMaker Name">GameMaker</span> key-press events. Instead, it will only update the <i>last</i> character pressed and keyboard string variables. This is due to the inability to detect whether a change in the internal text field used for detecting key presses came from an actual virtual keyboard key, or a text suggestion. In these cases you would want to read the <span class="inline">keyboard_string</span> input as opposed to reading any kind of raw key input.</p>
-  <p>It is important to note too that the user will get different keyboards with different capabilities depending on the platform OS, with the following caveats for use per target:</p>
+  <p>El último argumento es habilitar/deshabilitar el texto predictivo, y esto se establecería en <span class="inline">true</span> para permitirlo, y <span class="inline">false</span> en caso contrario, pero tenga en cuenta que el hecho de que se permita no significa que se vaya a utilizar ya que eso dependerá de las preferencias
+    del usuario en el dispositivo. Cuando esté en modo de texto predictivo, el teclado virtual no generará eventos normales de pulsación de teclas de <span data-keyref="GameMaker Name">GameMaker</span>. En su lugar, sólo actualizará el <i>último</i> carácter pulsado y las variables del teclado <span class="notranslate">string</span>. Esto se debe a
+    la incapacidad de detectar si un cambio en el campo de texto interno utilizado para detectar las pulsaciones de teclas proviene de una tecla real del teclado virtual, o de una sugerencia de texto. En estos casos se querría leer la entrada de <span class="inline">keyboard_string</span> en lugar de
+    en lugar de leer cualquier tipo de entrada de tecla sin procesar.</p>
+  <p>También es importante tener en cuenta que el usuario obtendrá diferentes teclados con diferentes capacidades dependiendo del SO de la plataforma, con las siguientes advertencias de uso por objetivo:</p>
   <ul class="colour">
-    <li><b>Android / Amazon Fire</b>: On Android, the keyboard type <span class="inline">kbv_type_phone_name</span> is not supported and will display an ASCII keyboard instead, and the return key type can only be <span class="inline">kbv_returnkey_go</span>, <span class="inline">kbv_returnkey_search</span>, <span class="inline">kbv_returnkey_next</span>, <span class="inline">kbv_returnkey_send</span> or <span class="inline">kbv_returnkey_done</span>. If other return key types are used on that platform, the system will default to the replacement return keys listed below:
+    <li><b>UWP</b>: La implementación de UWP no admite <span class="inline">return_key_type</span>, <span class="inline">autocapitalization_type</span> o <span class="inline">predictive_text_enabled</span>. Pasar estos parámetros a una función no causará ningún error, simplemente no tendrán ningún
+      efecto en el teclado.</li>
+    <li><b>Android / Amazon Fire</b>: En <span class="notranslate">Android</span>, el tipo de teclado <span class="inline">kbv_type_phone_name</span> no es compatible y mostrará un teclado ASCII en su lugar, y el tipo de tecla de retorno sólo puede ser <span class="inline">kbv_returnkey_go</span>, <span class="inline">kbv_returnkey_search</span>, <span class="inline">kbv_returnkey_next</span>,
+      <span class="inline">kbv_returnkey_send</span> o <span class="inline">kbv_returnkey_done</span>. Si se utilizan otros tipos de teclas de retorno en esa plataforma, el sistema utilizará por defecto las teclas de retorno de sustitución que se indican a continuación:
       <table>
         <tbody>
           <tr>
-            <th>Unavailable return key</th>
-            <th>Replacement key</th>
+            <th>Tecla de retorno no disponible</th>
+            <th>Tecla de reemplazo</th>
           </tr>
           <tr>
-            <td><span class="inline">kbv_returnkey_google</span><br />
-              <span class="inline">kbv_returnkey_yahoo</span>
-            </td>
+            <td><span class="inline">kbv_returnkey_google</span><br>
+              <span class="inline">kbv_returnkey_yahoo</span></td>
             <td><span class="inline">kbv_returnkey_search</span></td>
           </tr>
           <tr>
-            <td><span class="inline">kbv_returnkey_join</span><br />
-              <span class="inline">kbv_returnkey_route</span><br />
-              <span class="inline">kbv_returnkey_emergency</span>
-            </td>
+            <td><span class="inline">kbv_returnkey_join</span><br>
+              <span class="inline">kbv_returnkey_route</span><br>
+              <span class="inline">kbv_returnkey_emergency</span></td>
             <td><span class="inline">kbv_returnkey_go</span></td>
           </tr>
           <tr>
@@ -170,65 +174,68 @@
         </tbody>
       </table>
     </li>
-    <li><b>AndroidTV / FireTV</b>: Custom return key types are <i>not</i> supported on ASCII keyboards - the default return key will always be displayed.</li>
-    <li><b>tvOS</b>: Predictive text and auto-capitalization are not supported on tvOS, and the height of the keyboard returned by system events and the function <a href="../../../GameMaker_Language/GML_Reference/Game_Input/Virtual_Keys_And_Keyboards/keyboard_virtual_height.htm"><span class="inline">keyboard_virtual_height()</span></a> will default to the screen height due to it spanning the entire screen and due to keyboard rect dimension functions being disabled on tvOS. Also note that physical (Bluetooth) keyboard events will not be broadcast unless the virtual keyboard has been opened.</li>
+    <br />
+    <li><b>AndroidTV / FireTV</b>: Los tipos de teclas de retorno personalizadas <i>no</i> son compatibles con los teclados ASCII - siempre se mostrará la tecla de retorno por defecto.</li>
+    <li><b>tvOS</b>: El texto predictivo y las mayúsculas automáticas no son compatibles con <span class="notranslate">tvOS</span>, y la altura del teclado devuelta por los eventos del sistema y la función <a href="../../../GameMaker_Language/GML_Reference/Game_Input/Virtual_Keys_And_Keyboards/keyboard_virtual_height.htm"><span class="inline">keyboard_virtual_height()</span></a>      se ajustará por defecto a la altura de la pantalla debido a que abarca toda la pantalla y a que las funciones de dimensión rectangular del teclado están desactivadas en <span class="notranslate">tvOS</span>. También hay que tener en cuenta que los eventos del teclado físico (Bluetooth) no se emitirán a menos que el teclado virtual haya
+      se haya abierto.</li>
   </ul>
-  <p>Calling this function will generate a <a href="../../../The_Asset_Editors/Object_Properties/Async_Events.htm">System Asynchronous Event</a>, in which the <span class="inline"><a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a> </span> <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS map</a> will be populated with the following key/value pairs:</p>
+  <p>Al llamar a esta función se generará un <a href="../../../The_Asset_Editors/Object_Properties/Async_Events.htm">Evento Asíncrono del Sistema</a>, en el que el <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">mapa</a> <span class="inline"><a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a> </span> <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS</a> se rellenará con los siguientes pares clave/valor:</p>
   <ul class="colour">
-    <li>&quot;<b>event_type</b>&quot; - this will be &quot;<b>virtual keyboard status</b>&quot; when triggered by virtual keyboard actions.</li>
-    <li>&quot;<b>screen_height</b>&quot; - the height of the virtual keyboard (in pixels). This will be 0 if the keyboard is invisible.</li>
-    <li>&quot;<b>keyboard_status</b>&quot; - the current status of the keyboard, returned as one of the following strings:
+    <li>&quot;<b>tipo_evento</b>&quot; - será &quot;<b>estado del teclado virtual</b>&quot; cuando sea activado por acciones del teclado virtual.</li>
+    <li>&quot;<b>screen_height</b>&quot; - la altura del teclado virtual (en píxeles). Será 0 si el teclado es invisible.</li>
+    <li>&quot;<b>keyboard_status</b>&quot; - el estado actual del teclado, devuelto como una de las siguientes cadenas:
       <ul class="colour">
-        <li>&quot;hiding&quot;</li>
-        <li>&quot;hidden&quot;</li>
-        <li>&quot;showing&quot;</li>
+        <li>&quot;oculto&quot;</li>
+        <li>&quot;oculto&quot;</li>
+        <li>&quot;mostrando&quot;</li>
         <li>&quot;visible&quot;</li>
       </ul>
     </li>
   </ul>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Show Virtual Keyboard Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Mouse_And_Keyboard/a_VirtualKeyboard_Show.png" /></p>
-  <h4>Arguments:</h4>
-  <p> </p>
+  <p> </p>
+  <h4>Sintaxis de la acción:</h4>
+  <p><img alt="Show Virtual Keyboard Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Mouse_And_Keyboard/i_VirtualKeyboard_Show.png" /></p>
+  <h4>Argumentos:</h4>
+  <p> </p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>keyboard_type</td>
-        <td>Determines the key-set available on the virtual keyboard.</td>
+        <td><span class="notranslate">keyboard_type</span></td>
+        <td>Determina el conjunto de teclas disponibles en el teclado virtual.</td>
       </tr>
       <tr>
-        <td>return_key_type</td>
-        <td>Determines what is shown on the return/action key of the virtual keyboard.</td>
+        <td><span class="notranslate">return_key_type</span></td>
+        <td>Determina lo que se muestra en la tecla de retorno/acción del teclado virtual.</td>
       </tr>
       <tr>
-        <td>autocapitalization_type</td>
-        <td>Determines how/if the words typed via the virtual keyboard will be autocapitalized.</td>
+        <td><span class="notranslate">autocapitalization_type</span></td>
+        <td>Determina cómo/si las palabras escritas a través del teclado virtual serán autocapitalizadas.</td>
       </tr>
       <tr>
-        <td>predictive_text_enabled</td>
-        <td>Set to <span class="inline">true</span>/<span class="inline">false</span> to enable/disable predictive text input.</td>
+        <td><span class="notranslate">predictive_text_enabled</span></td>
+        <td>Configure en <span class="inline">true</span>/<span class="inline">false</span> para activar/desactivar la entrada de texto predictivo.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Show Virtual Keyboard Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Mouse_And_Keyboard/a_VirtualKeyboard_Show.png" />The above action block code checks for a mouse down action, and if one is detected, then a check is performed to see if the OS virtual keyboard is showing. If it isn&#39;t then it is set to show - using a numeric keypad type - and if is already showing then it is hidden.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p><img>El código del bloque de acción anterior comprueba si hay una acción de ratón hacia abajo, y si se detecta una, entonces se realiza una comprobación para ver si el teclado virtual del sistema operativo se muestra.
+    Si se detecta uno, se comprueba si el teclado virtual del sistema operativo se muestra. Si no lo está, entonces se ajusta para que se muestre - usando un tipo de teclado numérico - y si ya se está mostrando, entonces se oculta.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Mouse_And_Keyboard_Actions.htm">Mouse And Keyboard Actions</a></div>
-        <div style="float:right">Next: <a href="Hide_Virtual_Keyboard.htm">Hide Virtual Keyboard</a></div>
+        <div style="float:left">Atrás: <a href="Mouse_And_Keyboard_Actions.htm">Acciones con el ratón y el teclado</a></div>
+        <div style="float:right">Siguiente: <a href="Hide_Virtual_Keyboard.htm">Ocultar el teclado virtual</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Show Virtual Keyboard

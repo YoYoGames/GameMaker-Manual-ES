@@ -6,7 +6,7 @@
   <title>instance_deactivate_all</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function instance_deactivate_all" />
   <meta name="rh-index-keywords" content="instance_deactivate_all" />
@@ -15,49 +15,50 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">instance_deactivate_all</span></h1>
-  <p>This function will deactivate <b>all</b> instances that are in the room at the moment that the code is run. This may include the instance running the code if the &quot;notme&quot; flag is set to <span class="inline">false</span>, but normally you would want that instance to be active, in which case the &quot;notme&quot; flag should be set to <span class="inline">true</span>. Note that deactivation is not instantaneous, and an instance that has been deactivated in this way will not be considered to be inactive until the end of the event in which the function was called.</p>
-  <div data-conref="../../../../../assets/snippets/Note_Deactivate_On_Room_Start_Create_Event.hts"> </div>
-  <div data-conref="../../../../../assets/snippets/Note_Warning_Deactivating_Physics_Instances.hts"> </div>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">instance_deactivate_all</span>(notme);</p>
+  <h1>instance_deactivate_all</h1>
+  <p>Esta función desactivará <b>todas las</b> instancias que estén en el <span class="notranslate">room</span> en el momento en que se ejecute el código. Esto puede incluir la instancia que ejecuta el código si el &quot;notme&quot; <span class="notranslate">flag</span> se establece en <span class="inline">false</span>, pero normalmente se querrá que esa instancia esté activa, en cuyo caso el &quot;notme&quot; <span class="notranslate">flag</span> debe establecerse en <span class="inline">true</span>. Tenga en cuenta que la desactivación no es instantánea, y una instancia que ha sido desactivada de esta manera no se considerará inactiva hasta el final del evento en el que se llamó a la función.</p>
+  <p class="note"><b>NOTA</b>: Si desactiva una instancia al iniciar <span class="notranslate">room</span> (es decir, desde el código de creación de <span class="notranslate">room</span>, o desde un evento de creación de una instancia dentro de <span class="notranslate">room</span>) todas las instancias que se coloquen dentro de <span class="notranslate">room</span> desde el editor de <span class="notranslate">room</span> <b>seguirán ejecutando su evento de creación</b> antes de ser desactivadas.</p>
+  <p class="note"><b></b><b>ADVERTENCIA</b>: Desactivar las instancias que tienen la física activada <b>NO</b> impedirá que sus accesorios interactúen dentro de la simulación de la física. Para ello, debe establecer su variable <span style="font-size:1px;"><a href="../../../Physics/Physics_Variables/phy_active.htm"><span class="inline">phy_active</span></a></span> a <span class="inline">true</span> o <span class="inline">false</span> al activar/desactivar las instancias.</p>
+  <p> </p>
+  <h4>Sintaxis:</h4>
+  <p class="code">instance_deactivate_all(notme);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
       </tr>
       <tr>
-        <td>notme</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Whether to keep the calling instance activated (true) or not (false).</td>
+        <td><span class="notranslate">notme</span></td>
+        <td><span data-keyref="Type_Bool">Booleano</span></td>
+        <td><span class="notranslate">Whether to keep the calling instance activated (true) or not (false).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code"><span data-field="title" data-format="default">instance_deactivate_all</span>(true);<br />
+  <p> </p>
+  <h4>Ejemplo:</h4>
+  <p class="code">instance_deactivate_all(true);<br />
     var _vx = camera_get_view_x(view_camera[0]);<br />
     var _vy = camera_get_view_y(view_camera[0]);<br />
     var _vw = camera_get_view_width(view_camera[0]);<br />
     var _vh = camera_get_view_height(view_camera[0]);<br />
     instance_activate_region(_vx - 64, _vy - 64, _vw + 128, _vh + 128, false);</p>
-  <p>The above code deactivates all instances except the one that is running the code and then activates a region within the room.</p>
-  <p> </p>
-  <p> </p>
+  <p>El código anterior desactiva todas las instancias excepto la que está ejecutando el código y luego activa una región dentro de la <span class="notranslate">room</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Deactivating_Instances.htm">Deactivating Instances</a></div>
-        <div style="float:right">Next: <a href="instance_deactivate_object.htm">instance_deactivate_object</a></div>
+        <div style="float:left">Atrás: <a href="Deactivating_Instances.htm">Desactivación de instancias</a></div>
+        <div style="float:right">Siguiente: <a href="instance_deactivate_object.htm"><span class="notranslate">instance_deactivate_object</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
   </div>
   <!-- KEYWORDS
 instance_deactivate_all
