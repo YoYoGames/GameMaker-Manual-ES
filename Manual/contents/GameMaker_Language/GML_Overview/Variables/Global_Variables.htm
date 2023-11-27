@@ -24,19 +24,19 @@
   <p>Con las variables globales podemos cambiar los valores y ver esos cambios reflejados en todas las instancias de <span class="notranslate">objects</span> que hacen referencia a esta variable. Al igual que con las variables <i>locales</i>, tienes que tener cuidado de no nombrar tus variables globales igual que las variables de instancia, ya que eso puede causarte problemas y hacer que los errores se cuelen en tus juegos debido a la superposición de variables, lo que puede ser un problema difícil de depurar a veces. En general, deberías tener un único <span class="notranslate">object</span> que declare todas tus variables globales al principio del juego (por ejemplo, en el <a href="../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Evento de Inicio de Habitación</a> del primer objeto colocado en el primer <span class="notranslate">room</span> del juego) o una única <a href="../Script_Functions.htm">función de script</a> que las declare todas juntas, ya que esto te da un lugar práctico para volver y referenciar todo a la vez si necesitas comprobar el nombre de una variable o editar un valor.</p>
   <p><span data-keyref="GameMaker Name">GameMaker</span> también tiene una colección de variables globales &quot;incorporadas&quot;, por lo que debes estar atento a ellas, ya que puedes nombrar una de tus variables de instancia igual o desear tener tu propia variable global con el mismo nombre y preguntarte por qué estás recibiendo errores. Sin embargo, son fáciles de detectar, ya que se muestran en un color diferente en el editor de código y también aparecen en la barra de autocompletar en la parte inferior. La mayoría de las variables globales incorporadas tienen usos muy específicos que se enumeran en las secciones correspondientes del manual - sin embargo, hay dos importantes que se utilizan con frecuencia y no se enumeran en otra parte:</p>
   <ul class="colour">
-    <li><a href="Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a></li>
+    <li><span class="inline"><a data-xref="{title}" href="Builtin_Global_Variables/async_load.htm">async_load</a></span></li>
     <li><span class="inline"><a data-xref="{title}" href="../../GML_Reference/Game_Input/Gesture_Input/event_data.htm">event_data</a></span></li>
   </ul>
   <p>También hay tres variables globales incorporadas <b>obsoletas</b> que debe conocer (estas variables sólo están diseñadas para soportar proyectos heredados de versiones anteriores de <span class="notranslate">GameMaker</span> y deben <b><i>no debe utilizarse en proyectos nuevos</i></b>):</p>
   <ul class="colour">
-    <li><a href="Builtin_Global_Variables/score.htm"><span class="inline">score</span></a></li>
-    <li><a href="Builtin_Global_Variables/health.htm"><span class="inline">health</span></a></li>
-    <li><a href="Builtin_Global_Variables/lives.htm"><span class="inline">lives</span></a></li>
+    <li><span class="inline"><a data-xref="{title}" href="Builtin_Global_Variables/score.htm">score</a></span></li>
+    <li><span class="inline"><a data-xref="{title}" href="Builtin_Global_Variables/health.htm">health</a></span></li>
+    <li><span class="inline"><a data-xref="{title}" href="Builtin_Global_Variables/lives.htm">lives</a></span></li>
   </ul>
   <p>Por último, hay dos variables que se pueden utilizar para <span class="notranslate">script</span> funciones y métodos:</p>
   <ul class="colour">
-    <li><span class="inline"><a href="Builtin_Global_Variables/argument.htm">argument</a></span></li>
-    <li><span class="inline"><a href="Builtin_Global_Variables/argument_count.htm">argument_count</a></span></li>
+    <li><a data-xref="{title}" href="Builtin_Global_Variables/argument.htm">argument</a></li>
+    <li><a data-xref="{title}" href="Builtin_Global_Variables/argument_count.htm">argument_count</a></li>
   </ul>
   <p>La siguiente forma también puede utilizarse para declarar variables globales, pero es <i><b>sólo se incluye por compatibilidad con versiones anteriores</b></i>y no se recomienda utilizar este formulario para los nuevos proyectos, ya que es posible que las futuras versiones de <span class="notranslate">GameMaker</span> no lo admitan.</p>
   <p>La segunda forma de crear variables globales es declarándolas como tales mediante la declaración <span class="inline">globalvar</span>, de la misma forma que se haría con una variable local mediante la declaración <span class="inline">var</span>.</p>
