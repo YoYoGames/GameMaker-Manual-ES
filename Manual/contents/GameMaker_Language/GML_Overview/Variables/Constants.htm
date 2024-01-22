@@ -36,7 +36,7 @@
   <p>A continuación, puede utilizar esto en su código de la siguiente manera:</p>
   <p class="code">pos++;<br />
     <br />
-    if (pos &gt;= total_weapons)<br />
+    if (pos &gt;= TOTAL_WEAPONS)<br />
     {<br />
         pos = 0;<br />
     }
@@ -62,38 +62,38 @@
   <p>Un enum es un &quot;enumerador&quot;, y esencialmente le permite crear su propio <span class="notranslate">data type</span> limitado con una lista de valores constantes, y tienen la siguiente estructura:</p>
   <p class="code">enum <i>&lt;variable&gt;</i><br />
     {<br />
-    <i>    &lt;constant&gt;</i> [= <i>&lt;value&gt;</i>],<br />
-    <i>    &lt;constant&gt;</i> [= <i>&lt;value&gt;</i>],<br />
+    <i>    &lt;MEMBER&gt;</i> [= <i>&lt;VALUE&gt;</i>],<br />
+    <i>    &lt;<i>MEMBER</i>&gt;</i> [= <i>&lt;<i>VALUE</i>&gt;</i>],<br />
         // etc...<br />
     }
   </p>
   <p>En el siguiente ejemplo, creamos un enum para los colores del arco iris y le asignamos varias constantes y valores por defecto:</p>
   <p class="code">enum rainbowcolours<br />
     {<br />
-        red,<br />
-        orange,<br />
-        yellow,<br />
-        green,<br />
-        blue,<br />
-        indigo,<br />
-        violet<br />
+        RED,<br />
+        ORANGE,<br />
+        YELLOW,<br />
+        GREEN,<br />
+        BLUE,<br />
+        INDIGO,<br />
+        VIOLET<br />
     }</p>
   <p>Las entradas del enum sólo pueden ser <b>números enteros</b> o <b><span class="glossextra">expresiones</span></b> con enums anteriores que se evalúan a un número entero, y por defecto se numeran de 0 en adelante, por lo que nuestro ejemplo dado anteriormente sería por defecto <span class="inline">red = 0</span>, <span class="inline">orange = 1</span>, <span class="inline">yellow = 2</span>, etc...</p>
   <p>También puede asignar valores a las variables enum en el momento de la creación:</p>
   <p class="code">enum enum_test<br />
     {<br />
-        val = 10;<br />
+        VAL = 10<br />
     }<br />
     <br />
-    enum rainbowcolours<br />
+    enum RAINBOW<br />
     {<br />
-        red = 5,<br />
-        orange = 5 * 2,<br />
-        yellow = 15,<br />
-        green = 20,<br />
-        blue = 25,<br />
-        indigo = 30,<br />
-        violet = 35 * enum_test.val<br />
+        RED = 5,<br />
+        ORANGE = 5 * 2,<br />
+        YELLOW = 15,<br />
+        GREEN = 20,<br />
+        BLUE = 25,<br />
+        INDIGO = 30,<br />
+        VIOLET = 35 * ENUM_TEST.VAL<br />
     }
   </p>
   <p>Observe que en el ejemplo anterior utilizamos otro enum para crear una expresión para &quot;violeta&quot;. Esto sólo funciona si el enum al que se hace referencia fue creado <i>antes</i> que el enum que lo está usando en una expresión, pero no funcionará para variables o funciones, ya que el valor del enum debe poder ser evaluado como una constante cuando el proyecto esté <a class="glossterm" data-glossterm="Compilación de" href="#">compilando</a>. También tenga en cuenta que todos los valores de enum se evalúan a valores <b>enteros</b>, y cuando cree los suyos debe tener en cuenta que <i>sólo se permiten valores enteros</i> para que los enum funcionen. Este valor puede ser cualquier número entero que un número de doble precisión de punto flotante pueda representar, incluyendo valores negativos.</p>

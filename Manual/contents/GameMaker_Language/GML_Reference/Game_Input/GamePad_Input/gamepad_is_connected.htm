@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>gamepad_is_connected</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -39,9 +39,12 @@
   <p> </p>
   <h4>Ejemplo:</h4>
   <p class="code">var gp_num = gamepad_get_device_count();<br />
-    for (var i = 0; i &lt; gp_num; i++;)<br />
+    for (var i = 0; i &lt; gp_num; i++)<br />
     {<br />
-        if gamepad_is_connected(i) global.gp[i] = true else global.gp[i] = false;<br />
+        if gamepad_is_connected(i)<br />
+            global.gp[i] = true<br />
+        else<br />
+            global.gp[i] = false;<br />
     }</p>
   <p>El código anterior <span class="notranslate">loops</span> a través de los pads de juego disponibles (o ranuras de gamepad) y luego comprueba cada uno para un gamepad conectado. el valor devuelto se utiliza entonces para establecer una matriz global a <span class="inline">true</span> o <span class="inline">false</span> para su uso en futuras comprobaciones.</p>
   <p> </p>

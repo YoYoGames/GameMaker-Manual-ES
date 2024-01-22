@@ -40,7 +40,7 @@
   <p>En el código anterior del ejemplo 1, hay una llamada <a href="../GML_Reference/Asset_Management/Instances/instance_exists.htm"><span class="inline">instance_exists()</span></a> en el bloque de código. Esto se debe a que el uso del método point para acceder o cambiar el valor de otra instancia dará un error y bloqueará el juego si la instancia no existe, y existe la posibilidad de que este sea el caso en ese ejemplo. Sin embargo, no necesitamos la comprobación en los Ejemplos 2 y 3 porque <i>sabemos</i> que la instancia está ahí ya que en el Ejemplo 2 la creamos, y en el Ejemplo 3, es la otra instancia en un evento de colisión. Sin embargo, si hay <i>alguna</i> posibilidad de que la instancia pueda ser destruida, desactivada o eliminada de alguna manera de la <span class="notranslate">room</span> mientras se utiliza este método, <i>siempre</i> se debe comprobar de antemano utilizando la función <span class="inline">instance_exists()</span> o la función <a href="../GML_Reference/Asset_Management/Instances/instance_number.htm"><span class="inline">instance_number()</span></a> función.</p>
   <p>Tenga en cuenta que no puede utilizar la <a href="Instance_Keywords.htm">palabra clave</a> especial &quot;<span class="inline">all</span>&quot; con este método para apuntar a todas las instancias (por ejemplo: <span class="inline">all.val = 10</span> daría un error), pero <i>puede</i> utilizar las palabras clave &quot;<span class="inline">other</span>&quot; y &quot;<span class="inline">self</span>&quot; sin problemas. Por ejemplo, usando <span class="inline">other</span> en un <a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">evento de colisión</a>:</p>
   <p class="code">// Example 3 other.hp -= 10;<br />
-    if other.hp &lt;= 0<br />
+    if (other.hp &lt;= 0)<br />
     {<br />
         other.sprite_index = spr_E_Dead;<br />
     }</p>
@@ -51,8 +51,8 @@
     <br />
     //or<br />
     <br />
-    var inst = instance_nearest(x, y, obj);<br />
-    inst.speed = 0;
+    var _inst = instance_nearest(x, y, obj);<br />
+    _inst.speed = 0;
   </p>
   <p>Todas estas son formas perfectamente válidas de leer, cambiar y establecer variables en otras instancias, y funcionan porque el punto es en realidad un <i>operador</i>. Toma un valor como <a class="glossterm" data-glossterm="operando" href="#">operando de</a> la izquierda y una variable como operando de la derecha, y devuelve la dirección de esta variable en particular en el <span class="notranslate">object</span> o instancia indicada. Todos los nombres de <span class="notranslate">object</span>, constantes, IDs, etc... simplemente representan valores y estos pueden ser tratados como cualquier otro valor.</p>
   <p>La otra forma de referenciar variables en otra instancia es utilizar la función <span class="notranslate">GameMaker Language</span> <span class="inline">with()</span> , que se discute en detalle <a href="Language_Features/with.htm">aquí</a>:</p>
