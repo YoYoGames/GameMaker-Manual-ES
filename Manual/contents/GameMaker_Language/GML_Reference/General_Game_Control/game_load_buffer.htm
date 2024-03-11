@@ -38,7 +38,7 @@
   <h4>Ejemplo:</h4>
   <p class="code">if keyboard_check_pressed(ord(&quot;L&quot;))<br />
     {<br />
-        if global.Checkpoint game_load_buffer(save_buff);<br />
+        if (global.Checkpoint) game_load_buffer(save_buff);<br />
     }</p>
   <p>El código anterior cargará un estado de juego previamente guardado desde el <span class="notranslate">buffer</span> indexado en la variable &quot;save_buff&quot;, sólo si la variable global es <span class="inline">true</span>, cuando el jugador presione la tecla &quot;L&quot;.</p>
   <p> </p>

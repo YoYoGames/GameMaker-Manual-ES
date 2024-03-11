@@ -78,13 +78,13 @@
   <p>Entonces querrás comprobar el <span class="inline">DS Map</span> devuelto en el <b>Evento de Nube</b> asíncrono para obtener el estado y el <span class="notranslate">string</span> devuelto, si lo hay, con algo como el siguiente código:</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == cloud_check<br />
     {<br />
-        if ds_map_find_value(async_load, &quot;status&quot;) &lt; 0<br />
+        if (ds_map_find_value(async_load, &quot;status&quot;) &lt; 0) <br />
         {<br />
             show_message_async(&quot;Cloud Services not available. Please check connectivity.&quot;);<br />
         }<br />
         else<br />
         {<br />
-            if ds_map_find_value(async_load, &quot;status&quot;) == 0<br />
+            if (ds_map_find_value(async_load, &quot;status&quot;) == 0) <br />
             {<br />
                 var file = file_text_open_write(&quot;Save.txt&quot;);<br />
                 file_text_write_string(file, ds_map_find_value(async_load, &quot;resultString&quot;));<br />

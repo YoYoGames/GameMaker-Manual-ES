@@ -50,9 +50,9 @@
   <p class="code">msg = get_integer_async(&quot;How old are you?&quot;, 0);</p>
   <p>Lo anterior mostrará un mensaje solicitando que el usuario ingrese un <span class="notranslate">string</span> y presione &quot;Okay&quot;. El id de la función se almacena en la variable &quot;msg&quot; y se utilizará en el evento asíncrono Dialogs como se muestra a continuación:</p>
   <p class="code">var i_d = ds_map_find_value(async_load, &quot;id&quot;);<br />
-    if i_d == msg<br />
+    if (i_d == msg) <br />
     {<br />
-        if ds_map_find_value(async_load, &quot;status&quot;)<br />
+        if (ds_map_find_value(async_load, &quot;status&quot;)) <br />
         {<br />
             global.Age = ds_map_find_value(async_load, &quot;value&quot;);<br />
         }<br />

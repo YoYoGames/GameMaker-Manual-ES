@@ -34,7 +34,7 @@
   <p>El código anterior inicia un grupo <span class="notranslate">buffer</span> y lo configura para guardar 4 archivos de forma asíncrona. La definición del grupo es entonces terminada (momento en el que comenzará el guardado), almacenando el ID de la llamada a la función en la variable &quot;<i>save_id</i>&quot;. Cuando se complete el guardado, el evento asíncrono Save/Load se activará y podrás analizar el mapa <span class="inline">async_load</span> para encontrar el ID correcto de la función, así:</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == saveid<br />
     {<br />
-        if ds_map_find_value(async_load, &quot;status&quot;) == false<br />
+        if (ds_map_find_value(async_load, &quot;status&quot;) == false) <br />
         {<br />
             show_debug_message(&quot;Save failed!&quot;);<br />
         }<br />

@@ -59,7 +59,7 @@
   <p>El código anterior pasará la <span class="notranslate">string</span> contenida en la variable &quot;name&quot; a la <span class="notranslate">server</span> dada, así como recuperará los datos de esa URL, desencadenando un Evento Asíncrono que contendrá el mapa async_load DS (el índice del mapa async_load se almacenará en la variable &quot;get&quot; para poder comprobar la devolución de llamada correcta). El Evento Asíncrono disparado sería el sub-evento <b>HTTP</b>, y en ese evento tendrías lo siguiente:</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == get<br />
     {<br />
-        if ds_map_find_value(async_load, &quot;status&quot;) == 0<br />
+        if (ds_map_find_value(async_load, &quot;status&quot;) == 0) <br />
         {<br />
             r_str = ds_map_find_value(async_load, &quot;result&quot;);<br />
         }<br />
