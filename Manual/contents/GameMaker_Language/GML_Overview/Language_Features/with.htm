@@ -22,9 +22,9 @@
   <p>tendrá exactamente el mismo efecto porque es simplemente una abreviación de la primera declaración. Entonces, ¿cómo <i>se</i> consigue algo así? Por eso existe la sentencia <span class="inline">with</span> en <span class="notranslate">GML</span>. La sentencia <span class="inline">with</span> tiene la siguiente sintaxis:</p>
   <p class="code">with (&lt;expression&gt;)<br />
     {<br />
-    &lt;statement&gt;;<br />
-    &lt;statement&gt;;<br />
-    ...<br />
+        &lt;statement&gt;;<br />
+        &lt;statement&gt;;<br />
+        ...<br />
     }</p>
   <p>Para la <a class="glossterm" data-glossterm="expresión" href="#">expresión</a>, puede indicar una o más instancias (o un <span class="notranslate">struct</span>) para realizar el código, utilizando un ID de instancia, el ID de <span class="notranslate">object</span> (que indica que <i>todas las inst</i> ancias en el <span class="notranslate">room</span> de este <span class="notranslate">object</span> deben ejecutar el bloque de código), el ID de <span class="notranslate">struct</span>, o una de las <a href="../Instance_Keywords.htm">palabras clave</a> especiales (<span class="inline">all</span> o <span class="inline">other</span>). Esto cambiará el <strong>ámbito</strong> del código dentro de las llaves <span class="inline">{}</span> de la instancia, <span class="notranslate">struct</span> o función que realmente contiene el código a la instancia (o instancias o <span class="notranslate">struct</span>) dada en la expresión.</p>
   <p>Una vez que la expresión ha establecido el ámbito de <span class="inline">with</span>, la <a class="glossterm" data-glossterm="declaración" href="#">sentencia</a> se ejecutará para cada una de las instancias indicadas, como si esa instancia fuera la actual ( <span class="inline">self</span>). Así, volviendo a nuestro problema original, para mover todas las instancias de la bola <span class="notranslate">object</span> 8 píxeles hacia abajo se escribiría</p>
