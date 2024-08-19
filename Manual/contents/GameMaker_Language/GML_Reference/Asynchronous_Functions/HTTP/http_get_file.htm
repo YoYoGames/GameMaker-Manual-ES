@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>http_get_file</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -62,14 +62,14 @@
   <p>El código anterior solicitará un archivo de la URL dada y lo establecerá para ser descargado en el área de almacenamiento local (como se especifica en las Opciones de Juego HTML5), en un directorio &quot;Descargas&quot; con el nombre de archivo dado (esto no tiene que ser el mismo que el nombre del archivo de origen, pero debe utilizar el mismo archivo <span class="notranslate">extension</span>). El índice del mapa <span class="inline">async_load</span> se almacenará en la variable &quot;file&quot; para que pueda comprobar la devolución de llamada correcta en el Evento Asíncrono, y si el directorio de guardado no existe, se creará. El Evento Asíncrono disparado sería el sub-evento <b>HTTP</b>, y en ese evento tendrías algo como lo siguiente:</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == file<br />
     {<br />
-        var status = ds_map_find_value(async_load, &quot;status&quot;);<br />
-        if (status == 0) <br />
+        var _status = ds_map_find_value(async_load, &quot;status&quot;);<br />
+        if (_status == 0)<br />
         {<br />
-            var path = ds_map_find_value(async_load, &quot;result&quot;);<br />
-            var files = zip_unzip(path, &quot;/NewContent/&quot;);<br />
-            if (files &gt; 0) <br />
+            var _path = ds_map_find_value(async_load, &quot;result&quot;);<br />
+            var _files = zip_unzip(path, &quot;/NewContent/&quot;);<br />
+            if (_files &gt; 0)<br />
             {<br />
-                global.ExtraContent = true;<br />
+                global.extra_content = true;<br />
             }<br />
         }<br />
     }</p>

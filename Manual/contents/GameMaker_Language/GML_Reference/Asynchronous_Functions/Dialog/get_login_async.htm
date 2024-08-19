@@ -45,8 +45,8 @@
   <h4>Ejemplo ampliado:</h4>
   <p>El <b>evento create</b> (por ejemplo) del <span class="notranslate">object</span> que está controlando el login de nuestro usuario tendría el siguiente código:</p>
   <p class="code">ini_open(&quot;Profile.ini&quot;);<br />
-    u = ini_read_string(&quot;User&quot;,&quot;0&quot;,&quot;&quot;);<br />
-    p = ini_read_string(&quot;User&quot;,&quot;1&quot;,&quot;&quot;);<br />
+    u = ini_read_string(&quot;User&quot;, &quot;0&quot;, &quot;&quot;);<br />
+    p = ini_read_string(&quot;User&quot;, &quot;1&quot;, &quot;&quot;);<br />
     ini_close();<br />
     login = get_login_async(u,p);</p>
   <p>El código anterior abre un archivo ini (o crea uno si no existe) y obtiene el nombre y la contraseña almacenados en ese archivo. Si no existen, se devuelve por defecto un <span class="notranslate">string</span> vacío (&quot;&quot;). Estos valores se utilizan entonces en <span class="inline">get_login_async()</span> para pedir al usuario sus datos de nombre de usuario y contraseña, almacenando el índice de petición en la variable &quot;login&quot;. Ten en cuenta que mientras se espera a que el usuario dé la información necesaria, el juego y sus eventos seguirán ejecutándose con normalidad.</p>
