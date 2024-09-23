@@ -48,11 +48,11 @@
   <p> </p>
   <h4>Ejemplo:</h4>
   <p class="code">var port = 6510;<br />
-    server = network_create_server_raw(network_socket_tcp, port, 32);<br />
+    server = <span data-field="title" data-format="default">network_create_server_raw</span>(network_socket_tcp, port, 32);<br />
     while (server &lt; 0 &amp;&amp; port &lt; 65535)<br />
     {<br />
         port++<br />
-        server = network_create_server(network_socket_tcp, port, 32);<br />
+        server = <span data-field="title" data-format="default">network_create_server_raw</span>(network_socket_tcp, port, 32);<br />
     }</p>
   <p>El código anterior intentará crear un <span class="notranslate">server</span> usando TCP a través del puerto 6510. Si ese puerto no está disponible, entonces <span class="notranslate">loop</span> a través de los puertos para encontrar uno que sí lo esté.</p>
   <p> </p>
