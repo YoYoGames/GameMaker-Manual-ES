@@ -31,6 +31,10 @@
      <p class="code">gml_pragma(&quot;UnityBuild&quot;, &quot;true&quot;);</p>
       El beneficio de hacer una compilación de la unidad es que las compilaciones son más rápidas, pero el lado negativo es que se hace una compilación <i>completa</i> cada vez, por lo que incluso si se cambia una sola parte del código se construirá todo de nuevo sin utilizar ningún archivo de caché. Esto se ha añadido específicamente para la exportación de Xbox One utilizando el YYC aunque puede ser llamado para otras construcciones<b>(sólo YYC</b>). Para más información sobre las compilaciones de unity, por favor vea <a href="http://buffered.io/posts/the-magic-of-unity-builds/" target="_blank">aquí</a>.
     </li>
+    <li>&quot;<strong>AllowReentrantStatic</strong>&quot; - This pragma reverts static initialisation to the old re-entrant initialisation behaviour of <span data-keyref="GameMaker Name">GameMaker</span> versions up to 2024.8. It is a project-wide setting and so cannot be put around code sections. The following code enables this old behaviour: 
+      <p class="code"><span data-field="title" data-format="default">gml_pragma</span>( &quot;AllowReentrantStatic&quot;, true);</p>
+      <p><span data-conref="../../../assets/snippets/Tag_warning.hts"> </span> You should only use this in existing projects that make use of the old behaviour. <span data-condition="Export:Beta"><a data-xref="{title}" href="../../../Settings/Runner_Details/GMRT_(GameMaker_Runtime).htm">GMRT (GameMaker Runtime)</a> will no longer allow it.</span></p>
+    </li>
   </ul>
   <p class="note"><b>NOTA</b>: El primer argumento de la función <span class="inline">gml_pragma</span> <b>debe ser una constante en tiempo de compilación <span class="notranslate">string</span> </b> y no una variable.</p>
   <p> </p>

@@ -62,9 +62,9 @@
   <p class="code">var r_str = &quot;null&quot;;<br />
     if (ds_map_find_value(async_load, &quot;id&quot;) == post) <br />
     {<br />
-        if (ds_map_find_value(async_load, &quot;status&quot;) == 0)<br />
+        if (async_load[? &quot;status&quot;] == 0)<br />
         {<br />
-            _r_str = ds_map_find_value(async_load, &quot;result&quot;);<br />
+            _r_str = async_load[? &quot;result&quot;];<br />
         }<br />
     }</p>
   <p>El código anterior comprobará primero el id del mapa DS que se ha creado, y luego comprobará el estado de la llamada de retorno. Si el valor es igual a 0 (señalando el éxito) el resultado de la llamada de retorno se almacenará en una variable para su uso futuro, de lo contrario la variable simplemente mantendrá un valor por defecto (en este caso &quot;null&quot;).</p>
