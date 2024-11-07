@@ -91,7 +91,7 @@
       }<br />
       <br />
       // Delete the array<br />
-      a = -1;
+      a = undefined;
     </p>
     <p class="dropspot">Si el array tiene múltiples dimensiones (ver más abajo), también se limpiarán todas, y ten en cuenta que cuando creas arrays en instancias, éstos no necesitan ser limpiados cuando la instancia es eliminada del juego, ya que serán eliminados automáticamente por el <a class="glossterm" data-glossterm="recolector de basura" href="#">recolector de</a> basura en Destroy o <span class="notranslate">Room</span> End. Sin embargo, si alguna de las posiciones del array contiene referencias a activos <em>dinámicos</em>, como sistemas de partículas, <span class="notranslate">buffers</span>, o <span class="notranslate">data structures</span>, entonces estos <em>deberán</em> ser destruidos antes de que el array sea eliminado, la instancia sea destruida o el <span class="notranslate">room</span> termine.</p>
     <p class="dropspot"> </p>

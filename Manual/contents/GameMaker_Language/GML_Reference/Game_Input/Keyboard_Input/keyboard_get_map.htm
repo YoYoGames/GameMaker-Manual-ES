@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>keyboard_get_map</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -39,7 +39,7 @@
   <h4><b>Ejemplo:</b></h4>
   <p class="code">if keyboard_get_map(ord(&quot;A&quot;)) = ord(&quot;A&quot;)<br />
     {<br />
-        keyboard_set_map(ord(&quot;A&quot;), keyboard_lastkey);<br />
+        keyboard_set_map(_keycode, keyboard_lastkey);<br />
     }</p>
   <p>El código de ejemplo anterior primero comprobará si &quot;A&quot; ha sido asignada a otra tecla, y si no lo ha sido, la asignará a la última tecla que el usuario haya pulsado.</p>
   <p> </p>
