@@ -20,12 +20,12 @@
   <p>Esta distinción entre enteros y flotantes es muy importante cuando se trata de desarrollo entre plataformas, ya que la precisión de los cálculos realizados en un PC <span class="notranslate">Windows</span> <i>no</i> es la misma que la de esos mismos cálculos cuando se realizan en un dispositivo móvil. Esto significa que hay que prestar especial atención al hacer comparaciones, por ejemplo:</p>
   <p class="code">if (image_index == 1)<br />
     {<br />
-        do something...<br />
+        // Do something...<br />
     }</p>
   <p>En el ejemplo anterior, si hemos establecido el <span class="inline">image_speed</span> a 0,25 - por ejemplo - entonces después de cuatro pasos se puede asumir que el valor de <span class="inline">image_index</span> sería 1, pero <i>puede</i> ser un valor como 1,0000002 debido a la forma en que las matemáticas de punto flotante funciona y por lo que la evaluación no será <span class="inline">true</span>. Este tipo de errores puede ser bastante difícil de depurar, por lo que siempre es bueno ser consciente de ellos y planificar con antelación y utilizar otros medios de comprobación de valores o utilizar las funciones de piso o redondeo apropiadas (enumeradas a continuación) para convertir el número a comprobar en un entero (para más información sobre las matemáticas de punto flotante y por qué esto es un problema, por favor <a href="https://floating-point-gui.de/" target="_blank">vea aquí</a>). Por ejemplo, el código anterior podría escribirse como</p>
   <p class="code">if (floor(image_index) == 1)<br />
     {<br />
-        do something...<br />
+        // Do something...<br />
     }</p>
   <p>También vale la pena señalar que cuando se utilizan los objetivos <b>del Compilador YoYo</b>, todas las expresiones y funciones se evalúan <i>de izquierda a derecha</i>, mientras que en todas las demás plataformas de destino se evalúan <i>de derecha a izquierda</i>, lo que significa que esto - por ejemplo - dará resultados diferentes dependiendo de la plataforma:</p>
   <p class="code">val = max(num, ++num, num++);</p>

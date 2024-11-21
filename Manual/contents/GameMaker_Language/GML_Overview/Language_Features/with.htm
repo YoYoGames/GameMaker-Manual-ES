@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the with function" />
+  <meta name="topic-comment" content="Page outlining the with statement" />
   <meta name="rh-index-keywords" content="with" />
   <meta name="search-keywords" content="with" />
 </head>
@@ -22,24 +22,24 @@
   <p>tendrá exactamente el mismo efecto porque es simplemente una abreviación de la primera declaración. Entonces, ¿cómo <i>se</i> consigue algo así? Por eso existe la sentencia <span class="inline">with</span> en <span class="notranslate">GML</span>. La sentencia <span class="inline">with</span> tiene la siguiente sintaxis:</p>
   <p class="code">with (&lt;expression&gt;)<br />
     {<br />
-        &lt;statement&gt;;<br />
-        &lt;statement&gt;;<br />
-        ...<br />
+    &lt;statement&gt;;<br />
+    &lt;statement&gt;;<br />
+    ...<br />
     }</p>
   <p>Para la <a class="glossterm" data-glossterm="expresión" href="#">expresión</a>, puede indicar una o más instancias (o un <span class="notranslate">struct</span>) para realizar el código, utilizando un ID de instancia, el ID de <span class="notranslate">object</span> (que indica que <i>todas las inst</i> ancias en el <span class="notranslate">room</span> de este <span class="notranslate">object</span> deben ejecutar el bloque de código), el ID de <span class="notranslate">struct</span>, o una de las <a href="../Instance_Keywords.htm">palabras clave</a> especiales (<span class="inline">all</span> o <span class="inline">other</span>). Esto cambiará el <strong>ámbito</strong> del código dentro de las llaves <span class="inline">{}</span> de la instancia, <span class="notranslate">struct</span> o función que realmente contiene el código a la instancia (o instancias o <span class="notranslate">struct</span>) dada en la expresión.</p>
   <p>Una vez que la expresión ha establecido el ámbito de <span class="inline">with</span>, la <a class="glossterm" data-glossterm="declaración" href="#">sentencia</a> se ejecutará para cada una de las instancias indicadas, como si esa instancia fuera la actual ( <span class="inline">self</span>). Así, volviendo a nuestro problema original, para mover todas las instancias de la bola <span class="notranslate">object</span> 8 píxeles hacia abajo se escribiría</p>
   <p class="code">with (obj_ball)<br />
     {<br />
-        y += 8;<br />
+        y += 8;<br />
     }</p>
   <p>Esencialmente se trata de un <span class="notranslate">loop</span>, y en cada <a class="glossterm" data-glossterm="iteración" href="#">iteración</a> del <span class="notranslate">loop</span>, el código se ejecutará en una instancia del <span class="notranslate">object</span> <span class="inline">obj_ball</span>.</p>
   <p>Si quieres ejecutar varias sentencias, sólo tienes que incluirlas entre llaves, igual que harías con cualquier otro bloque de código. Así, por ejemplo, para mover todas las bolas de nuestro ejemplo a una posición aleatoria y darles una velocidad y dirección aleatorias, usarías:</p>
   <p class="code">with (obj_ball)<br />
     {<br />
-        x = random(room_width);<br />
-        y = random(room_height);<br />
-        speed = 1 + random(2);<br />
-        direction = random(360);<br />
+        x = random(room_width);<br />
+        y = random(room_height);<br />
+        speed = 1 + random(2);<br />
+        direction = random(360);<br />
     }</p>
   <p>Como se mencionó anteriormente, dentro de la(s) declaración(es), la instancia o estructura indicada se ha convertido en la instancia de destino (<span class="inline">self</span>) que ejecuta el bloque de código, lo que significa que la instancia original (que contiene el <span class="inline">with</span> y todo el bloque de código) se ha convertido en la <a href="../Instance_Keywords.htm"><span class="inline">other</span></a> instancia. Así que - por ejemplo - para mover todas las bolas a la posición de la instancia actual que realmente contiene el código, puedes escribir esto:</p>
   <p class="code">with (obj_ball)<br />
@@ -86,9 +86,9 @@
     {<br />
         if (++count &gt; 10)<br />
         {<br />
-            break;<br />
+            break;<br />
         }<br />
-        hp = 100;<br />
+        hp = 100;<br />
     }</p>
   <p>El código anterior <span class="notranslate">loops</span> a través de las instancias en el <span class="notranslate">room</span> del <span class="notranslate">object</span> <span class="inline">obj_Enemy</span> y establece la variable <span class="inline">hp</span> a 100 para los primeros 10 que encuentra. Si existen más de 10 instancias, el código con llamará a <span class="inline">break</span> y terminará.</p>
   <p>Un ejemplo de uso de <span class="inline">continue</span> en un bucle de <span class="inline">with</span> sería:</p>

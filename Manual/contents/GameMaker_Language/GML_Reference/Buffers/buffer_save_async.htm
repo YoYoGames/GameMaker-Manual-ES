@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>buffer_save_async</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -61,7 +61,7 @@
   <p>El código anterior guarda el contenido de <span class="notranslate">buffer</span> &quot;<i>buff</i>&quot; en el archivo de almacenamiento dado, almacenando el ID de la llamada a la función en la variable &quot;<i>saveid</i>&quot;. Cuando se complete el guardado, se activará el evento asíncrono Save/Load y se podrá analizar el mapa <span class="inline">async_load</span> en busca del ID correcto de la función, así:</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == saveid<br />
     {<br />
-        if ds_map_find_value(async_load, &quot;status&quot;) == false<br />
+        if (ds_map_find_value(async_load, &quot;status&quot;) == false)<br />
         {<br />
             show_debug_message(&quot;Save failed!&quot;);<br />
         }<br />
