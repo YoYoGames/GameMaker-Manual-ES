@@ -14,7 +14,9 @@ jobs:
     
        RoboHelp:
          name: "RoboHelp"
-         runs-on: windows-2019
+         runs-on: windows-2022
+         env:
+            LANGUAGE: ${{ vars.LANGUAGE }}
          steps:
           - uses: aws-actions/configure-aws-credentials@v4
             with:
@@ -29,6 +31,9 @@ jobs:
               path: Manual  
               token: ${{ secrets.GH_TOKEN }}
           - name: LTS Builds
+            if: github.event.pull_request.base.ref == 'main-lts' || github.event_name == 'workflow_dispatch'
+            env:
+              BUILDBETA: '0'          
             run: build_robohelp_gh.bat %GITHUB_WORKSPACE%\output
             shell: cmd
             working-directory: Manual       
