@@ -40,10 +40,10 @@
   <p> </p>
   <h4>Ejemplo:</h4>
   <p class="code">var lay_id = layer_get_id(&quot;Sprites&quot;);<br />
-    if layer_get_hspeed(lay_id) != 0 || layer_get_vspeed(lay_id) != 0<br />
+    if (layer_get_hspeed(lay_id) != 0 || layer_get_vspeed(lay_id) != 0)<br />
     {<br />
-    layer_hspeed(lay_id, 0);<br />
-    layer_vspeed(lay_id, 0);<br />
+        layer_hspeed(lay_id, 0);<br />
+        layer_vspeed(lay_id, 0);<br />
     }</p>
   <p>El código anterior comprueba las velocidades horizontales y verticales de la capa dada y si no están ambas a 0 entonces las pone a 0.</p>
   <p> </p>
