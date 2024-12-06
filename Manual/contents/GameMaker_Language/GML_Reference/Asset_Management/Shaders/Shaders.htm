@@ -30,9 +30,9 @@
     colour_to_set = shader_get_uniform(sShaderDemo5, &quot;f_Colour2&quot;);</p>
   <p>Una vez que tenga las manijas uniformes, pueden ser establecidas en el código <span class="notranslate">shader</span> para el <b>Evento de Dibujo</b> así:</p>
   <p class="code">shader_set(sShaderDemo5);<br />
-    shader_set_uniform_f(colour_to_find, 1,1,1 );<br />
-    shader_set_uniform_f(colour_to_set, 1,0,0 );<br />
-    draw_sprite(sprite_index,image_index,x+24, y);<br />
+    shader_set_uniform_f(colour_to_find, 1, 1, 1);<br />
+    shader_set_uniform_f(colour_to_set, 1, 0, 0);<br />
+    draw_sprite(sprite_index, image_index, x + 24, y);<br />
     shader_reset();</p>
   <p>Una última cosa a tener en cuenta es que, aunque <span class="notranslate">shaders</span> es aceptado en todas las plataformas, sigue siendo específico para cada dispositivo y si el hardware o el software del dispositivo no puede utilizar <span class="notranslate">shaders</span>, entonces obtendrá un error. Por lo tanto, se recomienda comprobar que el <span class="notranslate">shader</span> ha sido compilado antes de configurar los uniformes o utilizar el propio <span class="notranslate">shader</span>, así:</p>
   <p class="code">if (shader_is_compiled(myShader))<br />
