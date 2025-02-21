@@ -23,10 +23,10 @@
     <p class="code">list_index[| index]</p>
     <p class="dropspot">Así que cuando hayas utilizado <span class="inline">ds_list_create()</span> para crear tu lista, utilizarás el índice de la lista (que has almacenado en una variable) para referenciarla, siendo el valor del &quot;índice&quot; la posición en la lista a establecer o añadir. Por ejemplo, el siguiente código crea una lista y luego añade 10 entradas, estableciendo cada entrada con un número aleatorio del 0 al 9:</p>
     <p class="code">ds = ds_list_create();<br />
-      var index = 0;<br />
+      var _index = 0;<br />
       repeat(10)<br />
       {<br />
-          ds[| index++] = irandom(9);<br />
+          ds[| _index++] = irandom(9);<br />
       }</p>
     <p class="dropspot">Tenga en cuenta que si utiliza una expresión para añadir una referencia a un índice que ya tiene un valor, el valor anterior será reemplazado en lugar de añadir otro índice a la lista. Para añadir más entradas necesitaría conocer el tamaño de ds_list y añadirlas al final. También vale la pena señalar que se puede establecer un índice de lista que sea <i>mayor</i> que el tamaño de la lista a la que se hace referencia, y esto establecerá ese valor, expandiendo la lista al mismo tiempo e inicializando todas las posiciones de la lista hasta el índice dado como 0.</p>
     <p class="dropspot">Una vez que hayas creado tu estructura de lista y la hayas llenado de datos, para obtener valores de la lista tendrías algo como</p>
@@ -56,15 +56,15 @@
     <p class="dropspot">Después de crear tu cuadrícula con la función <span class="inline">ds_grid_create()</span>, usarás el índice de la cuadrícula que has almacenado en una variable para referenciarla, siendo los &quot;xpos&quot; e &quot;ypos&quot; la posición dentro de la cuadrícula para obtener o establecer un valor. Por ejemplo, el siguiente código crea una rejilla, la borra a 0, y luego añade algunas entradas a la misma:</p>
     <p class="code">ds = ds_grid_create();<br />
       ds_grid_clear(ds, 0);<br />
-      var gw = ds_grid_width(ds) - 1;<br />
-      var gh = ds_grid_height(ds) - 1;<br />
+      var _gw = ds_grid_width(ds) - 1;<br />
+      var _gh = ds_grid_height(ds) - 1;<br />
       repeat(10)<br />
       {<br />
-          var xx = irandom(gw);<br />
-          var yy = irandom(gh);<br />
-          if (ds[# xx, yy] == 0)<br />
+          var _xx = irandom(_gw);<br />
+          var _yy = irandom(_gh);<br />
+          if (ds[# _xx, _yy] == 0)<br />
           {<br />
-              ds[# xx, yy] = 1;<br />
+              ds[# _xx, _yy] = 1;<br />
           }<br />
       }</p>
     <p class="dropspot">Una vez que hayas creado tu estructura de cuadrícula y la hayas llenado de datos, para obtener los valores de una posición específica de la cuadrícula tendrías algo como</p>
@@ -84,7 +84,8 @@
     <p class="dropspot">La función en sí tendría algo así:</p>
     <p class="code">function array_populate(_array)<br />
       {<br />
-          var a = _array; var i = 0; repeat(25)<br />
+          var a = _array; var i = 0;<br />
+          repeat(25)<br />
           {<br />
               i = irandom(99);<br />
               while (a[i] != 0)<br />
