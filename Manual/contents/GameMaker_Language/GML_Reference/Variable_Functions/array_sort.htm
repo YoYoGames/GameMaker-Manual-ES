@@ -59,9 +59,9 @@
   <h4>Ejemplo:</h4>
   <p class="code">var _a = [10, 9, 8, 7, 6, 5];<br />
     <br />
-    array_sort(_a, function(elm1, elm2)<br />
+    array_sort(_a, function(current, next)<br />
     {<br />
-        return elm1 - elm2;<br />
+        return current - next;<br />
     });
   </p>
   <p>El código anterior utiliza una función de ordenación personalizada para ordenar el array en orden ascendente. La función de ordenación toma los dos elementos del array como <span class="inline">elm1</span> y <span class="inline">elm2</span> y realiza una resta sobre ellos. Si <span class="inline">elm1</span> es mayor que <span class="inline">elm2</span>, la resta resulta en un número positivo que empuja a <span class="inline">elm1</span> a estar después de <span class="inline">elm2</span>, por lo tanto los pone en un orden ascendente.</p>
