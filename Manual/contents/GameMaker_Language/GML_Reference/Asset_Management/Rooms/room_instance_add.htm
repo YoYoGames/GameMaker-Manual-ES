@@ -15,11 +15,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>room_instance_add</h1>
+  <h1><span data-field="title" data-format="default">room_instance_add</span></h1>
   <p>Con esta función puede añadir una instancia en cualquier <span class="notranslate">room</span> que no sea la actual y en cualquier posición dentro de ese <span class="notranslate">room</span>. La función devuelve el nombre único <a href="../Instances/Instance_Variables/id.htm"><span class="inline">id</span></a> de la instancia, que puede utilizarse en otras llamadas a la función para establecer propiedades, etc., de esa instancia, pero <strong>sólo una vez que el juego haya entrado en la sala especificada</strong>. Si se desea crear una instancia en la actual <span class="notranslate">room</span> se debe utilizar la función <a href="../Instances/instance_create_layer.htm"><span class="inline">instance_create_layer()</span></a>. Tenga en cuenta que llamar a esta función en un <span class="notranslate">room</span> <span class="notranslate">asset</span> creado en el navegador <span class="notranslate">Asset</span> <strong>añadirá permanentemente la instancia a la</strong> sala, e incluso llamando a <span class="inline">game_restart()</span> no devolverá el <span class="notranslate">room</span> a su estado original (sólo terminando el juego y abriéndolo de nuevo comenzará con el <span class="notranslate">room</span> en su estado original de nuevo).</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">room_instance_add(index, x, y, obj);</p>
+  <p class="code"><span data-field="title" data-format="default">room_instance_add</span>(index, x, y, obj);</p>
   <table>
     <tbody>
       <tr>

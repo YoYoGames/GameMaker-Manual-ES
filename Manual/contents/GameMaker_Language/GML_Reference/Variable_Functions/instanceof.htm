@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>de</title>
+  <title>instanceof</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>de</h1>
+  <h1><span data-field="title" data-format="default">instanceof</span></h1>
   <p>Esta función puede utilizarse para obtener el nombre de la <a href="../../GML_Overview/Structs.htm">función constructora</a> que se utilizó para crear un <span class="notranslate">struct</span>. El propio <span class="notranslate">struct</span> debería haberse creado utilizando la función <a href="../../GML_Overview/Language_Features/new.htm"><span class="inline"></span></a> <a href="../../GML_Overview/Language_Features/new.htm"><span class="inline">new</span></a> junto con el propio constructor. Se suministra la variable con la referencia <span class="notranslate">struct</span> a comprobar y la función devolverá un <span class="notranslate">string</span> con el nombre del constructor o <span class="inline">undefined</span>.</p>
   <p>Tenga en cuenta que si pasa a la función un literal de <span class="notranslate">struct</span> (es decir: un <span class="notranslate">struct</span> que fue creado sin usar una función constructora) entonces simplemente devolverá el <span class="inline2">&quot;struct&quot;</span> <span class="notranslate">string</span> <span class="inline2">.</span></p>
   <p>Esta función también puede utilizarse para comprobar si una referencia <span class="notranslate">struct</span> es una <strong><a class="glossterm" data-glossterm="referencia débil" href="#">referencia débil</a></strong> o no, en cuyo caso la función devolverá el <span class="notranslate">string</span> <span class="inline2">&quot;weakref&quot;</span> en lugar del nombre de la función que creó el <span class="notranslate">struct</span>. Para más información, véase la función <a href="../Garbage_Collection/weak_ref_create.htm"><span class="inline">weak_ref_create()</span></a>.</p>
   <p>El nombre del constructor devuelto incluirá texto adicional si la función del constructor no fue creada en un <span class="notranslate">script</span>. Si fue creada dentro de un <span class="notranslate">object</span>, su nombre incluirá el <span class="notranslate">object</span> y el evento donde fue creada. Por ejemplo, un constructor llamado <span class="inline2">test_constructor</span> creado en el evento Create de <strong>Object1</strong> será devuelto como <span class="inline2">&quot;test_constructor_gml_Object_Object1_Create_0&quot;.</span> Para evitar esto, crea tus constructores en un evento <a href="../../GML_Overview/Script_Functions.htm"><span class="notranslate">script</span></a>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">instanceof(struct_id);</p>
+  <p class="code"><span data-field="title" data-format="default">instanceof</span>(struct_id);</p>
   <table>
     <tbody>
       <tr>

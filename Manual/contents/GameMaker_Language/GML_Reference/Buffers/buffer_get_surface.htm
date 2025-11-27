@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_get_surface</h1>
+  <h1><span data-field="title" data-format="default">buffer_get_surface</span></h1>
   <p>Con esta función puedes escribir información de una superficie en un <span class="notranslate">buffer</span> dado. El <span class="notranslate">buffer</span> debe haber sido creado previamente y debe ser un <span class="notranslate">buffer</span> alineado de 1 byte lo suficientemente grande como para almacenar los datos de la superficie que va a escribir (si no está seguro, utilice un buffer de <a href="buffer_create.htm">crecimiento</a> o vea el ejemplo al final de esta página).</p>
   <p>La información de la superficie siempre se escribirá al principio de <span class="notranslate">buffer</span> (independientemente de la posición de búsqueda), pero puede elegir un valor de desplazamiento (en bytes) para mover la posición de escritura desde el inicio de <span class="notranslate">buffer</span>.</p>
   <p>Tenga en cuenta que la función escribe cada píxel de la superficie en <span class="notranslate">buffer</span> utilizando un formato <b>RGBA</b> en el objetivo <span class="notranslate">Windows</span>, pero en otros objetivos puede ser diferente dependiendo del SO o incluso del dispositivo.</p>
   <p class="note"><strong>NOTA</strong>: Esta función ha cambiado a partir de la actualización 2.3.1 de <span data-keyref="GameMaker Name">GameMaker</span>. Las versiones anteriores utilizaban la constante <span class="inline">buffer_surface_copy</span>, que ahora está obsoleta.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">buffer_get_surface(buffer, surface, offset);</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_get_surface</span>(buffer, surface, offset);</p>
   <table>
     <tbody>
       <tr>

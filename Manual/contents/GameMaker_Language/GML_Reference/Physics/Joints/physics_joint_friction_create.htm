@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_joint_friction_create</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_friction_create</span></h1>
   <p>La articulación de fricción es un poco diferente a todas las demás articulaciones en la simulación física, ya que la conexión creada no limitará la posición o el movimiento de las instancias, sino su velocidad y rotación. Esto funciona tomando los valores máximos de entrada para la fuerza y el par y aplicándolos a la segunda instancia para reducir la velocidad y el momento angular a los mismos valores que los de la primera instancia. Por lo tanto, si tienes una instancia estacionaria y otra en movimiento y las conectas con una junta de fricción, la instancia en movimiento se ralentizará gradualmente hasta que también esté estacionada. Si ambas instancias estuvieran en movimiento, la segunda instancia verá modificada su velocidad de movimiento para igualar la de la primera instancia.</p>
   <p><img>Al igual que con la mayoría de las otras articulaciones, usted suministra las instancias a unir, así como la posición para la articulación que se creará en el <span class="notranslate">room</span>. A continuación, proporciona la fuerza máxima y la torsión máxima (fricción direccional y rotacional), y si establece el valor &quot;col&quot; en <span class="inline">true</span> entonces las dos instancias pueden interactuar y colisionar entre sí, pero <i>sólo</i> si tienen eventos de colisión, sin embargo, si se establece en <span class="inline">false</span>, no van a colisionar no importa qué.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">physics_joint_friction_create(inst1, inst2, anchor_x, anchor_y, max_force, max_torque, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_friction_create</span>(inst1, inst2, anchor_x, anchor_y, max_force, max_torque, col)</p>
   <table>
     <tbody>
       <tr>

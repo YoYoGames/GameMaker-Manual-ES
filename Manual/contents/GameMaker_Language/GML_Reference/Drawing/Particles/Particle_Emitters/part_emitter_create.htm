@@ -15,11 +15,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>part_emitter_create</h1>
+  <h1><span data-field="title" data-format="default">part_emitter_create</span></h1>
   <p>Esta función se utiliza para crear un nuevo emisor de partículas en el sistema de partículas dado. La función devolverá el valor del índice del nuevo emisor, que debe almacenarse en una variable y utilizarse en todas las funciones posteriores que hagan referencia al emisor, y el propio emisor debe destruirse cuando ya no se utilice para evitar fugas de memoria (esto puede conseguirse utilizando las funciones específicas de destrucción del emisor o destruyendo todo el sistema de partículas al que pertenece el emisor).</p>
   <p class="note"><span class="note">NOTA</span> Los IDs de los emisores devueltos por esta función se reutilizan, por ejemplo, si primero creas tres emisores de partículas tendrán asignados los IDs 0, 1 y 2. Si luego destruyes el segundo emisor (que tiene un ID de 1) usando <a href="part_emitter_destroy.htm"><span class="notranslate">part_emitter_destroy</span></a> y luego creas otro emisor, entonces este emisor reutilizará el ID de 1. Como el ID del emisor 2 está en uso, el siguiente emisor obtendrá un ID de 3, y así sucesivamente.</p>
   <h4>Sintaxis:</h4>
-  <p class="code">part_emitter_create(ps);</p>
+  <p class="code"><span data-field="title" data-format="default">part_emitter_create</span>(ps);</p>
   <table>
     <tbody>
       <tr>

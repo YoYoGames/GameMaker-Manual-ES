@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>network_create_server_raw</h1>
+  <h1><span data-field="title" data-format="default">network_create_server_raw</span></h1>
   <p>Esta función se utiliza para crear una nueva red <span class="notranslate">server</span> para su juego, utilizando uno de los protocolos de conexión permitidos (vea las constantes listadas abajo). Usted suministra el tipo de <span class="notranslate">server</span>, luego le da un puerto a utilizar, y finalmente el número de conexiones máximas que deben ser permitidas en cualquier momento a la <span class="notranslate">server</span> (tenga en cuenta que este número depende de usted, pero demasiados clientes conectados saturarán la red o la CPU del dispositivo no será capaz de manejar el procesamiento de ese número de jugadores, así que úselo con cuidado). La función devuelve un <i>identificador</i> único que debe ser usado almacenado en una variable y utilizado para identificar el <span class="notranslate">server</span> en todas las funciones de red posteriores, o un valor menor que 0 si la conexión falla.</p>
   <div data-conref="../../../assets/snippets/network_socket_types.hts"> </div>
   <p>Como esto crea un <span class="notranslate">server</span>&quot;crudo&quot;, no aceptará ni utilizará ninguna de las cabeceras de datos incorporadas en <span class="notranslate">GameMaker</span> para la comunicación, por lo que deberá utilizar las funciones <a href="network_send_raw.htm"><span class="inline">network_send_raw()</span></a> y <a href="network_send_udp_raw.htm"><span class="inline">network_send_udp_raw()</span></a> para enviar datos sin formato al <span class="notranslate">server</span> creado.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">network_create_server_raw(type, port, max_client);</p>
+  <p class="code"><span data-field="title" data-format="default">network_create_server_raw</span>(type, port, max_client);</p>
   <table>
     <tbody>
       <tr>

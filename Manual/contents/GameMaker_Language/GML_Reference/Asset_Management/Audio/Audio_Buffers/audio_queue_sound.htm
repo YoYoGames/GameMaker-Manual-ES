@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_queue_sound</h1>
+  <h1><span data-field="title" data-format="default">audio_queue_sound</span></h1>
   <p>Esta función agregará los datos de un <span class="notranslate">buffer</span> en el audio <span class="notranslate">queue</span> que usted creó previamente usando la función <a href="audio_create_play_queue.htm"><span class="inline">audio_create_play_queue()</span></a>. Se especifica el índice de <span class="notranslate">queue</span> al que se va a añadir, y el ID de <span class="notranslate">buffer</span> del que se van a obtener los datos, así como la posición (offset) dentro de <span class="notranslate">buffer</span> y el número de bytes que se van a añadir. Una vez que haya añadido audio de un <span class="notranslate">buffer</span> a un <span class="notranslate">queue</span>, el <span class="notranslate">buffer</span> no podrá ser eliminado hasta que haya liberado primero el <span class="notranslate">queue</span> utilizando la función <a href="audio_free_play_queue.htm"><span class="inline">audio_free_play_queue()</span></a>y las propiedades de <span class="notranslate">buffer</span> deben coincidir con las del <span class="notranslate">queue</span> al que está añadiendo el sonido.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">audio_queue_sound(queueIndex, bufferId, bufferOffset, bufferLength);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_queue_sound</span>(queueIndex, bufferId, bufferOffset, bufferLength);</p>
   <table>
     <tbody>
       <tr>

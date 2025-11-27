@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_apply_force</h1>
+  <h1><span data-field="title" data-format="default">physics_apply_force</span></h1>
   <p>Cuando se trabaja con la física es necesario aplicar no sólo la gravedad a <span class="notranslate">objects</span>, sino también las fuerzas. Una fuerza es cualquier influencia que hace que un <span class="notranslate">object</span> sufra un cambio de velocidad, un cambio de dirección o un cambio de forma, y se define en el mundo de la física <span data-keyref="GameMaker Name">de GameMaker</span> igual que definimos la gravedad, obteniendo el vector de las dos componentes xforce/yforce. Hay que tener en cuenta que las fuerzas no se aplican en el centro de masa de <span class="notranslate">object</span>, sino en un punto de <span class="notranslate">room</span> y que cambiarán la dirección y la velocidad, así como el par de torsión (giro), dependiendo de cualquier otra fuerza que esté actuando en <span class="notranslate">object</span> (como la gravedad). Aquí hay una imagen de ejemplo para ayudar a ilustrar:</p>
   <p><img>En el ejemplo anterior el muelle <span class="notranslate">object</span> en la parte inferior ha creado una fuerza sobre la bola <span class="notranslate">object</span> haciendo que se mueva en una dirección diferente. La fuerza exacta está definida por el vector que obtenemos de los componentes xforce/yforce en relación a las coordenadas xpos/ypos - lo que significa simplemente que la fuerza se calcula como la distancia desde xpos/ypos a xforce/yforce en Newtons (un Newton se define como la cantidad de fuerza neta requerida para acelerar una masa de un kilogramo a un ritmo de un metro por segundo al cuadrado) y la dirección es el ángulo que obtenemos desde xpos/ypos a xforce/yforce. El código para una colisión como la anterior iría en el evento de colisión del muelle <span class="notranslate">object</span> y se vería algo así como lo proporcionado en el ejemplo de abajo.</p>
   <p class="note"><b>NOTA</b>: El mundo de la física utiliza metros para todos sus cálculos, y la proporción de píxeles por metro se define en el editor <span class="notranslate">room</span> o utilizando <span style="font-size:1px;"><a href="../The_Physics_World/physics_world_create.htm"><span class="inline">physics_world_create()</span></a></span>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">physics_apply_force(xpos, ypos, xforce, yforce)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_apply_force</span>(xpos, ypos, xforce, yforce)</p>
   <table>
     <tbody>
       <tr>

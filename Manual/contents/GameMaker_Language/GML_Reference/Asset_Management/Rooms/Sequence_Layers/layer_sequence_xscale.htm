@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>secuencia_de_capa_escala_x</title>
+  <title>layer_sequence_xscale</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>secuencia_de_capa_escala_x</h1>
+  <h1><span data-field="title" data-format="default">layer_sequence_xscale</span></h1>
   <p>Con esta función puede establecer la escala X para el elemento <span class="notranslate">sequence</span> dado. Se suministra el ID del elemento <span class="notranslate">sequence</span> devuelto por <a href="layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a> o por una de las <a href="../General_Layer_Functions/General_Layer_Functions.htm">funciones de elementos de capa</a> junto con la nueva escala a establecer en el eje X y el <span class="notranslate">sequence</span> será escalado por esta cantidad. Una escala de 1 indica que no hay escala (1:1), los valores más pequeños reducirán la escala (0,5, por ejemplo, reducirá a la mitad la anchura de <span class="notranslate">sequence</span>), los valores más grandes aumentarán la escala y los valores negativos reflejarán el <span class="notranslate">sequence</span> sobre su origen <i>y</i> lo escalarán, a menos que el valor utilizado sea exactamente -1 (en cuyo caso el <span class="notranslate">sequence</span> se reflejará sobre su origen sin escala).</p>
   <p>Es muy importante tener en cuenta que la aplicación de <em>un</em> escalado desigual (por ejemplo, escalar el eje X en 3 y el eje Y en 2) a los elementos de <span class="notranslate">sequence</span> que contienen cualquier instancia que utiliza <em>la rotación</em>, <strong>puede causar problemas con el dibujo de la instancia, las colisiones, el culling, y muchas otras cosas</strong>. Básicamente, si su <span class="notranslate">sequence</span> depende de <em>alguna</em> propiedad de instancia, no recomendamos que combine el escalado desigual con la rotación de instancia.</p>
   <p>También tenga en cuenta que no debe cambiar las variables <span class="inline">image_xscale</span> \ <span class="inline">image_yscale</span> \ <span class="inline">image_angle</span> \ <span class="inline">x</span> \ <span class="inline">y</span> para cualquier instancia en un <span class="notranslate">sequence</span> que utiliza esta función, ya que se sobrescribirá tan pronto como el <span class="notranslate">sequence</span> se actualiza después de llamar a la función.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">layer_sequence_xscale(sequence_element_id, xscale)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_sequence_xscale</span>(sequence_element_id, xscale)</p>
   <table>
     <tbody>
       <tr>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>lengthdir_x</title>
-  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -14,39 +15,42 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>lengthdir_x</h1>
-  <p>Esta función se utiliza para obtener la componente <b>x</b> de una posición &quot;len&quot; píxeles desde el punto de partida y en dirección &quot;dir&quot;. Si imaginamos un círculo alrededor de nuestra instancia, y luego imaginamos un punto en cualquier parte de ese círculo, para movernos
-    a ese punto necesitamos mover el <span class="notranslate">object</span> tantos píxeles en esa dirección... así que esta función (cuando se usa con <a href="lengthdir_y.htm"><span class="inline">lengthdir_y()</span></a>) obtiene la posición de ese punto en el círculo para ser utilizada en el código por la instancia. Ver
-    la imagen de abajo para más detalles:</p>
-  <p><img alt="Lengthdir_y example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/Lengthdir_Image.png"/></p>
+  <h1><span data-field="title" data-format="default">lengthdir_x</span></h1>
+  <p>Esta función se utiliza para obtener la componente <b>x</b> de una posición &quot;len&quot; píxeles desde el punto de partida y en dirección &quot;dir&quot;. Si imaginamos un círculo alrededor de nuestra instancia, y luego imaginamos un punto en cualquier parte de ese círculo, para movernos a ese punto necesitamos mover el <span class="notranslate">object</span> tantos píxeles en esa dirección... así que esta función (cuando se usa con <a href="lengthdir_y.htm"><span class="inline">lengthdir_y()</span></a>) obtiene la posición de ese punto en el círculo para ser utilizada en el código por la instancia. Ver la imagen de abajo para más detalles:</p>
+  <p><img alt="Lengthdir_y example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/Lengthdir_Image.png" /></p>
   <h4>Sintaxis:</h4>
-  <p class="code">lengthdir_x(len, dir);</p>
+  <p class="code"><span data-field="title" data-format="default">lengthdir_x</span>(len, dir)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argumento</th><th>Tipo</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
         <th>Descripción</th>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">len</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">len</span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
         <td><span class="notranslate">The length away of the point to return.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">dir</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">dir</span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
         <td><span class="notranslate">The direction of the point to return.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
-  <p> </p>
+  <p> </p>
   <h4>Devuelve:</h4>
-  <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
+  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
+  <p> </p>
   <h4>Ejemplo:</h4>
-  <p class="code">var _xx = x + lengthdir_x(64, image_angle);<br/> var _yy = y + lengthdir_y(64, image_angle);<br/> instance_create_layer(_xx, _yy, &quot;Bullets&quot;, obj_bullet);</p>
+  <p class="code">var _xx = x + lengthdir_x(64, image_angle);<br />
+    var _yy = y + lengthdir_y(64, image_angle);<br />
+    instance_create_layer(_xx, _yy, &quot;Bullets&quot;, obj_bullet);</p>
   <p>Esto creará una instancia de bala en (<span class="inline">_xx</span>, <span class="inline">_yy</span>), que estará a 64 píxeles de la instancia padre en la dirección del ángulo de la imagen.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
@@ -54,7 +58,7 @@
         <div style="float:right">Siguiente: <a href="lengthdir_y.htm"><span class="notranslate">lengthdir_y</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 lengthdir_x

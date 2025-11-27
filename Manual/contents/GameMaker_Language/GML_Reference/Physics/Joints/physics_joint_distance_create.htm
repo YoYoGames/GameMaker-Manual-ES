@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_joint_distance_create</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_distance_create</span></h1>
   <p>Una de las uniones más sencillas es la de distancia, que establece que la distancia entre dos puntos de dos instancias debe ser constante. Cuando se especifica una articulación de distancia, las dos instancias deben estar ya creadas y tener una fijación asignada, entonces se definen los dos puntos de anclaje en coordenadas <span class="notranslate">room</span>. El primer punto de anclaje se conecta a la instancia 1, el segundo punto de anclaje se conecta a la instancia 2 y la distancia entre estos puntos implica la longitud de la restricción de distancia. La imagen siguiente muestra cómo funciona esto:</p>
   <p><img>Como puede ver, los puntos de anclaje se especifican como coordenadas de <span class="notranslate">room</span>, por lo que debe tener cuidado al definirlos, especialmente si las instancias se están creando al mismo tiempo que las articulaciones en lugar de colocarse en el <span class="notranslate">room</span> a través del editor <span class="notranslate">room</span>. También debe tener en cuenta que las articulaciones se crean independientemente del tamaño de <span class="notranslate">sprite</span> de las instancias o de las fijaciones que tienen adjuntas. Por lo tanto, si crea una junta de distancia en algún lugar distinto al origen de la instancia, seguirá siendo válida y limitará las dos instancias en relación con la posición en la que fue creada. Si estableces el valor de &quot;col&quot; en <span class="inline">true</span> entonces las dos instancias pueden interactuar y colisionar entre sí pero <i>sólo</i> si tienen eventos de colisión, sin embargo si se establece en <span class="inline">false</span>, no colisionarán pase lo que pase.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">physics_joint_distance_create(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_distance_create</span>(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, col)</p>
   <table>
     <tbody>
       <tr>

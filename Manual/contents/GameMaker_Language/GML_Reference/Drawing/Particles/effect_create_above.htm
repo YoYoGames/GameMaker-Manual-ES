@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>effect_create_above</h1>
+  <h1><span data-field="title" data-format="default">effect_create_above</span> <span data-conref="..\..\..\..\assets\snippets\Tag_deprecated.hts"> </span></h1>
   <p>Con esta función puedes crear un efecto simple sobre todas las instancias de tu <span class="notranslate">room</span> (en realidad se crea a una profundidad de -100000). Si el efecto es cualquier otra cosa que no sea <span class="inline">ef_rain</span> o <span class="inline">ef_snow</span> entonces puede definir una posición x/y para crear el efecto, y el tamaño puede ser un valor de 0, 1, o 2, donde 0 es pequeño, 1 es mediano y 2 es grande.</p>
   <p>Vale la pena señalar que estos efectos pueden activar y desactivar su dibujo, así como pausar su dibujo, utilizando las funciones <a href="Particle_Systems/part_system_automatic_draw.htm"><span class="inline">part_system_automatic_draw()</span></a> y <a href="Particle_Systems/part_system_automatic_update.htm"><span class="inline">part_system_automatic_update()</span></a> con el valor apropiado para el índice del sistema de partículas (donde 0 es para los efectos de abajo y 1 para los de arriba).</p>
   <p>Las constantes disponibles para los diferentes tipos de partículas son:</p>
@@ -97,7 +97,7 @@
   </table>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">effect_create_above(kind, x, y, size, colour);</p>
+  <p class="code"><span data-field="title" data-format="default">effect_create_above</span>(kind, x, y, size, colour);</p>
   <table>
     <tbody>
       <tr>

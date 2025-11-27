@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>aplicación_de_cámara</title>
+  <title>camera_apply</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>aplicación_de_cámara</h1>
+  <h1><span data-field="title" data-format="default">camera_apply</span></h1>
   <p>Esta función aplicará los ajustes de cámara dados a la vista de cámara actual que se está renderizando inmediatamente. Mientras que puedes establecer cualquier vista de cámara usando las funciones específicas de <span class="inline">camera_set_*</span>, los nuevos ajustes no serán usados para el renderizado hasta el <i>siguiente</i> frame del juego, pero con esta función puedes hacer esos cambios inmediatamente. Si estás usando múltiples vistas, entonces la función debe ser usada en el <b>Evento de Dibujo</b> y puedes usar la variable <a href="view_current.htm"><span class="inline">view_current</span></a> para aplicar selectivamente la cámara dada sólo a la vista de cámara que se está renderizando actualmente. Tenga en cuenta que esto NO cambia el valor del ID de la cámara, sólo la configuración de esa cámara, y que si se utiliza esta función en la cámara por defecto (es decir, la cámara interna <span data-keyref="GameMaker Name">GameMaker</span> utiliza cuando no hay cámaras de vista están activos) los cambios se sobrescribirán el próximo marco de juego por la configuración interna para el dibujo de la <span class="notranslate">room</span>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">camera_apply(camera_id)</p>
+  <p class="code"><span data-field="title" data-format="default">camera_apply</span>(camera_id)</p>
   <table>
     <tbody>
       <tr>

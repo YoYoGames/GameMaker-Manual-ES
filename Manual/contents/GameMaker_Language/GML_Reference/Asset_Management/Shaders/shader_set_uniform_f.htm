@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>shader_set_uniform_f</h1>
+  <h1><span data-field="title" data-format="default">shader_set_uniform_f</span></h1>
   <p>Con esta función puede establecer el valor (o los valores) de una constante de <span class="notranslate">shader</span>. Para ello debe haber obtenido previamente el &quot;handle&quot; de la constante mediante la función <a href="shader_get_uniform.htm"><span class="inline">shader_get_uniform()</span></a>y tendrás que saber qué tipo de constante es para pasarle el número correcto de valores en coma flotante, es decir, si tienes una <span class="inline">vec2</span> tendrás que pasar dos valores a la función.</p>
   <p>Una excepción a la regla anterior es cuando se trata de valores de color de 32 bits. Puede introducir en <span class="notranslate">shader</span> hasta ocho valores de color de 32 bits y se convertirán automáticamente en valores vec4 de 0 - 1. Sin embargo, para ello <i>debe</i> utilizar el nombre de la constante <span class="notranslate">shader</span> <span class="inline">in_Colour</span> , para un solo color, o <span class="inline">in_Colour0</span>, <span class="inline">in_Colour1</span>, etc... hasta <span class="inline">in_Colour7</span> para múltiples valores de entrada. Los siguientes ejemplos muestran cómo se vería esto en el propio <span class="notranslate">shader</span>:</p>
   <p class="code">    //Single colour<br />
@@ -32,7 +32,7 @@
   <p class="note"><b></b><b>NOTA</b>: Todos los uniformes deben establecerse <b>después de</b> llamar a la función <span style="font-size:1px;"><a href="shader_set.htm"><span class="inline">shader_set()</span></a></span>y antes de llamar a la función <span style="font-size:1px;"><a href="shader_reset.htm"><span class="inline">shader_reset()</span></a></span>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">shader_set_uniform_f(handle, value1 [, value2, value3, value4]);</p>
+  <p class="code"><span data-field="title" data-format="default">shader_set_uniform_f</span>(handle, value1 [, value2, value3, value4]);</p>
   <table>
     <tbody>
       <tr>

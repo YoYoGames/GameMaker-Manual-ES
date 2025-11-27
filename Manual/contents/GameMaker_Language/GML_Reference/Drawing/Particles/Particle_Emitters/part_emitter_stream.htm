@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>part_emitter_stream</h1>
+  <h1><span data-field="title" data-format="default">part_emitter_stream</span></h1>
   <p>Esta función permite configurar un emisor para que emita un tipo específico de partículas y se utiliza normalmente el evento create, ya que es un código único que configura el emisor para generar el número de partículas especificado en cada paso del juego a partir de entonces. Las partículas se emiten siguiendo la distribución, la forma y la posición establecidas por la función <a href="part_emitter_region.htm"><span class="inline">part_emitter_region()</span></a>. Puedes establecer el número de partículas que se emiten a cero y llamar a esta función de nuevo para &quot;apagar&quot; el flujo de partículas, y la función también aceptará números negativos para la cantidad, en cuyo caso el emisor producirá partículas basadas en el azar. Por ejemplo, si tienes el número de partículas establecido en -5, hay una probabilidad de 1:5 de que se produzca una partícula en cada paso. Si necesitas que las partículas aparezcan todas a la vez en lugar de cada paso, deberás utilizar la función <a href="part_emitter_burst.htm"><span class="inline">part_emitter_burst()</span></a>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">part_emitter_stream(ps, ind, parttype, number);</p>
+  <p class="code"><span data-field="title" data-format="default">part_emitter_stream</span>(ps, ind, parttype, number);</p>
   <table>
     <tbody>
       <tr>

@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_play_in_sync_group</h1>
+  <h1><span data-field="title" data-format="default">audio_play_in_sync_group</span></h1>
   <p>Con esta función puede asignar un sonido a un grupo de sincronización creado previamente. El índice del grupo es el valor devuelto al crear el grupo mediante la función <a href="audio_create_sync_group.htm"><span class="inline">audio_create_sync_group()</span></a>y el índice del sonido es el índice de cualquier sonido <i>comprimido</i> (<span class="inline">*.ogg</span> o <span class="inline">*.mp3</span>) del navegador <span class="notranslate">Asset</span>. Esta función sólo añade el sonido al grupo, pero no reproduce el sonido. El valor de retorno será <span class="inline2">&gt;= 0</span> si tiene éxito y <span class="inline2">-1</span> si falla, donde un valor exitoso indica el orden del sonido en el grupo de sincronización (así que 0 sería el primer sonido añadido, 1 sería el segundo, etc...).</p>
   <p class="note"><b>NOTA</b>: Esta funcionalidad no está disponible para la plataforma de destino HTML5.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">audio_play_in_sync_group(group_index, sound_index);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_play_in_sync_group</span>(group_index, sound_index);</p>
   <table>
     <tbody>
       <tr>

@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mp_grid_add_instances</h1>
+  <h1><span data-field="title" data-format="default">mp_grid_add_instances</span></h1>
   <p>Esta función utiliza la máscara de colisión de la instancia (decidida por las propiedades de <span class="notranslate">sprite</span> o el índice de la máscara de la instancia que llama) para marcar las celdas como prohibidas o no en una cuadrícula de MP, donde las celdas prohibidas no pueden ser cruzadas por ninguna de las funciones de búsqueda de caminos. Se puede especificar en la función si se consideran las colisiones precisas o no y las celdas prohibidas marcadas cambiarán dependiendo de esta configuración. Esta imagen ilustra este comportamiento:</p>
   <p><img>Las dos instancias de arriba han sido añadidas a la cuadrícula de MP usando la función <span class="inline">mp_grid_add_instances()</span> con la precisión establecida como verdadera. Como puede ver, la instancia verde sólo ha marcado las casillas de la cuadrícula que &quot;toca&quot; como prohibidas, debido a que su máscara <span class="notranslate">sprite</span> también está configurada como precisa. Sin embargo, la segunda instancia ha marcado también otras casillas que no <i>parecen</i> estar tocando. Esto se debe a que la máscara de <span class="notranslate">sprite</span> <b>no</b> está configurada como precisa, lo que significa que, aunque se utilice la configuración precisa en la función, sólo se tendrá en cuenta el cuadro delimitador de <span class="notranslate">sprite</span>. Esto es también lo que ocurriría si se establece el argumento preciso de la función en falso - incluso las instancias con una máscara precisa de <span class="notranslate">sprite</span> se añadirán a la cuadrícula basándose en sus cuadros delimitadores.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">mp_grid_add_instances(id, obj, prec);</p>
+  <p class="code"><span data-field="title" data-format="default">mp_grid_add_instances</span>(id, obj, prec);</p>
   <table>
     <tbody>
       <tr>

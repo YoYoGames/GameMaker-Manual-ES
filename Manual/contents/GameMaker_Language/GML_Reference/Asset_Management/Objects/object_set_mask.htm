@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>object_set_mask</h1>
+  <h1><span data-field="title" data-format="default">object_set_mask</span></h1>
   <p>Con esta función se puede establecer el índice_de_máscara de un <span class="notranslate">object</span> específico (para más información sobre máscaras, véase <a href="../../../../The_Asset_Editors/Objects.htm">El editor de <span class="notranslate">Object</span> </a>). Esto significa que todas las instancias de este <span class="notranslate">object</span> que se creen <i>después de haber cambiado la más</i> cara se crearán con esta nueva máscara, mientras que las instancias que ya están en el <span class="notranslate">room</span> no se verán afectadas. Se puede establecer este valor a -1 para eliminar una máscara <span class="notranslate">sprite</span> y así volver a la máscara definida para el <span class="notranslate">sprite</span> del <span class="notranslate">object</span> (o ninguna máscara si no se ha elegido un <span class="notranslate">sprite</span> ).</p>
   <p>Tenga en cuenta que ésta no es una función de instancia. Puede establecer el índice de máscara de las instancias individuales utilizando la variable <a href="../Sprites/Sprite_Instance_Variables/mask_index.htm"><span class="inline">mask_index</span></a> y así tener diez instancias con una máscara diferente a la de <span class="notranslate">object</span> desde la que se crean, e incluso si cambia el índice de máscara de <span class="notranslate">object</span> usando esta función, todas las instancias que están actualmente en <span class="notranslate">room</span> permanecerán como estaban, y sólo las instancias creadas después de llamar a la función comenzarán con la nueva máscara.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">object_set_mask(index, spr);</p>
+  <p class="code"><span data-field="title" data-format="default">object_set_mask</span>(index, spr);</p>
   <table>
     <tbody>
       <tr>

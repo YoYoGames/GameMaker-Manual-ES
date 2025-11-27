@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>part_system_automatic_update</h1>
+  <h1><span data-field="title" data-format="default">part_system_automatic_update</span></h1>
   <p>Esta función controla si <span data-keyref="GameMaker Name">GameMaker</span> debe actualizar el sistema de partículas automáticamente o no, y normalmente usted no necesitaría usar esta función ya que el valor por defecto de <span class="inline">true</span> (la actualización automática está activada) es lo que usted desea que suceda. Sin embargo, para efectos especiales o para pausar el juego, puede establecer esto en <span class="inline">false</span> y evitará que se realice cualquier actualización en el sistema de partículas dado a menos que se ordene <i>explícitamente</i> mediante el uso de la función <a href="part_system_update.htm"><span class="inline">part_system_update()</span></a> o que utilices esta función de nuevo para activar las actualizaciones automáticas. No actualizar significa que las partículas creadas en este sistema ya no cambiarán de posición, color o cualquier otro parámetro y que los emisores dejarán de funcionar también, &quot;congelando&quot; el sistema en el punto exacto en el que se estableció la actualización automática en <span class="inline">false</span>.</p>
   <p>Hay que tener en cuenta que si se utilizan los efectos simples creados por las funciones <a href="../effect_create_above.htm"><span class="inline">effect_create_above()</span></a> o <a href="../effect_create_below.htm"><span class="inline">effect_create_below()</span></a> puedes utilizar los valores 0 (para los efectos inferiores) o 1 (para los efectos superiores) como índice del sistema de partículas y así activar la actualización automática para estos también (esto también funcionará para activar la actualización de los efectos de partículas de <span class="notranslate">GML</span> Visual).</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">part_system_automatic_update(ind, automatic);</p>
+  <p class="code"><span data-field="title" data-format="default">part_system_automatic_update</span>(ind, automatic);</p>
   <table>
     <tbody>
       <tr>

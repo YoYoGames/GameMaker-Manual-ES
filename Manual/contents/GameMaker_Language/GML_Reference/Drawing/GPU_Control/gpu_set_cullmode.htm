@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_cullmode</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_cullmode</span></h1>
   <p>Esta función se puede utilizar para establecer el modo de eliminación de la cara posterior. Un polígono (primitivo) tiene una cara <i>frontal</i> y otra <i>trasera</i>. Se dice que el lado frontal es el lado donde los vértices están definidos en orden <b>contrario a las agujas del reloj</b>. Normalmente se dibujan ambos lados, pero si haces una forma cerrada (como una pirámide) entonces esto es un desperdicio de poder de procesamiento porque el lado posterior del triángulo nunca puede ser visto. Es en estos casos en los que puedes <span class="notranslate">switch</span> en la selección de la cara posterior, ya que esto ahorra aproximadamente la mitad del tiempo de dibujo, aunque significa que tienes la tarea de definir tus polígonos de la manera correcta para evitar problemas.</p>
   <p>El valor del modo de sacrificio utilizado debe ser una de las siguientes constantes (el valor por defecto es <span class="inline">cull_noculling</span>):</p>
   <table>
@@ -39,7 +39,7 @@
   </table>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">gpu_set_cullmode(cullmode);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_set_cullmode</span>(cullmode);</p>
   <table>
     <tbody>
       <tr>

@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>get_string_async</h1>
+  <h1><span data-field="title" data-format="default">get_string_async</span></h1>
   <p>Esta función abre una ventana y muestra un mensaje, así como un espacio para que el usuario introduzca un <span class="notranslate">string</span> (que contendrá el <span class="notranslate">string</span> suministrado por defecto para empezar). Esta es una función asíncrona, y como tal <span data-keyref="GameMaker Name">GameMaker</span> <i>no</i> bloquea el dispositivo en el que se está ejecutando mientras espera una respuesta, sino que sigue ejecutando los eventos de forma normal. Una vez que el usuario ha escrito su <span class="notranslate">string</span> y ha pulsado el botón &quot;Okay&quot;, se dispara un evento <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Dialog.htm">asíncrono de Diálogo </a>que, <i>sólo</i> durante la duración de ese evento, tendrá un mapa DS almacenado en la variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>.</p>
   <p>Este mapa contendrá las tres claves, &quot;<strong>id</strong>&quot;, &quot;<strong>status&quot;</strong> y &quot;<strong>result</strong>&quot;. &quot;id&quot; es el valor que devolvió la función cuando fue llamada, el &quot;status&quot; será <span class="inline">true</span> para el botón &quot;Okay&quot; que fue presionado, o <span class="inline">false</span> si el mensaje fue cancelado (cuando sea aplicable ya que no todas las plataformas de destino permiten cancelar el mensaje). Por último, &quot;resultado&quot; devolverá el <span class="notranslate">string</span> que el usuario introdujo (o un <span class="notranslate">string</span> &quot;&quot; vacío si no se suministró ninguno).</p>
   <p class="note"><strong><em><span class="note">NOTA</span></em></strong><em> Esta función es <span data-keyref="Dialog for debug only"> <strong>sólo</strong> para <strong>uso de depuración y pruebas</strong></span>y no debe ser utilizada en juegos lanzados. Para ello, debe crear una interfaz de usuario personalizada para recibir las entradas de los jugadores, de modo que tenga un control completo sobre el aspecto y el comportamiento de los diálogos.</em></p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">get_string_async(string, default);</p>
+  <p class="code"><span data-field="title" data-format="default">get_string_async</span>(string, default);</p>
   <table>
     <tbody>
       <tr>

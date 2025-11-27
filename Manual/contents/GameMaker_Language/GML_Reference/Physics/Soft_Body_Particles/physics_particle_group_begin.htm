@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_particle_group_begin</h1>
+  <h1><span data-field="title" data-format="default">physics_particle_group_begin</span></h1>
   <p>Con esta función puede crear un grupo de partículas en un <span class="notranslate">room</span>. Un grupo de partículas es aquel en el que las partículas necesarias para crear una forma específica se crean todas a la vez como un grupo, lo que le permite crear cuerpos blandos simulados con varias propiedades establecidas por el <span class="notranslate">flags</span> utilizado. Las &quot;banderas&quot; son el valor de retorno de una combinación de las <b>constantes de</b> las partículas (véase la función <a href="physics_particle_create.htm"><span class="inline">physics_particle_create()</span></a> para más detalles), mientras que los &quot;groupFlags&quot; son una combinación de las siguientes constantes de <b>grupo</b> (o 0 para no <span class="notranslate">flags</span>):</p>
   <table>
     <colgroup>
@@ -48,7 +48,7 @@
   <p class="note"><b>NOTA</b>: El tipo de partícula <span class="notranslate">flags</span> que establezcas también influirá en la cohesión del grupo de partículas, de tal manera que si <span class="notranslate">flag</span> las partículas son de tipo agua (por ejemplo), cuando el grupo colisione con otro accesorio se romperá, mientras que si <span class="notranslate">flag</span> la partícula es de tipo resorte, entonces mantendrá su cohesión en la colisión.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">physics_particle_group_begin(flags, groupflags, x, y, ang, xv, yv, ang_velocity, col, alpha, strength, category)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_particle_group_begin</span>(flags, groupflags, x, y, ang, xv, yv, ang_velocity, col, alpha, strength, category)</p>
   <table>
     <tbody>
       <tr>

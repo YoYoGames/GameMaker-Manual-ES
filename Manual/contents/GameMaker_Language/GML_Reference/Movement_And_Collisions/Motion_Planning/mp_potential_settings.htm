@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mp_potential_settings</h1>
+  <h1><span data-field="title" data-format="default">mp_potential_settings</span></h1>
   <p>Las funciones de <span class="inline">mp_potential_</span> hacen su trabajo usando un número de parámetros que pueden ser cambiados usando esta función. Globalmente, el método funciona de la siguiente manera: primero intenta moverse en línea recta hacia la meta, mirando un número de pasos por delante que se puede establecer con el parámetro &quot;ahead&quot; (el valor por defecto es 3). Reducir este valor significa que la instancia empezará a cambiar de dirección más tarde, ya que no &quot;ve&quot; tan lejos, y aumentarlo significa que empezará a cambiar de dirección antes. Si esta comprobación conduce a una colisión, entonces empieza a mirar las direcciones más a la izquierda y a la derecha de la dirección ideal, en línea recta. Lo hace en pasos de tamaño &quot;rotstep&quot; (el valor por defecto es 10), y reducirlo da a la instancia más posibilidades de movimiento, pero será más lento ya que necesita más potencia de procesamiento.</p>
   <p>El parámetro &quot;maxrot&quot; es un poco más difícil de explicar. La instancia tiene una dirección de movimiento actual, y maxrot (el valor por defecto es 30) indica cuánto se le permite variar su dirección a cualquier lado de esa dirección actual en un paso. Así que incluso si puede moverse, por ejemplo, directamente a la meta, sólo lo hará si no viola este cambio máximo de dirección. Si haces que el valor de maxrot sea grande, entonces la instancia puede cambiar mucho de dirección en cada paso, y esto hará más fácil encontrar un corto <span class="notranslate">path</span> pero el <span class="notranslate">path</span> será más feo y menos natural. Si haces el valor más pequeño entonces el <span class="notranslate">path</span> será más suave pero podría tomar desvíos más largos (y a veces incluso fallar en encontrar la meta). Por último, cuando no se puede hacer ningún paso el comportamiento depende del valor del parámetro &quot;onspot&quot;. Si onspot es verdadero (el valor por defecto), entonces la instancia rotará sobre su punto en la cantidad indicada con &quot;maxrot&quot; y si es falso no se moverá en absoluto. Ponerlo en falso es útil para, por ejemplo, los coches, pero reduce la posibilidad de que la instancia encuentre un <span class="notranslate">path</span>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">mp_potential_settings(maxrot, rotstep, ahead, onspot)</p>
+  <p class="code"><span data-field="title" data-format="default">mp_potential_settings</span>(maxrot, rotstep, ahead, onspot)</p>
   <table>
     <tbody>
       <tr>

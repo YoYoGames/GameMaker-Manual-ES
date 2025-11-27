@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_priority_destroy</h1>
+  <h1><span data-field="title" data-format="default">ds_priority_destroy</span></h1>
   <p>Esta función eliminará de la memoria la estructura de datos de prioridad <span class="notranslate">queue</span> dada, liberando los recursos que estaba utilizando y eliminando todos los valores que contenía. Esta función debe usarse siempre cuando hayas terminado de usar la prioridad de DS <span class="notranslate">queue</span> para evitar fugas de memoria que pueden ralentizar y bloquear tu juego.</p>
   <p class="note"><b>¡IMPORTANTE!</b> Cuando se crea una estructura de datos, el valor del índice para identificarla es un valor entero que comienza en 0. Esto significa que <span class="notranslate">data structures</span> de diferentes tipos puede tener el <b>mismo</b> valor de índice, por lo que en caso de duda se debe utilizar la función <a href="../ds_exists.htm"><span class="inline"><span style="font-size:14px;">ds_exists()</span></a> antes de acceder a ellos. También hay que tener en cuenta que los índices se reutilizan, por lo que el valor del índice de una estructura de datos destruida puede ser utilizado por otra recién creada posteriormente, por lo que se recomienda establecer siempre la variable que contenía el índice DS a -1 después de destruirla.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">ds_priority_destroy(id);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_priority_destroy</span>(id);</p>
   <table>
     <tbody>
       <tr>

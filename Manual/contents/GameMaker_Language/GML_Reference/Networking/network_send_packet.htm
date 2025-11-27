@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>network_send_packet</h1>
+  <h1><span data-field="title" data-format="default">network_send_packet</span></h1>
   <p>Con esta función puedes enviar un &quot;paquete&quot; de datos a través de la red. La función toma el <i>id del socket</i> para conectarse y luego debe suministrar el <i>id del buffer</i> que contiene los datos a ser enviados (para más información sobre <span class="notranslate">buffers</span> ver <a href="../Buffers/Buffers.htm">Referencia - Buffers</a>) y finalmente el tamaño (en bytes) del paquete de datos. Los paquetes enviados con esta función están formateados de tal manera que el juego <span data-keyref="GameMaker Name">GameMaker</span> que recibe los datos puede &quot;dividir&quot; los paquetes correctamente, y la función devolverá el número de bytes de datos enviados, o un número menor que 0 si el envío ha fallado. Cabe destacar que el tamaño final de los datos enviados que devuelve esta función también incluirá la información de la cabecera <span class="notranslate">GameMaker</span>, que son 12 bytes adicionales.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">network_send_packet(socket, bufferid, size);</p>
+  <p class="code"><span data-field="title" data-format="default">network_send_packet</span>(socket, bufferid, size);</p>
   <table>
     <tbody>
       <tr>

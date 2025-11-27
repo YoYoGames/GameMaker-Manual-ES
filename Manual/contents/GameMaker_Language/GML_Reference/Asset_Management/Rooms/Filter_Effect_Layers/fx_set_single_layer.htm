@@ -15,7 +15,7 @@
   <meta name="is_pure" content="true" />
 </head>
 <body>
-  <h1>fx_set_single_layer</h1>
+  <h1><span data-field="title" data-format="default">fx_set_single_layer</span></h1>
   <p>Esta función se utiliza para activar o desactivar el modo &quot;Capa única&quot; para un filtro/efecto. Por defecto, un filtro/efecto se aplica a la capa <a href="layer_set_fx.htm">a la</a> que está <a href="layer_set_fx.htm">asignado</a> y a todas las capas por debajo de esa capa, sin embargo, puede activar el modo de capa única en un FX <span class="notranslate">struct</span> para asegurarse de que sólo se aplica a la capa a la que está asignado.</p>
   <p>Se especifica un FX <span class="notranslate">struct</span> (como el devuelto por <span class="inline"><a href="fx_create.htm">fx_create()</a></span> o <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span>) y un valor <a class="glossterm" data-glossterm="booleano" href="#">booleano</a> para activar (<span class="inline">true</span>) o desactivar (<span class="inline">false</span>) el modo de capa única.</p>
   <p>La siguiente imagen muestra un filtro utilizado con el modo de capa única desactivado (que es el comportamiento por defecto para todas las capas FX) y el mismo filtro con el modo de capa única activado:</p>
@@ -30,7 +30,7 @@
   <p class="note"><span class="note">NOTA</span> Cuando habilite el modo de capa única para un FX, asegúrese de aplicarlo a una capa que no sea una <a href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">capa FX</a>, porque una capa FX por sí misma no contiene nada y por tanto ningún filtro/efecto será visible.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">fx_set_single_layer(filter_or_effect, enable);</p>
+  <p class="code"><span data-field="title" data-format="default">fx_set_single_layer</span>(filter_or_effect, enable);</p>
   <table>
     <tbody>
       <tr>

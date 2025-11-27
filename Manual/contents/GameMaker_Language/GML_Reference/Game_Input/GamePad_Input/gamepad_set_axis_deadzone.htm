@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gamepad_set_axis_deadzone</h1>
+  <h1><span data-field="title" data-format="default">gamepad_set_axis_deadzone</span></h1>
   <p>Esta función puede utilizarse para establecer la &quot;zona muerta&quot; del eje del joystick. Se especifica la ranura del dispositivo a ajustar, y luego se establece un valor de 0 a 1 y si la cantidad de entrada es menor que el valor dado, se considera que el eje del joystick está en 0.
     Tenga en cuenta que este es un ajuste global que afectará a <i>todos los</i> ejes de todos los joysticks conectados a la ranura del dispositivo especificado. </p>
   <p>El uso de esta función no significa que el valor del eje parta del valor de la zona muerta, ya que la función <a href="gamepad_axis_value.htm"><span class="inline">gamepad_axis_value()</span></a> <em>siempre</em> devolverá un valor normalizado entre -1
@@ -22,7 +22,7 @@
     cuando el valor bruto esté en 0,5, el valor de retorno será 0,375, o si el valor bruto es 0,9, entonces el valor de retorno sería 0,875.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">gamepad_set_axis_deadzone(device, deadzone);</p>
+  <p class="code"><span data-field="title" data-format="default">gamepad_set_axis_deadzone</span>(device, deadzone);</p>
   <table>
     <tbody>
       <tr>

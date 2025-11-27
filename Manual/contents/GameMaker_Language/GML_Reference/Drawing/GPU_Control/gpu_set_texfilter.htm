@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_texfilter</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_texfilter</span></h1>
   <p>Esta función se puede utilizar para establecer el filtrado de la textura (interpolación lineal) de todas las imágenes dibujadas en la pantalla del juego. Cuando se activa (<span class="inline">true</span>) todas las texturas se suavizan cuando se dibujan (esto incluye <span class="notranslate">sprites</span> ya que también se consideran texturas), lo que significa que cuando se escalan o se mueven si no hay una relación de píxeles de 1:1 entonces habrá una &quot;mancha&quot; a través de varios píxeles que puede hacer que las imágenes aparezcan borrosas dependiendo del estilo de arte utilizado. Si esta opción está desactivada (<span class="inline">false</span>), las imágenes se dibujarán basándose en el píxel más cercano cuando se escalen o muevan, lo que puede dar lugar a imágenes &quot;en bloque&quot;. El valor por defecto es <span class="inline">false</span>, y esto también se puede cambiar en las <b>Opciones Globales del Juego</b> para las plataformas individuales de destino.</p>
   <p class="note"><b>NOTA</b>: Este ajuste anulará cualquier interpolación de etapa de textura establecida para <span class="notranslate">shaders</span> utilizando la función <a href="gpu_set_texfilter_ext.htm"><span class="inline">gpu_set_texfilter_ext()</span></a>.</p>
   <p class="note"><b>NOTA</b>: En el objetivo HTML5, esta función sólo funcionará con WebGL activado.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">gpu_set_texfilter(enable);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_set_texfilter</span>(enable);</p>
   <table>
     <tbody>
       <tr>

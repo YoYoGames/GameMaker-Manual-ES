@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>os_is_paused</h1>
+  <h1><span data-field="title" data-format="default">os_is_paused</span></h1>
   <p>Cuando se desarrolla para dispositivos móviles, es necesario tener una forma de comprobar que el dispositivo está todavía centrado en su juego o no, sobre todo porque si su juego está en un dispositivo <span class="notranslate">iOS</span>, <span class="notranslate">Android</span> o <span class="notranslate">Windows Phone</span> entonces puede ser interrumpido por las llamadas telefónicas y otras aplicaciones. Puedes utilizar esta función para comprobar si el dispositivo está en pausa o no.</p>
   <p>Vale la pena señalar que esta función se ejecutará cualquier código que está contenida en el bloque de código en los dispositivos, pero entonces <span data-keyref="GameMaker Name">GameMaker</span> se pausará inmediatamente después como el dispositivo <span class="notranslate">caches</span> el juego como un proceso de fondo. Así que si usted tiene algo como el código de ejemplo proporcionado a continuación, la instancia que se creará en realidad no aparecerá o ejecutar cualquiera de sus eventos <i>hasta después de que el juego se ha reiniciado desde el estado de caché</i>. Esto significa que puedes preferir que la función <span class="inline">os_is_paused</span> llame a una alarma y luego en el evento de la alarma (que se activará cuando el dispositivo esté en pausa pero no se ejecutará hasta que se desactive) crear un menú de pausa, reiniciar la música, etc.</p>
   <p>Si está utilizando esta función en <span class="notranslate">Windows</span>, <span class="notranslate">Ubuntu</span> (<span class="notranslate">Linux</span>), MacOS o plataformas HTML5, entonces la función sólo se cambia por <b>un paso</b> a <span class="inline">true</span> cuando el juego pierde el foco, y luego volverá <span class="inline">false</span> de nuevo hasta que el juego vuelva a estar enfocado (y lo pierda de nuevo). Esto se debe a que estas plataformas no <span class="notranslate">cache</span> aplicaciones y juegos, por lo que estos seguirán ejecutándose en segundo plano.</p>
   <p class="note"><b>NOTA</b>: En los dispositivos móviles, los sonidos y la música se detendrán cuando el sistema operativo esté en pausa. <b>No</b> se reiniciarán de nuevo a menos que los inicies específicamente con la función correspondiente.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">os_is_paused()</p>
+  <p class="code"><span data-field="title" data-format="default">os_is_paused</span>()</p>
   <p> </p>
   <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>

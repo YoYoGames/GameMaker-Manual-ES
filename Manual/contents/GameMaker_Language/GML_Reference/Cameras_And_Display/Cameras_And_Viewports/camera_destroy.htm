@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>cámara_destrucción</title>
+  <title>camera_destroy</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>cámara_destrucción</h1>
+  <h1><span data-field="title" data-format="default">camera_destroy</span></h1>
   <p>Con esta función puedes destruir cualquier cámara. Cuando se llama a la función se suministra el valor único del ID de la cámara, que se obtiene de las funciones de <span class="inline">camera_create_*</span> o del <a href="view_camera.htm"><span class="inline">view_camera</span></a> si se utiliza el Editor <span class="notranslate">Room</span> para configurar el puerto de vista y la vista. <i>Nunca</i> debes destruir una cámara que esté actualmente asignada a una vista visible, a menos que estés asignando una nueva cámara a esa vista en el mismo paso, y <i>siempre</i> debes destruir cualquier cámara que hayas creado a través de código cuando ya no sea necesaria para tu juego para evitar fugas de memoria, y también puedes destruir las cámaras por defecto si tienes alguna asignada en el Editor de <span class="notranslate">Room</span>, pero debes asignar una nueva cámara al puerto de vista (o desactivarla) de lo contrario obtendrás resultados extraños.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">camera_destroy(camera_id)</p>
+  <p class="code"><span data-field="title" data-format="default">camera_destroy</span>(camera_id)</p>
   <table>
     <tbody>
       <tr>

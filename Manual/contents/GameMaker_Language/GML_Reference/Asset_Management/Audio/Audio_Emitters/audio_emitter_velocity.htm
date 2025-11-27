@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>velocidad del emisor de audio</title>
+  <title>audio_emitter_velocity</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>velocidad del emisor de audio</h1>
+  <h1><span data-field="title" data-format="default">audio_emitter_velocity</span></h1>
   <p>Esta función se puede utilizar para dar a un emisor efectos <em>Doppler </em>y simular el movimiento del audio basado en el vector que se resuelve desde las posiciones relativas x, y y z dadas. Si el emisor en sí no se va a mover nunca, normalmente no necesitarás establecer estos valores, pero, por ejemplo, si estás haciendo un juego de disparos con desplazamiento en el que los enemigos vienen de la derecha y se desplazan hacia la izquierda, deberías establecer esto para tener una velocidad de (hspeed, 0, 0) en el evento de creación de los enemigos (y actualizar el emisor de cada instancia en el evento de paso usando <a href="audio_emitter_position.htm"><span class="inline">audio_emitter_position()</span></a>) para dar a cualquier sonido emitido por las instancias enemigas el Doppler correcto al pasar por la instancia del jugador (que a su vez estaría usando la función <a href="../Audio_Listeners/audio_listener_position.htm"><span class="inline">audio_listener_position()</span></a> para poner el <i>oyente</i> en la posición correcta).</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">audio_emitter_velocity(emitter, vx, vy, vz);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_emitter_velocity</span>(emitter, vx, vy, vz);</p>
   <table>
     <tbody>
       <tr class="rh-cursor-column">

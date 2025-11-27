@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_joint_prismatic_create</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_prismatic_create</span></h1>
   <p>Al igual que una articulación revoluta, la articulación prismática sólo tiene un grado de libertad, pero con esta articulación es direccional con respecto a un eje en lugar de rotacional y, de hecho, impide cualquier forma de rotación. Aquí tienes una imagen que te ayudará a visualizar cómo funciona:</p>
   <p><img>Tenemos dos instancias unidas en el punto de anclaje, con un eje para el movimiento definido a partir del vector las dos coordenadas x/y del eje w relativas a las coordenadas (0,0) del mundo de la física (por lo que una componente x de 0 y una componente y de 1 (0,1) harían de la articulación una articulación prismática vertical). Esta articulación <i>sólo</i> puede moverse en relación a este eje, como un muelle o un pistón. Si estableces el límite trans inferior o superior, básicamente estás limitando la cantidad de movimiento a lo largo de este eje, donde la posición 0 es el punto exacto que definiste con w_anchor x/y, por lo que un valor negativo iría a la &quot;izquierda&quot; de ese punto a lo largo del eje y un valor positivo a la &quot;derecha&quot; como se muestra en el siguiente diagrama (¡date cuenta que &quot;izquierda&quot; y &quot;derecha&quot; son términos relativos!):</p>
   <p><img>También se puede definir que la articulación tenga o no motor. Esto significa que cuando no está influenciada por una colisión, la articulación se moverá en una dirección a lo largo del eje. Esta dirección está definida por la velocidad del motor, siendo un número positivo hacia las coordenadas del eje (&quot;derecha&quot;) y un número negativo hacia el punto de anclaje (&quot;izquierda&quot;). El argumento &quot;fuerza_motor_máxima&quot; sirve para limitar la velocidad del movimiento para no tener un motor en perpetua aceleración y para limitar la influencia que pueda tener una colisión en el movimiento. De este modo, puede utilizar un motor de articulación para simular la fricción de la articulación estableciendo la velocidad de la articulación a cero y la fuerza máxima a algún valor pequeño, pero significativo. El motor tratará de evitar que la articulación se mueva, pero cederá ante una carga significativa.</p>
   <p>Al igual que con todas las articulaciones, si se establece el valor &quot;col&quot; a <span class="inline">true</span> entonces las dos instancias pueden interactuar y colisionar entre sí, pero <i>sólo</i> si tienen eventos de colisión, sin embargo, si se establece a <span class="inline">false</span>, no van a colisionar no importa qué.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">physics_joint_prismatic_create(inst1, inst2, w_anchor_x, w_anchor_y, w_axis_x, w_axis_x, lower_trans_limit, upper_trans_limit, limit, max_motor_force, motor_speed, motor, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_prismatic_create</span>(inst1, inst2, w_anchor_x, w_anchor_y, w_axis_x, w_axis_x, lower_trans_limit, upper_trans_limit, limit, max_motor_force, motor_speed, motor, col)</p>
   <table>
     <tbody>
       <tr>

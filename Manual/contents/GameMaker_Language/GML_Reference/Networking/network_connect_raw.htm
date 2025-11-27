@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>network_connect_raw</h1>
+  <h1><span data-field="title" data-format="default">network_connect_raw</span></h1>
   <p>Con esta función se puede enviar una petición para conectarse a un <span class="notranslate">server</span>. La función toma el <i>id del socket</i> para conectarse (ver <a href="network_create_socket.htm"><span class="inline">network_create_socket()</span></a>) y requiere que le dé la dirección IP a la que conectarse (un <span class="notranslate">string</span>) así como el puerto a través del cual conectarse, y si la conexión falla se devolverá un valor inferior a 0. La diferencia entre esta función y <a href="network_connect.htm"><span class="inline">network_connect()</span></a> es que esta función puede conectarse a cualquier <span class="notranslate">server</span> y no hace nada con los datos en bruto, lo que significa que tienes que implementar los protocolos tú mismo en el extremo de <span class="notranslate">server</span>. Tenga en cuenta que por defecto la función es sincrónica, lo que significa que su juego puede parecer que se &quot;cuelga&quot; mientras se realiza la conexión. Puedes establecer un valor de tiempo de espera para la conexión, o alternativamente hacer la creación asíncrona, usando la función <a href="network_set_config.htm"><span class="inline">network_set_config()</span></a>o, alternativamente, utilizar la función <a href="network_connect_raw_async.htm"><span class="inline">network_connect_async_raw()</span></a> en su lugar.</p>
   <p class="note"><span class="note">NOTA</span> No se puede utilizar esta función en HTML5. Para WebSockets, utilice la <a href="network_connect_raw_async.htm">función Async</a>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">network_connect_raw(socket, url, port);</p>
+  <p class="code"><span data-field="title" data-format="default">network_connect_raw</span>(socket, url, port);</p>
   <table>
     <tbody>
       <tr>

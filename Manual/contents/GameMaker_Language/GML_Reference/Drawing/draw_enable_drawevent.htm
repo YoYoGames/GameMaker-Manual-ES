@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_enable_drawevent</h1>
+  <h1><span data-field="title" data-format="default">draw_enable_drawevent</span></h1>
   <p>Con esta función puedes elegir habilitar (<span class="inline">true</span>) o deshabilitar (<span class="inline">false</span>) el evento draw para <b>todas las</b> instancias del juego, dándote así el control sobre cómo y cuándo se dibujan las cosas, lo cual es útil si deseas implementar una técnica de &quot;salto de cuadros&quot;. Ten en cuenta que esto no sólo impide que las instancias dibujen en la pantalla, sino que suprime el evento de dibujo por completo, lo que significa que hay que tener cuidado, ya que cualquier lógica de juego que esté presente en ese evento tampoco se ejecutará.</p>
   <p>Una cosa importante que hay que entender sobre esta función es que si la llamas justo al comienzo del juego, antes de que se renderice el marco inicial (es decir: el evento Create del primer <span class="notranslate">object</span> en el primer <span class="notranslate">room</span> del juego), entonces la ventana del juego <b>no se render</b>izará. Esto podría ser útil para proyectos multijugador que requieran un <span class="notranslate">server</span> dedicado que no necesite renderizar nada, sin embargo tenga en cuenta que esto <strong>no</strong> lo hace headless ya que <span class="notranslate">GameMaker</span> no lo soporta -- por lo que no podrá ejecutarlo en un <span class="notranslate">server</span> que no tenga una interfaz gráfica.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">draw_enable_drawevent(enable);</p>
+  <p class="code"><span data-field="title" data-format="default">draw_enable_drawevent</span>(enable);</p>
   <table>
     <tbody>
       <tr>

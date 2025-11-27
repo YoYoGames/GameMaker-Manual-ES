@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>conexión_de_red</title>
+  <title>network_connect</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>conexión_de_red</h1>
+  <h1><span data-field="title" data-format="default">network_connect</span></h1>
   <p>Con esta función se puede enviar una petición para conectarse a un <span class="notranslate">server</span>. La función toma el <i>id del socket</i> para conectarse (ver <a href="network_create_socket.htm"><span class="inline">network_create_socket()</span></a>) y requiere que le des la dirección IP a la que conectarse (un <span class="notranslate">string</span>) así como el puerto a través del cual conectarse, y si la conexión falla se devolverá un valor inferior a 0. La conexión utiliza un protocolo especial que asegura que sólo los juegos de <span data-keyref="GameMaker Name">GameMaker</span> se conectan entre sí, sin embargo, si usted necesita conectarse a un <span class="notranslate">server</span> que no es un juego de <span data-keyref="GameMaker Name">GameMaker</span>, puede utilizar <a href="network_connect_raw.htm"><span class="inline">network_connect_raw()</span></a>. Tenga en cuenta que por defecto la función es sincrónica, lo que significa que su juego puede parecer que se &quot;cuelga&quot; mientras se realiza la conexión. Puede establecer un valor de tiempo de espera para la conexión, o alternativamente hacer la creación asíncrona, utilizando la función <span class="inline"><a href="network_set_config.htm">network_set_config()</a></span>, o alternativamente utilizar la función <span class="inline"><a href="network_connect_async.htm">network_connect_async()</a></span> en su lugar.</p>
   <p class="note"><span class="note">NOTA</span> No se puede utilizar esta función en HTML5. Para WebSockets, utilice la <a href="network_connect_async.htm">función Async</a>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">network_connect(socket, url, port);</p>
+  <p class="code"><span data-field="title" data-format="default">network_connect</span>(socket, url, port);</p>
   <table>
     <tbody>
       <tr>

@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_collision_mask</h1>
+  <h1><span data-field="title" data-format="default">sprite_collision_mask</span></h1>
   <p>Con esta función puede establecer las propiedades de la máscara de colisión que debe tener un <span class="notranslate">sprite</span>. Si selecciona como modo de cuadro delimitador el automático (0) o el de imagen completa (1), los valores individuales del cuadro delimitador pueden establecerse en 0. Sin embargo, para una máscara definida por el usuario (2) tendrá que establecer estos valores. Los diferentes valores de los cuadros delimitadores son siempre relativos a la esquina superior izquierda de <span class="notranslate">sprite</span> (independientemente del origen x e y), que se considera la posición (0, 0).</p>
   <p>La configuración del tipo de máscara establece la forma general de la propia máscara, pero tenga en cuenta que cualquier cosa que no sea una máscara rectangular requerirá más potencia de procesamiento a la hora de resolver las colisiones, con la consiguiente disminución del rendimiento. En general, sólo deberías utilizar tipos de máscara distintos a la rectangular cuando sea absolutamente necesario.</p>
   <p class="note"><b>NOTA</b>: Esta función no permite el tipo de máscara de colisión de <b>rectángulo girado</b>.</p>
@@ -60,7 +60,7 @@
   <p class="note"><b>NOTA</b>: Esta función sólo funcionará en los recursos añadidos <span class="notranslate">sprites</span> o duplicados <span class="notranslate">sprites</span> y <b>no</b> directamente en los recursos prefabricados. Puede duplicar <span class="notranslate">sprites</span> utilizando la función <span style="font-size:1px;"><a href="sprite_duplicate.htm"><span class="inline">sprite_duplicate()</span></a></span>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">sprite_collision_mask(ind, sepmasks, bboxmode, bbleft, bbtop, bbright, bbbottom, kind, tolerance);</p>
+  <p class="code"><span data-field="title" data-format="default">sprite_collision_mask</span>(ind, sepmasks, bboxmode, bbleft, bbtop, bbright, bbbottom, kind, tolerance);</p>
   <table>
     <tbody>
       <tr>

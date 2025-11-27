@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>game_save_buffer</h1>
+  <h1><span data-field="title" data-format="default">game_save_buffer</span></h1>
   <p>Se trata de una variante de la función <span class="inline"><a href="game_save.htm">game_save()</a></span>, por lo que le recomendamos que lea primero <a href="game_save.htm">su página</a>, ya que contiene información importante relacionada con su uso y con el de esta función.</p>
   <p>Con esta función puedes guardar el estado actual del juego en un &quot;crecimiento&quot; previamente creado <span class="notranslate">buffer</span> (ver <a href="../Buffers/Buffers.htm">Bufferes</a>) que luego puede ser cargado de nuevo en cualquier momento usando <a href="game_load_buffer.htm"><span class="inline">game_load_buffer()</span></a> función. Esta función está diseñada para su uso en un solo <span class="notranslate">room</span> a la vez (es decir, no se aconseja hacer un <span class="notranslate">buffer</span> guardar en un <span class="notranslate">room</span>, a continuación, tratar de cargar el <span class="notranslate">buffer</span> de otro) y debe ser utilizado idealmente sólo para los puntos de control o reinicios de nivel.</p>
   <p class="note"><b>NOTA</b>: Esta función es <i>muy</i> limitada y está diseñada para que el principiante pueda poner en marcha un sistema de puntos de control rápidamente, pero los usuarios más avanzados pueden preferir codificar su propio sistema utilizando las funciones de <a href="../File_Handling/File_Handling.htm">Archivo</a>, debido a que el juego <i>no</i> guardará ninguno de los recursos dinámicos como <span class="notranslate">data structures</span>, superficies, añadidos <span class="notranslate">sprites</span> etc.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">game_save_buffer(buffer);</p>
+  <p class="code"><span data-field="title" data-format="default">game_save_buffer</span>(buffer);</p>
   <table>
     <tbody>
       <tr>

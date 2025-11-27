@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>display_set_gui_maximise</h1>
+  <h1><span data-field="title" data-format="default">display_set_gui_maximise</span></h1>
   <p>Esta función se puede utilizar para maximizar la capa de la interfaz gráfica de usuario y configurarla para que sea escalada y desplazada en relación con las dimensiones de la pantalla, en lugar de la posición y las dimensiones de la superficie de la aplicación por defecto. Por defecto, la capa GUI es 1:1 con la resolución de la superficie de la aplicación y se dibuja también en la posición (0,0) de la superficie. Sin embargo, esto no es siempre lo que quieres, por lo que puedes utilizar esta función para establecer que se dibuje en relación con la posición absoluta (0,0) de la pantalla o ventana del juego. Los argumentos que proporciones a esta función dependerán del efecto que desees que tenga en la capa de la GUI. Simplemente llamando a la función sin argumentos establecerá la capa GUI para ser dibujada en la posición (0,0) de la pantalla o ventana de juego, con la anchura y la altura siendo escaladas para ajustarse a toda el área:</p>
   <p class="code">display_set_gui_maximise();</p>
   <p>Sin embargo, puedes establecer el <i>factor de escala</i> para la capa de la GUI, y la anchura y la altura serán escaladas por esa cantidad. Recuerda que la capa de la GUI siempre se hace para ajustarse al tamaño de la pantalla o de la ventana del juego, o de la superficie de la aplicación, por lo que si estableces este valor a cualquier cosa que no sea 1, básicamente escalarás el número de píxeles a lo largo de la anchura y la altura. Si tu pantalla es de 1024x768 y estableces el factor de escala en 0.5, entonces tu capa GUI será la mitad del tamaño de la pantalla, duplicando efectivamente el tamaño de los píxeles:</p>
@@ -27,7 +27,7 @@
   <p class="code">display_set_gui_maximise(-1, -1);</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">display_set_gui_maximise(<i>xscale, yscale, xoffset, yoffset</i>);</p>
+  <p class="code"><span data-field="title" data-format="default">display_set_gui_maximise</span>(<i>xscale, yscale, xoffset, yoffset</i>);</p>
   <table>
     <tbody>
       <tr>

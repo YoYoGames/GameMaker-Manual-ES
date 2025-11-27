@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_list_create</h1>
+  <h1><span data-field="title" data-format="default">ds_list_create</span></h1>
   <p>Esta función creará una nueva estructura de datos de la lista y devolverá el valor del índice. Este valor debe almacenarse en una variable y utilizarse en todas las llamadas posteriores a la lista. Tenga en cuenta que si intenta acceder a un valor de la lista <i>antes de que</i> se haya rellenado, es decir, si la lista está &quot;vacía&quot;, el valor de retorno puede ser 0, ya que internamente las primeras entradas de la lista se establecen cuando se crean para minimizar los problemas de rendimiento al añadir inicialmente elementos a la lista (aunque la función <a href="ds_list_size.htm"><span class="inline">ds_list_size()</span></a> devolverá 0 en una lista recién creada). Si desea asegurarse de que la lista está &quot;realmente&quot; vacía al crearla, deberá llamar a <a href="ds_list_clear.htm"><span class="inline">ds_list_clear()</span></a> después de crear la lista, lo que significará que cualquier valor devuelto para las ranuras de la lista sin rellenar será <span class="inline">undefined</span>.</p>
   <p class="note"><b>¡IMPORTANTE!</b> Cuando se crea una estructura de datos, el valor del índice para identificarla es un valor entero que comienza en 0. Esto significa que <span class="notranslate">data structures</span> de diferentes tipos puede tener el <b>mismo</b> valor de índice, por lo que en caso de duda se debe utilizar la función <span style="font-size:1px;"><a href="../ds_exists.htm"><span class="inline">ds_exists()</span></a></span> antes de acceder a ellos. También hay que tener en cuenta que los índices se reutilizan, por lo que el valor del índice de una estructura de datos destruida puede ser utilizado por otra recién creada posteriormente.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">ds_list_create();</p>
+  <p class="code"><span data-field="title" data-format="default">ds_list_create</span>();</p>
   <p> </p>
   <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_ID_DS_List">DS List ID</span></p>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>crear_capa</title>
+  <title>layer_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>crear_capa</h1>
+  <h1><span data-field="title" data-format="default">layer_create</span></h1>
   <p>Esta función se utiliza para crear una nueva capa dentro de la actual <span class="notranslate">room</span>. Usted proporciona la profundidad que debe ocupar la nueva capa y la función devuelve el valor único del ID de la capa que puede utilizarse para acceder a la capa en otras funciones. También puede suministrar un argumento opcional &quot;nombre&quot;, que le permitirá dar a la capa un nombre específico (como <span class="notranslate">string</span>), y en lugar de utilizar el ID de la capa para acceder a ella, puede utilizar este nombre <span class="notranslate">string</span> en su lugar, aunque debe tenerse en cuenta que utilizar el nombre <span class="notranslate">strings</span> tendrá un mayor impacto en el rendimiento que utilizar sólo el valor del ID. Si no se especifica el nombre de la capa, se asignará a la capa creada un nombre con el formato &quot;<span class="inline">_layer_XXX</span>&quot;, donde &quot;XXX&quot; es un valor hexadecimal utilizado para dar a la capa un nombre único.</p>
   <p>Cuando se da un valor de profundidad, éste será mayor cuanto más &quot;lejos&quot; de la cámara esté la capa y menor cuanto más &quot;cerca&quot; de la cámara esté la capa, así que si tienes tres capas con profundidades -100, 0, 100, las capas se dibujarán en el orden 100, 0, -100, de modo que la capa &quot;superior&quot; (es decir, la más cercana a la vista de la cámara y por tanto dibujada sobre todo lo demás) será la capa con la profundidad -100.</p>
   <p>La siguiente imagen muestra un esquema de cómo funciona la profundidad para las capas:</p>
   <p><img>Vale la pena señalar que, si bien se <i>puede</i> asignar más de una capa a una sola profundidad, <i>no hay manera de garantizar que las capas en la misma profundidad se dibujen en un orden determinado</i> y, por lo tanto, es mejor asignar sólo una capa a cualquier profundidad. Tenga en cuenta también que las profundidades mínima y máxima de las capas son de -16000 a 16000, y todo lo que esté fuera de esas profundidades <b>no se renderizará</b>. Si necesita una profundidad fuera de ese rango, tendrá que utilizar la función <a href="layer_force_draw_depth.htm"><span class="inline">layer_force_draw_depth()</span></a>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">layer_create(depth, [name])</p>
+  <p class="code"><span data-field="title" data-format="default">layer_create</span>(depth, [name])</p>
   <table>
     <tbody>
       <tr>

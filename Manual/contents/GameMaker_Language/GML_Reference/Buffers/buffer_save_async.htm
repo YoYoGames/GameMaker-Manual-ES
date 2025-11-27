@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_save_async</h1>
+  <h1><span data-field="title" data-format="default">buffer_save_async</span></h1>
   <p>Con esta función puede guardar parte del contenido de un <span class="notranslate">buffer</span> en un archivo, listo para ser leído de nuevo en la memoria utilizando la función <a href="buffer_load.htm"><span class="inline">buffer_load()</span></a> (o cualquiera de las otras funciones para cargar <span class="notranslate">buffers</span>). El &quot;offset&quot; define la posición inicial dentro de <span class="notranslate">buffer</span> para guardar (en bytes), y el &quot;tamaño&quot; es el tamaño del área de <span class="notranslate">buffer</span> a guardar a partir de ese offset (también en bytes). Esta función trabaja de forma asíncrona, por lo que el juego continuará ejecutándose mientras se guarda, y todos los archivos guardados mediante esta función se colocarán en una carpeta &quot;por defecto&quot;. Esta carpeta <i>no</i> necesita ser incluida en el nombre del archivo, ya que es añadida automáticamente por <span class="notranslate">GameMaker</span>. Por ejemplo, el nombre de archivo <span class="notranslate">path</span> &quot;<span class="inline">Data\Player_Save.sav</span>&quot; se guardará en realidad en &quot;<span class="inline">default\Data\Player_Save.sav</span>&quot;. Sin embargo, si luego carga el archivo con la función <a href="buffer_load_async.htm"><span class="inline">buffer_load_async()</span></a>tampoco es necesario suministrar la parte &quot;por defecto&quot; de <span class="notranslate">path</span> ( <i>pero</i> cualquier otra función de archivo la requerirá, excepto en las consolas Xbox One, PS4 y <span class="notranslate">Nintendo</span> <span class="notranslate">Switch</span>).</p>
   <p class="note"><b>NOTA</b>: En HTML5 &quot;default/&quot; no se añade automáticamente y es posible que tengas que tenerlo en cuenta en tu código.</p>
   <p>La función devolverá un valor de ID único y desencadenará un <a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Save_Load.htm">Evento Asíncrono de Guardado/Carga</a> en el que se puede utilizar el ID devuelto para comprobar el valor de ID de <span class="inline">async_load</span>, como se muestra en el ejemplo ampliado siguiente. El mapa <a href="../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> map en el evento tendrá los siguientes dos pares clave/valor:</p>
@@ -26,7 +26,7 @@
   <p class="note"><b>NOTA</b>: En HTML5 los resultados devueltos se guardan como <span class="notranslate">strings</span> codificado en base64 cuando se guardan en un archivo.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">buffer_save_async(buffer, filename, offset, size);</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_save_async</span>(buffer, filename, offset, size);</p>
   <table>
     <tbody>
       <tr>

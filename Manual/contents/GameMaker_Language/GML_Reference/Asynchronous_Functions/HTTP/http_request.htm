@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>http_request</h1>
+  <h1><span data-field="title" data-format="default">http_request</span></h1>
   <p>Con esta función, puede crear una solicitud de cabecera HTTP para definir los parámetros de funcionamiento de una transacción HTTP, que puede utilizarse para muchas cosas como (por ejemplo) la autenticación a través de las cabeceras HTTP si utiliza las API RESTful. La función requiere la dirección IP completa de la <span class="notranslate">server</span> desde la que se va a realizar la solicitud, así como el tipo de solicitud que se va a realizar (como <span class="notranslate">string</span>, véase la nota siguiente): &quot;GET&quot;, &quot;HEAD&quot;, &quot;POST&quot;, &quot;PUT&quot;, &quot;DELETE&quot;, &quot;TRACE&quot;, &quot;OPTIONS&quot; o &quot;CONNECT&quot;. También tendrá que suministrar un <span class="inline"><a href="../../Data_Structures/DS_Maps/DS_Maps.htm">DS map</a></span> de pares clave/valor (como <span class="notranslate">strings</span>, donde la clave es el campo de la cabecera y el valor es el dato requerido para la cabecera), y el argumento final es un dato opcional <span class="notranslate">string</span> que puede añadir a la solicitud, y si no es necesario entonces puede ser 0 o un <span class="notranslate">string</span> &quot;&quot; vacío. Tenga en cuenta que también puede enviar un <span class="notranslate">buffer</span> (vea la sección sobre <a href="../../Buffers/Buffers.htm">Bufferes</a> para más detalles), en cuyo caso el último argumento sería el índice del <span class="notranslate">buffer</span> a enviar.</p>
   <p class="note"><b>NOTA</b>: Las cabeceras HTTP normalmente siguen el formato &quot;key:value&quot;, pero como <span data-keyref="GameMaker Name">GameMaker</span> crea estos pares por ti desde el ds_map, no es necesario incluir los dos puntos &quot;:&quot; en tu clave o valor del mapa <span class="notranslate">strings</span>.</p>
   <p class="note"><b>NOTA</b>: Cuando se utiliza un <span class="notranslate">buffer</span> para el argumento del cuerpo, si la posición de búsqueda de <span class="notranslate">buffer</span> está al principio (0) entonces no se envía ningún cuerpo y el <span class="notranslate">buffer</span> se rellena con la respuesta de la llamada http, pero si la posición de búsqueda de <span class="notranslate">buffer</span> es distinta de cero, entonces se envía el contenido de <span class="notranslate">buffer</span> <span class="notranslate">string</span> como cuerpo.</p>
@@ -28,7 +28,7 @@
   </ul>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">http_request(url, method, header_map, body);</p>
+  <p class="code"><span data-field="title" data-format="default">http_request</span>(url, method, header_map, body);</p>
   <table>
     <tbody>
       <tr>

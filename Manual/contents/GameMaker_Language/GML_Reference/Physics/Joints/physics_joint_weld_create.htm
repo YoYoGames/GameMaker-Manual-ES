@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_joint_weld_create</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_weld_create</span></h1>
   <p>La junta soldada está diseñada para unir dos dispositivos en una unión fuerte pero flexible. La unión soldada permitirá la flexión entre las dos fijaciones unidas, pero sin el estiramiento asociado a, por ejemplo, una unión a distancia, y siempre intentará volver al ángulo de referencia cuando se someta a cualquier tensión o carga. Usted define el punto en <span class="notranslate">room</span> donde debe crearse la unión, así como el ángulo que desea que la unión intente mantener en todo momento, como se muestra en la imagen siguiente:</p>
   <p><img>Como puede ver, los puntos de anclaje se especifican como coordenadas de <span class="notranslate">room</span>, por lo que debe tener cuidado al definirlos, especialmente si las instancias se están creando al mismo tiempo que las articulaciones en lugar de colocarse en el <span class="notranslate">room</span> a través del editor <span class="notranslate">room</span>. También hay que tener en cuenta que las juntas se crean independientemente del tamaño de <span class="notranslate">sprite</span> de las instancias o de las fijaciones que tengan adheridas. Por lo tanto, si crea una junta de soldadura en algún lugar distinto al origen de la instancia, seguirá siendo válida y limitará las dos instancias en relación con la posición en la que fue creada.</p>
   <p>Dado que la junta de soldadura es flexible y se doblará y flexionará cuando esté sometida a cualquier tensión, puede establecer la frecuencia de oscilación (en Hz) así como la relación de amortiguación de la junta para obtener diferentes efectos - es posible que tenga que jugar con estos valores para afinarlos y se recomienda que comience con valores más pequeños y los incremente hasta que obtenga el efecto que desea.</p>
   <p>Si estableces el valor de &quot;col&quot; en <span class="inline">true</span> entonces las dos instancias pueden interactuar y colisionar entre sí pero <i>sólo</i> si tienen eventos de colisión, sin embargo si se establece en <span class="inline">false</span>, no colisionarán pase lo que pase.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">physics_joint_weld_create(inst1, inst2, anchor_x, anchor_y, ref_angle, freq_hz, damping_ratio, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_weld_create</span>(inst1, inst2, anchor_x, anchor_y, ref_angle, freq_hz, damping_ratio, col)</p>
   <table>
     <tbody>
       <tr>

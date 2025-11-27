@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>font_add_sprite</h1>
+  <h1><span data-field="title" data-format="default">font_add_sprite</span></h1>
   <p>Con esta función puedes usar una &quot;tira de sprites&quot; para crear un nuevo <span class="notranslate">font</span> <span class="notranslate">asset</span>, donde cada sub-imagen sería un símbolo o letra individual. El índice es el número de mapa UTF8 para el primer carácter a utilizar y los rangos a utilizar son los mismos que para un <span class="notranslate">font</span> normal, empezando por &quot;!&quot; pero recuerde que sólo debe incluir lo que necesita y que debe utilizar la función <a href="../../Strings/ord.htm"><span class="inline">ord()</span></a> para obtener el valor UTF8 correcto para la letra inicial. El <span class="notranslate">sprite</span> <span class="notranslate">font</span> creado tendrá entonces las sub-imágenes ajustadas a un glifo individual del <span class="notranslate">font</span>, donde el &quot;primer&quot; glifo tendrá el image_index de 0. Puede definir el &quot;espacio&quot; como cualquier carácter que desee, por ejemplo una sola línea del tamaño que desee que tenga el espacio, y todos los espacios en el texto se renderizarán con esa anchura (pero la imagen elegida <i>nunca</i> se renderizará), o si no proporciona un <span class="notranslate">sprite</span> para el espacio entonces se utilizará la anchura del carácter más ancho en el <span class="notranslate">sprite</span> <span class="notranslate">font</span> en su lugar.</p>
   <p>También puede establecer que el espaciado de <span class="notranslate">font</span> sea proporcional (<span class="inline">true</span>) o no (<span class="inline">false</span>), donde un <span class="notranslate">font</span> proporcional se espacia en base a la anchura real de las letras (por lo que la letra &quot;i&quot; ocupa menos <span class="notranslate">room</span> que la letra &quot;w&quot;, por ejemplo) mientras que un <span class="notranslate">font</span> no proporcional se espaciará en base a la anchura de la subimagen, como un <span class="notranslate">font</span> monoespaciado. Por último, puede definir el espacio que se dejará entre cada letra al escribir, y éste puede ser cualquier valor entero, siendo 0 sin espacio (las letras se &quot;tocarán&quot; si son proporcionales).</p>
   <p>La función devuelve un valor de <i>índice</i> que debe almacenarse en una variable, ya que se necesitará en todos los códigos posteriores que hagan referencia a este <span class="notranslate">font</span>, o devolverá -1 si la función falla por cualquier motivo.</p>
@@ -23,7 +23,7 @@
   <p class="note"><b><span class="note">NOTA</span> </b>Cuando cargues un <span class="notranslate">font</span> en <span data-keyref="GameMaker Name">GameMaker</span> debes recordar eliminarlo de nuevo (con <span style="font-size:1px;"><a href="font_delete.htm"><span class="inline">font_delete()</span></a></span>) cuando ya no lo necesites, de lo contrario existe el riesgo de que se produzca una fuga de memoria que ralentizará y acabará por colapsar tu juego.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">font_add_sprite(spr, first, prop, sep);</p>
+  <p class="code"><span data-field="title" data-format="default">font_add_sprite</span>(spr, first, prop, sep);</p>
   <table>
     <tbody>
       <tr>

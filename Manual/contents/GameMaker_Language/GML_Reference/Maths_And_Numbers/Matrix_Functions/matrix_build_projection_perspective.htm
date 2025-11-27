@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>matrix_build_projection_perspective</h1>
+  <h1><span data-field="title" data-format="default">matrix_build_projection_perspective</span></h1>
   <p>Esta función construye una matriz de proyección en perspectiva basada en las dimensiones del plano de recorte cercano, utilizando los parámetros especificados que se indican a continuación.</p>
   <p>Tenga en cuenta que el campo de visión de la cámara variará en función de los valores <span class="inline">width</span>, <span class="inline">height</span> y <span class="inline">znear</span> especificados, ya que la anchura y la altura de la proyección se sitúan en la posición Z especificada en el argumento <span class="inline">znear</span>.</p>
   <p>Por ejemplo, dado un tamaño constante de 640x480, el campo de visión será más amplio si <span class="inline">znear</span> está más cerca de la cámara, pero será más estrecho si <span class="inline">znear</span> está lejos de la cámara. Este comportamiento se demuestra en la siguiente imagen:</p>
   <p><img>Debido a esto, se recomienda utilizar un valor de <span class="inline">znear</span> que sea idéntico a la anchura de la proyección, lo que hace que el campo de visión sea coherente con una proyección ortográfica equivalente.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">matrix_build_projection_perspective(width, height, znear, zfar);</p>
+  <p class="code"><span data-field="title" data-format="default">matrix_build_projection_perspective</span>(width, height, znear, zfar);</p>
   <table>
     <tbody>
       <tr>

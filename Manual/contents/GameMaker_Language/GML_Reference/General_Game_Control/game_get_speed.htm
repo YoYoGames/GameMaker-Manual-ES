@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>game_get_speed</h1>
+  <h1><span data-field="title" data-format="default">game_get_speed</span></h1>
   <p>Esta función se puede utilizar para obtener la velocidad del juego, ya sea como el número de fotogramas de juego para ejecutar por segundo o como el número de micro segundos por fotograma de juego. Tenga en cuenta que este <b>no</b> es el valor real de la velocidad de ejecución FPS (para eso use la variable <a href="../Debugging/fps_real.htm"><span class="inline">fps_real</span></a> ), sino el número de cuadros de juego (FPS) que el juego intentará mantener cada segundo, o la duración de cada cuadro de juego en microsegundos que el juego intentará mantener (MPF). Cuando se utiliza esta función es necesario dar una de las siguientes constantes que determinarán el tipo del valor de retorno:</p>
   <table>
     <colgroup>
@@ -43,7 +43,7 @@
   <p>Así, por ejemplo, si la velocidad del juego está fijada en 30 en las Opciones de Juego y utilizas el tipo FPS, entonces la función devolverá 30, pero si utilizas el MPF entonces la función devolverá 33333.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">game_get_speed(type);</p>
+  <p class="code"><span data-field="title" data-format="default">game_get_speed</span>(type);</p>
   <table>
     <tbody>
       <tr>

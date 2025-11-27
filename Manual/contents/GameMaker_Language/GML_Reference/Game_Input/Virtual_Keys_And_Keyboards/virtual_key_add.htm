@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>virtual_key_add</h1>
+  <h1><span data-field="title" data-format="default">virtual_key_add</span></h1>
   <p>Esta función le permite asignar &quot;toques&quot; de un área de la pantalla a eventos del teclado. Esto significa que una vez que hayas asignado un área a una tecla virtual, todos los toques en esa área activarán el evento de teclado correspondiente a la tecla que hayas asignado al área. También puede asignar cada tecla virtual que defina a una variable, que luego puede utilizarse en las funciones posteriores de las teclas virtuales para mostrarlas, ocultarlas y eliminarlas. Estas teclas se asignan <i>por habitación</i> y serán eliminadas automáticamente por <span data-keyref="GameMaker Name">GameMaker</span> al cambiar <span class="notranslate">rooms</span>.</p>
   <p>La posición real de la llave virtual se basa en la posición de <i>la pantalla</i> y no en la posición de <span class="notranslate">room</span>, por lo que los valores x/y son absolutos en la pantalla. Esto significa que no necesitas preocuparte por el uso de vistas o las coordenadas relativas de <span class="notranslate">room</span>, y puedes simplemente definir las llaves en el <strong>evento Create</strong> de un <span class="notranslate">object</span> (sólo necesitas definir una llave virtual una vez por habitación), y luego dibujar tu llave <span class="notranslate">sprites</span> en el <a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">evento Draw GUI</a>, dimensionando la capa GUI para que sea la misma que la pantalla.</p>
   <p> </p>
   <h4>Sintaxis</h4>
-  <p class="code">virtual_key_add(x, y, w, h, keycode);</p>
+  <p class="code"><span data-field="title" data-format="default">virtual_key_add</span>(x, y, w, h, keycode);</p>
   <table>
     <tbody>
       <tr>

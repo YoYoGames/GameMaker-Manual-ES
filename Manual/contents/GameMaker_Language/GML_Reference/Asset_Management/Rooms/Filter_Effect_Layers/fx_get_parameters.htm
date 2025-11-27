@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>fx_get_parameters</h1>
+  <h1><span data-field="title" data-format="default">fx_get_parameters</span></h1>
   <p>Esta función se utiliza para recuperar una <a href="../../../../GML_Overview/Structs.htm">estructura</a> que contiene todos los parámetros para el FX <span class="notranslate">struct</span> dado. Se especifica un FX <span class="notranslate">struct</span> (como el devuelto por <span class="inline"><a href="fx_create.htm">fx_create()</a></span> o <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span>) y esta función devuelve un <span class="notranslate">struct</span> que contiene variables para todos los parámetros aplicables a ese filtro/efecto. Los parámetros que utilizan vectores (es decir, grupos de valores) estarán presentes como matrices.</p>
   <p>Puede obtener los nombres de todos los parámetros en un array separado llamando a <span class="inline"><a href="fx_get_parameter_names.htm">fx_get_parameter_names()</a></span>, o encontrarlos en esta página: <a data-xref="{title}" href="../../../../../The_Asset_Editors/Room_Properties/FX/All_Filter_Effect_Types.htm">Tipos y Parámetros FX</a>.</p>
   <p>El cambio de valores en este <span class="notranslate">struct</span> no aplicará esos cambios al filtro/efecto; tendrá que llamar a <span class="inline"><a href="fx_set_parameters.htm">fx_set_parameters()</a></span> para aplicar el <span class="notranslate">struct</span> modificado de nuevo al filtro/efecto para que los cambios surtan efecto.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">fx_get_parameters(filter_or_effect);</p>
+  <p class="code"><span data-field="title" data-format="default">fx_get_parameters</span>(filter_or_effect);</p>
   <table>
     <tbody>
       <tr>

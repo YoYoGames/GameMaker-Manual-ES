@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>animcurve_create</h1>
+  <h1><span data-field="title" data-format="default">animcurve_create</span></h1>
   <p>Esta función creará una <a href="../../../GML_Overview/Structs.htm">estructura</a> <span class="notranslate">animation curve</span> vacía, lista para que la rellenes con los datos de los canales. La función devolverá un puntero a la estructura <span class="notranslate">struct</span> y ésta se utilizará para añadir canales y otros datos a la estructura <span class="notranslate">animation curve</span>. También puede suministrarla a funciones como <a href="animcurve_get.htm"><span class="inline">animcurve_get()</span></a> para obtener posteriormente los datos de la curva.</p>
   <p>Cuando se utiliza esta función, el <span class="notranslate">struct</span> creado no tendrá datos en él, y para utilizarlo se debe añadir al menos un canal y el canal debe tener puntos añadidos. Para añadir un canal, vea la función <a href="animcurve_channel_new.htm"><span class="inline">animcurve_channel_new()</span></a>y para añadir puntos al canal, vea la función <a href="animcurve_point_new.htm"><span class="inline">animcurve_point_new()</span></a>. Además, puede dar un nombre a <span class="notranslate">animation curve</span> <span class="notranslate">struct</span> estableciendo la variable &quot;name&quot; (como se muestra en el código de ejemplo, abajo). Los canales añadidos a un nuevo <span class="notranslate">animation curve</span> deben añadirse como una <a href="../../../GML_Overview/Arrays.htm">matriz</a>, donde cada elemento de la matriz hace referencia a un canal <span class="notranslate">struct</span>, y los puntos de un canal también deben añadirse como una matriz, donde cada elemento de la matriz hace referencia a un punto <span class="notranslate">struct</span>.</p>
   <p>Ten en cuenta que los <span class="notranslate">animation curves</span> creados de esta manera <b>deben ser eliminados cuando ya</b> no se necesiten, ya que de lo contrario ocuparán espacio en la memoria, lo que puede provocar una fuga de memoria, ralentizando y eventualmente colapsando tu juego. Puedes eliminar un <span class="notranslate">animation curve</span> cuando ya no lo necesites utilizando la función <a href="animcurve_destroy.htm"><span class="inline">animcurve_destroy()</span></a>. No es necesario limpiar los datos de los canales o de los puntos dentro de la curva, ya que esto lo hará el recolector de basura automáticamente cuando se destruya la curva.</p>
   <p> </p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">animcurve_create();</p>
+  <p class="code"><span data-field="title" data-format="default">animcurve_create</span>();</p>
   <p> </p>
   <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Struct_AnimCurve"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/animcurve_get.htm">Animation Curve Struct</a></span></p>

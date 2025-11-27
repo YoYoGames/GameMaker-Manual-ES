@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_create_from_vertex_buffer_ext</h1>
+  <h1><span data-field="title" data-format="default">buffer_create_from_vertex_buffer_ext</span></h1>
   <p>Esta función se utiliza para asignar una porción de memoria como un <span class="notranslate">buffer</span> en su juego lleno de los datos de un búfer <a href="../Drawing/Primitives/Primitives_And_Vertex_Formats.htm">de vértices</a> creado previamente. La función devuelve un id <i>de búfer</i> único que debe ser almacenado en una variable y utilizado para todas las llamadas posteriores a la función <span class="notranslate">buffer</span>. La función toma el id para el <span class="notranslate">vertex</span> <span class="notranslate">buffer</span> a utilizar (como devuelto por la función <a href="../Drawing/Primitives/vertex_create_buffer.htm"><span class="inline">vertex_create_buffer()</span></a>por ejemplo) con las siguientes constantes que se utilizan para definir el tipo de <span class="notranslate">buffer</span>:</p>
   <table>
     <tbody>
@@ -60,7 +60,7 @@
   <p class="note"><b>NOTA</b>: Es importante que elimines de la memoria cualquier recurso creado dinámicamente como éste cuando ya no lo necesites para evitar fugas de memoria, así que cuando termines con el <span class="notranslate">buffer</span> que has creado debes liberarlo de nuevo usando <span style="font-size:1px;"><a href="buffer_delete.htm"><span class="inline">buffer_delete()</span></a></span>. Ten en cuenta también que el <span class="notranslate">vertex</span> <span class="notranslate">buffer</span> utilizado para crear el nuevo <span class="notranslate">buffer</span> tampoco se elimina de la memoria y debes utilizar la función <span style="font-size:1px;"><a href="../Drawing/Primitives/vertex_delete_buffer.htm"><span class="inline">vertex_delete_buffer()</span></a></span> cuando ya no sea necesaria.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">buffer_create_from_vertex_buffer_ext(vertex_buffer, type, alignment, start_vertex, num_vertices)</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_create_from_vertex_buffer_ext</span>(vertex_buffer, type, alignment, start_vertex, num_vertices)</p>
   <table>
     <tbody>
       <tr>

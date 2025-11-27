@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>camera_set_update_script</h1>
+  <h1><span data-field="title" data-format="default">camera_set_update_script</span></h1>
   <p>Esta función puede ser usada para establecer una función de <a href="../../../GML_Overview/Script_Functions.htm">script</a> que será llamada cada frame del juego que la cámara sea asignada a un puerto de vista visible y activo. Se da el valor único del ID de la cámara (tal y como lo devuelven las diferentes funciones de <span class="inline">camera_create</span> ) y el ID de la función a llamar. El orden en el que las funciones adjuntas a las cámaras y el renderizado real de la vista de la cámara es el siguiente:</p>
   <ul class="colour">
     <li>Las cámaras de todos los puertos de vista visibles y activos tienen su <b>función de actualización </b>llamada</li>
@@ -30,7 +30,7 @@
   <p>Aplicar una función de actualización personalizada a una cámara anula su comportamiento de actualización por defecto. Por ejemplo, si configuras tu cámara para que siga un <span class="notranslate">object</span> (digamos, <span class="inline2">obj_player</span>) al llamar a <span class="inline"><a href="camera_create_view.htm">camera_create_view()</a></span>, o lo estableces así en las propiedades de <span class="notranslate">Room</span>, dejará de seguir ese <span class="notranslate">object</span> una vez que se establezca una actualización personalizada <span class="notranslate">script</span>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">camera_set_update_script(camera_id, script)</p>
+  <p class="code"><span data-field="title" data-format="default">camera_set_update_script</span>(camera_id, script)</p>
   <table>
     <tbody>
       <tr>

@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>weak_ref_create</h1>
+  <h1><span data-field="title" data-format="default">weak_ref_create</span></h1>
   <p>Con esta función se puede crear una <a class="glossterm" data-glossterm="referencia débil" href="#">referencia</a> débil a un <span class="notranslate">struct</span> que luego se puede utilizar para comprobar si el <span class="notranslate">struct</span> sigue &quot;vivo&quot; (referenciado) o no en el juego. Usted proporciona la referencia al <span class="notranslate">struct</span> que desea rastrear, y la función devolverá otro <span class="notranslate">struct</span> que es una referencia débil a ese <span class="notranslate">struct</span>. Ten en cuenta que puedes comprobar si una referencia es &quot;fuerte&quot; o &quot;débil&quot; utilizando la función <span class="inline"><a href="../Variable_Functions/instanceof.htm">instanceof()</a></span>, ya que una referencia fuerte devolverá o bien &quot;<span class="inline">struct</span>&quot; o el nombre de la función constructora que creó el <span class="notranslate">struct</span>, o bien &quot;<span class="inline">weakref</span>&quot; si se trata de una referencia débil. También hay que tener en cuenta que la referencia débil <span class="notranslate">struct</span> tendrá una variable &quot;<span class="inline">ref</span>&quot; a la que se puede acceder para obtener la referencia fuerte al <span class="notranslate">struct</span> en cuestión, a menos que se haya recogido la basura, en cuyo caso devolverá <span class="inline">undefined</span>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">weak_ref_create(struct_to_track);</p>
+  <p class="code"><span data-field="title" data-format="default">weak_ref_create</span>(struct_to_track);</p>
   <table>
     <tbody>
       <tr>

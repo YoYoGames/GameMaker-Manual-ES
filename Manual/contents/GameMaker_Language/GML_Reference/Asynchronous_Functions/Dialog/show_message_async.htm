@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>show_message_async</h1>
+  <h1><span data-field="title" data-format="default">show_message_async</span></h1>
   <p>Esta función abre una ventana y muestra al usuario el mensaje que usted defina en la función. Esta es una función asíncrona, y como tal <span data-keyref="GameMaker Name">GameMaker</span> <i>no</i> bloquea el dispositivo en el que se está ejecutando mientras espera una respuesta, sino que sigue ejecutando los eventos de forma normal. Una vez que el usuario ha pulsado el botón &quot;Okay&quot;, se activa un evento asíncrono <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Dialog.htm"><b>Diálogo</b></a> que, <i>sólo</i> mientras dure el evento, tendrá un ds_map almacenado en la variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>.</p>
   <p>Este mapa contendrá las dos claves, &quot;id&quot; y &quot;status&quot;, siendo &quot;id&quot; el valor que fue devuelto por la función cuando fue llamada, y el &quot;status&quot; es <span class="inline">true</span> para el botón &quot;Okay&quot; que fue presionado, o <span class="inline">false</span> si el mensaje fue cancelado (donde esté disponible ya que no todas las plataformas de destino permiten la cancelación de diálogos).</p>
   <p class="note"><strong><em><span class="note">NOTA</span></em></strong><em> Esta función es <span data-keyref="Dialog for debug only"> <strong>sólo</strong> para <strong>uso de depuración y pruebas</strong></span>y no debe ser utilizada en juegos lanzados. Para ello, debe crear una interfaz de usuario personalizada para recibir las entradas de los jugadores, de modo que tenga un control completo sobre el aspecto y el comportamiento de los diálogos.</em></p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">show_message_async(string);</p>
+  <p class="code"><span data-field="title" data-format="default">show_message_async</span>(string);</p>
   <table>
     <tbody>
       <tr>

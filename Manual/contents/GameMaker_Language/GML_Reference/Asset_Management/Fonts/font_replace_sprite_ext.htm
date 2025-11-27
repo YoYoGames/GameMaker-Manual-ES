@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>font_replace_sprite_ext</h1>
+  <h1><span data-field="title" data-format="default">font_replace_sprite_ext</span></h1>
   <p>Esta función sustituirá a un <span class="notranslate">sprite</span> <span class="notranslate">font</span> creado previamente con la función <a href="font_add_sprite_ext.htm"><span class="inline">font_add_sprite_ext()</span></a>. Utiliza una &quot;tira de sprites&quot;, donde cada sub-imagen es un símbolo o letra individual, y las imágenes son mapeadas a letras basadas en el argumento &quot;string_map&quot; de la función. Este argumento es un <span class="notranslate">string</span> que puedes usar para decirle a <span data-keyref="GameMaker Name">GameMaker</span> en qué orden están las sub-imágenes del <span class="notranslate">sprite</span> <span class="notranslate">font</span> y las mapeará automáticamente al escribir el texto. Así, por ejemplo, si tienes un string-map de &quot;AaBbCcDdEeFfGgHh&quot;, tu <span class="notranslate">sprite</span> <span class="notranslate">font</span> <i>debe</i> tener las sub-imágenes ordenadas de esta manera.</p>
   <p>También puede establecer que el espaciado de <span class="notranslate">font</span> sea proporcional (<span class="inline">true</span>) o no (<span class="inline">false</span>), donde un <span class="notranslate">font</span> proporcional se espacia en base a la anchura real de las letras (por lo que la letra &quot;i&quot; ocupa menos <span class="notranslate">room</span> que la letra &quot;w&quot;, por ejemplo) mientras que un <span class="notranslate">font</span> no proporcional se espaciará en base a la anchura de la subimagen, como un <span class="notranslate">font</span> monoespaciado. Por último, se puede definir el espacio que se dejará entre cada letra al escribir, y éste puede ser cualquier valor entero, siendo 0 sin espacio (las letras se &quot;tocarán&quot; si son proporcionales). La función devuelve un valor de <i>índice</i> que debe ser almacenado en una variable, ya que será necesario en todos los códigos posteriores que hagan referencia a este <span class="notranslate">font</span>.</p>
   <p>Si la función falla, entonces fallará silenciosamente sin reemplazar el <span class="notranslate">sprite</span> <span class="notranslate">font</span> dado.</p>
   <p class="note"><b><span class="note">NOTA</span> </b>Esta función requiere que hayas añadido previamente un <span class="notranslate">sprite</span> <span class="notranslate">font</span> usando <span style="font-size:1px;"><a href="font_add_sprite.htm"><span class="inline">font_add_sprite()</span></a></span>ya que lo sustituirá y no se puede utilizar en <span class="notranslate">fonts</span> que se incluye como parte de los recursos del juego.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">font_replace_sprite_ext(font, spr, string_map, prop, sep);</p>
+  <p class="code"><span data-field="title" data-format="default">font_replace_sprite_ext</span>(font, spr, string_map, prop, sep);</p>
   <table>
     <tbody>
       <tr>

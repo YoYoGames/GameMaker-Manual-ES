@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>clickable_add_ext</h1>
+  <h1><span data-field="title" data-format="default">clickable_add_ext</span></h1>
   <p>Con esta función se puede crear un icono personalizado, sobre el que se puede hacer clic, que actúa como un &quot;botón&quot; fuera del lienzo del juego, pero dentro de la propia ventana del navegador. La función devolverá un valor de ID que debe ser almacenado en una variable para ser usado en todas las funciones de botón posteriores que hagan referencia al nuevo clicable. Esta función es muy útil para evitar que el navegador cree una ventana emergente al hacer clic en el botón, ya que todo se hace a través del propio <span data-keyref="GameMaker Name">GameMaker</span>.</p>
   <p>Esta función funciona exactamente igual que la función <a href="clickable_add.htm"><span class="inline">clickable_add()</span></a> donde debe establecer la posición relativa al (0,0) de la ventana del navegador, dar la entrada de la página de textura para el <span class="notranslate">sprite</span> que desea que tenga el icono del botón (ver: <a href="../Asset_Management/Sprites/Sprite_Information/sprite_get_tpe.htm"><span class="inline">sprite_get_tpe()</span></a>), especificar una URL para abrir o un <span class="notranslate">script</span> (desde el navegador <span class="notranslate">Asset</span> de <span data-keyref="GameMaker Name">GameMaker</span>) para abrir o ejecutar y luego establecer el objetivo y los parámetros a utilizar. Sin embargo, esta función también tiene dos opciones adicionales que le permiten establecer el alfa del icono de 0 (totalmente transparente) a 1 (totalmente opaco) y la escala del icono, que es un valor multiplicador aplicado al <span class="notranslate">sprite</span> utilizado. Así, un valor de 1 es la escala por defecto, mientras que (por ejemplo) 0,5 sería la mitad de la escala y 2 sería el doble.</p>
   <p>También vale la pena señalar que si el argumento de la URL que pasas es el nombre de una función de <a href="../../GML_Overview/Script_Functions.htm">script</a> (es decir, no comienza con &quot;http://&quot;) Y el <span class="notranslate">script</span> se llama <span class="inline"><b>gmcallback_*</b></span> entonces puedes obtener alimentación directa en un evento html5. Los nombres de las funciones de script <span data-keyref="GameMaker Name">de GameMaker</span> <i>no</i> están ofuscados si comienzan con <span class="inline">gmcallback_</span>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">clickable_add_ext(x, y, tpe, url, target, params, alpha, scale);</p>
+  <p class="code"><span data-field="title" data-format="default">clickable_add_ext</span>(x, y, tpe, url, target, params, alpha, scale);</p>
   <table>
     <tbody>
       <tr>

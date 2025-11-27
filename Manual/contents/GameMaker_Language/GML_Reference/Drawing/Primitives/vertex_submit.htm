@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>vertex_submit</h1>
+  <h1><span data-field="title" data-format="default">vertex_submit</span></h1>
   <p>Puedes utilizar esta función para enviar el contenido de un <span class="notranslate">vertex</span> <span class="notranslate">buffer</span> a la línea de gráficos para su uso con un <span class="notranslate">shader</span>. Proporcionas el índice de <span class="notranslate">buffer</span> a utilizar, el tipo de primitiva base a utilizar (ver las constantes más abajo) y la textura que se va a utilizar. El tipo de primitiva base sólo se utiliza para asignar el orden en el que se dibujan y conectan los vértices que has almacenado en el <span class="notranslate">buffer</span>, pero los datos reales utilizados para cada uno de los vértices serán los que hayas definido al crear el <span class="notranslate">vertex</span> <span class="notranslate">buffer</span>.</p>
   <p class="note"><b>NOTA</b>: Esta función sólo puede utilizarse en el <b>evento de sorteo</b>.</p>
   <p>Para ver un ejemplo visual de las diferentes primitivas base disponibles, vea la imagen de abajo:</p>
@@ -49,7 +49,7 @@
   </table>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">vertex_submit(buffer, primitive, texture);</p>
+  <p class="code"><span data-field="title" data-format="default">vertex_submit</span>(buffer, primitive, texture);</p>
   <table>
     <tbody>
       <tr>

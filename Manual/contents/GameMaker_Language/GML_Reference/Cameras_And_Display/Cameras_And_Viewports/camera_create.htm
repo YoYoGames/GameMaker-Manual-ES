@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>crear_cámara</title>
+  <title>camera_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>crear_cámara</h1>
+  <h1><span data-field="title" data-format="default">camera_create</span></h1>
   <p>Esta función creará una cámara &quot;vacía&quot;, es decir, una cámara sin ajustes de vista o proyección definidos. Una vez creada la cámara puede utilizar las diferentes funciones de <a href="../../Maths_And_Numbers/Matrix_Functions/Matrix_Functions.htm">matriz</a> para establecer las matrices de vista y proyección. También puede utilizar esta función para crear la cámara y luego utilizar las diferentes funciones de <span class="inline">camera_set_*</span> para configurar la vista, sin embargo tenga en cuenta que <i>debe</i> proporcionar al menos una posición y un tamaño de vista, de lo contrario la cámara resultante no será válida y dará resultados extraños si se aplica a un puerto de vista (si no establece el <span class="notranslate">object</span> siguiente, los bordes o la velocidad de movimiento estos se establecerán en los valores por defecto para una cámara de vista en el Editor <span class="notranslate">Room</span> ).</p>
   <p>Tenga en cuenta que las cámaras son como todos los recursos dinámicos y ocuparán memoria cuando se creen. Esto significa que debes tener cuidado de no crear cámaras innecesariamente y de destruir las que no necesites llamando a la función <a href="camera_destroy.htm"><span class="inline">camera_destroy()</span></a>. Esto también significa que las cámaras persistirán de <span class="notranslate">room</span> a <span class="notranslate">room</span> si se asignan a una variable <span class="inline">global</span> (también persistirán cuando se asignen a variables de instancia o locales, pero no podrás acceder a ellas después de cambiar <span class="notranslate">room</span>, de ahí la pérdida de memoria), de modo que puedes -por ejemplo- crear una nueva cámara, asignarla a una variable global, y luego al comienzo de cada <span class="notranslate">room</span> establecer las matrices de vista y proyección necesarias y el puerto de vista que necesitas utilizar.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">camera_create();</p>
+  <p class="code"><span data-field="title" data-format="default">camera_create</span>();</p>
   <p> </p>
   <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_ID_Camera">Camera ID</span></p>

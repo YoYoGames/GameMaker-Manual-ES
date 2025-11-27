@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>capa_set_fx</title>
+  <title>layer_set_fx</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>capa_set_fx</h1>
+  <h1><span data-field="title" data-format="default">layer_set_fx</span></h1>
   <p>Esta función se utiliza para asignar un FX <span class="notranslate">struct</span> a una capa <span class="notranslate">Room</span>. Se especifica el ID o el nombre de la capa que se desea modificar y, a continuación, un FX <span class="notranslate">struct</span> (como el devuelto por <span class="inline"><a href="fx_create.htm">fx_create()</a></span> o <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span>) que se aplicará a la capa especificada, haciendo que el efecto sea visible en la <span class="notranslate">room</span>.</p>
   <p>Si especifica una capa que no es un Filtro/Capa de Efecto sino que es de otro tipo (como una Capa de Instancia, <span class="notranslate">Asset</span> Layer, <span class="notranslate">Tile</span> Layer, etc.) entonces el efecto se aplicará al contenido de esa capa así como a cualquier capa por debajo de ella.</p>
   <p>Si la capa especificada ya tiene un FX <span class="notranslate">struct</span> asignado, será sustituido por el nuevo.</p>
   <p class="note"><span class="note">NOTA</span> Llamar a esta función en el nivel raíz de un <span class="notranslate">script</span> no hará nada, ya que <span class="notranslate">scripts</span> se ejecuta antes de que se cargue el primer <span class="notranslate">room</span>. Puede establecer una <a href="../General_Layer_Functions/layer_set_target_room.htm">sala de destino</a> primero y luego llamar a esta función.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">layer_set_fx(layer_name_or_id, filter_or_effect);</p>
+  <p class="code"><span data-field="title" data-format="default">layer_set_fx</span>(layer_name_or_id, filter_or_effect);</p>
   <table>
     <tbody>
       <tr>

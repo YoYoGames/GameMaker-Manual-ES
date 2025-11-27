@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>cambio_de_instancia</title>
+  <title>instance_change</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>cambio_de_instancia</h1>
+  <h1><span data-field="title" data-format="default">instance_change</span> <span data-conref="..\..\..\..\assets\snippets\Tag_deprecated.hts"> </span></h1>
   <p>Puedes usar esta función para cambiar una instancia de un <span class="notranslate">object</span> en otra instancia de un <span class="notranslate">object</span> diferente, y mientras lo haces decidir si realizar los Eventos de Destrucción y Limpieza de las instancias iniciales y el Evento de Creación de las nuevas instancias. De esta manera, puedes tener (por ejemplo) una bomba que se convierta en una explosión - en cuyo caso el argumento &quot;perf&quot; probablemente sería verdadero ya que querrías que la bomba realizara su Evento de Destrucción y de Limpieza, así como que la explosión realizara su Evento de Creación - o podrías hacer que tu personaje jugador se convierta en uno diferente - en cuyo caso el argumento &quot;perf&quot; probablemente sería falso ya que no quieres que las instancias realicen sus eventos de Creación y Destrucción/Limpieza.</p>
   <p>Vale la pena señalar que el cambio de la instancia significa que usted no debe realizar ninguna otra acción con esa instancia hasta el siguiente paso, en particular, tratando de acceder a las variables, etc ... ya que causará un error. Básicamente, usted cambia la instancia pero no está realmente disponible hasta el final del paso actual, por lo que acceder a cualquiera de las variables que contiene directamente (por ejemplo, llamando a <span class="inline">obj_Changed.x</span>) no funcionará.</p>
   <p class="note"><b>¡ATENCIÓN!</b> Cuando se cambia una instancia habilitada para la física, las propiedades físicas <b>no serán</b> transferidas a la nueva instancia que se está cambiando. Por lo tanto, debe tener un código para &quot;transferir&quot; el estado de la física de la instancia actual a la nueva instancia, o haber definido las propiedades físicas de las nuevas instancias en su evento de creación, o en el editor <span class="notranslate">object</span>. Por esta razón se recomienda que no se utilice esta función con instancias con física habilitada, sino que se utilice una combinación de <span style="font-size:1px;"><span class="inline">instance_destroy()</span></span> y <span><span style="font-size:1px;"><span class="inline">instance_create_layer()</span></span></span>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">instance_change(obj, perf);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_change</span>(obj, perf);</p>
   <table>
     <tbody>
       <tr>

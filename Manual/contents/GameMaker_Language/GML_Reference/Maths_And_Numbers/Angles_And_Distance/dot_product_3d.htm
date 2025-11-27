@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>punto_producto_3d</title>
-  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <title>dot_product_3d</title>
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -14,17 +15,16 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>punto_producto_3d</h1>
-  <p>El producto punto es un valor que expresa la relación angular entre dos vectores y se obtiene tomando dos vectores, multiplicándolos y sumando los resultados. El nombre &quot;producto punto&quot; deriva del punto centrado &quot;-&quot;
-    que se utiliza a menudo para designar esta operación (el nombre alternativo &quot;producto escalar&quot; enfatiza la naturaleza escalar y no vectorial del resultado).</p>
+  <h1><span data-field="title" data-format="default">dot_product_3d</span></h1>
+  <p>El producto punto es un valor que expresa la relación angular entre dos vectores y se obtiene tomando dos vectores, multiplicándolos y sumando los resultados. El nombre &quot;producto punto&quot; deriva del punto centrado &quot;-&quot; que se utiliza a menudo para designar esta operación (el nombre alternativo &quot;producto escalar&quot; enfatiza la naturaleza escalar y no vectorial del resultado).</p>
   <p>La fórmula matemática real se puede escribir así:</p>
-  <p><img alt="Dot Product formula" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image.png"/></p>
+  <p><img alt="Dot Product formula" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image.png" /></p>
   <p>En 2D, el producto punto de los vectores <span class="inline">a[x1,y1]</span> y <span class="inline">b[x2,y2]</span> es <span class="inline">x1x2 + y1y2</span>, por lo que en 3D, el producto punto de los vectores <span class="inline">a[x1,y1,z1]</span> y <span class="inline">b[x1,y1,z1]</span> es <span class="inline">x1x2 + y1y2 + z1z2</span>. Por lo tanto, el dot_product_3d en <span data-keyref="GameMaker Name">GameMaker</span> se calcula como:</p>
   <p class="code">a · b = (x1*x2) + (y1*y2) + (z1*z2);</p>
   <p>Lo curioso del producto punto es la relación que tiene con el ángulo formado por los vectores de entrada que se puede expresar como:</p>
   <p class="code">a · b = (length of a) * (length of b) * cos(angle)</p>
   <p>Es decir, el producto punto de dos vectores será igual al coseno del ángulo entre dichos vectores, multiplicado por las longitudes de cada uno de ellos. Aquí tienes una imagen para ilustrarlo:</p>
-  <p><img alt="Dot Product ilustration" class="center" height="143" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image_2.png" width="406"/></p>
+  <p><img alt="Dot Product ilustration" class="center" height="143" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image_2.png" width="406" /></p>
   <p class="note"><strong>NOTA</strong>: Para más información sobre los vectores, consulte <a href="../../../../Additional_Information/Vectors.htm">aquí</a>.</p>
   <p>Hay algunas cosas que podemos afirmar ahora de dos vectores cualesquiera en relación con el resultado de su producto punto:</p>
   <ul class="colour">
@@ -32,57 +32,66 @@
     <li>Si el ángulo entre a y b es menor que 90 grados, el producto punto será positivo (mayor que cero), ya que <span class="inline">cos(ang)</span> será positivo</li>
     <li>Si el ángulo entre a y b es mayor que 90 grados, el producto punto será negativo (menor que cero), ya que <span class="inline">cos(ang)</span> será negativo</li>
   </ul>
-  <p>¿Qué significa esto para los que hacemos juegos? Bueno, esta relación matemática se puede utilizar en bastantes circunstancias, pero la mejor manera de verlo es construir un escenario real y ver por uno mismo lo que está pasando. Una de las formas más sencillas
-    Una de las formas más sencillas de hacerlo es generar una simple comprobación de &quot;altura&quot; para un enemigo en, digamos, un juego de plataformas, de forma que el enemigo &quot;vea&quot; al jugador si está por encima del plano formado por el vector <i>normal</i> del enemigo y el suelo en 3D.</p>
-  <p><img>Básicamente, estamos obteniendo el vector normal del enemigo perpendicular al suelo y luego estamos
-    obtener el vector del jugador al enemigo. Luego obtendremos el punto_producto de estos vectores, y si el resultado es positivo el jugador está &quot;por encima&quot; del plano del suelo del enemigo y si es negativo está por debajo. El código real para que esto funcione
-    se suministra en el ejemplo siguiente.</p>
-  <p> </p>
+  <p>¿Qué significa esto para los que hacemos juegos? Bueno, esta relación matemática se puede utilizar en bastantes circunstancias, pero la mejor manera de verlo es construir un escenario real y ver por uno mismo lo que está pasando. Una de las formas más sencillas Una de las formas más sencillas de hacerlo es generar una simple comprobación de &quot;altura&quot; para un enemigo en, digamos, un juego de plataformas, de forma que el enemigo &quot;vea&quot; al jugador si está por encima del plano formado por el vector <i>normal</i> del enemigo y el suelo en 3D.</p>
+  <p>Básicamente, estamos obteniendo el vector normal del enemigo perpendicular al suelo y luego estamos obtener el vector del jugador al enemigo. Luego obtendremos el punto_producto de estos vectores, y si el resultado es positivo el jugador está &quot;por encima&quot; del plano del suelo del enemigo y si es negativo está por debajo. El código real para que esto funcione se suministra en el ejemplo siguiente.</p>
+  <p> </p>
   <h4><b>Sintaxis:</b></h4>
-  <p class="code">dot_product_3d(x1, y1, z1, x2, y2, z2)</p>
+  <p class="code"><span data-field="title" data-format="default">dot_product_3d</span>(x1, y1, z1, x2, y2, z2)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argumento</th><th>Tipo</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
         <th>Descripción</th>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">x1</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">x1</span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
         <td><span class="notranslate">The x coordinate of the first vector.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">y1</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">y1</span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
         <td><span class="notranslate">The y coordinate of the first vector.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">z1</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">z1</span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
         <td><span class="notranslate">The z coordinate of the first vector.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">x2</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">x2</span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
         <td><span class="notranslate">The x coordinate of the second vector.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">y2</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">y2</span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
         <td><span class="notranslate">The y coordinate of the second vector.</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">z2</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">z2</span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
         <td><span class="notranslate">The z coordinate of the second vector.</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
-  <p> </p>
+  <p> </p>
   <h4>Devuelve:</h4>
-  <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
+  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
+  <p> </p>
   <h4>Ejemplo:</h4>
-  <p class="code">var x1, y1, x2, y2;<br/> x1 = 0;<br/> y1 = 1;<br/> z1 = 0;<br/> x2 = o_Player.x - x;<br/> y2 = o_Player.y - y;<br/> z2 = o_Player.z - z; if dot_product_3d(x1, y1, z1, x2, y2, z2) &gt; 0 above=true else above=false;</p>
-  <p>El código anterior crea un vector normal a lo largo del eje y (arriba) de las instancias, y luego obtiene el vector del jugador <span class="notranslate">object</span> &quot;o_Player&quot; a sí mismo. Finalmente calcula el producto punto de estos dos vectores y si es mayor que 0 pone la variable
-    &quot;arriba&quot; a true, y si es menor o igual que 0 la pone a &quot;false&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p class="code">var x1, y1, x2, y2;<br />
+    x1 = 0;<br />
+    y1 = 1;<br />
+    z1 = 0;<br />
+    x2 = o_Player.x - x;<br />
+    y2 = o_Player.y - y;<br />
+    z2 = o_Player.z - z; if dot_product_3d(x1, y1, z1, x2, y2, z2) &gt; 0 above=true else above=false;</p>
+  <p>El código anterior crea un vector normal a lo largo del eje y (arriba) de las instancias, y luego obtiene el vector del jugador <span class="notranslate">object</span> &quot;o_Player&quot; a sí mismo. Finalmente calcula el producto punto de estos dos vectores y si es mayor que 0 pone la variable &quot;arriba&quot; a true, y si es menor o igual que 0 la pone a &quot;false&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
@@ -90,7 +99,7 @@
         <div style="float:right">Siguiente: <a href="dot_product_normalised.htm"><span class="notranslate">dot_product_normalised</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Todos los derechos reservados</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 dot_product_3d

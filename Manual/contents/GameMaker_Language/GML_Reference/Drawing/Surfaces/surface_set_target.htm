@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>superficie_de_objetivo</title>
+  <title>surface_set_target</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>superficie_de_objetivo</h1>
+  <h1><span data-field="title" data-format="default">surface_set_target</span></h1>
   <p>Con esta función usted establece todo el dibujo posterior a la superficie de destino en lugar de la pantalla y de esta manera puede decirle a <span data-keyref="GameMaker Name">GameMaker</span> que sólo dibuje cosas específicas a la superficie especificada. Tenga en cuenta que si no llama a <a href="surface_reset_target.htm"><span class="inline">surface_reset_target()</span></a> después de haber terminado, no se dibujará nada en la pantalla ya que todo el dibujo posterior (incluso en otras instancias) se hará en la superficie. También debes tener en cuenta que no se verá nada si la propia superficie no se dibuja en la pantalla en el evento draw de una instancia. Puedes comprobar el valor de retorno de esta función también como una herramienta de depuración para comprobar si el objetivo de la superficie se estableció o no, con un valor de retorno de 0 siendo un fracaso para establecer el objetivo y cualquier otro valor positivo siendo un éxito.</p>
   <p>Una cosa que debe tenerse en cuenta es que las superficies se <i>apilan</i>, por lo que no se puede saltar de un objetivo a otro y luego volver al objetivo de extracción normal al final, sino que hay que abrir y cerrar los objetivos de renderización. Por ejemplo, esto <b>no</b> funcionará correctamente:</p>
   <p class="code">surface_set_target(surf1);<br />
@@ -39,7 +39,7 @@
   <p class="note"><b>NOTA</b>: Cuando se trabaja con superficies existe la posibilidad de que dejen de existir en cualquier momento debido a que están almacenadas en la memoria de texturas. Debe comprobar <b>SIEMPRE</b> que una superficie existe utilizando <span style="font-size:1px;"><a href="surface_exists.htm"><span class="inline">surface_exists()</span></a></span> antes de referenciarlas directamente.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">surface_set_target(surface_id);</p>
+  <p class="code"><span data-field="title" data-format="default">surface_set_target</span>(surface_id);</p>
   <table>
     <tbody>
       <tr>

@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>show_debug_message</h1>
+  <h1><span data-field="title" data-format="default">show_debug_message</span></h1>
   <p>Esta función creará un mensaje de depuración personalizado que se mostrará en la ventana del compilador en <span class="notranslate">runtime</span>. Tenga en cuenta que el mensaje puede <i>ser</i> un <span class="notranslate">string</span> o un número real, pero si necesita ambos entonces el número tendrá que ser convertido a <span class="notranslate">string</span> primero usando la función <a href="../Strings/Strings.htm"><span class="inline">string()</span></a> (véase el ejemplo siguiente) y que si el número tiene más de dos decimales, deberá utilizar <a href="../Strings/string_format.htm"><span class="inline">string_format()</span></a> para mostrarlos, ya que por defecto los decimales se redondean a los dos más cercanos (así que &quot;1.2468&quot; se mostraría como &quot;1.25&quot; en la ventana de salida).</p>
   <p>Los mensajes de depuración mostrados con esta función se mostrarán en la <a href="../../../Introduction/The_Output_Window.htm">Ventana de Salida del Compilador</a> en la parte inferior de <span class="notranslate">IDE</span> así como en la <a href="../../../IDE_Tools/The_Debugger.htm">Vista Gráfica</a> de <span class="notranslate">debugger</span> cuando se ejecute el juego en Modo Depuración. Si sólo quieres ver los mensajes en el modo de depuración, entonces probablemente deberías usar <a href="debug_event.htm"><span class="inline">debug_event()</span></a> en su lugar.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">show_debug_message(string);</p>
+  <p class="code"><span data-field="title" data-format="default">show_debug_message</span>(string);</p>
   <table>
     <tbody>
       <tr>

@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>weak_ref_any_alive</h1>
+  <h1><span data-field="title" data-format="default">weak_ref_any_alive</span></h1>
   <p>Con esta función puedes comprobar las <a class="glossterm" data-glossterm="referencia débil" href="#">referencias</a> débiles a varios structs para ver si siguen &quot;vivos&quot; o no. Proporcionas un array de referencias débiles para comprobar (cada referencia débil debe haber sido creada usando la función <a href="weak_ref_create.htm"><span class="inline">weak_ref_create()</span></a>), y la función devolverá <span class="inline">true</span> si <em><strong>cualquier </strong></em>de los structs todavía están siendo referenciados en alguna parte o <span class="inline">false</span> si no lo están y han sido recolectados por la basura. Tenga en cuenta que si proporciona un array en el que alguno de los valores no es una referencia débil, la función devolverá <span class="inline">undefined</span>.</p>
   <p>Tenga en cuenta que la función también toma dos argumentos opcionales, donde el primero le permite suministrar un índice inicial en la matriz para comprobar desde, así como un argumento para establecer el número de posiciones (longitud) desde ese índice para comprobar. Si se especifica, sólo se comprobarán los índices del array dentro de esos parámetros.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">weak_ref_any_alive(array, [index], [length]);</p>
+  <p class="code"><span data-field="title" data-format="default">weak_ref_any_alive</span>(array, [index], [length]);</p>
   <table>
     <tbody>
       <tr>

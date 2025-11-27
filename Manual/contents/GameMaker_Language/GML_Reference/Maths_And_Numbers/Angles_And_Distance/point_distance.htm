@@ -3,8 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>punto_distancia</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>point_distance</title>
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -15,40 +15,45 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>punto_distancia</h1>
+  <h1><span data-field="title" data-format="default">punto_distancia</span></h1>
   <p>Esta función devuelve la longitud de un vector formado por los componentes especificados [x1,y1] y [x2,y2]. Por ejemplo, en la imagen de abajo si queremos obtener la distancia entre la posición de la nave del jugador y la posición del enemigo para poder calcular si el enemigo está lo suficientemente cerca como para dispararle, entonces usaríamos esta función (el código exacto está en el ejemplo debajo de la imagen):</p>
   <p><img alt="Point distance example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/point_distance.png" /></p>
-  <p> </p>
+  <p> </p>
   <h4><b>Sintaxis:</b></h4>
-  <p class="code">point_distance(x1, y1, x2, y2);</p>
+  <p class="code"><span data-field="title" data-format="default">point_distance</span>(x1, y1, x2, y2)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argumento</th><th>Tipo</th>
+        <th>Argumento</th>
+        <th>Tipo</th>
         <th>Descripción</th>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">x1</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">x1</span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
         <td><span class="notranslate">The x coordinate of the first component of the vector</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">y1</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">y1</span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
         <td><span class="notranslate">The y coordinate of the first component of the vector</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">x2</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">x2</span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
         <td><span class="notranslate">The x coordinate of the second component of the vector</span></td>
-     </tr>
+      </tr>
       <tr>
-        <td><span class="notranslate">y2</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">y2</span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
         <td><span class="notranslate">The y coordinate of the second component of the vector</span></td>
-     </tr>
+      </tr>
     </tbody>
   </table>
-  <p> </p>
+  <p> </p>
   <h4>Devuelve:</h4>
-  <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
+  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
+  <p> </p>
   <h4>Ejemplo:</h4>
   <p class="code">var ex, ey;<br />
     ex = instance_nearest(x, y, enemy).x;<br />
@@ -58,9 +63,9 @@
         instance_create_layer(x, y, &quot;Bullets&quot;, obj_Missile)<br />
     }</p>
   <p>El código anterior obtendrá las coordenadas x e y del enemigo más cercano y luego las utilizará para comprobar la distancia (longitud) del vector formado por ellas y las coordenadas del jugador. Si el valor es inferior a 200, el jugador <span class="notranslate">object</span> creará una instancia de &quot;obj_Misil&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
@@ -68,7 +73,7 @@
         <div style="float:right">Siguiente: <a href="point_distance_3d.htm"><span class="notranslate">point_distance_3d</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 point_distance

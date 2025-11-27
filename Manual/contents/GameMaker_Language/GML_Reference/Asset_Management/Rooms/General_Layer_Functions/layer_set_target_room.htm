@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_set_target_room</h1>
+  <h1><span data-field="title" data-format="default">layer_set_target_room</span></h1>
   <p>Cuando usted llama a esta función le está diciendo a <span data-keyref="GameMaker Name">GameMaker</span> que <i>todas las funciones de capas posteriores deben ser aplicadas a la habitación dada</i>. De este modo, puede cambiar o generar procedimentalmente capas y contenidos de capas en un <span class="notranslate">room</span> que no sea el actual <span class="notranslate">room</span>. Cuando haya terminado de añadir capas o elementos de capa a un <span class="notranslate">room</span>, llame a la función <a href="layer_reset_target_room.htm"><span class="inline">layer_reset_target_room()</span></a> para restablecer el objetivo <span class="notranslate">room</span> (o llame a esta función de nuevo con un argumento <span class="notranslate">room</span> de -1). Tenga en cuenta que esta función sólo puede utilizarse en <i>salas</i> distintas a la actual, y está diseñada para que pueda añadir/eliminar capas y elementos de capa a <span class="notranslate">rooms</span> que no sea el <span class="notranslate">room</span> que se está ejecutando actualmente.</p>
   <p class="note"><b>ADVERTENCIA</b> Mientras se dirige a otro <span class="notranslate">room</span>, puede utilizar todas las funciones regulares de la capa, <b>excepto</b> que no puede crear instancias utilizando <span style="font-size:1px;"><a href="../../Instances/instance_create_layer.htm"><span class="inline">instance_create_layer()</span></a></span> o <span style="font-size:1px;"><a href="../../Instances/instance_create_depth.htm"><span class="inline">instance_create_depth()</span></a></span>ni la función de capa <a href="layer_add_instance.htm"><span style="font-size:1px;"><span class="inline">layer_add_instance()</span></span></a> estará disponible.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">layer_set_target_room(room)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_set_target_room</span>(room)</p>
   <table>
     <tbody>
       <tr>

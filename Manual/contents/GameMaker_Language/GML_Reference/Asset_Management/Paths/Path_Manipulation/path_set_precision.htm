@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>path_set_precision</h1>
+  <h1><span data-field="title" data-format="default">path_set_precision</span></h1>
   <p>Con esta función puede cambiar la &quot;suavidad&quot; de un <span class="notranslate">path</span>. Este valor debe estar entre 1 y 8, con un valor bajo creando bordes más rectos con curvas más pronunciadas entre los puntos, mientras que un valor más alto redondeará los puntos y hará que el <span class="notranslate">path</span> sea mucho más &quot;curvo&quot;. Tenga en cuenta que esta función no tendrá ningún efecto visible si el <span class="notranslate">path</span> no ha sido configurado como suave en el editor <span class="notranslate">path</span> o utilizando la función <a href="path_set_kind.htm"><span class="inline">path_set_kind()</span></a>. <strong>Esta función cambia el activo real <span class="notranslate">path</span> </strong>, y por lo tanto afectará permanentemente la forma en que el <span class="notranslate">path</span> es utilizado por todas las instancias en el juego desde el momento en que la función se utiliza hasta el final del juego. Si esto no es lo que necesitas, entonces deberías usar una función como <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> para crear una copia del <span class="notranslate">path</span> primero, y luego llamar a esta función en el <span class="notranslate">asset</span> duplicado (no olvides llamar a <span class="inline"><a href="path_delete.htm">path_delete()</a></span> en el <span class="notranslate">asset</span> cuando ya no sea necesario).</p>
   <p><img alt="Path Precision differences example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Paths/setprecision.png" /></p>
   <h4>Sintaxis:</h4>
-  <p class="code">path_set_precision(index, prec);</p>
+  <p class="code"><span data-field="title" data-format="default">path_set_precision</span>(index, prec);</p>
   <table>
     <tbody>
       <tr>

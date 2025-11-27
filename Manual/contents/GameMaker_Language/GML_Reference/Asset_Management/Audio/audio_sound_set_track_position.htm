@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_sound_set_track_position</h1>
+  <h1><span data-field="title" data-format="default">audio_sound_set_track_position</span></h1>
   <p>Esta función establece la posición (en segundos) para el ID de sonido dado o <span class="notranslate">asset</span>.</p>
   <p>El &quot;índice&quot; suministrado puede ser una instancia única de un sonido (como la devuelta por <a href="audio_play_sound.htm"><span class="inline">audio_play_sound()</span></a>) o un sonido <span class="notranslate">asset</span> (por ejemplo, uno añadido a través del navegador <span class="notranslate">Asset</span> ). El comportamiento de esta función será diferente según el tipo de índice que se haya especificado:</p>
   <ul class="colour">
@@ -24,7 +24,7 @@
   <p>Esta función sólo cambiará la posición de la pista para el sonido que se está reproduciendo, o su siguiente reproducción (en caso de que se suministre un sonido <span class="notranslate">asset</span> ). Si el sonido se reproduce con el bucle activado, las siguientes reproducciones siempre empezarán desde el principio (0,0 segundos), <em>no</em> desde la posición de la pista definida con esta función. Por ejemplo, si se inicia un sonido <span class="notranslate">loop</span> a los 5,7 segundos, se reproducirá el primer sonido desde ese punto, pero después se seguirá repitiendo toda la pista, desde el principio hasta el final.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">audio_sound_set_track_position(index, time);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_sound_set_track_position</span>(index, time);</p>
   <table>
     <tbody>
       <tr>

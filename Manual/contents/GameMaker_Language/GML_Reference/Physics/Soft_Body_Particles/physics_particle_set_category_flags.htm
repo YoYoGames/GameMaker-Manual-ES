@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_particle_set_category_flags</h1>
+  <h1><span data-field="title" data-format="default">physics_particle_set_category_flags</span></h1>
   <p>Con esta función puede cambiar la partícula <span class="notranslate">flags</span> para una categoría de partículas. El valor de <span class="inline">category</span> es el que ha definido en la función <a href="physics_particle_create.htm"><span class="inline">physics_particle_create()</span></a> o (si ha creado un grupo) <a href="physics_particle_group_begin.htm"><span class="inline">physics_particle_group_begin()</span></a>, mientras que el <span class="notranslate">flags</span> es el valor de retorno de una combinación de las siguientes <b>constantes</b>:</p>
   <table>
     <tbody>
@@ -63,7 +63,7 @@
   <p>Estos <span class="notranslate">flags</span> utilizan el enmascaramiento de bits para crear un valor de salida final que luego se comprueba para establecer las diferentes propiedades básicas de la categoría de partículas (siendo la propiedad base siempre la de <span class="inline">phy_particle_flag_water</span>). Por ejemplo, si se quiere simular un líquido viscoso con tensión superficial se utilizaría el enmascaramiento de bits <a href="../../../../Additional_Information/Bitwise_Operators.htm"> <i>o</i></a> &quot;|&quot; para enmascarar los bits apropiados como se muestra en el ejemplo siguiente. De esta manera, puede establecer diferentes propiedades (aparte de las propiedades globales) para cada categoría de partícula creada.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">physics_particle_set_category_flags(category, flags)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_particle_set_category_flags</span>(category, flags)</p>
   <table>
     <tbody>
       <tr>

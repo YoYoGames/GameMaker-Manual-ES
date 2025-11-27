@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>http_get</h1>
+  <h1><span data-field="title" data-format="default">http_get</span></h1>
   <p>Con esta función, se conecta a la URL especificada para recuperar información. Como se trata de una función asíncrona, <span data-keyref="GameMaker Name">GameMaker</span> no se bloqueará mientras espera una respuesta, sino que seguirá funcionando a menos que obtenga información de devolución de llamada. Esta información será en forma de un <span class="notranslate">string</span> y activará un <b>Evento Asíncrono</b> en cualquier instancia que tenga uno definido en sus propiedades <span class="notranslate">object</span>. También hay que tener en cuenta que los parámetros de petición HTTP (los trozos que a veces se &quot;añaden&quot; al final de una URL cuando se envía un formulario en una página web) son perfectamente aceptables cuando se utiliza esta función, por ejemplo:</p>
   <p class="code">http_get(&quot;http://www.example.com/logon?username=&quot;+name);</p>
   <p>pasará el <span class="notranslate">string</span> mantenido en la variable &quot;nombre&quot; al <span class="notranslate">server</span> así como recuperará los datos de esa URL. Así que, esencialmente, cada vez que se necesite pasar un dato simple y corto desde el cliente a <span class="notranslate">server</span>, esta sería una opción razonable como función a utilizar.</p>
@@ -34,7 +34,7 @@
   </ul>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">http_get(url);</p>
+  <p class="code"><span data-field="title" data-format="default">http_get</span>(url);</p>
   <table>
     <tbody>
       <tr>

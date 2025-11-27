@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_free_play_queue</h1>
+  <h1><span data-field="title" data-format="default">audio_free_play_queue</span></h1>
   <p>Esta función se utiliza para liberar la memoria asociada al audio dado <span class="notranslate">queue</span>. El índice <span class="notranslate">queue</span> es el valor devuelto cuando se creó el <span class="notranslate">queue</span> utilizando la función <a href="audio_create_play_queue.htm"><span class="inline">audio_create_play_queue()</span></a>y esta función debe ser llamada cuando el <span class="notranslate">queue</span> ya no sea necesario para evitar fugas de memoria. Al liberar el <span class="notranslate">queue</span> se detendrá cualquier sonido que se esté reproduciendo, y no se puede eliminar el <span class="notranslate">buffer</span> desde el que se está transmitiendo un sonido hasta que se haya liberado el <span class="notranslate">queue</span> al que está asignado. Esta función activará un <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">Evento Asíncrono de Reproducción de Audio</a>, y en este evento se creará un <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">mapa DS</a> especial en la variable <a href="../../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> con los siguientes pares clave/valor:</p>
   <ul class="colour">
     <li>&quot;<strong>queue_id</strong>&quot; - el <span class="notranslate">queue</span> que ha terminado de reproducir datos</li>
@@ -23,7 +23,7 @@
   </ul>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">audio_free_play_queue(queueIndex);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_free_play_queue</span>(queueIndex);</p>
   <table>
     <tbody>
       <tr>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>dibujar_elemento</title>
+  <title>draw_tile</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>dibujar_elemento</h1>
+  <h1><span data-field="title" data-format="default">draw_tile</span></h1>
   <p>Con esta función se puede dibujar cualquier <span class="notranslate">tile</span> a partir de un <span class="notranslate">tile set</span> - compitiendo con rotaciones, volteos y espejos - estableciendo el marco (si es animado) y la posición dentro del <span class="notranslate">room</span>. El valor de la ID de <span class="notranslate">tile set</span> es el índice de <span class="notranslate">tile set</span> tal y como se establece en el <span class="notranslate">IDE</span> y los datos de <span class="notranslate">tile</span> son el &quot;blob&quot; de datos que contiene toda la información sobre el índice de <span class="notranslate">tile</span> y las transformaciones que se han aplicado. Puede utilizar la función <a href="../../Asset_Management/Rooms/Tile_Map_Layers/tilemap_get.htm"><span class="inline">tilemap_get()</span></a> para obtener los datos de <span class="notranslate">tile</span> que luego pueden ser manipulados utilizando las <a href="../../Asset_Management/Rooms/Tile_Map_Layers/Tile_Map_Layers.htm">Funciones de Mosaico</a>, o puede construirlos usted mismo utilizando las siguientes constantes de <span class="notranslate">tile</span> junto con el valor del índice de <span class="notranslate">tile</span> a crear:</p>
   <table>
     <tbody>
@@ -46,7 +46,7 @@
   <p>El código anterior simplemente crea una variable local para almacenar los datos de mosaico para el <span class="notranslate">tile</span> con el índice de 8 en el <span class="notranslate">tile set</span>, y se gira y voltea. Esto puede ser usado para dibujar el <span class="notranslate">tile</span> en ese índice desde el <span class="notranslate">tile set</span> que especifiques. esto no está vinculado a ninguna capa de tilemap y el <span class="notranslate">tile</span> será dibujado en la profundidad de la capa de la instancia que está haciendo el dibujo, en la posición x/y que especifiques en el <span class="notranslate">room</span>. Ten en cuenta que también puedes establecer el marco a dibujar. Si el <span class="notranslate">tile</span> indexado es parte de un conjunto de animación, entonces puedes establecer el número de fotograma aquí (desde 0 hasta el número de fotogramas - 1) y el <span class="notranslate">tile</span> indexado será simplemente el indicador de qué <span class="notranslate">tile set</span> animado estás usando mientras que será el fotograma dado el que se dibuje. Si el <span class="notranslate">tile</span> no es parte de un conjunto animado, entonces el marco debe ser establecido en 0.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">draw_tile(tileset, tiledata, frame, x, y)</p>
+  <p class="code"><span data-field="title" data-format="default">draw_tile</span>(tileset, tiledata, frame, x, y)</p>
   <table>
     <tbody>
       <tr>

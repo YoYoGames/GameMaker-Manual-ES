@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_blendmode_ext_sepalpha</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_blendmode_ext_sepalpha</span></h1>
   <p>Cuando <span data-keyref="GameMaker Name">GameMaker</span> va a dibujar un píxel hay un color de origen (el color del píxel que vamos a dibujar) y un color de destino (el color que ya está en el píxel que estamos dibujando), por lo que al determinar el nuevo color del píxel, los colores de origen y destino se calculan de acuerdo con el modo de mezcla elegido. Cada componente de los colores se almacena como un valor de punto flotante entre 0 y 1, y el nuevo color se calcula multiplicando cada componente del color de origen por algún factor y multiplicando cada componente del color de destino por algún otro factor y luego sumando los resultados componente por componente.</p>
   <p>Esta función le permite establecer las diferentes partes de los componentes que deben ser factorizados juntos para crear un modo de mezcla personalizado, seleccionando diferentes partes de diferentes factores de modo de mezcla para los componentes RGB y el componente Alfa. Así, los argumentos &quot;src&quot; y &quot;dest&quot; utilizarán los 3 primeros valores del modo de fusión (RGB) y los argumentos &quot;alphasrc&quot; y &quot;alphadest&quot; tomarán la última parte del factor de modo de fusión. Por ejemplo, si tiene la fuente RGB como <span class="inline">bm_zero</span>, entonces se utilizará (0, 0, 0). Si luego establece la fuente Alfa como bm_one, entonces se utilizará (1), dando un modo de mezcla final de la fuente de (0, 0, 0, 1).</p>
   <p>La siguiente tabla muestra los valores RGBA para cada modo de mezcla, donde (Rs, Gs, Bs, As) se consideran los valores de origen y (Rd, Gd, Bd, Ad) son los valores de destino. Las once constantes que se pueden utilizar pueden ser de origen o de destino (o ambas) cuando se utilizan en esta función.</p>
@@ -92,7 +92,7 @@
   </ul>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">gpu_set_blendmode(src, dest, alphasrc, alphadest);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_set_blendmode_ext_sepalpha</span>(src, dest, alphasrc, alphadest);</p>
   <table>
     <tbody>
       <tr>

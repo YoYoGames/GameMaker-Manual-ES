@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>crear_secuencia_de_capa</title>
+  <title>layer_sequence_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>crear_secuencia_de_capa</h1>
+  <h1><span data-field="title" data-format="default">layer_sequence_create</span></h1>
   <p>Con esta función puede crear una instancia de un <span class="notranslate">sequence</span> <span class="notranslate">asset</span> en la capa dada. Se suministra el ID de la capa, que puede ser un <span class="notranslate">string</span> del nombre de la capa -como se define en el editor <span class="notranslate">room</span> - o el ID único de la capa -como devuelve la función <a href="../General_Layer_Functions/layer_get_id.htm"><span class="inline">layer_get_id()</span></a>así como la posición X e Y en el <span class="notranslate">room</span> para crear el <span class="notranslate">sequence</span>, y finalmente el ID del <span class="notranslate">sequence</span> a crear. El ID de <span class="notranslate">sequence</span> es la constante del nombre que se ha definido en el navegador <span class="notranslate">Asset</span> para el elemento <span class="notranslate">sequence</span>. La función devolverá el ID único del elemento <span class="notranslate">sequence</span>, que puede utilizarse en todas las funciones de capa posteriores para <span class="notranslate">sequences</span>, o puede utilizarse para recuperar la instancia <span class="notranslate">sequence</span> <span class="notranslate">struct</span> utilizando la función <a href="layer_sequence_get_sequence.htm"><span class="inline">layer_sequence_get_instance()</span></a>.</p>
   <p>Cabe destacar que si el <span class="notranslate">sequence</span> contiene alguna pista <span class="notranslate">object</span>, sus instancias se crearán en cuanto se cree el propio elemento <span class="notranslate">sequence</span>, independientemente de la posición de sus teclas <span class="notranslate">asset</span> en la <a href="../../../../../The_Asset_Editors/Sequence_Properties/Using_The_Dope_Sheet.htm">Hoja de Claves</a>. El controlador <span class="notranslate">Sequence</span> simplemente cambia la <a href="../../Instances/Instance_Variables/visible.htm">visibilidad</a> de la instancia para ocultarla y mostrarla dependiendo de la posición y duración de la tecla <span class="notranslate">asset</span> de la pista y <em>no </em>la crea y destruye repetidamente. Como resultado, las instancias ejecutarán sus eventos Create cuando se cree el elemento <span class="notranslate">sequence</span> y no cuando comiencen sus claves de activos.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">layer_sequence_create(layer_id, x, y, sequence_id)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_sequence_create</span>(layer_id, x, y, sequence_id)</p>
   <table>
     <tbody>
       <tr>

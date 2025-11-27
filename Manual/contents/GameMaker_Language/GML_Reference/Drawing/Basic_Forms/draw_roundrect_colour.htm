@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>dibujar_color_redondo</title>
+  <title>draw_roundrect_colour</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>dibujar_color_redondo</h1>
+  <h1><span data-field="title" data-format="default">draw_roundrect_colour</span></h1>
   <p>Con esta función puede dibujar un contorno de un rectángulo redondeado o un rectángulo redondeado relleno donde la posición (x1,y1) es la esquina superior izquierda y la posición (x2,y2) es la esquina inferior derecha. Si se rellena, puede definir los colores individuales para el centro y los bordes, y si estos colores no son los mismos, obtendrá un efecto de gradiente de uno a otro (los ajustes de color anulan el color base establecido con la función <a href="../Colour_And_Alpha/draw_set_colour.htm"><span class="inline">draw_set_colour()</span></a>Puede definir la precisión del dibujo de las esquinas con la función <a href="draw_set_circle_precision.htm"><span class="inline">draw_set_circle_precision()</span></a>pero las esquinas siempre se dibujan con un radio fijo. Si necesita cambiar el radio de las esquinas, deberá utilizar la función <a href="draw_roundrect_colour_ext.htm"><span class="inline">draw_roundrect_colour_ext()</span></a>. Tenga en cuenta que el rectángulo que se dibuja puede necesitar diferentes valores (+/-1 en la x, y, o en la anchura o la altura) para que se dibuje con las dimensiones deseadas debido a las diferencias entre las distintas plataformas soportadas.</p>
   <p class="note"><b>NOTA</b>: Si desea dibujar una forma utilizando un <span class="notranslate">shader</span>, debe tener en cuenta que la mayoría de los <span class="notranslate">shaders</span> esperan las siguientes entradas: <span class="notranslate">vertex</span> textura, color. Sin embargo, cuando se utiliza esta función, sólo se pasan datos de <span class="notranslate">vertex</span> y de color, por lo que el <span class="notranslate">shader</span> puede no dibujar nada (o dibujar algo pero no correctamente). Si necesitas dibujar formas de esta manera, entonces el <span class="notranslate">shader</span> debe ser personalizado teniendo esto en cuenta.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">draw_roundrect_colour(x1, y1, x2, y2, col1, col2, outline);</p>
+  <p class="code"><span data-field="title" data-format="default">draw_roundrect_colour</span>(x1, y1, x2, y2, col1, col2, outline);</p>
   <table>
     <tbody>
       <tr>

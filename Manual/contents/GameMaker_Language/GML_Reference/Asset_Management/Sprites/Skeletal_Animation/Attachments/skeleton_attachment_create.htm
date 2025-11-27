@@ -15,11 +15,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>skeleton_attachment_create</h1>
+  <h1><span data-field="title" data-format="default">skeleton_attachment_create</span></h1>
   <p>Cuando creas tu animación de esqueleto <span class="notranslate">sprite</span>, puedes asignar <i>ranuras de adición</i> y <i>aditamentos</i> para ir en ellas. Estos son simplemente imágenes que están separadas de la animación pero que cuando se adjuntan se mueven junto con el hueso al que están adjuntos. Normalmente asignarías estos adjuntos en tu programa de animación (<span class="notranslate">Spine</span>), pero con esta función puedes crear los tuyos propios en tiempo de ejecución usando un <span class="notranslate">sprite</span> <span class="notranslate">asset</span> de tu juego. la función requiere que le des un nombre al adjunto (como <span class="notranslate">string</span>) y luego establezcas el sprite_index y el image_index a usar, así como el origen x e y (que puede ser diferente al definido por el <span class="notranslate">sprite</span> en las propiedades de <span class="notranslate">sprite</span> ), y también puedes establecer cualquier transformación que desees que se aplique a la imagen cuando se adjunte. Si el archivo adjunto fue creado con éxito, la función devolverá <span class="inline">1</span> y si no lo fue (usted suministró un índice <span class="notranslate">sprite</span> inválido, o la base <span class="notranslate">sprite</span> no es un <span class="notranslate">Spine</span> <span class="notranslate">sprite</span>) entonces devolverá <span class="inline">-1</span>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">skeleton_attachment_create(name, sprite, ind, xorigin, yorigin, xscale, yscale, rot);</p>
+  <p class="code"><span data-field="title" data-format="default">skeleton_attachment_create</span>(name, sprite, ind, xorigin, yorigin, xscale, yscale, rot);</p>
   <table>
     <tbody>
       <tr>

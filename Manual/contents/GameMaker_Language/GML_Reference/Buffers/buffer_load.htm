@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>carga_del_buffer</title>
+  <title>buffer_load</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>carga_del_buffer</h1>
+  <h1><span data-field="title" data-format="default">buffer_load</span></h1>
   <p>Esta función se utiliza para cargar un <span class="notranslate">buffer</span> que se haya guardado previamente utilizando las funciones <a href="buffer_save.htm"><span class="inline">buffer_save()</span></a> así como cualquier archivo <a href="../../../Settings/Included_Files.htm" title="Included Files">incluido</a> o cargado externamente. Devolverá el ID de un nuevo buffer que es creado por la función como un &quot;grow&quot; <span class="notranslate">buffer</span> (ver <a href="buffer_create.htm">aquí</a>) con una alineación de bytes de 1. Este ID debe ser almacenado en una variable y utilizado en todas las llamadas posteriores a esta función <span class="notranslate">buffer</span>. Si la carga falla por cualquier razón, la función devolverá -1 y se mostrará un mensaje en la ventana de salida del compilador diciendo que la carga ha fallado.</p>
   <p class="note"><span class="note">NOTA</span> Es importante que elimines de la memoria cualquier recurso creado dinámicamente como éste cuando ya no lo necesites para evitar fugas de memoria, así que cuando termines con el <span class="notranslate">buffer</span> que has creado debes liberarlo de nuevo usando <a href="buffer_delete.htm"><span class="inline">buffer_delete()</span></a>.</p>
   <h2>Notas específicas de la plataforma</h2>
@@ -25,7 +25,7 @@
   <p> </p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">buffer_load(filename);</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_load</span>(filename);</p>
   <table>
     <tbody>
       <tr>
