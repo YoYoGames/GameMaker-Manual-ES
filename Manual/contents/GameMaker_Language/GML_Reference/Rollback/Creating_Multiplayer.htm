@@ -15,10 +15,10 @@
 </head>
 <body>
   <h1>Crear un juego multijugador</h1>
-  <p class="note">Esta página te guiará por los pasos detallados para crear tu primera partida multijugador.<br>
-    <br>
-    Para obtener información sobre el sistema de retroceso, lee <a data-xref="{title}" href="Rollback_System.htm">Sistema de retroceso</a>.<br>
-    <br>
+  <p class="note">Esta página te guiará por los pasos detallados para crear tu primera partida multijugador.<br />
+    <br />
+    Para obtener información sobre el sistema de retroceso, lee <a data-xref="{title}" href="Rollback_System.htm">Sistema de retroceso</a>.<br />
+    <br />
     Para detalles sobre todas las funciones de Rollback, lee <a data-xref="{title}" href="Rollback_Functions/Rollback_Functions.htm">Funciones de Rollback</a>.
   </p>
   <h2>Preparación del proyecto</h2>
@@ -26,8 +26,8 @@
   <p>Crea dos objetos:</p>
   <ul class="colour">
     <li><strong>obj_game</strong>: Esto gestionará su juego multijugador.</li>
-    <li><strong>obj_player</strong>: Este será tu jugador real <span class="notranslate">object</span>. Cada jugador conectado tendrá su propia instancia de este <span class="notranslate">object</span> que puede controlar.<br>
-      <br>
+    <li><strong>obj_player</strong>: Este será tu jugador real <span class="notranslate">object</span>. Cada jugador conectado tendrá su propia instancia de este <span class="notranslate">object</span> que puede controlar.<br />
+      <br />
       Asigna tu jugador <span class="notranslate">sprite</span> al jugador <span class="notranslate">object</span>.
     </li>
   </ul>
@@ -53,8 +53,8 @@
   <h2>Jugadores en movimiento</h2>
   <p>Las entradas son gestionadas por el sistema Rollback y se sincronizan automáticamente entre los jugadores.</p>
   <p>En su reproductor <span class="notranslate">object</span>, llame a <span class="inline"><a href="Rollback_Functions/rollback_get_input.htm">rollback_get_input()</a></span> para obtener un <span class="notranslate">struct</span> que contenga todas las entradas por defecto, que son las siguientes:</p>
-  <p class="note"><span class="inline"><strong>left</strong>, <strong>right</strong>, <strong>up</strong>, <strong>down</strong>, <strong>Z</strong>, <strong>X</strong>, <strong>C</strong>, <strong>space</strong></span><br>
-    <br>
+  <p class="note"><span class="inline"><strong>left</strong>, <strong>right</strong>, <strong>up</strong>, <strong>down</strong>, <strong>Z</strong>, <strong>X</strong>, <strong>C</strong>, <strong>space</strong></span><br />
+    <br />
     <em>Indican si la llave se mantiene.</em> <span class="inline">*<strong>_pressed</strong></span> <em>y </em><span class="inline">*<strong>_released</strong></span> <em>también se proporcionan variantes.</em>
   </p>
   <p>Para definir sus propias entradas, consulte <a data-xref="{title}" href="Defining_Inputs.htm">Definir entradas</a>.</p>

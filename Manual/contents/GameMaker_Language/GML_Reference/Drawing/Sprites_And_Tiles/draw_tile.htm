@@ -40,7 +40,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     Estas constantes se combinan con el valor del índice de <span class="notranslate">tile</span> para obtener los datos finales:</p>
   <p class="code">var tiledata = 8 | tile_rotate | tile_flip;</p>
   <p>El código anterior simplemente crea una variable local para almacenar los datos de mosaico para el <span class="notranslate">tile</span> con el índice de 8 en el <span class="notranslate">tile set</span>, y se gira y voltea. Esto puede ser usado para dibujar el <span class="notranslate">tile</span> en ese índice desde el <span class="notranslate">tile set</span> que especifiques. esto no está vinculado a ninguna capa de tilemap y el <span class="notranslate">tile</span> será dibujado en la profundidad de la capa de la instancia que está haciendo el dibujo, en la posición x/y que especifiques en el <span class="notranslate">room</span>. Ten en cuenta que también puedes establecer el marco a dibujar. Si el <span class="notranslate">tile</span> indexado es parte de un conjunto de animación, entonces puedes establecer el número de fotograma aquí (desde 0 hasta el número de fotogramas - 1) y el <span class="notranslate">tile</span> indexado será simplemente el indicador de qué <span class="notranslate">tile set</span> animado estás usando mientras que será el fotograma dado el que se dibuje. Si el <span class="notranslate">tile</span> no es parte de un conjunto animado, entonces el marco debe ser establecido en 0.</p>

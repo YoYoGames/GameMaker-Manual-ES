@@ -19,11 +19,11 @@
   <p><img>Los errores de ejecución son generalmente más serios que los de compilación, ya que significan que hay algo seriamente incorrecto en su código que ni el editor de código ni el compilador han podido detectar, y como tal debe prestar atención a todos esos errores. Cuando se produce uno, puede utilizar el botón <strong>Copiar</strong> de la ventana emergente para copiar el error en el portapapeles, que luego puede pegar en un archivo de texto (o donde sea) para futuras referencias.</p>
   <p>La estructura de este error es la siguiente:</p>
   <ul class="colour">
-    <li><img><br>
+    <li><img><br />
       Muestra el evento en el que se ha producido el error, así como la dirección <span class="notranslate">Object</span> (si procede).</li>
-    <li><img><br>
+    <li><img><br />
       Esto muestra el error real.  Por lo tanto, muestra el <em>alcance </em>del error y el tipo de error que es. El primer valor entre los paréntesis será el ID de la instancia que estaba ejecutando el código - o podría ser uno de los valores especiales listados en la tabla de abajo - y el segundo es un valor interno que <span data-keyref="GameMaker Name">GameMaker</span> utiliza para identificar errores y puede ser ignorado. En el caso de la imagen de arriba, está diciendo que la variable <span class="inline">_image</span> no ha sido establecida (es decir, no existe antes de ser accedida) en el <span class="notranslate">object</span> <span class="inline">obj_EA_DEMO_Control</span>.</li>
-    <li><img><br>
+    <li><img><br />
       Esto muestra el número de línea en la que se produce el error, así como un fragmento de código que muestra la posición. Ten en cuenta que esto no siempre es 100% preciso debido a la forma en que se compila el juego, pero debería ser suficiente para ayudarte a encontrar exactamente dónde está el problema.</li>
   </ul>
   <p>Como se ha mencionado anteriormente, algunos mensajes de error no identificarán el ámbito por un valor de ID de instancia, sino por un valor <em>negativo </em>. Estos valores pueden ser utilizados para precisar la naturaleza exacta del error y a qué se refiere con los siguientes valores posibles:</p>
@@ -264,7 +264,7 @@
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">With</span></td>
         <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">No se puede utilizar global en la declaración con</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Con</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Has intentado utilizar &quot;<span class="inline">global</span>&quot; como variable dentro de una sentencia &quot;<span class="inline">with</span>&quot;, es decir:<br>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Has intentado utilizar &quot;<span class="inline">global</span>&quot; como variable dentro de una sentencia &quot;<span class="inline">with</span>&quot;, es decir:<br />
           <span class="inline">with (global)<br />
                {<br />
                //do something;<br />
@@ -275,7 +275,7 @@
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">With</span></td>
         <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">No se puede utilizar local en la declaración con</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Con</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Has intentado utilizar &quot;<span class="inline">local</span>&quot; como variable dentro de una sentencia &quot;<span class="inline">with</span>&quot;, es decir:<br>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Has intentado utilizar &quot;<span class="inline">local</span>&quot; como variable dentro de una sentencia &quot;<span class="inline">with</span>&quot;, es decir:<br />
           <span class="inline">with (local)<br />
                {<br />
                //do something;<br />

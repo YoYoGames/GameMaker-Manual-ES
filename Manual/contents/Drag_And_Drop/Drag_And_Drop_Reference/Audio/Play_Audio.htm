@@ -45,7 +45,7 @@
       </tr>
       <tr>
         <td><span class="notranslate">Offset</span></td>
-        <td>El tiempo (en segundos) para establecer el punto de inicio (por defecto 0). Los valores más largos que la longitud del sonido dado se ignoran.<br>
+        <td>El tiempo (en segundos) para establecer el punto de inicio (por defecto 0). Los valores más largos que la longitud del sonido dado se ignoran.<br />
           El desplazamiento del activo de sonido (posición de la pista) se utiliza cuando este campo se deja en blanco.</td>
       </tr>
       <tr>
@@ -56,10 +56,10 @@
   </table>
   <p> </p>
   <h4>Ejemplo 1:</h4>
-  <p><img>El código del bloque de acción anterior comprueba si se pulsa el botón del ratón y, si se detecta, comprueba una variable global para ver si no es <span class="inline">true</span>. Si no es <span class="inline">true</span>, entonces se reproduce un sonido (y se pone en bucle) y la variable global se pone a <span class="inline">true</span>, de lo contrario el sonido se detiene y la variable global se pone a <span class="inline">false</span>.<br>
+  <p><img>El código del bloque de acción anterior comprueba si se pulsa el botón del ratón y, si se detecta, comprueba una variable global para ver si no es <span class="inline">true</span>. Si no es <span class="inline">true</span>, entonces se reproduce un sonido (y se pone en bucle) y la variable global se pone a <span class="inline">true</span>, de lo contrario el sonido se detiene y la variable global se pone a <span class="inline">false</span>.<br />
     El sonido se reproduce con los ajustes por defecto: un multiplicador de ganancia y de tono de 1 y un desplazamiento de 0 (el desplazamiento por defecto del sonido <span class="notranslate">asset</span>).</p>
   <h4>Ejemplo 2:</h4>
-  <p><img>El código del bloque de acción anterior establece primero la posición de la pista del sonido <span class="notranslate">asset</span> &quot;snd_MusicBoss&quot; a 20 segundos. A continuación, comprueba si la variable de instancia &quot;skip_intro&quot; está establecida en <span class="inline">true</span>. Si lo está, comienza a reproducir &quot;snd_MusicBoss&quot; a los 20 segundos, el valor de la posición de la pista establecido anteriormente (esto se debe a que el campo &quot;Offset&quot; se deja en blanco, por lo que se utiliza el offset <strong>del activo</strong> ). Los primeros 20 segundos del audio se saltan.<br>
+  <p><img>El código del bloque de acción anterior establece primero la posición de la pista del sonido <span class="notranslate">asset</span> &quot;snd_MusicBoss&quot; a 20 segundos. A continuación, comprueba si la variable de instancia &quot;skip_intro&quot; está establecida en <span class="inline">true</span>. Si lo está, comienza a reproducir &quot;snd_MusicBoss&quot; a los 20 segundos, el valor de la posición de la pista establecido anteriormente (esto se debe a que el campo &quot;Offset&quot; se deja en blanco, por lo que se utiliza el offset <strong>del activo</strong> ). Los primeros 20 segundos del audio se saltan.<br />
     Si la variable de instancia &quot;skip_intro&quot; se establece en <span class="inline">false</span>, también comienza a reproducirse &quot;snd_MusicBoss&quot; pero, como el &quot;Offset&quot; se ha establecido en 0, el sonido comenzará a reproducirse desde el principio. La posición de la pista de 20 segundos definida anteriormente para el <strong>activo de</strong> sonido se ignora.</p>
   <p> </p>
   <p> </p>

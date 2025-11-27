@@ -104,18 +104,18 @@
   <p class="note"><b>NOTA</b>: Lo único que <b>no se puede</b> hacer con la superficie de aplicación es liberarla. Siempre existe, aunque el valor del índice para acceder a ella puede cambiar.</p>
   <p>Cuando ejecutas tu juego, esta superficie se crea la primera vez que se llama al evento <a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">draw</a> en cada nuevo <span class="notranslate">room</span> que introduzcas, lo que significa que no se dibuja nada hasta ese momento. Sin embargo, todavía puedes obtener la posición de la superficie de la aplicación y redimensionarla en el evento de <b>creación</b> o en cualquier otro evento sin obtener ningún error y los valores utilizados serán relevantes para la superficie cuando sea creada. El actual <span class="notranslate">sequence</span> de eventos para la creación y dibujo de la superficie de aplicación es el siguiente:</p>
   <ul class="colour">
-    <li>Evento previo al sorteo<br>
+    <li>Evento previo al sorteo<br />
                --- &gt; <b>se crea la superficie de aplicación (si no existe) y se establece el objetivo de renderización</b></li>
     <li><b></b>Por cada puerto de vista visible, o, si no hay puertos de vista activos, una vez
       <ul class="colour">
         <li>Evento de inicio de sorteo</li>
         <li>Evento de sorteo</li>
-        <li>Evento de fin de sorteo<br>
+        <li>Evento de fin de sorteo<br />
                   --- &gt; <b>el objetivo de renderizado de la superficie de la aplicación se restablece aquí</b></li>
       </ul>
     </li>
-    <li><b></b>Evento posterior al sorteo<br>
-              --- &gt; <b>la superficie de la aplicación se dibuja ahora en el <a class="glossterm" data-glossterm="búfer de visualización" href="#">buffer de la pantalla</a> </b> por defecto <b><br>
+    <li><b></b>Evento posterior al sorteo<br />
+              --- &gt; <b>la superficie de la aplicación se dibuja ahora en el <a class="glossterm" data-glossterm="búfer de visualización" href="#">buffer de la pantalla</a> </b> por defecto <b><br />
                          (aunque puede </b> <span class="notranslate">switch</span> desactivar esto usando <span class="inline"><a href="application_surface_draw_enable.htm">application_surface_draw_enable()</a></span>)</li>
     <li><b></b>Evento de inicio de la GUI</li>
     <li>Evento GUI de dibujo</li>

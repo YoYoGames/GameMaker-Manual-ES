@@ -43,7 +43,7 @@
   <div class="droptext" data-targetname="drop-down2">
     <p class="dropspot">Los controles del lienzo se ocupan de varios aspectos de cómo se muestra el lienzo principal de dibujo y su contenido. Las opciones son:</p>
     <ul class="dropspotlist">
-      <li class="dropspot">Toggle Canvas Grid <img>: Esto activará/desactivará la cuadrícula del lienzo. Esta es una rejilla que <span data-keyref="GameMaker Name">GameMaker</span> dibuja sobre el lienzo principal para dividirlo en secciones, y por defecto se establece en 1px de tamaño. Sin embargo, si hace clic en el icono del menú de rejilla <img> abrirá las opciones de rejilla:<br>
+      <li class="dropspot">Toggle Canvas Grid <img>: Esto activará/desactivará la cuadrícula del lienzo. Esta es una rejilla que <span data-keyref="GameMaker Name">GameMaker</span> dibuja sobre el lienzo principal para dividirlo en secciones, y por defecto se establece en 1px de tamaño. Sin embargo, si hace clic en el icono del menú de rejilla <img> abrirá las opciones de rejilla:<br />
         <img>Estas opciones te permiten establecer el color y el alfa de la rejilla, así como los valores de las celdas para la rejilla a lo largo de los ejes X e Y. También tiene la opción de activar o desactivar el ajuste de la rejilla aquí (desactivado por defecto).
       </li>
       <li class="dropspot">Controles de zoom del lienzo <img>: Estos botones controlan el nivel de zoom del lienzo actual. Puede acercar o alejar el zoom y al hacer clic en el botón <img> se restablecerá el lienzo para que sea 1:1 con la imagen que se está editando. También puede hacer clic en el botón de ajuste de la ventana <img> para hacer que todo el lienzo de la imagen encaje dentro del editor actual <span class="notranslate">workspace</span> (esto ampliará o reducirá el zoom según corresponda para que encaje). Tenga en cuenta que también puede acercar y alejar la imagen utilizando los botones <img> / <img> y la rueda del ratón <img>, y pulsando <img> / <img> + <img> se ajustará el lienzo <span class="notranslate">room</span> para que sea 1:1 con la imagen.</li>
@@ -140,7 +140,7 @@
         <tr>
           <td class="icons"><img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /></td>
           <td class="icons"><strong>Texto</strong></td>
-          <td class="text"><br>
+          <td class="text"><br />
             Esta es la herramienta de entrada de texto. Crea una nueva capa de texto donde puedes escribir lo que necesites. Puede establecer el <span class="notranslate">font</span> a utilizar así como el formato desde la barra superior del editor de imágenes.</td>
         </tr>
         <tr>
@@ -208,22 +208,22 @@
       <li class="dropspot"><strong>Añadir marco</strong> - Añadir un nuevo marco a la <span class="notranslate">sprite</span>.</li>
       <li class="dropspot"><strong>Insertar fotograma</strong> - Inserta un nuevo fotograma después del que se está mostrando.</li>
       <li class="dropspot"><strong>Borrar fotogramas seleccionados</strong>: elimina el fotograma seleccionado de <span class="notranslate">sprite</span> (puede utilizar <img> / <img> + <img> y/o <img> + <img> para seleccionar varios fotogramas).</li>
-      <li class="dropspot"><strong>Importar imagen(es</strong> ) - Cargue una imagen que se utilizará como marco desde el disco. Tenga en cuenta que puede cargar varios marcos a la vez seleccionando varios archivos individuales para importar en la ventana del explorador. Una vez que haya seleccionado su archivo o archivos, se le mostrará la siguiente ventana de importación:<br>
+      <li class="dropspot"><strong>Importar imagen(es</strong> ) - Cargue una imagen que se utilizará como marco desde el disco. Tenga en cuenta que puede cargar varios marcos a la vez seleccionando varios archivos individuales para importar en la ventana del explorador. Una vez que haya seleccionado su archivo o archivos, se le mostrará la siguiente ventana de importación:<br />
         <img>Aquí puede elegir cómo debe añadirse la imagen importada a la actual <span class="notranslate">sprite</span>, permitiéndole cambiar el tamaño de todo el lienzo de dibujo, recortarlo o acolcharlo, y también establecer la posición de &quot;anclaje&quot; para colocar la(s) nueva(s) imagen(es).
       </li>
-      <li class="dropspot"><strong>Convertir en fotogramas</strong> - Esta opción convertirá una sola imagen en un número de fotogramas separados. Primero debe haber creado un único fotograma con todas las partes de la animación en él (o haber importado una única tira de imágenes) como la que se muestra a continuación:<br>
-        <img>Como se trata de una sola imagen y queremos convertirla en fotogramas individuales, podemos utilizar esta opción que abrirá la siguiente ventana:<br>
+      <li class="dropspot"><strong>Convertir en fotogramas</strong> - Esta opción convertirá una sola imagen en un número de fotogramas separados. Primero debe haber creado un único fotograma con todas las partes de la animación en él (o haber importado una única tira de imágenes) como la que se muestra a continuación:<br />
+        <img>Como se trata de una sola imagen y queremos convertirla en fotogramas individuales, podemos utilizar esta opción que abrirá la siguiente ventana:<br />
         <img>Aquí puede establecer cómo debe dividirse la imagen única para crear los fotogramas, estableciendo el número de fotogramas, la anchura y la altura de los mismos e incluyendo cualquier valor de desplazamiento.
       </li>
       <li class="dropspot"><strong>Importar tira de imágenes</strong> - Esta opción abrirá un explorador de archivos y le pedirá que busque un archivo de tira de imágenes único que se utilizará para crear marcos. Una vez seleccionada la imagen, se abrirá la ventana Importar tira, exactamente igual que la opción <strong>Convertir en marcos</strong> mostrada anteriormente.</li>
       <li class="dropspot"><strong>Exportar a PNG</strong> - Al seleccionar esta opción se exportará el <span class="notranslate">sprite</span> como una sola imagen <span class="inline">PNG</span>. Si el <span class="notranslate">sprite</span> tiene más de una imagen, se creará una &quot;tira&quot; <span class="notranslate">sprite</span> con todas las imágenes, una tras otra, y el nombre del archivo guardado se añadirá automáticamente con &quot;<span class="inline">_stripX</span>&quot;, donde &quot;<span class="inline">X</span>&quot; es el número de fotogramas exportados. Por ejemplo, un <span class="notranslate">sprite</span> de cinco fotogramas se exportará como &quot;<span class="inline">sprite_name_strip5.png</span>&quot;.</li>
-      <li class="dropspot"><strong>Redimensionar todos los fotogramas</strong> - Al seleccionar esta opción se abrirá la siguiente ventana en la que puedes establecer la forma en que quieres redimensionar todos los fotogramas de la animación que componen el sprite:<br>
-        <img>Puedes elegir entre <strong>escalar </strong>la imagen o <strong>redimensionar</strong> el lienzo. Si eliges escalar la imagen, sólo tienes que seleccionar la nueva anchura y/o altura de cada fotograma, si quieres escalar utilizando la misma relación de aspecto, y también si quieres escalar en píxeles o en porcentaje. Tenga en cuenta que al escalar puede activar o desactivar <a class="glossterm" data-glossterm="interpolación lineal" href="#">la interpolación lineal</a>, que hará que los píxeles se desdibujen o se &quot;emborronen&quot; a medida que se escala la imagen (en general, para el arte de alta resolución se quiere <em>activar</em> esto, pero para el arte de píxeles se quiere <em>desactivar</em>).<br>
-        <br>
+      <li class="dropspot"><strong>Redimensionar todos los fotogramas</strong> - Al seleccionar esta opción se abrirá la siguiente ventana en la que puedes establecer la forma en que quieres redimensionar todos los fotogramas de la animación que componen el sprite:<br />
+        <img>Puedes elegir entre <strong>escalar </strong>la imagen o <strong>redimensionar</strong> el lienzo. Si eliges escalar la imagen, sólo tienes que seleccionar la nueva anchura y/o altura de cada fotograma, si quieres escalar utilizando la misma relación de aspecto, y también si quieres escalar en píxeles o en porcentaje. Tenga en cuenta que al escalar puede activar o desactivar <a class="glossterm" data-glossterm="interpolación lineal" href="#">la interpolación lineal</a>, que hará que los píxeles se desdibujen o se &quot;emborronen&quot; a medida que se escala la imagen (en general, para el arte de alta resolución se quiere <em>activar</em> esto, pero para el arte de píxeles se quiere <em>desactivar</em>).<br />
+        <br />
         La opción de cambiar el tamaño del lienzo no alterará los píxeles dentro de la imagen, sino que aumentará o disminuirá el tamaño del lienzo en el que se dibujan las imágenes. Puede establecer dónde debe estar el &quot;ancla&quot; para el cambio de tamaño utilizando los iconos de flecha, y luego establecer el nuevo tamaño (en píxeles o como un porcentaje), así como establecer si se mantiene la relación de aspecto de los marcos originales. Tenga en cuenta que al hacer el marco más pequeño que las imágenes originales de <span class="notranslate">sprite</span> se recortarán los píxeles.
       </li>
       <li class="dropspot"><strong>Recortar todos los fotogramas a la selección</strong> - Esta opción sólo estará disponible cuando tengas un área de la imagen seleccionada en el lienzo principal de dibujo. Cuando elija esta opción, la imagen que se está editando (y todos los demás fotogramas de la animación) se recortará a los límites de la selección.</li>
-      <li class="dropspot"><strong>Recorte automático de todos los fotogramas</strong> - Esta opción le permite recortar todos los píxeles alfa cero de los bordes de un <span class="notranslate">sprite</span>. Esto tendrá en cuenta todos los fotogramas de la imagen dentro del <span class="notranslate">sprite</span>, por lo que cada lado se recortará hasta el borde del fotograma que tenga el píxel alfa más lejano que no sea cero.<br>
+      <li class="dropspot"><strong>Recorte automático de todos los fotogramas</strong> - Esta opción le permite recortar todos los píxeles alfa cero de los bordes de un <span class="notranslate">sprite</span>. Esto tendrá en cuenta todos los fotogramas de la imagen dentro del <span class="notranslate">sprite</span>, por lo que cada lado se recortará hasta el borde del fotograma que tenga el píxel alfa más lejano que no sea cero.<br />
         <img>
       </li>
       <li class="dropspot"><strong>Invertir fotogramas</strong> - Al seleccionar esta opción, simplemente se invertirá el orden de los fotogramas en <span class="notranslate">sprite</span>.</li>
@@ -241,7 +241,7 @@
       <li class="dropspot"><strong>1:1</strong> - Escala la imagen para que sea 1:1 con la resolución (es decir: tamaño real) y la centra en la ventana de edición de la imagen.</li>
       <li class="dropspot"><strong>Ajustar a la pantalla</strong> - Escala la imagen para llenar la ventana de edición de imágenes.</li>
       <li class="dropspot"><strong>Mostrar cuadrícula</strong> - Activa la cuadrícula de píxeles. Es lo mismo que el botón de rejilla que se encuentra en los controles del lienzo (explicado más arriba en esta página).</li>
-      <li class="dropspot"><strong>Configuración</strong> de la piel de cebolla - Cambia la configuración de la piel de cebolla. Esto abrirá la siguiente ventana en la que puede establecer los marcos mostrados por el botón de piel de cebolla, así como la opacidad y el color de los marcos con piel.<br>
+      <li class="dropspot"><strong>Configuración</strong> de la piel de cebolla - Cambia la configuración de la piel de cebolla. Esto abrirá la siguiente ventana en la que puede establecer los marcos mostrados por el botón de piel de cebolla, así como la opacidad y el color de los marcos con piel.<br />
         <img>
       </li>
     </ul>
@@ -251,10 +251,10 @@
   <div class="droptext" data-targetname="drop-down11">
     <p class="dropspot"><img>El menú Efectos es donde puedes añadir tus propios plugins de efectos personalizados, y tiene los siguientes efectos por defecto:</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Desenfoque - </strong> Aplica un efecto de desenfoque a la imagen. Puede establecer la intensidad así como el tipo de desenfoque a utilizar (caja o gaussiano) y establecer si sólo se desenfoca a lo largo del eje horizontal o vertical, o a lo largo de ambos. También puede elegir si desea aplicarlo sólo a la capa actual, a las capas visibles o a todas las capas.<br>
+      <li class="dropspot"><strong>Desenfoque - </strong> Aplica un efecto de desenfoque a la imagen. Puede establecer la intensidad así como el tipo de desenfoque a utilizar (caja o gaussiano) y establecer si sólo se desenfoca a lo largo del eje horizontal o vertical, o a lo largo de ambos. También puede elegir si desea aplicarlo sólo a la capa actual, a las capas visibles o a todas las capas.<br />
         <img>
       </li>
-      <li class="dropspot"><strong>Escala de grises - </strong> Desaturar la imagen en una cantidad determinada. Puede elegir aplicar esto sólo a la capa actual, a las capas visibles o a todas las capas.<br>
+      <li class="dropspot"><strong>Escala de grises - </strong> Desaturar la imagen en una cantidad determinada. Puede elegir aplicar esto sólo a la capa actual, a las capas visibles o a todas las capas.<br />
         <img>
       </li>
     </ul>
