@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_destroy</h1>
+  <h1><span data-field="title" data-format="default">instance_destroy</span></h1>
   <p>Se llama a esta función cada vez que se desea &quot;destruir&quot; una instancia, normalmente activando un <a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Evento de Destrucción</a> y también un <a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Evento de Limpieza</a>. Esto la eliminará de <span class="notranslate">room</span> hasta que se reinicie <span class="notranslate">room</span> (a menos que <span class="notranslate">room</span> sea persistente). Llamar a la función sin argumentos simplemente destruirá la instancia que está actualmente en el ámbito y ejecutando el código, pero puedes proporcionar un argumento opcional &quot;id&quot; y apuntar a una instancia específica usando el valor de la instancia <span class="inline"><a href="Instance_Variables/id.htm">id</a></span>, o puedes apuntar a todas las instancias de un <span class="notranslate">object</span> particular usando un argumento <a href="../Objects/object_index.htm"><span class="inline">object_index</span></a>. Por ejemplo:</p>
   <p class="code">instance_destroy(other);      // destroy the &quot;other&quot; instance in a Collision Event<br />
     instance_destroy(obj_Bullet); // destroy ALL instances of the object &quot;obj_Bullet&quot;</p>
@@ -28,7 +28,7 @@
   <p>La variable &quot;score&quot; se incrementará <i>aunque la función <span class="inline">instance_destroy</span> haya sido llamada</i>, y la instancia será finalmente eliminada de tu juego al final del evento. Ten cuidado con esto, ya que si (por ejemplo) has creado un recurso dinámico para la instancia, como una estructura de datos, y luego has destruido ese recurso en el evento de destrucción, si hay alguna referencia a él después de que se haya realizado la función o acción de destrucción, entonces obtendrás un error de &quot;recurso desconocido&quot;, ya que el evento de destrucción lo eliminó del juego.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">instance_destroy([id, execute_event_flag]);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_destroy</span>([id, execute_event_flag]);</p>
   <table>
     <tbody>
       <tr>

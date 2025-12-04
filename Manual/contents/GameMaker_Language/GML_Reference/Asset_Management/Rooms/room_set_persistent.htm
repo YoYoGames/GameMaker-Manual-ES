@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>room_set_persistent</h1>
+  <h1><span data-field="title" data-format="default">room_set_persistent</span></h1>
   <p>Con esta función puedes cambiar (o establecer) la persistencia de cualquier <span class="notranslate">room</span> en tu juego <i>excepto el actual</i>. Un <span class="notranslate">room</span> con persistencia marcada como <span class="inline">true</span> mantendrá el estado de todas las instancias dentro de ese <span class="notranslate">room</span> si el jugador sale y luego regresa, mientras que si la persistencia está marcada como <span class="inline">false</span> se restablecerá el estado inicial cada vez. Debes tener en cuenta que un <span class="notranslate">room</span> persistente utiliza considerablemente más memoria que un <span class="notranslate">room</span> normal y no es recomendable tener demasiados en tu juego.</p>
   <p class="note"><b>NOTA</b>: Esta función <b>NO</b> funcionará para desactivar la persistencia de <span class="notranslate">switch</span> si el <span class="notranslate">room</span> ya ha sido visitado. Un <span class="notranslate">room</span> persistente, una vez visitado, se mantiene en la memoria y para <span class="notranslate">switch</span> desactivar la persistencia debe ir a ese <span class="notranslate">room</span> y establecer la variable <span style="font-size:1px;"><a href="room_persistent.htm"><span class="inline">room_persistent</span></a></span> variable a <span class="inline">false</span> y luego salir de nuevo de <span class="notranslate">room</span>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">room_set_persistent(index, val);</p>
+  <p class="code"><span data-field="title" data-format="default">room_set_persistent</span>(index, val);</p>
   <table>
     <tbody>
       <tr>

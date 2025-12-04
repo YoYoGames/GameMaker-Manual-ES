@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_set_alpha_from_sprite</h1>
+  <h1><span data-field="title" data-format="default">sprite_set_alpha_from_sprite</span></h1>
   <p>Esta función utiliza el valor/saturación de un <span class="notranslate">sprite</span> y lo multiplica por el alfa del objetivo <span class="notranslate">sprite</span>. Lo ideal es que el <span class="notranslate">sprite</span> que se utiliza para generar el nuevo mapa alfa sea de escala de grises, con las áreas blancas con un valor alfa equivalente a 1 (opaco), las áreas negras con un valor alfa equivalente a 0 (transparente), y las áreas grises con un alfa entre 0 y 1. El <span class="notranslate">sprite</span> del que se establece el alfa <i>no puede ser un recurso permanente</i>, ni tampoco el <span class="notranslate">sprite</span> que se utiliza para establecer el alfa, ya que dará un error. Esto significa que debe crear dos <span class="notranslate">sprites</span> completamente nuevos &quot;sobre la marcha&quot; de alguna manera para que la función funcione correctamente. Esto puede lograrse utilizando superficies, o creando un <span class="notranslate">sprite</span> desde la pantalla (el ejemplo de código que sigue muestra cómo puede lograrse el efecto con superficies).</p>
   <p class="note"><b>NOTA</b>: Esta función sólo es útil para el <b>mapa de bits</b> <span class="notranslate">sprites</span> y no funcionará con SWF o JSON (<span class="notranslate">Spine</span>) <span class="notranslate">sprites</span>.</p>
   <p>A continuación se muestra una imagen que ilustra cómo funciona esta función:</p>
   <p><img alt="Sprite Set Alpha Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_alpha.png" /></p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">sprite_set_alpha_from_sprite(ind, spr);</p>
+  <p class="code"><span data-field="title" data-format="default">sprite_set_alpha_from_sprite</span>(ind, spr);</p>
   <table>
     <tbody>
       <tr>

@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_blendmode_ext</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_blendmode_ext</span></h1>
   <p>Cuando <span data-keyref="GameMaker Name">GameMaker</span> va a dibujar un píxel hay un color de origen (el color del píxel que vamos a dibujar) y un color de destino (el color que ya está en el píxel que estamos dibujando), por lo que al determinar el nuevo color del píxel, los colores de origen y destino se calculan de acuerdo con el modo de mezcla elegido. Cada componente de los colores se almacena como un valor de punto flotante entre 0 y 1, y el nuevo color se calcula multiplicando cada componente del color de origen por algún factor y multiplicando cada componente del color de destino por algún otro factor y luego sumando los resultados componente por componente.</p>
   <p>Esta función permite establecer los diferentes componentes que deben ser factorizados para crear un modo de mezcla personalizado. Tanto el origen como el destino tienen un componente rojo, verde, azul y alfa, y en el siguiente cuadro se consideran los RGBA del origen (Rs, Gs, Bs, As) mientras que los del destino son (Rd, Gd, Bd, Ad). Las once constantes que se pueden utilizar pueden ser de origen o de destino (o ambas) cuando se utilizan en esta función.</p>
   <table>
@@ -89,7 +89,7 @@
   </ul>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">gpu_set_blendmode(src, dest);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_set_blendmode_ext</span>(src, dest);</p>
   <table>
     <tbody>
       <tr>

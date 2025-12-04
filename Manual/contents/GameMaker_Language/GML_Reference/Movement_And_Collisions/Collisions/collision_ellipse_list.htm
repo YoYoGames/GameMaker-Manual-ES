@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>lista_de_colisión_de_elipso</title>
+  <title>collision_ellipse_list</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>lista_de_colisión_de_elipso</h1>
+  <h1><span data-field="title" data-format="default">collision_ellipse_list</span></h1>
   <p>Esta función es la misma que la función <a href="collision_ellipse.htm"><span class="inline">collision_ellipse()</span></a> sólo que en lugar de detectar una instancia en colisión a la vez, detectará múltiples instancias. Usted suministra las posiciones x/y de la parte superior izquierda e inferior derecha del área elíptica a comprobar junto con la <span class="notranslate">object</span> a comprobar, y puede establecer que la comprobación sea precisa (en cuyo caso todas las instancias que se comprueben deberán tener máscaras de colisión <i>precisas</i> ) y si la comprobación debe incluir la instancia que llama o no.</p>
   <p>También se suministra una lista <a href="../../Data_Structures/DS_Lists/DS_Lists.htm">DS</a>, por lo que los <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><span class="inline">id</span></a> de cualquier instancia que colisione con la instancia que llama se añadirá al final de la lista dada. Puedes <a href="../../Data_Structures/DS_Lists/ds_list_clear.htm">borrar</a> la lista antes de llamar a esta función para que sólo contenga los resultados de esta llamada a la función. También tiene la opción de ordenar las instancias en base a sus distancias desde el origen del área elíptica a sus orígenes. La función devuelve el número de instancias encontradas, o 0 si no se encuentra ninguna.</p>
   <p>Tenga en cuenta que en lugar de un índice <span class="notranslate">object</span> puede suministrar la <a href="../../../GML_Overview/Instance_Keywords.htm">palabra clave de instancia</a> <span class="inline">all</span>, para buscar todas las instancias en el <span class="notranslate">room</span> actual, que puede incluir la instancia que ejecuta el código (dependiendo del argumento <span class="inline">notme</span> ).</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">collision_ellipse_list(x1, y1, x2, y2, obj, prec, notme, list, ordered);</p>
+  <p class="code"><span data-field="title" data-format="default">collision_ellipse_list</span>(x1, y1, x2, y2, obj, prec, notme, list, ordered);</p>
   <table>
     <tbody>
       <tr>

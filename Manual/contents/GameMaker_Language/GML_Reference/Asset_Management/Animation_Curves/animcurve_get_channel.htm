@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>animcurve_get_channel</h1>
+  <h1><span data-field="title" data-format="default">animcurve_get_channel</span></h1>
   <p>Esta función devolverá la <a href="../../../GML_Overview/Structs.htm">estructura</a> que contiene los datos del canal especificado en un <span class="notranslate">animation curve</span> <span class="notranslate">asset</span>. Usted suministra el ID de <span class="notranslate">animation curve</span> o <span class="notranslate">struct</span> así como el nombre o índice del canal, y la función devolverá un <span class="notranslate">struct</span> con el siguiente formato:</p>
   <table>
     <colgroup>
@@ -51,7 +51,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     El ID de <span class="notranslate">animation curve</span> es el nombre del <span class="notranslate">animation curve</span> tal y como se definió en el navegador <span class="notranslate">Asset</span>, o el puntero <span class="notranslate">struct</span> devuelto por la función <a href="animcurve_create.htm"><span class="inline">animcurve_create()</span></a>. El nombre del canal es un <span class="notranslate">string</span> que se refiere al canal tal y como fue definido en la Curva de Animación <span class="notranslate">asset</span>, o puede suministrar un valor de índice, que va de 0 a <i>n</i>, donde <i>n</i> es el último canal de la curva <span class="notranslate">asset</span> (por ejemplo: si un <span class="notranslate">animation curve</span> tiene 4 canales, serán indexados de 0 a 3). Tenga en cuenta que pasar un valor de índice requerirá menos procesamiento que pasar un nombre de canal. Si la función falla (es decir, no existe ningún canal con el nombre o el índice dado), obtendrá un error.</p>
   <p>Los puntos de un mismo canal se almacenan como <span class="notranslate">structs</span> en una <a href="../../../GML_Overview/Arrays.htm">matriz</a>, donde cada elemento de la matriz es un único punto <span class="notranslate">struct</span>. El punto <span class="notranslate">struct</span> tiene las siguientes variables:</p>
   <table>
@@ -76,7 +76,7 @@
   <p> </p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">animcurve_get_channel(curve_struct_or_id, channel_name_or_index);</p>
+  <p class="code"><span data-field="title" data-format="default">animcurve_get_channel</span>(curve_struct_or_id, channel_name_or_index);</p>
   <table>
     <tbody>
       <tr>

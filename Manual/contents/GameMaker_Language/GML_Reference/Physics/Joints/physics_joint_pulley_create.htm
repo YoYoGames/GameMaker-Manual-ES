@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_joint_pulley_create</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_pulley_create</span></h1>
   <p>La articulación de polea se utiliza para conectar dos instancias dentro del mundo de la física de tal manera que el movimiento de una influya directamente en el movimiento de la otra. Estas articulaciones se anclan primero en el espacio del mundo en dos puntos, cada uno conectado a una instancia en su centro de masa. Esto puede cambiarse estableciendo las coordenadas locales de anclaje x/y en relación con el origen de la instancia, lo que significa que la conexión real de la instancia al punto de anclaje del mundo de la física puede desplazarse a otro lugar distinto de su origen. La siguiente imagen ilustra esto:</p>
   <p><img>Si se observa la instancia 2 se puede ver que su punto de anclaje local ha sido desplazado 20 píxeles a la &quot;izquierda&quot; de su origen (¡Recuerde! Los puntos de anclaje mundiales se definen utilizando las coordenadas de <span class="notranslate">room</span>, mientras que los puntos de anclaje locales se definen en relación con el origen de la instancia). También puede especificar una relación para la articulación de la polea, que indica que un lado o el otro se mueven más rápido, con un valor por debajo de 1 que hace que la primera instancia se mueva más rápido (por ejemplo, 0,5 hará que se mueva el doble de rápido) y un valor por encima de 1 que hace que la segunda instancia se mueva más rápido (por ejemplo, 2 hará que se mueva el doble de rápido).</p>
   <p>Al igual que con todas las articulaciones, si se establece el valor &quot;col&quot; a <span class="inline">true</span> entonces las dos instancias pueden interactuar y colisionar entre sí, pero <i>sólo</i> si tienen eventos de colisión, sin embargo, si se establece a <span class="inline">false</span>, no van a colisionar no importa qué.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">physics_joint_pulley_create(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, l_anchor1_x, l_anchor1_y, l_anchor2_x, l_anchor2_y, ratio, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_pulley_create</span>(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, l_anchor1_x, l_anchor1_y, l_anchor2_x, l_anchor2_y, ratio, col)</p>
   <table>
     <tbody>
       <tr>

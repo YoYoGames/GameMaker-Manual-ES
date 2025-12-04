@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_start_recording</h1>
+  <h1><span data-field="title" data-format="default">audio_start_recording</span></h1>
   <p>Esta función iniciará la grabación de audio desde la fuente de grabación indexada. Puede obtener el número de fuentes de grabación utilizando la función <a href="audio_get_recorder_count.htm"><span class="inline">audio_get_recorder_count()</span></a>, y una vez que comience a grabar el audio se almacenará en un <span class="notranslate">buffer</span> temporal y comenzará a disparar un <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Recording.htm">Evento Asíncrono de Grabación de Audio</a>. Este evento se dispara a cada paso que se produce la grabación y creará el <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">mapa</a> especial <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">DS</a> en la variable <a href="../../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> con los siguientes pares clave/valor:</p>
   <ul class="colour">
     <li>&quot;<strong>buffer_id</strong>&quot; - el ID del <span class="notranslate">buffer</span> temporal que puede utilizar para recuperar los datos de audio</li>
@@ -26,7 +26,7 @@
   <p class="note"><b><span class="note">NOTA</span> </b>La mayoría de las plataformas admiten la grabación de audio de alguna forma, pero eso no significa que todos los dispositivos lo permitan, aunque la plataforma lo haga, por lo que siempre debe comprobar que la función <span style="font-size:1px;"><a href="audio_get_recorder_count.htm"><span class="inline">audio_get_recorder_count()</span></a></span> devuelva un valor superior a 0 para verificar que los dispositivos de grabación están disponibles antes de utilizar el resto de las funciones de grabación.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">audio_start_recording(recorder_index);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_start_recording</span>(recorder_index);</p>
   <table>
     <tbody>
       <tr>

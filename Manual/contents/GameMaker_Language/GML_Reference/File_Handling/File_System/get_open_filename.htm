@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>get_open_filename</h1>
+  <h1><span data-field="title" data-format="default">get_open_filename</span></h1>
   <p>Esta función abre un diálogo y pide al jugador un nombre de archivo para abrirlo con el filtro dado. El filtro tiene la forma &quot;<i>nombre1|máscara1|nombre2|máscara2|...</i>&quot;, donde la máscara puede contener las diferentes opciones con un punto y coma entre ellas y también se puede utilizar un &quot;*&quot; para significar cualquier <span class="notranslate">string</span>. Por ejemplo: &quot;<i>bitmaps|*.bmp;*.wmf</i>&quot;, pediría al usuario que seleccionara el nombre de un archivo de mapa de bits del sistema, pero sólo aquellos que tengan los dos <span class="notranslate">extensions</span> especificados (<span class="inline">bmp</span> y <span class="inline">png</span>). ¡esta función <b>no</b> abre el archivo en sí! Sólo devuelve un <span class="notranslate">string</span> con el nombre completo y <span class="notranslate">path</span> del archivo. Si el usuario pulsa &quot;<b>Cancelar</b>&quot; se devuelve un <span class="notranslate">string</span> vacío.</p>
   <p>Una cosa importante a tener en cuenta cuando se utiliza esta función es que le otorga ciertos permisos para ese archivo, durante la duración de su juego. Por lo tanto, una vez que obtengas el archivo <span class="notranslate">path</span> del usuario, podrás acceder a él una y otra vez sin tener que pedirlo. Sin embargo, como esta función es para leer un archivo, los permisos concedidos son <i>sólo para leer</i> y guardar no serán permitidos por el sistema operativo. Si necesita leer y escribir en el archivo, puede obtener el permiso utilizando la función <a href="get_save_filename.htm"><span class="inline">get_save_filename()</span></a>.</p>
   <p class="note"><b>NOTA</b>: Esta función sólo es válida en los objetivos <span class="notranslate">Windows</span> y <span class="notranslate">macOS</span>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">get_open_filename(filter, fname);</p>
+  <p class="code"><span data-field="title" data-format="default">get_open_filename</span>(filter, fname);</p>
   <table>
     <tbody>
       <tr>

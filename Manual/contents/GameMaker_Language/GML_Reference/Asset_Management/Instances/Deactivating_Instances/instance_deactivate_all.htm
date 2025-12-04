@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_deactivate_all</h1>
+  <h1><span data-field="title" data-format="default">instance_deactivate_all</span></h1>
   <p>Esta función desactivará <b>todas las</b> instancias que estén en el <span class="notranslate">room</span> en el momento en que se ejecute el código. Esto puede incluir la instancia que ejecuta el código si el &quot;notme&quot; <span class="notranslate">flag</span> se establece en <span class="inline">false</span>, pero normalmente se querrá que esa instancia esté activa, en cuyo caso el &quot;notme&quot; <span class="notranslate">flag</span> debe establecerse en <span class="inline">true</span>. Tenga en cuenta que la desactivación no es instantánea, y una instancia que ha sido desactivada de esta manera no se considerará inactiva hasta el final del evento en el que se llamó a la función.</p>
   <p class="note"><b>NOTA</b>: Si desactiva una instancia al iniciar <span class="notranslate">room</span> (es decir, desde el código de creación de <span class="notranslate">room</span>, o desde un evento de creación de una instancia dentro de <span class="notranslate">room</span>) todas las instancias que se coloquen dentro de <span class="notranslate">room</span> desde el editor de <span class="notranslate">room</span> <b>seguirán ejecutando su evento de creación</b> antes de ser desactivadas.</p>
   <p class="note"><b></b><b>ADVERTENCIA</b>: Desactivar las instancias que tienen la física activada <b>NO</b> impedirá que sus accesorios interactúen dentro de la simulación de la física. Para ello, debe establecer su variable <span style="font-size:1px;"><a href="../../../Physics/Physics_Variables/phy_active.htm"><span class="inline">phy_active</span></a></span> a <span class="inline">true</span> o <span class="inline">false</span> al activar/desactivar las instancias.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">instance_deactivate_all(notme);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_deactivate_all</span>(notme);</p>
   <table>
     <tbody>
       <tr>

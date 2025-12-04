@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>guardar_juego</title>
+  <title>game_save</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>guardar_juego</h1>
+  <h1><span data-field="title" data-format="default">game_save</span> <span data-conref="..\..\..\assets\snippets\Tag_deprecated.hts"> </span></h1>
   <p>Esta es una función heredada que puede ser usada para guardar el estado actual del juego, y no se recomienda su uso. Utiliza en su lugar las <a href="../File_Handling/File_Handling.htm">funciones de Archivo</a> para crear un sistema de guardado personalizado en el que sólo guardes y cargues datos específicos del juego.</p>
   <p>Esta función guardará el estado del juego tal y como está, sin embargo no guardará ningún recurso dinámico que se esté utilizando en ese momento, como <span class="notranslate">data structures</span>, superficies, <span class="notranslate">assets</span> añadido en <span class="notranslate">runtime</span>, etc. Si se carga un archivo guardado de este tipo, cualquier actualización del juego que se haya realizado después del guardado no será visible, ya que se restaurará la versión del juego que se utilizó para crear el guardado.</p>
   <p>Tenga en cuenta que los archivos de guardado creados con esta función pueden no ser compatibles con las versiones actualizadas <a class="glossterm" data-glossterm="Tiempo de ejecución" href="#">del Runtime</a>, por lo que es esencial sustituir esta función por un nuevo sistema de guardado para garantizar la compatibilidad con las futuras actualizaciones de <span class="notranslate">GameMaker</span> y, por las razones indicadas anteriormente, con las actualizaciones realizadas en su propio juego.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">game_save(filename);</p>
+  <p class="code"><span data-field="title" data-format="default">game_save</span>(filename);</p>
   <table>
     <tbody>
       <tr>

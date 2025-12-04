@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_set_visible</h1>
+  <h1><span data-field="title" data-format="default">layer_set_visible</span></h1>
   <p>Con esta función puede alternar la visibilidad de una capa. Se suministra el ID de la capa (que se obtiene al crear la capa con <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) o el nombre de la capa (como <span class="notranslate">string</span> - esto tendrá un impacto en el rendimiento) así como el valor de conmutación para la capa donde visible es <span class="inline">true</span> e invisible es <span class="inline">false</span>.</p>
   <p>Cuando una capa es invisible, no se dibujará nada de lo que esté asignado a la capa, y si hay alguna instancia asignada a la capa, ni siquiera se ejecutará su evento de dibujo (lo mismo que si se establece la variable de instancia <span class="inline">visible</span> a <span class="inline">false</span>). Ten en cuenta que las instancias que ya están marcadas como invisibles <i>no</i> serán marcadas como visibles si la capa en la que están se establece como visible, ya que son dos configuraciones independientes, aunque su comportamiento es el mismo.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">layer_set_visible(layer_id, visible)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_set_visible</span>(layer_id, visible)</p>
   <table>
     <tbody>
       <tr>

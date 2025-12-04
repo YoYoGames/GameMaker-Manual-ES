@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_world_draw_debug</h1>
+  <h1><span data-field="title" data-format="default">physics_world_draw_debug</span></h1>
   <p>Esta función dibujará una representación del sistema de física del mundo de <span class="notranslate">room</span> para ayudar con <span class="notranslate">debugging</span> cuando tengas problemas para que la escena de física funcione correctamente. A veces el problema puede estar en la parte de renderizado de tu juego, por ejemplo un <span class="notranslate">sprite</span> puede ser dibujado en la posición o rotación equivocada, dando la apariencia de una física incorrecta, o puede ser que tus cálculos no sean correctos. En cualquier caso, esta función te ayudará a encontrar y resolver el problema dibujando lo que ocurre en tu sistema de física. Para hacer esto, necesitas decirle qué parte del sistema dibujar, y esto se hace pasando un valor creado a partir de los bits almacenados en varias constantes &quot;flag&quot;:</p>
   <table>
     <colgroup>
@@ -66,7 +66,7 @@
   <p><img>Como puede ver con el código anterior, sólo se dibujan en la pantalla las formas y los centros de masa (así como los colores que representan sus estados - para más información consulte la documentación de Box 2D en línea). De la misma manera puedes mostrar más, o incluso todas, las constantes que desees depurar... ¡Simplemente &quot;o&quot; todas juntas! Hay que tener en cuenta una cosa más - esta función debe ser llamada <i>sólo</i> en el evento de dibujar de una instancia que tenga una profundidad inferior a las que desea depurar o de lo contrario no podrá ver la información de depuración.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">physics_world_draw_debug(flag)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_world_draw_debug</span>(flag)</p>
   <table>
     <tbody>
       <tr>

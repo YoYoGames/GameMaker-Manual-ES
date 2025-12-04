@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_apply_local_impulse</h1>
+  <h1><span data-field="title" data-format="default">physics_apply_local_impulse</span></h1>
   <p>No sólo puedes aplicar fuerza y gravedad a un <span class="notranslate">object</span> con la física de <span data-keyref="GameMaker Name">GameMaker</span>, sino que también puedes aplicar un impulso. Esto es ligeramente diferente a una fuerza en el sentido de que cuando se aplica afectará <i>inmediatamente</i> la velocidad, y, potencialmente el par (o &quot;giro&quot;) del <span class="notranslate">object</span>, particularmente si el punto elegido para aplicar el impulso tiene un vector que no está alineado con el centro de masa (nota: ¡el centro de masa <i>no es necesariamente</i> el mismo que el origen!). Esta función aplica un impulso <i>localmente</i> a una instancia. Lo que esto significa es que la fuerza y la dirección del impulso se calculan basándose en el origen (o la posición si no tiene <span class="notranslate">sprite</span>) de la instancia, sin tener en cuenta la dirección o la rotación que pueda tener en el juego <span class="notranslate">room</span> o en el mundo de la física. He aquí una ilustración:</p>
   <p><img>Como puedes ver, la rana de la imagen recibe un impulso desde abajo para hacerla &quot;saltar&quot;. El impulso exacto está definido por el vector que obtenemos de las componentes ximpulso/yimpulso en relación con las coordenadas xpos/ypos -lo que significa simplemente que el impulso se calcula como la distancia de xpos/ypos a ximpulso/yimpulso en Newtons, y la dirección es el ángulo que obtenemos de xpos/ypos a ximpulso/yimpulso.</p>
   <p class="note"><b>NOTA</b>: El mundo de la física utiliza metros para todos sus cálculos, y la proporción de píxeles por metro se define en el editor <span class="notranslate">room</span> o utilizando <span style="font-size:1px;"><a href="../The_Physics_World/physics_world_create.htm"><span class="inline">physics_world_create()</span></a></span>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">physics_apply_local_impulse(xpos, ypos, ximpulse, yimpulse)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_apply_local_impulse</span>(xpos, ypos, ximpulse, yimpulse)</p>
   <table>
     <tbody>
       <tr>

@@ -26,8 +26,8 @@
       <ol>
         <li>Asegúrese de que los archivos fuente del delegado tienen el mismo nombre que la clase del delegado (por ejemplo, <span class="inline">@interface MyCustomAppDelegate</span> debe definirse en &quot; <span class="inline">MyCustomAppDelegate.h</span>&quot;)</li>
         <li>Añade la variable de entorno <span class="inline">${YYExtAppDelegateIncludes}</span> en la parte superior del archivo de cabecera del delegado de tu aplicación. Ésta será sustituida en tiempo de compilación por los archivos de inclusión pertinentes para la clase delegada principal.</li>
-        <li>Utiliza la variable de entorno <span class="inline">${YYExtAppDelegateBaseClass}</span> como clase base para tu delegado de aplicación personalizado. Ésta será sustituida en el momento de la compilación por la clase base correcta del delegado.<br>
-          <br>
+        <li>Utiliza la variable de entorno <span class="inline">${YYExtAppDelegateBaseClass}</span> como clase base para tu delegado de aplicación personalizado. Ésta será sustituida en el momento de la compilación por la clase base correcta del delegado.<br />
+          <br />
           Para garantizar que su <span class="notranslate">extension</span> funcione con cualquier otro <span class="notranslate">extensions</span> que utilice delegados de aplicación personalizados, debe llamar a cualquier método de la clase base desde los métodos anulados de su clase hija. Antes de llamar al método de la superclase, debes asegurarte de que está implementado en la jerarquía de clases para evitar errores, por ejemplo
         </li>
       </ol>
@@ -40,17 +40,17 @@
                 return TRUE;<br />
         }</p>
     </li>
-    <li class="dropspot"><strong>Frameworks del</strong> sistema: Aquí puede añadir cualquier <a class="glossterm" data-glossterm="marco" href="#">marco</a>del sistema <span class="notranslate">iOS</span> a su <span class="notranslate">extension</span>. Estos se añaden haciendo clic en el botón <img> que añadirá un marco de trabajo de marcador de posición, que luego puede editar haciendo doble clic en <img>. Puedes encontrar más información sobre las estructuras del sistema disponibles <a href="https://developer.apple.com/documentation/">aquí</a>. Para eliminar un marco del sistema, simplemente selecciónelo y haga clic en el botón <img>.<br>
-      <br>
+    <li class="dropspot"><strong>Frameworks del</strong> sistema: Aquí puede añadir cualquier <a class="glossterm" data-glossterm="marco" href="#">marco</a>del sistema <span class="notranslate">iOS</span> a su <span class="notranslate">extension</span>. Estos se añaden haciendo clic en el botón <img> que añadirá un marco de trabajo de marcador de posición, que luego puede editar haciendo doble clic en <img>. Puedes encontrar más información sobre las estructuras del sistema disponibles <a href="https://developer.apple.com/documentation/">aquí</a>. Para eliminar un marco del sistema, simplemente selecciónelo y haga clic en el botón <img>.<br />
+      <br />
       <img>Puede activar la casilla de verificación de un marco para marcarlo como &quot;<strong>Referencia débil</strong>&quot;. Esto lo añade a la sección &quot;<strong>Build Phases -&gt; Link Binary with Libraries</strong>&quot; de <span class="notranslate">Xcode</span> como un framework &quot;<strong>Opcional&quot;</strong>, en lugar de un framework &quot;<strong>Requerido</strong>&quot; (que es el comportamiento por defecto).
     </li>
-    <li class="dropspot"><strong>Frameworks de terceros + Bundles</strong>: Esta sección es para añadir paquetes de terceros y SDK. Al igual que con los frameworks del sistema, haga clic en el botón <img> para añadirlos y, a continuación, haga doble clic en <img> para editarlos; si los selecciona y hace clic en <img>, los eliminará (consulte la documentación que acompaña al SDK elegido para obtener información sobre el nombre del framework).<br>
-      <br>
-      Aquí puedes elegir <strong>no incrustar</strong> el framework, <strong>incrustarlo y firmarlo</strong>, o <strong>incrustarlo sin firmarlo</strong>:<br>
+    <li class="dropspot"><strong>Frameworks de terceros + Bundles</strong>: Esta sección es para añadir paquetes de terceros y SDK. Al igual que con los frameworks del sistema, haga clic en el botón <img> para añadirlos y, a continuación, haga doble clic en <img> para editarlos; si los selecciona y hace clic en <img>, los eliminará (consulte la documentación que acompaña al SDK elegido para obtener información sobre el nombre del framework).<br />
+      <br />
+      Aquí puedes elegir <strong>no incrustar</strong> el framework, <strong>incrustarlo y firmarlo</strong>, o <strong>incrustarlo sin firmarlo</strong>:<br />
       <img>Esto refleja la misma opción para un framework añadido en &quot;<strong>Frameworks, Librerías y Contenido Incrustado</strong>&quot; en <span class="notranslate">Xcode</span>.
     </li>
-    <li class="dropspot">Introduzca el framework<strong> <span class="notranslate">path</span> </strong> en el Mac: Si quieres añadir un framework a la <span class="notranslate">extension</span> cuyos archivos están presentes en el Mac que se utiliza para construir tu proyecto, puedes introducir el <span class="notranslate">path</span> a ese framework (en la máquina de construcción) en este campo y luego hacer clic en el botón <img> para añadirlo.<br>
-      <br>
+    <li class="dropspot">Introduzca el framework<strong> <span class="notranslate">path</span> </strong> en el Mac: Si quieres añadir un framework a la <span class="notranslate">extension</span> cuyos archivos están presentes en el Mac que se utiliza para construir tu proyecto, puedes introducir el <span class="notranslate">path</span> a ese framework (en la máquina de construcción) en este campo y luego hacer clic en el botón <img> para añadirlo.<br />
+      <br />
      <span class="notranslate">path</span> El <span class="notranslate">extension</span> tiene que apuntar a un archivo <span class="inline">.framework</span> que se comprimirá como un <span class="inline">.zip</span> y se colocará en la carpeta <span class="inline">iOSSourceFromMac</span> bajo su directorio <span class="notranslate">extension</span>; puede abrirlo fácilmente en cualquier momento haciendo clic con el botón derecho del ratón en el <img> y seleccionando <em>Abrir en el Explorador</em>.
     </li>
     <li class="dropspot"><strong>Añadir fuente</strong>: Puede utilizar esta opción para añadir los archivos fuente necesarios para que su <span class="notranslate">extension</span> funcione. Los archivos añadidos se almacenarán en la carpeta <span class="inline">iOSSource</span> dentro de su directorio de extensión.</li>
@@ -92,28 +92,28 @@
       </tr>
       <tr>
         <td style=""><b>Derechos</b></td>
-        <td style="">{RUNTIME}\N-plantillaProyecto\N-${YXCodeProjName}\N-$<br>
+        <td style="">{RUNTIME}\N-plantillaProyecto\N-${YXCodeProjName}\N-$<br />
          <span>${YXCodeProjName}.derechos</span>
         </td>
       </tr>
       <tr>
         <td style=""><b>info.plist</b></td>
-        <td style="">{RUNTIME}\N-plantillaProyecto\N-${YXCodeProjName}\N-$<br>
+        <td style="">{RUNTIME}\N-plantillaProyecto\N-${YXCodeProjName}\N-$<br />
           Supporting Files${YXCodeProjName}-Info<span>.plist</span></td>
       </tr>
       <tr>
         <td style=""><strong>infoLista.cadenas</strong></td>
-        <td style="">{RUNTIME}\N-plantillaProyecto\N-${YXCodeProjName}\N-$<br>
+        <td style="">{RUNTIME}\N-plantillaProyecto\N-${YXCodeProjName}\N-$<br />
           es.lproj\infoPlist.strings</td>
       </tr>
       <tr>
         <td style=""><strong>proyecto.pbxproj</strong></td>
-        <td style="">{RUNTIME}\N-plantillaProyecto\N-${YXCodeProjName}.xcodeproj<br>
+        <td style="">{RUNTIME}\N-plantillaProyecto\N-${YXCodeProjName}.xcodeproj<br />
           proyecto.pbxproj</td>
       </tr>
       <tr>
         <td style=""><strong>xcscheme</strong></td>
-        <td style="">{RUNTIME}\N-plantillaProyecto\N-${YXCodeProjName}.xcodeproj<br>
+        <td style="">{RUNTIME}\N-plantillaProyecto\N-${YXCodeProjName}.xcodeproj<br />
           xcshareddata\\xcschemes\${YXCodeProjName}.xcscheme</td>
       </tr>
     </tbody>

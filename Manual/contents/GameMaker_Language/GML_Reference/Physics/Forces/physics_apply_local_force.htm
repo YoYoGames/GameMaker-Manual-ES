@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_apply_local_force</h1>
+  <h1><span data-field="title" data-format="default">physics_apply_local_force</span></h1>
   <p>Otra forma de utilizar la fuerza en el mundo de la física es aplicarla <i>localmente</i> a una instancia. Lo que esto significa es que la fuerza y su dirección se calculan en base al origen (o a la posición si no tiene <span class="notranslate">sprite</span>) de la instancia, sin tener en cuenta la dirección o rotación que pueda tener en el juego <span class="notranslate">room</span> o en el mundo de la física. Hay que tener en cuenta que con esta función, las fuerzas no se aplican en el centro de masa de la <span class="notranslate">object</span>, sino en un punto relativo a la instancia y no se aplicarán instantáneamente ya que dependen de cualquier otra fuerza que esté actuando en la <span class="notranslate">object</span> (como la gravedad). Esta ilustración demuestra cómo funciona una fuerza local:</p>
   <p><img>Como puedes ver, las coordenadas xlocal e ylocal se calculan basándose en que la posición del eje se considera <i>siempre</i> como el origen de la instancia (0,0), así que no importa en qué parte de la <span class="notranslate">room</span> se encuentre el <span class="notranslate">object</span>, xlocal e ylocal siempre van a ser las mismas. Entonces tienes que decidir dónde deben situarse los componentes vectoriales de la fuerza (xforce e yforce) en relación con la posición xlocal/ylocal. La fuerza exacta se define por el vector que obtenemos de las componentes xforce/yforce en relación a esas coordenadas - lo que significa simplemente que la fuerza se calcula como la distancia desde xlocal/ylocal a xforce/yforce en Newtons, y la dirección es el ángulo que obtenemos desde xlocal/ylocal a xforce/yforce. Esto puede parecer un poco confuso, pero basta con mirar la ilustración para ver cómo funciona, ¡y te ahorra algunas matemáticas complicadas!</p>
   <p class="note"><b>NOTA</b>: El mundo de la física utiliza metros para todos sus cálculos, y la proporción de píxeles por metro se define en el editor <span class="notranslate">room</span> o utilizando <span style="font-size:1px;"><a href="../The_Physics_World/physics_world_create.htm"><span class="inline">physics_world_create()</span></a></span>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">physics_apply_local_force(xlocal, ylocal, xforce, yforce)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_apply_local_force</span>(xlocal, ylocal, xforce, yforce)</p>
   <table>
     <tbody>
       <tr>

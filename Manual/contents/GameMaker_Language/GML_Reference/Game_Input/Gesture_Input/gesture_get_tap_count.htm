@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gesture_get_tap_count</h1>
+  <h1><span data-field="title" data-format="default">gesture_get_tap_count</span></h1>
   <p>Esta función se utiliza para comprobar si el conteo de toques está activado o desactivado. La función devolverá <span class="inline">true</span> si está activada, y <span class="inline">false</span> en caso contrario, y puede activar o desactivar el conteo de toques utilizando la función <a href="gesture_tap_count.htm"><span class="inline">gesture_tap_count()</span></a>. Cuando está habilitado, cada evento de tap tendrá una entrada adicional en el mapa DS &quot;tapcount&quot; que habrá registrado el número de tap, y cuando está habilitado significa que <i>todos los</i> eventos de tap serán disparados, es decir: dos tap dispararán tanto el evento de tap simple como el evento de tap doble, siendo el tap simple 1 y el tap doble 2. El valor de la cuenta de toques se restablecerá a 0 una vez que haya transcurrido el tiempo establecido para la detección de un toque doble (véase la función <a href="gesture_get_double_tap_time.htm"><span class="inline">gesture_double_tap_time()</span></a>). Si el recuento de toques está desactivado, el toque inicial no se registrará hasta que haya pasado el tiempo de doble toque y no se haya detectado un segundo toque. Tenga en cuenta que esto está <b>activado</b> por defecto.</p>
   <p> </p>
   <h4><b>Sintaxis:</b></h4>

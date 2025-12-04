@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>skeleton_bone_state_get</h1>
+  <h1><span data-field="title" data-format="default">skeleton_bone_state_get</span></h1>
   <p>La animación de tu esqueleto se compone de una serie de &quot;huesos&quot;, a los que habrás definido y dado nombre en tu programa de animación, y esta función puede utilizarse para obtener ciertos datos del hueso nombrado en cualquier momento. Ten en cuenta que estos datos se refieren a la pose <b>actual</b> del esqueleto, dependiendo del conjunto de animación utilizado, y la función requiere un <a href="../../../../Data_Structures/DS_Maps/DS_Maps.htm">mapa DS</a> previamente creado, que tendrá las siguientes claves y sus valores equivalentes después de llamar a la función:</p>
   <ul class="colour">
     <li><b>&quot;x&quot;:</b> La posición local x del hueso en relación con el hueso padre.</li>
@@ -34,9 +34,9 @@
   </ul>
   <p>Los datos del mapa devueltos son similares a los devueltos para la pose por defecto cuando se utiliza <a href="skeleton_bone_state_get.htm"><span class="inline">skeleton_bone_data_get()</span></a>solo que ahora se tienen las claves extra &quot;mundo&quot;. Éstas se refieren a la posición del hueso en relación con la <i>raíz</i> (origen) de la animación del esqueleto <span class="notranslate">sprite</span>, y los valores devueltos no tienen en cuenta ninguna escala o rotación que se haya realizado mediante la configuración de las variables incorporadas en <span class="notranslate">sprite</span> como <span class="inline">image_xscale</span> o <span class="inline">image_angle</span>. Los valores del mundo <i>sólo se leen</i> y no se pueden configurar.</p>
   <p>Esta función se proporciona para que usted pueda &quot;interceptar&quot; los datos de la animación y modificarlos antes de que se dibujen en la pantalla, y como tal usted querrá usarla en el evento <a href="../../../../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Otro - Actualización de la Animación</a>, ya que este evento se dispara justo antes de los Eventos de Dibujo.</p>
-  <p> </p>
+  <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">skeleton_bone_state_get(bone, map);</p>
+  <p class="code"><span data-field="title" data-format="default">skeleton_bone_state_get</span>(bone, map);</p>
   <table>
     <tbody>
       <tr>
@@ -46,21 +46,21 @@
       </tr>
       <tr>
         <td><span class="notranslate">bone</span></td>
-        <td><span data-keyref="Type_String">Cadena</span></td>
+        <td><span data-keyref="Type_String"><a href="../../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
         <td><span class="notranslate">The name (as a string) of the bone.</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">map</span></td>
-        <td><span data-keyref="Type_ID_DS_Map">ID del mapa DS</span></td>
+        <td><span data-keyref="Type_ID_DS_Map"><a href="../../../../../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/ds_map_create.htm" target="_blank">DS Map ID</a></span></td>
         <td><span class="notranslate">The (previously created) DS map that stores the bone data.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
   <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
+  <p> </p>
   <h4>Ejemplo:</h4>
   <p class="code">var map = ds_map_create();<br />
     skeleton_bone_state_get(&quot;head&quot;, map);<br />
@@ -73,9 +73,9 @@
     skeleton_bone_state_set(&quot;head&quot;, map);<br />
     ds_map_destroy(map);</p>
   <p>El código anterior crea un mapa DS y lo rellena con los datos del hueso llamado &quot;cabeza&quot;. Luego extrae la posición mundial del hueso, y utiliza esos datos para establecer el &quot;ángulo&quot; del hueso para seguir la posición del ratón en el juego.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
@@ -83,7 +83,7 @@
         <div style="float:right">Siguiente: <a href="skeleton_bone_state_set.htm"><span class="notranslate">skeleton_bone_state_set</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_bone_state_get

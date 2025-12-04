@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_create_depth</h1>
+  <h1><span data-field="title" data-format="default">instance_create_depth</span></h1>
   <p>Con esta función puede crear una nueva instancia del <span class="notranslate">object</span> especificado en cualquier punto dentro del <span class="notranslate">room</span> y a la profundidad especificada. La profundidad puede ser cualquier valor, donde cuanto menor sea la profundidad más &quot;cerca&quot; de la cámara se dibujarán las cosas y cuanto mayor sea la profundidad más lejos, por lo que una instancia en la profundidad -200 se dibujará sobre una instancia en la profundidad +300 (por ejemplo).</p>
   <p>Tenga en cuenta que esta función realmente creará una capa <span class="notranslate">room</span> para la instancia, ya que todas las instancias <i>deben</i> estar en una capa en el <span class="notranslate">room</span>, pero como esta es una capa <i>administrada</i> (es decir: no una que usted haya creado a través de código o en el <span class="notranslate">room</span>, sino una que <span data-keyref="GameMaker Name">GameMaker</span> ha creado automáticamente). No puedes acceder a esa capa, y la variable de instancia <a href="Instance_Variables/layer.htm"><span class="inline">layer</span></a> variable de instancia devolverá -1.</p>
   <p class="note"><span class="important">IMPORTANTE</span> Hay una profundidad de capa mínima y máxima de -16000 a 16000. Todo lo que se coloque en una profundidad fuera de ese rango <b>no se dibujará</b> aunque todos los eventos se seguirán ejecutando con normalidad.</p>
@@ -27,7 +27,7 @@
   <p class="note"><span class="note">NOTA</span> Las variables de <span class="notranslate">struct</span> se &quot;copian superficialmente&quot; a la nueva instancia, lo que significa que las matrices, <span class="notranslate">structs</span> y otros recursos se copian por referencia y no se duplican.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">instance_create_depth(x, y, depth, obj);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_create_depth</span>(x, y, depth, obj);</p>
   <table>
     <tbody>
       <tr>

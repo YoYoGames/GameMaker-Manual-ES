@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_add</h1>
+  <h1><span data-field="title" data-format="default">sprite_add</span></h1>
   <p>Con esta función puede añadir una imagen como <span class="notranslate">sprite</span>, cargándola desde una fuente externa donde el archivo de imagen a cargar debe estar <b>siempre</b> en formato <span class="inline">*.png</span>, <span class="inline">*.gif</span>, <span class="inline">*.jpg/jpeg</span> o <span class="inline">*.json</span> ( los archivos<span class="inline">*json</span> se utilizan para cargar <a href="../Skeletal_Animation/Skeletal_Animation.htm">sprites de animación de esqueleto</a> hechos con <span class="notranslate">Spine</span>). La función devuelve el nuevo índice <span class="notranslate">sprite</span> que debe ser utilizado en todo el código posterior que se relacione con el <span class="notranslate">sprite</span>. Si utiliza esta función con HTML5 o está obteniendo una imagen desde una URL, esta función también generará un evento asíncrono de <b>Imagen Cargada</b>. Consulte <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Image_Loaded.htm">esta página</a> para obtener más información.</p>
   <p>Todas las imágenes que se van a convertir en animadas <span class="notranslate">sprites</span> - excepto <span class="inline">*.gif</span> (ver más abajo) - deben tener un formato de &quot;tira&quot; (ver la imagen de abajo) y se dividirá en el número de subimágenes especificadas siguiendo la regla <b>ancho del sprite = ancho de la tira / subimágenes</b>.</p>
   <p><img alt="Example Sprite Strip" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_strip.png" /></p>
@@ -29,7 +29,7 @@
   <p class="note"><b>NOTA</b>: En <b>HTML5</b>, si está cargando un <span class="notranslate">sprite</span> desde un <span class="notranslate">server</span> seguro, es posible que tenga que configurar el tipo de origen cruzado y utilizar un <span class="notranslate">path</span> relativo en lugar de un <span class="notranslate">path</span> absoluto. Consulte <span style="font-size:1px;"><a href="../../../Asynchronous_Functions/HTTP/http_set_request_crossorigin.htm"><span class="inline">http_set_request_crossorigin()</span></a></span> para más detalles.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">sprite_add(fname, imgnumb, removeback, smooth, xorig, yorig);</p>
+  <p class="code"><span data-field="title" data-format="default">sprite_add</span>(fname, imgnumb, removeback, smooth, xorig, yorig);</p>
   <table>
     <tbody>
       <tr>

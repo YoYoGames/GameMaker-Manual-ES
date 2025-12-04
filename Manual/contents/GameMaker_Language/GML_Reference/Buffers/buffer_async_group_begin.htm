@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_async_group_begin</h1>
+  <h1><span data-field="title" data-format="default">buffer_async_group_begin</span></h1>
   <p>Esta función se llama cuando se quiere empezar a guardar varios <span class="notranslate">buffers</span> en varios archivos (o cargar varios <span class="notranslate">buffers</span>). El <span class="inline2">nombre del grupo</span> es un <span class="notranslate">string</span> y se utilizará como el nombre del directorio donde se guardan los archivos, y debe utilizarse como parte del archivo <span class="notranslate">path</span> cuando se carguen los archivos de nuevo en el <span class="notranslate">IDE</span> más tarde (utilizando cualquiera de las funciones <a href="buffer_load.htm"><span class="inline">buffer_load()</span></a> funciones). Esta función <i>sólo</i> se puede utilizar con las funciones <a href="buffer_save_async.htm"><span class="inline">buffer_save_async()</span></a> y <span class="inline"><a href="buffer_load_async.htm">buffer_load_async()</a></span> y también debe terminar el grupo asíncrono llamando a la función <a href="buffer_async_group_end.htm"><span class="inline">buffer_async_group_end()</span></a> de lo contrario los archivos no se guardarán/cargarán.</p>
   <p>Ten en cuenta que para las plataformas de consola (como PS4, por ejemplo), el <span class="inline2">nombre del grupo</span> se utilizará como descripción de la ranura de guardado, y el uso de esta función puede ayudarte a evitar que se muestre la interfaz de usuario para cada archivo que se está guardando. También ten en cuenta que cuando usas UWP puedes mover tus partidas guardadas entre las ventanas nativas de Xbox y de la tienda de Microsoft creando un grupo que sea el mismo que un grupo de ERA Xbox, por ejemplo:</p>
   <p class="code">if os_type == os_uwp<br />
@@ -27,7 +27,7 @@
     }</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">buffer_async_group_begin(groupname);</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_async_group_begin</span>(groupname);</p>
   <table>
     <tbody>
       <tr>

@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_sound_gain</h1>
+  <h1><span data-field="title" data-format="default">audio_sound_gain</span></h1>
   <p>Con esta función se puede hacer un fundido de entrada o salida de un sonido durante un tiempo determinado, o se puede utilizar para ajustar la ganancia del sonido de forma instantánea.</p>
   <p>El tiempo se mide en milisegundos, y la función requiere que se introduzca un nivel final de ganancia para que el sonido haya alcanzado al final de ese tiempo. Esta ganancia puede estar entre 0 (silencio) y cualquier valor superior a 0, aunque normalmente se consideraría que el volumen máximo es 1. Se puede utilizar cualquier valor superior a 1 pero, dependiendo del sonido utilizado y de la plataforma a la que se compile, se puede obtener distorsión o recorte cuando se reproduzca el sonido. Tenga en cuenta que la escala de ganancia es lineal, y para cambiar instantáneamente la ganancia, simplemente ponga el argumento de tiempo a 0.</p>
   <p>Esta función afectará a <i>todas las</i> instancias del sonido que se estén reproduciendo en ese momento en <span class="notranslate">room</span> si el índice es un recurso de sonido, y el volumen final será el volumen al que se reproducirán todas las instancias posteriores del sonido. Sin embargo, si ha utilizado el índice devuelto por una función como <a href="audio_play_sound.htm"><span class="inline">audio_play_sound()</span></a> sólo afectará a esa única instancia del sonido.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">audio_sound_gain(index, volume, time);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_sound_gain</span>(index, volume, time);</p>
   <table>
     <tbody>
       <tr>

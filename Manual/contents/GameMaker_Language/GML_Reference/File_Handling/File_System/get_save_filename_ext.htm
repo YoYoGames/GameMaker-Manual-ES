@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>get_save_filename_ext</h1>
+  <h1><span data-field="title" data-format="default">get_save_filename_ext</span></h1>
   <p>Esta función abre un diálogo y pide al jugador un nombre de archivo para guardar con el filtro dado. El filtro tiene la forma &quot;<i>nombre1|máscara1|nombre2|máscara2|...</i>&quot;, donde la máscara puede contener las diferentes opciones con un punto y coma entre ellas y también se puede utilizar un &quot;*&quot; para significar cualquier <span class="notranslate">string</span>. Por ejemplo: &quot;<i>bitmaps|*.bmp;*.wmf</i>&quot;, pediría al usuario que seleccionara el nombre de un archivo de mapa de bits del sistema, pero sólo aquellos que tengan los dos <span class="notranslate">extensions</span> especificados (<span class="inline">bmp</span> y <span class="inline">png</span>). ¡esta función <b>no</b> guarda el archivo en sí! Sólo devuelve un <span class="notranslate">string</span> con el nombre completo y <span class="notranslate">path</span> del archivo. Si el usuario pulsa &quot;<b>Cancelar</b>&quot; se devuelve un <span class="notranslate">string</span> vacío. También puede añadir un directorio desde el que iniciar la búsqueda, y una leyenda que se mostrará en la parte superior de la ventana en lugar de la predeterminada.</p>
   <p>Una cosa importante a tener en cuenta cuando se utiliza esta función es que le otorga ciertos permisos para ese archivo, durante la duración de su juego. Así, una vez que obtengas el archivo <span class="notranslate">path</span> del usuario, podrás acceder a él una y otra vez sin tener que pedirlo, y el permiso se aplica a la lectura <i>y a la</i> escritura por igual.</p>
   <p class="note"><b>NOTA</b>: Esta función sólo es válida en los objetivos <span class="notranslate">Windows</span> y <span class="notranslate">macOS</span>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">get_save_filename_ext(filter, fname, directory, caption);</p>
+  <p class="code"><span data-field="title" data-format="default">get_save_filename_ext</span>(filter, fname, directory, caption);</p>
   <table>
     <tbody>
       <tr>

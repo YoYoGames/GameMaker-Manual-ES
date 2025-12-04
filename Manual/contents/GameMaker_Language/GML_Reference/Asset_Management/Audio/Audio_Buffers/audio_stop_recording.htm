@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_stop_recording</h1>
+  <h1><span data-field="title" data-format="default">audio_stop_recording</span></h1>
   <p>Esta función detendrá la grabación en el canal de la grabadora dado (el índice del canal se devuelve cuando se llama a la función <a href="audio_start_recording.htm"><span class="inline">audio_start_recording()</span></a>). Cuando se detiene la grabación, no se desencadenarán más <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Recording.htm">eventos</a> asíncronos <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Recording.htm">de grabación de audio</a> para el canal de la grabadora dado, por lo que normalmente se utilizaría esta función en el evento asíncrono real para asegurarse de que se han capturado todos los datos.</p>
   <p class="note"><b><span class="note">NOTA</span> </b>La mayoría de las plataformas admiten la grabación de audio de alguna forma, pero eso no significa que todos los dispositivos lo permitan, aunque la plataforma lo haga, por lo que siempre debe comprobar que la función <span style="font-size:1px;"><a href="audio_get_recorder_count.htm"><span class="inline">audio_get_recorder_count()</span></a></span> devuelva un valor superior a 0 para verificar que los dispositivos de grabación están disponibles antes de utilizar el resto de las funciones de grabación.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">audio_stop_recording(channel_index);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_stop_recording</span>(channel_index);</p>
   <table>
     <tbody>
       <tr>

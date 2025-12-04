@@ -51,10 +51,10 @@
         <tr>
           <td style=""><span class="inline">/uf=[user_folder]<strong></strong></span></td>
           <td style="">La carpeta de usuario utilizada para recuperar la información de la licencia
-            <br>
-            <br>
+            <br />
+            <br />
             En <span class="notranslate">Windows</span>, será: <span class="inline"><span>%appdata%\GameMaker\&lt;user_name&gt;_&lt;number&gt;</span>
-            <br>
+            <br />
             En <span class="notranslate">macOS</span>, será: <span class="inline"><span>~/.config/GameMaker/&lt;user_name&gt;_&lt;number&gt;</span> </td>
         </tr>
         <tr>
@@ -76,8 +76,8 @@
         <tr>
           <td style=""><span class="inline">/of=[output_folder_filename]</span></td>
           <td style="">El directorio de salida donde se extraerá la compilación; no especifique sólo un directorio, ya que la entrada final siempre se elimina (por ejemplo: si especifica <span class="inline">d:\game\output</span>, los archivos del juego se colocarán en <span class="inline">d:\game</span>)
-            <br>
-            <br>
+            <br />
+            <br />
             Si no se especifica, se creará un directorio llamado <span class="inline">output</span> en el mismo directorio que el archivo <span class="inline">.bat</span> (o desde donde se ejecute el comando), que contendrá los archivos de compilación extraídos </td>
         </tr>
         <tr>
@@ -279,21 +279,21 @@
         <tr>
           <td style=""><span class="inline">Runtime ListInstalled [directory]</span></td>
           <td style="">Enumera los <span class="notranslate">runtimes</span> disponibles en la carpeta actual (<span class="inline">directory</span>= completo <span class="notranslate">path</span> a la carpeta)
-            <br>
-            <br>
+            <br />
+            <br />
             Puede especificar un directorio en el que buscar, pero si no se especifica se utilizará por defecto el directorio actual
-            <br>
-            <br>
+            <br />
+            <br />
             Esto también comprueba si hay un archivo <span class="inline">receipt.json</span> y una carpeta <span class="inline">manifest</span> dentro del directorio (asegurándose de que es realmente un <span class="notranslate">runtime</span>) </td>
         </tr>
         <tr>
           <td style=""><span class="inline">Runtime Info [version]</span></td>
           <td style="">Imprime la información sobre los <span class="notranslate">runtime</span> más recientes en el feed dado; también necesita un archivo de licencia para mostrar la información relativa a los módulos disponibles para el usuario
-            <br>
-            <br>
+            <br />
+            <br />
             <span class="inline">version</span> puede ser un <span class="notranslate">string</span> utilizado para buscar en los títulos de los feeds (por ejemplo: <span class="inline">&quot;739&quot;</span> mostraría información de todas las construcciones que contengan 739 en sus números de versión), o puede ser <span class="inline">all</span> para mostrar información de todos los feeds
-            <br>
-            <br>
+            <br />
+            <br />
             Enumerará los módulos con los nombres de archivo <span class="inline">.zip</span> para cada módulo </td>
         </tr>
         <tr>
@@ -303,11 +303,11 @@
         <tr>
           <td style=""><span class="inline">Runtime Verify [folder=.]</span></td>
           <td style="">Calcula las sumas de comprobación de todos los archivos instalados y las compara con las sumas de comprobación escritas en el manifiesto <span class="inline">folder</span>. Se puede especificar una carpeta para comprobar, sin embargo, si no se especifica, se utilizará por defecto el directorio actual.
-            <br>
-            <br>
+            <br />
+            <br />
             Esto hará que <span class="notranslate">flag</span> compruebe los archivos cuyas sumas de comprobación no coincidan, los que falten y los que no deberían estar ahí.
-            <br>
-            <br>
+            <br />
+            <br />
             Tenga en cuenta que los propios archivos de manifiesto no se verifican y que un usuario puede alterar los archivos de manifiesto para que coincidan con los instalados. </td>
         </tr>
       </tbody>
@@ -348,8 +348,8 @@
         <tr>
           <td style=""><span class="inline">/target=[list_of_targets]</span></td>
           <td style="">Lista de objetivos separada por comas en el formato <span class="inline">PLATFORM|DEVICE</span>, por ejemplo: <span class="inline">/target=&quot;Windows|Local,HTML|Firefox&quot;</span>
-            <br>
-            <br>
+            <br />
+            <br />
             Si especifica <strong>todos</strong>, las pruebas intentarán ejecutarse para todos los dispositivos del archivo <span class="inline">devices.json</span> </td>
         </tr>
       </tbody>

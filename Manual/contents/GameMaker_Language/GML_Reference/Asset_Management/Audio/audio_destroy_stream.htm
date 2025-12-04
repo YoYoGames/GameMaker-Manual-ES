@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_destroy_stream</h1>
+  <h1><span data-field="title" data-format="default">audio_destroy_stream</span></h1>
   <p>Si ha creado previamente un flujo de audio desde un archivo utilizando la función <a href="audio_create_stream.htm"><span class="inline">audio_create_stream()</span></a> y ya no necesita ese sonido, puede llamar a esta función para borrarlo de la memoria. Cualquier otra llamada al índice de sonido después de que haya sido destruido dará un error. Hay que tener en cuenta que esto liberará el flujo, pero en la plataforma de destino esto puede no aparecer en un gestor de memoria. Esto se debe a que <span data-keyref="GameMaker Name">GameMaker</span> agrupa los recursos de memoria para evitar la sobrecarga de asignación de memoria, y por lo tanto la memoria permanecerá asignada hasta que se requiera para otra cosa o se reutilice para un nuevo flujo.</p>
   <p class="note"><b>NOTA</b>: Esta funcionalidad no está disponible para la plataforma de destino HTML5.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">audio_destroy_stream(filename);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_destroy_stream</span>(filename);</p>
   <table>
     <tbody>
       <tr>

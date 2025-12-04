@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_create_layer</h1>
+  <h1><span data-field="title" data-format="default">instance_create_layer</span></h1>
   <p>Con esta función se puede crear una nueva instancia de la <span class="notranslate">object</span> especificada en cualquier punto de la <span class="notranslate">room</span> y en la capa especificada. La capa puede identificarse mediante el valor del ID de la capa (devuelto por la función <a href="../Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a>) o por el nombre de la capa (como <span class="notranslate">string</span>, por ejemplo &quot;instance_layer&quot;) tal y como se define en el <a href="../../../../The_Asset_Editors/Rooms.htm">editor de salas</a>.</p>
   <p>Esta función devuelve el <a href="Instance_Variables/id.htm"><span class="inline">id</span></a> de la nueva instancia que puede ser almacenada en una variable y utilizada para acceder a esa instancia. Tenga en cuenta que esta función también llamará al <a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">evento Create</a> de la instancia que se está creando <i>antes de</i> continuar con el código o las acciones del evento que llamó a la función.</p>
   <p class="note"><span class="important">IMPORTANTE</span> Hay una profundidad de capa mínima y máxima de -16000 a 16000. Todo lo que se coloque en una capa fuera de ese rango <b>no se dibujará</b> aunque todos los eventos se seguirán ejecutando con normalidad.</p>
@@ -26,7 +26,7 @@
   <p class="note"><span class="note">NOTA</span> Las variables de <span class="notranslate">struct</span> se &quot;copian superficialmente&quot; a la nueva instancia, lo que significa que las matrices, <span class="notranslate">structs</span> y otros recursos se copian por referencia y no se duplican.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">instance_create_layer(x, y, layer_id, obj);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_create_layer</span>(x, y, layer_id, obj);</p>
   <table>
     <tbody>
       <tr>

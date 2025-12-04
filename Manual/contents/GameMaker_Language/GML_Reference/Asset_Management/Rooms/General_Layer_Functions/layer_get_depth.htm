@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>capa_obtener_profundidad</title>
+  <title>layer_get_depth</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>capa_obtener_profundidad</h1>
+  <h1><span data-field="title" data-format="default">layer_get_depth</span></h1>
   <p>Puede utilizar esta función para obtener el valor de <i>profundidad</i> asociado a una capa determinada. Se suministra el ID de la capa (que se obtiene cuando se crea la capa usando <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) o el nombre de la capa (como <span class="notranslate">string</span> - esto tendrá un impacto en el rendimiento) y la función devolverá la profundidad de esa capa como un número real. Tenga en cuenta que la profundidad se define como más alta cuanto más &quot;lejos&quot; de la cámara y más baja cuanto más &quot;cerca&quot; de la cámara, por lo que si tiene tres capas con profundidades -100, 0, 100, las capas se dibujarán en el orden 100, 0, -100, de modo que la capa &quot;superior&quot; (es decir, la más cercana a la vista de la cámara y por lo tanto dibujada sobre todo lo demás) será la capa con la profundidad -100.</p>
   <p>La siguiente imagen muestra un esquema de cómo funciona la profundidad para las capas:</p>
   <p><img>Tenga en cuenta que si suministra un valor de ID de capa no válido obtendrá un error.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">layer_get_depth(layer_id)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_get_depth</span>(layer_id)</p>
   <table>
     <tbody>
       <tr>

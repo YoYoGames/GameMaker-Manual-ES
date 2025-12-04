@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gamepad_hat_value</h1>
+  <h1><span data-field="title" data-format="default">gamepad_hat_value</span></h1>
   <p>Con esta función puedes obtener el valor actual de un &quot;sombrero&quot; del gamepad. Cada valor del sombrero es una máscara de bits para las diferentes direcciones donde:</p>
   <ul class="colour">
     <li>Arriba = 1</li>
@@ -26,7 +26,7 @@
   <p>Ten en cuenta que se pueden combinar (por ejemplo, suministrando un índice de sombrero de 3 estaría comprobando hacia arriba y hacia la derecha, o puedes usar el operador <span class="inline2">|</span> para combinar los distintos valores) pero sólo se pueden pulsar como máximo 2 bits a la vez. La función devolverá un valor real entre 0 y 1, donde 0 es no pulsado y 1 es totalmente pulsado (y puede haber valores intermedios dependiendo de si el gamepad soporta entrada analógica para sombreros).</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">gamepad_hat_value(device, hatindex);</p>
+  <p class="code"><span data-field="title" data-format="default">gamepad_hat_value</span>(device, hatindex);</p>
   <table>
     <tbody>
       <tr>

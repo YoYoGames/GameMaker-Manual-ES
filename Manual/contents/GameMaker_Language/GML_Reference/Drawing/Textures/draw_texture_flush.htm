@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_texture_flush</h1>
+  <h1><span data-field="title" data-format="default">draw_texture_flush</span></h1>
   <p>Con esta función puedes eliminar todas las texturas de la memoria de vídeo, y se volverán a cargar en el primer uso. Esta es la única forma efectiva de gestionar la memoria de vídeo cuando tienes varias páginas de texturas para un juego, y deberías vaciar la memoria de texturas
     entre niveles en tu juego y organizar los gráficos usando la función de grupo de texturas para asegurar que se utiliza el mínimo número de texturas.</p>
   <p>Vale la pena señalar que <i>, por defecto,</i> en todos los objetivos, las páginas de textura sólo se cargarán a medida que se requieran y se pueden utilizar las diversas funciones de prefetch y flush para <span class="notranslate">sprites</span> (que se encuentran <a href="../../Asset_Management/Sprites/Sprite_Manipulation/Sprite_Manipulation.htm">aquí</a>)
     para gestionar las cosas, así como esta función.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">draw_texture_flush();</p>
+  <p class="code"><span data-field="title" data-format="default">draw_texture_flush</span>();</p>
   <p> </p>
   <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>

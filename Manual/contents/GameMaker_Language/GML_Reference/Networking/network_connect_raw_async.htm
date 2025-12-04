@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>network_connect_raw_async</h1>
+  <h1><span data-field="title" data-format="default">network_connect_raw_async</span></h1>
   <p>Con esta función puedes enviar una petición para conectarte a un <span class="notranslate">server</span>. La función toma el <i>id del socket</i> para conectarse (ver <a href="network_create_socket.htm"><span class="inline">network_create_socket()</span></a>) y requiere que le des la dirección IP a la que conectarte
     a (un <span class="notranslate">string</span>) así como el puerto a través del cual conectarse, y si la conexión falla se devolverá un valor inferior a 0. La diferencia entre esta función y <a href="network_connect_async.htm"><span class="inline">network_connect_async()</span></a>es que esta función
     puede conectarse a cualquier <span class="notranslate">server</span> y no hace nada con los datos en bruto, lo que significa que tienes que implementar los protocolos tú mismo en el extremo de <span class="notranslate">server</span>. Tenga en cuenta que esta función es asíncrona, generando un evento de <a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Networking.htm">red asíncrono</a> del tipo <span class="inline">network_type_non_blocking_connect</span>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">network_connect_raw_async(socket, url, port);</p>
+  <p class="code"><span data-field="title" data-format="default">network_connect_raw_async</span>(socket, url, port);</p>
   <table>
     <tbody>
       <tr>

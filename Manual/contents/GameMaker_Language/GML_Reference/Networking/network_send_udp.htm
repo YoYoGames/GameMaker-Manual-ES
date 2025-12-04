@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>network_send_udp</h1>
+  <h1><span data-field="title" data-format="default">network_send_udp</span></h1>
   <p>Con esta función puede enviar datos a través de la red usando UDP a un <span class="notranslate">server</span>. La función toma el id del <i>socket</i> para conectarse, la URL para conectarse y el puerto a usar. A continuación, debe proporcionar el identificador del <i>búfer</i> que contiene los datos que se van a enviar (para más información sobre <span class="notranslate">buffers</span>, véase <a href="../Buffers/Buffers.htm">Referencia - Búferes</a>) y, por último, el tamaño (en bytes) de los datos. UDP es &quot;sin conexión&quot; en el sentido de que en realidad no se hace una conexión, sólo se envía un paquete directamente a una IP, y el <span class="notranslate">server</span> recibe los datos entrantes de una dirección IP y tiene que tratarlos &quot;tal cual&quot;. La función devolverá el número de bytes de datos enviados, o un número menor que 0 si el envío ha fallado. Cabe destacar que el tamaño final de los datos enviados que devuelve esta función incluirá también la información de la cabecera <span class="notranslate">GameMaker</span>, que son 12 bytes adicionales.</p>
   <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> Esta función no funcionará cuando se utilice en un proyecto que se ejecute en el objetivo HTML5, y tampoco los proyectos HTML5 podrán recibir UDP.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">network_send_udp(socket, url, port, bufferid, size);</p>
+  <p class="code"><span data-field="title" data-format="default">network_send_udp</span>(socket, url, port, bufferid, size);</p>
   <table>
     <tbody>
       <tr>

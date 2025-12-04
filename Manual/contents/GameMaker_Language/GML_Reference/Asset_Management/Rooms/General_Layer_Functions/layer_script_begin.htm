@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_script_begin</h1>
+  <h1><span data-field="title" data-format="default">layer_script_begin</span></h1>
   <p>Con esta función puedes asignar una función de <a href="../../../../GML_Overview/Script_Functions.htm">script</a> a una capa y será llamada antes de que la capa sea renderizada. Cuando se añade una función a una capa, de esta manera se ejecutará al inicio de <i>cada uno de los diferentes eventos de dibujo</i>, por lo que puede querer comprobar en la función asignada qué evento se está renderizando en ese momento y adaptar el código para que se ajuste. Esto se puede hacer comprobando el <a href="../../Objects/Object_Events/event_type.htm"><span class="inline">event_type</span></a> y/o el <a href="../../Objects/Object_Events/event_number.htm"><span class="inline">event_number</span></a> (ver el ejemplo ampliado más abajo). Tenga en cuenta que la función <i>no</i> está pensada para ser llamada en cualquier evento de dibujo o eventos de paso, sino que sólo necesita ser llamada al inicio de la <span class="notranslate">room</span> en el código de <strong>creación de</strong> la sala o en el <strong>evento de creación / </strong> <strong>evento de inicio de la sala</strong> de una instancia.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">layer_script_begin(layer_id, script);</p>
+  <p class="code"><span data-field="title" data-format="default">layer_script_begin</span>(layer_id, script);</p>
   <table>
     <tbody>
       <tr>

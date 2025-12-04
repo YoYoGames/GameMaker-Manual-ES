@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>ver_actualidad</title>
+  <title>view_current</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ver_actualidad</h1>
+  <h1><span data-field="title" data-format="default">view_current</span></h1>
   <p>Esta variable de <b>sólo lectura</b> sólo es válida en el <a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm"><b>Evento de sorteo</b></a> y devuelve el puerto de vista actual que se está renderizando. El valor de retorno cambiará durante el evento draw cuando tengas varias vistas ya que el evento draw es llamado <i>una vez por cada puerto de vista en sucesión</i>. Así que cuando (por ejemplo) estás usando el puerto de vista[0] y el puerto de vista[1] en tu juego <span class="notranslate">room</span>, el evento draw para <i>TODAS las</i> instancias se ejecutará dos veces, una para cada puerto, y con esta variable puedes comprobar qué vista se está dibujando actualmente. En general, esto se utiliza para sólo renderizar detalles específicos a un solo puerto cuando varios puertos de vista son visibles en el <span class="notranslate">room</span> al mismo tiempo. Vea el código de ejemplo a continuación.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">view_current;</p>
+  <p class="code"><span data-field="title" data-format="default">view_current</span></p>
   <p> </p>
   <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span> (view port index from 0 to 7)</p>

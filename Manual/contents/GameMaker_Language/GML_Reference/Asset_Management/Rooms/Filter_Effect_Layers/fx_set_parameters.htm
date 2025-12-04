@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>fx_set_parameters</h1>
+  <h1><span data-field="title" data-format="default">fx_set_parameters</span></h1>
   <p>Esta función se utiliza para cambiar los parámetros de un filtro/efecto. Se especifica un FX <span class="notranslate">struct</span> (como el devuelto por <span class="inline"><a href="fx_create.htm">fx_create()</a></span> o <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span>) y un <span class="notranslate">struct</span> que contiene sus parámetros (como el devuelto por <span class="inline"><a href="fx_get_parameters.htm">fx_get_parameters()</a></span>). Esto hará que sus cambios sean visibles en la capa a la que está asignado el FX <span class="notranslate">struct</span>.</p>
   <p>No es necesario que su parámetro <span class="notranslate">struct</span> contenga todos los parámetros aplicables al filtro/efecto, y sólo se actualizarán para el filtro/efecto las variables que estén presentes en el <span class="notranslate">struct</span> dado.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">fx_set_parameters(filter_or_effect, parameter_struct);</p>
+  <p class="code"><span data-field="title" data-format="default">fx_set_parameters</span>(filter_or_effect, parameter_struct);</p>
   <table>
     <tbody>
       <tr>

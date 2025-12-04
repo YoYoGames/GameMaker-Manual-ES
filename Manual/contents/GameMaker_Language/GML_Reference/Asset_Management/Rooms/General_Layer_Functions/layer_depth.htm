@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>profundidad_de_capa</title>
+  <title>layer_depth</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>profundidad_de_capa</h1>
+  <h1><span data-field="title" data-format="default">layer_depth</span></h1>
   <p>Esta función se puede utilizar para cambiar la <b>profundidad</b> de la capa dada, cambiando el orden en el que su contenido será representado en la pantalla. Se proporciona el ID de la capa (que se obtiene al crear la capa con <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) o el nombre de la capa (como <span class="notranslate">string</span> - esto tendrá un impacto en el rendimiento) y luego dar la nueva profundidad para establecerla (un valor entero de -16000 a 16000). La profundidad de la capa se define como más alta cuando está &quot;más lejos&quot; de la cámara y más baja cuando está &quot;más cerca&quot; de la cámara, así que si tienes tres capas con profundidades -100, 0, 100, las capas se dibujarán en el orden 100, 0, -100, de modo que la capa &quot;superior&quot; (es decir, la más cercana a la vista de la cámara y por lo tanto dibujada sobre todo lo demás) será la capa con la profundidad -100.</p>
   <p>La siguiente imagen muestra un esquema de cómo funciona la profundidad para las capas:</p>
   <p><img>Tenga en cuenta que puede comprobar la profundidad de una capa en cualquier momento utilizando la función <a href="layer_get_depth.htm"><span class="inline">layer_get_depth()</span></a>. También tenga en cuenta que las profundidades mínima y máxima de las capas son de -16000 a 16000, y todo lo que esté fuera de esas profundidades <b>no se renderizará</b>. Si necesita una profundidad fuera de ese rango, tendrá que utilizar la función <a href="layer_force_draw_depth.htm"><span class="inline">layer_force_draw_depth()</span></a>.</p>
   <p>Tenga en cuenta que la modificación de la profundidad de una capa puede cambiar los <a href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">Filtros y Efectos</a> que se aplican en ella, ya que si se cambia la profundidad para que sea inferior a la profundidad de una capa FX, ya no se aplicará su efecto en la capa.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">layer_depth(layer_id, depth)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_depth</span>(layer_id, depth)</p>
   <table>
     <tbody>
       <tr>

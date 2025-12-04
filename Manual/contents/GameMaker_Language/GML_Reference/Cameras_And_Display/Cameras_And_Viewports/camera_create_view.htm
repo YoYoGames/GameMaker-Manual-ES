@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>camera_create_view</h1>
+  <h1><span data-field="title" data-format="default">camera_create_view</span></h1>
   <p>Esta función creará una nueva cámara y luego establecerá su vista en el <span class="notranslate">room</span>, antes de devolver el valor de ID único para identificar la cámara en futuras llamadas a la función. La cámara se creará utilizando los valores que establezcas en esta función para la posición, el tamaño y otros detalles que se correlacionan con los valores que establezcas en el Editor <span class="notranslate">Room</span> (ver <a href="../../../../The_Asset_Editors/Rooms.htm">aquí</a>). Tenga en cuenta que esta función puede tomar un <i>número variable de argumentos</i>, siendo sólo obligatorios la posición x/y y la anchura/altura. Cualquier argumento no suministrado utilizará sus argumentos por defecto.</p>
   <p>Tenga en cuenta que las cámaras son como todos los recursos dinámicos y ocuparán memoria cuando se creen. Esto significa que debes tener cuidado de no crear cámaras innecesariamente y de destruir las que no necesites llamando a la función <a href="camera_destroy.htm"><span class="inline">camera_destroy()</span></a>. Esto también significa que las cámaras persistirán de <span class="notranslate">room</span> a <span class="notranslate">room</span> si se asignan a una variable <span class="inline">global</span> (también persistirán cuando se asignen a variables de instancia o locales, pero no podrás acceder a ellas después de cambiar <span class="notranslate">room</span>, de ahí la pérdida de memoria), de modo que puedes -por ejemplo- crear una nueva cámara, asignarla a una variable global, y luego al comienzo de cada <span class="notranslate">room</span> utilizar las funciones <span class="inline">camera_set_*</span> para establecer las propiedades antes de asignarla a un puerto de vista.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">camera_create_view(room_x, room_y, width, height, [angle, object, x_speed, y_speed, x_border, y_border])</p>
+  <p class="code"><span data-field="title" data-format="default">camera_create_view</span>(room_x, room_y, width, height, [angle, object, x_speed, y_speed, x_border, y_border])</p>
   <table>
     <tbody>
       <tr>

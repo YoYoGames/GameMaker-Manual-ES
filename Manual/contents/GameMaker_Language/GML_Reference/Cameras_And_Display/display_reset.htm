@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>display_reset</h1>
+  <h1><span data-field="title" data-format="default">display_reset</span></h1>
   <p>Esta función restablece la configuración de la pantalla a la que se estableció cuando se inició el juego, pero también permite cambiar el nivel actual de antialiasing a pantalla completa que se está utilizando y si se utiliza la sincronización vertical. Los niveles de antialiasing disponibles son 0, 2, 4 y 8, siendo el valor de inicio por defecto 0, y el ajuste por defecto de v-sync es falso (desactivado). Activar v-sync puede dar una experiencia de juego más suave, pero también necesitará más potencia de procesamiento, por lo que su impacto debe ser considerado cuidadosamente antes de su uso, y lo mismo ocurre con el anti-aliasing, donde cuanto más alto sea el número, más procesamiento se requiere.</p>
   <p>Como no todos los dispositivos de destino son iguales, algunos pueden no soportar el antialiasing 8x o 4x, por ejemplo, y por eso hay una variable de <b>sólo lectura</b> disponible para obtener los diferentes niveles de AA que el dispositivo que ejecuta el juego puede mostrar:</p>
   <p class="code">display_aa</p>
   <p>Esta variable devolverá un valor entero basado en la configuración de bits para los diferentes niveles. Así que para sólo 2xAA, esto reportará 2, para la disponibilidad de 2x y 4x reportará 6. Para 8 y 4 informará 12. Para los 3 niveles (2,4 y 8) informará 14.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">display_reset(aa, vsync);</p>
+  <p class="code"><span data-field="title" data-format="default">display_reset</span>(aa, vsync);</p>
   <table>
     <tbody>
       <tr>

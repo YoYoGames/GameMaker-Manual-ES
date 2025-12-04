@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_sprite</h1>
+  <h1><span data-field="title" data-format="default">draw_sprite</span></h1>
   <p>Esta función dibuja la <span class="notranslate">sprite</span> y la subimagen dadas en una posición dentro del juego <span class="notranslate">room</span>. Para el <span class="notranslate">sprite</span> puedes usar la variable de instancia <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_index.htm"><span class="inline">sprite_index</span></a> para obtener el <span class="notranslate">sprite</span> actual que está asignado a la instancia que ejecuta el código, o puedes utilizar cualquier otro <span class="notranslate">sprite</span> <span class="notranslate">asset</span>. Lo mismo ocurre con la sub-imagen, ya que también se puede establecer en la variable de instancia <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/image_index.htm"><span class="inline">image_index</span></a> que establecerá la sub-imagen a la seleccionada para la instancia actual <span class="notranslate">sprite</span> (tenga en cuenta que puede dibujar un <span class="notranslate">sprite</span> diferente y seguir utilizando el valor de la sub-imagen para la instancia actual), o puede utilizar cualquier otro valor para esto para dibujar una sub-imagen específica del <span class="notranslate">sprite</span> elegido. Si el valor es mayor que el número de sub-imágenes, entonces <span data-keyref="GameMaker Name">GameMaker</span> automáticamente <span class="notranslate">loop</span> el número para seleccionar la imagen correspondiente (por ejemplo, si el <span class="notranslate">sprite</span> que se está dibujando tiene 5 sub-imágenes numeradas del 0 al 4 y establecemos el valor del índice en 7, entonces la función dibujará la sub-imagen 3, numerada 0). Por último, la posición x e y es la posición dentro de <span class="notranslate">room</span> en la que se dibujará la <span class="notranslate">sprite</span>, y está centrada en el <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">desplazamiento x</a> e <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">y de</a> <span class="notranslate">sprite</span>.</p>
   <p class="note"><span class="note">NOTA</span> Esta función puede no funcionar como se espera cuando se utiliza la animación del esqueleto <span class="notranslate">sprites</span>, y puede encontrar que la función sólo dibuja el primer cuadro de la pose por defecto. Deberías utilizar las funciones de <span class="inline">draw_skeleton_*</span> en su lugar.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">draw_sprite(sprite, subimg, x, y);</p>
+  <p class="code"><span data-field="title" data-format="default">draw_sprite</span>(sprite, subimg, x, y);</p>
   <table>
     <tbody>
       <tr>

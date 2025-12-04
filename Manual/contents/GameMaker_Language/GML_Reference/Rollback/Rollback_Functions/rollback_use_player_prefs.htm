@@ -16,7 +16,7 @@
   <meta name="search-keywords" content="rollback_use_player_prefs" />
 </head>
 <body>
-  <h1>rollback_use_player_prefs</h1>
+  <h1><span data-field="title" data-format="default">rollback_use_player_prefs</span></h1>
   <p>Esta función activa las preferencias de los jugadores y permite establecer las preferencias por defecto para todos los jugadores.</p>
   <p>Las preferencias por defecto pueden ser de cualquier tipo. Si no se especifican las preferencias por defecto, entonces todos los jugadores deben tener las <a href="rollback_set_player_prefs.htm">preferencias establecidas</a> antes de que el juego pueda comenzar.</p>
   <p>Al llamar a esta función se desactiva el inicio automático, por lo que hay que <a href="rollback_start_game.htm">iniciar el juego</a> manualmente. Ver: <a data-xref="{text}" href="../Rollback_System.htm#h4">Arranque manual vs. automático</a></p>
@@ -24,7 +24,7 @@
   <p>Por favor, lea: <a data-xref="{title}" href="../Rollback_Preferences.htm">Preferencias del jugador</a></p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">rollback_use_player_prefs([default]);</p>
+  <p class="code"><span data-field="title" data-format="default">rollback_use_player_prefs</span>([default]);</p>
   <table>
     <colgroup>
       <col />
@@ -49,9 +49,9 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>Ejemplo:</h4>
-  <p class="code" id="p">rollback_use_player_prefs({<br>
-        carácter: 0,<br>
-        color: c_white<br>
+  <p class="code" id="p">rollback_use_player_prefs({<br />
+        carácter: 0,<br />
+        color: c_white<br />
     });</p>
   <p>El código anterior habilita las preferencias del jugador, y establece las preferencias por defecto en un <span class="notranslate">struct</span>.</p>
   <p> </p>

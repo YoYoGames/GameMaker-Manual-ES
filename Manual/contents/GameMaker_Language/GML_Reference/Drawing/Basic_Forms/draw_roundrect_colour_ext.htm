@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>dibujar_redondo_color_ext</title>
+  <title>draw_roundrect_colour_ext</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>dibujar_redondo_color_ext</h1>
+  <h1><span data-field="title" data-format="default">draw_roundrect_colour_ext</span></h1>
   <p>Con esta función puedes dibujar un contorno de un rectángulo redondeado o un rectángulo redondeado relleno donde la posición (x1,y1) es la esquina superior izquierda y la posición (x2,y2) es la esquina inferior derecha. Si el rectángulo está relleno, los argumentos de color se utilizarán para generar un gradiente de color desde el centro hasta los bordes, donde el color 1 es el color del centro y el color 2 el color de los bordes. También debe suministrar valores de radio para los ejes x e y (en píxeles) y las esquinas se redondearán en estas cantidades. Puede definir la precisión del dibujo de las esquinas con la función <a href="draw_set_circle_precision.htm"><span class="inline">draw_set_circle_precision()</span></a>. Tenga en cuenta que el rectángulo que se dibuja puede necesitar valores diferentes (+/-1 en la x, la y, o la anchura o la altura) para que se dibuje con las dimensiones deseadas debido a las diferencias entre las distintas plataformas soportadas.</p>
   <p class="note"><b>NOTA</b>: Si desea dibujar una forma utilizando un <span class="notranslate">shader</span>, debe tener en cuenta que la mayoría de los <span class="notranslate">shaders</span> esperan las siguientes entradas: <span class="notranslate">vertex</span> textura, color. Sin embargo, cuando se utiliza esta función, sólo se pasan datos de <span class="notranslate">vertex</span> y de color, por lo que el <span class="notranslate">shader</span> puede no dibujar nada (o dibujar algo pero no correctamente). Si necesitas dibujar formas de esta manera, entonces el <span class="notranslate">shader</span> debe ser personalizado teniendo esto en cuenta.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">draw_roundrect_colour_ext(x1, y1, x2, y2, xrad, yrad, col1, col2, outline);</p>
+  <p class="code"><span data-field="title" data-format="default">draw_roundrect_colour_ext</span>(x1, y1, x2, y2, xrad, yrad, col1, col2, outline);</p>
   <table>
     <tbody>
       <tr>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>dibujar_textura_de_vértice</title>
+  <title>draw_vertex_texture</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>dibujar_textura_de_vértice</h1>
+  <h1><span data-field="title" data-format="default">draw_vertex_texture</span></h1>
   <p>Esta función define la posición de una textura <span class="notranslate">vertex</span> para una primitiva. El aspecto final de la primitiva dependerá del tipo de primitiva elegida para dibujar (Ver <a href="draw_primitive_begin.htm"><span class="inline">draw_primitive_begin()</span></a> para más información), el orden con el que añadas los vértices a la misma y la posición del punto de inicio que establezcas para la textura. Para finalizar y dibujar la primitiva debes llamar a <a href="draw_primitive_end.htm"><span class="inline">draw_primitive_end()</span></a>.</p>
   <p>También puedes elegir dibujar sólo <i>una parte</i> de la textura sobre la superficie de la primitiva estableciendo la posición xtex/ytex apropiada para muestrear (estas coordenadas también se conocen como puntos <b>UV</b> ). Este punto está definido por un valor entre 0 y 1, siendo la esquina superior izquierda de la imagen a utilizar el punto (0,0) y la esquina inferior derecha el punto (1,1). De esta manera se puede texturizar una primitiva con sólo una parte de la imagen de origen <span class="notranslate">asset</span>.</p>
   <p>Al dibujar una primitiva texturizada, la textura se mezclará con el color establecido por <a html="../colour And Blending/draw_set_colour.html"><span class="inline">draw_set_colour</span>. Esto significa que para dibujar la textura sin mezcla, ésta debe establecerse en <span class="inline">c_white</span>, como se muestra en el ejemplo siguiente.</a></p>

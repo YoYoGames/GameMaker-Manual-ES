@@ -15,11 +15,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_tex_max_mip_ext</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_tex_max_mip_ext</span></h1>
   <p>Con esta función se puede obtener el nivel máximo de mipmap actualmente establecido que se debe utilizar para un muestreador <span class="notranslate">shader</span> determinado. Se suministra el valor del índice del muestreador <span class="notranslate">shader</span> (devuelto por la función <a href="../../Asset_Management/Shaders/shader_get_sampler_index.htm"><span class="inline">shader_get_sampler_index()</span></a>y la función devolverá el nivel máximo de mipmap actual, donde un valor de 0 es la resolución más alta, 1 es para usar el primer mipmap, 2 es el segundo, etc... Tenga en cuenta que esto puede ser muy útil para evitar los artefactos de sangrado al renderizar las texturas, por ejemplo, establecer el borde de la página de la textura a 8px y luego establecer el nivel máximo de mipmap a 3 se asegurará de que usted no tiene ningún problema de sangrado a mayores distancias de render.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">gpu_set_tex_max_mip_ext(sampler_index, maxmip);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_set_tex_max_mip_ext</span>(sampler_index, maxmip);</p>
   <table>
     <tbody>
       <tr>

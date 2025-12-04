@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>network_send_raw</h1>
+  <h1><span data-field="title" data-format="default">network_send_raw</span></h1>
   <p>Con esta función puedes enviar un paquete de datos &quot;en bruto&quot; a través de la red. La función toma el <i>id de socket</i> para conectarse y luego debe suministrar el <i>id de buffer</i> que contiene los datos a ser enviados (para más información sobre <span class="notranslate">buffers</span> ver <a href="../Buffers/Buffers.htm">Referencia - Buffers</a>) y finalmente el tamaño (en bytes) del paquete de datos. Los datos enviados no son formateados por <span data-keyref="GameMaker Name">GameMaker</span> de ninguna manera y los dispositivos receptores obtendrán los datos como un flujo, lo que significa que tendrá que manejarlo usted mismo. La función devolverá el número de bytes de datos enviados, o un número menor que 0 si el envío ha fallado.</p>
   <h2>Argumento de las opciones</h2>
   <p>El último argumento es opcional, y sólo se utiliza con WebSockets. Permite elegir entre enviar datos binarios o de texto. Cualquiera de estas constantes puede ser especificada en este argumento:</p>
@@ -44,7 +44,7 @@
   <p>Las APIs de algunas plataformas sólo aceptan mensajes de texto cuando se utilizan WebSockets (por ejemplo, Twitch), por lo que la constante <span class="inline2">network_send_text</span> puede utilizarse en estos casos. Si no se especifica este argumento, se envían datos binarios por defecto.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">network_send_raw(socket, bufferid, size, [options]);</p>
+  <p class="code"><span data-field="title" data-format="default">network_send_raw</span>(socket, bufferid, size, [options]);</p>
   <table>
     <tbody>
       <tr>

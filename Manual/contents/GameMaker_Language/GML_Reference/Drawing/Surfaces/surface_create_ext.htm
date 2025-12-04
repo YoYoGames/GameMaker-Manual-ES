@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>superficie_crear_ext</title>
+  <title>surface_create_ext</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>superficie_crear_ext</h1>
+  <h1><span data-field="title" data-format="default">surface_create_ext</span></h1>
   <p>Esta función le permite adjuntar una superficie a un elemento de lienzo que ya existe en su página web, lo que significa que puede dividir eficazmente partes de su juego para ser dibujadas en varios lugares diferentes dentro de la página. Para ello, <i>debes</i> haber definido correctamente el elemento lienzo dentro de la página <span class="inline">*.html</span> de tu juego utilizando los tamaños y nombres correctos que corresponden a las superficies que deseas crear. Así, tendrías tu lienzo &quot;principal&quot;, y luego tus elementos de lienzo de superficie secundaria, que serán asignados usando esta función a las superficies correctas. La siguiente imagen es un ejemplo de cómo se configuraría una página con tres elementos de lienzo:</p>
   <p><img>El diseño de la página puede ser complicado, especialmente si deseas que todos los elementos se alineen correctamente, pero una vez que la dura tarea de crear el diseño se ha completado, puedes añadir este archivo <span class="inline">html</span> como el archivo de página por defecto para el juego utilizando la <a href="../../../../Settings/Game_Options/HTML5.htm">pestaña HTML5</a> de las <a href="../../../../Settings/Game_Options.htm">Opciones de Juego</a>. Lo siguiente que debes hacer es configurar tu <span class="notranslate">room</span> y las vistas, ya que cada superficie tendrá que estar asociada a una vista específica para &quot;capturar&quot; las imágenes del juego (ver la variable view <a href="../../Cameras_And_Display/Cameras_And_Viewports/view_surface_id.htm"><span class="inline">view_surface_id[0...7]</span></a>). La imagen de abajo muestra cómo el juego <span class="notranslate">room</span> para el ejemplo del lienzo anterior sería establecido:</p>
   <p><img>Por último, se utilizaría esta función para crear las superficies, siendo el nombre el mismo que el utilizado para los elementos del lienzo y el tamaño correspondiente al tamaño de ese mismo lienzo. La función devolverá el índice de la superficie, que deberá almacenarse en una variable para futuras llamadas a la función. Cuando la superficie se crea por primera vez, puede contener &quot;ruido&quot;, ya que básicamente es sólo un área de memoria que se pone a un lado para el propósito (y que la memoria todavía puede contener información), por lo que es posible que desee borrar la superficie antes de su uso con una función como <a href="../Colour_And_Alpha/draw_clear_alpha.htm"><span class="inline">draw_clear_alpha()</span></a>.</p>
   <p class="note"><b>NOTA</b>: Esta función sólo está disponible para su uso con el módulo HTML5.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">surface_create_ext(name, w, h);</p>
+  <p class="code"><span data-field="title" data-format="default">surface_create_ext</span>(name, w, h);</p>
   <table>
     <tbody>
       <tr>

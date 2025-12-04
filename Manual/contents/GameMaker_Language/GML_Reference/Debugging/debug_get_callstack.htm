@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>debug_get_callstack</h1>
+  <h1><span data-field="title" data-format="default">debug_get_callstack</span></h1>
   <p>Esta función genera una matriz de <span class="notranslate">strings</span> como la &quot;pila de llamadas&quot; donde el actual <span class="notranslate">script</span> aparece primero, y luego todos los otros <span class="notranslate">scripts</span> que se ejecutaron para que el actual <span class="notranslate">script</span> se ejecutara. El formato exacto de <span class="notranslate">string</span> variará dependiendo de la plataforma de destino elegida, pero en su mayoría tendrá el nombre del script/evento, luego dos puntos : y el número de línea, similar a esto:</p>
   <p class="code"><span class="inline">&quot;gml_Script_script2:1&quot;<br />
       &quot;gml_Script_script1:32&quot;<br />
@@ -25,7 +25,7 @@
   <p>Tenga en cuenta que la matriz devuelta siempre contendrá 0 en su última posición, después de enumerar la pila de llamadas <span class="notranslate">scripts</span>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">debug_get_callstack([maxdepth])</p>
+  <p class="code"><span data-field="title" data-format="default">debug_get_callstack</span>([maxdepth])</p>
   <table>
     <tbody>
       <tr>

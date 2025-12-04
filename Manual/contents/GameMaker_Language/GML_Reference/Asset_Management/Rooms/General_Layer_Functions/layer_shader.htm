@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>sombreador_de_capas</title>
+  <title>layer_shader</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sombreador_de_capas</h1>
+  <h1><span data-field="title" data-format="default">layer_shader</span></h1>
   <p>Con esta función se puede asignar un recurso <span class="notranslate">shader</span> a cualquier capa y la capa se renderizará utilizando ese <span class="notranslate">shader</span>. Se suministra el valor de ID único de la capa o el nombre de la capa (como <span class="notranslate">string</span> - esto tendrá un impacto en el rendimiento) , junto con el ID del <span class="notranslate">shader</span> a utilizar. El <span class="notranslate">shader</span> debe haber sido creado previamente en el navegador <span class="notranslate">Asset</span> y el índice <span class="notranslate">shader</span> (el nombre del recurso <span class="notranslate">shader</span> ) se pasa a esta función. Si la capa asignada tiene instancias añadidas, entonces el <span class="notranslate">shader</span> se aplicará a <i>todos</i> los eventos de dibujo que la instancia utilice - por ejemplo si la instancia tiene un evento Draw GUI Begin, entonces el <span class="notranslate">shader</span> se aplicará automáticamente a él. El <span class="notranslate">shader</span> también afectará a cualquier otro elemento gráfico dibujado en esa capa, como los mapas <span class="notranslate">sprite</span> <span class="notranslate">assets</span> o <span class="notranslate">tile</span>.</p>
   <p>Tenga en cuenta que la función <i>no</i> está pensada para ser llamada en cualquier evento de dibujo o eventos de paso, sino que sólo necesita ser llamada al inicio de la <span class="notranslate">room</span> en el <b>código de creación de la sala</b> o en el <b>evento de creación / </b> <b>evento de inicio de la sala</b> de una instancia.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">layer_shader(layer_id, shader)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_shader</span>(layer_id, shader)</p>
   <table>
     <tbody>
       <tr>

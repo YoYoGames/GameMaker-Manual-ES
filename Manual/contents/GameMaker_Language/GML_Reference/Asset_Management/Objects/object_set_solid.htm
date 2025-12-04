@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>object_set_solid</h1>
+  <h1><span data-field="title" data-format="default">object_set_solid</span></h1>
   <p>Con esta función puede <span class="notranslate">flag</span> un <span class="notranslate">object</span> específico como sólido o no (para más información sobre el &quot;sólido&quot; <span class="notranslate">flag</span> vea la sección sobre el <a href="../../../../The_Asset_Editors/Objects.htm">Editor de Objetos</a>). Esto significa que todas las instancias de este <span class="notranslate">object</span> que se creen <i>después de haber cambiado</i> el sólido se crearán con este nuevo estado, mientras que las instancias que ya están en el <span class="notranslate">room</span> pueden no verse afectadas.</p>
   <p>Tenga en cuenta que ésta no es una función de instancia. Puede establecer el sólido <span class="notranslate">flag</span> de instancias individuales usando la variable <span class="inline"><a href="../Instances/Instance_Variables/solid.htm">solid</a></span> y así tener diez instancias todas marcadas como sólidas aunque el <span class="notranslate">object</span> en cuestión tenga el <span class="notranslate">flag</span> establecido como falso en el <span class="notranslate">IDE</span>, e incluso si cambia el sólido <span class="notranslate">flag</span> del <span class="notranslate">object</span> a verdadero usando esta función, todas las instancias que actualmente en el <span class="notranslate">room</span> permanecerán como estaban, y sólo las instancias creadas después de llamar a la función comenzarán con el sólido marcado como verdadero.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">object_set_solid( index, solid );</p>
+  <p class="code"><span data-field="title" data-format="default">object_set_solid</span>( index, solid );</p>
   <table>
     <tbody>
       <tr>

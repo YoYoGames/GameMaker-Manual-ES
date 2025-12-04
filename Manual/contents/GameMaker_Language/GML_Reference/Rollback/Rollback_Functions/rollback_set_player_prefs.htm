@@ -16,7 +16,7 @@
   <meta name="search-keywords" content="rollback_set_player_prefs" />
 </head>
 <body>
-  <h1>rollback_set_player_prefs</h1>
+  <h1><span data-field="title" data-format="default">rollback_set_player_prefs</span></h1>
   <p>Después de <a href="rollback_set_player_prefs.htm">habilitar las preferencias</a>, esta función se utiliza para establecer las preferencias del reproductor local. Esto significa que la función debe depender de la <a href="../../Game_Input/Keyboard_Input/Keyboard_Input.htm">entrada local</a> y no de la <a href="rollback_get_input.htm">entrada del Rollback</a>.</p>
   <p>Las preferencias pueden ser de cualquier tipo. Si se establecen preferencias por defecto, asegúrese de utilizar la misma <span class="notranslate">data type</span> y la misma estructura.</p>
   <p>Cuando cualquier jugador establece sus preferencias, todos en el juego reciben un <a data-xref="{text}" href="../Rollback_Events.htm#h1">evento de retroceso</a>.</p>
@@ -24,7 +24,7 @@
   <p>Por favor, lea: <a data-xref="{title}" href="../Rollback_Preferences.htm">Preferencias del jugador</a><a data-xref="{text}" href="../Rollback_System.htm#h3"> </a></p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">rollback_set_player_prefs(preferences);</p>
+  <p class="code"><span data-field="title" data-format="default">rollback_set_player_prefs</span>(preferences);</p>
   <table>
     <colgroup>
       <col />
@@ -49,9 +49,9 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>Ejemplo:</h4>
-  <p class="code" id="p">rollback_set_player_prefs({<br>
-        carácter: obj_customizer.character_selected,<br>
-        color: obj_customizer.color_selected<br>
+  <p class="code" id="p">rollback_set_player_prefs({<br />
+        carácter: obj_customizer.character_selected,<br />
+        color: obj_customizer.color_selected<br />
     });</p>
   <p>El código anterior establece las preferencias para el jugador, leyendo los valores de un &quot;personalizador&quot; <span class="notranslate">object</span>, que sería no administrado (local).</p>
   <p> </p>

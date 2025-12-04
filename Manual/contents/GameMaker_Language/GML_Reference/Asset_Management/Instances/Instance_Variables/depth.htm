@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>profundidad</title>
+  <title>depth</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>profundidad</h1>
+  <h1><span data-field="title" data-format="default">depth</span></h1>
   <p>Cuando creas un <span class="notranslate">object</span> puedes asignarle una <i>profundidad</i> inicial que define cómo se dibujarán las instancias de ese <span class="notranslate">object</span> en el <span class="notranslate">room</span> cuando se esté jugando y esta variable se puede utilizar para obtener y cambiar ese valor de profundidad mientras el juego se está ejecutando. Normalmente no necesitarás usar esta variable, ya que deberías configurar las instancias para que se añadan a <a href="layer.htm">capas</a> discretas, que a su vez están configuradas a una profundidad específica, pero puede ser que quieras cambiar la profundidad de una instancia usando este valor, en cuyo caso se creará una &quot;capa temporal&quot; específicamente para la instancia a la profundidad dada. Tenga en cuenta que cuando no haya instancias en la misma profundidad, esta capa temporal se eliminará de la memoria (a diferencia de las capas normales, que permanecerán aunque no tengan nada en ellas).</p>
   <p class="note"><b>¡IMPORTANTE!</b> Cuando se modifica la variable <span class="inline">depth</span> y <span data-keyref="GameMaker Name">GameMaker</span> gestiona las capas, la variable incorporada <span style="font-size:1px;"><a href="layer.htm"><span class="inline">layer</span></a></span> devolverá -1 y no el ID de la capa, ya que las capas gestionadas no pueden ser manipuladas mediante código.</p>
   <p>En <span data-keyref="GameMaker Name">GameMaker</span>, cuanto menor sea el valor de profundidad de una instancia, más &quot;cerca de la cámara&quot; se dibujará esa instancia, mientras que un valor de profundidad mayor significa que la instancia se dibujará &quot;más lejos de la cámara&quot;, es decir: -1000 se dibuja encima de -100, que se dibuja encima de 0, y así sucesivamente.</p>
@@ -23,7 +23,7 @@
   <p>Tenga en cuenta que la modificación de la profundidad de una instancia puede cambiar los <a href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">Filtros y Efectos</a> que se aplican en ella, ya que si se cambia la profundidad para que sea inferior a la profundidad de una capa FX, ya no se aplicará su efecto en la instancia.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">depth;</p>
+  <p class="code"><span data-field="title" data-format="default">depth</span></p>
   <p> </p>
   <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span> (single precision floating point value)</p>

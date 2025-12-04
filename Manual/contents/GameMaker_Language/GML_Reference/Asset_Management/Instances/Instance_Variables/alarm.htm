@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>alarma</title>
+  <title>alarm</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>alarma</h1>
+  <h1><span data-field="title" data-format="default">alarm</span></h1>
   <p>Esta <a href="../../../../GML_Overview/Arrays.htm">matriz</a> de 1 dimensión se utiliza para obtener el valor actual de las alarmas que pueda tener la instancia, o puede utilizarse para establecer dichas alarmas. Hay doce alarmas incorporadas en cada instancia de un <span class="notranslate">object</span>, y cada una tiene su propia <a href="../../../../../The_Asset_Editors/Object_Properties/Object_Events.htm"><span class="notranslate">event</span></a> que se ejecutará cuando esta variable llegue a 0.</p>
   <p>Las alarmas son contadas al inicio de cada paso, <strong>después</strong> del evento Begin Step pero <strong>antes</strong> del evento principal Step, y antes de que se renderice nada para el frame. Esto significa que si estableces una alarma a <span class="inline2">1</span> en el evento Begin Step, su evento se ejecutará en ese mismo fotograma (ya que la alarma será contada a 0 después de que Begin Step haya terminado), pero si estableces una alarma a <span class="inline2">1</span> en el evento Step, se ejecutará en el siguiente fotograma.</p>
   <p>Hay que tener en cuenta que la alarma no termina cuando llega a 0 (aunque el evento se haya disparado) ya que en el siguiente paso bajará a -1, por lo que si necesitas parar una alarma por cualquier motivo deberás poner su valor en el array a -1 <i>no</i> a 0. Los tiempos de las alarmas se calculan en <i>pasos de juego</i>, siendo un valor de 30 pasos, 60 pasos, etc.</p>

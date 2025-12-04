@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>http_post_string</h1>
+  <h1><span data-field="title" data-format="default">http_post_string</span></h1>
   <p>En informática, se utiliza una solicitud <b>posterior</b> cuando el cliente necesita enviar datos a <span class="notranslate">server</span> como parte de la solicitud de recuperación, como cuando se sube un archivo o se envía un formulario completado, y lo mismo ocurre con esta función en <span data-keyref="GameMaker Name">GameMaker</span>. A diferencia del método de solicitud <span class="inline"><a href="http_get.htm">http_get()</a></span>, en el que sólo se envía una URL a <span class="notranslate">server</span>, <span class="inline">http_post_string()</span> también incluye una <span class="notranslate">string</span> que se envía a <span class="notranslate">server</span> y que puede dar lugar a la creación de un nuevo recurso o a la actualización de un recurso existente, o a ambas cosas. Hay que tener en cuenta que los parámetros de petición HTTP (los trozos que a veces se &quot;añaden&quot; al final de una URL cuando se envía un formulario en una página web) también son perfectamente aceptables cuando se utiliza esta función.</p>
   <p class="note"><b><span class="note">NOTA</span> </b>Debe tener en cuenta que, debido a la protección XSS de los navegadores, las solicitudes y los intentos de cargar recursos de dominios cruzados se bloquean y puede parecer que devuelven resultados en blanco. Para más información, consulte la sección sobre <a href="HTTP.htm">problemas</a> entre dominios.</p>
   <p>Este evento generará un &quot;call back&quot; que es recogido por cualquier <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">evento HTTP</a>, en cuyo caso generará un <a href="../../Data_Structures/DS_Maps/DS_Maps.htm">mapa DS</a> (más conocido como &quot;diccionario&quot;) que es exclusivo de este evento y se almacena en la variable especial <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><b>async_load</b></a>. Este mapa DS contendrá diferentes valores dependiendo de si se devuelven datos o no. Por ejemplo, si se ha solicitado un archivo, el evento se disparará varias veces a medida que se reciba cada paquete de datos para poder mostrar una barra de progreso, por ejemplo. La estructura general del mapa DS será la siguiente:</p>
@@ -33,7 +33,7 @@
   </ul>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">http_post_string(url, string);</p>
+  <p class="code"><span data-field="title" data-format="default">http_post_string</span>(url, string);</p>
   <table>
     <tbody>
       <tr>

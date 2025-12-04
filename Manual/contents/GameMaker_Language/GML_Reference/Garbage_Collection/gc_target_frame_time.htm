@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gc_target_frame_time</h1>
+  <h1><span data-field="title" data-format="default">gc_target_frame_time</span></h1>
   <p>Con esta función puedes <span>indicar al recolector de basura que no debe pasar más del tiempo especificado ejecutando cada trama. La función toma un valor de tiempo <span>especificado en microsegundos (donde 1.000.000 de microsegundos equivale a un segundo) y el tiempo de trama objetivo por defecto es de 100 microsegundos.</span></span></p>
   <p><span><span>Tenga en cuenta que esto es simplemente un </span></span><span>ya que algunas operaciones deben ejecutarse completamente en una sola trama y a veces pueden tardar más que el tiempo objetivo. También tenga en cuenta que<span>aumentar el tiempo objetivo hará que el recolector de basura responda mejor a los cambios rápidos en el uso de la memoria y hará que la memoria se libere más rápidamente, aunque en la práctica es poco probable que esto sea necesario en la mayoría de los casos. Ten en cuenta también que si estableces el tiempo de fotogramas objetivo en 0, el recolector <em>no </em>se detendrá por completo, sino que seguirá realizando una cantidad mínima de trabajo en cada fotograma. Para desactivar completamente el recolector, utilice la función <span class="inline"><a href="gc_enable.htm">gc_enable()</a></span> </span>. </span></p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">gc_target_frame_time(time);</p>
+  <p class="code"><span data-field="title" data-format="default">gc_target_frame_time</span>(time);</p>
   <table>
     <tbody>
       <tr>

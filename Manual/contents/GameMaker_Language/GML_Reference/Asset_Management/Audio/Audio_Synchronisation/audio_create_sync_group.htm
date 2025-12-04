@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_create_sync_group</h1>
+  <h1><span data-field="title" data-format="default">audio_create_sync_group</span></h1>
   <p>Crea un grupo de sincronización y devuelve un valor de identificación único para él, que debe utilizarse en todas las llamadas posteriores a la función de audio para este grupo. Si quieres que el grupo sea <span class="notranslate">loop</span> entonces pasa en <span class="inline">true</span>, de lo contrario pasa en <span class="inline">false</span>, pero ten en cuenta que si quieres que sean <span class="notranslate">loop</span>, <i>todas las pistas añadidas posteriormente tienen que tener la misma longitud</i>. Tenga en cuenta que cuando cree un grupo de sincronización, tendrá que liberar la memoria y los sonidos asociados a él cuando no estén en uso utilizando la función <a href="audio_destroy_sync_group.htm"><span class="inline">audio_destroy_sync_group()</span></a> por ejemplo, en los eventos <b>Room End</b> o <b>Destroy</b>.</p>
   <p class="note"><b>NOTA</b>: Esta funcionalidad no está disponible para la plataforma de destino HTML5.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">audio_create_sync_group(loop);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_create_sync_group</span>(loop);</p>
   <table>
     <tbody>
       <tr>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>instancia_desactivar_región</title>
+  <title>instance_deactivate_region</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instancia_desactivar_región</h1>
+  <h1><span data-field="title" data-format="default">instance_deactivate_region</span></h1>
   <p>Con esta función se puede definir una región dentro de <span class="notranslate">room</span> para desactivar instancias que han sido activadas previamente. Esta región puede marcarse como &quot;interior&quot; o &quot;exterior&quot;, como se muestra en la siguiente imagen:</p>
   <p><img>Puede ver en la imagen anterior que la instancia &quot;manzana&quot; está siempre inactiva porque, aunque la propia <span class="notranslate">sprite</span> no se superponga a la región, el cuadro delimitador sí lo hace. Así pues, se considera que las instancias están dentro de la región especificada cuando su caja <i>delimitadora</i> se solapa con ella, y <b>no</b> se tiene en cuenta el estado de la máscara de colisión (precisa o no). Hay que tener en cuenta que la desactivación no es instantánea, y una instancia que haya sido desactivada de esta manera no se considerará inactiva hasta el final del evento en el que se llamó a la función.</p>
   <p class="note"><b>NOTA</b>: Si desactiva una instancia al iniciar <span class="notranslate">room</span> (es decir, desde el código de creación de <span class="notranslate">room</span>, o desde un evento de creación de una instancia dentro de <span class="notranslate">room</span>) todas las instancias que se coloquen dentro de <span class="notranslate">room</span> desde el editor de <span class="notranslate">room</span> <b>seguirán ejecutando su evento de creación</b> antes de ser desactivadas.</p>
   <p class="note"><b>ADVERTENCIA</b>: Desactivar las instancias que tienen la física activada <b>NO</b> impedirá que sus accesorios interactúen dentro de la simulación de la física. Para ello, debe establecer su variable <a href="../../../Physics/Physics_Variables/phy_active.htm"><span class="inline"><span style="font-size:14px;">phy_active</span></a> a <span class="inline">true</span> o <span class="inline">false</span> al activar/desactivar las instancias.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">instance_deactivate_region(left, top, width, height, inside, notme);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_deactivate_region</span>(left, top, width, height, inside, notme);</p>
   <table>
     <tbody>
       <tr>

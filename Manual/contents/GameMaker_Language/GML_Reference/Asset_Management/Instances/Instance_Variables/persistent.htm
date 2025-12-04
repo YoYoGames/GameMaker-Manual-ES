@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>persistente</title>
+  <title>persistent</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>persistente</h1>
+  <h1><span data-field="title" data-format="default">persistent</span></h1>
   <p>Esta variable puede leerse para saber si la instancia está marcada como <span class="inline">persistent</span> o no, o puede usarse para establecer la persistencia a <span class="inline">true</span> (persistente) o <span class="inline">false</span> (no persistente) para la instancia. Una instancia persistente es aquella que será &quot;llevada&quot; de <span class="notranslate">room</span> a <span class="notranslate">room</span>, lo que significa (por ejemplo) que sólo tiene que ser creada una vez al comienzo del juego y estará presente en todos los demás <span class="notranslate">rooms</span>. Hay que tener cuidado con la persistencia, ya que es fácil perder la pista de las instancias persistentes, lo que puede dar lugar a problemas más adelante en el desarrollo del juego.</p>
   <p>Cuando se crea una instancia con persistencia habilitada en un <span class="notranslate">room</span>, esta variable se establecerá en <span class="inline">true</span> y se le asignará una capa o una profundidad (dependiendo de la función que se haya utilizado para crear la instancia del <span class="notranslate">object</span>). Cuando se cambie el <span class="notranslate">room</span>, y si el siguiente <span class="notranslate">room</span> <i>no</i> tiene una capa con el mismo nombre o profundidad que la asignada, entonces se creará una nueva capa para la instancia que está persistiendo a través del <span class="notranslate">rooms</span>. Si se asignó una capa con nombre cuando se creó la instancia, entonces la nueva capa también se llamará igual que la capa original, mientras que si se asignó una profundidad a la instancia, entonces la nueva capa se llamará &quot;<span class="inline">_layer_XXX</span>&quot;, donde &quot;XXX&quot; es un valor hexadecimal utilizado para dar a la capa un nombre único. Estas capas se eliminarán de la <span class="notranslate">room</span> en <span class="notranslate">Room</span> Fin. Otra cosa a tener en cuenta sobre las capas y las instancias persistentes es que si has asignado a la instancia una capa con nombre en la creación, y hay otra capa en el siguiente <span class="notranslate">rooms</span> con el mismo nombre, entonces la instancia persistente será asignada a la capa con el mismo nombre independientemente de <i>la profundidad de la capa</i>. Por último, si una instancia persistente se mueve a un <span class="notranslate">room</span> con una capa con la misma profundidad en la que se creó la instancia, <i>no</i> se asignará a esta capa, sino que se creará una nueva capa con la misma profundidad (siguiendo la convención de nombres explicada anteriormente).</p>
   <p>Un <span class="notranslate">object</span> persistente seguirá teniendo sus eventos de <b>Inicio de Juego</b>, Fin de <b>Juego</b>, <b>Inicio de Sala</b> y Fin <b>de Sala</b> disparados, sin embargo si reinicias el juego (con, por ejemplo, la función <span class="inline">game_restart()</span> ) todos los <span class="notranslate">objects</span> persistentes serán eliminados y sólo existirán cuando sean creados de nuevo por el juego. Ten en cuenta también que si desactivas un <span class="notranslate">object</span> persistente, ya no pasará de un <span class="notranslate">room</span> a otro a no ser que se reactive antes de que se dispare el evento <span class="notranslate">Room</span> End.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">persistent;</p>
+  <p class="code"><span data-field="title" data-format="default">persistent</span></p>
   <p> </p>
   <h4>Devuelve:</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>

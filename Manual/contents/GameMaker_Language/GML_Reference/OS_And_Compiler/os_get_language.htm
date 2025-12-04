@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>os_get_language</h1>
+  <h1><span data-field="title" data-format="default">os_get_language</span></h1>
   <p>Esta función devuelve un <span class="notranslate">string</span> con el código de idioma de dos letras para el sistema operativo que está ejecutando el juego, tal y como establece el estándar <a href="http://en.wikipedia.org/wiki/ISO_639" target="_blank">ISO639</a>. Si la información no está disponible, simplemente contendrá un <span class="notranslate">string</span> vacío &quot;&quot;, o &quot;en&quot; para el idioma &quot;inglés&quot;. Ten en cuenta que algunos idiomas también tienen un Código Regional relevante, así que para distinguir entre diferentes regiones del mismo país utiliza la función <a href="os_get_region.htm"><span class="inline">os_get_region()</span></a>.</p>
   <p>La siguiente tabla muestra ejemplos de algunos de los principales códigos de dos letras de las lenguas definidos por la norma ISO 639:</p>
   <table>
@@ -86,15 +86,15 @@
       </tr>
     </tbody>
   </table>
-  <p> </p>
+  <p> </p>
   <p class="note"><b>NOTA</b>: No se devuelve el código de país de la ubicación, sino el código de idioma del sistema operativo.</p>
-  <p> </p>
+  <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">os_get_language()</p>
-  <p> </p>
+  <p class="code"><span data-field="title" data-format="default">os_get_language</span>()</p>
+  <p> </p>
   <h4>Devuelve:</h4>
-  <p class="code"><span data-keyref="Type_String"></span></p>
-  <p> </p>
+  <p class="code"><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></p>
+  <p> </p>
   <h4>Ejemplo:</h4>
   <p class="code">switch (os_get_language())<br />
     {<br />
@@ -104,9 +104,9 @@
         default: ini_open(&quot;english.ini&quot;); break;<br />
     }</p>
   <p>El código anterior comprueba el idioma del sistema operativo y abre un archivo <span class="inline">*.ini</span> diferente en función del valor devuelto.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
@@ -114,7 +114,7 @@
         <div style="float:right">Siguiente: <a href="os_get_region.htm"><span class="notranslate">os_get_region</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Todos los derechos reservados</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 os_get_language

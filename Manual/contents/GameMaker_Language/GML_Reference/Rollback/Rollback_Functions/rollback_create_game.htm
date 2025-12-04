@@ -16,7 +16,7 @@
   <meta name="search-keywords" content="rollback_create_game" />
 </head>
 <body>
-  <h1>rollback_create_game</h1>
+  <h1><span data-field="title" data-format="default">rollback_create_game</span></h1>
   <p>Esta función alberga una nueva partida multijugador. Toma el número de jugadores que deben estar conectados para que la partida comience, y opcionalmente permite desactivar la <a data-xref="{text}" href="../Rollback_System.htm#h">prueba de sincronización</a>.</p>
   <p>Cuando se llama con la prueba de sincronización desactivada, el sistema espera a que se una <span class="inline2">la</span> cantidad de jugadores antes de <a href="../Rollback_Events.htm">iniciar</a> la partida. Asegúrate de no crear o modificar ninguna instancia gestionada hasta que el juego comience.</p>
   <p class="note"><span class="tip">SUGERENCIA</span> Puedes forzar el inicio del juego antes de que todos los jugadores se hayan unido, llamando a <a href="rollback_start_game.htm"><span class="inline">rollback_start_game()</span></a>.</p>
@@ -24,7 +24,7 @@
   <p class="note"><span class="warning">ADVERTENCIA</span> No se recomienda establecer una región por defecto en esta función a no ser que permita al reproductor seleccionarla a través de un menú.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">rollback_create_game(num_players, [enable_sync_test, region]);</p>
+  <p class="code"><span data-field="title" data-format="default">rollback_create_game</span>(num_players, [enable_sync_test, region]);</p>
   <table>
     <colgroup>
       <col />

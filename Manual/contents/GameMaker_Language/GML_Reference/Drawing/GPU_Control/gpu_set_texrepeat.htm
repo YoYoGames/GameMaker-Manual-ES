@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_texrepeat</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_texrepeat</span></h1>
   <p>Esta función puede utilizarse para indicar a <span data-keyref="GameMaker Name">GameMaker</span> si las texturas deben repetirse (<span class="inline">true</span>) o no (<span class="inline">false</span>) cuando se utilizan para modelos y primitivas. Normalmente las anchuras y alturas de las texturas están en el rango 0 - 1, pero si se especifica un valor mayor que 1 por defecto el resto no se dibuja (toda la textura se dibujará con una sección &quot;vacía&quot; correspondiente al porcentaje sobre 1 que se utilice. Así, un valor de 2 para el ancho o el alto de una textura dibujaría la textura en la mitad del espacio y dejaría la otra mitad vacía). Sin embargo, al usar esta función para establecer la repetición a true la textura se repite automáticamente sobre todos los modelos y primitivas. El caso probable de uso de estas funciones es para repetir una textura en 3D, pero para que funcione y no saque imágenes del resto de la página de texturas, el <span class="notranslate">sprite</span> utilizado tendrá que ser marcado como en una &quot;Página de Textura Separada&quot; en el Editor <span class="notranslate">Sprite</span>.</p>
   <p class="note"><b>NOTA</b>: <span class="notranslate">Sprites</span> y los fondos se dibujan siempre sin repetirse, por lo que una vez que se dibuja un <span class="notranslate">sprite</span> o un fondo este valor se restablece a <span class="inline">false</span>. Este comportamiento por defecto no afectará a la configuración del escenario de la textura (es decir, llamar a la función lo hará, pero el ajuste interno a false no lo hará).</p>
   <p class="note"><b>NOTA</b>: Este ajuste anulará cualquier repetición de etapa de textura establecida para <span class="notranslate">shaders</span> cuando se utilice la función <a href="gpu_set_texrepeat_ext.htm"><span class="inline">gpu_set_texrepeat_ext()</span></a>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">gpu_set_texrepeat(enable);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_set_texrepeat</span>(enable);</p>
   <table>
     <tbody>
       <tr>

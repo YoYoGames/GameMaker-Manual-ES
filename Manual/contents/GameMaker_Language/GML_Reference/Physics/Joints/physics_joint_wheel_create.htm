@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_joint_wheel_create</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_wheel_create</span></h1>
   <p>Una articulación de rueda simplemente combina un pistón y una articulación de revolución, como una rueda montada en el amortiguador de un coche. Usted especifica el punto de anclaje para la junta así como las dos instancias habilitadas por la física para la junta, y la primera instancia actuará como el &quot;cuerpo&quot; de la junta, mientras que la segunda será la &quot;rueda&quot;, y se le permitirá moverse libremente alrededor del eje de la junta. También puede establecer un vector de eje, que es la línea imaginaria a lo largo de la cual la articulación actuará como un &quot;muelle&quot; permitiendo que la rueda rebote hacia arriba y hacia abajo a lo largo de ella cuando encuentre obstáculos (muy parecido a la articulación de pistón). La siguiente imagen lo ilustra:</p>
   <p><img>Si eliges habilitar un motor, entonces la segunda instancia girará alrededor de la posición de anclaje, y puedes establecer el par motor máximo utilizado para alcanzar la velocidad deseada del motor (N/m) así como la velocidad a la que el motor debe girar. Dado que la articulación de la rueda también tiene un eje a lo largo del cual se puede mover, puede establecer la frecuencia de oscilación (en Hz), así como la relación de amortiguación para la articulación - es posible que tenga que jugar con estos valores para afinarlos y se recomienda que comience con valores más pequeños y los incremente hasta que obtenga el efecto que desea.</p>
   <p>Al igual que con todas las articulaciones, si se establece el valor &quot;col&quot; a <span class="inline">true</span> entonces las dos instancias pueden interactuar y colisionar entre sí, pero <i>sólo</i> si tienen eventos de colisión, sin embargo, si se establece a <span class="inline">false</span>, no van a colisionar no importa qué.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">physics_joint_wheel_create(inst1, inst2, anchor_x, anchor_y, axis_x, axis_y, enableMotor, max_motor_torque, motor_speed, freq_hz, damping_ratio, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_wheel_create</span>(inst1, inst2, anchor_x, anchor_y, axis_x, axis_y, enableMotor, max_motor_torque, motor_speed, freq_hz, damping_ratio, col)</p>
   <table>
     <tbody>
       <tr>

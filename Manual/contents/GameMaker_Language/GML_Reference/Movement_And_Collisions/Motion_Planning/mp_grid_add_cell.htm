@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mp_grid_add_cell</h1>
+  <h1><span data-field="title" data-format="default">mp_grid_add_cell</span></h1>
   <p>Con esta función podemos marcar celdas individuales dentro de la cuadrícula MP dada como &quot;prohibidas&quot;, lo que significa que las funciones de búsqueda de <span class="notranslate">path</span> no las cruzarán nunca. Ahora bien, normalmente se trabaja en coordenadas de <i>habitación</i> x/y, y no en coordenadas de <i>celdas</i> de la cuadrícula MP. Así que consideremos la siguiente imagen, que muestra cómo pueden correlacionarse ambas:</p>
   <p><img>Como puede ver, la cuadrícula mp_grid está numerada como una serie de celdas (comenzando en 0,0 en la esquina superior izquierda), y cuando coloca esta cuadrícula sobre el <span class="notranslate">room</span> hay una correlación directa entre las coordenadas <span class="notranslate">room</span> (que también comienzan en 0,0 en la parte superior izquierda) y las celdas dentro de la cuadrícula. En la imagen puedes ver que una instancia en la posición 260,130 cae en la celda de la cuadrícula 8,4. Puedes calcular matemáticamente la celda exacta en la que cae una posición fácilmente dividiendo el número por la resolución de la rejilla y redondeando hacia abajo <i>o</i>, si estás usando resoluciones de rejilla de potencias de 2 (como 8, 16, 32 etc...) puedes usar los <a href="../../../../Additional_Information/Bitwise_Operators.htm">operadores bit</a> a bit. Hay que tener en cuenta que la operación a nivel de bits es más rápida y el ejemplo siguiente muestra ambos métodos.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">mp_grid_add_cell(id, h, v);</p>
+  <p class="code"><span data-field="title" data-format="default">mp_grid_add_cell</span>(id, h, v);</p>
   <table>
     <tbody>
       <tr>

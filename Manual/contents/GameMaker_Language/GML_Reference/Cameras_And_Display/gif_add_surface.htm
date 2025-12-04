@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gif_add_surface</h1>
+  <h1><span data-field="title" data-format="default">gif_add_surface</span></h1>
   <p>Con esta función puedes guardar un fotograma en un archivo GIF desde una superficie. Se suministra el ID del archivo GIF (devuelto por la función <a href="gif_open.htm"><span class="inline">gif_open()</span></a>) y un ID de superficie (devuelto por la función <a href="../Drawing/Surfaces/surface_create.htm"><span class="inline">surface_create()</span></a>), así como un tiempo de retardo entre fotogramas. El tiempo de retardo se calcula en 1/100 de segundo, pero tenga en cuenta que una vez creado el GIF, si lo utiliza con fines promocionales, por ejemplo, los distintos navegadores pueden interpretar el retardo de los fotogramas de forma ligeramente diferente - vea <a href="https://www.deviantart.com/humpy77/journal/Frame-Delay-Times-for-Animated-GIFs-214150546" target="_blank">aquí</a> para más detalles. Puede (opcionalmente) suministrar valores de desplazamiento X e Y para la superficie que se utiliza para añadir al GIF, en cuyo caso la parte dibujada en el GIF comenzará desde el desplazamiento y no desde la posición por defecto (0,0), permitiéndole seleccionar sólo una sección de la superficie a añadir. También puede suministrar un valor de cuantificación, que es un número entero entre 0 y 3, donde 0 es cuantificación completa y 3 es cuantificación cero (los valores más bajos tendrán una degradación posterior en la calidad, pero crean un GIF más pequeño). Tenga en cuenta que no hay mucha diferencia entre la calidad por defecto de 2, y la más alta de 3, y el uso de 3 ralentizará significativamente la creación del GIF, por lo que se debe tener cuidado al utilizar el valor máximo.</p>
   <p>Tenga en cuenta que no hay límites incorporados en el número de fotogramas o en el tamaño de esos fotogramas en su GIF, pero si utiliza demasiada memoria entonces la función fallará y devolverá -1, de lo contrario devolverá 0.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">gif_add_surface(gif_index, surface, delay_time, [xoffset], [yoffset]);</p>
+  <p class="code"><span data-field="title" data-format="default">gif_add_surface</span>(gif_index, surface, delay_time, [xoffset], [yoffset]);</p>
   <table>
     <tbody>
       <tr>

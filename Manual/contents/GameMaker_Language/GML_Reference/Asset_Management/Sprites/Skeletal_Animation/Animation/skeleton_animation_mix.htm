@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>skeleton_animation_mix</h1>
+  <h1><span data-field="title" data-format="default">skeleton_animation_mix</span></h1>
   <p>Puede <span class="notranslate">switch</span> conjuntos de animación fácilmente usando la función <a href="skeleton_animation_set.htm"><span class="inline">skeleton_animation_set()</span></a> pero esto puede causar un salto o tartamudeo cuando una animación es intercambiada por otra. Para evitar esto, puede establecer el valor de mezcla entre dos conjuntos de animación y el <span class="notranslate">sprite</span> interpolará entre ellos. Normalmente usted querrá hacer esto en el evento Create de la instancia con la animación del esqueleto, ya que sólo necesita establecerse una vez, y <span data-keyref="GameMaker Name">GameMaker</span> interpolará todos los cambios posteriores a la <span class="notranslate">sprite</span> utilizando los conjuntos de animación en esa instancia. Tenga en cuenta que el valor de la duración es de 0 a 1, donde un valor de 0,5 tendría una interpolación &quot;mitad y mitad&quot; de un conjunto a otro.</p>
   <p class="note"><span class="note">NOTA</span> Spine 4.0 cambia el funcionamiento de la animación rotacional, ya que ya no interpola la rotación utilizando la ruta más corta posible, sino que utiliza los valores absolutos en su <span class="notranslate">keyframes</span> para la interpolación. Esto puede causar un comportamiento inesperado si está actualizando su animación <span class="notranslate">Spine</span> desde una versión anterior, y pueden ser necesarios cambios dentro de su proyecto <span class="notranslate">Spine</span> para que las rotaciones se comporten como es debido.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">skeleton_animation_mix(animfrom, animto, duration);</p>
+  <p class="code"><span data-field="title" data-format="default">skeleton_animation_mix</span>(animfrom, animto, duration);</p>
   <table>
     <tbody>
       <tr>

@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_map_clear</h1>
+  <h1><span data-field="title" data-format="default">ds_map_clear</span></h1>
   <p>Esta función borrará el mapa DS (previamente creado) de todos los pares clave/valor, pero no borrará el propio mapa DS de la memoria. Para ello debe utilizar la función <a href="ds_map_destroy.htm"><span class="inline">ds_map_destroy()</span></a>. Tenga en cuenta que borrar un mapa desreferenciará cualquier <span class="notranslate">data structures</span> almacenado en el mapa dando lugar a una fuga de memoria, por lo que tendría que ir a través de él y destruir todos los elementos de la estructura de datos manualmente antes de borrar el mapa para evitar esto. El único caso en el que esto no es necesario es cuando se han marcado elementos en el mapa como una <a href="../DS_Lists/DS_Lists.htm">lista DS</a> o como otro <a href="DS_Maps.htm">mapa DS</a>, en cuyo caso estos elementos serán destruidos (¡no borrados!) y su memoria se limpiará automáticamente cuando se borre el mapa padre.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">ds_map_clear(id);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_map_clear</span>(id);</p>
   <table>
     <tbody>
       <tr>

@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_delete</h1>
+  <h1><span data-field="title" data-format="default">buffer_delete</span></h1>
   <p>Con esta función se puede borrar de la memoria un <span class="notranslate">buffer</span> creado previamente con la función <a href="buffer_create.htm"><span class="inline">buffer_create()</span></a> de la memoria, liberando los recursos utilizados para crearlo y eliminando los datos que pueda contener actualmente.</p>
   <p class="note"><b>NOTA</b>: Es importante eliminar siempre los recursos creados dinámicamente de la memoria cuando ya no los necesite para evitar fugas de memoria.</p>
   <p class="note"><em><strong>¡IMPORTANTE!</strong></em> Cuando se crea un <span class="notranslate">buffer</span>, el valor del índice utilizado para identificarlo es un valor entero que comienza en 0. Estos índices son reutilizados por <span class="notranslate">GameMaker</span>, por lo que un valor de índice destruido de <span class="notranslate">buffer</span> puede ser utilizado por uno recién creado posteriormente,
     por lo que se recomienda establecer cualquier variable que contenga un índice de buffer a -1 después de haber destruido el <span class="notranslate">buffer</span>.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">buffer_delete(buffer)</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_delete</span>(buffer)</p>
   <table>
     <tbody>
       <tr>

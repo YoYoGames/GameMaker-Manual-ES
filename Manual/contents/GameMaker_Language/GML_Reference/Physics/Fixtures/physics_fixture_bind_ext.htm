@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_fixture_bind_ext</h1>
+  <h1><span data-field="title" data-format="default">physics_fixture_bind_ext</span></h1>
   <p>Una vez que hayamos definido nuestro fixture, éste debe estar vinculado a una instancia. Esto significa que sus <i>propiedades</i> se transfieren a la instancia seleccionada, <b>no al propio fixture</b>, de modo que un fixture puede estar ligado a múltiples instancias si todas deben tener las mismas propiedades. Puede especificar un índice <span class="notranslate">object</span> para el objetivo y todas las instancias presentes en el <span class="notranslate">room</span> en ese momento recibirán las propiedades de ese fixture (pero no las nuevas instancias del <span class="notranslate">object</span> creadas posteriormente), o puede utilizar las palabras clave especiales <i>other</i> y <i>all</i>. Incluso se puede especificar un padre <span class="notranslate">object</span> y todas las instancias hijas con ese padre también recibirán el fixture. Una vez que el fixture ha sido vinculado a todas las instancias que necesitas, puede ser eliminado si ya no es necesario y las instancias con las propiedades de ese fixture no se verán afectadas y mantendrán esas propiedades.</p>
   <p>Normalmente, el accesorio se vinculará a la instancia con el centro de masa posicionado en el origen de la instancia, sin embargo, esto no es siempre lo que usted requiere y por lo tanto esta función también le permite desplazar la posición x e y donde el accesorio está vinculado por una cantidad determinada (si usted no requiere esto entonces utilice <a href="physics_fixture_bind.htm"><span class="inline">physics_fixture_bind()</span></a> en su lugar). Es importante tener en cuenta que un fixture sólo puede admitir un <i>único</i> desplazamiento, ya que Box2D no admite la adición de múltiples desplazamientos a un único fixture.</p>
   <p><img>La función también devolverá un valor &quot;id&quot; único para el fixture <i>vinculado</i><b>(no el fixture en sí</b>) que puede ser utilizado para eliminar (&quot;desvincular&quot;) las propiedades de física de la instancia utilizando la función <a href="physics_remove_fixture.htm"><span class="inline">physics_remove_fixture()</span></a>. Esto permite añadir y eliminar propiedades físicas de una instancia sin destruir y volver a crear <span class="notranslate">objects</span>.</p>
   <p class="note"><b>NOTA</b>: Los accesorios deben ser eliminados cuando ya no se necesiten, ya que si no se hace así se puede producir una fuga de memoria que ralentizará y acabará por bloquear el juego.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">physics_fixture_bind_ext(fixture, target, xoffset, yoffset)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_fixture_bind_ext</span>(fixture, target, xoffset, yoffset)</p>
   <table>
     <tbody>
       <tr>

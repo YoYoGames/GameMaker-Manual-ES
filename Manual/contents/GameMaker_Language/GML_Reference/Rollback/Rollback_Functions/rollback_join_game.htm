@@ -16,14 +16,14 @@
   <meta name="search-keywords" content="rollback_join_game" />
 </head>
 <body>
-  <h1>rollback_join_game</h1>
+  <h1><span data-field="title" data-format="default">rollback_join_game</span></h1>
   <p>Esta función intenta unirse a una partida. Debes estar en una URL que contenga el ID de la <span class="notranslate">room</span> virtual para unirte.</p>
   <p>Si se unió un <span class="notranslate">room</span>, devuelve <span class="inline2">true</span>, y si no se unió ningún juego, devuelve <span class="inline2">false</span>.</p>
   <p>Cuando un nuevo jugador se une a una partida en la que ya estás presente, se activa el evento <strong>Rollback</strong>. Consulta <a data-xref="{title}" href="../Rollback_Events.htm">los</a> eventos de retroceso para obtener más información.</p>
   <p>El argumento <span class="inline2">dry_run</span> es opcional, y cuando se establece en <span class="inline2">true</span>, permite ejecutar la función sin unirse a un juego. Se utiliza para comprobar si se puede entrar en una partida sin entrar en ella.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">rollback_join_game([dry_run]);</p>
+  <p class="code"><span data-field="title" data-format="default">rollback_join_game</span>([dry_run]);</p>
   <table>
     <tbody>
       <tr>
@@ -34,8 +34,8 @@
       <tr>
         <td><span class="notranslate">dry_run</span></td>
         <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Booleano</a></span></td>
-        <td><span class="notranslate">Disabled by default (<span class="inline2">false</span>). Cuando está activada<span class="inline2">(true</span>), la función no se une al juego, sino que simplemente devuelve <span class="inline2">true</span> si se puede unir uno, o <span class="inline2">false</span> en caso contrario.<br>
-          <br>
+        <td><span class="notranslate">Disabled by default (<span class="inline2">false</span>). Cuando está activada<span class="inline2">(true</span>), la función no se une al juego, sino que simplemente devuelve <span class="inline2">true</span> si se puede unir uno, o <span class="inline2">false</span> en caso contrario.<br />
+          <br />
           De este modo, puedes utilizar esta función para comprobar únicamente si el jugador ha sido invitado.
         </td>
       </tr>

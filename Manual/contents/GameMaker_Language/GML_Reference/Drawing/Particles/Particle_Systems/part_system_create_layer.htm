@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>part_system_create_layer</h1>
+  <h1><span data-field="title" data-format="default">part_system_create_layer</span></h1>
   <p>Esta función creará un nuevo sistema de partículas en una capa determinada. Se le da el ID de capa único devuelto por la función <a href="../../../Asset_Management/Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a> o el nombre de la capa a utilizar como <span class="notranslate">string</span> - por ejemplo &quot;instance_layer&quot; - y luego <span class="notranslate">flag</span> el sistema como persistente o no. Si el sistema no está marcado como persistente, se destruirá automáticamente al final de la <span class="notranslate">room</span> en la que fue creado (esto es lo mismo que si hubieras llamado a la función <a href="part_system_destroy.htm"><span class="inline">part_system_destroy()</span></a> y también destruirá los emisores asociados al sistema). Sin embargo, cuando se marca como persistente, el sistema se llevará a la siguiente <span class="notranslate">room</span> cuando se cambie la <span class="notranslate">room</span>, y si la siguiente <span class="notranslate">room</span> <i>no</i> tiene una capa con el mismo nombre o profundidad que la asignada, entonces se creará una nueva capa para el sistema que persiste a través de la <span class="notranslate">rooms</span>, y tendrá el mismo nombre que la capa original. Al cambiar <span class="notranslate">rooms</span>, si hay otra capa en el siguiente <span class="notranslate">rooms</span> con el mismo nombre, entonces la instancia persistida se asignará a la capa con ese nombre <i>independientemente de la</i> profundidad de la capa. Por último, si un sistema persistente se mueve a un <span class="notranslate">room</span> con una capa con la misma profundidad que la capa en la que se creó el sistema, <i>no</i> se asignará a esta capa, sino que se creará una nueva capa con la misma profundidad (con el mismo nombre que la capa original).</p>
   <p>La función devolverá un valor de ID único para el sistema de partículas que deberá utilizarse en todas las llamadas posteriores a la función en las que sea necesario dar un ID del sistema.</p>
   <p class="note"><b>¡IMPORTANTE!</b> Si usted <span class="notranslate">flag</span> el sistema de partículas como persistente, entonces él (y cualquier emisor asignado a él) tendrá que ser limpiado manualmente usando las funciones de destrucción apropiadas cuando no esté en uso, de lo contrario se corre el riesgo de una fuga de memoria que afectará negativamente a su juego final.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">part_system_create_layer(layer_id, persistent);</p>
+  <p class="code"><span data-field="title" data-format="default">part_system_create_layer</span>(layer_id, persistent);</p>
   <table>
     <tbody>
       <tr>

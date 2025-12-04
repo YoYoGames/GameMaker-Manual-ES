@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_list_mark_as_map</h1>
+  <h1><span data-field="title" data-format="default">ds_list_mark_as_map</span></h1>
   <p>Esta función &quot;marcará&quot; (o &quot;marcará&quot;) una posición dada dentro de una lista DS previamente creada como si tuviera un <a href="../DS_Maps/DS_Maps.htm">mapa DS</a>. Esta funcionalidad es necesaria cuando se codifica JSON <span class="notranslate">strings</span> (que se puede crear con <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline">json_encode()</span></a>), pero también puede ser útil cuando se anidan estructuras de datos, ya que los elementos marcados de esta manera serán automáticamente recogidos de la basura (destruidos) cuando la lista DS padre sea destruida. Esto significa que no tienes que recorrer manualmente el contenido de la lista y destruir los <span class="notranslate">data structures</span> marcados individualmente antes de destruir la lista &quot;padre&quot;. Sin embargo, si borras la posición de la lista individualmente, la estructura de datos que contenía <i>no</i> será recogida de la basura y deberás llamar a la función de destrucción del mapa DS apropiada antes de borrar la posición de la lista padre. Tenga en cuenta también que si llama a la función <a href="ds_list_clear.htm"><span class="inline">ds_list_clear()</span></a> en una lista, cualquier elemento marcado como mapa se destruirá también cuando se borre la lista.</p>
   <p>También hay que tener en cuenta que si la posición que se ha marcado cambia dentro de la lista, la &quot;marca&quot; se moverá con ella, por lo que si se ha marcado la posición 3 en la lista (por ejemplo) y luego se insertan 2 elementos más por debajo de ella para que suba a la posición 5, <i>seguirá</i> marcada como mapa.</p>
   <p> </p>
   <h4>Sintaxis:</h4>
-  <p class="code">ds_list_mark_as_map(id, pos);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_list_mark_as_map</span>(id, pos);</p>
   <table>
     <tbody>
       <tr>
