@@ -1,4 +1,4 @@
-name: 'Upstream Sync'
+name: Upstream Sync
 
 on:
   schedule:
@@ -10,9 +10,14 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  sync_latest_from_upstream_develop:
-    runs-on: ubuntu-latest
-    name: Sync latest commits from upstream repo to develop branch
+  sync_develop:
+    uses: YoYoGames/GameMaker-Manual/.github/workflows/upstream-sync-reusable.yml@develop
+    with:
+      target_branch: develop
+      upstream_branch: develop
+      upstream_repo: YoYoGames/GameMaker-Manual
+    secrets:
+      GH_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
 
     steps:
       - name: Checkout target repo
