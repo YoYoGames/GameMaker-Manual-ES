@@ -6,7 +6,7 @@
   <title>collision_ellipse</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js"></script>
+  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that gives an overview of the funtion collision_ellipse" />
   <meta name="rh-index-keywords" content="collision_ellipse" />
@@ -73,7 +73,7 @@
   <h4>Ejemplo:</h4>
   <p class="code">if collision_ellipse(50, 50, 200, 100, obj_Player, false, true)<br />
     {<br />
-        instance_create_layer(obj_Player.x, obj_Player.y, &quot;Effects&quot;, obj_Splash);<br />
+        instance_create_layer(obj_Player.x, obj_player.y, &quot;Effects&quot;, obj_splash);<br />
     }</p>
   <p>Esto comprobará una zona elíptica dentro de los límites de 50x, 50y y 200x, 100y para el <span class="notranslate">object</span> &quot;obj_Player&quot;. Si hay una colisión con ese <span class="notranslate">object</span>, entonces creará una instancia de &quot;obj_Splash&quot; en las coordenadas x/y de obj_Player.</p>
   <p> </p>
